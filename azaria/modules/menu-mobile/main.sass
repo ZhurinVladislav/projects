@@ -1,0 +1,156 @@
+.menu-mobile
+
+    display: none
+
+
+    +medium
+        position: fixed
+        left: 0
+        right: 0
+        top: 0
+        height: 100vh
+        overflow-x: hidden
+        overflow-y: auto
+        z-index: 20
+        padding: 72px 10px 0
+        background: $color__1
+        transform: translate3d(10%,10%,0)
+        transition: transform .4s,opacity .3s
+        will-change: transform
+        opacity: 0
+        
+        &.display
+            display: block
+
+        &.active
+            transform: translate3d(0,0,0)
+            opacity: 1
+
+        .wrap
+            
+        .block-text
+            
+        .menu-list
+            margin-bottom: 40px
+
+        .menu-item
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+
+            &.active
+                > a
+                    color: $color__2
+
+                ul
+                    display: block
+
+                .arrow
+                    transform: rotate(0)
+
+            &.open
+                .arrow
+                    transform: rotate(0)
+
+
+            a
+                font-weight: 700
+                font-size: 18px
+                color: #fff
+
+
+
+            ul
+                display: none
+                padding: 15px 0 15px
+                > li
+                    margin-bottom: 10px
+                    &:last-child
+                        margin-bottom: 0
+
+                    > a
+                        padding: 0 10px
+                        font-size: 14px
+                        font-weight: 400
+                        text-transform: uppercase
+                        transition: all 0.3s
+                        &:hover
+                            color: $color__2
+
+                    &.active
+                        > a
+                            color: $color__2
+
+
+
+        .arrow
+            display: inline-flex
+            width: 8px
+            height: 8px
+            transform: rotate(180deg)
+            transition: all 0.3s
+            svg
+                fill: #fff
+
+        .address
+            display: flex
+            margin-bottom: 20px
+            margin-right: auto
+
+        .address-icon
+            flex-shrink: 0
+            display: inline-flex
+            width: 20px
+            height: 24px
+            svg
+                fill: #fff
+
+        .address-text
+            font-size: 14px
+            color: #fff
+
+        .phone
+            color: #fff
+            margin-bottom: 30px
+
+        .phone-link
+            display: block
+            font-size: 16px
+            font-weight: 800
+            transition: all 0.2s
+            &:hover
+                color: $color__2
+
+        .phone-text
+            display: block
+            font-weight: 300
+            font-size: 12px
+
+        .whatsapp
+            margin-bottom: 20px
+            display: block
+            width: 50px
+            height: 50px
+            border: 1px solid #fff
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all 0.3s
+
+            &:hover
+                background: $color__2
+                border: 1px solid $color__2
+
+                .whatsapp-icon
+                    fill: $color__1
+
+        .whatsapp-icon
+            display: inline-flex
+            width: 16px
+            height: 16px
+            fill: #fff
+            transition: all 0.3s
+
+        .button
+            width: 200px

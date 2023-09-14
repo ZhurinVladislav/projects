@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Рыбный двор Новороссийск</title>
+        <meta name="description" content="Рыбный двор Новороссийск" />
+        <meta name="keywords" content="Рыбный двор Новороссийск" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="/app/css/libs/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="app/css/main.min.css" />
+        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__content content">
+                    <a href="/" class="content__link-logo">
+                        <img
+                            class="content__logo"
+                            src="/app/img/logo.svg"
+                            alt="логотип Рыбный двор Новороссийск"
+                            title="логотип Рыбный двор Новороссийск"
+                        />
+                    </a>
+                    <nav class="content__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">
+                                    <span class="menu__link-item"> Главная </span>
+                                </a>
+                            </li>
+                            <li class="menu__item active">
+                                <a class="menu__link" href="./stocks.html">
+                                    <span class="menu__link-item"> О нас </span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link" href="./products.html">
+                                    <span class="menu__link-item"> Продукция </span>
+                                    <svg class="menu__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                    </svg>
+                                </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html">
+                                    <span class="menu__link-item"> Сертификаты </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html">
+                                    <span class="menu__link-item"> Магазины </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="content__list-right list-right">
+                        <li class="list-right__item">
+                            <p class="list-right__item-descr"> 
+                                Менеджер по&nbsp;продажам
+                            </p>
+                            <a href="tel:+79897637935" class="list-right__link">
+                                +7 (989) 763-79-35
+                            </a>
+                            <a href="mailto:semgas@mail.ru" class="list-right__link list-right__link_mail">
+                                semgas@mail.ru
+                            </a>
+                        </li>
+                        <li class="list-right__item">
+                            <a href="https://wa.me/+79897637935" class="list-right__link link">
+                                <svg class="link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="link__descr"> WhatsApp </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button aria-label="Open the mobile menu" class="menu__toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <!-- burger menu -->
+            <div class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="menu-item parent active">
+                                <a onclick="return false" href="./main.html" class="menu-link" target="_blank">
+                                    Продукция
+                                </a>
+                                <span class="arrow-list-mob">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                    </svg>
+                                </span>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Первый продукт </a>
+                                    </li>
+                                    <li class="menu-item active">
+                                        <a class="menu-link" href="#"> Второй продукт </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Третий продукт </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Четвёртый продукт </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Сертификаты </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Магазины </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:semgas@mail.ru">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="list-link__descr"> semgas@mail.ru </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+7 (989) 763-79-35">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (989) 763-79-35 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="/">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <span class="list-link__descr">
+                                    г. Новороссийск, ул.Суворовская, 71
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+		<!-- main -->
+        <main>
+            <section class="stocks">
+                <div class="stocks__container container">
+                    <h1 class="stocks__title h-1">
+                        Скидки, акции
+                    </h1>
+                    <div class="stocks__content content">
+                        <div class="content__left">
+                            <h2 class="content__title">
+                                Карта постоянного покупателя
+                            </h2>
+                            <div class="content__left-text text-default">
+                                <p>
+                                    Выдаётся постоянным покупателям, либо при покупке от 1000₽.
+                                </p>
+                                <p>
+                                    Покупатель заполняет анкету со своими данными (ФИО и телефон), продавец выдает карту.
+                                </p>
+                                <p>
+                                    Процент скидки увеличивается автоматически, в зависимости от накопленной суммы покупки:
+                                </p>
+                                <ul>
+                                    <li>
+                                        до 15 000 скидка 3%
+                                    </li>
+                                    <li>
+                                        от 15 000 скидка 4%
+                                    </li>
+                                    <li>
+                                        от 30 000 скидка 5%
+                                    </li>
+                                    <li>
+                                        от 60 000 скидка 6%
+                                    </li>
+                                    <li>
+                                        от 100 000 скидка 7%
+                                    </li>
+                                </ul>
+                                <p>
+                                    Подробности уточняйте у продавцов магазина. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content__right">
+                            <img class="content__right-img" src="./app/img/stocks/akcii.jpg" alt="Дисконтная карта | Рыбный двор" title="Дисконтная карта | Рыбный двор">
+                        </div>
+                    </div>
+
+                    <div class="stocks__content content">
+                        <div class="content__left">
+                            <h2 class="content__title">
+                                Карта постоянного покупателя
+                            </h2>
+                            <div class="content__left-text text-default">
+                                <p>
+                                    Выдаётся постоянным покупателям, либо при покупке от 1000₽.
+                                </p>
+                                <p>
+                                    Покупатель заполняет анкету со своими данными (ФИО и телефон), продавец выдает карту.
+                                </p>
+                                <p>
+                                    Процент скидки увеличивается автоматически, в зависимости от накопленной суммы покупки:
+                                </p>
+                                <ul>
+                                    <li>
+                                        до 15 000 скидка 3%
+                                    </li>
+                                    <li>
+                                        от 15 000 скидка 4%
+                                    </li>
+                                    <li>
+                                        от 30 000 скидка 5%
+                                    </li>
+                                    <li>
+                                        от 60 000 скидка 6%
+                                    </li>
+                                    <li>
+                                        от 100 000 скидка 7%
+                                    </li>
+                                </ul>
+                                <p>
+                                    Подробности уточняйте у продавцов магазина. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content__right">
+                            <img class="content__right-img" src="./app/img/stocks/akcii.jpg" alt="Дисконтная карта | Рыбный двор" title="Дисконтная карта | Рыбный двор">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__content content">
+                <div class="content__container container">
+                    <a class="content__link" href="https://web2.agency/" target="_blank">
+                        Создание сайтов WEB&nbsp;2
+                    </a>
+                    <nav class="content__menu menu">
+                        <ul class="menu__list list">
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Главная </a>
+                            </li>
+                            <li class="list__item active">
+                                <a href="/" class="list__link"> О нас </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Продукция </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Сертификаты </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Магазины </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__copyright copyright">
+                <div class="copyright__container container">
+                    <small class="copyright__text">
+                        Copyright &copy;&nbsp;2012-2023. Все права защищены
+                    </small>
+                </div>
+            </div>
+        </footer>
+        <!-- SCROLL-TOP -->
+        <button id="scrollTop" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+        <script src="/app/js/libs/lightgallery-all.min.js"></script>
+        <script src="/app/js/libs/functions.js"></script>
+        <script src="/app/js/libs/swiper-bundle.min.js"></script>
+        <script src="/app/js/main.min.js"></script>
+        <!-- <script src="/app/js/main.js"></script> -->
+    </body>
+</html>

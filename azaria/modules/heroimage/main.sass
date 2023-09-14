@@ -1,0 +1,122 @@
+        
+.heroimage
+    padding-top: 20vh
+    margin-bottom: 130px
+    overflow: hidden
+    background: #fff
+    position: relative
+    z-index: 32
+    min-height: 100vh
+    height: 700px
+    background-image: url('/app/images/herobgr.jpg')
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+    .content
+        // display: flex
+        // flex-direction: column
+            
+
+    .header_1
+        color: #fff
+
+        span
+            position: relative
+            padding: 0 6px
+            font-weight: 400
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                z-index: -1
+                left: 0
+                bottom: -4px
+                width: 100%
+                height: 56px
+                background: rgba($color__2,0.9)
+
+    .subtitle
+        font-size: 20px
+        margin-top: 4vh
+        color: #fff
+
+    .button
+        background: #fff
+        color: $color__1
+        margin-top: 7vh
+
+        &:hover
+            background: $color__2
+
+    .list
+        position: absolute
+        bottom: 40px
+        display: inline-flex
+        padding: 16px 58px
+        background: rgba(194, 175, 104, 0.4)
+        backdrop-filter: blur(10px)
+
+    .item
+        margin-right: 30px
+        padding-right: 30px
+        padding-top: 34px
+        padding-bottom: 34px
+        display: flex
+        border-right: 1px solid rgba(255, 255, 255, 0.2)
+        &:last-child
+            margin-right: 0
+            padding-right: 0
+            border-right: 1px solid transparent
+
+    .item-icon
+        flex-shrink: 0
+        margin-right: 10px
+
+    .item-text
+        color: #fff
+        font-size: 14px
+
+    +medium
+        .header_1
+
+            span
+                &::before
+                    height: 36px
+
+    +small
+        margin-bottom: 80px
+        padding-top: 140px
+        padding-bottom: 40px
+        overflow: hidden
+        min-height: auto
+        height: auto
+
+        .header_1
+
+            span
+                &::before
+                    height: 22px
+
+
+        .subtitle
+            font-size: 18px
+
+        .list
+            width: 100%
+            flex-wrap: wrap
+            position: relative
+            bottom: 0
+            margin-top: 40px
+            padding: 0px 30px
+
+        .item
+            width: 100%
+            border-right: none
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+            padding-top: 16px
+            padding-bottom: 16px
+            margin-right: 0
+            padding-right: 0
+            &:last-child
+                border-bottom: 1px solid transparent

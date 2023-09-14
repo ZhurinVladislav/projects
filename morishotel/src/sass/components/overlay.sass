@@ -1,0 +1,91 @@
+.overlay
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 100
+  display: none
+  padding-right: 0 !important
+  opacity: 1
+  overflow-y: auto
+  transition: all .4s !important
+
+  .form
+    width: 100%
+
+  &.active
+    display: block
+    opacity: 1
+
+  .overlay__wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    min-height: 100%
+        
+  .overlay__bg 
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 20
+    background-color: rgba($color__1, 0.8)
+
+  .overlay__content 
+    position: relative
+    z-index: 21
+    transform: scale(1)
+    transition: transform .4s
+    padding: 60px 0
+
+  .overlay__close
+    position: absolute
+    z-index: 3
+    display: block
+    top: 8px
+    right: -52px
+    width: 52px
+    height: 52px
+    cursor: pointer
+    background-color: $color__2
+    transition: all 0.4s
+
+    +small
+      top: unset
+      bottom: 0
+      right: 50%
+      transform: translateX(50%)
+
+    &:before,&:after 
+      content: ""
+      position: absolute
+      width: 20px
+      height: 2px
+      background-color: $color__1
+      top: 25px
+      left: 16px
+      transition: background-color .2s ease-in-out
+
+    &:hover
+      &:before,&:after
+        background-color: $color__4
+
+    &:before 
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
+
+html.overlay-active
+  overflow-y: hidden !important
+
+html.overlay-active 
+  padding-right: 16px
+
+  +small
+    padding-right: 0

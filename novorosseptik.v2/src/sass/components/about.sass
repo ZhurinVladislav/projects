@@ -1,0 +1,109 @@
+.about
+  margin-bottom: 100px
+
+  +small
+    margin-bottom: 70px
+
+  &__title
+    @include titleReset
+    margin-bottom: 50px
+
+    +medium
+      margin-bottom: 26px
+
+  &__content
+    display: flex
+    
+    +small
+      flex-wrap: wrap
+
+  &__content-left
+    display: flex
+    flex-direction: column
+    margin-right: 20px
+    max-width: 45%
+    color: $color__2
+    // max-width: 65%
+
+    +small
+      margin-right: 0
+      margin-bottom: 30px
+      max-width: 100%
+
+
+  &__text
+    @include textReset
+    margin-bottom: 30px
+    font-weight: 600
+    font-size: 18px
+    line-height: 1.2
+    
+  &__text::last-child
+    margin-bottom: 30px
+
+  &__list
+    margin-bottom: 20px
+    padding-left: 20px
+    max-width: 352px
+    list-style-image: url(/app/img/check-mark.svg)
+    font-weight: 600
+    font-size: 18px
+    line-height: 1.2
+
+  &__list-item:not(:last-child)
+    margin-bottom: 10px
+
+  &__btn-wrapper
+    display: flex
+
+    +phone
+      flex-wrap: wrap
+
+  .button
+    max-width: 234px
+    min-height: 54px
+    
+    +max(480px)
+      margin-right: 0
+      margin-bottom: 20px
+      max-width: 100%
+      width: 100%
+
+  .button-invert
+    max-width: 282px
+    min-height: 54px
+
+    +max(480px)
+      margin-bottom: 20px
+      max-width: 100%
+      width: 100%
+
+
+  &__content-btn
+    font-weight: 700
+    font-size: 16px
+    line-height: 1.2
+
+  &__content-btn:not(:last-child)
+    margin-right: 20px
+
+    +xs
+      margin-right: 0
+
+  
+  &__img-wrapper
+    margin-left: auto
+    // max-width: 555px
+    max-width: 60%
+    min-height: 468px
+
+    +small
+      margin-left: 0
+      margin: 0 auto
+      max-width: 100%
+      min-height: 100%
+
+
+
+
+      

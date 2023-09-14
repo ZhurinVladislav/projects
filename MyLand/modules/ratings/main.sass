@@ -1,0 +1,108 @@
+.ratings
+  margin-bottom: 115px
+
+  +small
+    margin-bottom: 80px
+
+  &__title
+    @include titleReset
+    margin-bottom: 60px
+
+    +small
+      margin-bottom: 30px
+
+  &__content-bottom
+    display: flex
+
+    +small
+      flex-wrap: wrap
+
+  &__descr
+    margin-right: 100px
+    max-width: 40%
+
+    +small
+      margin-right: 0
+      margin-bottom: 30px
+      max-width: 100%
+
+  &__text
+    @include textReset
+    font-weight: 400
+    font-size: 18px
+    line-height: 146%
+
+    +phone
+      font-size: 16px
+
+  &__text:not(:last-child)
+    margin-bottom: 25px
+  
+  &__reviews
+    padding: 75px 63px 61px 60px
+    max-width: 60%
+    background-color: $color__2
+    border-radius: 3px 45px 3px 3px
+
+    +small
+      max-width: 100%
+      width: 100%
+
+    +phone
+      padding: 36px 38px 36px 32px
+
+  &__list
+    @include listReset
+    display: flex
+    margin: -43px
+
+    +medium
+      justify-content: center
+      flex-wrap: wrap
+      margin: -23px
+
+  &__list-item
+    padding: 35px
+
+    +medium
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 22px
+
+  &__item-img
+    margin-bottom: 7px
+
+  &__item-desr
+    @include textReset
+    font-weight: 400
+    font-size: 18px
+    line-height: 138.5%
+    color: $color__1
+
+    +phone
+      font-size: 16px
+
+.stars
+  @include listReset
+  display: flex
+  margin-bottom: 10px
+
+  +small
+    justify-content: center
+  
+  &__list-item:not(:last-child)
+    margin-right: 6px
+
+  // &__list-item_active
+  //     &__item-img
+  //     fill: rgba(0, 176, 202, 1)
+
+  &__item-img
+    width: 21px
+    height: 20px
+    fill: rgba(0, 176, 202, .4)
+
+.active
+  .stars__item-img
+    fill: rgba(0, 176, 202, 1)

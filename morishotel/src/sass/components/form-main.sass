@@ -1,0 +1,98 @@
+.form-main
+  padding: 150px 0
+  background-color: #DDD6CA
+  background-image: url(../img/form-main/bg-img.png)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+  +phone
+    padding: 40px 0
+
+  &__descr
+    @include textReset
+    margin-bottom: 50px
+    max-width: 420px
+    font-family: $font-family__2
+    font-style: italic
+    font-size: 20px
+
+    +phone
+      margin-bottom: 20px
+      font-size: 16px
+
+  .form
+    display: flex
+    flex-wrap: wrap
+
+    &__input
+      margin-right: 20px
+      margin-bottom: 20px
+      max-width: 400px
+      min-height: 80px
+      background-color: rgba($color__4, 0.3)
+      border: 1px solid $color__0
+      font-weight: 600
+      font-size: 16px
+      line-height: 1.2
+      letter-spacing: 0.06em
+      text-transform: uppercase
+      transition: border-color .2s linear
+
+      &:hover
+        border-color: $color__2
+
+      &:focus
+        border-color: $color__2
+
+      +phone
+        margin-right: 0
+        margin-bottom: 15px
+        max-width: 100%
+        min-height: 60px
+        font-size: 14px
+
+      &::-webkit-input-placeholder
+        color: $color__5
+      
+      &::-moz-placeholder
+        color: $color__5
+        
+      &:-ms-input-placeholder
+        color: $color__5
+        
+      &:-moz-placeholder
+        color: $color__5
+
+    &__dtn
+      margin-bottom: 20px
+      padding: 28px 43px
+      border-color: $color__4
+      color: $color__4
+      transition: border-color .2s linear, color .2s linear
+      
+      +phone
+        padding: 14px 43px
+
+      &:hover
+        background-color: $color__0
+        border-color: $color__2
+        color: $color__2
+
+    &__descr
+      @include textReset
+      width: 100%
+      font-weight: 400
+      font-size: 12px
+      letter-spacing: 0.05em
+      text-transform: uppercase
+      color: $color__4
+
+    &__descr-link
+      font-weight: 700
+      border-bottom: 1px solid $color__4
+      transition: border-color .2s linear, color .2s linear
+
+      &:hover
+        color: $color__2
+        border-color: $color__0

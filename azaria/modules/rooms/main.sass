@@ -1,0 +1,288 @@
+.rooms
+    margin-bottom: 130px
+
+    .content
+        width: 100%
+        display: flex
+
+    .col-left
+        padding-right: 80px
+        flex-grow: 1
+
+    .header_2
+        margin-bottom: 32px
+
+    .subtitle
+        font-size: 14px
+        margin-bottom: 36px
+
+    .list-tab
+        border-left: 1px solid rgba($color__1, 0.1)
+
+    .item-tab
+        position: relative
+        margin-bottom: 40px
+        padding: 4px 18px
+        &:last-child
+            margin-bottom: 12px
+
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            left: -1px
+            top: 0
+            width: 1px
+            height: 100%
+            background: $color__2
+            opacity: 0
+            transition: all 0.3s
+
+        &.active,
+        &:hover
+            .tab
+                opacity: 1
+
+            &::before
+                opacity: 1
+
+    .tab
+        position: relative
+        font-weight: 400
+        font-size: 14px
+        text-transform: uppercase
+        opacity: 0.4
+        transition: all 0.3s
+
+    .block-info
+        width: 326px
+        padding: 14px
+        background: rgba($color__2,0.5)
+        font-size: 14px
+        line-height: 1.8
+        margin-top: 108px
+        
+
+
+
+    .col-right
+        flex-shrink: 0
+        width: 750px
+
+    .result-header
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+
+    .result-title
+        font-weight: 300
+        font-size: 20px
+        text-transform: uppercase
+        margin-bottom: 10px
+
+    .result-count
+        font-weight: 400
+        font-size: 16px
+
+    .slider-wrap
+        position: relative
+
+        .image-wrapper
+            width: 750px
+            height: 470px
+
+            img
+                width: 100%
+                height: 100%
+    
+    .link-more
+        position: absolute
+        right: 60px
+        bottom: 30px
+        display: flex
+        align-items: center
+        cursor: pointer
+        &:hover
+            .link-more__icon
+                border: 1px solid $color__2
+                background: $color__2
+                svg
+                    fill: $color__1
+                
+
+    .link-more__text
+        font-weight: 400
+        font-size: 14px
+        letter-spacing: 0.2em
+        font-feature-settings: 'pnum' on, 'lnum' on
+        color: #fff
+        text-transform: uppercase
+        
+
+    .link-more__icon
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        margin-left: 20px
+        border: 1px solid #fff
+        background: transparent
+        border-radius: 50%
+        transition: all 0.4s
+        svg
+            width: 16px
+            height: 16px
+            fill: #fff
+            transition: all 0.4s
+
+
+
+
+    .slider-navbar
+        display: flex
+        align-items: center
+        margin-top: 16px
+
+        .arrow-wrapper 
+            display: flex
+
+        .arrow
+            width: 18px
+            height: 18px
+            cursor: pointer
+            transition: all 0.3s
+            &.prev
+                transform: rotate(-180deg)
+                margin-right: 10px
+
+            &:hover
+                fill: $color__2
+
+        .arrow-number
+            flex-shrink: 0
+            margin-right: 10px
+    
+        .progress-bar-wrapper
+            margin-right: 10px
+
+        .number
+            letter-spacing: 2px
+            font-size: 14px
+            font-weight: 400
+            text-transform: uppercase
+
+    .progress-bar-wrapper
+        width: 100%
+        height: 3px
+        position: relative
+        overflow: hidden
+        background-color: transparent
+
+        &:after
+            position: absolute
+            top: 1px
+            height: 1px
+            width: 100%
+            background-color: rgba($color__1, .1)
+            content: ''
+
+        span
+            position: absolute
+            left: 0
+            top: 1px
+            height: 1px
+            width: 100%
+            background-color: $color__2
+            z-index: 2
+            -webkit-transition: all .4s
+            transition: all .4s
+            will-change: transform
+    
+    +medium
+        .col-right
+            width: 60%
+
+    +small
+        margin-bottom: 80px
+
+        .content
+            flex-wrap: wrap
+
+        .col-left
+            width: 100%
+            padding-right: 0
+
+        .header_2
+            margin-bottom: 20px
+
+        .subtitle
+            margin-bottom: 20px
+
+        .list-tab
+            border-left: none
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-bottom: 20px
+
+        .item-tab
+            padding: 0 8px
+            width: 25%
+            margin-bottom: 0
+            
+            &:last-child
+                margin-bottom: 0
+
+            &::before
+                display: none
+
+            &.active
+                .tab
+                    border-bottom: 1px solid $color__2
+
+        .tab
+            border-bottom: 1px solid transparent
+
+
+
+        .block-info
+            width: 100%
+            line-height: 1.3
+            margin-top: 0
+            margin-bottom: 20px
+
+        .col-right
+            width: 100%
+            margin-top: 20px
+
+        .link-more
+            right: 20px
+            bottom: 20px
+
+        .slider-wrap
+
+            .image-wrapper
+                height: 64vw
+
+    +phone
+        .item-tab
+            padding: 8px 4px
+            width: 50%
+
+        .tab
+            font-size: 12px
+
+        .result-header
+            flex-wrap: wrap
+
+        .result-text-wrap
+            width: 100%
+            margin-bottom: 20px
+
+        .link-more__text
+            font-size: 12px
+
+        .link-more__icon
+            width: 40px
+            height: 40px

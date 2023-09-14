@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Рыбный двор Новороссийск</title>
+        <meta name="description" content="Рыбный двор Новороссийск" />
+        <meta name="keywords" content="Рыбный двор Новороссийск" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="/app/css/libs/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="app/css/main.min.css" />
+        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__content content">
+                    <a href="/" class="content__link-logo">
+                        <img
+                            class="content__logo"
+                            src="/app/img/logo.svg"
+                            alt="логотип Рыбный двор Новороссийск"
+                            title="логотип Рыбный двор Новороссийск"
+                        />
+                    </a>
+                    <nav class="content__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">
+                                    <span class="menu__link-item"> Главная </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./main.html">
+                                    <span class="menu__link-item"> О нас </span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link" href="./products.html">
+                                    <span class="menu__link-item"> Продукция </span>
+                                    <svg class="menu__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                    </svg>
+                                </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item active">
+                                <a class="menu__link" href="./contacts.html">
+                                    <span class="menu__link-item"> Сертификаты </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html">
+                                    <span class="menu__link-item"> Магазины </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="content__list-right list-right">
+                        <li class="list-right__item">
+                            <p class="list-right__item-descr"> 
+                                Менеджер по&nbsp;продажам
+                            </p>
+                            <a href="tel:+79897637935" class="list-right__link">
+                                +7 (989) 763-79-35
+                            </a>
+                            <a href="mailto:semgas@mail.ru" class="list-right__link list-right__link_mail">
+                                semgas@mail.ru
+                            </a>
+                        </li>
+                        <li class="list-right__item">
+                            <a href="https://wa.me/+79897637935" class="list-right__link link">
+                                <svg class="link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="link__descr"> WhatsApp </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button aria-label="Open the mobile menu" class="menu__toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <!-- burger menu -->
+            <div class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="menu-item parent active">
+                                <a onclick="return false" href="./main.html" class="menu-link" target="_blank">
+                                    Продукция
+                                </a>
+                                <span class="arrow-list-mob">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                    </svg>
+                                </span>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Первый продукт </a>
+                                    </li>
+                                    <li class="menu-item active">
+                                        <a class="menu-link" href="#"> Второй продукт </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Третий продукт </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Четвёртый продукт </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Сертификаты </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Магазины </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:semgas@mail.ru">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="list-link__descr"> semgas@mail.ru </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+7 (989) 763-79-35">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (989) 763-79-35 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="/">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <span class="list-link__descr">
+                                    г. Новороссийск, ул.Суворовская, 71
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="certificates">
+                <div class="certificates__bg-img-left"></div>
+                <div class="certificates__container container">
+                    <div class="certificates__title-wrap title-wrap">
+                        <h2 class="title-wrap__header h-2"> Сертификаты </h2>
+                        <p class="title-wrap__descr"> Вся продукция обладает необходимыми сертификатами </p>
+                    </div>
+                    <div class="certificates__swiper swiper certificates-slider">
+                        <div class="swiper-wrapper certificates-slider__wrapper">
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide">
+                                <img
+                                    src="./app/img/certificates/img-1.jpg"
+                                    class="certificates-slider__img swiper-img"
+                                />
+                                <button class="certificates-slider__slide-btn">
+                                    Смотреть
+                                </button>
+                            </a>
+                        </div>
+                        <div class="certificates-slider__arrow-wrap arrow-wrap">
+                            <button class="arrow-wrap__arrow arrow arrow_prev">
+                                <svg class="arrow__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="arrow-wrap__arrow arrow arrow_next">
+                                <svg class="arrow__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="certificates__bg-img-right"></div>
+            </section>
+            <!-- overlay -->
+            <article class="main-section__overlay overlay">
+                <div class="overlay__wrapper">
+                    <div class="overlay__bg"></div>
+                    <div class="overlay__content">
+                        <span aria-label="Закрыть окно обратной связи" class="overlay__close"></span>
+                        <!-- form-callback -->
+                        <form action="/" method="post" class="form form-callback novalid">
+                            <input type="hidden" name="count" value="0">
+                            <h3 class="header_2">
+                                Связаться с нами
+                            </h3>
+                            <div class="form-item">
+                                <input type="text" name="name" placeholder="Имя" >
+                            </div>
+                            <div class="form-item">
+                                <input type="tel" name="phone" placeholder="Телефон" >
+                            </div>
+                            <button class="form-item__button button-invert">
+                                Отправить
+                            </button>
+                            <label class="form-note">
+                                <input type="checkbox" checked>
+                                <div class="custom-checkbox"></div>
+                                <div class="form-note-text">
+                                    Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете условия Соглашения на&nbsp;обработку персональных данных
+                                </div>
+                            </label>
+                        </form>
+                        <!-- form-success -->
+                        <div class="form-success">
+                            <p class="form-success__descr">Спасибо!</p>
+                            <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="main-section__footer footer">
+            <div class="footer__content content">
+                <div class="content__container container">
+                    <a class="content__link" href="https://web2.agency/" target="_blank">
+                        Создание сайтов WEB&nbsp;2
+                    </a>
+                    <nav class="content__menu menu">
+                        <ul class="menu__list list">
+                            <li class="list__item active">
+                                <a href="/" class="list__link"> Главная </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> О нас </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Продукция </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Сертификаты </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Магазины </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__copyright copyright">
+                <div class="copyright__container container">
+                    <small class="copyright__text">
+                        Copyright &copy;&nbsp;2012-2023. Все права защищены
+                    </small>
+                </div>
+            </div>
+        </footer>
+        <!-- SCROLL-TOP -->
+        <button id="scrollTop" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+        <script src="/app/js/libs/lightgallery-all.min.js"></script>
+        <script src="/app/js/libs/functions.js"></script>
+        <script src="/app/js/libs/swiper-bundle.min.js"></script>
+        <script src="/app/js/main.min.js"></script>
+        <!-- <script src="/app/js/main.js"></script> -->
+    </body>
+</html>

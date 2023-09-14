@@ -1,0 +1,207 @@
+.catalog-init
+  padding-top: 50px
+  margin-bottom: 120px
+
+  +small
+    margin-bottom: 80px
+
+  &__title
+    margin-bottom: 20px
+
+.top-content
+  width: 100%
+  display: inline-flex
+  margin-bottom: 25px
+
+  +small
+    flex-wrap: wrap
+
+.catalog-slider
+  display: flex
+  flex-direction: column
+  width: 40%
+  margin-right: 50px
+
+  +small
+    width: 100%
+    margin-right: 0
+    margin-bottom: 20px
+
+  &__top
+    position: relative
+    margin: 0 -4px
+    padding-bottom: 20px
+    height: 100%
+    overflow: hidden
+
+    +phone
+      padding: 0
+
+    .slick-list
+      height: 100%
+
+    .slick-track
+      height: 100%
+
+    .catalog-slider__slide-link
+      height: 100%
+
+    img
+      border-radius: 10px
+      width: 100%
+      height: 100%
+      padding: 0 4px
+      min-height: 491px
+      object-fit: cover
+
+      +phone
+        min-height: 300px
+
+    .arrow
+      top: 50%
+      border: 2px solid $color__5
+      background-color: rgba(255, 255, 255, 0.6)
+      backdrop-filter: blur(5px)
+      transform: translateY(-50%)
+      transition: border-color .2s ease-in-out, fill .2s ease-in-out, background-color .2s ease-in-out
+
+      +phone
+        width: 40px
+        height: 40px
+
+      &:hover
+        border-color: transparent
+        fill: $color__1
+        background-color: rgba($color__5, .6)
+
+    .left
+      left: 20px
+
+    .right
+      transform: translateY(-50%) rotate(180deg) 
+      right: 20px
+          
+  &__bottom
+    margin: 0 -10px
+
+    +phone
+      display: none
+
+  .catalog-slider__slide-item
+    display: inline-block
+    border-radius: 10px
+    // max-height: 166px
+    padding: 0 10px
+
+  &__img-wrappe
+    // min-height: 166px
+
+  img
+    cursor: pointer
+    min-height: 110px
+    border-radius: 10px
+    width: 100%
+    border-radius: 10px
+    object-fit: cover
+    height: 100%
+    // min-height: 166px
+
+  &__descr
+    // padding: 25px
+    width: 60%
+
+    +medium
+      width: 100%
+
+    +phone
+      margin-top: 0
+
+  &__list
+    margin-bottom: 49px
+
+  &__item
+
+    &:not(:last-child)
+      margin-bottom: 25px
+
+  &__title
+    @include textReset
+    margin-bottom: 5px
+    font-weight: 700
+    font-size: 18px
+    line-height: 1.2
+    color: $color__5
+    text-transform: uppercase
+
+  &__text
+    @include textReset
+    font-weight: 600
+    font-size: 18px
+    line-height: 1.2
+    color: $color__2
+
+  &__btn
+    // padding: 16px 17px
+    margin-right: 10px
+    max-width: 233px
+    min-height: 51px
+    font-weight: 700
+    font-size: 15px
+    line-height: 1.2
+
+.tab
+  &__wrap
+    overflow: hidden
+    overflow-x: auto
+
+  &__list
+    display: inline-flex
+    align-items: flex-end
+    justify-content: center
+
+  &__item:not(:last-child)
+    margin-right: 18px
+
+  &__btn
+    // margin-bottom: -1px
+    padding: 5px 18px
+    min-height: 40px
+    font-size: 18px
+    background-color: $color__5
+    color: $color__1
+    border: 1px solid $color__5
+    border-bottom: none
+    border-radius: 10px 10px 0px 0px
+    transition: background-color .2s ease-in-out, color .2s ease-in-out
+
+    &:hover
+      color: $color__3
+      background-color: rgba($color__5, .2)
+
+    +small
+      font-size: 14px
+
+  &__content-wrapper
+    padding: 50px
+    background-color: rgba($color__5, .2)
+    border: 1px solid $color__3
+    border-radius: 0 10px 10px 10px
+
+    +small
+      padding: 20px
+
+
+  &__content-item
+    display: none
+
+    .text-default
+      color: $color__3
+      
+.tab__btn.active 
+  position: relative
+  background-color: rgba($color__5, .2)
+  border-bottom: none
+  color: $color__3
+
+.tab__content-item.active
+  display: block

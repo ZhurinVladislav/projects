@@ -1,0 +1,103 @@
+.hero
+  position: relative
+  line-height: 1.2
+  min-height: 654px
+  background-image: url(../img/hero/bg-img.jpg)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+  &::before
+    content: ''
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    display: none
+    width: 100%
+    height: 100%
+    background-color: rgba($clr_1, .7)
+
+    +small
+      display: block
+    
+  +medium
+    min-height: 400px
+
+  &__container
+    padding-top: 86px
+    padding-bottom: 44px
+    z-index: 3
+
+    +small
+      padding-top: 40px
+      padding-bottom: 40px
+
+  &__title
+    margin-bottom: 20px
+    max-width: 758px
+
+    +phone
+      margin-bottom: 10px
+
+  &__subtitle
+    @include textReset
+    margin-bottom: 40px
+    font-weight: 700
+
+    +phone
+      margin-bottom: 25px
+      font-size: 14px
+
+  .feedback
+    display: flex
+    margin-bottom: 88px
+
+    +small
+      margin-bottom: 40px
+
+    +phone
+      flex-direction: column
+      margin-bottom: 20px
+
+    .btn
+      &:not(:last-child)
+        margin-right: 20px
+        
+        +phone
+          margin-right: 0
+          margin-bottom: 15px
+
+  .list
+    display: flex
+
+    +phone
+      flex-direction: column
+
+    &__item
+      display: flex
+      align-items: center
+      max-width: 278px
+
+      &:not(:last-child)
+        margin-right: 40px
+
+        +phone
+          margin-right: 0
+          margin-bottom: 30px
+
+    &__item-number
+      margin-right: 10px
+      font-weight: 700
+      font-size: 40px
+      line-height: 1.1
+      color: $clr_3
+
+      +phone
+        font-size: 30px
+
+    &__item-text
+      @include textReset
+
+      // +phone
+      //   font-size: 14px

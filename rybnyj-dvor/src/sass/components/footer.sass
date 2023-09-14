@@ -1,0 +1,166 @@
+.footer
+  margin-top: auto
+  font-weight: 400
+  line-height: 0.7
+  font-size: 16px
+  color: $clr_2
+
+  +phone
+    font-size: 14px
+
+  .content
+    padding: 21px 0
+    border-top: 1px solid $clr_2
+    border-bottom: 1px solid $clr_2
+
+    +small
+      padding: 15px 0
+
+    &__container
+      display: flex
+      
+      +phone
+        flex-direction: column-reverse
+        align-items: center
+
+    &__link
+      margin-right: 15px
+      border-bottom: 1px solid $clr_2
+      transition: border-color .2s linear
+
+      +phone
+        margin-right: 0
+
+      &:hover
+        border-color: $clr_0
+
+    .menu
+      margin: 0 auto
+
+      +phone
+        margin-bottom: 15px
+
+      .list
+        display: flex
+
+        +phone
+          flex-direction: column
+
+        &__item
+          position: relative
+          display: flex
+          align-items: center
+          justify-content: center
+
+          +phone
+            text-align: center
+
+          &::before
+            content: ''
+            position: absolute
+            bottom: -21px
+            width: 100%
+            height: 1px
+            background-color: $clr_2
+            opacity: 0
+            transition: opacity .2s linear
+
+            +small
+              bottom: -17px
+
+          &.active
+            .list__link
+              +phone
+                border-color: $clr_2
+
+            &::before
+              opacity: 1
+
+              +phone
+                opacity: 0
+
+          &:hover
+            .list__link
+              transform: translateY(5px)
+
+              +phone
+                transform: translateY(0)
+
+            &::before
+              opacity: 1
+
+              +phone
+                opacity: 0
+
+          &:not(:last-child)
+            margin-right: 50px
+
+            +small
+              margin-right: 35px
+
+            +phone
+              margin-right: 0
+              margin-bottom: 10px
+
+        &__link
+          max-width: max-content
+          font-size: 20px
+          font-weight: 500
+          border-bottom: 1px solid $clr_0
+          transition: transform .2s linear
+
+          +small
+            font-size: 16px
+
+          +phone
+            text-align: center
+
+  .copyright
+    &__container
+      // display: flex
+      // justify-content: center
+      padding-top: 20px
+      padding-bottom: 20px
+      font-size: 16px
+      line-height: 1.1
+
+      +phone
+        font-size: 14px
+
+
+    .list
+      display: flex
+      justify-content: space-between
+
+      +small
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+      &__item
+
+        &:not(:last-child)
+          +small
+            margin-bottom: 15px
+
+      &__item-link
+        max-width: max-content
+        // font-size: 18px
+        // font-weight: 500
+        border-bottom: 1px solid $clr_2
+        transition: border-color .2s linear
+
+        &:hover
+          border-color: $clr_0
+
+        +phone
+          text-align: center
+    
+    // &__text
+    //   font-size: 16px
+    //   line-height: 1.1
+    //   text-align: center
+
+      +phone
+        font-size: 14px
+        

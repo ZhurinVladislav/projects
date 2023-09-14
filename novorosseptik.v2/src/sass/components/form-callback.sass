@@ -1,0 +1,50 @@
+.form-callback
+  margin:  0
+  overflow-y: auto
+  max-width: 100%
+  width: 520px
+  padding: 50px 40px
+  border-radius: 10px
+  background: $color__4
+  display: none
+
+  .form
+    width: 100%
+
+  &.active
+    display: block
+
+  .header_2
+    color: $color__1
+    margin-bottom: 25px
+
+  .form-item:not(last-child)
+    margin-bottom: 25px
+
+  .button-invert
+    max-width: 280px
+    background-color: $color__1
+    color: $color__5
+    border: 2px solid $color__3
+    transition: border .2s ease-in-out, color .2s ease-in-out, background-color .2s ease-in-out
+
+    +medium
+      width: 100%
+      margin-bottom: 14px
+
+    +phone
+      margin: 0 auto
+      margin-bottom: 14px
+
+    &:hover
+      background-color: transparent
+      border: 2px solid $color__1
+      color: $color__1
+
+  +small
+    //padding: 30px 15px
+
+  +phone
+    width: 100%
+    padding: 30px 10px
+

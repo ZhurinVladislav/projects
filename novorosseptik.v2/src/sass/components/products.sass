@@ -1,0 +1,162 @@
+.products
+  margin-bottom: 120px
+  color: $color__1
+
+  +small
+    margin-bottom: 80px
+
+  &__title
+    @include titleReset
+    margin-bottom: 26px
+    // color: $color__5
+    text-transform: uppercase
+  
+  &__list
+    @include listReset
+    display: flex
+    flex-wrap: wrap
+    margin: -10px
+
+  &__item
+    width: 33.33%
+    padding: 10px
+
+    +small
+      width: 50%
+
+    +phone
+      width: 100%
+
+  &__link
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    padding: 25px
+    max-width: 440px
+    min-height: 269px
+    height: 100%
+    background-color: $color__3
+    border-radius: 10px
+    transition: color .2s ease-in-out, background-color .2s ease-in-out
+
+    &::after
+      content: ''
+      position: absolute
+      z-index: 2
+      bottom: 0
+      right: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(22, 29, 17, 0.3) 100%)
+      border-radius: 10px
+
+    &:hover
+      background-color: $color__2
+
+      .products__link-item
+        opacity: 0
+      
+      .products__title-card
+        transform: translateY(0px)  
+
+    +phone
+      margin: 0 auto
+
+  &__title-card
+    @include titleReset
+    // margin-bottom: 20px
+    z-index: 3
+    display: flex
+    font-weight: 700
+    font-size: 24px
+    line-height: 1.2
+    text-transform: uppercase
+    transition: transform .2s ease-in-out
+
+    +small
+      font-size: 21px
+      // transform: translateY(130px)
+
+  &__img
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 10px
+
+  &__link-item
+    position: absolute
+    top: 25px
+    left: 25px
+    z-index: 8
+    display: flex
+    opacity: 1
+    justify-content: center
+    align-items: center
+    max-width: 76px
+    min-height: 42px
+    width: 100%
+    // height: 100%
+    font-weight: 700
+    font-size: 18px
+    line-height: 1.2
+    text-transform: uppercase
+    background: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
+    border-radius: 10px
+    transition: opacity .2s ease-in-out
+
+  .subtitle 
+    display: none
+    z-index: 20
+    font-weight: 400
+    font-size: 18px
+    color: $color__1
+    opacity: 0
+    transform: translateY(40px)
+    transition: all 0s
+    margin: -5px
+
+    &__list
+      display: flex
+      flex-wrap: wrap
+      padding-top: 20px
+
+    &__item
+      padding: 5px
+
+    &__text
+      display: block
+      padding: 10px
+      max-width: max-content
+      min-height: 42px
+      font-weight: 600
+      font-size: 16px
+      line-height: 1.2
+      background: rgba(255, 255, 255, 0.4)
+      backdrop-filter: blur(5px)
+      border-radius: 10px
+
+    &__item-all
+      padding: 5px
+
+    &__text-all
+      display: block
+      padding: 10px
+      max-width: max-content
+      min-height: 42px
+      font-weight: 600
+      font-size: 16px
+      line-height: 1.2
+      background: linear-gradient(110.48deg, #76BA3F 0%, #31A857 100%)
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2)
+      border-radius: 10px
+
+  .subtitle.hover
+    margin-bottom: auto
+    opacity: 1
+    transform: translateY(0px)
+    transition: all 0.1s
+

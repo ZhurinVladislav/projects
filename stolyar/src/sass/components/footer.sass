@@ -1,0 +1,78 @@
+.footer
+  margin-top: auto
+  min-height: 59px
+  font-weight: 500
+  font-size: 13px
+  color: $color__1
+  letter-spacing: .48px
+  text-transform: uppercase
+  background-color: $color__3
+
+  +small
+    font-size: 14px
+
+  +phone
+    font-size: 12px
+
+  &__container
+    padding-top: 20px
+    padding-bottom: 20px
+
+    +phone
+      padding-top: 10px
+      padding-bottom: 10px
+
+  &:last-child
+    margin-left: auto
+
+  &__list
+    display: flex
+    text-align: center
+    justify-content: space-between
+
+    +phone
+      justify-content: center
+      flex-wrap: wrap
+
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &:not(:last-child)
+      margin-right: 15px
+
+      +phone
+        margin-right: 0
+
+    +phone
+      margin-bottom: 10px
+      width: 100%
+
+    &:last-child
+
+      +phone
+        margin-bottom: 0
+
+      .footer__link
+        display: flex
+        align-items: center
+        justify-content: center
+
+  &__link
+    transition: color .2s linear
+
+    &:hover
+      color: $color__4
+      .footer__svg
+        fill: $color__4
+
+    +phone
+      font-size: 12px
+
+  &__svg
+    margin-right: 10px
+    width: 46px
+    height: 21px
+    fill: $color__1
+    transition: fill .2s linear

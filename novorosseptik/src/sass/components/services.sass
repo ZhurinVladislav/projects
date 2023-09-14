@@ -1,0 +1,77 @@
+.services
+  margin-bottom: 120px
+
+  +small
+    margin-bottom: 80px
+
+  &__title
+    @include titleReset
+    margin-bottom: 26px
+
+  &__descr
+    @include textReset
+    margin-bottom: 59px
+    font-weight: 400
+    font-size: 20px
+    line-height: 138.5%
+  
+  &__list
+    @include listReset
+    display: flex
+    flex-wrap: wrap
+    margin: -10px
+
+  &__item
+    width: 33.33%
+    padding: 10px
+
+    +small
+      width: 50%
+
+    +phone
+      width: 100%
+
+  &__link
+    position: relative
+    display: flex
+    flex-direction: column
+    padding: 32px 121px 39px 32px
+    max-width: 380px
+    min-height: 319px
+    background-color: $color__3
+    border-radius: 15px 100px 15px 15px
+    transition: color .2s ease-in-out, background-color .2s ease-in-out
+
+    &:hover
+      background-color: $color__2
+
+    +phone
+      margin: 0 auto
+
+  &__title-card
+    max-width: 220px
+    font-weight: 700
+    font-size: 24px
+    line-height: 124.5%
+
+  &__text
+    margin-top: auto
+    text-decoration: underline
+    font-family: $font-family__1
+    font-weight: 400
+    font-size: 16px
+    line-height: 138.5%
+
+  &__img
+    position: absolute
+    bottom: 0
+    right: 0
+
+    +medium
+      width: 175px
+    
+    +small
+      width: 230px
+
+    +phone
+      width: 175px

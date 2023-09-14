@@ -1,0 +1,37 @@
+.copyright
+    position: relative
+    z-index: 12
+    background: #2A2D32
+
+    .content
+        padding: 20px 0
+        border-top: 1px solid rgba(255, 255, 255, 0.2)
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    .text
+        margin-bottom: 6px
+        &:last-child
+            margin-bottom: 0
+
+    a
+        display: inline-block
+        font-size: 12px
+        font-weight: 300
+        color: #fff
+        text-decoration: underline
+        &:hover
+            text-decoration: none
+
+    span
+        display: block
+        font-size: 12px
+        font-weight: 300
+        color: #fff
+
+    +small
+        .content
+            flex-direction: column
+            text-align: center
+    

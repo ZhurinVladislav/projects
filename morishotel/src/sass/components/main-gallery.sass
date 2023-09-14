@@ -1,0 +1,502 @@
+.main-gallery
+  padding-top: 160px
+  padding-bottom: 100px
+  overflow: hidden
+  background-image: url(../img/main-gallery/bg-img.png)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+  +small
+    padding-top: 40px
+    padding-bottom: 80px
+
+  .gallery
+    position: relative
+    margin-bottom: 225px
+
+    +small
+      margin-bottom: 80px
+
+    &__title 
+      max-width: 902px
+
+    .slider-wrapper
+      // position: relative
+      display: flex
+      justify-content: flex-start
+      overflow: visible
+      max-width: 340px
+      min-height: 340px
+      max-height: 580px
+      min-width: 0
+      // margin-right: 430px
+      margin-right: 172px
+
+      // +max(1438px)
+      //   padding-left: 0
+
+      +small
+        max-width: 100%
+        min-height: 400px
+        max-height: 400px
+        // overflow: hidden
+
+      
+
+      .slick-list
+        overflow: inherit
+        height: 580px
+
+        +small
+          overflow: hidden
+          // height: 340px
+          max-width: 100%
+          min-height: 400px
+          max-height: 400px
+
+      .slider
+        padding-bottom: 50px
+        height: 100%
+        min-width: 0
+        margin-left: -69px
+
+        +small
+          margin-left: 0
+
+        &__slide
+          // position: relative
+          text-align: center
+          font-size: 18px
+          display: flex
+          justify-content: flex-end
+          align-items: flex-end
+          transition: all .6s linear
+
+          +small
+            padding: 0
+            margin: 0
+            max-width: 100%
+            width: 100%
+            height: 400px
+
+        .slider-item--active 
+          padding: 0 5px 200px 200px
+          margin: 0 41px 41px 41px
+          width: 580px
+          height: 580px
+          // background: linear-gradient(180deg, rgba(245, 243, 242, 0) 0%, rgba(245, 243, 242, 0.9) 56.77%)
+          transition: all .6s linear
+
+          +small
+            padding: 0
+            margin: 0
+            max-width: 100%
+            width: 100%
+            height: 400px
+
+        &__slide-img
+          position: relative
+          display: block
+          width: 100%
+          height: 100%
+          object-fit: cover
+          transition: all .6s linear
+
+        .slider-item--active .slider__slide-img
+          max-width: 580px
+          width: 580px
+          height: 580px
+
+          +small
+            max-width: 100%
+            width: 100%
+            height: 100%
+            // max-width: 400px
+            // width: 400px
+            // height: 400px
+
+          +phone
+            max-width: 100%
+            width: 100%
+            height: 100%
+
+        .slider-item--active .slider__slide-text
+          opacity: 1
+
+        &__slide-text
+          position: absolute
+          z-index: 2
+          // bottom: 200px
+          left: -40px
+          display: flex
+          flex-direction: column
+          justify-content: end
+          padding: 95px 0 30px 30px
+          width: 101%
+          height: 191px
+          background: linear-gradient(180deg, rgba(245, 243, 242, 0) 0%, rgba(245, 243, 242, 0.9) 56.77%)
+          opacity: 0
+          transition: opacity .2s linear
+
+          +small
+            // opacity: 1
+            left: 0
+            padding: 20px
+            width: 96%
+
+          +phone
+            width: 100%
+            height: 88px
+
+
+        &__slide-descr
+          @include textReset
+          width: max-content
+          font-family: $font-family__2
+          font-style: normal
+          font-weight: 700
+          font-size: 20px
+          letter-spacing: 0.06em
+          text-transform: uppercase
+
+          +small
+            font-size: 14px
+
+      // .wrapper     
+      //   position: absolute
+      //   bottom: -40px
+      //   left: -59px
+      //   right: 0
+      //   width: 580px
+
+      .arrow-wrapper
+        position: absolute
+        // right: 0
+        right: -19vh
+        bottom: -6vh
+        z-index: 200
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 580px
+
+        +small
+          right: 0
+          width: 100%
+
+        // +max(1438px)
+        //   right: 66px
+        //   max-width: 321px
+
+        // +phone
+        //   right: auto
+        //   max-width: 100%
+
+        &__left
+          margin-right: 20px
+
+        &__btns
+          display: flex
+          margin-right: 20px
+
+          .arrow
+            stroke: $color__2
+            fill: none
+
+            &:hover
+              stroke: $color__4
+
+        &__pagination
+          font-weight: 400
+          font-size: 12px
+          line-height: 15px
+          letter-spacing: 0.1em
+          text-transform: uppercase
+          color: $color__2
+
+    &__number
+      position: absolute
+      top: 0
+      right: 6vh
+      z-index: 10
+      font-family: $font-family__2
+      font-style: italic
+      font-weight: 700
+      font-size: 268px
+      color: $color__3
+      text-shadow: 0px 0px 100px rgba(191, 187, 185, 0.5)
+
+      +medium
+        top: -2%
+        right: 1%
+        font-size: 100px
+
+      +small
+        display: none
+
+  .rooms
+    position: relative
+
+    &__container
+      display: flex
+      align-items: flex-start
+
+      +small
+        flex-wrap: wrap
+
+    .content-left
+      width: 40%
+      margin-right: 20px
+      max-width: 580px
+
+      +medium
+        width: 50%
+
+      +small
+        width: 100%
+        max-width: 100%
+
+      &__descr
+        @include textReset
+        margin-bottom: 15px
+
+        +phone
+          font-size: 14px
+
+      &__descr.italic
+        margin-bottom: 50px
+        font-size: 20px
+
+        +small
+          margin-bottom: 20px
+
+        +phone
+          font-size: 16px
+
+      &__wrap-text
+        display: flex
+        flex-direction: column
+
+        +small
+          flex-direction: row
+          flex-wrap: wrap-reverse
+
+      .list
+        display: flex
+        flex-direction: column
+        margin-bottom: 50px
+        border-left: 1px solid $color__4
+
+        +phone
+          flex-direction: row
+          flex-wrap: wrap
+          margin-bottom: 20px
+          border-color: transparent
+
+        &__btn
+          position: relative
+          padding: 25px 28px
+          min-height: 70px
+          font-weight: 600
+          font-size: 16px
+          letter-spacing: .06em
+          color: $color__2
+          text-transform: uppercase
+          // border-left: 2px solid transparent
+          border-bottom: 2px solid transparent
+          transition: color .2s linear, border-color .2s linear
+
+          &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            height: 103%
+            width: 2px
+            background-color: $color__4
+            opacity: 0
+            transition: opacity .2s linear
+
+          +phone
+            padding: 10px 10px 5px 10px
+            font-size: 14px
+            min-height: 50px
+
+          &:hover
+            color: rgba($color__4, .5)
+
+            &::before
+              opacity: 1
+              background-color: rgba($color__4, .5)
+        
+        &__btn.active
+          color: $color__4
+
+          &::before
+            opacity: 1
+
+            +phone
+              opacity: 0
+
+          +phone
+            border-bottom-color: $color__4
+
+    .content-right
+      position: relative
+      z-index: 3
+      display: flex
+      flex-direction: column
+      margin-left: auto
+      max-width: 700px
+      // min-height: 963px
+      min-height: 900px
+      background-color: $color__5
+      background-image: url(../img/bg-blcok.png)
+      background-repeat: no-repeat
+      background-position: bottom
+      background-size: cover
+      box-shadow: 0px 0px 100px rgba(191, 187, 185, 0.5)
+
+      +medium
+        width: 50%
+
+      +small
+        width: 100%
+        max-width: 100%
+        min-height: 600px
+
+      .slider-wrapper
+        position: relative
+        margin-bottom: 60px
+        overflow: hidden
+
+        +phone
+          margin-bottom: 30px
+          max-height: 28vh
+
+        .slider
+          &__slide
+            max-width: 100%
+            max-height: 438px
+            +phone
+              max-height: 28vh
+
+          &__img
+            width: 100%
+            max-height: 438px
+            height: 100%
+            object-fit: cover
+            
+        .arrow-wrapper
+          position: absolute
+          right: 30px
+          bottom: 20px
+          z-index: 100
+          display: flex
+
+          +phone
+            right: 0
+            bottom: 0
+
+          &__left
+            margin-right: 20px
+
+            +phone
+              margin-right: 5px
+
+      .text
+        padding: 0 60px 60px 60px
+
+        +medium
+          padding: 0 40px 40px 40px
+
+        +phone
+          padding: 0 20px 20px 20px
+
+        &__title
+          margin-bottom: 10px
+          font-weight: 700
+          font-size: 40px
+          text-transform: uppercase
+
+          +phone
+            font-size: 25px
+
+        &__subtitle
+          @include textReset
+          margin-bottom: 30px
+          font-family: $font-family__2
+          font-style: italic
+          font-weight: 400
+          font-size: 20px
+
+          +phone
+            margin-bottom: 15px
+            font-size: 18px
+
+        &__content
+          margin-bottom: 30px
+
+          +phone
+            margin-bottom: 15px
+            font-size: 14px
+
+          p
+            @include textReset
+
+            &:not(:last-child)
+              margin-bottom: 10px
+            +phone
+              font-size: 16px
+
+
+        .info
+          margin-bottom: 76px
+          
+          +phone
+            margin-bottom: 30px
+
+          p
+            @include textReset
+            font-family: $font-family__2
+            font-style: italic
+            font-size: 20px
+
+            &:not(:last-child)
+              margin-bottom: 10px
+
+            +phone
+              font-size: 16px
+
+        &__link
+          font-weight: 600
+          font-size: 16px
+          letter-spacing: .06em
+          text-transform: uppercase
+          border-bottom: 2px solid $color__4
+          transition: color .2s linear, border-color .2s linear
+
+          &:hover
+            color: $color__4
+            border-color: transparent
+
+    &__number
+      position: absolute
+      top: -15%
+      right: 25%
+      z-index: 10
+      font-family: $font-family__2
+      font-style: italic
+      font-weight: 700
+      font-size: 268px
+      color: $color__3
+      text-shadow: 0px 0px 100px rgba(191, 187, 185, 0.5)
+
+      +medium
+        top: -2%
+        right: 1%
+        font-size: 100px
+        
+      +small
+        display: none

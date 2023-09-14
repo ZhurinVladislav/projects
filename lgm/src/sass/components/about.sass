@@ -1,0 +1,99 @@
+.about
+
+	.content
+		display: flex
+		justify-content: space-between
+		margin-bottom: 50px
+
+		+small
+			flex-direction: column
+
+		.content-left
+			display: flex
+			flex-direction: column
+			flex: 0 0 50%
+			margin-right: 10px
+
+			+small
+				flex: 0 0 100%
+
+			.list
+				display: grid
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+				grid-auto-rows: minmax(74px, auto)
+				gap: 81px
+				margin-bottom: 20px
+
+				+large
+					grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+					gap: 40px
+
+				+small
+					gap: 20px
+					grid-auto-rows: minmax(57px, auto)
+					margin-bottom: 30px
+				
+				.item
+
+					&__title
+						@include textReset
+						margin-bottom: 20px
+						font-family: $ff_2
+						font-weight: 400
+						font-size: 50px
+						text-transform: uppercase
+
+						+large
+							font-size: 35px
+
+						+small
+							font-size: 30px
+
+						+phone
+							margin-bottom: 15px
+							font-size: 20px
+
+					&__subtitle
+						@include textReset
+						font-size: 20px
+
+						+phone
+							font-size: 16px
+
+			&__link
+				margin-top: auto
+
+				+small
+					display: none
+
+		.content-right
+			flex: 0 0 46%
+			padding-right: 80px
+
+			+medium
+				padding-right: 0
+
+			+small
+				flex: 0 0 100%
+				padding-right: 0
+
+			&__link
+				display: none
+
+				+small
+					display: flex
+
+		.text
+
+			+small
+				margin-bottom: 30px
+			
+			p
+				@include textReset
+
+				&:not(:last-child)
+					margin-bottom: 28px
+
+					+phone
+						margin-bottom: 15px
+		

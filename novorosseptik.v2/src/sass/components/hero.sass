@@ -1,0 +1,167 @@
+.hero
+  position: relative
+  z-index: 32
+  margin-bottom: 100px
+  padding-top: 303px
+  padding-bottom: 118px
+  min-height: 100vh
+  color: $color__1
+  background-image: url(../img/hero-img.jpg)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  overflow: hidden
+
+  +max(1148px)
+    padding-top: 100px
+    padding-bottom: 80px
+    margin-bottom: 80px
+    min-height: 76vh
+
+  &__title
+    margin-bottom: 128px
+    max-width: 733px
+    font-weight: 700
+    font-size: 48px
+    line-height: 1.2
+    text-transform: uppercase
+
+    +max(1148px)
+      margin-bottom: 71px
+
+    +medium
+      font-size: 37px
+
+    +phone
+      margin-bottom: 19px
+      text-align: center
+      font-size: 28px
+
+  &__subtitle
+    @include textReset
+    margin-bottom: 73px
+    font-weight: 400
+    font-size: 22px
+    line-height: 155%
+    +medium
+      font-size: 19px
+      margin-bottom: 33px
+    +phone
+      font-size: 17px
+    
+  &__img
+    flex-shrink: 0
+    max-width: 50%
+    +medium
+      flex-shrink: 1
+      max-width: 100%
+    
+  &__img-item
+    width: 100%
+
+  .form-item 
+    +phone
+      margin: 0 auto
+      max-width: 412px
+
+  .form-descr
+    max-width: 509px
+
+    +small
+      max-width: 100%
+
+    +phone
+      text-align: center
+
+    &__title
+      @include textReset
+      margin-bottom: 10px
+      font-weight: 700
+      font-size: 24px
+      line-height: 120%
+
+    &__list
+      display: flex
+      margin-bottom: 20px
+      font-weight: 600
+      font-size: 16px
+      line-height: 1.2
+
+      +phone
+        flex-wrap: wrap
+        justify-content: center
+
+    &__item
+      +phone
+        width: 100%
+      
+      &:not(:last-child)
+        margin-right: 45px
+      
+        +phone
+          margin-right: 0
+          margin-bottom: 5px
+
+    .form
+
+      &__content-top
+        margin-bottom: 15px
+
+      &__item-title
+        margin-bottom: 9px
+        font-weight: 400
+        font-size: 14px
+        line-height: 161.5%
+
+      &__item-inputs
+        display: flex
+        flex-direction: row
+
+        +phone
+          flex-wrap: wrap
+
+      &__item-input
+        width: 50%
+
+        +small
+          width: 100%
+        
+
+        &:not(:last-child)
+          margin-right: 15px
+
+          +phone
+            margin-right: 0
+            margin-bottom: 20px
+
+        input
+          width: 100%
+
+      &__descr
+        @include textReset
+        margin-top: auto
+        max-width: 235px
+        font-weight: 400
+        font-size: 10px
+        line-height: 120%
+        color: $color__1
+
+        +phone
+          max-width: 100%
+
+      &__content-bottom
+        display: flex
+
+        +phone
+          flex-wrap: wrap
+
+      &__dtn
+        margin-right: 15px
+        padding: 16px 20px
+        max-width: 247px
+        width: 100%
+
+        +phone
+          margin-right: 0
+          margin-bottom: 20px
+          max-width: 100%

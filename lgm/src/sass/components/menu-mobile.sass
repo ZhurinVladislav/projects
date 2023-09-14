@@ -1,0 +1,135 @@
+.menu-mobile
+  position: fixed
+  z-index: 2000
+  top: 0
+  right: 0
+  display: none
+  width: 50%
+  height: 100vh
+  padding: 72px 20px 72px 40px
+  font-size: 20px
+  background-color: rgba($clr_2, .6)
+  backdrop-filter: blur(6px)
+  border-radius: 60px 0 0 60px
+  overflow: hidden auto
+  transform: translateX(100%)
+  transition: transform .3s linear, opacity .3s linear
+  will-change: transform
+  opacity: 0
+  box-shadow: 0px 4px 20px 0px rgba(43, 42, 40, 0.3)
+
+  +small
+    display: block
+
+    &.active
+      transform: translateX(0)
+      opacity: 1
+
+  +phone
+    padding: 72px 20px
+    width: 100%
+    font-size: 18px
+    border-radius: 0
+
+  .menu
+    display: flex
+    flex-direction: column
+    margin-bottom: 40px
+
+    +small
+      display: flex
+
+    +phone
+      margin-bottom: 30px
+
+    .list
+      display: flex
+      flex-direction: column
+
+      .item
+        &:not(:last-child)
+          margin-bottom: 20px
+
+          +phone
+            margin-bottom: 15px
+
+        &.active
+          .item__link
+            color: $clr_3
+
+        &.parent
+          position: relative
+          &.active
+            .list
+              .item
+                &.active
+                  .item__link
+                    color: $clr_3
+
+              .item__link
+                color: $clr_1
+
+        &__btn
+          position: absolute
+          top: 15px
+          display: inline
+          width: 30px
+          height: 30px
+          transform: translateY(-50%)
+
+          &.active
+
+            .item__icon
+              fill: $clr_3
+              transform: rotate(180deg)
+        
+        &__icon
+          display: inline-flex
+          width: 20px
+          height: 20px
+          fill: $clr_1
+          transition: transform .2s linear
+
+        .list
+          max-height: 0
+          transition: all .2s linear
+          
+
+          &.overflow-hidden
+            max-height: 0
+            overflow: hidden
+            transition: max-height .3s linear
+
+          .item
+            font-size: 16px
+
+            &:first-child
+              padding-top: 15px
+
+            &:not(:last-child)
+              margin-bottom: 15px
+
+  .list-link
+    display: flex
+    flex-direction: column
+    max-width: 400px
+    font-size: 16px
+
+    &__item
+
+      &:not(:last-child)
+        margin-bottom: 20px
+
+        +phone
+          margin-bottom: 15px
+
+    &__link
+      display: flex
+      align-items: center
+
+    &__icon
+      flex-shrink: 0
+      margin-right: 10px
+      width: 20px
+      height: 20px
+      fill: $clr_3

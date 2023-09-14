@@ -1,0 +1,95 @@
+.advantages
+  padding-top: 333px
+  margin-bottom: 150px
+
+  +small
+    padding-top: 100px
+    margin-bottom: 80px
+
+  +phone
+    padding-top: 80px
+    
+  .list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-auto-rows: 195px
+    gap: 20px
+
+    +small
+      grid-template-columns: repeat(2, 1fr)
+
+    +phone
+      grid-template-columns: 1fr
+      grid-auto-rows: 170px
+
+    .item
+      display: flex
+      flex-direction: column
+      padding: 34px 27px
+      background-color: $color__1
+      border-radius: 10px
+      box-shadow: 0px 50px 100px 0px rgba(0, 0, 0, 0.15)
+      background-image: url(../img/advantages/bg-img.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      transition: box-shadow .2s linear
+
+      .top
+        display: flex
+        align-items: center
+
+        .img-1
+          width: 75px
+          height: 76px
+          background-image: url(../img/advantages/img-1.svg)
+
+          +phone
+            width: 45px
+            height: 46px
+
+        .img-2
+          width: 68px
+          height: 76px
+          background-image: url(../img/advantages/img-2.svg)
+
+          +phone
+            width: 45px
+            height: 46px
+
+        .img-3
+          width: 51px
+          height: 76px
+          background-image: url(../img/advantages/img-3.svg)
+
+          +phone
+            width: 45px
+            height: 46px
+
+        &__img
+          flex-shrink: 0
+          margin-top: 9px
+          margin-right: 20px
+          width: 100%
+          min-height: 100%
+            // background-image: url(../img/preview_3.svg);
+          background-repeat: no-repeat
+          background-size: contain
+
+        &__text
+          @include textReset
+          max-width: 190px
+          font-family: $font-family__2
+          font-weight: 600
+          font-size: 40px
+          letter-spacing: .8px
+          color: $color__3
+          text-transform: uppercase
+
+          +medium
+            font-size: 30px
+
+          +phone
+            font-size: 25px
+
+      &__text
+        color: $color__2

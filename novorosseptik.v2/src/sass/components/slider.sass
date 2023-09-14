@@ -1,0 +1,219 @@
+.slider-wrapper
+  overflow: hidden
+  position: relative
+  margin-bottom: 100px
+
+  +small
+    margin-bottom: 70px
+
+  &__title
+    @include textReset
+    margin-bottom: 50px
+    font-weight: 700
+    font-size: 36px
+    line-height: 1.2
+  
+  .slider
+    .slide-content
+      display: inline-flex
+      padding: 0
+
+      &__wrapper
+        display: flex
+        flex-direction: column
+        display: inline-flex
+        padding: 0
+        width: 100%
+
+      &__top-content
+        width: 100%
+        display: inline-flex
+        margin-bottom: 25px
+        +medium
+          flex-wrap: wrap
+
+      &__slider
+        display: flex
+        flex-direction: column
+        margin-right: 20px
+        width: 62%
+
+        +medium
+          margin-bottom: 10px
+          margin-right: 0
+          width: 100%
+
+      &__img
+        max-width: 100%
+        // max-height: 100%
+        height: 100%
+
+      &__btn-slide
+        max-width: 253px
+        min-height: 51px
+        font-weight: 700
+        font-size: 14px
+        line-height: 1.2
+
+        +phone
+          max-width: 100%
+          width: 100%
+
+      &__descr
+        padding: 25px
+        width: 45.33%
+        border: 2px solid $color__5
+        border-radius: 10px
+
+        +medium
+          margin-top: 74px
+          width: 100%
+
+        +phone
+          margin-top: 0
+
+      &__list
+        margin-bottom: 49px
+
+      &__item
+
+        &:not(:last-child)
+          margin-bottom: 25px
+
+      &__title
+        @include textReset
+        margin-bottom: 5px
+        font-weight: 700
+        font-size: 18px
+        line-height: 1.2
+        color: $color__5
+        text-transform: uppercase
+
+      &__text
+        @include textReset
+        font-weight: 600
+        font-size: 18px
+        line-height: 1.2
+        color: $color__2
+
+      &__btn
+        // padding: 16px 17px
+        margin-right: 10px
+        max-width: 233px
+        min-height: 51px
+        font-weight: 700
+        font-size: 15px
+        line-height: 1.2
+
+      &__btn-wrapper
+        display: flex
+        flex-direction: row
+
+        +phone
+          flex-wrap: wrap-reverse
+
+      &__arrow-wrapper
+        margin-left: auto
+
+        +phone
+          margin-bottom: 20px
+          margin-left: 0
+
+        .arrow
+          position: relative
+
+        .main-arrow-left
+          left: 0
+          margin-right: 20px
+
+          +phone
+            margin: 0
+        .main-arrow-right
+          right: 0
+
+.slider-left
+
+  &__top
+    position: relative
+    margin: 0 -4px
+    padding-bottom: 20px
+    height: 100%
+    overflow: hidden
+
+    +phone
+      padding: 0
+
+    .slider-left__slide-link
+      // display: inline-block
+      // min-height: 491px
+      height: 100%
+
+      +phone
+        // min-height: 300px
+
+    img
+      border-radius: 10px
+      width: 100%
+      height: 100%
+      padding: 0 4px
+      min-height: 491px
+      object-fit: cover
+
+      +phone
+        min-height: 300px
+
+    .arrow
+      top: 50%
+      border: 2px solid transparent
+      background-color: rgba(255, 255, 255, 0.6)
+      backdrop-filter: blur(5px)
+      // transform: translateY(-50%)
+      transform: translateY(-50%)
+      transition: fill .2s ease-in-out, background-color .2s ease-in-out
+
+      +phone
+        width: 40px
+        height: 40px
+
+      &:hover
+        fill: $color__1
+        background-color: rgba($color__5, .6)
+
+    .left
+      left: 20px
+
+    .right
+      transform: translateY(-50%) rotate(180deg) 
+      right: 20px
+          
+  &__bottom
+    margin: 0 -10px
+
+    +phone
+      display: none
+
+    .slider-left__slide-item
+      display: inline-block
+      border-radius: 10px
+      // max-height: 166px
+      padding: 0 10px
+
+
+    &__img-wrappe
+      // min-height: 166px
+
+    img
+      cursor: pointer
+      min-height: 166px
+      border-radius: 10px
+      width: 100%
+      border-radius: 10px
+      object-fit: cover
+      height: 100%
+      // min-height: 166px
+
+.home-page
+  .slick-list
+    height: 100%
+  .slick-track
+    height: 100%

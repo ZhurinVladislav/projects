@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Моя Земля</title>
+  <link rel="stylesheet" href="/app/css/normalize.css">
+  <link rel="stylesheet" href="/app/css/main.css">
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function(){
+      document.querySelector('body').classList.add('loading');
+      // document.querySelectorAll('[data-animations]').forEach(element => {
+      //     element.classList.add('animations')
+      // });;
+    }); 
+  </script>
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <!-- header top -->
+    <div class="header__top header-top">
+      <div class="header-top__container container">
+        <div class="header-top__content">
+          <a href="/" class="header-top__logo">
+            <img class="header-top__logo-img" src="/app/images/logo.svg" alt="Логотип Моя Земля">
+          </a>
+          <div class="header-top__list-link">
+            <a class="header-top__link-mail" href="mailto:gd@zkc-mz.ru" target="_blank">
+              gd@zkc-mz.ru
+            </a>
+            <ul class="header-top__list">
+              <li class="header-top__list-item">
+                <a href="#" target="_blank">
+                  <svg class="header-top__svg header-top__svg-tg">
+                    <use xlink:href="/app/images/svg_sprite.svg#tg"></use>
+                  </svg>
+                </a>
+              </li>
+                <li class="header-top__list-item">
+                  <a href="#" target="_blank">
+                    <svg class="header-top__svg header-top__svg-vk">
+                      <use xlink:href="/app/images/svg_sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="header-top__list-item">
+                    <a href="#" target="_blank">
+                      <svg class="header-top__svg header-top__svg-whts">
+                        <use xlink:href="/app/images/svg_sprite.svg#whts"></use>
+                      </svg>
+                    </a>
+                </li>
+            </ul>
+          </div>
+          <div class="header-top__list-feedback">
+            <a class="header-top__list-feedback-number" href="tel:+79676661119">
+              +7 (967) 666-111-9
+            </a>
+            <div class="header-top__button button" data-open="form-callback">
+              Оставить заявку
+            </div>
+          </div>
+          <button class="menu__toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- header bottom -->
+    <div class="header__bottom header-bottom">
+        <div class="header-bottom__container container">
+        <div class="content">
+            <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        Главная
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="./main.html" class="menu-link">
+                        О компании
+                    </a>
+                </li>
+                <li class="menu-item parent">
+                    <a href="#" class="menu-link">
+                        Услуги
+                        <span class="arrow">
+                            <svg><use xlink:href="/app/images/svg_sprite.svg#triangle"></use></svg>
+                        </span>
+                    </a>
+                    <ul class="menu-list__inner">
+                        <li class="menu-item">
+                            <a href="#">
+                                Услуг1
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                Услуг2
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                Услуг3
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                Услуг4
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item active">
+                    <a href="#" class="menu-link">
+                        Прайс-лист
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        Наши работы
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="./contact.html" class="menu-link">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+        </div>
+    </div>
+    <!-- burger menu -->
+    <div class="header__burger menu-mobile">
+      <div class="menu-mobile__wrap">
+        <nav class="menu-mobile__menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="./index.html" class="menu-link">
+                  Главная
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="./main.html" class="menu-link">
+                  О компании
+              </a>
+            </li>
+            <li class="menu-item parent">
+              <a href="#" class="menu-link">
+                Услуги
+                <span class="arrow">
+                  <svg>
+                    <use xlink:href="/app/images/svg_sprite.svg#triangle"></use>
+                  </svg>
+                </span>
+              </a>
+              <ul class="menu-list__inner">
+                  <li class="menu-item">
+                      <a href="#" target="_blank">
+                          Услуг1
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="#" target="_blank">
+                          Услуг2
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="#" target="_blank">
+                          Услуг3
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="#" target="_blank">
+                          Услуг4
+                      </a>
+                  </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                  Прайс-лист
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                  Наши работы
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="./contact.html" class="menu-link">
+                  Контакты
+                </a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="list-svg">
+          <li class="list-svg__item">
+            <a href="#" class="list-svg__item-link">
+              <svg class="list-svg__item-svg">
+                <use xlink:href="/app/images/svg_sprite.svg#tg"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list-svg__item">
+            <a href="#" class="list-svg__item-link">
+              <svg class="list-svg__item-svg">
+                <use xlink:href="/app/images/svg_sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list-svg__item">
+            <a href="#" class="list-svg__item-link">
+              <svg class="list-svg__item-svg">
+                <use xlink:href="/app/images/svg_sprite.svg#whts"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="phone">
+            <a href="tel:8 (918) 623 91 52" class="phone-link">
+              8 (918) 623 91 52
+            </a>
+        </div>
+        <div class="address">
+            <span class="address-icon">
+              <svg>
+                <use xlink:href="/app/images/svg_sprite.svg#map"></use>
+              </svg>
+            </span>
+            <span class="address-text">
+              г. Новороссийск, ул. Энгельса, 7, офис 103.
+            </span>
+        </div>
+        <div class="button" data-open="form-callback">
+          Оставить заявку
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- main -->
+  <section class="main">
+    <div class="container">
+      <div class="content">
+        <div class="text-default">
+          <h1>Прайс-лист</h1>
+          <table>
+            <caption>Прайс-лист</caption>
+              <tr>
+                <th>№ п/п</th>
+                <th>Наименование услуги</th>
+                <th>Ед. изм.</th>
+                <th>Количество</th>
+                <th>Цена за ед. изм., руб.</th>
+                <th>Стоимость, руб.</th>
+              </tr>
+              <tr>
+                <td>1.</td>
+                <td>Межевание участка</td><td>кг</td><td>1</td><td>69,00</td><td>1048,80</td>
+              </tr>
+              <tr>
+                <td>2.</td>
+                <td>Оформление участка</td><td>кг</td><td>2</td><td>48,00</td><td>120,00</td>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align:right">ИТОГО:</td><td>1168,80</td>
+              </tr>
+            </table>
+          
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere consequuntur fuga dolor dolorum, 
+            earum quod repellat ipsum harum, voluptatum sed eveniet perspiciatis at omnis id delectus necessitatibus quisquam voluptates?
+          </p>
+          <p>
+            Fuga mollitia recusandae asperiores, <a href="#">qui tenetur</a> sint sapiente culpa quis? Laborum recusandae et 
+            porro optio amet dolorum labore vero incidunt cum repellat ea nemo alias vitae eveniet voluptates, eos ipsum!
+            Consequatur recusandae cumque alias a nam, ab reiciendis quisquam incidunt, adipisci consequuntur 
+          </p>
+          <p>
+            illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure possimus, atque fugit! Natus praesentium ullam, repudiandae culpa accusantium corporis!
+            Culpa exercitationem fugit beatae molestias ratione maxime laudantium harum asperiores illo 
+            perferendis dolorem reprehenderit, eos necessitatibus, provident delectus molestiae atque eius nobis? 
+            Commodi temporibus sequi consequuntur excepturi enim recusandae ducimus!
+          </p>
+          <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+            <li>Пункт 4</li>
+            <li>Пункт 5</li>
+          </ul>
+          <p>&nbsp;</p>
+          <h2>Заголовок 2</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae! Corrupti, 
+            nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+          </p>
+          <ol>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+            <li>Пункт 4</li>
+            <li>Пункт 5</li>
+          </ol>
+          <p>&nbsp;</p>
+          <h3>Заголовок 3</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae! Corrupti, 
+            nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae! Corrupti, 
+            nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+          </p>
+
+          <div class="gallery-item">
+            <a href="/app/images/about-img.jpg">
+              <img src="/app/images/about-img.jpg" alt="">
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="/app/images/about-img.jpg">
+              <img src="/app/images/about-img.jpg" alt="">
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="/app/images/about-img.jpg">
+              <img src="/app/images/about-img.jpg" alt="">
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="/app/images/about-img.jpg">
+              <img src="/app/images/about-img.jpg" alt="">
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="/app/images/about-img.jpg">
+              <img src="/app/images/about-img.jpg" alt="">
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="/app/images/about-img.jpg">
+              <img src="/app/images/about-img.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <img src="/app/images/logo.svg" alt="Логотип Моя Земля" class="footer__log">
+      <div class="footer__content">
+        <div class="footer__lists">
+          <div class="footer__list-left list-reset">
+            <h3 class="footer__title">
+              Меню
+            </h3>
+            <ul class="footer__content-list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Главная
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  О компании
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Услуги
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Вопрос-ответ
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Наши работы
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list-middle list-reset">
+            <h3 class="footer__title">
+              Часы работы
+            </h3>
+            <ul class="footer__content-list">
+              <li class="footer__list-item">
+                пн: 10:00&ndash;18:00
+              </li>
+              <li class="footer__list-item">
+                вт: 10:00&ndash;18:00
+              </li>
+              <li class="footer__list-item">
+                ср: 10:00&ndash;18:00
+              </li>
+              <li class="footer__list-item">
+                чт: 10:00&ndash;18:00
+              </li>
+              <li class="footer__list-item">
+                пт: 10:00&ndash;18:00
+              </li>
+              <li class="footer__list-item">
+                сб-вс: Закрыто
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list-right list-reset">
+            <h3 class="footer__title">
+              Контакты
+            </h3>
+            <ul class="footer__content-list last-list">
+              <li class="footer__list-item">
+                <a href="tel:+79676661119" class="footer__link">
+                  +7 (967) 666-111-9 (whatsapp)
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="mail:gd@zkc-mz.ru" class="footer__link">
+                  gd@zkc-mz.ru
+                </a>
+              </li>
+              <li class="footer__list-item">
+                г. Новороссийск, ул. Энгельса, 7, офис 103.
+              </li>
+            </ul>
+            <ul class="footer__social-link">
+              <li class="footer__social-svg">
+                <a href="#" target="_blank">
+                  <svg class="footer__svg footer__svg-tg">
+                    <use xlink:href="/app/images/svg_sprite.svg#tg"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-svg">
+                <a href="#" class="list-svg__item-link">
+                  <svg class="footer__svg footer__svg-vk">
+                    <use xlink:href="/app/images/svg_sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-svg">
+                <a href="#" target="_blank">
+                  <svg class="footer__svg footer__svg-whts">
+                    <use xlink:href="/app/images/svg_sprite.svg#whts"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <ul class="footer__copyright-list">
+            <li class="footer__copyright-item">
+              <a href="#" class="footer__copyright-link">
+                Политика обработки персональных данных
+              </a>
+            </li>
+            <li class="footer__copyright-item">
+              <a href="https://web2.agency/" class="footer__copyright-link">
+                Разработка сайта WEB2
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- overlay -->
+  <div class="overlay" >
+    <div class="overlay__wrapper">
+      <div class="overlay__bg"></div>
+      <div class="overlay__content">
+        <span class="overlay__close"></span>
+        <!-- form-callback -->
+        <form action="/" method="post" class="form form-callback novalid">
+          <input type="hidden" name="count" value="0">
+          <h3 class="header_2">
+            Заказать звонок
+          </h3>
+          <div class="form-item">
+            <input type="text" name="name" placeholder="имя" >
+          </div>
+          <div class="form-item">
+            <input type="tel" name="phone" placeholder="телефон" >
+          </div>
+          <button class="button-invert">
+            Отправить
+          </button>
+          <label class="form-note">
+            <input type="checkbox" checked>
+            <div class="custom-checkbox"></div>
+            <div class="form-note-text">
+              Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь с&nbsp;обработкой <a href="#">персональных данных</a>
+            </div>
+          </label>
+        </form>
+        <!-- form-success -->
+        <div class="form-success">
+          <div class="header_2">Спасибо!</div>
+          <div class="header_3">Ваши данные отправлены.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- scroll-top -->
+  <button class="scroll-top">
+    <svg>
+      <use xlink:href="/app/images/svg_sprite.svg#arrow"></use>
+    </svg>
+  </button>
+
+  <script src="/app/js/libs/jquery-3.3.1.min.js" defer></script>
+  <script src="/app/js/libs/slick.min.js" defer></script>
+  <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
+  <script src="/app/js/libs/maskedinput-v.1.4.1.js" defer></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text
+  /javascript" defer></script> -->
+  <script src="/app/js/libs/jquery.marquee.min.js" defer></script>
+  <!-- jquery.marquee.min.js -->
+
+  <script src="/app/js/main.js" defer></script>
+</body>
+</html>

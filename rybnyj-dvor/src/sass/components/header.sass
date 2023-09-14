@@ -1,0 +1,525 @@
+.header
+  margin-bottom: 23px
+  min-height: 91px
+  line-height: 1.1
+  color: $clr_2
+  background-color: $clr_3
+
+  &__container
+    padding-top: 16px
+    max-width: 1770px
+
+    +small
+      padding-top: 0
+
+    +phone
+      padding-right: 10px
+      padding-left: 10px
+
+
+  .content
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-bottom: 11px
+    border-bottom: 1px solid $clr_2
+
+    +small
+      padding-top: 11px
+
+    &__link-logo
+      margin-right: 20px
+      max-width: 244px
+      min-height: 59px
+      font-size: 0
+      flex-shrink: 0
+
+    &__logo
+      width: 100%
+      height: 100%
+      font-size: 0
+      transition: opacity .2s ease-in-out
+
+      &:hover
+        opacity: .7
+
+    .menu
+      display: flex
+      justify-content: space-between
+      margin: 0 auto
+      margin-top: auto
+      margin-bottom: 3px
+      padding-right: 20px
+
+      +max(1564px)
+        font-size: 14px
+
+      +medium
+        margin: 0
+        margin-top: auto
+        margin-bottom: 3px
+        margin-left: auto
+
+      +small
+        display: none
+
+      &__list
+        display: flex
+
+      &__item.parent .menu__link
+        display: flex
+        align-items: center
+        justify-content: center
+
+      &__item.parent .menu__link .menu__link-item
+        margin-right: 5px
+        padding-bottom: 0
+
+      &__item.parent:hover .menu__link
+        transform: translateY(0)
+
+      &__item.parent:hover .menu__link .menu__icon
+        transform: rotate(-90deg)
+
+      &__link
+        transition: transform .2s linear
+
+      &__link-item
+        padding-bottom: 12px
+        font-size: 20px
+        font-weight: 500
+        line-height: 1.1
+
+        +max(1564px)
+          font-size: 16px
+
+      &__icon
+        width: 12px
+        height: 13px
+        fill: $clr_2
+        font-size: 0
+        transition: transform .2s linear
+        // transform: rotate(-90deg)
+
+      &__item
+        position: relative
+        display: flex
+        align-items: center
+        text-align: center
+
+        &:hover
+          .menu__link
+            transform: translateY(5px)
+            
+          &::before
+            opacity: 1
+
+        &::before
+          content: ''
+          position: absolute
+          bottom: -14px
+          width: 100%
+          height: 1px
+          border-radius: 10px
+          background-color: $clr_2
+          opacity: 0
+          transition: opacity .2s linear
+
+        &.active
+          // .menu__link
+            // transform: translateY(0)
+
+          &::before
+            opacity: 1
+            
+      &__item:hover .menu__link-item
+        border-color: $clr_5
+
+      &__list
+        display: flex
+
+        > .menu__item
+            margin-right: 50px
+
+            +max(1564px)
+              margin-right: 25px
+
+            &:last-child
+              margin-right: 0
+
+            &:hover
+                > a
+                  border-color: $clr_2
+
+                .list-inner
+                    visibility: visible
+                    opacity: 1
+
+                .arrow-list
+                  transition: fill .2s ease-in-out, transform .2s linear
+                  transform: rotate(180deg)
+
+                .arrow-list
+                  svg
+                    fill: $clr_3
+
+            &.active
+                &__link-item
+                  color: $clr_3
+
+            > .menu__link-item
+                position: relative
+                z-index: 100
+                display: block
+                font-weight: 700
+                font-size: 16px
+                line-height: 22px
+                padding: 0 4px
+                color: $clr_1
+                text-transform: uppercase
+                transition: all .2s
+
+        .arrow-list
+          position: static
+          display: inline-flex
+          width: 16px
+          height: 10px
+          margin-left: 5px
+          transition: all .2s
+
+          svg
+            fill: $clr_1
+
+        .list-inner
+            position: absolute
+            top: 22px
+            left: 0
+            z-index: 100
+            opacity: 0
+            visibility: hidden
+            padding: 14px 20px
+            width: 280px
+            color: $clr_2
+            background-color: $clr_1
+            border-radius: 10px
+            font-size: 18px
+            transition: visibility .2s linear, opacity .2s linear
+            > .menu__item
+                padding-bottom: 17px
+                text-align: start
+                font-size: 16px
+
+                &:hover
+                  &::before
+                    opacity: 0
+                  
+
+                &:last-child
+                  margin-bottom: 0
+                  padding-bottom: 0
+
+                &.active
+                  color: $clr_5
+
+                  &::before
+                    opacity: 0
+
+                > a
+                    font-weight: 500
+                    transition: color .2s ease-in-out
+                    &:hover
+                      color: $clr_4
+
+            &__link-item
+              transition: color .2s ease-in-out
+
+            &__link-item:hover
+              color: $clr_4
+
+            .parent:hover
+
+              .list-inner__link-item
+                color: $clr_4
+                
+              .list-inner__arrow svg
+                fill: $clr_4
+
+      .link
+        display: flex
+        align-items: center
+
+        &__icon
+          margin-right: 10px
+          font-size: 0
+          width: 18px
+          height: 18px
+          fill: $clr_1
+          transition: transform .2s linear
+
+    .arrow-list-mob
+      display: inline-flex
+      width: 12px
+      height: 8px
+      margin-left: 20px
+      transform: rotate(0deg)
+
+    .list-inner .parent
+      text-align: start
+
+    .list-inner .parent::after
+      display: none
+
+    .list-inner .parent:hover .menu__link-item
+      position: relative
+      color: $clr_4
+
+    .list-inner .parent .menu__link-item
+      padding: 0
+      font-weight: 500
+      color: $clr_2
+      text-transform: none
+
+    .list-inner .parent ul
+      position: absolute
+      top: -14px
+      left: 100%
+      z-index: 100
+      display: none
+      padding: 14px 0 20px 17px
+      width: 250px
+      font-size: 18px
+      color: $clr_2
+      border-left: 2px solid $clr_2
+      background-color: $clr_1
+
+    .menu__list > .menu__item:hover .list-inner .parent ul
+      display: none
+
+    .menu__list > .menu__item .list-inner .parent:hover ul
+      display: block
+
+    .menu__list .list-inner .parent:hover ul li .list-inner__link-item
+      color: $clr_2
+
+    .menu__list .list-inner .parent ul li:hover .list-inner__link-item
+      color: $clr_4
+
+    .list-inner .parent:hover ul li:hover
+      color: $clr_2
+
+    .list-inner .parent:hover ul li:not(:last-child)
+      margin-bottom: 15px
+
+    .list-inner .parent .arrow-list svg
+      fill: $clr_1
+
+    .menu__list .parent.active .parent .menu__link-item::after
+      display: none
+
+    .menu__list .list-inner > li.parent a .arrow-list
+      transform: rotate(270deg)
+
+    .menu__list .list-inner > li.parent a .arrow-list svg
+      fill: $clr_2
+      transition: fill .2s ease-in-out
+
+    .menu__list .list-inner > li.parent:hover a .arrow-list svg
+      fill: $clr_4
+
+    .list-inner .parent li a > .arrow-list
+      display: inline-flex
+      width: 16px
+      height: 10px
+      margin-left: 5px
+      transition: all 0.2s
+
+    .list-inner .parent li a .arrow-list svg
+      fill: $clr_1
+      transform: rotate(270deg)
+      transition: fill .2s ease-in-out
+
+    .list-inner .menu__item.active .menu__link-item
+      color: $clr_4
+
+  .list-right
+    display: flex
+    max-width: 391px
+    line-height: 1.1
+    font-weight: 500
+
+    +large
+      flex-direction: column
+      margin-left: auto
+
+    +medium
+      display: none
+
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      justify-content: center
+
+      &:not(:last-child)
+        margin-right: 78px
+
+        +large
+          margin-right: 0
+          margin-bottom: 10px
+
+    &__item-descr
+      @include textReset
+      margin-bottom: 5px
+      font-size: 16px
+      text-align: end
+
+    &__link
+      margin-bottom: 5px
+      font-size: 20px
+      font-weight: 700
+      border-bottom: 1px solid $clr_0
+      transition: color .2s linear, border-color .2s linear
+
+      +medium
+        font-size: 16px
+
+      &:hover
+        color: $clr_5
+        border-color: $clr_5
+
+      &_mail
+        margin-bottom: 0
+        border-color: $clr_2
+        font-size: 16px
+
+        &:hover
+          border-color: $clr_0
+
+    .link
+      display: flex
+      align-items: center
+
+      &:hover
+        color: $clr_5
+        border-color: $clr_0
+
+        .link__descr
+          transform: translateX(2px)
+          border-color: $clr_5
+
+      &__icon
+        flex-shrink: 0
+        margin-right: 10px
+        width: 16px
+        height: 16px
+        fill: $clr_2
+
+      &__descr
+        border-bottom: 1px solid $clr_0
+        transition: border-color .2s linear, transform .2s linear
+
+  .menu__toggle
+    display: none
+  
+  +small
+    .menu__toggle
+      margin-left: auto
+      position: relative
+      z-index: 30000
+      display: block
+      width: 22px
+      height: 14px
+      cursor: pointer
+
+      span
+        display: block
+        width: 100%
+        height: 2px
+        border-radius: 1px
+        background: $clr_2
+        position: absolute
+        transition: all 0.3s linear
+        transform: rotate(0) translate(0, 0)
+        &:nth-child(1)
+          top: 0
+          left: 0
+        &:nth-child(2)
+          top: 50%
+          left: 0
+          transform: translateY(-50%)
+          opacity: 1
+        &:nth-child(3)
+          bottom: 0
+          left: 0
+
+      &.active
+        span
+          &:nth-child(1)
+            transform: rotate(45deg) translate(-50%, -50%)
+            transform-origin: top left
+            background-color: $clr_2
+            left: 50%
+            top: 50%
+          &:nth-child(2)
+            left: 100%
+            background-color: $clr_2
+            transform: translateY(0)
+            opacity: 0
+          &:nth-child(3)
+            background-color: $clr_2
+            transform: rotate(-45deg) translate(-50%, 50%)
+            transform-origin: bottom left
+            left: 50%
+            bottom: 50%
+
+  .menu-mobile
+    height: 100%
+
+    .menu-list > .menu-item
+        position: relative
+        margin-right: 63px
+
+        +medium
+          margin-right: 36px
+
+        &:last-child
+          margin-right: 0
+
+        &:hover
+            > a
+              color: $clr_2
+
+            .list-inner
+                display: block
+
+            .arrow-list
+              transform: rotate(180deg)
+
+            .arrow-list
+              svg
+                fill: $clr_1
+
+        &.active > a
+            color: $clr_4
+                  
+        > a
+            position: relative
+            z-index: 1
+            font-weight: 400
+            font-size: 16px
+            line-height: 22px
+            color: $clr_2
+            transition: all 0.2s
+
+            .arrow-list
+                display: inline-flex
+                width: 11px
+                height: 11px
+                top: 29%
+                left: 69px
+                transition: all 0.2s
+                svg
+                  fill: $clr_1
+
+        .display
+          display: block

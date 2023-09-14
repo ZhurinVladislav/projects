@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <base href="/">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg">
+        <!-- SEO -->
+        <title>Отель Морис</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <!-- styles -->
+        <link rel="stylesheet" href="/app/css/main.min.css">
+        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+    </head>
+
+    <body>
+        <!-- header -->
+        <header class="home-page__header header">
+            <!-- header top -->
+            <div class="header__top header-top">
+                <div class="header-top__container container">
+                    <div class="header-top__content content">
+                        <a href="/" class="content__left">
+                            г. Новороссийск, набережная имени адмирала Серебрякова, д. 77
+                        </a>
+                        <a href="/" class="content__middle middle">
+                            <img class="middle__logo" src="/app/img/logo.svg" alt="Логотип Отеля Морис" title="Логотип Отеля Морис">
+                        </a>
+                        <ul class="content__right right">
+                            <li class="right__item">
+                                <a class="right__link" href="tel:+79181890077">
+                                    <svg class="right__svg svg-reset">
+                                        <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                                    </svg>
+                                    +7 (918) 189-00-77
+                                </a>
+                            </li>
+                            <li class="right__item">
+                                <a class="right__link" href="mailto:info@morishotel.ru">
+                                    <svg class="right__svg svg-reset">
+                                        <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                    </svg>
+                                    info@morishotel.ru
+                                </a>
+                            </li>
+                        </ul>
+                        <button aria-label="Раскрыть мобильное меню" class="menu__toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- header bottom -->
+            <div class="header__bottom header-bottom">
+                <div class="header-bottom__container container">
+                    <nav class="header-bottom__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" target="_blank"  href="/">
+                                    <span class="menu__link-item">
+                                        Главная
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./main.html">
+                                    <span class="menu__link-item">
+                                        Номера и цены
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link" target="_blank" href="/">
+                                    <span class="menu__link-item">
+                                        Об отеле
+                                    </span>
+                                    <span class="menu__arrow arrow-list">
+                                        <svg>
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="menu__item parent">
+                                        <a lass="menu__link" target="_blank" href="/">
+                                            <span class="menu__link-item">
+                                                Подробная инфомарция
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inner__item">
+                                        <a class="list-inner__link" target="_blank" href="/">
+                                            <span class="list-inner__link-item">
+                                                Правила проживания
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" target="_blank" href="/">
+                                    <span class="menu__link-item">
+                                        Спецпредложения
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu__item active">
+                                <a class="menu__link" target="_blank" href="./contacts.html">
+                                    <span class="menu__link-item">
+                                        Контакты
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- burger menu -->
+            <div class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="menu-item parent active">
+                                <a href="./main.html" class="menu-link" target="_blank">
+                                    Продукция
+                                </a>
+                                <span class="arrow-list-mob">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </span>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#" target="_blank">
+                                            Продукт-1
+                                        </a>
+                                    </li>
+                                    <li class="menu-item parent active">
+                                        <a class="menu-link" href="#" target="_blank">
+                                            Продукт-2
+                                        </a>
+                                        <span class="arrow-list-mob">
+                                            <svg>
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </span>
+                                        <ul class="menu-list__inner">
+                                            <li class="menu-item">
+                                                <a class="menu-link" href="#" target="_blank">
+                                                    Продукт-1
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a class="menu-link" href="#" target="_blank">
+                                                    Продукт-2
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a class="menu-link" href="#" target="_blank">
+                                                    Продукт-3
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a class="menu-link" href="#" target="_blank">
+                                                    Продукт-4
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a class="menu-link" href="#" target="_blank">
+                                                    Продукт-5
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#" target="_blank">
+                                            Продукт-3
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#" target="_blank">
+                                            Продукт-4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link" target="_blank">
+                                    <span class="link-item">
+                                        Контакты
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:novoros@aleacompany.ru">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                novoros@aleacompany.ru
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+79184399702">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                                </svg>
+                                +7 (918) 439-97-02
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" target="_blank" href="/">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#point"></use>
+                                </svg>
+                                г. Новороссийск, ул. 5-ая Промышленная, д.3, Промзона &laquo;Кирилловская&raquo;
+                            </a>
+                        </li>
+                    </ul>
+                    <button aria-label="Раскрыть окно обратной связи" class="button" data-open="form-callback">
+                        Полный прайс
+                    </button>
+                </div>
+            </div>
+        </header>
+        <section class="special-offers">
+            <div class="special-offers__container container">
+                <h1 class="special-offers__title header_1">
+                    Специальные предложения
+                </h1>
+                <ul class="special-offers__list">
+                    <li class="special-offers__item">
+                        <a class="special-offers__link" href="/">
+                            <img src="./app/img/special-offers/img-1.jpg" alt="Пара" title="Пара" class="special-offers__img">
+                            <p class="special-offers__descr">
+                                Для жениха и&nbsp;невесты
+                            </p>
+                        </a>
+                    </li>
+                    <li class="special-offers__item">
+                        <a class="special-offers__link" href="/">
+                            <img src="./app/img/special-offers/img-2.jpg" alt="Виды на море" title="Виды на море" class="special-offers__img">
+                            <p class="special-offers__descr">
+                                Для корпоративных клиентов
+                            </p>
+                        </a>
+                    </li>
+                    <li class="special-offers__item">
+                        <a class="special-offers__link" href="/">
+                            <img src="./app/img/special-offers/img-3.jpg" alt="Поход" title="Поход" class="special-offers__img">
+                            <p class="special-offers__descr">
+                                Для организованных групп
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="home-page__footer footer">
+            <div class="footer__container container">
+                <div class="footer__content content">
+                    <div class="content__left left">
+                        <a class="left__link-img" href="/">
+                            <img class="left__img" src="/app/img/logo.svg" alt="Логотип Отеля Морис">
+                        </a>
+                        <a class="left__link" href="/">
+                            г. Новороссийск, набережная имени адмирала Серебрякова, д.&nbsp;77
+                        </a>
+                    </div>
+                    <div class="content__right right">
+                        <ul class="right__list">
+                            <li class="right__item">
+                                <a class="right__link" href="tel:+7 (918) 189-00-77">
+                                    <svg class="right__svg svg-reset">
+                                        <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                                    </svg>
+                                    +7 (918) 189-00-77
+                                </a>
+                            </li>
+                            <li class="right__item">
+                                <a class="right__link" href="mailto:info@morishotel.ru">
+                                    <svg class="right__svg svg-reset">
+                                        <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                    </svg>
+                                    info@morishotel.ru
+                                </a>
+                            </li>
+                        </ul>
+                        <button data-open="form-callback" class="right__btn button-invert">
+                            Забронировать номер
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!-- copyright -->
+        <section class="home-page__copyright copyright">
+            <div class="copyright__container container">
+                <ul class="copyright__list">
+                    <li class="copyright__item">
+                        <a class="copyright__link" href="#">
+                            Пользовательское соглашение
+                        </a>
+                    </li>
+                    <li class="copyright__item">
+                        Все права защищены Copyright 2023
+                    </li>
+                    <li class="copyright__item">
+                        <a class="copyright__link" href="https://web2.agency/">
+                            <svg class="copyright__svg">
+                                <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                            </svg>
+                            <span class="copyright__link-item">
+                                Создание сайтов
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- overlay -->
+        <div class="home-page__overlay overlay">
+            <div class="overlay__wrapper">
+                <div class="overlay__bg"></div>
+                <div class="overlay__content">
+                    <span aria-label="Закрыть форму обратной связи" class="overlay__close"></span>
+                    <!-- form-callback -->
+                    <form action="/" method="post" class="form form-callback novalid">
+                        <input type="hidden" name="count" value="0">
+                        <h3 class="header_2">
+                            Забронировать номер
+                        </h3>
+                        <div class="form-item">
+                            <input type="text" name="name" placeholder="имя" >
+                        </div>
+                        <div class="form-item">
+                            <input type="tel" name="phone" placeholder="телефон" >
+                        </div>
+                        <button class="button">
+                            Отправить
+                        </button>
+                        <label class="form-note">
+                            <input type="checkbox" checked>
+                            <div class="custom-checkbox"></div>
+                            <div class="form-note-text">
+                                Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь с&nbsp;обработкой <a href="#">персональных данных</a>
+                            </div>
+                        </label>
+                    </form>
+                    <!-- form-success -->
+                    <div class="form-success">
+                        <div class="header_2">Спасибо!</div>
+                        <div class="header_3">Ваши данные отправлены.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- soc-panel -->
+        <ul class="home-page__soc-panel soc-panel">
+            <li class="soc-panel__item">
+                <a class="soc-panel__link" href="/">
+                    <svg class="soc-panel__icon vk svg-reset">
+                        <use xlink:href="/app/img/icons/icons.svg#vk"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="soc-panel__item">
+                <a class="soc-panel__link" href="/">
+                    <svg class="soc-panel__icon svg-reset">
+                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="soc-panel__item">
+                <a class="soc-panel__link" href="/">
+                    <svg class="soc-panel__icon svg-reset">
+                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="soc-panel__item">
+                <a class="soc-panel__link" href="/">
+                    <svg class="soc-panel__icon svg-reset">
+                        <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+
+        <!-- scroll-top -->
+        <button class="scroll-top" aria-label="Наверх страницы">
+            <svg>
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+
+        <!-- scripts -->
+        <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+        <script src="/app/js/libs/slick.min.js"></script>
+        <script src="/app/js/libs/lightgallery-all.min.js"></script>
+        <script src="/app/js/libs/functions.js"></script>
+        <script src="/app/js/main.min.js"></script>
+        <!-- <script src="/app/js/main.js"></script> -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector('body').classList.add('loading');
+            }); 
+        </script>
+    </body>
+</html>
+

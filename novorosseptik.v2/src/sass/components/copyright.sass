@@ -1,0 +1,66 @@
+.copyright
+  padding: 12px 0
+  font-weight: 400
+  font-size: 10px
+  line-height: 1.2
+  text-transform: uppercase
+  
+  +phone
+    flex-wrap: wrap
+    text-align: center
+    justify-content: center
+    flex-wrap: wrap
+
+  &__container
+    padding-left: 115px
+    padding-right: 272px
+
+    +medium
+      padding-left: 25px
+      padding-right: 25px
+    
+
+  &:last-child
+    margin-left: auto
+
+    +phone
+      margin-left: 0
+
+  &__list
+    display: flex
+    align-items: center
+    background-color: $color__1
+    text-transform: uppercase
+    color: transparent
+    background-clip: text
+    background-image: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
+    
+    +phone
+      flex-wrap: wrap
+
+
+  &__item
+
+    +phone
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 9px
+
+    &:nth-child(2)
+      margin: 0 auto
+      
+    &:last-child
+      min-height: 17px
+      font-weight: 400
+      font-size: 10px
+      line-height: 1.2
+
+      .copyright__link
+        display: flex
+        align-items: center
+        justify-content: center
+
+  &__svg
+    margin-right: 12px
+    max-width: 40px
+    min-height: 17px

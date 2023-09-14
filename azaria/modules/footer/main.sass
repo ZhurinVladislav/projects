@@ -1,0 +1,112 @@
+.footer
+    background: #2A2D32
+    padding: 35px 0
+
+    .list
+        display: flex
+        align-items: center
+
+    .item
+        margin-right: 60px
+        padding-right: 60px
+        position: relative
+
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            width: 1px
+            height: 76px
+            background: rgba(255,255,255,0.2)
+
+        &:last-child
+            margin-right: 0
+            padding-right: 0
+            &::after
+                display: none
+
+    .item-address
+        display: flex
+
+    .item-address__icon
+        flex-shrink: 0
+        display: inline-flex
+        width: 16px
+        height: 20px
+        margin-right: 14px
+        svg
+            fill: #fff
+
+    .item-address__text
+        font-size: 14px
+        color: #fff
+
+    .item-contact__wrap
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+
+    .item-contact__link
+        display: block
+        color: #fff
+        text-align: right
+        font-weight: 600
+        font-size: 16px
+        transition: all 0.3s
+        &:hover
+            color: $color__2
+
+    .item-contact__text
+        display: block
+        color: #fff
+        text-align: right
+        font-weight: 400
+        font-size: 12px
+
+    .button
+        width: 234px
+
+
+    +large
+        .item
+            margin-right: 50px
+            padding-right: 50px
+
+    +medium
+        .item
+            margin-right: 24px
+            padding-right: 24px
+
+        .button
+            width: 200px
+
+    +small
+        .list
+            flex-direction: column
+            justify-content: center
+
+
+        .item
+            margin-right: 0px
+            padding-right: 0px
+            &::after
+                display: none
+
+        .item-address
+            text-align: center
+            margin-bottom: 20px
+
+        .item-address__icon
+            display: none
+
+        .item-contact
+            margin-bottom: 20px
+
+        .item-contact__link
+            text-align: center
+
+        .item-contact__text
+            text-align: center

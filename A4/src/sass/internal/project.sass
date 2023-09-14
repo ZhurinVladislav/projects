@@ -1,0 +1,95 @@
+.project
+
+  &__list
+    display: grid
+    grid-auto-flow: row
+    gap: 10px
+    margin-bottom: 20px
+    max-width: 100%
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  .item
+    cursor: pointer
+
+  &__wrapp-btn
+    position: relative
+    display: flex
+    margin-bottom: 40px
+
+    +phone
+      margin-bottom: 100px
+
+    .scroll-top
+      position: absolute
+      bottom: 0
+      right: 50px
+
+      +phone
+        bottom: -80px
+        right: 50%
+        left: 50%
+        transform: translateX(-40%)
+    
+  &__btn
+    margin: 0 auto
+
+  .main-item
+    position: relative
+    display: flex
+    min-height: calc(100vh - 74px)
+
+    +phone
+      min-height: 456px
+
+    .project__img
+      position: absolute
+      top: 0
+      z-index: -1
+
+
+    &__content
+      margin-top: auto
+      padding-bottom: 50px
+      padding-left: 50px
+      max-width: 519px
+      color: $color__3
+
+      +phone
+        padding-bottom: 15px
+        padding-left: 15px
+
+    &__icon
+      margin-bottom: 10px
+      width: 84px
+      height: 44px
+      fill: $color__3
+
+      +phone
+        margin-bottom: 0
+        width: 42px
+        height: 22px
+
+    &__title
+      @include textReset
+      margin-bottom: 15px
+      font-weight: 700
+      font-size: 48px
+      line-height: 1.2
+
+      +phone
+        margin-bottom: 10px
+        font-size: 22px
+
+    &__descr
+      @include textReset
+      font-weight: 400
+      font-size: 16px
+      line-height: 1.3
+      
+      +phone
+        font-size: 14px
+

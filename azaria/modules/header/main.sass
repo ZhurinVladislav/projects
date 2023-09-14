@@ -1,0 +1,302 @@
+.home-page
+    .header
+        position: absolute
+        z-index: 33
+        background: transparent
+
+    .header
+        .header-top
+            .content
+                border-bottom: 1px solid rgba($color__3,0.4)
+
+.header
+    position: relative
+    background: rgba($color__1, 0.9)
+
+    .header-top
+        width: 100%
+        overflow: hidden
+
+        .content
+            display: flex
+            align-items: center
+            padding: 12px 0
+            border-bottom: 1px solid #fff
+            +small
+                border-bottom: none
+
+        .logo
+            display: block
+            width: 138px
+            img
+                width: 100%
+
+        .address
+            display: flex
+            margin-left: 50px
+            margin-right: auto
+
+        .address-icon
+            flex-shrink: 0
+            display: inline-flex
+            width: 20px
+            height: 24px
+            margin-right: 6px
+            svg
+                fill: #fff
+
+        .address-text
+            font-size: 14px
+            color: #fff
+
+        .phone
+            color: #fff
+            margin-right: 64px
+
+        .phone-link
+            display: block
+            font-size: 16px
+            font-weight: 800
+            transition: all 0.2s
+            &:hover
+                color: $color__2
+
+        .phone-text
+            display: block
+            text-align: right
+            font-weight: 300
+            font-size: 12px
+
+        .whatsapp
+            margin-right: 64px
+            display: block
+            width: 50px
+            height: 50px
+            border: 1px solid #fff
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all 0.3s
+
+            &:hover
+                background: $color__2
+                border: 1px solid $color__2
+
+                .whatsapp-icon
+                    fill: $color__1
+
+        .whatsapp-icon
+            display: inline-flex
+            width: 16px
+            height: 16px
+            fill: #fff
+            transition: all 0.3s
+
+        .button
+            width: 200px
+        
+
+        .menu__toggle
+            display: none
+
+
+    .header-bottom
+        padding: 14px 0
+        width: 100%
+
+        .content
+            display: flex
+            align-items: center
+
+        .menu-list
+            display: flex
+            align-items: center
+
+        .menu-list > .menu-item
+            position: relative
+            margin-right: 100px
+
+            &:last-child
+                margin-right: 0
+
+            &:hover
+                > a
+                    color: $color__2
+
+                ul
+                    display: block
+
+                .arrow
+                    transform: rotate(0)
+
+            &.active
+                a
+                    &::after
+                        opacity: 1
+                    
+            > a
+                position: relative
+                z-index: 1
+                display: block
+                font-weight: 300
+                font-size: 18px
+                padding: 0 4px
+                color: #fff
+                text-transform: uppercase
+                transition: all 0.3s
+
+                &::after
+                    content: ""
+                    display: block
+                    position: absolute
+                    z-index: -1
+                    left: 0
+                    bottom: 2px
+                    width: 100%
+                    height: 8px
+                    background: $color__2
+                    opacity: 0
+                    transition: all 0.3s
+
+                .arrow
+                    display: inline-flex
+                    width: 8px
+                    height: 8px
+                    transform: rotate(180deg)
+                    transition: all 0.3s
+                    svg
+                        fill: #fff
+
+                
+
+
+        .menu-list__inner
+            display: none
+            position: absolute
+            z-index: 12
+            top: 100%
+            width: 270px
+            background: #fff
+            padding: 15px 20px 25px
+            border: 1px solid $color__1
+            > .menu-item
+                margin-bottom: 25px
+                &:last-child
+                    margin-bottom: 0
+
+                > a
+                    //padding: 0 20px
+                    font-size: 14px
+                    font-weight: 400
+                    text-transform: uppercase
+                    border-bottom: 1px solid transparent
+                    transition: all 0.3s
+                    &:hover
+                        color: $color__2
+                        border-bottom: 1px solid $color__2
+
+                &.active
+                    a
+                        color: $color__2
+                        border-bottom: 1px solid $color__2
+
+    +large  
+        .header-bottom
+
+            .menu-item
+                margin-right: 60px
+
+
+    +medium
+        .header-bottom
+            display: none
+
+        .header-top
+
+            .address
+                //display: none
+
+            .phone
+                margin-right: 30px
+
+            .whatsapp
+                margin-right: 30px
+
+            .menu__toggle
+                margin-left: 30px
+                position: relative
+                z-index: 30
+                display: block
+                width: 22px
+                height: 14px
+                cursor: pointer
+
+                span
+                    display: block
+                    width: 100%
+                    height: 2px
+                    border-radius: 1px
+                    background: #fff
+                    position: absolute
+                    transition: all 0.3s
+                    transform: rotate(0) translate(0, 0)
+                    &:nth-child(1)
+                        top: 0
+                        left: 0
+                    &:nth-child(2)
+                        top: 50%
+                        left: 0
+                        transform: translateY(-50%)
+                        opacity: 1
+                    &:nth-child(3)
+                        bottom: 0
+                        left: 0
+
+                &.active
+                    span
+                        &:nth-child(1)
+                            transform: rotate(45deg) translate(-50%, -50%)
+                            transform-origin: top left
+                            left: 50%
+                            top: 50%
+
+                        &:nth-child(2)
+                            left: 100%
+                            transform: translateY(0)
+                            opacity: 0
+                        &:nth-child(3)
+                            transform: rotate(-45deg) translate(-50%, 50%)
+                            transform-origin: bottom left
+                            left: 50%
+                            bottom: 50%
+
+    +small
+        .header-top
+            .address,
+            .whatsapp,
+            .button
+                display: none
+
+            .phone
+                margin-left: auto
+                margin-right: auto
+
+            .phone-link
+                font-size: 14px
+
+            .phone-text
+                font-size: 10px
+
+            .content
+                padding: 6px 0
+
+            .menu__toggle
+                margin-left: 0
+
+
+    +max(350px)
+        .header-top
+
+            .phone
+                font-size: 12px

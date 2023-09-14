@@ -1,0 +1,196 @@
+.footer
+  padding-top: 25px
+  padding-bottom: 25px
+  color: $color__1
+  background: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
+
+  +small
+    padding-top: 0
+    padding-bottom: 15px
+
+  &__container
+    display: flex
+    align-items: flex-start
+
+    +small
+      flex-wrap: wrap
+
+  &__content
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+    +small
+      width: 100%
+
+  &__lists
+    display: flex
+    width: 93%
+
+    +medium
+      width: 100%
+
+    +small
+      justify-content: center
+      flex-wrap: wrap
+
+  &__title
+    @include textReset
+    margin-bottom: 20px
+    font-weight: 700
+    font-size: 24px
+    line-height: 1.2
+    text-transform: uppercase
+
+    +phone
+      margin-bottom: 10px
+      font-size: 18px
+
+  &__list-item
+    font-weight: 600
+    font-size: 18px
+    line-height: 1.2
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+    a:hover
+      color: rgba(255, 255, 255, .5)
+
+  &__list-item
+    display: flex
+    font-weight: 400
+    font-size: 16px
+    line-height: 120%
+
+
+  .link-phone
+    display: flex
+    flex-direction: column
+
+    +small
+      align-items: center
+
+    &__number
+      display: flex
+      margin-bottom: 5px
+
+      &:hover
+        .link-phone__number
+          transition: color .3s ease-in-out
+          color: rgba(255, 255, 255, .5)
+
+        .link-phone__svg
+          fill: rgba(255, 255, 255, .5)
+
+    &__item
+      margin-bottom: 20px
+      font-weight: 600
+      font-size: 16px
+      line-height: 1.2
+
+      +phone
+        margin-bottom: 0
+
+    .link-phone__svg
+      width: 20px
+      height: 20px
+      fill: rgba(255, 255, 255, 1)
+      margin-right: 10px
+
+
+  &__social-link
+    display: flex
+    margin-bottom: 20px
+
+    +phone
+      justify-content: center
+      margin-bottom: 0
+
+  &__social-svg:not(:last-child)
+    margin-right: 20px
+    
+  &__svg
+    width: 20px
+    height: 20px
+    transition: fill .2s ease-in-out
+    fill: $color__1
+
+    &:hover
+      fill: $color__3
+
+  &__content-list
+
+    +small
+      display: flex
+      align-items: center
+      flex-direction: column
+  
+  .list-reset
+    // padding: 25px 149px 89px 98px
+    width: 80%
+    // flex-grow: 1
+    padding: 25px 29px 89px 98px
+
+    +small
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 0
+      padding-top: 30px
+      padding-bottom: 30px
+      width: 100%
+      max-width: 500px
+
+    +phone
+      text-align: center
+      padding-top: 15px
+      padding-bottom: 15px
+      width: 100%
+    
+    &:not(:last-child)
+      border-right: 2px solid $color__1
+
+      +small
+        border-right: none
+        border-bottom: 2px solid $color__1
+
+    &:last-child
+      padding: 25px 0 89px 98px
+      max-width: 395px
+
+      +small
+        max-width: 500px
+        padding: 0
+        padding-top: 30px
+
+      +phone
+        padding-top: 15px
+
+  .address
+    margin-bottom: 20px
+    font-weight: 600
+    font-size: 18px
+    line-height: 1.2
+
+    +phone
+      margin-bottom: 0
+      font-size: 15px
+
+  .requisites
+
+    &__list
+      +small
+        text-align: center
+        
+    &__list-item
+      font-weight: 600
+      font-size: 18px
+      line-height: 1.2
+
+      +phone
+        font-size: 15px
+
+      &:not(:last-child)
+        margin-bottom: 5px
+

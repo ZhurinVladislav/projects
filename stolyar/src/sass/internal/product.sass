@@ -1,0 +1,351 @@
+.product
+  margin-bottom: 150px
+
+  +small
+    margin-bottom: 80px
+
+  .title-wrapper
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+
+    +phone
+      flex-wrap: wrap
+
+    &__title
+      margin-bottom: 0
+      color: $color__3
+
+      +phone
+        margin-bottom: 15px
+        width: 100%
+
+    &__btn
+      display: none
+      max-width: 223px
+      font-size: 16px
+      
+      +small
+        display: inline-block
+
+      +phone
+        margin: 0 auto
+        max-width: 450px
+
+  .content-top
+    display: flex
+    margin-bottom: 30px
+
+    +small
+      flex-wrap: wrap
+
+    .swiper-slide
+      font-size: 0
+      background-color: $color__4
+
+    &__img-wrapp
+      max-height: 400px
+
+    .swiper-slide .swiper-img
+      max-width: 100%
+      width: 100%
+      min-height: 100%
+      object-fit: cover
+
+    .swiper-slide
+      cursor: pointer
+      user-select: none
+
+    .slider
+      display: flex
+      flex-direction: column
+      max-width: 50%
+      // max-height: 65vh
+      max-height: 80vh
+      margin-right: 40px
+      overflow: hidden
+
+      +small
+        max-width: 100%
+        margin-right: 0
+        margin-bottom: 30px
+
+      .slider-top
+        margin-bottom: 20px
+        height: 75%
+        border-radius: 20px
+
+        &__slide
+
+          &:hover
+            .slider-top__img
+              transform: scale(1.1)
+
+        &__img
+          transition: transform .3s linear
+
+        .arrow
+          position: absolute
+          z-index: 10
+          top: 50%
+          padding: 10px
+          width: 50px
+          height: 50px
+          background-color: $color__2
+          border-radius: 10px
+          fill: $color__1
+          transform: translateY(-50%) rotate(90deg)
+          transition: background-color .2s linear
+
+          &.swiper-button-disabled
+            background-color: rgba($color__2, .5)
+            fill: rgba($color__1, .5)
+            cursor: auto
+
+            &:hover
+              background-color: rgba($color__2, .5)
+
+          &:hover
+            background-color: $color__4
+
+          &_prev
+            left: 10px
+
+          &_next
+            right: 10px
+            transform: translateY(-50%) rotate(-90deg)
+
+      .slider-bottom
+        height: 20%
+        box-sizing: border-box
+        border-radius: 20px
+
+        &__slide
+          opacity: .4
+          border-radius: 20px
+          overflow: hidden
+          transition: opacity .3s linear
+
+          &:hover
+            opacity: 1
+
+          &__img
+            border-radius: 20px
+
+          &.swiper-slide-thumb-active
+            opacity: 1
+
+    .descr
+      max-width: 50%
+
+      +small
+        max-width: 100%
+
+      &__price
+        margin-bottom: 20px
+        font-family: $font-family__2
+        font-size: 35px
+        color: $color__3
+
+        +small
+          font-size: 30px
+
+      // &__number
+      //   color: $color__3
+
+      &__text
+        margin-bottom: 20px
+        font-size: 16px
+        color: $color__2
+
+        p
+          font-size: 16px
+
+          &:not(:last-child)
+            margin-bottom: 10px
+
+        strong
+          font-weight: 500
+
+        a
+          color: $color__3
+          font-weight: 500
+          border-bottom: 1px solid $color__3
+          transition: border-color .2s linear
+
+          &:hover
+            border-color: $color__0
+
+
+      &__btn
+        padding: 14px 27px
+        font-size: 16px
+
+      .list
+
+        &__item
+          font-size: 18px
+
+          +small
+            font-size: 16px
+
+          &:not(:last-child)
+            margin-bottom: 15px
+
+        &__point
+          font-weight: 700
+
+  .content-bottom
+    margin-bottom: 40px
+
+    +phone
+      margin-bottom: 30px
+
+    &__title
+      margin-bottom: 30px
+
+    &__text
+      margin-bottom: 40px
+      color: $color__2
+      
+      +phone
+        margin-bottom: 20px
+
+    &__btn
+      padding: 14px 27px
+      font-size: 16px
+
+      +phone
+        margin: 0 auto
+
+  .see-also-slider
+    padding-top: 20px
+
+    &__wrapper
+      display: inline-flex
+      margin-bottom: 40px
+      box-sizing: border-box
+      border-radius: 8px
+
+      +phone
+        margin-bottom: 20px
+
+    &__img-wrapp
+      height: 300px
+      overflow: hidden
+      border-radius: 8px
+
+    &__title-wrppaer
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 10px
+      width: 100%
+      border-radius: 0 0 10px 10px
+
+    &__title
+      @include textReset
+      font-size: 20px
+      font-family: $font-family__2
+      font-weight: 500
+      letter-spacing: .54px
+      font-size: 18px
+      text-align: center
+      text-transform: uppercase
+      transition: color .2s linear
+
+    &__price 
+      @include textReset
+      padding-top: 10px
+      font-family: $font-family__2
+      font-weight: 500
+      font-size: 16px
+      text-align: center
+
+
+
+    .swiper-slide
+      position: relative
+      font-size: 0
+      overflow: hidden
+      border: 1px solid $color__3
+      border-radius: 8px 
+      user-select: none
+
+      &:hover
+        .see-also-slider__title
+          color: $color__4
+        .swiper-img
+          opacity: .7
+        
+
+    .swiper-slide .swiper-img
+      background-color: $color__3
+      margin-bottom: 10px
+      max-width: 100%
+      width: 100%
+      min-height: 100%
+      border-radius: 8px
+      object-fit: cover
+      transition: opacity .2s linear
+
+    .arrow-wrap
+      display: flex
+      justify-content: center
+
+      .arrow
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 13px
+        width: 50px
+        height: 50px
+        background-color: $color__3
+        border-radius: 50%
+        fill: $color__1
+        transition: background-color .2s linear
+
+        &.swiper-button-disabled
+          background-color: rgba($color__3, .5)
+          fill: rgba($color__2, .5)
+          cursor: auto
+
+          &:hover
+            background-color: rgba($color__3, .5)
+
+        &:hover
+          background-color: $color__4
+
+        &__icon
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -42%)
+          width: 20px
+          height: 20px
+          transition: transform .2s linear, fill .2s linear
+
+        &_next
+          transform: rotate(-90deg)
+
+        &_prev
+          margin-right: 17px
+          transform: rotate(90deg)
+
+    &__slide-btn
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 5
+      width: 176px
+      height: 176px
+      font-size: 20px
+      font-weight: 500
+      line-height: 1.1
+      color: $color__1
+      background-color: $color__3
+      border-radius: 8px
+      opacity: 0
+      transform: translate(-50%, -50%) scale(0.7)
+      transition: transform .3s linear, opacity .2s linear

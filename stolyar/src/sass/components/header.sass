@@ -1,0 +1,498 @@
+.home-page .header
+  margin-bottom: 0
+  border-color: $color__0
+
+.header
+  margin-bottom: 40px
+  border-bottom: 1px solid $color__3
+
+  .header-top
+    background-color: $color__3
+
+    +small
+      display: none
+      
+    .content 
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 10px 0
+      font-weight: 500
+
+      .icon-reset
+        flex-shrink: 0
+        margin-right: 10px
+        width: 10px
+        height: 10px
+        fill: $color__1
+        font-size: 0
+        transition: opacity .2s linear
+
+      .left
+        display: flex
+        max-width: 348px
+
+        &__link
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 16px
+          color: $color__1
+          transition: color .2s linear
+
+          &:not(:last-child)
+            margin-right: 50px
+
+          &:hover
+            color: rgba($color__1, .5)
+
+            .icon-reset
+              opacity: .5
+
+      .right
+
+        &__link
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 16px
+          color: $color__1
+          transition: color .2s ease-in-out
+
+          &:not(:last-child)
+            margin-right: 50px
+
+          &:hover
+            color: rgba($color__1, .5)
+
+            .icon-reset
+              opacity: .5
+
+  .header-bottom
+    
+    .menu__toggle
+      display: none
+    
+    +small
+      .menu__toggle
+        margin-left: auto
+        position: relative
+        z-index: 30000
+        display: block
+        width: 22px
+        height: 14px
+        cursor: pointer
+
+        span
+          display: block
+          width: 100%
+          height: 2px
+          border-radius: 1px
+          background: $color__2
+          position: absolute
+          transition: all 0.3s linear
+          transform: rotate(0) translate(0, 0)
+          &:nth-child(1)
+            top: 0
+            left: 0
+          &:nth-child(2)
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            opacity: 1
+          &:nth-child(3)
+            bottom: 0
+            left: 0
+
+        &.active
+          span
+            &:nth-child(1)
+              transform: rotate(45deg) translate(-50%, -50%)
+              transform-origin: top left
+              background-color: $color__1
+              left: 50%
+              top: 50%
+            &:nth-child(2)
+              left: 100%
+              background-color: $color__1
+              transform: translateY(0)
+              opacity: 0
+            &:nth-child(3)
+              background-color: $color__1
+              transform: rotate(-45deg) translate(-50%, 50%)
+              transform-origin: bottom left
+              left: 50%
+              bottom: 50%
+                
+  .header-bottom
+    min-height: 77px
+    background-color: $color__1
+
+    &__container
+      padding-top: 7px
+      padding-bottom: 7px
+
+    &__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 10px 50px
+      font-size: 16px
+      font-weight: 400
+
+      +small
+        display: none
+
+
+    .content
+      display: flex
+      align-items: center
+      justify-content: center
+
+      &__link-logo
+        margin-right: 70px
+        max-width: 155px
+        min-height: 53px
+        font-size: 0
+        flex-shrink: 0
+
+      &__logo
+        width: 100%
+        height: 100%
+        font-size: 0
+        transition: opacity .2s ease-in-out
+
+        &:hover
+          opacity: .7
+
+      .menu
+        display: flex
+        justify-content: space-between
+        width: 100%
+
+        +medium
+          font-size: 14px
+
+        +small
+          display: none
+
+        &__list
+          display: flex
+
+        &__item.parent .menu__link
+          display: flex
+          align-items: center
+          justify-content: center
+
+        &__item.parent .menu__link .menu__link-item
+          margin-right: 5px
+          padding-bottom: 0
+
+        &__item.parent:hover .menu__link .menu__icon
+          transform: rotate(0)
+
+        &__link-item
+          // padding-bottom: 10px
+          font-family: $font-family__2
+          font-size: 18px
+          font-weight: 500
+          color: $color__2
+          letter-spacing: .54px
+          text-transform: uppercase
+          transition: color .2s linear
+
+        &__icon
+          width: 12px
+          height: 13px
+          fill: $color__2
+          font-size: 0
+          transition: transform .2s linear
+          transform: rotate(-90deg)
+
+        &__item
+          position: relative
+          display: flex
+          align-items: center
+          text-align: center
+
+          &:hover
+            &::before
+              opacity: 1
+
+          &::before
+            content: ''
+            position: absolute
+            bottom: -28px
+            width: 100%
+            height: 4px
+            border-radius: 10px
+            background-color: $color__3
+            opacity: 0
+            transition: opacity .2s linear
+
+          &.active
+            .menu__link-item
+              color: $color__3
+
+            &::before
+              opacity: 1
+              
+        &__item:hover .menu__link-item
+          color: $color__3
+
+        &__list
+          display: flex
+
+          > .menu__item
+              margin-right: 30px
+
+              &:last-child
+                margin-right: 0
+
+              &:hover
+                  > a
+                    color: $color__3
+
+                  .list-inner
+                      visibility: visible
+                      opacity: 1
+
+                  .arrow-list
+                    transition: fill .2s ease-in-out, transform .2s ease-in-out
+                    transform: rotate(180deg)
+
+                  .arrow-list
+                    svg
+                      fill: $color__3
+
+              &.active
+                  &__link-item
+                    color: $color__3
+
+              > .menu__link-item
+                  position: relative
+                  z-index: 100
+                  display: block
+                  font-weight: 700
+                  font-size: 16px
+                  line-height: 22px
+                  padding: 0 4px
+                  color: $color__1
+                  text-transform: uppercase
+                  transition: all .2s
+
+          .arrow-list
+            position: static
+            display: inline-flex
+            width: 16px
+            height: 10px
+            margin-left: 5px
+            transition: all .2s
+
+            svg
+              fill: $color__1
+
+          .list-inner
+              position: absolute
+              top: 22px
+              left: 0
+              z-index: 100
+              opacity: 0
+              visibility: hidden
+              padding: 14px 20px
+              width: 280px
+              color: $color__2
+              background-color: $color__1
+              border-radius: 10px
+              font-size: 18px
+              transition: visibility .2s linear, opacity .2s linear
+              > .menu__item
+                  // padding-bottom: 11px
+                  padding-bottom: 17px
+                  text-align: start
+                  font-size: 16px
+
+                  &:hover
+                    &::before
+                      opacity: 0
+                    
+
+                  &:last-child
+                    margin-bottom: 0
+                    padding-bottom: 0
+
+                  &.active
+                    color: $color__3
+
+                    &::before
+                      opacity: 0
+
+                  > a
+                      font-weight: 500
+                      transition: color .2s ease-in-out
+                      &:hover
+                        color: $color__3
+
+              &__link-item
+                transition: color .2s ease-in-out
+
+              &__link-item:hover
+                color: $color__3
+
+              .parent:hover
+
+                .list-inner__link-item
+                  color: $color__3
+                  
+                .list-inner__arrow svg
+                  fill: $color__3
+
+        .link
+          display: flex
+          align-items: center
+
+          &__icon
+            margin-right: 10px
+            font-size: 0
+            width: 18px
+            height: 18px
+            fill: $color__1
+            transition: transform .2s linear
+
+      .arrow-list-mob
+        display: inline-flex
+        width: 12px
+        height: 8px
+        margin-left: 20px
+        transform: rotate(0deg)
+
+      .list-inner .parent
+        text-align: start
+
+      .list-inner .parent::after
+        display: none
+
+      .list-inner .parent:hover .menu__link-item
+        position: relative
+        color: $color__3
+
+      .list-inner .parent .menu__link-item
+        padding: 0
+        font-weight: 500
+        color: $color__2
+        text-transform: none
+
+      .list-inner .parent ul
+        position: absolute
+        top: -14px
+        left: 100%
+        z-index: 100
+        display: none
+        padding: 14px 0 20px 17px
+        width: 250px
+        font-size: 18px
+        color: $color__2
+        border-left: 2px solid $color__2
+        background-color: $color__1
+
+      .menu__list > .menu__item:hover .list-inner .parent ul
+        display: none
+
+      .menu__list > .menu__item .list-inner .parent:hover ul
+        display: block
+
+      .menu__list .list-inner .parent:hover ul li .list-inner__link-item
+        color: $color__2
+
+      .menu__list .list-inner .parent ul li:hover .list-inner__link-item
+        color: $color__4
+
+      .list-inner .parent:hover ul li:hover
+        color: $color__2
+
+      .list-inner .parent:hover ul li:not(:last-child)
+        margin-bottom: 15px
+
+      .list-inner .parent .arrow-list svg
+        fill: $color__1
+
+      .menu__list .parent.active .parent .menu__link-item::after
+        display: none
+
+      .menu__list .list-inner > li.parent a .arrow-list
+        transform: rotate(270deg)
+
+      .menu__list .list-inner > li.parent a .arrow-list svg
+        fill: $color__2
+        transition: fill .2s ease-in-out
+
+      .menu__list .list-inner > li.parent:hover a .arrow-list svg
+        fill: $color__4
+
+      .list-inner .parent li a > .arrow-list
+        display: inline-flex
+        width: 16px
+        height: 10px
+        margin-left: 5px
+        transition: all 0.2s
+
+      .list-inner .parent li a .arrow-list svg
+        fill: $color__1
+        transform: rotate(270deg)
+        transition: fill .2s ease-in-out
+
+      .list-inner .menu__item.active .menu__link-item
+        color: $color__4
+
+  .menu-mobile
+    height: 100%
+
+    .menu-list > .menu-item
+        position: relative
+        margin-right: 63px
+
+        +medium
+          margin-right: 36px
+
+        &:last-child
+          margin-right: 0
+
+        &:hover
+            > a
+              color: $color__1
+
+            .list-inner
+                display: block
+
+            .arrow-list
+              transform: rotate(180deg)
+
+            .arrow-list
+              svg
+                fill: $color__1
+
+        &.active > a
+            color: $color__4
+                  
+        > a
+            position: relative
+            z-index: 1
+            font-weight: 400
+            font-size: 16px
+            line-height: 22px
+            color: $color__1
+            text-transform: uppercase
+            transition: all 0.2s
+
+            .arrow-list
+                display: inline-flex
+                width: 11px
+                height: 11px
+                top: 29%
+                left: 69px
+                transition: all 0.2s
+                svg
+                  fill: $color__1
+
+        .display
+          display: block

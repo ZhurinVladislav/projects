@@ -1,0 +1,56 @@
+.orders
+  margin-bottom: 150px
+
+  +small
+    margin-bottom: 80px
+
+  .content
+    display: flex
+    justify-content: space-between
+    padding: 60px 115px
+    border-radius: 20px
+    background-image: url(../img/about/bg-img.svg)
+    background-color: $color__1
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    box-shadow: 0px 50px 100px 0px rgba(0, 0, 0, 0.15)
+
+    +medium
+      padding: 60px
+
+    +small
+      flex-wrap: wrap
+
+    +phone
+      padding: 40px 15px
+
+    &__img
+      max-width: 575px
+      width: 100%
+      min-height: 394px
+      border-radius: 10px
+      background-color: $color__2
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+
+      +small
+        max-width: 100%
+        min-height: 40vh
+        height: 100%
+
+    .descr
+      margin-right: 40px
+      max-width: 460px
+
+      +small
+        margin-right: 0
+        margin-bottom: 20px
+        max-width: 100%
+
+      p
+        @include textReset
+
+        &:not(:last-child)
+          margin-bottom: 9px

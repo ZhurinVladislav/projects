@@ -1,0 +1,140 @@
+.header
+  margin-bottom: 10px
+  background-color: $color__3
+
+  &__container
+    display: flex
+    align-items: center
+    padding: 0 20px
+
+    +phone
+      padding: 10px 20px
+
+  &__logo
+    margin-right: auto
+    transition: opacity .2s ease-in-out
+
+    &:hover
+      opacity: .5
+
+  .list
+    display: flex
+    margin-right: 20px
+
+    +phone
+      display: none
+
+    &__item
+      position: relative
+      background-color: transparent
+      z-index: 1
+      transition: background-color .3s ease
+
+      &:hover
+        background-color: $color__4
+
+      &:not(:last-child)
+        &::after
+          content: ''
+          position: absolute
+          transform: translateY(97%)
+          height: 16px
+          width: 1px
+          top: 0
+          bottom: 0
+          right: 0
+          background-color: $color__2
+
+    &__link
+      display: flex
+      justify-content: center
+      min-height: 40px  
+      padding: 15px 40px
+      color: $color__2
+      font-weight: 400
+      font-size: 16px
+      line-height: 1.2
+      text-transform: uppercase
+
+      +small
+        padding: 15px 26px
+      
+
+  .list-social
+    display: flex
+    margin-left: auto
+
+    +phone
+      display: none
+
+    &__item
+
+      &:not(:last-child)
+        margin-right: 15px
+
+    &__link
+      display: flex
+
+    &__icon
+      flex-shrink: 0
+      width: 21px
+      height: 21px
+      fill: $color__2
+      transition: fill .2s ease-in-out
+      &:hover
+        fill: $color__4
+
+  .menu__toggle
+    display: none
+    align-self: center
+    justify-self: end
+
+    +phone
+      margin-left: auto
+      position: relative
+      z-index: 30
+      display: block
+      width: 22px
+      height: 14px
+      cursor: pointer
+
+      span
+        display: block
+        width: 100%
+        height: 2px
+        border-radius: 1px
+        background: #fff
+        position: absolute
+        transition: all 0.3s
+        transform: rotate(0) translate(0, 0)
+
+        &:nth-child(1)
+          top: 0
+          left: 0
+
+        &:nth-child(2)
+          top: 50%
+          left: 0
+          transform: translateY(-50%)
+          opacity: 1
+
+        &:nth-child(3)
+          bottom: 0
+          left: 0
+
+      &.active
+        span
+          &:nth-child(1)
+            transform: rotate(45deg) translate(-50%, -50%)
+            transform-origin: top left
+            left: 50%
+            top: 50%
+          &:nth-child(2)
+            left: 100%
+            transform: translateY(0)
+            opacity: 0
+          &:nth-child(3)
+            transform: rotate(-45deg) translate(-50%, 50%)
+            transform-origin: bottom left
+            left: 50%
+            bottom: 50%

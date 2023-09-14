@@ -1,0 +1,98 @@
+.form-desc
+    display: flex
+    margin-bottom: 130px
+
+    .content
+        display: flex
+        // align-items: center
+        border: 1px solid $color__2
+
+    .image-wrapper
+        flex-grow: 1
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .form
+        width: 750px
+        padding: 30px 140px 30px 50px
+        // border-top: 1px solid $color__2
+        // border-right: 1px solid $color__2
+        // border-bottom: 1px solid $color__2
+
+    .subtitle
+        font-size: 12px
+        font-weight: 400
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        margin-bottom: 15px
+
+    .header_2
+        margin-bottom: 50px
+
+    .form-item__wrap
+        display: flex
+        justify-content: space-between
+        margin-bottom: 30px
+
+    .form-item
+        width: 49%
+
+    .button-invert
+        width: 49%
+
+    
+    +large
+        .form
+            width: 750px
+            padding: 24px 50px
+
+        .subtitle
+            margin-bottom: 6px
+
+        .header_2
+            margin-bottom: 26px
+
+
+    +small
+        margin-bottom: 80px
+
+        .content
+            position: relative
+
+        .image-wrapper
+            display: none
+            width: 100%
+            height: 100%
+            position: absolute
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                background: rgba(0,0,0,0.7)
+
+
+        .form
+            width: 100%
+
+
+    +phone
+
+        .form
+            padding: 22px 10px
+
+        .form-item__wrap
+            flex-wrap: wrap
+            margin-bottom: 10px
+
+        .form-item
+            width: 100%
+            margin-bottom: 10px
+
+        .button-invert
+            width: 100%

@@ -1,0 +1,101 @@
+.map
+  position: relative
+
+  &__item
+    width: 100%
+    min-height: 675px
+
+    +phone
+      min-height: 400px
+
+
+  &__container
+    display: flex
+
+    +phone
+      flex-wrap: wrap
+    
+  .content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 5px 101px 5px 360px
+    flex: 1 0 43%
+    max-width: 850px
+    min-height: 100%
+    color: $color__1
+    border-radius: 0px 8px 8px 0px
+    background-color: $color__3
+    
+    +large
+      padding: 50px
+
+    +medium
+      padding: 20px
+
+    +phone
+      position: static
+      padding: 40px 20px
+      width: 100%
+      min-height: 300px
+      border-radius: 0
+
+    &__subtitle
+      color: $color__1
+
+    &__title
+      color: $color__1
+
+      +phone
+        font-size: 20px
+
+    .list
+      max-width: 381px
+
+      +phone
+        max-width: 349px
+
+      &__item
+        padding: 30px 0
+
+        +phone
+          padding: 15px 0
+
+        +phone
+          font-size: 14px
+
+      &__item:first-child
+        padding-top: 0px
+
+      &__item:last-child
+        padding-bottom: 0px
+
+      &__item:not(:last-child)
+        border-bottom: 1px solid rgba($color__1, .2)
+
+      &__descr
+        @include textReset
+        margin-bottom: 10px
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+
+      &__link
+        display: flex
+        max-width: max-content
+        font-size: 16px
+        transition: color .2s linear
+
+        &:not(:last-child)
+          margin-bottom: 10px
+
+        &:hover
+          color: $color__5
+
+.home-page__map
+  .map__item
+    width: 100%
+    min-height: 675px
+
+    +phone
+      min-height: 400px

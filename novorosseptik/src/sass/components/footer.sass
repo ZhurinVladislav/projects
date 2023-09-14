@@ -1,0 +1,158 @@
+.footer
+  padding-top: 66px
+  padding-bottom: 146px
+  background-color: #2A0A57
+
+
+  +phone
+    padding-top: 40px
+    padding-bottom: 40px
+
+  &__container
+    display: flex
+    align-items: flex-start
+
+    +small
+      flex-wrap: wrap
+
+  &__log
+    margin-right: 171px
+
+    +medium
+      margin-right: 68px
+
+    +small
+      margin-bottom: 40px
+
+    +phone
+      margin: 0 auto
+      margin-bottom: 40px
+      // margin-bottom: 50px
+
+  &__content
+    display: flex
+    flex-direction: column
+
+    +small
+      width: 100%
+
+  &__lists
+    display: flex
+    margin-bottom: 76px
+
+    +phone
+      flex-wrap: wrap
+      margin-bottom: 20px
+
+  &__title
+    margin-bottom: 26px
+    font-weight: 700
+    font-size: 16px
+    line-height: 20px
+
+  .last-list
+    margin-bottom: 60px
+
+    +phone
+      margin-bottom: 36px
+
+  &__list-item
+    color: rgba(255, 255, 255, 0.5)
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+    a:hover
+      color: rgba(255, 255, 255, 1)
+
+  &__social-link
+    display: flex
+
+    +phone
+      justify-content: center
+
+  &__social-svg:not(:last-child)
+    margin-right: 20px
+    
+  &__svg
+    width: 30px
+    height: 30px
+    transition: fill .2s ease-in-out
+
+    &:hover
+      fill: $color__2
+
+    &-tg
+      fill: #2D30FF
+    &-vk
+      fill: #4C75A3
+    &-whts
+      fill: #5AD946
+  
+  .list-reset
+
+    +phone
+      width: 100%
+      text-align: center
+    
+    &:not(:last-child)
+      margin-right: 101px
+
+      +medium
+        margin-right: 49px
+
+      +small
+        margin-right: 68px
+
+      +phone
+        margin-right: 0
+
+    +phone
+      margin-bottom: 19px
+
+    &:last-child
+      +small
+        margin-left: auto
+
+
+  &__copyright-list
+    display: flex
+    // justify-content: center
+    // margin: 0 auto
+    align-items: center
+
+    +phone
+      flex-wrap: wrap
+      text-align: center
+      justify-content: center
+
+    &:last-child
+      margin-left: auto
+
+      +phone
+        margin-left: 0
+
+    a
+      text-decoration: underline
+      color: rgba(255, 255, 255, 0.5)
+
+      &:hover
+        text-decoration: none
+        color: rgba(255, 255, 255, 1)
+
+      +phone
+        font-size: 14px
+
+  &__copyright-item
+
+    +phone
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 9px
+
+    &:last-child
+      // margin-left: auto
+      padding-left: 100px
+
+      +phone
+        padding-left: 0

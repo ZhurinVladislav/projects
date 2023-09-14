@@ -1,0 +1,73 @@
+.home-page
+  .copyright
+    color: $color__4
+    background-color: $color__0
+
+    &__svg
+      fill: $color__4
+
+.copyright
+  margin-top: auto
+  min-height: 59px
+  font-weight: 400
+  font-size: 16px
+  color: $color__1
+  background-color: $color__3
+
+  +phone
+    font-size: 12px
+
+  &__container
+    padding-top: 20px
+    padding-bottom: 20px
+
+    +phone
+      padding-top: 10px
+      padding-bottom: 10px
+
+  &:last-child
+    margin-left: auto
+
+  &__list
+    display: flex
+    text-align: center
+    justify-content: space-between
+
+    +phone
+      justify-content: center
+      flex-wrap: wrap
+
+  &__item
+
+    +phone
+      margin-bottom: 10px
+      width: 100%
+
+      
+    &:last-child
+
+      +phone
+        margin-bottom: 0
+
+      .copyright__link
+        display: flex
+        align-items: center
+        justify-content: center
+
+  &__link
+    transition: color .2s linear
+    
+    &:hover
+      color: $color__2
+      .copyright__svg
+        fill: $color__2
+
+    +phone
+      font-size: 12px
+
+  &__svg
+    margin-right: 10px
+    width: 46px
+    height: 21px
+    fill: $color__1
+    transition: fill .2s linear

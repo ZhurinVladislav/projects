@@ -1,0 +1,70 @@
+.copyright
+  font-weight: 400
+  font-size: 14px
+  line-height: 1.2
+  background-color: $color__3
+
+  &__container
+    margin-top: -1px
+    padding-bottom: 22px
+
+    +phone
+      padding-top: 20px
+      padding-bottom: 20px
+  
+  +phone
+    flex-wrap: wrap
+    text-align: center
+    justify-content: center
+    flex-wrap: wrap
+
+  &:last-child
+
+    +phone
+      margin-left: 0
+
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 22px
+    border-top: 2px solid $color__2
+    color: $color__1
+    
+    +phone
+      flex-wrap: wrap
+
+  &__item
+
+    +phone
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 9px
+
+    &:nth-child(2)
+      padding-right: 80px
+
+      +small
+        padding-right: 0
+      
+    &:last-child
+      .copyright__link
+        display: flex
+        align-items: center
+        justify-content: center
+
+  &__link
+    transition: color .2s ease-in-out
+
+  &__link:hover
+    color: $color__4
+
+    .copyright__svg
+      fill: $color__4
+
+  &__svg
+    fill: $color__1
+    margin-right: 12px
+    max-width: 40px
+    min-height: 17px
+    transition: fill .2s ease-in-out

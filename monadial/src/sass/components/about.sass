@@ -1,0 +1,79 @@
+.about
+  margin-top: -176px
+  margin-bottom: 128px
+
+  +small
+    margin-top: -50px
+    margin-bottom: 40px
+
+  .content
+    display: flex
+    justify-content: space-between
+    padding: 68px 100px
+    color: $color__1
+    background-color: $color__3
+    border-radius: 8px
+    box-shadow: 0px 8px 24px -12px rgba(46, 58, 89, 0.30)
+
+    +small
+      padding: 40px 60px
+
+    +phone
+      flex-wrap: wrap
+      padding: 30px
+
+    .left
+      margin-right: 20px
+      flex: 1 0 30%
+
+      +phone
+        margin-right: 0
+        flex: 1 0 100%
+
+      &__subtitle
+        color: $color__1
+
+      &__title
+        color: $color__1
+
+    .right
+      flex: 1 0 70%
+      max-width: 582px
+
+      +phone
+        flex: 1 0 100%
+        max-width: 100%
+      
+      &__content
+        margin-bottom: 20px
+
+        p
+          @include textReset
+          font-size: 16px
+          font-weight: 700
+
+          &:not(:last-child)
+            margin-bottom: 15px
+          
+      .btn
+        display: flex
+        align-items: center
+        max-width: 107px
+
+        +phone
+          justify-content: center
+          max-width: 600px
+
+        &:hover
+          .btn__icon
+            transform: translateX(1px)
+
+        &__descr
+          margin-right: 20px
+
+        &__icon
+          font-size: 0
+          width: 10px
+          height: 10px
+          fill: $color__1
+          transition: transform .2s linear

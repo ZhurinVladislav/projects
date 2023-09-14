@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./app/css/main.min.css">
+  <!-- <link rel="stylesheet" href="./app/css/main.css5"> -->
+  <title>Новроссептик</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <!-- header top -->
+    <div class="header__top header-top">
+      <div class="header-top__container container">
+        <div class="header-top__content">
+          <div class="header-top__left left-content">
+            <a href="/" class="left-content__logo">
+              <img class="left-content__logo-img" src="./app/img/logo.svg" alt="Логотип Новроссептик">
+            </a>
+            <div class="left-content__address">
+              <svg class="left-content__mark svg-reset">
+                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+              </svg>
+              <p class="left-content__descr">
+                г. Новороссийск Новороссийское шоссе, 45
+              </p>
+            </div>
+          </div>
+          <div class="header-top__middle middle-content">
+            <ul class="middle-content__list">
+              <li class="middle-content__list-item">
+                <a class="middle-content__link" href="#" target="_blank">
+                  <svg class="middle-content__svg svg-reset">
+                    <use xlink:href="/app/img/icons/icons.svg#Telegram"></use>
+                  </svg>
+                </a>
+              </li>
+                <li class="middle-content__list-item">
+                  <a class="middle-content__link" href="#" target="_blank">
+                    <svg class="middle-content__svg svg-reset">
+                      <use xlink:href="/app/img/icons/icons.svg#WhatsApp"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="middle-content__list-item">
+                    <a class="middle-content__link" href="mailto:novorosseptic@mail.ru" target="_blank">
+                      <svg class="middle-content__svg svg-reset">
+                        <use xlink:href="/app/img/icons/icons.svg#Mail"></use>
+                      </svg>
+                      <span class="middle-content__link-item">
+                        novorosseptic@mail.ru
+                      </span>
+                    </a>
+                </li>
+            </ul>
+          </div>
+          <div class="header-top__right right-content">
+            <ul class="right-content__list">
+              <li class="right-content__list-item">
+                Ежедневно с 9:00 до 19:00
+              </li>
+              <li class="right-content__list-item">
+                <a class="right-content__number" href="tel:+79184399702">
+                  <svg class="right-content__svg svg-reset">
+                    <use xlink:href="/app/img/icons/icons.svg#Phone"></use>
+                  </svg>
+                  +7 (918) 439-97-02
+                </a>
+              </li>
+            </ul>
+            <button class="right-content__button button" data-open="form-callback">
+              <span>Консультация</span>
+            </button>
+          </div>
+          <button class="menu__toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- header bottom -->
+    <div class="header__bottom header-bottom">
+      <div class="header-bottom__container container">
+        <nav class="header-bottom__menu menu">
+          <ul class="menu__list">
+              <li class="menu__item parent">
+                <a href="#" class="menu__link">
+                  <span class="menu__link-item">
+                    Каталог товаров 
+                  </span>
+                  <span class="arrow-list">
+                    <svg><use xlink:href="/app/img/icons/icons.svg#arrow"></use></svg>
+                  </span>
+                </a>
+                <ul class="menu__list-inner list-inner">
+                    <li class="list-inner__item">
+                        <a href="#">
+                          Септики для дома и дачи
+                        </a>
+                    </li>
+                    <li class="list-inner__item">
+                        <a href="#">
+                          Септики для коммерции
+                        </a>
+                    </li>
+                    <li class="list-inner__item">
+                        <a href="#">
+                          Дренажные системы
+                        </a>
+                    </li>
+                    <li class="list-inner__item">
+                      <a href="#">
+                        Компрессоры
+                      </a>
+                    </li>
+                    <li class="list-inner__item">
+                      <a href="#">
+                        Комплектующие
+                      </a>
+                    </li>
+                    <li class="list-inner__item">
+                      <a href="#">
+                        Акционные товары
+                      </a>
+                    </li>
+                </ul>
+              </li>
+              <li class="menu__item parent">
+                <a href="./main.html" class="menu__link">
+                  <span class="menu__link-item">
+                    Услуги
+                  </span>
+                  <span class="arrow-list">
+                    <svg><use xlink:href="/app/img/icons/icons.svg#arrow"></use></svg>
+                  </span>
+                </a>
+                <ul class="menu__list-inner list-inner">
+                    <li class="list-inner__item">
+                        <a href="#">
+                          Септики для дома и дачи
+                        </a>
+                    </li>
+                    <li class="list-inner__item">
+                        <a href="#">
+                          Септики для коммерции
+                        </a>
+                    </li>
+                    <li class="list-inner__item">
+                        <a href="#">
+                          Дренажные системы
+                        </a>
+                    </li>
+                    <li class="list-inner__item">
+                      <a href="#">
+                        Компрессоры
+                      </a>
+                    </li>
+                    <li class="list-inner__item">
+                      <a href="#">
+                        Комплектующие
+                      </a>
+                    </li>
+                    <li class="list-inner__item">
+                      <a href="#">
+                        Акционные товары
+                      </a>
+                    </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="./main.html" class="menu__link">
+                  <span class="menu__link-item">
+                    О компании
+                  </span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="./main-price.html" class="menu__link">
+                  <span class="menu__link-item">
+                    Портфолио
+                  </span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="/faq.html" class="menu__link">
+                  <span class="menu__link-item">
+                    Вопрос-ответ
+                  </span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="./contact.html" class="menu__link">
+                  <span class="menu__link-item">
+                    Контакты
+                  </span>
+                </a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- burger menu -->
+    <div class="header__burger menu-mobile">
+      <div class="menu-mobile__wrap">
+        <nav class="menu-mobile__menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                  <span class="link-item">
+                    Каталог товаров 
+                  </span>
+                  <span class="arrow-list-mob">
+                    <svg>
+                      <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                    </svg>
+                  </span>
+              </a>
+              <ul class="menu-list__inner">
+                <li class="menu-item">
+                    <a href="#" target="_blank">
+                        Услуг1
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" target="_blank">
+                        Услуг2
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" target="_blank">
+                        Услуг3
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" target="_blank">
+                        Услуг4
+                    </a>
+                </li>
+            </ul>
+            </li>
+            <li class="menu-item">
+              <a href="./main.html" class="menu-link">
+                  <span class="link-item">
+                    Услуги
+                  </span>
+                  <span class="arrow-list-mob">
+                    <svg>
+                      <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                    </svg>
+                  </span>
+              </a>
+              <ul class="menu-list__inner">
+                <li class="menu-item">
+                    <a href="#" target="_blank">
+                        Услуг1
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" target="_blank">
+                        Услуг2
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" target="_blank">
+                        Услуг3
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" target="_blank">
+                        Услуг4
+                    </a>
+                </li>
+            </ul>
+            </li>
+            <li class="menu-item parent">
+              <a href="./services.html" class="menu-link">
+                <span class="link-item">
+                  О компании
+                </span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="./main-price.html" class="menu-link">
+                <span class="link-item">
+                  Портфолио
+                </span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="link-item">
+                  Вопрос-ответ
+                </span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="./contact.html" class="menu-link">
+                <span class="link-item">
+                  Контакты
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="list-svg">
+          <li class="list-svg__item">
+            <a href="#" class="list-svg__item-link">
+              <svg class="list-svg__item-svg">
+                <use xlink:href="/app/img/icons/icons.svg#Telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list-svg__item">
+            <a href="#" class="list-svg__item-link">
+              <svg class="list-svg__item-svg">
+                <use xlink:href="/app/img/icons/icons.svg#WhatsApp"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list-svg__item">
+            <a href="#" class="list-svg__item-link">
+              <svg class="list-svg__item-svg">
+                <use xlink:href="/app/img/icons/icons.svg#Mail"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="phone">
+            <a href="tel:8 (918) 623 91 52" class="phone-link">
+              8 (918) 623 91 52
+            </a>
+        </div>
+        <div class="address">
+            <span class="address-icon">
+              <svg class="list-svg__item-svg">
+                <use xlink:href="/app/img/svg_sprite.svg#map"></use>
+              </svg>
+            </span>
+            <span class="address-text">
+              г. Новороссийск, ул. Энгельса, 7, офис 103.
+            </span>
+        </div>
+        <div class="button" data-open="form-callback">
+          Оставить заявку
+        </div>
+      </div>
+    </div>
+  </header>
+ <!-- portfolio -->
+  <section class="portfolio">
+    <div class="portfolio__container container">
+      <h1 class="portfolio__title header_1">
+        Портфолио
+      </h1>
+      <ul class="portfolio__card-wrapper card">
+        <li class="card__item-wrapper">
+          <div class="card__item">
+            <div class="card__slider-wrapper">
+              <div class="card__slider slider">
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+              </div>
+             
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">
+                ЛОС Био 1, Саки
+              </h2>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Место
+                  </span>
+                  <span class="card__value">
+                    Крым, Сакский р-н, Виноградово с., Школьная ул., дом 36
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Выполнено
+                  </span>
+                  <span class="card__value">
+                    Установка Био 1 для частного дома с разработкой дренажного поля
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Срок
+                  </span>
+                  <span class="card__value">
+                    2 дня
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Стоимость
+                  </span>
+                  <span class="card__value">
+                    39 000 руб.
+                  </span>
+                </li>
+              </ul>
+              <button data-open="form-callback" class="card__btn button">
+                <span>
+                  Расчитать проект
+                </span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="card__item-wrapper">
+          <div class="card__item">
+            <div class="card__slider-wrapper">
+              <div class="card__slider slider">
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+              </div>
+             
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">
+                ЛОС Био 1, Саки
+              </h2>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Место
+                  </span>
+                  <span class="card__value">
+                    Крым, Сакский р-н, Виноградово с., Школьная ул., дом 36
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Выполнено
+                  </span>
+                  <span class="card__value">
+                    Установка Био 1 для частного дома с разработкой дренажного поля
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Срок
+                  </span>
+                  <span class="card__value">
+                    2 дня
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Стоимость
+                  </span>
+                  <span class="card__value">
+                    39 000 руб.
+                  </span>
+                </li>
+              </ul>
+              <button data-open="form-callback" class="card__btn button">
+                <span>
+                  Расчитать проект
+                </span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="card__item-wrapper">
+          <div class="card__item">
+            <div class="card__slider-wrapper">
+              <div class="card__slider slider">
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+                <a class="slider__link" href="#">
+                  <img class="slider__slide" src="./app/img/slider/slide-1.webp" alt="">
+                </a>
+              </div>
+             
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">
+                ЛОС Био 1, Саки
+              </h2>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Место
+                  </span>
+                  <span class="card__value">
+                    Крым, Сакский р-н, Виноградово с., Школьная ул., дом 36
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Выполнено
+                  </span>
+                  <span class="card__value">
+                    Установка Био 1 для частного дома с разработкой дренажного поля
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Срок
+                  </span>
+                  <span class="card__value">
+                    2 дня
+                  </span>
+                </li>
+                <li class="card__list-item">
+                  <span class="card__text">
+                    Стоимость
+                  </span>
+                  <span class="card__value">
+                    39 000 руб.
+                  </span>
+                </li>
+              </ul>
+              <button data-open="form-callback" class="card__btn button">
+                <span>
+                  Расчитать проект
+                </span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <div class="footer__lists">
+          <div class="footer__list-left list-reset">
+            <h3 class="footer__title">
+              Меню
+            </h3>
+            <ul class="footer__content-list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Каталог товаров
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Услуги
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  О компании
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Портфолио
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Вопрос-ответ
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list-middle list-reset">
+            <h3 class="footer__title">
+              Каталог
+            </h3>
+            <ul class="footer__content-list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Септики для дома и&nbsp;дачи
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Септики для коммерции
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Дренажные системы
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Компрессоры
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Комплектующие
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">
+                  Акционные товары
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list-right list-reset">
+            <h3 class="footer__title">
+              Контакты
+            </h3>
+            <ul class="footer__content-list last-list">
+              <li class="footer__list-item link-phone">
+                <a class="link-phone__number" href="tel:+79184399702">
+                  <svg class="link-phone__svg">
+                    <use xlink:href="/app/img/icons/icons.svg#Phone"></use>
+                  </svg>
+                  +7 (918) 439-97-02
+                </a>
+                <span class="link-phone__item">
+                  Ежедневно с&nbsp;9:00 до&nbsp;19:00
+                </span>
+              </li>
+              <li class="footer__list-item">
+                <ul class="footer__social-link">
+                  <li class="footer__social-svg">
+                    <a href="#" target="_blank">
+                      <svg class="footer__svg footer__svg-tg">
+                        <use xlink:href="/app/img/icons/icons.svg#Mail"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__social-svg">
+                    <a href="#" class="list-svg__item-link">
+                      <svg class="footer__svg footer__svg-vk">
+                        <use xlink:href="/app/img/icons/icons.svg#Telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__social-svg">
+                    <a href="#" target="_blank">
+                      <svg class="footer__svg footer__svg-whts">
+                        <use xlink:href="/app/img/icons/icons.svg#WhatsApp"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__list-item address">
+                г. Новороссийск Новороссийское шоссе, 45
+              </li>
+              <li class="footer__list-item requisites">
+                <ul class="requisites__list">
+                  <li class="requisites__list-item">
+                    ИП&nbsp;Шепель Олег Анатольевич
+                  </li>
+                  <li class="requisites__list-item">
+                    ИНН: 233703874242
+                  </li>
+                  <li class="requisites__list-item">
+                    ОГРН: 304233715600188
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- copyright -->
+  <section class="copyright">
+    <div class="copyright__container container">
+      <ul class="copyright__list">
+        <li class="copyright__item">
+          <a href="#" class="copyright__link">
+            Пользовательское соглашение
+          </a>
+        </li>
+        <li class="copyright__item">
+          Copyright © 2012–2022. Все права защищены
+        </li>
+        <li class="copyright__item">
+          <a href="https://web2.agency/" class="copyright__link">
+            <svg class="copyright__svg" width="40" height="17" viewBox="0 0 40 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.8328 1.45968L10.603 15.8291L10.8002 16.9847H7.90292L8.10011 15.8291L6.64391 6.78168L5.23322 15.8291L5.43041 16.9847H2.56352L2.76071 15.8291L0.4854 1.49009L0 0.0151367H2.62419L2.47251 0.729806L3.98938 11.1001L5.50626 0.729806L5.32423 0.0151367H7.97876L7.79674 0.729806L9.32878 11.1001L10.8457 0.729806L10.6636 0.0151367H13.3182L12.8328 1.45968Z" fill="url(#paint0_linear_281_4371)"/>
+              <path d="M21.5549 16.9848H15.1992L15.4723 15.9356V1.03399L15.1992 0H21.5549L21.9341 2.34168L20.842 2.09839H17.8082L17.5655 2.34168V7.1619L17.8082 7.40519H18.6577L19.7043 7.13148V9.79249L18.6577 9.51878H17.8082L17.5655 9.79249V14.5975L17.8082 14.8408H20.842L21.9341 14.5975L21.5549 16.9848Z" fill="url(#paint1_linear_281_4371)"/>
+              <path d="M24.1949 1.03399L23.9219 0H29.4736L30.5506 1.04919V7.42039L29.4585 8.46959L30.5506 9.5492V15.9356L29.4736 16.9848H23.937L24.2101 15.9356V1.03399H24.1949ZM26.3185 2.34168V7.1619L26.5612 7.40519H28.1843L28.427 7.1619V2.34168L28.1843 2.09839H26.5612L26.3185 2.34168ZM28.4422 9.79249L28.1995 9.5492H26.5764L26.3337 9.79249V14.5975L26.5764 14.8408H28.1843L28.427 14.5975V9.79249H28.4422Z" fill="url(#paint2_linear_281_4371)"/>
+              <path d="M39.9994 12.7424L39.7264 13.7764V17H33.3707V8.48479L34.4173 7.4356H37.3601L37.6028 7.19231V2.3873L37.3601 2.14401H35.7067L35.464 2.3873V3.20841L35.7522 4.2424H33.0977L33.3707 3.20841V1.07961L34.4173 0H38.6494L39.7264 1.07961V8.5L38.6494 9.57961H35.7067L35.464 9.8229V14.5975L35.7067 14.8408H37.3601L37.6028 14.5975V13.7764L37.3297 12.7424H39.9994Z" fill="url(#paint3_linear_281_4371)"/>
+              <mask id="mask0_281_4371" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="17">
+              <path d="M12.8328 1.45968L10.603 15.8291L10.8002 16.9847H7.90292L8.10011 15.8291L6.64391 6.78168L5.23322 15.8291L5.43041 16.9847H2.56352L2.76071 15.8291L0.4854 1.49009L0 0.0151367H2.62419L2.47251 0.729806L3.98938 11.1001L5.50626 0.729806L5.32423 0.0151367H7.97876L7.79674 0.729806L9.32878 11.1001L10.8457 0.729806L10.6636 0.0151367H13.3182L12.8328 1.45968Z" fill="url(#paint4_linear_281_4371)"/>
+              <path d="M21.5549 16.9848H15.1992L15.4723 15.9356V1.03399L15.1992 0H21.5549L21.9341 2.34168L20.842 2.09839H17.8082L17.5655 2.34168V7.1619L17.8082 7.40519H18.6577L19.7043 7.13148V9.79249L18.6577 9.51878H17.8082L17.5655 9.79249V14.5975L17.8082 14.8408H20.842L21.9341 14.5975L21.5549 16.9848Z" fill="url(#paint5_linear_281_4371)"/>
+              <path d="M24.1949 1.03399L23.9219 0H29.4736L30.5506 1.04919V7.42039L29.4585 8.46959L30.5506 9.5492V15.9356L29.4736 16.9848H23.937L24.2101 15.9356V1.03399H24.1949ZM26.3185 2.34168V7.1619L26.5612 7.40519H28.1843L28.427 7.1619V2.34168L28.1843 2.09839H26.5612L26.3185 2.34168ZM28.4422 9.79249L28.1995 9.5492H26.5764L26.3337 9.79249V14.5975L26.5764 14.8408H28.1843L28.427 14.5975V9.79249H28.4422Z" fill="url(#paint6_linear_281_4371)"/>
+              <path d="M39.9994 12.7424L39.7264 13.7764V17H33.3707V8.48479L34.4173 7.4356H37.3601L37.6028 7.19231V2.3873L37.3601 2.14401H35.7067L35.464 2.3873V3.20841L35.7522 4.2424H33.0977L33.3707 3.20841V1.07961L34.4173 0H38.6494L39.7264 1.07961V8.5L38.6494 9.57961H35.7067L35.464 9.8229V14.5975L35.7067 14.8408H37.3601L37.6028 14.5975V13.7764L37.3297 12.7424H39.9994Z" fill="url(#paint7_linear_281_4371)"/>
+              </mask>
+              <g mask="url(#mask0_281_4371)">
+              <rect opacity="0.15" x="-89" y="-69" width="1738" height="798" fill="url(#paint8_linear_281_4371)"/>
+              </g>
+              <defs>
+              <linearGradient id="paint0_linear_281_4371" x1="0" y1="0.0151367" x2="16.8448" y2="4.95233" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear_281_4371" x1="15.1992" y1="0" x2="24.2509" y2="1.34042" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              <linearGradient id="paint2_linear_281_4371" x1="23.9219" y1="0" x2="32.8368" y2="1.29936" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              <linearGradient id="paint3_linear_281_4371" x1="33.0977" y1="0" x2="42.3639" y2="1.40494" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              <linearGradient id="paint4_linear_281_4371" x1="0.590201" y1="2.79312" x2="19.1289" y2="17.0892" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D4D1"/>
+              <stop offset="1" stop-color="#00B9D4"/>
+              </linearGradient>
+              <linearGradient id="paint5_linear_281_4371" x1="4.49173" y1="-2.26603" x2="23.0305" y2="12.0301" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D4D1"/>
+              <stop offset="1" stop-color="#00B9D4"/>
+              </linearGradient>
+              <linearGradient id="paint6_linear_281_4371" x1="7.61017" y1="-6.30911" x2="26.1489" y2="7.98696" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D4D1"/>
+              <stop offset="1" stop-color="#00B9D4"/>
+              </linearGradient>
+              <linearGradient id="paint7_linear_281_4371" x1="11.0934" y1="-10.8278" x2="29.6322" y2="3.46824" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D4D1"/>
+              <stop offset="1" stop-color="#00B9D4"/>
+              </linearGradient>
+              <linearGradient id="paint8_linear_281_4371" x1="-89" y1="-69" x2="1347.64" y2="1099.51" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#63C018"/>
+              <stop offset="1" stop-color="#068B30"/>
+              </linearGradient>
+              </defs>
+            </svg>
+            <span class="copyright__link-item">
+              Создание сайтов
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- overlay -->
+  <div class="overlay" >
+    <div class="overlay__wrapper">
+      <div class="overlay__bg"></div>
+      <div class="overlay__content">
+        <span class="overlay__close"></span>
+        <!-- form-callback -->
+        <form action="/" method="post" class="form form-callback novalid">
+          <input type="hidden" name="count" value="0">
+          <h3 class="header_2">
+            Заказать звонок
+          </h3>
+          <div class="form-item">
+            <input type="text" name="name" placeholder="имя" >
+          </div>
+          <div class="form-item">
+            <input type="tel" name="phone" placeholder="телефон" >
+          </div>
+          <button class="button-invert">
+            Отправить
+          </button>
+          <label class="form-note">
+            <input type="checkbox" checked>
+            <div class="custom-checkbox"></div>
+            <div class="form-note-text">
+              Нажимая на&nbsp;кнопку, я&nbsp;соглашаюсь с&nbsp;обработкой <a href="#">персональных данных</a>
+            </div>
+          </label>
+        </form>
+        <!-- form-success -->
+        <div class="form-success">
+          <div class="header_2">Спасибо!</div>
+          <div class="header_3">Ваши данные отправлены.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- scroll-top -->
+  <button class="scroll-top">
+    <svg>
+      <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+    </svg>
+  </button>
+  <!-- scripts -->
+  <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+  <script src="/app/js/libs/slick.min.js"></script>
+  <script src="./app/js/main.min.js"></script>
+  <!--<script src="/app/js/libs/lightgallery-all.min.js"></script>
+  <script src="/app/js/libs/maskedinput-v1.4.1.js"></script>
+  <script src="/app/js/libs/functions.js"></script>
+  <script src="/app/js/libs/jquery.marquee.min.js"></script>
+  <script src="/app/js/main.min.js"></script> -->
+</body>
+</html>

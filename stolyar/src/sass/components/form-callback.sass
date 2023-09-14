@@ -1,0 +1,60 @@
+.form-callback
+  margin:  0
+  display: none
+  max-width: 100%
+  width: 520px
+  padding: 50px 40px
+  border-radius: 8px 10px 8px 8px
+  background-color: $color__3
+  overflow-y: auto
+
+  .form
+    width: 100%
+
+  &.active
+    display: block
+
+  .header_2
+    color: $color__1
+    margin-bottom: 25px
+
+  .form-item:not(last-child)
+    margin-bottom: 10px
+
+  +phone
+    width: 100%
+    padding: 30px 10px
+
+  .form-item
+    position: relative
+
+  .label 
+    position: absolute
+    top: 12px
+    left: 10px
+    padding: 5px 10px
+    font-size: 14px
+    color: rgba($color__3, .5)
+    pointer-events: none
+    transition: all 200ms
+
+  input
+
+    &:focus + label
+      top: 0
+      font-size: 10px
+
+    &:not(:placeholder-shown) + label
+      top: 0
+      font-size: 10px
+
+  textarea
+
+    &:focus + label
+      top: 0
+      font-size: 10px
+
+    &:not(:placeholder-shown) + label
+      top: 0
+      font-size: 10px
+

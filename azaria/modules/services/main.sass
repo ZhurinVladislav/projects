@@ -1,0 +1,77 @@
+.services
+    background-image: url('/app/images/servicesbgr.jpg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    padding: 150px 0 200px
+    margin-bottom: 130px
+
+    .subtitle
+        font-weight: 300
+        font-size: 14px
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        color: #fff
+        margin-bottom: 6px
+
+    .header_2
+        color: #fff
+        
+    .line
+        &:before
+            background: rgba($color__2, 0.9)
+
+    .list
+        margin-top: 50px
+        padding: 30px 0px
+        background: rgba(255, 255, 255, 0.02)
+        backdrop-filter: blur(10px)
+        display: flex
+        flex-wrap: wrap
+        
+
+    .item
+        width: 33.33%
+        padding: 20px 40px
+        position: relative
+        display: flex
+
+    .item-icon
+        flex-shrink: 0
+        width: 50px
+        margin-top: -5px
+
+    .item-text
+        font-size: 19px
+        color: #fff
+
+        .small
+            font-size: 14px
+
+
+
+    +small
+        margin-bottom: 80px
+        padding: 80px 0 100px
+
+        .item
+            width: 50%
+
+    +phone
+        padding: 80px 0 80px
+        .item
+            padding: 20px 14px
+
+        .item-icon
+            width: 42px
+
+        .item-text
+            font-size: 16px
+
+    +max(360px)
+
+        .item
+            padding: 16px 10px
+
+        .item-text
+            font-size: 13px

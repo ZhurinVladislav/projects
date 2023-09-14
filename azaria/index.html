@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Отель Азария</title>
+    <link rel="stylesheet" href="/app/css/main.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelector('body').classList.add('loading');
+            // document.querySelectorAll('[data-animations]').forEach(element => {
+            //     element.classList.add('animations')
+            // });;
+        }); 
+    </script>
+</head>
+<body class="home-page">
+
+    <header class="header" >
+
+        <div class="header-top">
+            <div class="container">
+                <div class="content">
+    
+                    <a href="/" class="logo">
+                        <img src="/app/images/logo.svg" alt="">
+                    </a>
+
+                    <div class="address">
+                        <span class="address-icon">
+                            <svg><use xlink:href="/app/images/svg_sprite.svg#map"></use></svg>
+                        </span>
+                        <span class="address-text">Краснодарский край, <br>г. Геленджик, ул. Советская, 26</span>
+                    </div>
+
+                    <div class="phone">
+                        <a href="tel:8 (918) 623 91 52" class="phone-link">8 (918) 623 91 52</a>
+                        <span class="phone-text">Круглосуточно</span>
+                    </div>
+
+                    <a href="#" class="whatsapp">
+                        <span class="whatsapp-icon">
+                            <svg><use xlink:href="/app/images/svg_sprite.svg#whatsapp"></use></svg>
+                        </span>
+                    </a>
+
+                    <div class="button" data-open="form-callback">Забронировать</div>
+
+                    <button class="menu__toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="content">
+
+                    <nav class="menu">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a href="#" class="menu-link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item parent">
+                                <a href="#" class="menu-link">
+                                    Об отёле
+                                    <span class="arrow">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#triangle"></use></svg>
+                                    </span>
+                                </a>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item"><a href="#">Двухместный «Полулюкс»</a></li>
+                                    <li class="menu-item"><a href="#">Трёхместный «Полулюкс»</a></li>
+                                    <li class="menu-item"><a href="#">Однокомнатный «Люкс»</a></li>
+                                    <li class="menu-item"><a href="#">Двухкомнатный «Люкс»</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Номера
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Галерея
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Акции
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="menu-mobile">
+            <div class="wrap">
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="menu-item parent">
+                            <a href="#" class="menu-link">
+                                Об отёле
+                                <span class="arrow">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#triangle"></use></svg>
+                                </span>
+                            </a>
+                            <ul class="menu-list__inner">
+                                <li class="menu-item"><a href="#">Двухместный «Полулюкс»</a></li>
+                                <li class="menu-item"><a href="#">Трёхместный «Полулюкс»</a></li>
+                                <li class="menu-item"><a href="#">Однокомнатный «Люкс»</a></li>
+                                <li class="menu-item"><a href="#">Двухкомнатный «Люкс»</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Номера
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Галерея
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Акции
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <a href="#" class="whatsapp">
+                    <span class="whatsapp-icon">
+                        <svg><use xlink:href="/app/images/svg_sprite.svg#whatsapp"></use></svg>
+                    </span>
+                </a>
+
+                <div class="phone">
+                    <a href="tel:8 (918) 623 91 52" class="phone-link">8 (918) 623 91 52</a>
+                    <span class="phone-text">Круглосуточно</span>
+                </div>
+
+                <div class="address">
+                    <span class="address-icon">
+                        <svg><use xlink:href="/app/images/svg_sprite.svg#map"></use></svg>
+                    </span>
+                    <span class="address-text">Краснодарский край, <br>г. Геленджик, ул. Советская, 26</span>
+                </div>
+
+                <div class="button" data-open="form-callback">Забронировать</div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <section class="heroimage" >
+        <div class="container">
+            <div class="content">
+                <h1 class="header_1">Отель <span>«Азария»</span> <br>Геленджик</h1>
+                <div class="subtitle">Уютный отель для всей семьи</div>
+                <button class="button" data-open="form-callback">Забранировать номер</button>
+            
+            
+                <ul class="list">
+                    <li class="item">
+                        <div class="item-icon">
+                            <img src="/app/images/heroimage1.svg" alt="">
+                        </div>
+                        <div class="item-text">
+                            До моря <br> <strong>400</strong> метров
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="item-icon">
+                            <img src="/app/images/heroimage2.svg" alt="">
+                        </div>
+                        <div class="item-text">
+                            Завтрак <br> <strong>«шведский</strong> стол»
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="item-icon">
+                            <img src="/app/images/heroimage3.svg" alt="">
+                        </div>
+                        <div class="item-text"> 
+                            Бассейн c<br> <strong>детской</strong> зоной
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="content">
+                <div class="image-wrapper">
+                    <img src="/app/images/about.png" alt="">
+                </div>
+                <div class="text-wrapper">
+                    <h2 class="header_2"><span class="line">Об отеле</span></h2>
+                    <div class="description text-default">
+                        <p>
+                            Отель Азария — это комфортные и стильные номера в дизайнерском исполнении. 
+                            Мы подготовили все необходимое для вашего отдыха: санузел, косметические 
+                            принадлежности, тапочки, телевизор, кондиционер, быстрый Wi-Fi. У нас вы можете насладиться отдыхом и тишиной.
+                        </p>
+                        <p>
+                            В стоимость проживания включён завтрак в формате шведского стола. Так вы сможете не привязываться к отелю и определённому времени в нем, спокойно гулять и наслаждаться морем. А мы за счёт этого можем сохранить доступные цены на проживание.
+                        </p>
+                        <p>
+                            Будем рады видеть вас в числе наших гостей!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="content">
+                <div class="subtitle">Приятные мелочи</div>
+                <h2 class="header_2"><span class="line">Бесплатные услуги</span><br>для гостей отеля</h2>
+                <ul class="list">
+                    <li class="item">
+                        <span class="item-icon">
+                            <img src="/app/images/svg/services1.svg" alt="services">
+                            <!-- <svg><use xlink:href="/app/images/svg_sprite.svg#services1"></use></svg> -->
+                        </span>
+                        <span class="item-text">Завтрак «шведский стол»</span>
+                    </li>
+                    <li class="item">
+                        <span class="item-icon">
+                            <img src="/app/images/svg/services2.svg" alt="services">
+                            <!-- <svg><use xlink:href="/app/images/svg_sprite.svg#services2"></use></svg> -->
+                        </span>
+                        <span class="item-text">Бассейн с детской зоной</span>
+                    </li>
+                    <li class="item">
+                        <span class="item-icon">
+                            <img src="/app/images/svg/services3.svg" alt="services">
+                            <!-- <svg><use xlink:href="/app/images/svg_sprite.svg#services3"></use></svg> -->
+                        </span>
+                        <span class="item-text">Прокат детских колясок</span>
+                    </li>
+                    <li class="item">
+                        <span class="item-icon">
+                            <img src="/app/images/svg/services4.svg" alt="services">
+                            <!-- <svg><use xlink:href="/app/images/svg_sprite.svg#services4"></use></svg> -->
+                        </span>
+                        <span class="item-text">Круглосуточная стойка регистрации</span>
+                    </li>
+                    <li class="item">
+                        <span class="item-icon">
+                            <img src="/app/images/svg/services5.svg" alt="services">
+                            <!-- <svg><use xlink:href="/app/images/svg_sprite.svg#services5"></use></svg> -->
+                        </span>
+                        <span class="item-text">Wi-Fi на всей территории отеля</span>
+                    </li>
+                    <li class="item">
+                        <span class="item-icon">
+                            <img src="/app/images/svg/services6.svg" alt="services">
+                            <!-- <svg><use xlink:href="/app/images/svg_sprite.svg#services6"></use></svg> -->
+                        </span>
+                        <span class="item-text">Бесплатная стоянка <br> <span class="small">(ул. Кирова 146)</span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="rooms">
+        <div class="container">
+            <div class="content">
+                <div class="col-left">
+                    <h2 class="header_2"><span class="line">Номерной фонд</span></h2>
+                    <div class="subtitle">Сосредоточьтесь на отдыхе, позабыв обо всем!</div>
+                    <ul class="list-tab">
+                        <li class="item-tab active">
+                            <button class="tab">Двухместный «Полулюкс»</button>
+                        </li>
+                        <li class="item-tab">
+                            <button class="tab">Трёхместный «Полулюкс»</button>
+                        </li>
+                        <li class="item-tab">
+                            <button class="tab">Однокомнатный «Люкс»</button>
+                        </li>
+                        <li class="item-tab">
+                            <button class="tab">Двухкомнатный «Люкс»</button>
+                        </li>
+                    </ul>
+                    <div class="block-info">
+                        В стоимость проживания для всех типов 
+                        номеров входит завтрак по системе 
+                        “Шведский стол” и посещение бассейна
+                    </div>
+                </div>
+                <div class="col-right">
+                    <div class="results">
+                        <div class="result">
+                            <div class="result-header">
+                                <div class="result-text-wrap">
+                                    <div class="result-title">Двухместный «Полулюкс»</div>
+                                    <div class="result-count">Количество человек: до 2</div>
+                                </div>
+                                <button class="button-invert">Забронировать номер</button>
+                            </div>
+                            <div class="slider-wrap">
+                                <div class="slider">
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                </div>
+                                <div class="link-more">
+                                    <span class="link-more__text">подробней</span>
+                                    <span class="link-more__icon">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider-navbar">
+                                <div class="arrow-number">
+                                    <div class="number">
+                                        <span class="current-slide"></span>
+                                        <span class="delimetr">/</span>
+                                        <span class="all-slide"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <span></span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <span class="arrow prev"><svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg></span>
+                                    <span class="arrow next"><svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="result">
+                            <div class="result-header">
+                                <div class="result-text-wrap">
+                                    <div class="result-title">Трёхместный «Полулюкс»</div>
+                                    <div class="result-count">Количество человек: до 2</div>
+                                </div>
+                                <button class="button-invert">Забронировать номер</button>
+                            </div>
+                            <div class="slider-wrap">
+                                <div class="slider">
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                </div>
+                                <div class="link-more">
+                                    <span class="link-more__text">подробней</span>
+                                    <span class="link-more__icon">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider-navbar">
+                                <div class="arrow-number">
+                                    <div class="number">
+                                        <span class="current-slide"></span>
+                                        <span class="delimetr">/</span>
+                                        <span class="all-slide"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <span></span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <span class="arrow prev"><svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg></span>
+                                    <span class="arrow next"><svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="result">
+                            <div class="result-header">
+                                <div class="result-text-wrap">
+                                    <div class="result-title">Однокомнатный «Люкс»</div>
+                                    <div class="result-count">Количество человек: до 2</div>
+                                </div>
+                                <button class="button-invert">Забронировать номер</button>
+                            </div>
+                            <div class="slider-wrap">
+                                <div class="slider">
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                </div>
+                                <div class="link-more">
+                                    <span class="link-more__text">подробней</span>
+                                    <span class="link-more__icon">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider-navbar">
+                                <div class="arrow-number">
+                                    <div class="number">
+                                        <span class="current-slide"></span>
+                                        <span class="delimetr">/</span>
+                                        <span class="all-slide"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <span></span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <span class="arrow prev"><svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg></span>
+                                    <span class="arrow next"><svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="result">
+                            <div class="result-header">
+                                <div class="result-text-wrap">
+                                    <div class="result-title">Двухкомнатный «Люкс»</div>
+                                    <div class="result-count">Количество человек: до 2</div>
+                                </div>
+                                <button class="button-invert">Забронировать номер</button>
+                            </div>
+                            <div class="slider-wrap">
+                                <div class="slider">
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                    <a href="/app/images/room1.jpg" class="image-wrapper">
+                                        <img data-lazy="/app/images/room1.jpg" alt="room">
+                                    </a>
+                                </div>
+                                <div class="link-more">
+                                    <span class="link-more__text">подробней</span>
+                                    <span class="link-more__icon">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider-navbar">
+                                <div class="arrow-number">
+                                    <div class="number">
+                                        <span class="current-slide"></span>
+                                        <span class="delimetr">/</span>
+                                        <span class="all-slide"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <span></span>
+                                </div>
+                                <div class="arrow-wrapper">
+                                    <span class="arrow prev"><svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg></span>
+                                    <span class="arrow next"><svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-desc">
+        <div class="container">
+            <div class="content">
+                <div class="image-wrapper">
+                    <img src="/app/images/form-desc.jpg" alt="">
+                </div>
+                <form action="/" class="form">
+                    <div class="subtitle">У Вас есть вопросы?</div>
+                    <h2 class="header_2"><span class="line">Оставьте заявку,</span> вам перезвонит администратор</h2>
+
+                    <div class="form-item__wrap">
+                        <div class="form-item last">
+                            <input type="tel" name="phone" placeholder="Телефон" >
+                        </div>
+                        <button class="button-invert">Заказать звонок</button>
+                    </div>
+                    
+                    <label class="form-note">
+                        <input type="checkbox" checked>
+                        <div class="custom-checkbox"></div>
+                        <div class="form-note-text">
+                            Принимаю условия <a href="#">Соглашения</a> на обработку <br>персональных данных
+                        </div>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="informations ">
+        <div class="container">
+            <div class="content">
+                <div class="row-top">
+                    <div class="text-wrapper">
+                        <div class="subtitle">Расположение</div>
+                        <h2 class="header_2"><span class="line">Все необходимое - рядом</span></h2>
+                        <div class="text-default">
+                            <p>
+                                Отель расположен в самом центре Геленджике, вокруг есть вся необходимая инфраструктура: 
+                                кафе и рестораны, аптеки различные магазины, а также развлекательные центры.
+                            </p>
+                            <p>
+                                С верхних этажей открывается прекрасный вид на горы. Но самое главное в отдыхе летом – это конечно же море и пляж. 
+                                Наш отель находится в 400 метрах от песчаного пляжа и набережной – это примерно 5-7 минут неспешным шагом.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="/app/images/informations1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row-bottom">
+                    <div class="image-wrapper">
+                        <img src="/app/images/informations2.jpg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                        <div class="subtitle">Бассейн</div>
+                        <h2 class="header_2"><span class="line">Брызги, солнце, лежаки</span></h2>
+                        <div class="text-default">
+                            <p>
+                                На территории имеется открытый бассейн с подогревом, в летний период температура 
+                                воды в нем круглосуточно около 27 градусов. Так что даже если на улице будет 
+                                плохая погода (что редкость для Геленджика), вы всегда сможете провести время у воды.
+                            </p>
+                            <p>
+                                А для маленьких гостей нашего отеля в бассейне есть специально оборудованная детская зона.
+                            </p>
+                            <p>
+                                Около бассейна расположены лежаки, для отдыха под теплым солнцем.
+                            </p>
+                            <p>
+                                Посещение бассейна абсолютно бесплатно для наших гостей.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="content">
+                <ul class="list">
+                    <li class="item item-logo">
+                        <a href="/" class="logo">
+                            <img src="/app/images/logo-footer.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="item item-address">
+                        <span class="item-address__icon">
+                            <svg><use xlink:href="/app/images/svg_sprite.svg#map"></use></svg>
+                        </span>
+                        <span class="item-address__text">
+                            Краснодарский край, г. <br>
+                            Геленджик, ул. Советская, 26
+                        </span>
+                    </li>
+                    <li class="item item-contact">
+                        <div class="item-contact__wrap">
+                            <a href="mailto:info@hotel-azaria.ru" class="item-contact__link">info@hotel-azaria.ru</a>
+                            <span class="item-contact__text">E-mail</span>
+                        </div>
+                        <div class="item-contact__wrap">
+                            <a href="tel:8 (86141) 2 15 10" class="item-contact__link">8 (86141) 2 15 10</a>
+                            <span class="item-contact__text">Телефон</span>
+                        </div>
+                    </li>
+                    <li class="item item-contact">
+                        <div class="item-contact__wrap">
+                            <a href="tel:8 (918) 623 91 52" class="item-contact__link">8 (918) 623 91 52</a>
+                            <span class="item-contact__text">Мобильный</span>
+                        </div>
+                        <div class="item-contact__wrap">
+                            <a href="tel:8 (86141) 2 15 10" class="item-contact__link">8 (86141) 2 15 10</a>
+                            <span class="item-contact__text">Факс</span>
+                        </div>
+                    </li>
+                    <li class="item item-button">
+                        <button class="button" data-open="form-callback">Забронировать</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container">
+            <div class="content">
+                <a href="#" class="text">Пользовательское соглашение</a>
+                <span class="text">Все права защищены. Copyright © 2012-2022</span>
+                <span class="text">Разрабоано студией <a href="https://web2.agency/" target="_blank">WEB2</a></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overlay" >
+        <div class="overlay__wrapper">
+            <div class="overlay__bg"></div>
+            <div class="overlay__content">
+                <a class="overlay__close"></a>
+
+                <form action="/" method="post" class="form form-callback novalid">
+                    <input type="hidden" name="count" value="0">
+                    <h3 class="header_2">Заказать звонок</h3>
+
+                    <div class="form-item">
+                        <input type="text" name="name" placeholder="имя" >
+                    </div>
+                    <div class="form-item">
+                        <input type="tel" name="phone" placeholder="телефон" >
+                    </div>
+                    <button class="button-invert">Отправить</button>
+                    <label class="form-note">
+                        <input type="checkbox" checked>
+                        <div class="custom-checkbox"></div>
+                        <div class="form-note-text">
+                            Принимаю условия <a href="#">Соглашения</a> на обработку <br>персональных данных
+                        </div>
+                    </label>
+                </form>
+
+                <form action="/" method="post" class="form form-quiz novalid">
+                    
+                    <div class="block-1 block">
+                        <div class="col-left">
+                            <div class="title">Узнайте стоимость вашего ремонта за 1 час!</div>
+                            <div class="subtitle">
+                                И получите лучшее предложение по ремонту и отделке в Новороссийске!
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="block-title">Где планируете сделать ремнот?</div>
+                            <div class="question-inputs">
+                                <label class="question-wrap">
+                                    <input type="checkbox" name="question1" class="question-check">
+                                    <div class="image-wrapper question-image">
+                                        <img src="/app/images/question1-1.jpg" alt="">
+                                    </div>
+                                    <div class="question-title">Квартира в новостройке</div>
+                                </label>
+                                <label class="question-wrap">
+                                    <input type="checkbox" name="question1" class="question-check">
+                                    <div class="image-wrapper question-image">
+                                        <img src="/app/images/question1-2.jpg" alt="">
+                                    </div>
+                                    <div class="question-title">Квартира вторичка</div>
+                                </label>
+                                <label class="question-wrap">
+                                    <input type="checkbox" name="question1" class="question-check">
+                                    <div class="image-wrapper question-image">
+                                        <img src="/app/images/question1-3.jpg" alt="">
+                                    </div>
+                                    <div class="question-title">Офис или магазин</div>
+                                </label>
+                                <label class="question-wrap">
+                                    <input type="checkbox" name="question1" class="question-check">
+                                    <div class="image-wrapper question-image">
+                                        <img src="/app/images/question1-4.jpg" alt="">
+                                    </div>
+                                    <div class="question-title">Загородный дом</div>
+                                </label>
+                            </div>
+                            <div class="button block-1__button">Следующий шаг</div>
+                        </div>
+                    </div>
+
+                    <div class="block-2 block">
+                        <div class="col-left">
+                            <div class="title">Узнайте стоимость вашего ремонта за 1 час!</div>
+                            <div class="subtitle">
+                                И получите лучшее предложение по ремонту и отделке в Новороссийске!
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="block-title">Укажите примерную площадь объекта (м2)</div>
+                            <div class="form-item">
+                                <input type="text" name="question2" class="question-input">
+                            </div>
+                            <div class="button block-2__button">Следующий шаг</div>
+                        </div>
+                    </div>
+
+                    <div class="block-3 block">
+                        <div class="col-left">
+                            <div class="title">Узнайте стоимость вашего ремонта за 1 час!</div>
+                            <div class="subtitle">
+                                И получите лучшее предложение по ремонту и отделке в Новороссийске!
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="block-title">Выберите тип ремонта</div>
+                            <div class="question-inputs">
+                                <label class="question-wrap">
+                                    <input type="checkbox" name="question3" class="question-check">
+                                    <div class="image-wrapper question-image">
+                                        <img src="/app/images/question2-1.jpg" alt="">
+                                    </div>
+                                    <div class="question-title">Капитальный ремонт «под ключ»</div>
+                                </label>
+                                <label class="question-wrap">
+                                    <input type="checkbox" name="question3" class="question-check">
+                                    <div class="image-wrapper question-image">
+                                        <img src="/app/images/question2-2.jpg" alt="">
+                                    </div>
+                                    <div class="question-title">Косметический ремонт</div>
+                                </label>
+                                <label class="question-wrap">
+                                    <input type="checkbox" name="question3" class="question-check">
+                                    <div class="image-wrapper question-image">
+                                        <img src="/app/images/question2-3.jpg" alt="">
+                                    </div>
+                                    <div class="question-title">Дизайнерский ремонт</div>
+                                </label>
+                                <label class="question-wrap">
+                                    <input type="checkbox" name="question3" class="question-check">
+                                    <div class="image-wrapper question-image">
+                                        <img src="/app/images/question2-4.jpg" alt="">
+                                    </div>
+                                    <div class="question-title">Другое</div>
+                                </label>
+                            </div>
+                            <div class="button block-3__button">Следующий шаг</div>
+                        </div>
+                    </div>
+
+                    <div class="block-4 block">
+                        <div class="col-left">
+                            <div class="title">Узнайте стоимость вашего ремонта за 1 час!</div>
+                            <div class="subtitle">
+                                И получите лучшее предложение по ремонту и отделке в Новороссийске!
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="block-title">Дизайн-проект?</div>
+                            <div class="question-list">
+
+                                <div class="question-item">
+                                    <label class="item-checkbox">
+                                        <input type="question4" class="item-checkbox__input">
+                                        <div class="item-checkbox__block"></div>
+                                    </label>
+                                    <div class="item-text">Да, у нас уже есть дизайн-проект</div>
+                                </div>
+                                <div class="question-item">
+                                    <label class="item-checkbox">
+                                        <input type="question4" class="item-checkbox__input">
+                                        <div class="item-checkbox__block"></div>
+                                    </label>
+                                    <div class="item-text">Мы планируем заказать дизайн-проект</div>
+                                </div>
+                                <div class="question-item">
+                                    <label class="item-checkbox">
+                                        <input type="question4" class="item-checkbox__input">
+                                        <div class="item-checkbox__block"></div>
+                                    </label>
+                                    <div class="item-text">Нам нужен ремонт без дизайн-проекта</div>
+                                </div>
+                                
+                            </div>
+                            <div class="button block-4__button">Следующий шаг</div>
+                        </div>
+                    </div>
+
+                    <div class="block-5 block">
+                        <div class="col-left">
+                            <div class="title">Узнайте стоимость вашего ремонта за 1 час!</div>
+                            <div class="subtitle">
+                                И получите лучшее предложение по ремонту и отделке в Новороссийске!
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="block-title">Состояние помещения</div>
+                            <div class="question-list">
+
+                                <div class="question-item">
+                                    <label class="item-checkbox">
+                                        <input type="question5" class="item-checkbox__input">
+                                        <div class="item-checkbox__block"></div>
+                                    </label>
+                                    <div class="item-text">Помещение новое, не эксплуатировалось</div>
+                                </div>
+                                <div class="question-item">
+                                    <label class="item-checkbox">
+                                        <input type="question5" class="item-checkbox__input">
+                                        <div class="item-checkbox__block"></div>
+                                    </label>
+                                    <div class="item-text">Помещение уже использовалось</div>
+                                </div>
+                                
+                            </div>
+                            <div class="button block-5__button">Следующий шаг</div>
+                        </div>
+                    </div>
+
+                    <div class="block-6 block">
+                        <div class="col-left">
+                            <div class="title">Узнайте стоимость вашего ремонта за 1 час!</div>
+                            <div class="subtitle">
+                                И получите лучшее предложение по ремонту и отделке в Новороссийске!
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="block-bigtitle">Отлично!</div>
+                            <div class="block-title">Мы получили все необходимые данные для расчета.</div>
+                            <div class="block-subtitle">
+                                Введите Ваше имя и номер телефона,
+                                чтобы мы могли отправить
+                                вам расчет стоимости
+                            </div>
+                            <div class="form-item">
+                                <label for="question5-name">Ваше Имя</label>
+                                <input type="text" name="question5-name" class="question-input" id="question5-name">
+                            </div>
+                            <div class="form-item">
+                                <label for="question5-phone">Ваше Телефон</label>
+                                <input type="text" name="question5-phone" class="question-input" id="question5-phone">
+                            </div>
+                            <button class="button">Отправить заявку на расчет</button>
+                        </div>
+                    </div>
+
+                </form>
+
+
+                <div class="form-success">
+                    <div class="header_2">Спасибо!</div>
+                    <div class="header_3">Ваши данные отправлены.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-top">
+        <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+    </button>
+
+    <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/app/js/libs/slick.min.js"></script>
+    <script src="/app/js/libs/lightgallery-all.min.js"></script>
+    <script src="/app/js/libs/maskedinput-v.1.4.1.js"></script>
+    
+    <script src="/app/js/main.js"></script>
+</body>
+</html>

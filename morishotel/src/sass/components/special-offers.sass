@@ -1,0 +1,104 @@
+.home-page__special-offers.special-offers
+  margin-bottom: 180px
+
+  +small
+    margin-bottom: 40px
+
+.special-offers
+  margin-bottom: 40px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+    +phone
+      flex-direction: column
+      align-items: center
+
+  &__item
+    flex: 1 0 30%
+    margin-bottom: 20px
+    max-width: 33.33%
+    min-height: 40vh
+
+    +small
+      flex: 1 0 48%
+      max-width: 50%
+      min-height: 20vh
+
+    +phone
+      flex: 1 0 100%
+      margin-bottom: 10px
+      max-width: 100%
+
+    &:last-child
+      margin-right: 0
+
+      +phone
+        margin-bottom: 0
+
+    &:not(:nth-child(3n))
+      margin-right: 20px
+
+      +small
+        margin-right: 0
+
+    &:not(:nth-child(2n))
+      
+      +small
+        margin-right: 20px
+
+      +phone
+        margin-right: 0
+
+  &__link
+    position: relative
+    display: flex
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+    &:hover
+      .special-offers__img
+        transform: scale(1.1)
+
+  &__img
+    max-width: 100%
+    min-height: 100%
+    transition: transform .2s linear
+
+  &__descr
+    position: absolute
+    bottom: 30px
+    left: 30px
+    @include textReset
+    font-family: $font-family__2
+    font-weight: 700
+    font-size: 20px
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    color: $color__1
+
+    +phone
+      bottom: 15px
+      left: 15px
+      font-size: 16px
+
+  &__number
+    position: absolute
+    top: -8%
+    right: 8%
+    z-index: 1
+    font-family: $font-family__2
+    font-style: italic
+    font-weight: 700
+    font-size: 268px
+    color: $color__3
+    text-shadow: 0px 0px 100px rgba(191, 187, 185, 0.5)
+
+    +medium
+      top: 13%
+      font-size: 100px
+
+    +phone
+      display: none

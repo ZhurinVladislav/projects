@@ -1,0 +1,898 @@
+// ОБЩИЕ СТИЛИ
+html
+  width: 100%
+  max-width: 100%
+  box-sizing: border-box
+  overflow-x: hidden
+
+html.galleryActive
+  overflow-y: hidden !important
+  padding-right: 16px
+  
+  .scroll-top
+    right: 36px
+    +medium
+      right: 10px
+
+  .social-panel
+    right: 36px
+    +medium
+      right: 10px
+
+html.mod-open
+  overflow-y: hidden !important
+  padding-right: 16px
+
+  .scroll-top
+    right: 36px
+    +medium
+      right: 10px
+
+  .social-panel
+    right: 36px
+    +medium
+      right: 10px
+
+  +small
+    padding-right: 0
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+body
+  position: relative
+  display: flex
+  flex-direction: column
+  margin: 0
+  width: 100%
+  max-width: 100%
+  min-width: 320px
+  min-height: 100vh
+  overflow-x: hidden
+  font-family: $ff_1
+  font-weight: 400
+  font-size: 20px
+  line-height: 1.2
+  leading-trim: both
+  text-edge: cap
+  color: $clr_1
+  background-color: $clr_2
+  opacity: 0
+
+  +phone
+    font-size: 16px
+
+  &.loading
+    opacity: 1
+
+  &::-webkit-scrollbar
+    width: 16px
+    background-color: $clr_4
+
+  &::-webkit-scrollbar-thumb
+    background-color: $clr_2
+
+html.menu-open,
+body.menu-open
+  +small
+    overflow: hidden
+
+
+h1,h2,h3,h4,h5,h6,p,span,address,small,strong,a,ul,li,ol
+  &::selection
+    background-color: $clr_3
+    color: $clr_2
+    transition: color .2s linear, background-color .2s linear
+
+a
+  text-decoration: none
+  color: inherit
+
+ul,ol
+  margin: 0
+  padding: 0
+
+ul
+  list-style: none
+
+header,section,footer
+  width: 100%
+
+img
+  max-width: 100%
+
+svg
+  width: 100%
+  height: 100%
+  flex-shrink: 0
+
+address
+  font-style: normal
+  font-family: $ff_1
+
+input,
+textarea
+  outline: none
+  border: none
+
+button
+  display: block
+  background-color: transparent
+  border: none
+  padding: 0
+  outline: none
+  cursor: pointer
+  font-family: $ff_1
+
+// УБИРАЕМ СТРЕЛКИ В INPUT NUMBER
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+
+input[type='number']
+  -moz-appearance: textfield
+
+.section-reset
+  margin-bottom: 150px
+
+  +phone
+    margin-bottom: 80px
+
+.main_active
+  padding-top: 143px
+
+  +small
+    padding-top: 80px
+
+.container
+  position: relative
+  max-width: $size_1
+  width: 100%
+  margin: 0 auto
+  padding-left: 25px
+  padding-right: 25px
+
+  +phone
+    padding: 0 10px
+
+.breadcrumb
+  display: flex
+  list-style: none
+  margin: 0
+  font-size: 18px
+
+  +phone
+    font-size: 16px
+
+  li
+    color: $clr_1
+    transition: color .2s linear
+
+    &:hover
+      color: $clr_5
+
+  li.active
+    color: $clr_2
+
+.seo-title
+  position: absolute
+  clip: rect(0,0,0,0)
+  margin: -1px
+  padding: 0
+  border: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+
+.h-1
+  @include textReset
+  font-family: $ff_2
+  font-weight: 400
+  font-size: 110px
+  line-height: 1.2
+  text-transform: uppercase
+
+  +medium
+    font-size: 50px
+
+  +small
+    font-size: 40px
+
+  +phone
+    font-size: 35px
+
+.h-2
+  @include textReset
+  margin-bottom: 70px
+  font-weight: 400
+  font-size: 110px
+  font-family: $ff_2
+  line-height: 1.2
+  color: $clr_1
+  text-transform: uppercase
+
+  +medium
+    font-size: 90px
+
+  +small
+    margin-bottom: 40px
+    font-size: 80px
+
+  +phone
+    margin-bottom: 30px
+    font-size: 35px
+
+.h-3
+  @include textReset
+  margin-bottom: 30px
+  font-family: $ff_2
+  font-size: 26px
+  font-weight: 400
+  line-height: 1.2
+  color: $clr_1
+  text-transform: uppercase
+
+  +phone
+    font-size: 20px
+
+.h-4
+  @include textReset
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  line-height: 1.2
+  color: $clr_2
+  text-transform: uppercase
+
+.h-5
+  @include textReset
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  line-height: 1.2
+  color: $clr_2
+  text-transform: uppercase
+
+.h-6
+  @include textReset
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  line-height: 1.2
+  color: $clr_2
+  text-transform: uppercase
+
+.subtitle
+  @include textReset
+  margin-bottom: 10px
+  font-family: $ff_1
+  font-weight: 700
+  font-size: 12px
+  line-height: 1.2
+  letter-spacing: 1.2px
+  color: $clr_2
+  text-transform: uppercase
+
+  +phone
+    font-size: 12px
+
+.button
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 13px 26px
+  max-width: 161px
+  width: 100%
+  min-height: 48px
+  font-family: $ff_1
+  font-size: 18px
+  line-height: 1.1
+  border: 1px solid $clr_1
+  border-radius: 60px
+  background-color: $clr_0
+  transition: background-color .2s linear, border-color .2s linear, color .2s linear
+
+  &:hover
+    border-color: $clr_1
+    color: $clr_1
+    background-color: $clr_3
+
+  +phone
+    max-width: 100%
+    width: 100%
+    font-size: 15px
+
+  .btn__icon
+    fill: $clr_1
+
+.button-invert
+  display: flex
+  align-items: center
+  padding: 13px 26px
+  max-width: 161px
+  width: 100%
+  min-height: 48px
+  font-family: $ff_1
+  font-size: 18px
+  color: $clr_2
+  line-height: 1.1
+  border: 1px solid $clr_3
+  border-radius: 60px
+  background-color: $clr_3
+  transition: background-color .2s linear, border-color .2s linear, color .2s linear
+
+  &:hover
+    border-color: $clr_5
+    background-color: $clr_5
+
+  +phone
+    max-width: 100%
+    width: 100%
+    font-size: 15px
+
+  .btn__icon
+    fill: $clr_2
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 20px 26px
+  max-width: 254px
+  min-height: 75px
+  font-size: 22px
+
+  +phone
+    padding: 15px 15px
+    max-width: 100%
+    width: 100%
+    font-size: 18px
+    min-height: 48px
+  
+  &__text
+    margin-right: 10px
+    transition: transform .2s linear
+
+  &__icon
+    width: 18px
+    height: 18px
+    flex-shrink: 0
+    transform: rotate(225deg)
+    transition: transform .2s linear
+
+  &:hover
+
+    .btn__text
+      transform: translateX(-5px)
+
+    .btn__icon
+      fill: $clr_2
+      transform: rotate(270deg)
+  
+  &.button
+    &:hover
+      color: $clr_2
+      background-color: $clr_3
+      border-color: $clr_3
+
+// СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ
+.text-default
+  line-height: 1.3
+
+  h1
+    @include textReset
+    font-family: $ff_2
+    font-weight: 400
+    font-size: 60px
+    text-transform: uppercase
+
+    +medium
+      font-size: 45px
+
+    +small
+      font-size: 40px
+
+    +phone
+      font-size: 30px
+
+  h2
+    @include textReset
+    font-family: $ff_2
+    margin-bottom: 20px
+    font-weight: 400
+    font-size: 40px
+    text-transform: uppercase
+
+    +medium
+      font-size: 34px
+
+    +small
+      margin-bottom: 25px
+      font-size: 30px
+
+    +phone
+      margin-bottom: 15px
+      font-size: 26px
+
+  h3
+    @include textReset
+    font-family: $ff_2
+    margin-bottom: 20px
+    font-size: 30px
+    font-weight: 400
+    text-transform: uppercase
+
+    +medium
+      font-size: 24px
+
+    +small
+      margin-bottom: 25px
+
+    +phone
+      margin-bottom: 15px
+
+  h4
+    @include textReset
+    font-family: $ff_2
+    font-size: 20px
+    font-weight: 400
+    line-height: 1.3
+    color: $clr_2
+    text-transform: uppercase
+
+    +medium
+      font-size: 24px
+
+    +small
+      margin-bottom: 25px
+
+    +phone
+      margin-bottom: 15px
+
+  p
+    @include textReset
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+      +phone
+        margin-bottom: 15px
+
+  a
+    position: relative
+    color: $clr_3
+
+    &::before
+      content: ''
+      position: absolute
+      bottom: 2px
+      width: 100%
+      height: 2px
+      background-color: $clr_3
+      transition: opacity .2s linear, transform .2s linear, width .2s linear
+
+    &:hover
+      &::before
+        width: 0
+
+  img
+    +phone
+      width: 100%
+      margin: 0!important
+      margin-bottom: 15px!important
+
+  ul
+    margin-bottom: 20px
+    padding-left: 42px
+    list-style: inherit
+
+    +phone
+      padding-left: 30px
+
+    li
+      &::marker
+        font-family: $ff_1
+        font-size: 18px
+        font-weight: 600
+        color: $clr_5
+
+    li:not(:last-child)
+      margin-bottom: 10px
+
+  ol
+    margin-bottom: 20px
+    padding-left: 40px
+
+    +phone
+      padding-left: 30px
+
+    li
+
+      &::marker
+        font-family: $ff_1
+        font-size: 18px
+        font-weight: 600
+        color: $clr_5
+
+    li:not(:last-child)
+      margin-bottom: 10px
+
+  blockquote
+    margin: 0
+    margin-bottom: 20px
+    padding: 20px 10px 20px 20px
+    background: rgba($clr_4, .3)
+    border-left: 5px solid $clr_4
+    ul
+      margin-bottom: 0
+
+    p
+      margin: 0
+
+  table
+    width: 100%
+    border-collapse: collapse
+    margin-bottom: 30px
+
+    +phone
+      overflow-y: auto
+      margin: auto
+      border-collapse: collapse
+      overflow-x: auto
+      display: block
+      width: fit-content
+      max-width: 100%
+      line-height: 1.3
+
+    p
+      @include textReset
+
+    tr
+      &:nth-child(2n)
+        background: rgba($clr_3, 0.2)
+
+      &:nth-child(1)
+        background: rgba($clr_3, 0.8)
+        color: #fff
+        td
+          font-weight: 700
+
+    th
+      padding: 10px
+      border: 1px solid $clr_3
+
+    td
+      border: 1px solid $clr_3
+      padding: 10px
+
+
+// НАВЕРХ СТРАНИЦЫ
+.scroll-top
+  position: fixed
+  z-index: 30
+  bottom: 20px
+  right: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 54px
+  height: 54px
+  background-color: $clr_3
+  border-radius: 50%
+  opacity: 1
+  transform: translateY(0px)
+  transition: background-color .2s linear, transform .2s linear, opacity .2s linear 
+
+  +medium
+    bottom: 10px
+    right: 10px
+
+  &_active
+    opacity: 0
+    transform: translateY(200px)
+
+  &:hover
+    background-color: $clr_5
+
+    .scroll-top__icon
+      transform: rotate(180deg) translateY(3px)
+
+  &__icon
+    display: inline-flex
+    width: 22px
+    height: 22px
+    fill: $clr_2
+    transform: rotate(180deg)
+    transition: fill .2s linear, transform .2s linear
+
+// ПАНЕЛЬ СОЦИАЛЬНЫХ СЕТЕЙ
+.social-panel
+  position: fixed
+  z-index: 99
+  bottom: 17vh
+  right: 20px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  +medium
+    right: 10px
+
+  &__item
+
+    &:not(:last-child)
+      margin-bottom: 18px
+
+  &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 55px
+    height: 55px
+    border: 1px solid $clr_1
+    background-color: $clr_0
+    border-radius: 50%
+    transition: background-color .2s linear, border-color .2s linear
+
+    +medium
+      width: 55px
+      height: 55px
+      background-color: $clr_3
+      border-color: $clr_3
+
+    &:hover
+      background-color: $clr_3
+      border-color: $clr_3
+
+      .social-panel__icon
+        fill: $clr_2
+
+  &__icon
+    width: 30px
+    height: 30px
+    fill: $clr_1
+    transition: fill .2s linear
+
+    +medium
+      width: 30px
+      height: 30px
+      fill: $clr_2
+
+// ПАГИНАЦИЯ
+.pagination
+  display: flex
+  justify-content: center
+  padding-top: 40px
+  font-family: $ff_1
+  font-size: 20px
+  color: $clr_2
+
+  +phone
+    font-size: 16px
+
+  .page-item
+    transition: color .2s linear
+
+    &.active
+      color: $clr_3
+
+      &:hover
+        color: $clr_2
+
+    &:hover
+      color: $clr_3
+
+    &:not(:last-child)
+      margin-right: 10px
+
+.paginations
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  margin-top: 40px
+  +phone
+    font-size: 14px
+
+  .page-arrow
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    width: 34px
+    height: 34px
+    border: 1px solid $clr_1
+    border-radius: 50%
+
+    &.right
+      transform: rotate(180deg)
+      margin-left: 14px
+
+    &.left
+      margin-left: 38px
+
+      +phone
+        margin-left: 28px
+
+    svg
+      width: 10px
+      height: 20px
+      stroke: $clr_1
+
+  .pagination-block
+    display: block
+    position: relative
+    margin: 0 8px
+    width: 40px
+    background: #fff
+
+    &.active
+      .page-current
+        border-bottom: 1px solid transparent
+
+      .page-wrap
+        display: block
+        border-top: 1px solid transparent
+
+    .page-current
+      display: block
+      width: 100%
+      position: relative
+      padding: 6px 20px 6px 10px
+      border: 1px solid $clr_1
+      cursor: pointer
+
+      &:after
+        content: ""
+        display: block
+        width: 0
+        height: 0
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        border-top: 6px solid $clr_1
+        position: absolute
+        top: 50%
+        right: 4px
+        transform: translateY(-50%)
+
+    .page-wrap
+      display: none
+      width: 100%
+      position: absolute
+      left: 0
+      top: 100%
+      border: 1px solid $clr_1
+
+    .pagination-number
+      display: block
+      text-align: center
+      padding: 0px 20px 0px 10px
+      margin-bottom: 4px
+
+      &.active
+        opacity: 0.4
+
+// КАПЧА
+.grecaptcha-badge
+  opacity: 0
+
+// АНИМАЦИЯ
+[data-scroll]
+  opacity: 0
+  transition: 1.5s
+
+  &.scrolled
+    opacity: 1
+    transform: translateY(0px)
+
+  +phone
+    transition: 0.6s
+    transition-delay: 0s!important
+
+.animation-elem:nth-child(even)
+  opacity: 0
+  transform: translateY(100%)
+  transition: opacity 0.6s
+
+.animation-opacity
+  opacity: 0
+
+.animation-left
+  opacity: 0
+  transform: translate(-50%, 0)
+
+.animation-right
+  opacity: 0
+  transform: translate(50%, 0)
+
+.animation-top
+  transform: translateY(80px)
+
+.animation-resolve 
+  transition-duration: 0.8s
+  opacity: 1
+  transform: translate(0, 0) rotateX(0) rotateY(0) translateY(0)
+
+.animation-top-left
+  opacity: 0
+  transform: translate(20px, 20px)
+
+.animation-top-right
+  opacity: 0
+  transform: translate(-20px, -20px)
+
+.animation-bottom-left
+  opacity: 0
+  transform: translate(-40px, 40px)
+
+.animation-bottom-right
+  opacity: 0
+  transform: translate(-20px, -20px)
+
+.animation-resolve
+  transition-duration: 0.8s
+  opacity: 1
+  transform: translate(0,0) rotateX(0) rotateY(0) translateY(0)
+
+.delay-100
+  transition-delay: 0.1s
+
+.delay-200
+  transition-delay: 0.2s
+
+.delay-300
+  transition-delay: 0.3s
+
+.delay-400
+  transition-delay: 0.4s
+
+.delay-500
+  transition-delay: 0.5s
+
+.delay-600
+  transition-delay: 0.6s
+
+.delay-700
+  transition-delay: 0.7s
+
+.delay-800
+  transition-delay: 0.8s
+
+.delay-900
+  transition-delay: 0.9s
+
+.delay-1000
+  transition-delay: 1s
+
+.delay-1100
+  transition-delay: 1.1s
+
+.delay-1200
+  transition-delay: 1.2s
+
+.delay-1300
+  transition-delay: 1.3s
+
+.delay-1400
+  transition-delay: 1.4s
+
+.delay-1500
+  transition-delay: 1.5s
+
+.delay-1600
+  transition-delay: 1.6s
+
+.delay-1700
+  transition-delay: 1.7s
+
+.delay-1800
+  transition-delay: 1.8s
+
+.delay-1900
+  transition-delay: 1.9s
+
+.delay-2000
+  transition-delay: 2s

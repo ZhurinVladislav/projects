@@ -1,0 +1,174 @@
+.main
+  margin-bottom: 45px
+  &.gallery
+    .content
+      width: 100%
+
+  .content
+    h1
+      margin-bottom: 40px
+
+  .custom-gallery
+    img 
+      width: 100%
+      height: auto!important
+
+    &:hover
+      img
+        transform: scale(1)!important
+
+
+  .text-default
+    margin-bottom: 20px
+    max-width: 85%
+    color: $color__3
+
+    +small
+      min-width: 100%
+
+    h1
+      @include titleReset
+      font-family: $font-family__2
+      font-weight: 700
+      font-size: 60px
+      line-height: 1.3
+      color: $color__3
+      text-transform: uppercase
+
+      +medium
+        font-size: 45px
+
+      +small
+        font-size: 40px
+
+      +phone
+        font-size: 30px
+
+    h2
+      @include titleReset
+      font-family: $font-family__2
+      margin-bottom: 20px
+      font-weight: 700
+      font-size: 40px
+      line-height: 1.2
+      color: $color__3
+      text-transform: uppercase
+
+      +medium
+        font-size: 34px
+
+      +small
+        margin-bottom: 25px
+        font-size: 30px
+
+      +phone
+        margin-bottom: 15px
+        font-size: 26px
+
+    h3
+      @include titleReset
+      font-family: $font-family__2
+      margin-bottom: 20px
+      font-size: 30px
+      font-weight: 300
+      line-height: 1.3
+      color: $color__3
+      text-transform: uppercase
+
+      +medium
+        font-size: 24px
+
+      +small
+        margin-bottom: 25px
+
+      +phone
+        margin-bottom: 15px
+
+    h4
+      @include titleReset
+      font-family: $font-family__2
+      font-size: 20px
+      font-weight: 300
+      line-height: 1.3
+      color: $color__3
+      text-transform: uppercase
+
+      +medium
+        font-size: 24px
+
+      +small
+        margin-bottom: 25px
+        
+      +phone
+        margin-bottom: 15px
+
+    p
+      @include textReset
+
+      &:not(:last-child)
+        margin-bottom: 16px
+
+    a
+      color: $color__2
+
+  .gallery
+    position: relative
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-auto-rows: 300px
+    gap: 10px
+    font-size: 0
+    line-height: 0
+
+    +small
+      grid-template-columns: repeat(2, 1fr)
+
+    +phone
+      grid-auto-rows: 40vh
+      grid-template-columns: 1fr
+
+    &__item
+      border-radius: 8px
+      overflow: hidden
+
+    &__link
+      width: 100%
+      font-size: 0
+      line-height: 0
+      overflow: hidden
+
+      &:hover
+        .gallery__img
+          transform: scale(1.1)
+
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      transition: transform .2s linear
+
+  +medium
+    .content
+      width: 90%
+
+      h1
+        margin-bottom: 30px
+
+  +small
+    margin-bottom: 80px
+
+    .content
+      width: 100%
+
+      h1
+        margin-bottom: 20px
+
+  .video-wrapper
+    &__title
+      margin-bottom: 20px
+
+    &__video
+      margin-bottom: 20px
+      max-width: 892px
+      max-height: 500px
+      border-radius: 8px

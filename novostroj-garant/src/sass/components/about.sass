@@ -1,0 +1,65 @@
+.about
+
+	.content
+		display: flex
+		justify-content: space-between
+		margin-bottom: 50px
+
+		+small
+			flex-direction: column
+
+		.text
+			flex: 0 0 49%
+			margin-right: 10px
+			line-height: 1.3
+			
+			+small
+				margin-right: 0
+				margin-bottom: 20px
+				flex: 0 0 100%
+
+			p
+				@include textReset
+
+				&:not(:last-child)
+					margin-bottom: 20px
+
+					+phone
+						margin-bottom: 15px
+
+			strong
+				font-weight: 700
+				color: $clr_3
+
+			a
+				position: relative
+				font-weight: 700
+				color: $clr_3
+				border-bottom: 2px solid $clr_0
+				transition: color .2s linear
+
+				&::before
+					content: ''
+					position: absolute
+					bottom: 0
+					width: 100%
+					height: 2px
+					background-color: $clr_2
+					opacity: 0
+					transition: opacity .2s linear
+
+				&:hover
+					color: $clr_2
+
+					&::before
+						opacity: 1
+
+		.video
+			flex: 0 0 49%
+			max-height: 366px
+
+			+small
+				flex: 0 0 100%
+				max-height: 366px
+				height: 366px
+				min-height: 366px

@@ -1,0 +1,163 @@
+.home-page
+	
+	.contacts
+
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 50%
+			height: 1px
+			background-color: $clr_1
+
+.contacts
+	position: relative
+	margin-bottom: 0
+
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 50%
+		height: 1px
+		background-color: $clr_0
+
+		+small
+			display: none
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: space-between
+		max-width: 1666px
+		margin: 0
+		margin-left: auto
+		padding-right: 0
+		padding-left: 25px
+
+		+medium
+			max-width: $size_1
+			margin: 0 auto
+			padding-right: 25px
+			padding-left: 25px
+
+		+small
+			flex-wrap: wrap
+
+		+phone
+			padding: 0 10px
+
+	.content
+		flex: 0 0 36%
+		margin-right: 20px
+		margin-bottom: 85px
+
+		+small
+			flex: 0 0 100%
+			margin-right: 0
+			margin-bottom: 40px
+
+		&__title
+			margin-bottom: 59px
+
+			+small
+				margin-bottom: 30px
+
+		.list
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			padding-right: 140px
+
+			+large
+				padding-right: 20px
+
+			+small
+				padding-right: 0
+
+			.item
+				display: flex
+				flex-direction: column
+
+				&:first-child
+					flex: 0 0 60%
+					margin-bottom: 45px
+
+					+small
+						flex: 0 0 100%
+
+					.item__link
+						font-weight: 400
+
+				&:not(:first-child)
+					flex: 0 0 42%
+					margin-right: 20px
+
+					+large
+						flex: 0 0 45%
+
+					+small
+						flex: 0 0 48%
+
+					+phone
+						flex: 0 0 100%
+
+				&:not(:last-child)
+					margin-bottom: 20px
+
+				&:last-child
+					margin-right: 0
+
+					.item__link
+							font-weight: 400
+
+				&__title
+					@include textReset
+					margin-bottom: 20px
+					font-family: $ff_2
+					font-size: 20px
+					font-weight: 400
+					color: $clr_3
+					text-transform: uppercase
+
+					+phone
+						margin-bottom: 15px
+
+				&__link
+					max-width: max-content
+					font-size: 18px
+					font-weight: 500
+					line-height: 1.1
+					font-variant-numeric: lining-nums tabular-nums
+					transition: color .2s linear
+					
+					&:hover
+						color: $clr_3
+
+	.map
+		position: relative
+		flex: 0 0 58%
+		min-height: 100%
+
+		+small
+			flex: 0 0 100%
+			max-height: 100%
+			min-height: 350px
+
+		&__img
+			position: absolute
+			z-index: -1
+			top: 50%
+			bottom: 50%
+			left: 5vh
+			width: 504px
+			height: 529px
+			background-image: url(../img/contacts/bg-img.svg)
+			background-position: center
+			background-repeat: no-repeat
+			transform: translate(-50%, -50%)
+
+			+small
+				display: none

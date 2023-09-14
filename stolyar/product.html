@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Eмельянцев &amp;&nbsp;ко</title>
+        <meta name="description" content="Eмельянцев &amp;&nbsp;ко" />
+        <meta name="keywords" content="Eмельянцев &amp;&nbsp;ко" />
+        <!-- styles -->
+        <link rel="stylesheet" href="/app/css/libs/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/app/css/main.min.css" />
+        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+    </head>
+
+    <body>
+        <!-- header -->
+        <header class="home-page__header header">
+            <!-- header top -->
+            <div class="header__top header-top">
+                <div class="header-top__container container">
+                    <div class="header-top__content content">
+                        <div class="content__left left">
+                            <a class="left__link link" href="tel:+7 (900) 276-81-86">
+                                <svg class="link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                                </svg>
+                                <span class="link__descr"> +7 (900) 276-81-86 </span>
+                            </a>
+                            <a class="left__link link" href="mailto:Les954@mail.ru">
+                                <svg class="link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="link__descr"> Les954@mail.ru </span>
+                            </a>
+                        </div>
+                        <div class="content__right right">
+                            <a class="right__link link" href="/">
+                                <svg class="link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <span class="link__descr">
+                                    г. Новороссийск, ул. Котовского, 13А
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header bottom -->
+            <div class="header__bottom header-bottom">
+                <div class="header-bottom__container container">
+                    <div class="header-bottom__content content">
+                        <a href="/" class="content__link-logo">
+                            <img
+                                class="content__logo"
+                                src="/app/img/logo.svg"
+                                alt="логотип Eмельянцев &amp;&nbsp;ко"
+                                title="логотип Eмельянцев &amp;&nbsp;ко"
+                            />
+                        </a>
+                        <nav class="content__menu menu">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/">
+                                        <span class="menu__link-item"> Главная </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./main.html">
+                                        <span class="menu__link-item"> О компании </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item parent">
+                                    <a class="menu__link" href="./products.html">
+                                        <span class="menu__link-item"> Продукция </span>
+                                        <svg class="menu__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </a>
+                                    <ul class="menu__list-inner list-inner">
+                                        <li class="menu__item active">
+                                            <a class="list-inner__link" href="/">
+                                                <span class="list-inner__link-item">
+                                                    Продукт 1
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a class="list-inner__link" href="./main.html">
+                                                <span class="list-inner__link-item">
+                                                    Продукт 2
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./contacts.html">
+                                        <span class="menu__link-item"> Контакты </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <button class="header-bottom__btn button">
+                            Заявка на консультацию
+                        </button>
+                        <button aria-label="Open the mobile menu" class="menu__toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- burger menu -->
+            <div class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="menu-item parent">
+                                <a href="./main.html" class="menu-link" target="_blank">
+                                    Продукция
+                                </a>
+                                <span class="arrow-list-mob">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </span>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Первый продукт </a>
+                                    </li>
+                                    <li class="menu-item parent active">
+                                        <a class="menu-link" href="#"> Второй продукт </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Третий продукт </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Четвёртый продукт </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Контакты </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:Les954@mail.ru">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="list-link__descr"> Les954@mail.ru </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+7 (900) 276-81-86">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (900) 276-81-86 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="/">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <span class="list-link__descr">
+                                    г. Новороссийск, ул. Котовского, 13А
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/" aria-label="Заявка на консультацию" data-open="form-callback" aria-label="Раскрыть окно обратной связи" class="button-invert">
+                        Продукция
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- product -->
+            <section class="product">
+                <div class="product__container container">
+                    <div class="product__title-wrapper title-wrapper">
+                        <h1 class="title-wrapper__title header_1">Продукт1</h1>
+                        <button data-open="form-callback" aria-label="Заявка на консультацию" class="title-wrapper__btn button">
+                            Заявка на консультацию
+                        </button>
+                    </div>
+                    
+                    <div class="product__content-top content-top">
+                        <div class="content-top__slider slider">
+                            <div class="content-top__swiper swiper slider-top">
+                                <div class="swiper-wrapper slider-top__wrapper">
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-1.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-2.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-3.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-4.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-5.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-6.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-7.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-8.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-9.jpg"
+                                            class="slider-top__img swiper-img"
+                                        />
+                                    </div>
+                                </div>
+                                <button class="slider-top__arrow arrow arrow_next">
+                                    <svg class="arrow__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <button class="slider-top__arrow arrow arrow_prev">
+                                    <svg class="arrow__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="swiper slider-bottom">
+                                <div class="swiper-wrapper slider-bottom__wrapper">
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-1.jpg"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-2.jpg"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-3.jpg"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-4.jpg"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-5.jpg"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-6.jpg"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-7.jpg"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-8.jpg"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-9.jpg"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-top__descr descr">
+                            <div class="descr__price">
+                                <span class="descr__number"> 120000 </span>
+                                <span class="descr__currency"> руб </span>
+                            </div>
+                            <p>
+                                <strong>Размеры: </strong>3 * 6 м.
+                            </p>
+                            <div class="descr__text text-default">
+                                <p>sadsadsadas</p>
+                                <p>axdsadsadsadas</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor, reprehenderit quia enim laboriosam pariatur quis quo veritatis saepe ipsum illum, molestiae, voluptatem tempore nesciunt iure. Doloribus voluptas minus mollitia!</p>
+                                <a href="/">asdsadsad</a>
+                                <p><strong>sdada</strong></p>
+                                <ul>
+                                    <li>asdsad</li>
+                                    <li>asdsad</li>
+                                    <li>asdsad</li>
+                                    <li>asdsad</li>
+                                    <li>asdsad</li>
+                                </ul>
+                            </div>
+
+                            <ul class="descr__list list">
+                                <li class="list__item">
+                                    <span class="list__point"> Размеры: </span>
+                                    <span class="list__value"> 3 * 6 м. </span>
+                                </li>
+                                <li class="list__item">
+                                    <span class="list__point"> Стены: </span>
+                                    <span class="list__value"> профилированный брус 44 мм </span>
+                                </li>
+                                <li class="list__item">
+                                    <span class="list__point"> Двери: </span>
+                                    <span class="list__value"> 0,8х1,75 м. </span>
+                                </li>
+                                <li class="list__item">
+                                    <span class="list__point"> Окна: </span>
+                                    <span class="list__value"> 0,7x1,5 м </span>
+                                </li>
+                                <li class="list__item">
+                                    <span class="list__point"> Обработка антисептиком: </span>
+                                    <span class="list__value">
+                                        нижний брус обработаны антисептиком
+                                    </span>
+                                </li>
+                                <li class="list__item">
+                                    <span class="list__point"> Кровля: </span>
+                                    <span class="list__value">
+                                        рулонная с гарантией от протекания 10 лет
+                                    </span>
+                                </li>
+                                <li class="list__item">
+                                    <strong> Фундамент: </strong>
+                                    <span class="list__value"> рассчитывается индивидуально </span>
+                                </li>
+                                <li class="list__item">
+                                    <span class="list__point"> Монтаж: </span>
+                                    <span class="list__value"> рассчитывается индивидуально </span>
+                                </li>
+                                <li class="list__item">
+                                    <span class="list__point"> Полы: </span>
+                                    <span class="list__value"> шпунтованная доска 25 мм. </span>
+                                </li>
+                            </ul>
+                            <button data-open="form-callback" aria-label="Заявка на консультацию" class="descr__btn button">
+                                Оставить заявку
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product__content-bottom content-bottom">
+                        <h2 class="content-bottom__title header_2">Описание</h2>
+                        <div class="content-bottom__text text-default">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ad
+                                possimus quaerat animi commodi hic assumenda totam dolorem magni.
+                                Eligendi, repellat. Autem, voluptatum aut. Commodi numquam deleniti
+                                odio officiis facilis!
+                                <ul>
+                                    <li>
+                                        ladssadsadasd
+                                    </li>
+                                    <li>
+                                        ladssadsadasd
+                                    </li>
+                                    <li>
+                                        ladssadsadasd
+                                    </li>
+                                    <li>
+                                        ladssadsadasd
+                                    </li>
+                                    <li>
+                                        ladssadsadasd
+                                    </li>
+
+                                    <li>
+                                        ladssadsadasd
+                                    </li>
+                                    <li>
+                                        ladssadsadasd
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <button data-open="form-callback" aria-label="Заявка на консультацию" class="content-bottom__btn button">
+                            Оставить заявку
+                        </button>
+                    </div>
+                    <div class="see-also__swiper swiper see-also-slider">
+                        <h2 class="header_2">Смотреть ещё</h2>
+                        <div class="swiper-wrapper see-also-slider__wrapper">
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+
+                            </a>
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide see-also-slider__slide">
+                                <div class="see-also-slider__img-wrapp">
+                                    <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    class="see-also-slider__img swiper-img"
+                                    />
+                                </div>
+                                <div class="see-also-slider__title-wrppaer">
+                                    <h3 class="see-also-slider__title">
+                                        Какой-то товар
+                                    </h3>
+                                    <p class="see-also-slider__price">
+                                        20 000 руб.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="see-also-slider__arrow-wrap arrow-wrap">
+                            <button class="arrow-wrap__arrow arrow arrow_prev">
+                                <svg class="arrow__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="arrow-wrap__arrow arrow arrow_next">
+                                <svg class="arrow__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <section class="main-section__footer footer">
+            <div class="footer__container container">
+                <ul class="footer__list">
+                    <li class="footer__item">Все права защищены &copy;&nbsp;2023</li>
+                    <li class="footer__item">
+                        <a href="/" class="footer__link"> Пользовательское соглашение </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="https://web2.agency/">
+                            <svg class="footer__svg">
+                                <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                            </svg>
+                            <span class="footer__link-item"> Создание сайтов </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- overlay -->
+        <article class="main-section__overlay overlay">
+            <div class="overlay__wrapper">
+                <div class="overlay__bg"></div>
+                <div class="overlay__content">
+                    <span
+                        aria-label="Закрыть окно обратной связи"
+                        class="overlay__close"
+                    ></span>
+                    <!-- form-callback -->
+                    <form action="/" method="post" class="form form-callback novalid">
+                        <input type="hidden" name="count" value="0" />
+                        <h3 class="header_2">Связаться с нами</h3>
+                        <div class="form-item">
+                            <input type="text" name="name" placeholder="Имя" />
+                        </div>
+                        <div class="form-item">
+                            <input type="tel" name="phone" placeholder="Телефон" />
+                        </div>
+                        <button class="form-item__button button-invert">Отправить</button>
+                        <label class="form-note">
+                            <input type="checkbox" checked />
+                            <div class="custom-checkbox"></div>
+                            <div class="form-note-text">
+                                Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете
+                                условия Соглашения на&nbsp;обработку персональных данных
+                            </div>
+                        </label>
+                    </form>
+                    <!-- form-success -->
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- scroll-top -->
+        <button class="scroll-top" aria-label="Top of the page">
+            <svg>
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- scripts -->
+        <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+        <script src="/app/js/libs/lightgallery-all.min.js"></script>
+        <script src="/app/js/libs/swiper-bundle.min.js"></script>
+        <script src="/app/js/libs/functions.js"></script>
+        <script src="/app/js/main.min.js"></script>
+        <!-- <script src="/app/js/main.js"></script> -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              document.querySelector("body").classList.add("loading");
+            });
+        </script>
+    </body>
+</html>

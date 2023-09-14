@@ -1,0 +1,33 @@
+.form-success
+	display: none
+	padding: 50px 40px
+	width: 534px
+	background-color: $clr_3
+	font-family: $ff_1
+	text-align: center
+	font-weight: 600
+	font-size: 50px
+	color: $clr_2
+	border-radius: 8px
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2)
+
+	&.active
+		display: block
+
+	+small
+		padding: 40px 16px
+		width: 100%
+		font-size: 18px
+
+	.form-success__descr
+		@include textReset
+		margin-bottom: 20px
+		color: $clr_5
+		+phone
+			font-size: 30px
+
+	.form-success__descr.last
+		margin: 0
+		font-size: 24px
+		color: $clr_2
+		

@@ -1,0 +1,136 @@
+.hero
+  position: relative
+  padding-top: 114px
+  padding-bottom: 270px
+  min-height: 719px
+  color: $color__1
+  background-image: url(../img/hero/bg-img.jpg)
+  background-color: $color__3
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+  +small
+    padding-top: 80px
+    padding-bottom: 160px
+
+  +phone
+    padding-bottom: 80px
+    min-height: 35vh
+
+  .content
+    display: flex
+    flex-direction: column
+    max-width: 785px
+
+    +phone
+      margin-bottom: 30px
+    
+    &__title
+      color: $color__1
+
+    .list
+      margin-bottom: 33px
+      padding-left: 35px
+      list-style: initial
+      font-size: 24px
+      font-weight: 400
+
+      +small
+        font-size: 18px
+
+      +phone
+        font-size: 16px
+
+      &__item
+        &:not(:last-child)
+          margin-bottom: 10px
+
+  .feedback
+    position: absolute
+    bottom: -25%
+    left: 50%
+    z-index: 10
+    transform: translateX(-50%)
+    max-width: 1360px
+    width: 100%
+    padding: 50px 115px
+    background-image: url(../img/hero/bg-form-img.png)
+    background-color: $color__3
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    border-radius: 20px
+    box-shadow: 0px 50px 100px 0px rgba(19, 62, 19, 0.30)
+
+    +small
+      bottom: -5%
+      padding: 50px
+
+    +phone
+      position: static
+      padding: 30px
+      transform: none
+
+    &__title
+      margin-bottom: 10px
+      max-width: 620px
+      color: $color__1
+
+    &__descr
+      @include textReset
+      margin-bottom: 30px
+      font-size: 16px
+
+      +phone
+        margin-bottom: 15px
+
+    &__link
+      font-weight: 500
+      transition: color .2s linear
+
+      &:hover
+        color: $color__4
+
+    .form
+
+      .list
+        display: flex
+        margin-bottom: 10px
+
+        +phone
+          flex-direction: column
+
+        &__item
+
+          &_name
+            max-width: 235px
+            width: 100%
+
+            +phone
+              max-width: 100%
+
+          &_phone
+            max-width: 274px
+            width: 100%
+
+            +phone
+              max-width: 100%
+
+          &__input
+            width: 100%
+            
+          &:not(:last-child)
+            margin-right: 20px
+
+            +phone
+              margin-right: 0
+              margin-bottom: 15px
+
+      &__descr
+        @include textReset
+        font-size: 10px
+      
+
+
+  

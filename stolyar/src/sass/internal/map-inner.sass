@@ -1,0 +1,52 @@
+.map-inner
+  margin-bottom: 150px
+
+  +small
+    margin-bottom: 80px
+
+  .content
+    display: flex
+    width: 100%
+
+    +small
+      flex-wrap: wrap
+
+    &__text
+      flex: 1 0 30%
+      margin-right: 20px
+
+      +small
+        flex: 1 0 100%
+        margin-right: 0
+        margin-bottom: 20px
+
+      p
+        @include textReset
+        font-size: 18px
+
+        +phone
+          font-size: 16px
+
+        &:not(:last-child)
+          margin-bottom: 15px
+
+      a
+        // color: $color__3
+        border-bottom: 1px solid $color__2
+        transition: color .2s linear, border-color .2s linear
+
+        &:hover
+          border-color: $color__0
+          color: $color__4
+          
+
+    &__map
+      flex: 1 0 70%
+      min-height: 500px
+      border-radius: 20px
+      overflow: hidden
+      box-shadow: 0px 50px 100px 0px rgba(19, 62, 19, 0.30)
+
+      +small
+        flex: 1 0 100%
+        min-height: 400px

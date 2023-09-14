@@ -1,0 +1,153 @@
+.catalog
+  padding-top: 30px
+  padding-bottom: 120px
+
+  &__title
+    margin-bottom: 50px
+
+    +small
+      font-size: 25px
+      margin-bottom: 20px
+
+  &__wrapper
+    display: flex
+
+    +small
+      justify-content: center
+      flex-wrap: wrap
+
+  &__filter
+    // position: relative
+    margin-right: 50px
+    width: 20%
+
+    +small
+      margin-right: 0
+      margin-bottom: 20px
+      border-radius: 25px
+      color: $color__1
+      background: $color__4
+      overflow: hidden
+      width: 100%
+
+  &__list
+
+    +small
+      display: none
+      padding: 0 14px 25px 14px
+
+  &__descr
+    padding: 0
+    line-height: 1
+    font-size: 24px
+    font-weight: 600
+
+  &__list-title
+    position: relative
+    margin-bottom: 20px
+    text-decoration: none
+    pointer-events: none
+
+    +small
+      margin-bottom: 0
+      padding: 20px
+      min-height: 59px
+      text-decoration: transparent
+      pointer-events: initial
+  
+  &__descr
+    +phone
+      font-size: 19px
+
+  &__svg
+    position: absolute
+    top: 50%
+    right: 20px
+    display: none
+    width: 30px
+    height: 30px
+    fill: $color__1
+    transform: translateY(-50%)
+    transition: transform .2s linear
+
+    +small
+      display: block
+      width: 21px
+      height: 21px
+
+  &__item
+    padding: 12px 12px 12px 0
+    font-size: 18px
+    border-bottom: 1px solid $color__5
+    transition: color .2s linear
+
+    &:hover
+      color: $color__5
+
+    +small
+      border-color: $color__1
+
+  .goods
+    display: flex
+    flex-wrap: wrap
+    width: 80%
+    margin: -15px
+
+    +small
+      width: 100%
+
+    &__item
+      width: 33.33%
+      padding: 15px
+
+      +medium
+        width: 50%
+
+      +phone
+        padding: 15px 0
+        width: 100%
+
+      &:hover
+        .goods__img
+          transform: scale(1.1)
+
+        .goods__descr
+          color: $color__5
+
+    &__descr
+      font-weight: 700
+      font-size: 16px
+      line-height: 1.2
+      text-transform: uppercase
+      transition: color .4s linear
+
+
+    &__img-wrapper
+      margin-bottom: 14px
+      border: 1px solid $color__5
+      border-radius: 10px
+      // height: 100%
+      width: 100%
+      height: 330px
+      // min-height: 330px
+      overflow: hidden
+
+      +small
+        height: 60vh
+
+    &__img
+      object-fit: cover
+      width: 100%
+      height: 100%
+      // transform: scale(1)
+      transition: transform .8s linear
+
+      +small
+        height: 60vh
+
+    &__descr
+      padding-top: 14px
+
+.catalog__list-title.active
+  .catalog__svg
+    transform: translateY(-50%) rotate(180deg)

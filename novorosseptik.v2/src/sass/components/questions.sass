@@ -1,0 +1,147 @@
+.questions
+  margin-bottom: 50px
+  color: $color__1
+
+  +small
+    margin-bottom: 25px
+
+  &__title
+    @include titleReset
+    margin-bottom: 25px
+
+  &__descr
+    @include textReset
+    margin-right: 141px
+    font-weight: 400
+    font-size: 18px
+    line-height: 155%
+    color: $color__2
+    width: 27%
+
+    +phone
+      margin-right: 0
+      margin-bottom: 35px
+      width: 100%
+      font-size: 16px
+
+    +small
+      margin-right: 25px
+
+
+.faq
+  width: 100%
+
+  &__content
+    // padding: 25px 35px
+    width: 100%
+
+  &__number
+    display: flex
+    justify-content: center
+    padding-top: 25px
+    width: 80px
+    background: $color__1
+    border: 2px solid $color__3
+    border-radius: 10px
+
+    +small
+      padding-top: 15px
+
+  &__number-item
+    font-weight: 700
+    font-size: 24px
+    line-height: 1.2
+    color: transparent
+    background-clip: text
+    background-image: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
+
+
+  &__list
+    // width: 70%
+
+  &__item
+    display: flex
+    margin-top: -1px
+    margin-bottom: -1px
+    width: 100%
+    border-radius: 10px
+    background: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
+
+    &:not(:last-child)
+        margin-bottom: 20px
+  
+  &__tab
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-align: left
+    padding: 25px 35px
+    // padding: 22px 22px 22px 0
+    width: 100%
+    // line-height: 1.4
+    
+    &.active 
+      .faq__tab-icon
+        transform: rotate(270deg)
+        // transform: rotate(-44deg)
+
+  &__tab-text
+    font-family: $font-family__1
+    padding-right: 6px
+    font-weight: 700
+    font-size: 24px
+    line-height: 1.2
+    color: $color__1
+
+    +phone
+      font-size: 16px
+      
+  &__tab-icon
+    display: inline-flex
+    flex-shrink: 0
+    width: 30px
+    height: 30px
+    transform: rotate(180deg)
+    transition: transform .3s ease-in-out
+    svg
+      // width: 30px
+      // height: 30px
+      fill: $color__1
+
+    +phone
+      width: 23px
+      height: 30px
+
+  &__spoller-description
+    padding: 10px 36px 22px 35px
+      
+  &__spoller
+    display: none
+
+  +small
+    &__list
+      width: 100%
+
+    &__tab
+      padding: 16px 22px 16px 22px
+
+    &__spoller-description
+      padding: 0px 36px 25px 22px
+
+      +phone
+        font-size: 14px
+
+.spoller-content
+  max-width: 605px
+
+  p
+    @include textReset
+    font-weight: 600
+    font-size: 18px
+    line-height: 1.2
+
+    &:not(:last-child)
+        margin-bottom: 10px
+
+    +phone
+      font-size: 14px

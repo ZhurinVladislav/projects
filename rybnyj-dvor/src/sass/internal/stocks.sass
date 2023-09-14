@@ -1,0 +1,83 @@
+.stocks
+	padding-bottom: 100px
+
+	+small
+		padding-bottom: 80px
+
+	&__title
+		margin-bottom: 20px
+		color: $clr_5
+
+	.content
+		display: flex
+		justify-content: space-between
+		max-width: 85%
+
+		&:not(:last-child)
+			margin-bottom: 80px
+
+			+small
+				margin-bottom: 40px
+
+		+small
+			max-width: 100%
+
+		+phone
+			flex-direction: column-reverse
+
+		&__left
+			flex: 0 0 50%
+			margin-right: 40px
+
+			+small
+				flex: 0 0 40%
+
+			+phone
+				flex: 0 0 100%
+				margin-right: 0
+
+		&__title
+			@include textReset
+			font-family: $ff_1
+			margin-bottom: 20px
+			font-weight: 700
+			font-size: 35px
+			line-height: 1.2
+			color: $clr_5
+
+			+medium
+				font-size: 34px
+
+			+small
+				margin-bottom: 25px
+				font-size: 30px
+
+			+phone
+				margin-bottom: 15px
+				font-size: 26px
+
+		.text-default
+			color: $clr_2
+
+			p
+				@include textReset
+
+				&:not(:last-child)
+					margin-bottom: 15px
+
+		&__right
+			flex: 0 0 30%
+			min-height: 400px
+
+			+small
+				flex: 0 0 50%
+
+			+phone
+				flex: 0 0 100%
+				margin-bottom: 20px
+
+			&__right-img
+				max-width: 100%
+				width: 100%
+				min-height: 100%
+				object-fit: cover

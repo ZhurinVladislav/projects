@@ -1,0 +1,431 @@
+.header
+  position: absolute
+  z-index: 33
+  background: transparent
+  color: $color__1
+
+  .header-svg
+    flex-shrink: 0
+    width: 20px
+    height: 20px
+
+.header-top
+  display: flex
+  padding: 38px 0 47px 0
+
+  &__content
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  .left-content
+    display: flex
+    margin-right: auto
+
+    +large
+      flex-wrap: wrap
+      margin-right: 25px
+
+    &__logo
+      display: flex
+      align-items: center
+      margin-right: 25px
+
+    &__logo-img
+      max-width: 206px
+      min-height: 38px
+
+    &__address
+      display: flex
+      align-items: center
+      max-width: 231px
+      
+      +small
+        display: none
+
+    &__mark
+      margin-right: 10px
+
+    &__descr
+      @include textReset
+      font-weight: 400
+      font-size: 16px
+      line-height: 120%
+
+  .middle-content
+    display: flex
+    margin: 0 auto
+
+    +large
+      flex-wrap: wrap
+      margin-right: 20px
+    
+    +small
+      display: none
+
+    &__list
+      display: flex
+
+    &__list-item:not(:last-child)
+      margin-right: 25px
+
+    &__list-item:last-child
+      margin-right: 10px
+
+    &__link-mail
+      font-weight: 400
+      font-size: 16px
+      line-height: 120%
+
+
+  .right-content
+    display: flex
+    align-items: center
+    
+    +small
+      display: none
+
+    &__list
+      display: flex
+      flex-direction: column
+
+      margin-right: 25px
+      min-width: 156px
+
+      +large
+        display: none
+      
+
+    &__list-item
+      display: flex
+      font-weight: 400
+      font-size: 16px
+      line-height: 120%
+
+    &__list-item:not(:last-child)
+      margin-bottom: 5px
+
+    &__svg
+      margin-right: 10px
+
+  &__list-link
+    display: flex
+    flex-direction: row
+
+  &__link-mail
+    color: rgba(255, 255, 255, 0.6)
+    margin-right: 23px
+
+  &__list
+    display: flex
+
+  
+  &__button
+    width: 200px
+    border-color: rgba(255, 255, 255, 0.6)
+    color: rgba(255, 255, 255, 0.6)
+
+  .menu__toggle
+    display: none
+  
+  +small
+    &__list-link
+      display: none
+      
+    &__list-feedback
+      display: none
+
+    .menu__toggle
+      // margin-left: 30px
+      margin-left: auto
+      position: relative
+      z-index: 30
+      display: block
+      width: 22px
+      height: 14px
+      cursor: pointer
+
+      span
+        display: block
+        width: 100%
+        height: 2px
+        border-radius: 1px
+        background: #fff
+        position: absolute
+        transition: all 0.3s
+        transform: rotate(0) translate(0, 0)
+        &:nth-child(1)
+          top: 0
+          left: 0
+        &:nth-child(2)
+          top: 50%
+          left: 0
+          transform: translateY(-50%)
+          opacity: 1
+        &:nth-child(3)
+          bottom: 0
+          left: 0
+
+      &.active
+        span
+          &:nth-child(1)
+            transform: rotate(45deg) translate(-50%, -50%)
+            transform-origin: top left
+            left: 50%
+            top: 50%
+          &:nth-child(2)
+            left: 100%
+            transform: translateY(0)
+            opacity: 0
+          &:nth-child(3)
+            transform: rotate(-45deg) translate(-50%, 50%)
+            transform-origin: bottom left
+            left: 50%
+            bottom: 50%
+        
+.header-bottom
+  margin-bottom: 79px
+  width: 100%
+
+  &__container
+    display: flex
+    align-items: center
+
+  &__link-item
+    position: relative
+
+  .menu
+    display: flex
+
+    &__list
+      flex-wrap: wrap
+
+    &__link-item
+      position: relative
+      z-index: 1
+      color: $color__1
+
+    &__item
+      position: relative
+      z-index: 6
+      padding: 15px 20px
+      text-align: center
+      min-width: 210px
+      min-height: 49px
+      background: rgba(255, 255, 255, 0.3)
+      backdrop-filter: blur(5px)
+      border-radius: 10px
+      cursor: pointer
+      margin-bottom: 20px
+
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        color: #fff
+        text-decoration: none
+        background: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
+        // box-shadow: 0 2px 10px rgba(213, 80, 208, 0.9)
+        border-radius: 10px
+        opacity: 0
+        // transition: opacity .3s
+
+      &:hover:after
+        opacity: 1
+        color: #fff
+
+    &__list
+      display: flex
+      > .menu__item
+          // position: relative
+          margin-right: 20px
+
+          +medium
+            margin-right: 36px
+
+          &:last-child
+            margin-right: 0
+
+          &:hover
+              > a
+                color: $color__3
+
+              ul
+                  display: block
+
+              .arrow
+                transition: transform 0.3s
+                transform: rotate(180deg)
+
+              .arrow
+                svg
+                  fill: $color__3
+
+          &.active
+              &__link
+                color: $color__3
+                // &::after
+                //     opacity: 1
+                  
+          > .menu__link-item
+              position: relative
+              z-index: 1
+              display: block
+              font-weight: 700
+              font-size: 16px
+              line-height: 22px
+              padding: 0 4px
+              color: #fff
+              text-transform: uppercase
+              transition: all 0.3s
+
+              &::after
+                content: ""
+                display: block
+                position: absolute
+                z-index: -1
+                left: 0
+                bottom: 2px
+                width: 100%
+                height: 2px
+                background: $color__3
+                opacity: 0
+                transition: all 0.3s
+
+      .arrow
+        position: absolute
+        display: inline-flex
+        width: 16px
+        height: 10px
+        // top: 29%
+        // right: -17px
+        top: 40%
+        // transform: rotate(180deg)
+        transition: all 0.3s
+        svg
+          fill: #fff
+
+      .list-inner
+          position: absolute
+          // top: 100%
+          top: 73%
+          left: 0
+          z-index: 0
+          display: none
+          padding: 30px 20px 25px
+          width: 210px
+          background: linear-gradient(110.48deg, #63C018 0%, #068B30 100%)
+          border-radius: 10px
+          font-size: 18px
+          > &__item
+              padding-top: 10px
+              padding-bottom: 10px
+              margin-bottom: 12px
+              text-align: start
+
+              &:last-child
+                margin-bottom: 0
+
+              > a
+                  //padding: 0 20px
+                  font-weight: 600
+                  font-size: 18px
+                  line-height: 120%
+                  &:hover
+                      color: $color__2
+                      border-bottom: 1px solid $color__2
+
+              &.active
+                  a
+                    color: $color__2
+                    border-bottom: 1px solid $color__2
+
+          > &__item:not(:last-child)
+              border-radius: 2px
+              border-bottom: 2px solid $color__1
+
+      +large  
+          // .menu-item
+          //     margin-right: 60px
+
+      +small
+          display: none
+
+.menu-mobile
+  height: 100%
+  .menu-list > .menu-item
+      position: relative
+      margin-right: 63px
+
+      +medium
+        margin-right: 36px
+
+      &:last-child
+        margin-right: 0
+
+      &:hover
+          > a
+            color: $color__3
+
+          ul
+              display: block
+
+          .arrow
+            transform: rotate(180deg)
+
+          .arrow
+            svg
+              fill: $color__3
+
+      &.active
+          a
+            color: $color__3
+            // &::after
+            //     opacity: 1
+                
+      > a
+          position: relative
+          z-index: 1
+          display: block
+          font-weight: 700
+          font-size: 16px
+          line-height: 22px
+          padding: 0 4px
+          color: #fff
+          text-transform: uppercase
+          transition: all 0.3s
+
+          &::after
+              content: ""
+              display: block
+              position: absolute
+              z-index: -1
+              left: 0
+              bottom: 2px
+              width: 100%
+              height: 2px
+              background: $color__3
+              opacity: 0
+              transition: all 0.3s
+
+          .arrow
+              display: inline-flex
+              width: 11px
+              height: 11px
+              top: 29%
+              left: 69px
+              // transform: rotate(180deg)
+              transition: all 0.3s
+              svg
+                  fill: #fff
+
+  // .menu-link
+  //   &:hover
+  //     > ul
+  //       display: block
+
+  //     .arrow
+  //       transform: rotate(180deg)

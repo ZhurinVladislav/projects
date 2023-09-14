@@ -1,0 +1,99 @@
+.portfolio
+  padding-top: 40px
+  padding-bottom: 120px
+
+  +phone
+    padding-bottom: 80px
+
+  &__title
+    margin-bottom: 30px
+
+    +phone
+      margin-bottom: 15px
+
+  .card
+    display: flex
+    flex-wrap: wrap
+    margin: -15px
+
+    &__item-wrapper
+      width: 33%
+      padding: 15px
+
+      +small
+        width: 50%
+
+      +phone
+        width: 100%
+
+    &__item
+      border-radius: 10px
+      border: 2px solid $color__5
+
+    &__slider-wrapper
+      position: relative
+
+      .slider
+
+        &__slide
+          width: 100%
+          height: 260px
+          object-fit: cover
+          border-radius: 7px 7px 0 0
+
+          +small
+            height: 39vh
+
+    .arrow
+      top: 50%
+      border: 2px solid transparent
+      background-color: rgba(255, 255, 255, 0.6)
+      backdrop-filter: blur(5px)
+      // transform: translateY(-50%)
+      transform: translateY(-50%)
+      transition: fill .2s ease-in-out, background-color .2s ease-in-out
+
+      +phone
+        padding: 7px
+        width: 39px
+        height: 39px
+
+      &:hover
+        fill: $color__1
+        background-color: rgba($color__5, .6)
+
+    .arrow.left
+      left: 5px
+
+    .arrow.right
+      transform: translateY(-50%) rotate(180deg) 
+      right: 5px
+
+    &__content
+      padding: 20px
+
+    &__title
+      @include textReset
+      margin-bottom: 20px
+
+    &__list
+      margin-bottom: 20px
+
+    &__list-item
+      display: flex
+
+      &:not(:last-child)
+        margin-bottom: 10px
+
+    &__text
+      padding-right: 10px
+      width: 35%
+      font-weight: 600
+
+    &__value
+      width: 65%
+
+    &__btn
+      width: 100%
+
+  

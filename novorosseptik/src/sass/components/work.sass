@@ -1,0 +1,99 @@
+.work
+  overflow: hidden
+  margin-bottom: 121px
+
+  +small
+    margin-bottom: 60px
+
+  &__title
+    @include titleReset
+    margin-bottom: 56px
+
+    +phone
+      margin-bottom: 25px
+
+  &__content
+    display: flex
+
+
+  &__block-left
+    margin-right: 91px
+    max-width: 70%
+
+    +medium
+      margin-right: 0
+
+    +small
+      max-width: 100%
+
+  &__list
+    @include listReset
+    display: flex
+    flex-wrap: wrap
+    margin: -23px
+
+    +phone
+      margin: 0
+
+  &__item
+    position: relative
+    display: flex
+    padding: 22px
+    width: 50%
+
+    +phone
+      padding: 14px
+      width: 100%
+
+  &__item-number
+    margin-right: 68px
+    color: transparent
+    font-family: $font-family__1
+    font-weight: 400
+    font-size: 36px
+    line-height: 138.5%
+    letter-spacing: 0.065em
+    -webkit-text-stroke: 2px $color__3
+
+    +phone
+      font-size: 32px
+
+  &__line
+    position: absolute
+    top: 42px
+    left: 80px
+    background-color: $color__3
+    width: 36px
+    height: 1px
+
+    +phone
+      top: 31px
+      left: 69px
+
+  &__item-title
+    @include titleReset
+    margin-bottom: 13px
+    font-weight: 700
+    font-size: 24px
+    line-height: 124.5%
+
+    +phone
+      font-size: 21px
+  
+  &__item-descr
+    @include textReset
+    font-weight: 400
+    font-size: 18px
+    line-height: 138.5%
+
+    +phone
+      font-size: 15px
+
+  &__img
+    max-width: 30%
+
+    +small
+      display: none
+
+  &__img-item
+    width: 100%

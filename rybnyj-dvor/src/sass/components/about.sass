@@ -1,0 +1,154 @@
+.about
+	margin-bottom: 110px
+
+	+phone
+		margin-bottom: 80px
+
+	.content
+		display: flex
+		justify-content: space-between
+		margin-bottom: 50px
+
+		+phone
+			flex-direction: column
+			margin-bottom: 25px
+
+		.content-left
+			flex: 0 0 47%
+			margin-right: 20px
+			padding-left: 127px
+
+			&__title
+				padding-left: 0
+
+			+small
+				padding: 0
+
+			+phone
+				margin-right: 0
+				margin-bottom: 15px
+				flex: 0 0 100%
+
+		.content-right
+			flex: 0 0 40%
+			padding-top: 20px
+			padding-right: 80px
+			
+			+small
+				padding: 0
+
+			+phone
+				flex: 0 0 100%
+
+		.text
+			h3
+				@include textReset
+				margin-bottom: 35px
+				max-width: 255px
+				font-weight: 500
+				line-height: 1.1
+				font-size: 20px
+
+				+phone
+					margin-bottom: 15px
+					font-size: 18px
+			
+			p
+				@include textReset
+				font-size: 18px
+				font-weight: 400
+				line-height: 1.3
+
+				+phone
+					font-size: 16px
+				
+				&:not(:last-child)
+					margin-bottom: 20px
+
+					+phone
+						margin-bottom: 15px
+
+	.link-wrapper
+		margin: 0 auto
+		max-width: 1770px
+		min-height: 500px
+		background-image: url(../img/about/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		border-radius: 20px
+
+		+phone
+			min-height: 300px
+
+		&__content
+			display: flex
+			align-items: flex-end
+			min-height: 500px
+			padding-bottom: 60px
+			padding-left: 144px
+
+			+phone
+				justify-content: center
+				align-items: center
+				min-height: 300px
+				padding-left: 0
+
+		&__item
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			z-index: 10
+			margin-top: auto
+			max-width: 176px
+			width: 100%
+			min-height: 176px
+			border-radius: 50%
+			border: 1px solid $clr_1
+			transition: background-color .2s linear, transform .2s linear, border-color .2s linear
+
+			&:hover
+				background-color: #F0421C
+				transform: scale(1.1)
+				border-color: #F0421C
+
+				.link-wrapper__icon
+					transform: scale(1.2)
+
+				&::after
+					top: 0%
+					left: 0%
+					width: 100%
+					height: 100%
+					opacity: 0
+
+			&::after
+				content: ''
+				position: absolute
+				top: -18%
+				left: -18%
+				z-index: -10
+				width: calc( 100% +  60px)
+				height: calc( 100% +  60px)
+				border-radius: 50%
+				background-image: url(../img/about/icon-1.svg)
+				background-position: center
+				background-size: cover
+				background-repeat: no-repeat
+				animation: 20s linear 0s normal none infinite running rot
+				transition: all .2s linear
+
+					
+		&__icon
+			width: 44px
+			height: 44px
+			fill: $clr_1
+			transition: transform .2s linear
+
+			@keyframes rot
+				0% 
+					transform: rotate(0deg)
+				100% 
+					transform: rotate(360deg)
+		

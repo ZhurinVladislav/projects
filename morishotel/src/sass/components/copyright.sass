@@ -1,0 +1,66 @@
+.copyright
+  min-height: 55px
+  font-weight: 500
+  font-size: 12px
+  line-height: 1.5
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: $color__4
+
+  &__container
+    padding-top: 20px
+    padding-bottom: 20px
+
+    +phone
+      padding-top: 10px
+      padding-bottom: 10px
+
+  &:last-child
+    margin-left: auto
+
+  &__list
+    display: flex
+    text-align: center
+
+    +small
+      justify-content: center
+      flex-wrap: wrap
+
+  &__item
+
+    +small
+      margin-bottom: 10px
+      width: 100%
+
+    &:nth-child(2)
+      margin: 0 auto
+      +small
+        margin-bottom: 10px
+      
+    &:last-child
+
+      +small
+        margin-bottom: 0
+
+      .copyright__link
+        display: flex
+        align-items: center
+        justify-content: center
+
+  &__link
+    transition: color .2s linear
+    
+    &:hover
+      color: $color__2
+      .copyright__svg
+        fill: $color__2
+
+    +phone
+      font-size: 12px
+
+  &__svg
+    margin-right: 10px
+    width: 46px
+    height: 21px
+    fill: $color__4
+    transition: fill .2s linear

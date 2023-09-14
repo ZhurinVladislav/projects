@@ -1,0 +1,90 @@
+.overlay-iframe
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 100
+  display: none
+  padding-right: 0 !important
+  opacity: 1
+  overflow-y: auto
+  transition: all .4s !important
+
+  &__content 
+    position: relative
+    z-index: 21
+    padding: 60px 0
+    width: 100%
+    max-width: 1366px
+    min-height: 600px
+    transform: scale(1)
+    transition: transform .4s
+
+    iframe
+      min-height: 600px
+
+  &__img
+    max-width: 100%
+    min-height: 100%
+
+  .form
+    width: 100%
+
+  &.active
+    display: block
+    opacity: 1
+
+  .overlay-iframe__wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    min-height: 100%
+        
+  .overlay-iframe__bg 
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 20
+    background: rgba($color__1, 0.8)
+    backdrop-filter: blur(10px)
+
+  .overlay-iframe__close
+    position: absolute
+    z-index: 3
+    display: block
+    top: 59px
+    right: 0px
+    width: 52px
+    height: 52px
+    cursor: pointer
+    background-color: $color__3
+    transition: all 0.4s
+
+    &:before,&:after 
+      content: ""
+      position: absolute
+      width: 20px
+      height: 2px
+      background-color: $color__1
+      top: 25px
+      left: 16px
+      transition: background-color .2s ease-in-out
+
+    &:hover
+      &:before,&:after
+        background-color: rgba($color__1, .8)
+
+    &:before 
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
+
+html.overlay-iframe-active
+  overflow-y: hidden !important

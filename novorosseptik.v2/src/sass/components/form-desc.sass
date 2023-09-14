@@ -1,0 +1,91 @@
+.form
+  // display: flex
+  // flex-direction: column
+  // width: 60%
+
+  +small
+    width: 100%
+
+  &__item-title
+    margin-bottom: 9px
+    font-weight: 400
+    font-size: 14px
+    line-height: 161.5%
+
+
+  &__content-top
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+
+  &__item-inputs
+    display: flex
+    flex-direction: row
+    margin-bottom: 40px
+
+    +small
+      flex-wrap: wrap
+      margin-bottom: 20px
+
+  &__item-input
+    width: 50%
+
+    +small
+      width: 100%
+    
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      +small
+        margin-bottom: 20px
+        margin-right: 0
+
+    input
+      width: 100%
+  
+  &__content-bottom
+    display: flex
+
+    +medium
+      flex-wrap: wrap-reverse
+
+    .button-invert
+      max-width: 280px
+      width: 50%
+      background-color: $color__2
+      color: $color__3
+      border: 1px solid transparent
+
+      +medium
+        width: 100%
+        margin-bottom: 14px
+
+      +phone
+        margin: 0 auto
+        margin-bottom: 14px
+
+      &:hover
+        background-color: transparent
+        border-color: $color__2
+        color: $color__2
+
+  &__descr
+    @include textReset
+    margin: auto 0
+    margin-right: 43px
+    width: 60%
+    color: rgba($color__2, 0.5)
+
+    +medium
+      margin: 0
+      width: 100%
+
+    a
+      text-decoration: underline
+
+      &:hover
+        text-decoration: none
+        color: $color__2
+
+    

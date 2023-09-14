@@ -1,0 +1,78 @@
+.menu-mobile
+  display: none
+  height: 100%
+
+  +max(1148px)
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    overflow-x: hidden
+    overflow-y: auto
+    z-index: 20
+    padding: 72px 20px 0 20px
+    background: $color__4
+    transform: translate3d(10%,10%,0)
+    transition: transform .4s,opacity .3s
+    will-change: transform
+    opacity: 0
+
+    +xs
+      padding: 72px 10px 0 10px
+    
+    &.display
+      display: block
+
+    &.active
+      transform: translate3d(0,0,0)
+      opacity: 1
+
+  .list-mob
+    margin-bottom: 30px
+    
+    &__item:not(:last-child)
+      margin-bottom: 20px
+
+    &__link
+      color: $color__2
+      font-weight: 400
+      font-size: 20px
+      line-height: 1.2
+      text-transform: uppercase
+
+      &:active
+        color: $color__3
+
+  .list-svg
+    display: flex
+    margin-bottom: 20px
+
+    &__item:not(:last-child)
+      margin-right: 30px
+
+    &__svg
+      width: 30px
+      height: 30px
+      fill: $color__2
+
+  .list-phone
+    margin-bottom: 25px
+    color: $color__2
+    font-weight: 400
+    font-size: 20px
+    line-height: 1.2
+
+    &__item:not(:last-child)
+      margin-bottom: 15px
+
+  .menu
+
+    &__address
+      color: $color__2
+      font-weight: 400
+      font-size: 20px
+      line-height: 1.2
+
+
+
+

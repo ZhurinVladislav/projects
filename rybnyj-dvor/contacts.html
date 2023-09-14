@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Рыбный двор Новороссийск</title>
+        <meta name="description" content="Рыбный двор Новороссийск" />
+        <meta name="keywords" content="Рыбный двор Новороссийск" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="/app/css/libs/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="app/css/main.min.css" />
+        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__content content">
+                    <a href="/" class="content__link-logo">
+                        <img
+                            class="content__logo"
+                            src="/app/img/logo.svg"
+                            alt="логотип Рыбный двор Новороссийск"
+                            title="логотип Рыбный двор Новороссийск"
+                        />
+                    </a>
+                    <nav class="content__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">
+                                    <span class="menu__link-item"> Главная </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./main.html">
+                                    <span class="menu__link-item"> О нас </span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link" href="./products.html">
+                                    <span class="menu__link-item"> Продукция </span>
+                                    <svg class="menu__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                    </svg>
+                                </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="/">
+                                            <span class="list-inner__link-item">
+                                                Продукт 1
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item">
+                                                Продукт 2
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html">
+                                    <span class="menu__link-item"> Сертификаты </span>
+                                </a>
+                            </li>
+                            <li class="menu__item active">
+                                <a class="menu__link" href="./contacts.html">
+                                    <span class="menu__link-item"> Магазины </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="content__list-right list-right">
+                        <li class="list-right__item">
+                            <p class="list-right__item-descr"> 
+                                Менеджер по&nbsp;продажам
+                            </p>
+                            <a href="tel:+79897637935" class="list-right__link">
+                                +7 (989) 763-79-35
+                            </a>
+                            <a href="mailto:semgas@mail.ru" class="list-right__link list-right__link_mail">
+                                semgas@mail.ru
+                            </a>
+                        </li>
+                        <li class="list-right__item">
+                            <a href="https://wa.me/+79897637935" class="list-right__link link">
+                                <svg class="link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="link__descr"> WhatsApp </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button aria-label="Open the mobile menu" class="menu__toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <!-- burger menu -->
+            <div class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./services.html" class="menu-link" target="_blank">
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="menu-item parent active">
+                                <a onclick="return false" href="./main.html" class="menu-link" target="_blank">
+                                    Продукция
+                                </a>
+                                <span class="arrow-list-mob">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                    </svg>
+                                </span>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Первый продукт </a>
+                                    </li>
+                                    <li class="menu-item active">
+                                        <a class="menu-link" href="#"> Второй продукт </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Третий продукт </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> Четвёртый продукт </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Сертификаты </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Магазины </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:semgas@mail.ru">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="list-link__descr"> semgas@mail.ru </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+7 (989) 763-79-35">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (989) 763-79-35 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="/">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <span class="list-link__descr">
+                                    г. Новороссийск, ул.Суворовская, 71
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- CONTACTS -->
+            <section class="contacts">
+                <div class="contacts__container container">
+                    <h1 class="contacts__title h-1"> Контакты </h1>
+                    <div class="contacts__content-wrapp content-wrapp">
+                        <div class="content-wrapp__content content">
+                            <div class="content__top content-top">
+                                <h3 class="content-top__title">
+                                    Менеджер по&nbsp;продажам:
+                                </h3>
+                                <ul class="content-top__list list">
+                                    <li class="list__item">
+                                        <p class="list__descr"> Телефон </p>
+                                        <a class="list__link list__link_tel" href="tel:+7 (989) 763-79-35">
+                                            +7 (989) 763-79-35
+                                        </a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a class="list__link link" href="https://wa.me/79897637935">
+                                            <svg class="link__icon icon-reset">
+                                                <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                            </svg>
+                                            <span class="link__text"> WhatsApp </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="content__list list">
+                                <li class="list__item item">
+                                    <ul class="item__left item-left">
+                                        <li class="item-left__item item-address item-common">
+                                            <svg class="item-address__icon icon-reset">
+                                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                            </svg>
+                                            <span class="item-address__text"> ул.Суворовская, 71 </span>
+                                        </li>
+                                        <li class="item-left__item item-common">
+                                            <a class="item-left__link link link_tel" href="tel:+7 928 435-50-82">
+                                                <span class="link__text">+7 928 435-50-82</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-left__item item-common">
+                                            <button class="item-left__btn btn active">
+                                                <span class="btn__text"> Показать </span>
+                                                <svg class="btn__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <ul class="item__right item-right">
+                                        <li class="item-right__item item-address item-common">
+                                            <svg class="item-address__icon icon-reset">
+                                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                            </svg>
+                                            <span class="item-address__text"> проспект Ленина, 65в </span>
+                                        </li>
+                                        <li class="item-right__item item-common">
+                                            <a class="item-right__link link link_tel" href="tel:+7 988 671-53-98">
+                                                <span class="link__text">+7 988 671-53-98</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-right__item item-common">
+                                            <button class="item-left__btn btn">
+                                                <span class="btn__text"> Показать </span>
+                                                <svg class="btn__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="list__item item">
+                                    <ul class="item__left item-left">
+                                        <li class="item-left__item item-address item-common">
+                                            <svg class="item-address__icon icon-reset">
+                                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                            </svg>
+                                            <span class="item-address__text"> ул. Южная, 3 </span>
+                                        </li>
+                                        <li class="item-left__item item-common">
+                                            <a class="item-left__link link link_tel" href="tel:+7 918 049-86-90">
+                                                <span class="link__text">+7 918 049-86-90</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-left__item item-common">
+                                            <button class="item-left__btn btn">
+                                                <span class="btn__text"> Показать </span>
+                                                <svg class="btn__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <ul class="item__right item-right">
+                                        <li class="item-right__item item-address item-common">
+                                            <svg class="item-address__icon icon-reset">
+                                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                            </svg>
+                                            <span class="item-address__text"> ул.Южная, 27 </span>
+                                        </li>
+                                        <li class="item-right__item item-common">
+                                            <button class="item-right__btn btn">
+                                                <span class="btn__text"> Показать </span>
+                                                <svg class="btn__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="list__item item">
+                                    <ul class="item__left item-left">
+                                        <li class="item-left__item item-address item-common">
+                                            <svg class="item-address__icon icon-reset">
+                                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                            </svg>
+                                            <span class="item-address__text"> ул. Рубина, 4 </span>
+                                        </li>
+                                        <li class="item-left__item item-common">
+                                            <a class="item-left__link link link_tel" href="tel:+7 988 135-54-80">
+                                                <span class="link__text">+7 988 135-54-80</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-left__item item-common">
+                                            <button class="item-left__btn btn">
+                                                <span class="btn__text"> Показать </span>
+                                                <svg class="btn__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <ul class="item__right item-right">
+                                        <li class="item-right__item item-address item-common">
+                                            <svg class="item-address__icon icon-reset">
+                                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                            </svg>
+                                            <span class="item-address__text"> ул.Набережная Адмирала Серебрякова, 79/7 </span>
+                                        </li>
+                                        <li class="item-right__item item-common">
+                                            <a class="item-right__link link link_tel" href="tel:+7 928 040-65-19">
+                                                <span class="link__text">+7 928 040-65-19</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-right__item item-common">
+                                            <button class="item-right__btn btn">
+                                                <span class="btn__text"> Показать </span>
+                                                <svg class="btn__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="content-wrapp__map map">
+                            <li class="map__item">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3b70d6dc8e5cdf4db388d56fd27de2f81bd03086ef0d5117782736961231fdec&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                            </li>
+                            <li class="map__item">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3b70d6dc8e5cdf4db388d56fd27de2f81bd03086ef0d5117782736961231fdec&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                            </li>
+                            <li class="map__item">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3b70d6dc8e5cdf4db388d56fd27de2f81bd03086ef0d5117782736961231fdec&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                            </li>
+                            <li class="map__item">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3b70d6dc8e5cdf4db388d56fd27de2f81bd03086ef0d5117782736961231fdec&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                            </li>
+                            <li class="map__item">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3b70d6dc8e5cdf4db388d56fd27de2f81bd03086ef0d5117782736961231fdec&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                            </li>
+                            <li class="map__item">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3b70d6dc8e5cdf4db388d56fd27de2f81bd03086ef0d5117782736961231fdec&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- overlay -->
+            <article class="main-section__overlay overlay">
+                <div class="overlay__wrapper">
+                    <div class="overlay__bg"></div>
+                    <div class="overlay__content">
+                        <span aria-label="Закрыть окно обратной связи" class="overlay__close"></span>
+                        <!-- form-callback -->
+                        <form action="/" method="post" class="form form-callback novalid">
+                            <input type="hidden" name="count" value="0">
+                            <h3 class="header_2">
+                                Связаться с нами
+                            </h3>
+                            <div class="form-item">
+                                <input type="text" name="name" placeholder="Имя" >
+                            </div>
+                            <div class="form-item">
+                                <input type="tel" name="phone" placeholder="Телефон" >
+                            </div>
+                            <button class="form-item__button button-invert">
+                                Отправить
+                            </button>
+                            <label class="form-note">
+                                <input type="checkbox" checked>
+                                <div class="custom-checkbox"></div>
+                                <div class="form-note-text">
+                                    Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете условия Соглашения на&nbsp;обработку персональных данных
+                                </div>
+                            </label>
+                        </form>
+                        <!-- form-success -->
+                        <div class="form-success">
+                            <p class="form-success__descr">Спасибо!</p>
+                            <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="main-section__footer footer">
+            <div class="footer__content content">
+                <div class="content__container container">
+                    <a class="content__link" href="https://web2.agency/" target="_blank">
+                        Создание сайтов WEB&nbsp;2
+                    </a>
+                    <nav class="content__menu menu">
+                        <ul class="menu__list list">
+                            <li class="list__item active">
+                                <a href="/" class="list__link"> Главная </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> О нас </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Продукция </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Сертификаты </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__link"> Магазины </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__copyright copyright">
+                <div class="copyright__container container">
+                    <small class="copyright__text">
+                        Copyright &copy;&nbsp;2012-2023. Все права защищены
+                    </small>
+                </div>
+            </div>
+        </footer>
+        <!-- SCROLL-TOP -->
+        <button id="scrollTop" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#anchor"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+        <script src="/app/js/libs/lightgallery-all.min.js"></script>
+        <script src="/app/js/libs/functions.js"></script>
+        <script src="/app/js/libs/swiper-bundle.min.js"></script>
+        <script src="/app/js/main.min.js"></script>
+        <!-- <script src="/app/js/main.js"></script> -->
+    </body>
+</html>

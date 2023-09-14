@@ -1,0 +1,30 @@
+.form-success
+	display: flex
+	flex-direction: column
+	align-items: center
+	font-weight: 600
+	font-size: 50px
+	text-transform: uppercase
+	text-align: center
+
+	+small
+		padding: 20px
+		width: 100%
+		font-size: 30px
+
+	+phone
+		font-size: 25px
+
+	.form-success__descr
+		@include textReset
+		margin-bottom: 20px
+		color: $clr_3
+		font-family: $ff_2
+
+	.form-success__descr.last
+		margin: 0
+		font-size: 24px
+		color: $clr_1
+
+		+phone
+			font-size: 20px

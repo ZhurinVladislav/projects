@@ -1,0 +1,88 @@
+.advantages
+  position: relative
+  margin-bottom: 110px
+  color: $clr_2
+  font-size: 20px
+  font-weight: 500
+
+  &__bg-img
+    position: absolute
+    z-index: -1
+    top: -33vh
+    right: 0
+    width: 952px
+    height: 955px
+    background-image: url(../img/common/map.png)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+  +phone
+    margin-bottom: 80px
+  
+  .content
+
+    .list
+      display: grid
+      grid-template-columns: repeat(auto-fill, minmax(337px, 1fr))
+      grid-auto-rows: minmax(239px, 1fr)
+      gap: 6px
+
+      +medium
+        grid-template-rows: max-content minmax(239px, 1fr)
+
+      +phone
+        grid-template-columns: 1fr
+        grid-auto-rows: minmax(100px, 1fr)
+        grid-template-rows: max-content minmax(100px, 1fr)
+
+      .text-wrap
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        grid-column: span 2
+
+        +medium
+          justify-content: flex-start
+          align-items: flex-start
+
+        +phone
+          grid-column: span 1
+
+        .text
+
+          &__title
+            padding-left: 0
+
+          &__descr
+            @include textReset
+            max-width: 309px
+            
+
+            +small
+              margin-bottom: 15px
+              max-width: 100%
+
+      .item
+        display: flex
+        flex-direction: column
+        padding: 35px 40px
+        font-size: 18px
+        font-weight: 400
+        color: $clr_1
+        background-color: $clr_2
+        border-radius: 20px
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+
+        +phone
+          padding: 20px
+
+        &__title
+          text-transform: uppercase
+
+        &__descr
+          @include textReset
+          margin-top: auto

@@ -1,0 +1,136 @@
+.home-page__form-main.form-main
+  margin-bottom: 128px
+  padding: 0
+  max-width: 100%
+  background-color: $color__0
+  color: $color__3
+
+  +small
+    margin-bottom: 40px
+
+  .content
+    max-width: 436px
+    &__title
+      color: $color__3
+
+  .form
+    .content-top
+      label 
+        color: rgba($color__3, .5)
+
+      &__input
+        color: $color__2
+        border-color: $color__3
+
+      &__textarea
+        color: $color__2
+        border-color: $color__3
+  
+.form-main
+  display: flex
+  justify-content: center
+  margin-bottom: 0
+  padding: 30px
+  color: $color__1
+  background-color: $color__3
+  border-radius: 8px
+
+  +small
+    margin-bottom: 0
+    padding: 20px
+
+  +phone
+    margin-right: 0
+
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .content
+    display: flex
+    flex-direction: column
+    align-items: center
+    // max-width: 100%
+    max-width: 436px
+
+    &__title
+      color: $color__1
+      
+
+    &__descr
+      @include textReset
+      margin-bottom: 20px
+      text-align: center
+
+  .form
+
+    .content-top
+      margin-bottom: 20px
+      font-size: 0
+
+      label 
+        position: absolute
+        top: 12px
+        left: 10px
+        padding: 5px 10px
+        font-size: 14px
+        color: rgba($color__1, .5)
+        pointer-events: none
+        transition: all 200ms
+
+      &__item
+        position: relative
+
+        &:not(:last-child)
+          margin-bottom: 10px
+
+      &__input
+        height: 57px
+        color: $color__1
+        background-color: $color__0
+        border: 1px solid $color__1
+
+        &:focus + label
+          top: 0
+          font-size: 10px
+
+        &:not(:placeholder-shown) + label
+          top: 0
+          font-size: 10px
+
+      &__textarea
+        height: 97px
+        color: $color__1
+        background-color: $color__0
+        border: 1px solid $color__1
+
+        &:focus + label
+          top: 0
+          font-size: 10px
+
+        &:not(:placeholder-shown) + label
+          top: 0
+          font-size: 10px
+
+    .content-bottom
+      display: flex
+      align-items: center
+
+      +phone
+        flex-wrap: wrap
+
+      &__dtn
+        margin-right: 10px
+
+        +phone
+          margin-right: 0
+          margin-bottom: 10px
+
+      &__descr
+        @include textReset
+        max-width: 238px
+        font-size: 12px
+
+        +phone
+          width: 100%
