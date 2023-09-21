@@ -61,7 +61,7 @@
 				&__img
 					transition: transform .3s linear
 
-				.arrow
+				.slider-arrow
 					position: absolute
 					z-index: 10
 					top: 50%
@@ -78,6 +78,18 @@
 					transform: translateY(-50%) rotate(90deg)
 					transition: background-color .2s linear
 
+					+small
+						background-color: $clr_1
+						border-color: $clr_1
+
+						// &:hover
+						// 	background-color: $clr_1
+						// 	border-color: $clr_1
+
+					+phone
+						width: 40px
+						height: 40px
+
 					&.swiper-button-disabled
 						background-color: rgba($clr_2, .5)
 						border-color: rgba($clr_2, .5)
@@ -87,13 +99,24 @@
 						&:hover
 							background-color: rgba($clr_2, .5)
 
+							+small
+								background-color: $clr_1
+								border-color: $clr_1
+								opacity: .5
+
 					&__icon
 						flex-shrink: 0
 						width: 16px
 						height: 16px
 
+						+small
+							fill: $clr_3
+
 					&:hover
 						background-color: rgba($clr_3, .8)
+
+						+small
+							background-color: $clr_1
 
 					&_prev
 						left: 10px
@@ -104,7 +127,7 @@
 					&_next
 						right: 10px
 						transform: translateY(-50%) rotate(-90deg)
-						
+
 						+phone
 							right: 0
 
@@ -142,7 +165,7 @@
 				+phone
 					font-size: 25px
 					margin-bottom: 10px
-				
+
 			&__price
 				margin-bottom: 20px
 				font-size: 30px
@@ -184,7 +207,7 @@
 		&__text
 			margin-bottom: 40px
 			color: $clr_2
-			
+
 			+phone
 				margin-bottom: 20px
 
@@ -209,9 +232,11 @@
 				justify-content: flex-start
 				margin-bottom: 20px
 
-
 			&__title
 				margin-bottom: 0
+
+				+small
+					margin-bottom: 20px
 
 			.link
 				display: flex
@@ -265,7 +290,6 @@
 							&::before
 								transform: translateX(0)
 								opacity: 1
-
 
 					&__img-wrapp
 						position: relative
@@ -324,7 +348,7 @@
 						.list
 							display: flex
 							margin-right: 10px
-							
+
 							&__item
 								display: flex
 								align-items: center
@@ -350,7 +374,7 @@
 							border: 2px solid $clr_1
 							border-radius: 8px
 							transition: background-color .2s linear
-							
+
 							&:hover
 								background-color: $clr_1
 
@@ -380,6 +404,10 @@
 				border-radius: 8px
 				transition: background-color .2s linear
 
+				+phone
+					width: 40px
+					height: 40px
+
 				&.swiper-button-disabled
 					opacity: .5
 					cursor: auto
@@ -390,7 +418,7 @@
 
 						.arrow__icon
 							fill: $clr_1
-							
+
 							+small
 								fill: $clr_3
 
@@ -401,7 +429,6 @@
 				+small
 					background-color: $clr_1
 					border-color: $clr_1
-					
 
 				&:hover
 					background-color: $clr_1

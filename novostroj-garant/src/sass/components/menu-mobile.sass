@@ -48,31 +48,26 @@
       display: flex
       flex-direction: column
 
+      // .list-inner
+      //   &__item
+      //     &.active
+      //       .item__link
+      //         color: $clr_3
+
       .item
+        &.active > .item__link
+          color: $clr_3
         &:not(:last-child)
           margin-bottom: 20px
 
           +phone
             margin-bottom: 15px
 
-        &.active
-          .item__link
-            color: $clr_3
-
         &.parent
           position: relative
 
-          &.active
-            .menu__link
-              color: $clr_2
-            .list-inner
-              .item
-                &.active
-                  .item__link
-                    color: $clr_2
-
-              .item__link
-                color: $clr_2
+          &.active > .item__link
+            color: $clr_3
 
         &__btn
           position: absolute
@@ -87,7 +82,7 @@
             .item__icon
               fill: $clr_2
               transform: rotate(180deg)
-        
+
         &__icon
           display: inline-flex
           width: 15px
@@ -106,6 +101,10 @@
 
           .item
             font-size: 14px
+
+            &.active
+              .item__link
+                color: $clr_3
 
             &:first-child
               padding-top: 20px

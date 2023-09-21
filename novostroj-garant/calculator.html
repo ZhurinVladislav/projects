@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg">
     <!-- SEO -->
-    <title>Портфолио | Новострой гарант</title>
+    <title>Калькулятор | Новострой гарант</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- STYLES -->
@@ -108,7 +108,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu__item active">
+                        <li class="menu__item">
                             <a class="menu__link" href="./portfolio.html">
                                 <span class="menu__link-item"> Портфолио </span>
                             </a>
@@ -216,7 +216,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="list__item item active">
+                        <li class="list__item item">
                             <a href="./portfolio.html" class="item__link" target="_blank">
                                 Портфолио
                             </a>
@@ -307,170 +307,204 @@
     </header>
     <!-- MAIN -->
     <main>
-        <section id="portfolio-inner" class="portfolio section-reset">
-            <div class="portfolio__container container">
-                <h1 class="h-0"> Портфолио компании Новострой гарант</h1>
-                <h2 class="portfolio__title h-2"> Портфолио </h2>
-                <ul class="portfolio__list list">
-                    <li class="list__item item">
-                        <h3 class="item__title h-3"> Проект 1 </h3>
-                        <div class="item__swiper-wrapper swiper-wrapper">
-                            <button aria-label="Предыдущий слайд" class="arrow arrow_prev">
-                                <svg class="arrow__icon">
+        <!-- CALCULATOR -->
+        <section class="calculator section-reset">
+            <div class="calculator__container container">
+                <h1 class="h-0"> Калькулятор стоимости проекта | Новострой гарант</h1>
+                <h2 class="calculator__title h-2">
+                    <span class="calculator__color color">Стоимость</span> строительства
+                </h2>
+                <p class="calculator__text">
+                    Калькулятор расчета стоимости строительства дома поможет вам произвести ориентировочный расчет
+                    основных затрат на&nbsp;возведение будущего дома
+                </p>
+                <div id="calculator" class="calculator__form form">
+                    <ul class="form__list list js-select-wrapper">
+                        <li class="list__item item">
+                            <p class="item__title"> Этажность </p>
+                            <div class="item__select select">
+                                <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                <div class="select__btn btn js-select-btn">
+                                    <span class="btn__text js-select-btn-text"> 1 этаж </span>
+                                    <span class="btn__arrow arrow">
+                                        <svg class="arrow__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="select__list list js-select-list">
+                                    <li class="list__item js-select-item">
+                                        1 этаж
+                                    </li>
+                                    <li class="list__item js-select-item">
+                                        2 этаж
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list__item item">
+                            <p class="item__title"> Двери </p>
+                            <div class="item__select select">
+                                <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                <div class="select__btn btn js-select-btn">
+                                    <span class="btn__text js-select-btn-text"> Torex </span>
+                                    <span class="btn__arrow arrow">
+                                        <svg class="arrow__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="select__list list js-select-list">
+                                    <li class="list__item js-select-item">
+                                        Torex
+                                    </li>
+                                    <li class="list__item js-select-item">
+                                        C терморазрывом
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list__item item">
+                            <p class="item__title"> Метраж </p>
+                            <label class="item__label">
+                                <span data-val="100">
+                                    <input form="form-calculator" type="number" class="item__input js-input" value="100"
+                                        oninput="this.parentElement.dataset.val = this.value">
+                                </span>м<sup>2</sup>
+                            </label>
+                        </li>
+                        <li class="list__item item">
+                            <p class="item__title"> Инженерные сети </p>
+                            <div class="item__select select">
+                                <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                <div class="select__btn btn js-select-btn">
+                                    <span class="btn__text js-select-btn-text"> Без сетей </span>
+                                    <span class="btn__arrow arrow">
+                                        <svg class="arrow__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="select__list list js-select-list">
+                                    <li class="list__item js-select-item">
+                                        Без сетей
+                                    </li>
+                                    <li class="list__item js-select-item">
+                                        Электричество
+                                    </li>
+                                    <li class="list__item js-select-item">
+                                        Скважина
+                                    </li>
+                                    <li class="list__item js-select-item">
+                                        Септик
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list__item item">
+                            <p class="item__title"> Внутренняя отделка </p>
+                            <div class="item__select select">
+                                <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                <div class="select__btn btn js-select-btn">
+                                    <span class="btn__text js-select-btn-text"> Без отделки </span>
+                                    <span class="btn__arrow arrow">
+                                        <svg class="arrow__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="select__list list js-select-list">
+                                    <li class="list__item js-select-item">
+                                        Без отделки
+                                    </li>
+                                    <li class="list__item js-select-item">
+                                        С отделкой
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list__item item">
+                            <p class="item__title"> Фасад </p>
+                            <div class="item__select select">
+                                <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                <div class="select__btn btn js-select-btn">
+                                    <span class="btn__text js-select-btn-text"> Без фасада </span>
+                                    <span class="btn__arrow arrow">
+                                        <svg class="arrow__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="select__list list js-select-list">
+                                    <li class="list__item js-select-item">
+                                        Без фасада
+                                    </li>
+                                    <li class="list__item js-select-item">
+                                        Каменная вата
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="form__summa summa">
+                        <span class="summa__text">Итого: </span>
+                        <span class="summa__number">0 ₽</span>
+                    </div>
+                    <div id="submit-wrap" class="form__submit-calculator submit-calculator">
+                        <button id="submit-calculator" class="submit-calculator__btn button">
+                            Запросить смету по расчету
+                        </button>
+                        <form id="form-calculator" class="submit-calculator__form form" action=".">
+                            <button id="form-calculator-btn" aria-label="Отправить заявку" type="submit"
+                                class="form__btn button">Отправить</button>
+                            <input class="form__input input" type="text" placeholder="Email*">
+                        </form>
+                    </div>
+
+                </div>
+                <div class="calculator__img"></div>
+            </div>
+            <!-- SPOILER -->
+            <div class="calculator__spoiler spoiler">
+                <div class="spoiler__container container">
+                    <ul class="spoiler__list list js-ac">
+                        <li class="list__item js-ac-item">
+                            <button class="list__text js-ac-btn">
+                                <span> Что включено в стоимость? </span>
+                                <svg class="list__icon">
                                     <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                 </svg>
                             </button>
-                            <div class="swiper-wrapper__swiper swiper portfolio-inner-slider">
-                                <div class="swiper-wrapper portfolio-inner-slider__wrapper">
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
+                            <div class="list__descr js-ac-text">
+                                <div class="list__content">
+                                    <p>
+                                        Quas, commodi rerum deleniti error magni veritatis! Error
+                                        explicabo hic <strong>ecusandae tempora placeat earum eius fugit ex</strong>
+                                        neque.
+                                    </p>
+                                    <p>
+                                        Quas, commodi rerum deleniti error magni veritatis! Error
+                                        explicabo hic recusandae tempora placeat earum eius fugit ex
+                                        neque.
+                                    </p>
+                                    <p>
+                                        Quas, commodi rerum deleniti error magni veritatis! Error
+                                        explicabo hic recusandae tempora placeat earum eius fugit ex
+                                        neque.
+                                    </p>
+                                    <p>
+                                        Quas, commodi rerum deleniti error magni veritatis! Error
+                                        explicabo hic <a href="">recusandae</a>tempora placeat earum eius fugit ex
+                                        neque.
+                                    </p>
                                 </div>
                             </div>
-                            <button aria-label="Следующий слайд" class="arrow arrow_next">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="list__item item">
-                        <h3 class="item__title h-3"> Проект 2 </h3>
-                        <div class="item__swiper-wrapper swiper-wrapper">
-                            <button aria-label="Предыдущий слайд" class="arrow arrow_prev">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </button>
-                            <div class="swiper-wrapper__swiper swiper portfolio-inner-slider">
-                                <div class="swiper-wrapper portfolio-inner-slider__wrapper">
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <button aria-label="Следующий слайд" class="arrow arrow_next">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="list__item item">
-                        <h3 class="item__title h-3"> Проект 3 </h3>
-                        <div class="item__swiper-wrapper swiper-wrapper">
-                            <button aria-label="Предыдущий слайд" class="arrow arrow_prev">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </button>
-                            <div class="swiper-wrapper__swiper swiper portfolio-inner-slider">
-                                <div class="swiper-wrapper portfolio-inner-slider__wrapper">
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <button aria-label="Следующий слайд" class="arrow arrow_next">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="list__item item">
-                        <h3 class="item__title h-3"> Проект 4 </h3>
-                        <div class="item__swiper-wrapper swiper-wrapper">
-                            <button aria-label="Предыдущий слайд" class="arrow arrow_prev">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </button>
-                            <div class="swiper-wrapper__swiper swiper portfolio-inner-slider">
-                                <div class="swiper-wrapper portfolio-inner-slider__wrapper">
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide portfolio-inner-slider__slide slide">
-                                        <a class="slide__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img class="slide__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <button aria-label="Следующий слайд" class="arrow arrow_next">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
+        <!-- FORM-CALLBACK -->
         <div class="modal form-callback" id="form-callback">
             <div class="form-callback__box modal-box">
                 <button aria-label="Закрыть окно обратной связи"
@@ -491,7 +525,8 @@
                         </label>
                     </div>
                     <button aria-label="Отправить заявку" type="submit"
-                        class="form-mod__btn button js-btn-submit">Отправить</button>
+                        class="form-mod__btn button js-btn-submit">Отправить
+                    </button>
                 </form>
             </div>
         </div>
@@ -560,7 +595,7 @@
                                     Проекты домов
                                 </a>
                             </li>
-                            <li class="list__item active">
+                            <li class="list__item">
                                 <a href="/" class="list__item-link link">
                                     Портфолио
                                 </a>
@@ -574,7 +609,7 @@
                     </nav>
                     <!-- LIST-SOCIAL -->
                     <ul class="content__list-social list-social content-item">
-                        <li class="list-social__item item item_title">
+                        <li class="list-social__item item">
                             <p class="item__title footer-title"> Социальные сети </p>
                         </li>
                         <li class="list-social__item item">
@@ -652,6 +687,5 @@
     <script src="/app/js/libs/calculator.js"></script>
     <!-- <script src="/app/js/main.js"></script> -->
     <script src="/app/js/main.min.js"></script>
-</body>
 
 </html>
