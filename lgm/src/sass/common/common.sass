@@ -79,7 +79,7 @@ body.menu-open
     overflow: hidden
 
 
-h1,h2,h3,h4,h5,h6,p,span,address,small,strong,a,ul,li,ol
+h1,h2,h3,h4,h5,h6,p,span,address,small,strong,a,ul,li,ol,button,input,textarea,img,svg
   &::selection
     background-color: $clr_3
     color: $clr_2
@@ -525,8 +525,9 @@ input[type='number']
     margin: 0
     margin-bottom: 20px
     padding: 20px 10px 20px 20px
-    background: rgba($clr_4, .3)
-    border-left: 5px solid $clr_4
+    background-color: rgba($clr_1, .3)
+    backdrop-filter: blur(6px)
+    border-left: 5px solid $clr_3
     ul
       margin-bottom: 0
 
@@ -551,22 +552,31 @@ input[type='number']
     p
       @include textReset
 
+    thead
+      &:nth-child(1)
+        background-color: rgba($clr_4, 0.8)
+        color: $clr_1
+        font-weight: 400
+        // text-transform: uppercase
+
     tr
       &:nth-child(2n)
-        background: rgba($clr_3, 0.2)
+        background-color: rgba($clr_4, 0.2)
 
-      &:nth-child(1)
-        background: rgba($clr_3, 0.8)
-        color: #fff
-        td
-          font-weight: 700
+      // &:nth-child(1)
+      //   background-color: rgba($clr_4, 0.8)
+      //   color: $clr_1
+      //   text-transform: uppercase
+
+        // td
+        //   font-weight: 700
 
     th
       padding: 10px
-      border: 1px solid $clr_3
+      border: 1px solid $clr_4
 
     td
-      border: 1px solid $clr_3
+      border: 1px solid $clr_4
       padding: 10px
 
 

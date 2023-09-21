@@ -15,11 +15,19 @@
         <link rel="stylesheet" href="/app/css/libs/swiper-bundle.min.css" />
         <link rel="stylesheet" href="app/css/main.min.css" />
         <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelector('body').classList.add('loading');
+                document.querySelectorAll('[data-animations]').forEach(element => {
+                element.classList.add('animation-resolve')
+                });
+            });
+        </script>
     </head>
 
     <body>
         <!-- HEADER -->
-        <header id="header" class="header">
+        <header id="header" class="home-page__header header animation-opacity delay-300" data-animations="">
             <div class="header__container container">
                 <a href="/" title="логотип LGM" class="header__link-logo">
                     <img
@@ -29,9 +37,10 @@
                         title="логотип LGM"
                     />
                 </a>
+
                 <nav class="header__menu menu">
                     <ul class="menu__list">
-                        <li class="menu__item">
+                        <li class="menu__item active">
                             <a class="menu__link" href="/">
                                 <span class="menu__link-item"> Главная </span>
                             </a>
@@ -86,7 +95,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu__item active">
+                        <li class="menu__item">
                             <a class="menu__link" href="./rates.html">
                                 <span class="menu__link-item"> Тарифы </span>
                             </a>
@@ -98,6 +107,7 @@
                         </li>
                     </ul>
                 </nav>
+
                 <ul class="header__list-right list-right">
                     <li class="list-right__item">
                         <a href="tel:+79530900008" class="list-right__link">
@@ -108,13 +118,13 @@
                         </a>
                     </li>
                     <li class="list-right__item">
-                        <a href="https://wa.me/+79530900008" class="list-right__link link button">
+                        <a href="https://wa.me/+79530900008" class="list-right__link link button" target="_blank">
                             <svg class="link__icon">
                                 <use xlink:href="/app/img/icons/icons.svg#wa"></use>
                             </svg>
                             <span class="link__descr"> WhatsApp </span>
                         </a>
-                        <a href="https://t.me/+79897637935" class="list-right__link link button">
+                        <a href="https://t.me/+79897637935" class="list-right__link link button" target="_blank">
                             <svg class="link__icon">
                                 <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                             </svg>
@@ -122,7 +132,8 @@
                         </a>
                     </li>
                 </ul>
-                <button id="burger-toggle" aria-label="Открыть мобильное меню" class="header__menu-toggle menu-toggle">
+
+                <button id="burger-toggle" aria-label="Мобильное меню" class="header__menu-toggle menu-toggle">
                     <span class="menu-toggle__item"></span>
                     <span class="menu-toggle__item"></span>
                     <span class="menu-toggle__item"></span>
@@ -133,7 +144,7 @@
                 <div class="menu-mobile__wrap">
                     <nav class="menu-mobile__menu menu">
                         <ul class="menu__list list">
-                            <li class="list__item item">
+                            <li class="list__item item active">
                                 <a href="/" class="item__link" target="_blank">
                                     Главная
                                 </a>
@@ -147,31 +158,31 @@
                                 <a href="./services.html" class="item__link" target="_blank">
                                     Услуги
                                 </a>
-                                <button class="item__btn">
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
                                     <svg class="item__icon">
                                         <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                     </svg>
                                 </button>
                                 <ul class="item__list list">
                                     <li class="list__item item">
-                                        <a class=" item__link" href="./service.html"> Международные перевозки </a>
+                                        <a class="item__link" href="./service.html"> Международные перевозки </a>
                                     </li>
                                     <li class="list__item item">
-                                        <a class=" item__link" href="./service.html"> Внутрипортовое экспедирование </a>
+                                        <a class="item__link" href="./service.html"> Внутрипортовое экспедирование </a>
                                     </li>
                                     <li class="list__item item">
-                                        <a class=" item__link" href="./service.html"> Складские услуги </a>
+                                        <a class="item__link" href="./service.html"> Складские услуги </a>
                                     </li>
                                     <li class="list__item item">
-                                        <a class=" item__link" href="./service.html"> Дистрибуция и доставка </a>
+                                        <a class="item__link" href="./service.html"> Дистрибуция и доставка </a>
                                     </li>
                                     <li class="list__item item">
-                                        <a class=" item__link" href="./service.html"> Таможенное оформление </a>
+                                        <a class="item__link" href="./service.html"> Таможенное оформление </a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="list__item item active">
-                                <a href="./certificates.html" class="item__link">
+                            <li class="list__item item">
+                                <a href="./rates.html" class="item__link">
                                     <span class="link-item"> Тарифы </span>
                                 </a>
                             </li>
@@ -200,7 +211,7 @@
                             </a>
                         </li>
                         <li class="list-link__item">
-                            <a class="list-link__link" href="https://t.me/+79897637935">
+                            <a target="_blank" class="list-link__link" href="https://t.me/+79897637935">
                                 <svg class="list-link__icon icon-reset">
                                     <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                                 </svg>
@@ -228,9 +239,9 @@
                                 <svg class="list-link__icon icon-reset">
                                     <use xlink:href="/app/img/icons/icons.svg#mark"></use>
                                 </svg>
-                                <span class="list-link__descr">
+                                <address class="list-link__descr">
                                     г. Новороссийск, ул. Леднева, д. 5, строение 4, оф. 2-4
-                                </span>
+                                </address>
                             </a>
                         </li>
                     </ul>
@@ -246,162 +257,214 @@
                             Тарифы
                         </h1>
                         <div class="content__text-default text-default">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere consequuntur fuga dolor dolorum, 
-                                earum quod repellat ipsum harum, voluptatum sed eveniet perspiciatis at omnis id delectus necessitatibus quisquam voluptates?
-                            </p>
-                            <p>
-                                Fuga mollitia recusandae asperiores, <a href="#">qui tenetur</a> sint sapiente culpa quis? Laborum recusandae et 
-                                porro optio amet dolorum labore vero incidunt cum repellat ea nemo alias vitae eveniet voluptates, eos ipsum!
-                                Consequatur recusandae cumque alias a nam, ab reiciendis quisquam incidunt, adipisci consequuntur 
-                            </p>
-                            <p>
-                                illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure possimus, atque fugit! Natus praesentium ullam, repudiandae culpa accusantium corporis!
-                                Culpa exercitationem fugit beatae molestias ratione maxime laudantium harum asperiores illo 
-                                perferendis dolorem reprehenderit, eos necessitatibus, provident delectus molestiae atque eius nobis? 
-                                Commodi temporibus sequi consequuntur excepturi enim recusandae ducimus!
-                            </p>
-                            <ul>
-                                <li>Point 1</li>
-                                <li>Point 2</li>
-                                <li>Point 3</li>
-                                <li>Point 4</li>
-                                <li>Point 5</li>
-                            </ul>
-                            <h2>Heading 2</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae! Corrupti, 
-                                nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <ol>
-                                <li>Point 1</li>
-                                <li>Point 2</li>
-                                <li>Point 3</li>
-                                <li>Point 4</li>
-                                <li>Point 5</li>
-                            </ol>
-                            <h3>Heading 3</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae! Corrupti, 
-                                nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae! Corrupti, 
-                                nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <h2 class="h-2">
-                                Фотогалерея
-                            </h2>
-                            <ul class="text-default__gallery gallery">
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-1.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-1.jpg" alt="img-1">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-2.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-2.jpg" alt="img-2">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-3.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-3.jpg" alt="img-3">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-4.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-4.jpg" alt="img-4">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-5.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-5.jpg" alt="img-5">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-6.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-7.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-7.jpg" alt="img-7">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-8.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-8.jpg" alt="img-8">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="gallery__item">
-                                    <a class="gallery__link" href="./app/img/gallery-inner/img-9.jpg">
-                                        <div class="gallery__img-wrapper">
-                                            <img class="gallery__img" src="./app/img/gallery-inner/img-9.jpg" alt="img-9">
-                                            <button class="gallery__btn">
-                                                <svg class="gallery__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                            <p><strong>Компания «ЛГМ» осушествляет перевозки по многим другим направлениям. </strong></p>
+                            <p><strong>Ниже представлен индикатив цен на популярные направления из/в г. Новороссийск. </strong></p>
+                            <p><strong>(актуально на август 2023 г.)</strong></p>
+                            <p> </p>
+                            <table width="647" border="1" cellspacing="0" cellpadding="0">
+                            <thead>
+                            <tr>
+                            <td valign="bottom">
+                            <p><strong>Порт</strong></p>
+                            </td>
+                            <td valign="bottom">
+                            <p><strong>20 DV — цена $</strong></p>
+                            </td>
+                            <td valign="bottom">
+                            <p><strong>40 </strong><strong>DC</strong><strong> — цена $</strong></p>
+                            </td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>
+                            <p>Индия, Мундра / Нава-Шева</p>
+                            </td>
+                            <td>
+                            <p>1970</p>
+                            </td>
+                            <td>
+                            <p>2670</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Ченнаи, Индия</p>
+                            </td>
+                            <td>
+                            <p>3170</p>
+                            </td>
+                            <td>
+                            <p>3750</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Калькутта, Индия</p>
+                            </td>
+                            <td>
+                            <p>3000</p>
+                            </td>
+                            <td>
+                            <p>3670</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Джебель-Али, ОАЭ</p>
+                            </td>
+                            <td>
+                            <p>2470</p>
+                            </td>
+                            <td>
+                            <p>3000</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Бандар-Аббас, Иран</p>
+                            </td>
+                            <td>
+                            <p>3000</p>
+                            </td>
+                            <td>
+                            <p>4700</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Карачи, Пакистан</p>
+                            </td>
+                            <td>
+                            <p>2500</p>
+                            </td>
+                            <td>
+                            <p>3000</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Читтагонг, Бангладеш</p>
+                            </td>
+                            <td>
+                            <p>3100</p>
+                            </td>
+                            <td>
+                            <p>4500</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Порт-Кланг, Малайзия</p>
+                            </td>
+                            <td>
+                            <p>2500</p>
+                            </td>
+                            <td>
+                            <p>3200</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Пенанг, Малайзия</p>
+                            </td>
+                            <td>
+                            <p>2700</p>
+                            </td>
+                            <td>
+                            <p>3300</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Пасир Гуданг, Малайзия</p>
+                            </td>
+                            <td>
+                            <p>2800</p>
+                            </td>
+                            <td>
+                            <p>4000</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Сингапур</p>
+                            </td>
+                            <td>
+                            <p>2500</p>
+                            </td>
+                            <td>
+                            <p>3200</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Хошимин, Вьетнам</p>
+                            </td>
+                            <td>
+                            <p>2700</p>
+                            </td>
+                            <td>
+                            <p>3400</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Хайфон, Вьетнам</p>
+                            </td>
+                            <td>
+                            <p>3000</p>
+                            </td>
+                            <td>
+                            <p>4100</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Джакарта/ Белаван/ Сурабая, Индонезия</p>
+                            </td>
+                            <td>
+                            <p>3000</p>
+                            </td>
+                            <td>
+                            <p>4100</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Лаем Чабанг, Таиланд</p>
+                            </td>
+                            <td>
+                            <p>3000</p>
+                            </td>
+                            <td>
+                            <p>3200</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Китай (Шанхай, Нинбо, Шэньчжэнь, Циндао)</p>
+                            </td>
+                            <td>
+                            <p>2200</p>
+                            </td>
+                            <td>
+                            <p>2400</p>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td valign="top">
+                            <p>Пусан, Южная Корея</p>
+                            </td>
+                            <td>
+                            <p>4100</p>
+                            </td>
+                            <td>
+                            <p>4400</p>
+                            </td>
+                            </tr>
+                            </tbody>
+                            </table>
     
                         </div>
                     </div>

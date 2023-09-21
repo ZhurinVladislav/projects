@@ -18,9 +18,6 @@
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector('body').classList.add('loading');
-                document.querySelectorAll('[data-animations]').forEach(element => {
-                element.classList.add('animation-resolve')
-                });
             });
         </script>
     </head>
@@ -85,10 +82,36 @@
                                     <span class="menu__link-item"> О компании </span>
                                 </a>
                             </li>
-                            <li class="menu__item">
+                            <li class="menu__item parent">
                                 <a class="menu__link" href="./projects.html">
                                     <span class="menu__link-item"> Проекты домов </span>
+                                    <svg class="menu__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
                                 </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="menu__item active">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                Все проекты
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                1 этаж
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                2 этажа
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="menu__item">
                                 <a class="menu__link" href="./portfolio.html">
@@ -96,7 +119,7 @@
                                 </a>
                             </li>
                             <li class="menu__item parent">
-                                <a class="menu__link" href="./services.html">
+                                <a class="menu__link" href="./service.html">
                                     <span class="menu__link-item"> Доп услуги </span>
                                     <svg class="menu__icon">
                                         <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
@@ -153,7 +176,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <a href="/" class="menu__link link" target="_blank"> 
+                        <a href="https://www.youtube.com/@user-se3vj1cz1d" class="menu__link link" target="_blank"> 
                             <svg class="link__icon">
                                 <use xlink:href="/app/img/icons/icons.svg#yt"></use>
                             </svg>
@@ -177,10 +200,26 @@
                                     О компании
                                 </a>
                             </li>
-                            <li class="list__item item">
+                            <li class="list__item item parent">
                                 <a href="./projects.html" class="item__link" target="_blank">
                                     Проекты домов
                                 </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html"> Все проекты </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html"> 1 этаж </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html"> 2 этажа</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="list__item item">
                                 <a href="./portfolio.html" class="item__link" target="_blank">
@@ -188,7 +227,7 @@
                                 </a>
                             </li>
                             <li class="list__item item parent">
-                                <a href="./services.html" class="item__link" target="_blank">
+                                <a href="./service.html" class="item__link" target="_blank">
                                     Доп. услуги
                                 </a>
                                 <button class="item__btn" aria-label="Раскрыть выпадающий список">
@@ -351,10 +390,13 @@
                     </h2>
                     <div class="projects__text text">
                         <p class="text__item">
-                            В каталоге представлены типовые проекты. Каждый из проектов дорабатывается под особенности участка и пожелания заказчика
+                            В&nbsp;каталоге представлены типовые проекты. Каждый из&nbsp;проектов дорабатывается под особенности участка и&nbsp;пожелания заказчика
                         </p>
-                        <a href="/" target="_blank" rel="noopener noreferrer" class="text__link button-invert">
-                            Больше проектов
+                        <a href="/" target="_blank" rel="noopener noreferrer" class="text__link link button-invert">
+                            <span class="link__text">Больше проектов</span>
+                            <svg class="link__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
                         </a>
                     </div>
                     <div class="projects__swiper-wrapper swiper-wrapper">
@@ -458,7 +500,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <!-- <a href="/" class="swiper-slide projects-slider__slide slide">
+                                <a href="/" class="swiper-slide projects-slider__slide slide">
                                     <div class="slide__img-wrapp">
                                         <img
                                             src="./app/img/projects/img-3.jpg"
@@ -488,7 +530,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                </a> -->
+                                </a>
                             </div>
                         </div>
                         <button aria-label="Следующий слайд" class="arrow arrow_next">
@@ -499,453 +541,374 @@
                     </div>
                 </div>
             </section>
-            <!-- ADVANTAGES -->
-            <!-- <section class="main-section__advantages advantages section-reset">
-                <div class="advantages__container container">
-                    <ul class="advantages__list list">
-                        <li class="list__item item delay-100 animation-left" data-scroll="800">
-                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-1.svg)"></div>
-                            <p class="item__descr">
-                                <strong>100&nbsp;000+ </strong>тонн перевалено в&nbsp;Новороссийске в&nbsp;2022 году
-                            </p>
-                        </li>
-                        <li class="list__item item delay-200 animation-left" data-scroll="800">
-                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-2.svg)"></div>
-                            <p class="item__descr">
-                                <strong>5000+ </strong>контейнеров отгружено в&nbsp;2022 году
-                            </p>
-                        </li>
-                        <li class="list__item item delay-300 animation-top" data-scroll="800">
-                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-3.svg)"></div>
-                            <p class="item__descr">
-                                <strong>Собственный </strong>автопарк грузовых автомобилей
-                            </p>
-                        </li>
-                        <li class="list__item item delay-400 animation-right" data-scroll="800">
-                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-4.svg)"></div>
-                            <p class="item__descr">
-                                <strong>Ключевой </strong>экспедитор нескольких линиях
-                            </p>
-                        </li>
-                        <li class="list__item item delay-500 animation-left" data-scroll="800">
-                            <div class="item__icon" style="background-image: url(./app/img/advantages/img-5.svg)"></div>
-                            <p class="item__descr">
-                                <strong>13&nbsp;лет </strong>на&nbsp;рынке логистических услуг
-                            </p>
-                        </li>
-                    </ul>
+            <!-- CALCULATOR -->
+            <section class="main-section__calculator calculator section-reset">
+                <div class="calculator__container container">
+                    <h2 class="calculator__title h-2">
+                        <span class="calculator__color color">Стоимость</span> строительства
+                    </h2>
+                    <p class="calculator__text">
+                        Калькулятор расчета стоимости строительства дома поможет вам произвести ориентировочный расчет основных затрат на&nbsp;возведение будущего дома
+                    </p>
+                    <div id="calculator" action="/" class="calculator__form form">
+                        <ul class="form__list list js-select-wrapper">
+                            <li class="list__item item">
+                                <p class="item__title"> Этажность </p>
+                                <div class="item__select select">
+                                    <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                    <div class="select__btn btn js-select-btn">
+                                        <span class="btn__text js-select-btn-text"> 1 этаж </span>
+                                        <span class="btn__arrow arrow">
+                                            <svg class="arrow__icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <ul class="select__list list js-select-list">
+                                        <li class="list__item js-select-item">
+                                            1 этаж
+                                        </li>
+                                        <li class="list__item js-select-item">
+                                            2 этаж
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list__item item">
+                                <p class="item__title"> Двери </p>
+                                <div class="item__select select">
+                                    <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                    <div class="select__btn btn js-select-btn">
+                                        <span class="btn__text js-select-btn-text"> Torex </span>
+                                        <span class="btn__arrow arrow">
+                                            <svg class="arrow__icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <ul class="select__list list js-select-list">
+                                        <li class="list__item js-select-item">
+                                            Torex
+                                        </li>
+                                        <li class="list__item js-select-item">
+                                            C терморазрывом
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list__item item">
+                                <p class="item__title"> Метраж </p>
+                                <label class="item__label">
+                                    <span data-val="100">
+                                        <input form="form-calculator" type="number" class="item__input js-input" value="100" oninput="this.parentElement.dataset.val = this.value">
+                                    </span>м<sup>2</sup>
+                                </label>
+                            </li>
+                            <li class="list__item item">
+                                <p class="item__title"> Инженерные сети </p>
+                                <div class="item__select select">
+                                    <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                    <div class="select__btn btn js-select-btn">
+                                        <span class="btn__text js-select-btn-text"> Без сетей </span>
+                                        <span class="btn__arrow arrow">
+                                            <svg class="arrow__icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <ul class="select__list list js-select-list">
+                                        <li class="list__item js-select-item">
+                                            Без сетей
+                                        </li>
+                                        <li class="list__item js-select-item">
+                                            Электричество
+                                        </li>
+                                        <li class="list__item js-select-item">
+                                            Скважина
+                                        </li>
+                                        <li class="list__item js-select-item">
+                                            Септик
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list__item item">
+                                <p class="item__title"> Внутренняя отделка </p>
+                                <div class="item__select select">
+                                    <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                    <div class="select__btn btn js-select-btn">
+                                        <span class="btn__text js-select-btn-text"> Без отделки </span>
+                                        <span class="btn__arrow arrow">
+                                            <svg class="arrow__icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <ul class="select__list list js-select-list">
+                                        <li class="list__item js-select-item">
+                                            Без отделки
+                                        </li>
+                                        <li class="list__item js-select-item">
+                                            С отделкой
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list__item item">
+                                <p class="item__title"> Фасад </p>
+                                <div class="item__select select">
+                                    <input form="form-calculator" class="js-input-select" type="hidden" name="type">
+                                    <div class="select__btn btn js-select-btn">
+                                        <span class="btn__text js-select-btn-text"> Без фасада </span>
+                                        <span class="btn__arrow arrow">
+                                            <svg class="arrow__icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <ul class="select__list list js-select-list">
+                                        <li class="list__item js-select-item">
+                                            Без фасада
+                                        </li>
+                                        <li class="list__item js-select-item">
+                                            Каменная вата
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="form__summa summa">
+                            <span class="summa__text">Итого: </span>
+                            <span class="summa__number">0 ₽</span>
+                        </div>
+                        <div id="submit-wrap" class="form__submit-calculator submit-calculator">
+                            <button id="submit-calculator" class="submit-calculator__btn button">
+                                Запросить смету по расчету
+                            </button>
+                            <form id="form-calculator" class="submit-calculator__form form" action="">
+                                <button id="form-calculator-btn" aria-label="Отправить заявку" type="submit" class="form__btn button">Отправить</button>
+                                <input class="form__input input" type="text" placeholder="Email*">
+                            </form>
+                        </div>
+                       
+                    </div>
+                    <div class="calculator__img"></div>
                 </div>
-            </section> -->
-            <!-- SERVICES -->
-            <!-- <section class="main-section__services services section-reset">
-                <div class="services__container container">
-                    <ul class="services__list list">
-                        <li class="list__item animation-right delay-300" data-scroll="800">
-                            <a class="list__link link" href="/" target="_blank">
-                                <img
-                                    src="/app/img/services/img-1.jpg"
-                                    alt="Международные перевозки"
-                                    title="Международные перевозки"
-                                    class="link__img link__img_hidden"
-                                />
-                                <img
-                                    src="/app/img/services/img-1.jpg"
-                                    alt="Международные перевозки"
-                                    title="Международные перевозки"
-                                    class="link__img"
-                                />
-                                <h3 class="link__title h-3"> Международные перевозки </h3>
-                                <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="list__item animation-right delay-300" data-scroll="800">
-                            <a class="list__link link" href="/" target="_blank">
-                                <img
-                                    src="/app/img/services/img-2.jpg"
-                                    alt="Внутрипортовое экспедирование"
-                                    title="Внутрипортовое экспедирование"
-                                    class="link__img link__img_hidden"
-                                />
-                                <img
-                                    src="/app/img/services/img-2.jpg"
-                                    alt="Внутрипортовое экспедирование"
-                                    title="Внутрипортовое экспедирование"
-                                    class="link__img"
-                                />
-                                <h3 class="link__title h-3"> Внутрипортовое экспедирование </h3>
-                                <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="list__item animation-right delay-300" data-scroll="800">
-                            <a class="list__link link" href="/" target="_blank">
-                                <img
-                                    src="/app/img/services/img-3.jpg"
-                                    alt="Складские услуги"
-                                    title="Складские услуги"
-                                    class="link__img link__img_hidden"
-                                />
-                                <img
-                                    src="/app/img/services/img-3.jpg"
-                                    alt="Складские услуги"
-                                    title="Складские услуги"
-                                    class="link__img"
-                                />
-                                <h3 class="link__title h-3"> Складские услуги </h3>
-                                <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="list__item animation-right delay-300" data-scroll="800">
-                            <a class="list__link link" href="/" target="_blank">
-                                <img
-                                    src="/app/img/services/img-4.jpg"
-                                    alt="Дистрибуция и доставка"
-                                    title="Дистрибуция и доставка"
-                                    class="link__img link__img_hidden"
-                                />
-                                <img
-                                    src="/app/img/services/img-4.jpg"
-                                    alt="Дистрибуция и доставка"
-                                    title="Дистрибуция и доставка"
-                                    class="link__img"
-                                />
-                                <h3 class="link__title h-3"> Дистрибуция и&nbsp;доставка</h3>
-                                <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="list__item animation-right delay-300" data-scroll="800">
-                            <a class="list__link link" href="/" target="_blank">
-                                <img
-                                    src="/app/img/services/img-5.jpg"
-                                    alt="Таможенное оформление"
-                                    title="Таможенное оформление"
-                                    class="link__img link__img_hidden"
-                                />
-                                <img
-                                    src="/app/img/services/img-5.jpg"
-                                    alt="Таможенное оформление"
-                                    title="Таможенное оформление"
-                                    class="link__img"
-                                />
-                                <h3 class="link__title h-3"> Таможенное оформление </h3>
-                                <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section> -->
-            <!-- FORM-MAIN -->
-            <!-- <section class="main-section__form-main form-main section-reset">
-                <div class="form-main__bg-img"></div>
-                <div class="form-main__container container">
-                    <h2 class="form-main__title h-2"> Оставить заявку </h2>
-                    <form action="/" class="form-main__form form">
-                        <ul class="form__list list">
-                            <li class="list__item animation-bottom delay-300" data-scroll="800">
-                                <input class="list__input" type="text" name="from" placeholder="Откуда*" required>
-                            </li>
-                            <li class="list__item animation-bottom delay-300" data-scroll="800">
-                                <input class="list__input" type="text" name="to" placeholder="Куда*" required>
-                            </li>
-                            <li class="list__item animation-bottom delay-300" data-scroll="800">
-                                <input class="list__input" type="number" name="phone" required placeholder="Телефон*">
-                            </li>
-                            <li class="list__item list__item_comment animation-bottom delay-300" data-scroll="800">
-                                <textarea class="list__textarea" name="comment" placeholder="Комментарий*"></textarea>
-                            </li>
-                            <li class="list__item animation-bottom delay-300" data-scroll="800">
-                                <button aria-label="Отправить заявку на расчёт" class="list__dtn button-invert btn">
-                                    <span class="btn__text"> Рассчитать </span>
-                                    <svg class="feedback__item-icon btn__icon">
+                <!-- SPOILER -->
+                <div class="calculator__spoiler spoiler">
+                    <div class="spoiler__container container">
+                        <ul class="spoiler__list list js-ac">
+                            <li class="list__item js-ac-item">
+                                <button class="list__text js-ac-btn">
+                                    <span> Что включено в стоимость? </span>
+                                    <svg class="list__icon">
                                         <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                     </svg>
                                 </button>
-                            </li>
-                            <li class="list__item list__item_checkbox animation-bottom delay-400" data-scroll="800">
-                                <label class="list__form-note form-note">
-                                    <input class="form-note__input" type="checkbox" checked />
-                                    <div class="form-note__checkbox"></div>
-                                    <p class="form-note__text">
-                                        Даю согласие на&nbsp;обработку персональных данных
-                                    </p>
-                                </label>
+                                <div class="list__descr js-ac-text">
+                                    <div class="list__content">
+                                        <p>
+                                            Quas, commodi rerum deleniti error magni veritatis! Error
+                                            explicabo hic <strong>ecusandae tempora placeat earum eius fugit ex</strong> neque.
+                                        </p>
+                                        <p>
+                                            Quas, commodi rerum deleniti error magni veritatis! Error
+                                            explicabo hic recusandae tempora placeat earum eius fugit ex
+                                            neque.
+                                        </p>
+                                        <p>
+                                            Quas, commodi rerum deleniti error magni veritatis! Error
+                                            explicabo hic recusandae tempora placeat earum eius fugit ex
+                                            neque.
+                                        </p>
+                                        <p>
+                                            Quas, commodi rerum deleniti error magni veritatis! Error
+                                            explicabo hic <a href="">recusandae</a>tempora placeat earum eius fugit ex
+                                            neque.
+                                        </p>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
-                    </form>
+                    </div>
                 </div>
-            </section> -->
-            <!-- RATES -->
-            <!-- <section class="main-section__rates rates section-reset">
-                <div class="rates__container container">
-                    <div class="rates__content content">
-                        <p class="content__descr animation-opacity delay-300" data-scroll="800">
-                            Примерные тарифы на&nbsp;наши услуги, Вы&nbsp;можете посмотреть здесь
-                        </p>
-                        <a href="/" class="content__link button-invert btn animation-opacity delay-400" data-scroll="800">
-                            <span class="btn__text"> Посмотреть </span>
-                            <svg class="btn__icon">
+            </section>
+            <!-- PORTFOLIO -->
+            <section class="main-section__portfolio portfolio section-reset">
+                <div class="portfolio__container container">
+                    <h2 class="portfolio__title h-2"> <span class="portfolio__color color">
+                        Готовые</span> объекты
+                    </h2>
+                    <p class="text">
+                        За&nbsp;все время работы возведено и&nbsp;сдано в&nbsp;эксплуатацию более 500&nbsp;объектов, вот некоторые из&nbsp;них
+                    </p>
+                    <div class="portfolio__swiper-wrapper swiper-wrapper">
+                        <button aria-label="Предыдущий слайд" class="arrow arrow_prev">
+                            <svg class="arrow__icon">
                                 <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                             </svg>
-                        </a>
+                        </button>
+                        <div class="swiper-wrapper__swiper swiper portfolio-slider">
+                            <div class="swiper-wrapper portfolio-slider__wrapper">
+                                <div class="swiper-slide portfolio-slider__slide slide">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/W2Q8JtCmRXM?si=e4lLuLDIykP5NJvz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                                <div class="swiper-slide portfolio-slider__slide slide">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LREJooayyOg?si=aUUlSy9t6IcWu4y5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+                                </div>
+                                <div class="swiper-slide portfolio-slider__slide slide">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/O9F8KvM4gtc?si=6Dt8pP0MXIN7n7zi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                                <div class="swiper-slide portfolio-slider__slide slide">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/O9F8KvM4gtc?si=6Dt8pP0MXIN7n7zi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <button aria-label="Следующий слайд" class="arrow arrow_next">
+                            <svg class="arrow__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-            </section> -->
-            <!-- CERTIFICATES -->
-            <!-- <section class="main-section__projects certificates section-reset">
-                <div class="certificates__container container">
-                    <div class="certificates__title-wrap title-wrap">
-                        <h2 class="title-wrap__header h-2 animation-left delay-300" data-scroll="800"> Нас рекомендуют </h2>
-                        <p class="title-wrap__descr animation-right delay-300" data-scroll="800"> Реальные отзывы о&nbsp;работе с&nbsp;нами </p>
-                    </div>
-                    <div class="certificates__swiper swiper certificates-slider animation-opacity delay-300" data-scroll="800">
-                        <div class="swiper-wrapper certificates-slider__wrapper">
-                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-1.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                   <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;БОЯСАН&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Поставщик электростатического порошкового покрытия на&nbsp;территории&nbsp;РФ
-                                </p>
-                            </a>
-                            <a href="./app/img/certificates/img-2.jpg" class="swiper-slide certificates-slider__slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-2.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                   <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;ЮГАГРОЭКСПОРТ&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Экспорт сельскохозяйственной продукции
-                                </p>
-                            </a>
-                            <a href="./app/img/certificates/img-3.jpg" class="swiper-slide certificates-slider__slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-3.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                   <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;АККОН РУС&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Международная морская линия
-                                </p>
-                            </a>
-                            <a href="./app/img/certificates/img-4.jpg" class="swiper-slide certificates-slider__slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-4.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                   <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;КОСМЕТИК ВИА&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Поставщик ингредиентов для производства косметической продукции на&nbsp;территории&nbsp;РФ
-                                </p>
-                            </a>
-                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-1.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                    <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;БОЯСАН&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Поставщик электростатического порошкового покрытия на&nbsp;территории&nbsp;РФ
-                                </p>
-                            </a>
-                            <a href="./app/img/certificates/img-2.jpg" class="swiper-slide certificates-slider__slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-2.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                   <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;ЮГАГРОЭКСПОРТ&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Экспорт сельскохозяйственной продукции
-                                </p>
-                            </a>
-                            <a href="./app/img/certificates/img-3.jpg" class="swiper-slide certificates-slider__slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-3.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                   <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;АККОН РУС&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Международная морская линия
-                                </p>
-                            </a>
-                            <a href="./app/img/certificates/img-4.jpg" class="swiper-slide certificates-slider__slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-4.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                   <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;КОСМЕТИК ВИА&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Поставщик ингредиентов для производства косметической продукции на&nbsp;территории&nbsp;РФ
-                                </p>
-                            </a>
-                            <a href="./app/img/certificates/img-1.jpg" class="swiper-slide certificates-slider__slide slide">
-                                <div class="slide__img-wrapp">
-                                    <img
-                                        src="./app/img/certificates/img-1.jpg"
-                                        class="slide__img swiper-img"
-                                    />
-                                   <span class="slide__icon-wrap">
-                                        <svg class="slide__icon">
-                                            <use xlink:href="/app/img/icons/icons.svg#eye"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <h3 class="slide__title">
-                                    ООО &laquo;БОЯСАН&raquo;
-                                </h3>
-                                <p class="slide__descr">
-                                    Поставщик электростатического порошкового покрытия на&nbsp;территории&nbsp;РФ
-                                </p>
-                            </a>
-                        </div>
-                        <div class="certificates-slider__arrow-wrap arrow-wrap">
-                            <button aria-label="Предыдущий слайд" class="arrow-wrap__arrow arrow arrow_prev animation-left delay-300" data-scroll="800">
-                                <svg class="arrow__icon">
+            </section>
+            <!-- FEEDBACK -->
+            <section class="main-section__feedback-main feedback-main">
+                <div class="feedback-main__container container">
+                    <div class="feedback-main__content content">
+                        <h2 class="content__title-hidden h-0"> Связаться с нами по обратной связи </h2>
+                        <h3 class="content__title h-2"><span class="content__title-color color">Хотите свой дом</span> и&nbsp;не&nbsp;знаете с&nbsp;чего начать?</h3>
+                        <p class="content__descr">
+                            Оставьте свой телефон, мы&nbsp;с&nbsp;Вами свяжемся и&nbsp;обо всем расскажем
+                        </p>
+                        <form action="" class="content__form form">
+                            <input class="form__input input-invert" type="number" placeholder="Введите ваш телефон">
+                            <button aria-label="Отправить заявку" type="submit" class="form__btn btn-icon">
+                                <svg class="btn-icon__icon">
                                     <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                 </svg>
                             </button>
-                            <button aria-label="Следующий слайд" class="arrow-wrap__arrow arrow arrow_next animation-right delay-300" data-scroll="800">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </button>
-                        </div>
-                        
+                        </form>
                     </div>
+                    <div class="feedback-main__img"></div>
                 </div>
-            </section> -->
-            <!-- CONTACTS -->
-            <!-- <section class="main-section__contacts contacts section-reset">
-                <div class="contacts__container container">
-                    <div class="contacts__content content">
-                        <h2 class="content__title h-2 animation-left delay-300" data-scroll="800"> Наши контакты </h2>
+            </section>
+            <!-- SERVICES -->
+            <section class="main-section__services services section-reset">
+                <div class="services__container container">
+                    <h2 class="services__title h-2">
+                        <span class="services__color color">Наши</span> услуги
+                    </h2>
+                    <p class="services__descr">
+                        Кроме строительства домов мы&nbsp;предоставляем все сопутствующие услуги
+                    </p>
+                    <div class="services__content content">
                         <ul class="content__list list">
-                            <li class="list__item item animation-left delay-300" data-scroll="800">
-                                <h3 class="item__title"> Адрес </h3>
-                                <a href="/" class="item__link">
-                                    <address class="item__link-address">
-                                        г. Новороссийск, ул. Леднева, д.&nbsp;5, строение&nbsp;4, оф. 2-4
-                                    </address>
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    <div class="link__descr descr">
+                                        <span class="descr__number"> 01 </span>
+                                        <p class="descr__item">
+                                            Строительство хоз. помещений
+                                        </p>
+                                    </div>
+                                    <div class="form__btn btn-icon">
+                                        <svg class="btn-icon__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </div>
                                 </a>
                             </li>
-                            <li class="list__item item animation-left delay-300" data-scroll="800">
-                                <h3 class="item__title"> Телефон </h3>
-                                <a href="tel:+79530900008" class="item__link">
-                                    8 (953) 090-00-08
-                                </a>
-                                <a href="tel:+79189419828" class="item__link">
-                                    8 (918) 941-98-28
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    <div class="link__descr descr">
+                                        <span class="descr__number"> 02 </span>
+                                        <p class="descr__item">
+                                            Строительство летних кухонь
+                                        </p>
+                                    </div>
+                                    <div class="form__btn btn-icon">
+                                        <svg class="btn-icon__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </div>
                                 </a>
                             </li>
-                            <li class="list__item item animation-left delay-300" data-scroll="800">
-                                <h3 class="item__title" > Мессенджеры </h3>
-                                <a class="item__link"  href="https://wa.me/+79530900008" target="_blank">
-                                    WhatsApp
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    <div class="link__descr descr">
+                                        <span class="descr__number"> 03 </span>
+                                        <p class="descr__item">
+                                            Строительство зон барбекю
+                                        </p>
+                                    </div>
+                                    <div class="form__btn btn-icon">
+                                        <svg class="btn-icon__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </div>
                                 </a>
-                                <a class="item__link" href="https://t.me/+79897637935" target="_blank">
-                                    Telegram
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    <div class="link__descr descr">
+                                        <span class="descr__number"> 04 </span>
+                                        <p class="descr__item">
+                                            Установка септиков
+                                        </p>
+                                    </div>
+                                    <div class="form__btn btn-icon">
+                                        <svg class="btn-icon__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    <div class="link__descr descr">
+                                        <span class="descr__number"> 05 </span>
+                                        <p class="descr__item">
+                                            Подбор земельных участков
+                                        </p>
+                                    </div>
+                                    <div class="form__btn btn-icon">
+                                        <svg class="btn-icon__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    <div class="link__descr descr">
+                                        <span class="descr__number"> 06 </span>
+                                        <p class="descr__item">
+                                            Кадастровые работы
+                                        </p>
+                                    </div>
+                                    <div class="form__btn btn-icon">
+                                        <svg class="btn-icon__icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="contacts__map map animation-right delay-300" data-scroll="800">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0fa48c4de99f5998eeeeaa24d0f19fd1993f49e4f434f474090abc8023d298c4&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
-                        <div class="map__img"></div>
+                        <div class="content__img"></div>
                     </div>
                 </div>
-            </section> -->
-            <!-- OVERLAY -->
+            </section>
+            <!-- FORM-CALLBACK -->
             <article class="modal form-callback" id="form-callback">
                 <div class="form-callback__box modal-box">
                     <button aria-label="Закрыть окно обратной связи" class="form-callback__close-btn modal-close js-close-modal"></button>
-                    <h3 class="form-callback__title modal-title"> Связаться с нами </h3>
+                    <h3 class="form-callback__title modal-title"> <span class="modal-title__color color">Связаться</span> с нами </h3>
 
                     <form action="" class="form form__form-callback form-mod">
                         <div class="form-callback__wrap-input wrap-input">
-                            <input data-min-length="2" data-max-length="25" class="wrap-input__input js-input" type="text" placeholder="Имя*">
-                            <input data-min-length="2" data-max-length="25" class="wrap-input__input js-input" type="text" placeholder="Email*">
+                            <input class="wrap-input__input input" type="text" placeholder="Имя*">
+                            <input class="wrap-input__input input" type="text" placeholder="Email*">
                             <label class="wrap-input__item form-note">
                                 <input class="form-note__input" type="checkbox" checked />
                                 <div class="form-note__checkbox"></div>
@@ -970,58 +933,131 @@
             </article>
         </main>
         <!-- FOOTER -->
-        <!-- <footer class="home-page__footer footer animation-opacity delay-300" data-scroll="1000">
+        <footer class="home-page__footer footer">
             <div class="footer__container container">
-                <a href="/" title="логотип LGM" class="footer__link-logo">
-                    <img
-                        class="footer__logo"
-                        src="/app/img/logo.svg"
-                        alt="логотип LGM"
-                        title="логотип LGM"
-                    />
-                </a>
-                <nav class="content__menu menu">
-                    <ul class="menu__list list">
-                        <li class="list__item active">
-                            <a href="/" class="list__link"> Главная </a>
-                        </li>
-                        <li class="list__item">
-                            <a href="/" class="list__link"> О нас </a>
-                        </li>
-                        <li class="list__item">
-                            <a href="/" class="list__link"> Услуги </a>
-                        </li>
-                        <li class="list__item">
-                            <a href="/" class="list__link"> Тарифы </a>
-                        </li>
-                        <li class="list__item">
-                            <a href="/" class="list__link"> Контакты </a>
-                        </li>
-                    </ul>
-                </nav>
-                <a class="footer__link" href="https://web2.agency/" target="_blank">
-                    Создание сайтов WEB2
-                </a>
+                <div class="footer__top footer-top">
+                    <a href="/" title="Новострой гаран" class="footer-top__logo logo">
+                        <img
+                            class="logo__img"
+                            src="/app/img/logo-reverse.svg"
+                            alt="Новострой гарант"
+                            title="Новострой гарант"
+                        />
+                    </a>
+                    <div class="footer-top__content content">
+                        <!-- LIST-CONTACTS -->
+                        <ul class="content__list-contacts list-contacts content-item">
+                            <li class="list-contacts__item item item_title">
+                                <p class="item__title footer-title"> Контакты </p>
+                            </li>
+                            <li class="list-contacts__item item list-contacts__item_address">
+                                <p class="item__descr"> Адрес </p>
+                                <a href="/" class="item__link link">
+                                    ул. ​Кутузовская 10, БЦ&nbsp;&laquo;Кутузовский&raquo; 
+                                </a>
+                                <p class="item__descr item__descr_last"> (по предварительной записи) </p>
+                            </li>
+                            <li class="list-contacts__item item list-contacts__item_phone">
+                                <p class="item__descr"> Телефон </p>
+                                <a href="tel:+79528150000" class="item__link link">
+                                    +7 (952) 815-00-00
+                                </a>
+                            </li>
+                            <li class="list-contacts__item item list-contacts__item_phone">
+                                <p class="item__descr"> Почта </p>
+                                <a href="mailto:novostroy-garant@ya.ru" class="item__link link">
+                                    novostroy-garant@ya.ru
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- MENU -->
+                        <nav class="content__menu menu content-item">
+                            <p class="menu__title footer-title"> Меню </p>
+                            <ul class="menu__list list">
+                                <li class="list__item active">
+                                    <a href="/" class="list__item-link link">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="/" class="list__item-link link">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="/" class="list__item-link link">
+                                        Проекты домов
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="/" class="list__item-link link">
+                                        Портфолио
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="/" class="list__item-link link">
+                                        Доп. услуги
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- LIST-SOCIAL -->
+                        <ul class="content__list-social list-social content-item">
+                            <li class="list-contacts__item item item_title">
+                                <p class="item__title footer-title"> Социальные сети </p>
+                            </li>
+                            <li class="list-contacts__item item list-contacts__item_address">
+                                <a href="https://wa.me/+79528150000" target="_blank" class="item__link link">
+                                    WhatsApp
+                                </a>
+                            </li>
+                            <li class="list-contacts__item item list-contacts__item_address">
+                                <a href="https://t.me/+79528150000" class="item__link link" target="_blank">
+                                    Telegram
+                                </a>
+                            </li>
+                            <li class="list-contacts__item item list-contacts__item_address">
+                                <a href="https://www.youtube.com/@user-se3vj1cz1d" class="item__link link" target="_blank">
+                                    YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copyright copyright">
+                    <p class="copyright__text item">
+                        Все права защищены copyright &copy;&nbsp;2023
+                    </p>
+                    <a class="copyright__link link item" href="https://web2.agency/" target="_blank">
+                        Пользовательское соглашение
+                    </a>
+                    <a class="copyright__link link item" href="https://web2.agency/" target="_blank">
+                        <svg class="link__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                        </svg>
+                        <span class="link__text"> Создание сайтов </span>
+                    </a>
+                </div>
             </div>
-        </footer> -->
+        </footer>
         <!-- SOCIAL PANEL -->
         <ul class="home-page__social-panel social-panel">
             <li class="social-panel__item">
-                <a aria-label="Ссылка на WhatsApp" href="https://wa.me/+79528150000" class="social-panel__link">
+                <a aria-label="Ссылка на WhatsApp" target="_blank" href="https://wa.me/+79528150000" class="social-panel__link">
                     <svg class="social-panel__icon">
                         <use xlink:href="/app/img/icons/icons.svg#wa"></use>
                     </svg>
                 </a>
             </li>
             <li class="social-panel__item">
-                <a aria-label="Ссылка на Telegram" href="https://t.me/+79528150000" class="social-panel__link">
+                <a aria-label="Ссылка на Telegram" target="_blank" href="https://t.me/+79528150000" class="social-panel__link">
                     <svg class="social-panel__icon">
                         <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                     </svg>
                 </a>
             </li>
             <li class="social-panel__item">
-                <a aria-label="Ссылка на калькулятор" href="/" class="social-panel__link">
+                <a aria-label="Ссылка на калькулятор" target="_blank" href="/" class="social-panel__link">
                     <svg class="social-panel__icon">
                         <use xlink:href="/app/img/icons/icons.svg#calc"></use>
                     </svg>
@@ -1040,11 +1076,8 @@
         <script src="/app/js/libs/swiper-bundle.min.js"></script>
         <script src="/app/js/libs/webp.js"></script>
         <script src="/app/js/libs/modal-window.js"></script>
-        <script src="/app/js/libs/scroll-library.js"></script>
-        <!-- <script src="/app/js/libs/SmoothScroll.min.js" crossorigin="anonymous"></script> -->
-        <!-- <script src="/app/js/libs/ScrollTrigger.min.js"></script> -->
-        <!-- <script src="/app/js/libs/gsap.min.js"></script> -->
-        <script src="/app/js/main.min.js"></script>
+        <script src="/app/js/libs/calculator.js"></script>
         <!-- <script src="/app/js/main.js"></script> -->
+        <script src="/app/js/main.min.js"></script>
     </body>
 </html>

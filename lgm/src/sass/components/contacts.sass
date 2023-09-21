@@ -91,7 +91,12 @@
 					.item__link
 						font-weight: 400
 
-				&:not(:first-child)
+				&:nth-child(2)
+					flex: 0 0 70%
+					margin-bottom: 45px
+
+				.item:not(:first-child),
+				.item:not(:nth-child(2))
 					flex: 0 0 42%
 					margin-right: 20px
 

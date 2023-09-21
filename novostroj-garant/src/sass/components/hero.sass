@@ -26,7 +26,7 @@
 
   &__container
     padding-top: 86px
-    padding-bottom: 44px
+    padding-bottom: 39px
     z-index: 3
 
     +small
@@ -61,6 +61,7 @@
       margin-bottom: 20px
 
     .btn
+
       &:not(:last-child)
         margin-right: 20px
         
@@ -68,8 +69,17 @@
           margin-right: 0
           margin-bottom: 15px
 
+      &:last-child
+        padding: 15px 29px
+        max-width: 289px
+
+        +phone
+          max-width: 100%
+          width: 100%
+
   .list
     display: flex
+    flex-wrap: wrap
 
     +phone
       flex-direction: column
@@ -98,6 +108,3 @@
 
     &__item-text
       @include textReset
-
-      // +phone
-      //   font-size: 14px

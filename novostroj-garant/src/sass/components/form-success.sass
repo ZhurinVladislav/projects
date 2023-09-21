@@ -4,16 +4,21 @@
 	align-items: center
 	font-weight: 600
 	font-size: 50px
-	text-transform: uppercase
+	// text-transform: uppercase
 	text-align: center
+	color: $clr_2
 
 	+small
-		padding: 20px
 		width: 100%
 		font-size: 30px
 
 	+phone
 		font-size: 25px
+
+	&__box
+		&.modal-box
+			+phone
+				padding: 30px
 
 	.form-success__descr
 		@include textReset
@@ -21,10 +26,13 @@
 		color: $clr_3
 		font-family: $ff_1
 
+		+phone
+			margin-bottom: 15px
+
 	.form-success__descr.last
 		margin: 0
 		font-size: 24px
-		color: $clr_1
+		color: $clr_2
 
 		+phone
 			font-size: 20px

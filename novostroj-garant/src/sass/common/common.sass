@@ -80,7 +80,7 @@ body.menu-open
     overflow: hidden
 
 
-h1,h2,h3,h4,h5,h6,p,span,address,small,strong,a,ul,li,ol,button
+h1,h2,h3,h4,h5,h6,p,span,address,small,strong,a,ul,li,ol,button,input,textarea,img,svg
   &::selection
     background-color: $clr_3
     color: $clr_2
@@ -162,17 +162,42 @@ input[type='number']
   display: flex
   list-style: none
   margin: 0
-  font-size: 18px
+  margin-bottom: 20px
+  max-width: max-content
+  background-color: rgba($clr_3, .1)
+  border-radius: 8px
+  font-size: 16px
+  overflow: hidden
 
   +phone
-    font-size: 16px
+    font-size: 14px
 
   li
-    color: $clr_1
-    transition: color .2s linear
+    position: relative
+    color: $clr_2
+    padding: 10px
+    transition: color .2s linear, background-color .2s linear
+
+    &:not(:last-child)
+
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        right: -2px
+        z-index: 2
+        width: 5px
+        height: 1px
+        background-color: $clr_2
+        transform: translateY(50%)
+
+    &.active
+      &:hover
+        background-color: $clr_0
 
     &:hover
-      color: $clr_5
+      color: $clr_3
+      background-color: $clr_1
 
   li.active
     color: $clr_2
@@ -180,7 +205,7 @@ input[type='number']
 .color
   color: $clr_3
 
-.seo-title
+.h-0
   position: absolute
   clip: rect(0,0,0,0)
   margin: -1px
@@ -231,10 +256,9 @@ input[type='number']
   margin-bottom: 30px
   font-family: $ff_1
   font-size: 26px
-  font-weight: 400
+  font-weight: 700
   line-height: 1.2
-  color: $clr_1
-  text-transform: uppercase
+  color: $clr_2
 
   +phone
     font-size: 20px
@@ -247,7 +271,6 @@ input[type='number']
   font-weight: 700
   line-height: 1.2
   color: $clr_2
-  text-transform: uppercase
 
 .h-5
   @include textReset
@@ -257,7 +280,6 @@ input[type='number']
   font-weight: 700
   line-height: 1.2
   color: $clr_2
-  text-transform: uppercase
 
 .h-6
   @include textReset
@@ -287,7 +309,7 @@ input[type='number']
   display: flex
   justify-content: center
   align-items: center
-  padding: 18px 30px
+  padding: 16px 30px
   color: $clr_1
   max-width: 227px
   width: 100%
@@ -331,6 +353,213 @@ input[type='number']
     width: 100%
     font-size: 15px
 
+.input
+  padding: 14px 20px
+  width: 100%
+  min-height: 55px
+  border: 2px solid rgba($clr_5, .5)
+  background-color: $clr_0
+  border-radius: 8px
+  line-height: 1.1
+  color: $clr_2
+  transition: border-color .2s linear
+
+  +phone
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: red
+
+    &:hover
+      border-color: red
+
+    &:focus
+      border-color: red
+
+  &:hover
+    border-color: $clr_3
+
+  &:focus
+    border-color: $clr_3
+
+    &::-webkit-input-placeholder
+      opacity: 0
+
+    &::-moz-placeholder
+      opacity: 0
+
+    &:-ms-input-placeholder
+      opacity: 0
+
+    &:-moz-placeholder
+      opacity: 0
+
+  &::-webkit-input-placeholder
+    color: $clr_2
+    line-height: 1.1
+    transition: opacity .2s linear
+
+  &::-moz-placeholder
+    color: $clr_2
+    line-height: 1.1
+    transition: opacity .2s linear
+
+  &:-ms-input-placeholder
+    color: $clr_2
+    line-height: 1.1
+    transition: opacity .2s linear
+
+  &:-moz-placeholder
+    color: $clr_2
+    line-height: 1.1
+    transition: opacity .2s linear
+
+.input-invert
+  padding: 18px 20px
+  width: 100%
+  min-height: 55px
+  background-color: $clr_0
+  border: 2px solid $clr_1
+  border-radius: 8px
+  line-height: 1.1
+  color: $clr_1
+  transition: border-color .2s linear
+
+  +phone
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: red
+
+    &:hover
+      border-color: red
+
+    &:focus
+      border-color: red
+
+  &:hover
+    border-color: $clr_3
+
+  &:focus
+    border-color: $clr_3
+
+    &::-webkit-input-placeholder
+      opacity: 0
+
+    &::-moz-placeholder
+      opacity: 0
+
+    &:-ms-input-placeholder
+      opacity: 0
+
+    &:-moz-placeholder
+      opacity: 0
+
+  &::-webkit-input-placeholder
+    color: $clr_1
+    line-height: 1.2
+    transition: opacity .2s linear
+
+  &::-moz-placeholder
+    color: $clr_1
+    line-height: 1.2
+    transition: opacity .2s linear
+
+  &:-ms-input-placeholder
+    color: $clr_1
+    line-height: 1.2
+    transition: opacity .2s linear
+
+  &:-moz-placeholder
+    color: $clr_1
+    line-height: 1.2
+    transition: opacity .2s linear
+
+.form-note
+  position: relative
+  display: block
+  cursor: pointer
+
+  &:hover
+    .form-note__checkbox
+
+      &::after
+        background-color: $clr_3
+
+    .form-note__text
+      color: $clr_3
+
+  &__input
+    display: none
+
+    &:checked + .form-note__checkbox
+      &::after
+        opacity: 1
+        visibility: visible
+
+  &__checkbox
+    flex-shrink: 0
+    display: inline-flex
+    position: absolute
+    top: 5px
+    left: 0
+    width: 16px
+    height: 16px
+    border: 1px solid $clr_2
+    border-radius: 4px
+    cursor: pointer
+    transition: border-color .2s linear
+
+    &::after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 10px
+      height: 10px
+      border-radius: 2px
+      background-color: $clr_2
+      transform: translate(-50%,-50%)
+      visibility: hidden
+      opacity: 0
+      transition: opacity .2s linear, visibility .2s linear, background-color .2s linear
+
+  &__text
+    display: inline-block
+    @include textReset
+    padding-left: 24px
+    max-width: 355px
+    font-size: 14px
+    transition: color .2s linear
+
+    +phone
+      font-size: 12px
+
+.btn-icon
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-shrink: 0
+  width: 56px
+  height: 56px
+  background-color: $clr_3
+  border: 2px solid $clr_3
+  border-radius: 8px
+  transition: background-color .2s linear, border-color .2s linear
+
+  &:hover
+    background-color: $clr_0
+    border-color: $clr_1
+
+  &__icon
+    width: 16px
+    height: 16px
+    fill: $clr_1
+    transform: rotate(-90deg)
+    transition: fill .2s linear
+
 // СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ
 .text-default
   line-height: 1.3
@@ -338,9 +567,8 @@ input[type='number']
   h1
     @include textReset
     font-family: $ff_1
-    font-weight: 400
+    font-weight: 700
     font-size: 60px
-    text-transform: uppercase
 
     +medium
       font-size: 45px
@@ -355,9 +583,8 @@ input[type='number']
     @include textReset
     font-family: $ff_1
     margin-bottom: 20px
-    font-weight: 400
+    font-weight: 700
     font-size: 40px
-    text-transform: uppercase
 
     +medium
       font-size: 34px
@@ -375,8 +602,7 @@ input[type='number']
     font-family: $ff_1
     margin-bottom: 20px
     font-size: 30px
-    font-weight: 400
-    text-transform: uppercase
+    font-weight: 700
 
     +medium
       font-size: 24px
@@ -391,10 +617,9 @@ input[type='number']
     @include textReset
     font-family: $ff_1
     font-size: 20px
-    font-weight: 400
+    font-weight: 700
     line-height: 1.3
     color: $clr_2
-    text-transform: uppercase
 
     +medium
       font-size: 24px
@@ -415,21 +640,13 @@ input[type='number']
         margin-bottom: 15px
 
   a
-    position: relative
+    font-weight: 700
     color: $clr_3
-
-    &::before
-      content: ''
-      position: absolute
-      bottom: 2px
-      width: 100%
-      height: 2px
-      background-color: $clr_3
-      transition: opacity .2s linear, transform .2s linear, width .2s linear
+    border-bottom: 2px solid $clr_0
+    transition: border-color .2s linear
 
     &:hover
-      &::before
-        width: 0
+      border-color: $clr_3
 
   img
     +phone
@@ -450,7 +667,7 @@ input[type='number']
         font-family: $ff_1
         font-size: 18px
         font-weight: 600
-        color: $clr_5
+        color: $clr_3
 
     li:not(:last-child)
       margin-bottom: 10px
@@ -468,7 +685,7 @@ input[type='number']
         font-family: $ff_1
         font-size: 18px
         font-weight: 600
-        color: $clr_5
+        color: $clr_3
 
     li:not(:last-child)
       margin-bottom: 10px
@@ -541,7 +758,7 @@ input[type='number']
   transition: background-color .2s linear, transform .2s linear, opacity .2s linear 
 
   +medium
-    bottom: 10px
+    bottom: 50px
 
   &_active
     opacity: 0
@@ -573,6 +790,10 @@ input[type='number']
   justify-content: center
   align-items: center
 
+  +small
+    top: auto
+    bottom: 15vh
+
   &__item
 
     &:not(:last-child)
@@ -600,10 +821,13 @@ input[type='number']
 .pagination
   display: flex
   justify-content: center
-  padding-top: 40px
+  padding: 10px
   font-family: $ff_1
-  font-size: 20px
+  font-size: 18px
+  max-width: max-content
   color: $clr_2
+  background-color: rgba($clr_3, .1 )
+  border-radius: 8px
 
   +phone
     font-size: 16px

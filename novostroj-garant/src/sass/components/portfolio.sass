@@ -1,0 +1,104 @@
+.portfolio
+
+	.text
+		@include textReset
+		margin-bottom: 32px
+		max-width: 534px
+
+		+phone
+			margin-bottom: 20px
+
+	.swiper-wrapper
+
+		.portfolio-slider
+			position: relative
+
+			.swiper-slide
+				position: relative
+				font-size: 0
+				overflow: hidden
+
+			.swiper-slide
+				user-select: none
+
+			.slide
+				border-radius: 8px
+				overflow: hidden
+				background-color: $clr_3
+
+				iframe
+					height: 237px
+
+					+phone
+						height: 300px
+
+		.arrow
+			position: absolute
+			top: 50%
+			bottom: 50%
+			z-index: 3
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 52px
+			height: 52px
+			background-color: $clr_3
+			border: 2px solid $clr_3
+			border-radius: 8px
+			transition: background-color .2s linear
+
+			+small
+				width: 40px
+				height: 40px
+
+			&.swiper-button-disabled
+				opacity: .5
+				cursor: auto
+
+				&:hover
+					background-color: $clr_3
+					border: 2px solid $clr_3
+
+					.arrow__icon
+						fill: $clr_1
+						
+						+small
+							fill: $clr_3
+
+					+small
+						background-color: $clr_1
+						border-color: $clr_1
+
+			+small
+				background-color: $clr_1
+				border-color: $clr_1
+
+			&:hover
+				background-color: $clr_1
+
+				.arrow__icon
+					fill: $clr_3
+
+			&__icon
+				flex-shrink: 0
+				width: 16px
+				height: 16px
+				fill: $clr_1
+				transition: fill .2s linear
+
+				+small
+					fill: $clr_3
+
+			&_prev
+				left: -26px
+				transform: translateY(-50%) rotate(90deg)
+
+				+max(1379px)
+					left: 0
+
+			&_next
+				right: -26px
+				transform: translateY(-50%) rotate(-90deg)
+
+				+max(1379px)
+					right: 0

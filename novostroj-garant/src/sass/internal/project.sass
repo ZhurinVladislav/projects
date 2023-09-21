@@ -1,0 +1,434 @@
+.project
+	margin-bottom: 150px
+
+	+small
+		margin-bottom: 80px
+
+	.content-top
+		display: flex
+		margin-bottom: 30px
+
+		+small
+			flex-wrap: wrap
+
+		.swiper-slide
+			font-size: 0
+			background-color: $clr_4
+
+		&__img-wrapp
+			max-height: 400px
+
+		.swiper-slide .swiper-img
+			max-width: 100%
+			width: 100%
+			min-height: 100%
+			object-fit: cover
+
+		.swiper-slide
+			cursor: pointer
+			user-select: none
+
+		.slider
+			display: flex
+			flex-direction: column
+			max-width: 50%
+			max-height: 60vh
+			margin-right: 40px
+			overflow: hidden
+
+			+small
+				max-width: 100%
+				margin-right: 0
+				margin-bottom: 30px
+
+			.slider-top
+				margin-bottom: 20px
+				width: 100%
+				height: 80%
+				border-radius: 8px
+
+				&__link
+					display: flex
+					width: 100%
+					height: 100%
+
+				&__slide
+
+					&:hover
+						.slider-top__img
+							transform: scale(1.1)
+
+				&__img
+					transition: transform .3s linear
+
+				.arrow
+					position: absolute
+					z-index: 10
+					top: 50%
+					display: flex
+					align-items: center
+					justify-content: center
+					padding: 10px
+					width: 52px
+					height: 52px
+					background-color: $clr_3
+					border: 2px solid $clr_3
+					border-radius: 10px
+					fill: $clr_1
+					transform: translateY(-50%) rotate(90deg)
+					transition: background-color .2s linear
+
+					&.swiper-button-disabled
+						background-color: rgba($clr_2, .5)
+						border-color: rgba($clr_2, .5)
+						fill: rgba($clr_1, .5)
+						cursor: auto
+
+						&:hover
+							background-color: rgba($clr_2, .5)
+
+					&__icon
+						flex-shrink: 0
+						width: 16px
+						height: 16px
+
+					&:hover
+						background-color: rgba($clr_3, .8)
+
+					&_prev
+						left: 10px
+
+						+phone
+							left: 0
+
+					&_next
+						right: 10px
+						transform: translateY(-50%) rotate(-90deg)
+						
+						+phone
+							right: 0
+
+			.slider-bottom
+				width: 100%
+				height: 20%
+				box-sizing: border-box
+				border-radius: 8px
+
+				&__slide
+					opacity: .4
+					border-radius: 8px
+					overflow: hidden
+					transition: opacity .3s linear
+
+					&:hover
+						opacity: 1
+
+					&__img
+						border-radius: 20px
+
+					&.swiper-slide-thumb-active
+						opacity: 1
+
+		.descr
+			max-width: 50%
+
+			+small
+				max-width: 100%
+
+			&__title
+				margin-bottom: 15px
+				font-size: 30px
+
+				+phone
+					font-size: 25px
+					margin-bottom: 10px
+				
+			&__price
+				margin-bottom: 20px
+				font-size: 30px
+				font-weight: 600
+				color: $clr_2
+
+				+phone
+					margin-bottom: 15px
+					font-size: 25px
+
+			&__currency
+				color: $clr_3
+
+			&__btn
+				max-width: 500px
+				// padding: 14px 27px
+				font-size: 16px
+
+			.list
+				margin-bottom: 20px
+
+				&__item
+
+					&:not(:last-child)
+						margin-bottom: 15px
+
+				&__point
+					font-weight: 700
+
+	.content-bottom
+		margin-bottom: 20px
+
+		+phone
+			margin-bottom: 30px
+
+		&__title
+			margin-bottom: 30px
+
+		&__text
+			margin-bottom: 40px
+			color: $clr_2
+			
+			+phone
+				margin-bottom: 20px
+
+		&__btn
+			padding: 14px 27px
+			font-size: 16px
+
+			+phone
+				margin: 0 auto
+
+	.similar-projects
+
+		.title-wrap
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 30px
+
+			+small
+				flex-direction: column
+				align-items: flex-start
+				justify-content: flex-start
+				margin-bottom: 20px
+
+
+			&__title
+				margin-bottom: 0
+
+			.link
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 14px 30px
+				max-width: 245px
+
+				+phone
+					max-width: 100%
+
+				&:hover
+					.link__icon
+						fill: $clr_1
+
+				&__text
+					margin-right: 10px
+
+				&__icon
+					flex-shrink: 0
+					width: 16px
+					height: 16px
+					fill: $clr_3
+					transform: rotate(-90deg)
+					transition: fill .2s linear
+
+		.swiper-wrapper
+
+			.similar-projects-slider
+				position: relative
+				display: flex
+
+				.swiper-slide
+					position: relative
+					font-size: 0
+					overflow: hidden
+
+				.swiper-slide
+					user-select: none
+
+				.slide
+					border-radius: 8px
+					overflow: hidden
+					background-color: $clr_3
+
+					&:hover
+						.slide__img
+							transform: scale(1.1)
+
+						.slide__img-wrapp
+							&::before
+								transform: translateX(0)
+								opacity: 1
+
+
+					&__img-wrapp
+						position: relative
+						border-radius: 8px
+						box-shadow: 0px 14px 20px 0px rgba(49, 62, 71, 0.20)
+						overflow: hidden
+
+						&::before
+							content: ''
+							position: absolute
+							z-index: 2
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+							transform: translateX(-25px)
+							background-color: rgba($clr_3, .3)
+							opacity: 0
+							transition: transform .2s linear, opacity .2s linear
+
+					&__img
+						position: relative
+						max-width: 100%
+						width: 100%
+						min-height: 100%
+						object-fit: cover
+						transition: transform .2s linear
+
+					.descr
+						display: flex
+						flex-direction: column
+						justify-content: space-between
+						padding: 20px
+						min-height: 180px
+						color: $clr_1
+						background-color: $clr_3
+
+						&__title
+							@include textReset
+							margin-bottom: 12px
+							font-weight: 700
+							font-size: 20px
+							line-height: 1.2
+
+						&__text
+							@include textReset
+							font-weight: 400
+							font-size: 16px
+							line-height: 1.3
+
+					.content-bottom
+						display: flex
+						justify-content: space-between
+						margin-top: auto
+
+						.list
+							display: flex
+							margin-right: 10px
+							
+							&__item
+								display: flex
+								align-items: center
+								justify-content: center
+								padding: 12px 24px
+								font-weight: 600
+								font-size: 14px
+								line-height: .8
+								color: $clr_3
+								border-radius: 8px
+								background-color: $clr_1
+
+								&:not(:last-child)
+									margin-right: 10px
+
+						.arrow-wrapp
+							display: flex
+							align-items: center
+							justify-content: center
+							width: 35px
+							height: 35px
+							background-color: $clr_0
+							border: 2px solid $clr_1
+							border-radius: 8px
+							transition: background-color .2s linear
+							
+							&:hover
+								background-color: $clr_1
+
+								.arrow-wrapp__icon
+									fill: $clr_3
+
+							&__icon
+								flex-shrink: 0
+								width: 11px
+								height: 11px
+								fill: $clr_1
+								transform: rotate(-90deg)
+								transition: fill .2s linear
+
+			.arrow
+				position: absolute
+				top: 50%
+				bottom: 50%
+				z-index: 3
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 52px
+				height: 52px
+				background-color: $clr_3
+				border: 2px solid $clr_3
+				border-radius: 8px
+				transition: background-color .2s linear
+
+				&.swiper-button-disabled
+					opacity: .5
+					cursor: auto
+
+					&:hover
+						background-color: $clr_3
+						border: 2px solid $clr_3
+
+						.arrow__icon
+							fill: $clr_1
+							
+							+small
+								fill: $clr_3
+
+						+small
+							background-color: $clr_1
+							border-color: $clr_1
+
+				+small
+					background-color: $clr_1
+					border-color: $clr_1
+					
+
+				&:hover
+					background-color: $clr_1
+
+					.arrow__icon
+						fill: $clr_3
+
+				&__icon
+					flex-shrink: 0
+					width: 16px
+					height: 16px
+					fill: $clr_1
+					transition: fill .2s linear
+
+					+small
+						fill: $clr_3
+
+				&_prev
+					left: -26px
+					transform: translateY(-50%) rotate(90deg)
+
+					+max(1379px)
+						left: 0
+
+				&_next
+					right: -26px
+					transform: translateY(-50%) rotate(-90deg)
+
+					+max(1379px)
+						right: 0

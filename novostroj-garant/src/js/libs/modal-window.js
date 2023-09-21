@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       modalArr.forEach(e => {
         e.addEventListener('click', e => {
+          console.log(e);
           if (e._isClickWithInModal) return;
           e.currentTarget.classList.remove('open');
           html.classList.remove(`mod-open`);

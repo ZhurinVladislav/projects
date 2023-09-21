@@ -1,0 +1,53 @@
+.contacts
+	.content
+		display: flex
+
+		+phone
+			flex-direction: column
+
+		.list
+			flex: 0 0 30%
+			margin-right: 10px
+
+			+phone
+				flex: 0 0 100%
+				margin-right: 0
+				margin-bottom: 20px
+
+			.item
+				display: flex
+				flex-direction: column
+
+				&:not(:last-child)
+					margin-bottom: 20px
+
+				&__title
+					@include textReset
+					margin-bottom: 10px
+
+				&__link
+					max-width: max-content
+					transition: color .2s linear
+
+					&:not(:last-child)
+						margin-bottom: 10px
+
+					&:hover
+						color: $clr_3
+
+				&__descr
+					@include textReset
+					font-weight: 300
+					font-size: 14px
+					color: $clr_3
+
+		.map
+			flex: 0 0 70%
+			min-height: 400px
+
+			+phone
+				flex: 0 0 100%
+				min-height: 350px
+
+			iframe
+				min-height: 350px

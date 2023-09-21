@@ -13,6 +13,17 @@
   min-height: 102px
   transition: backdrop-filter .2s linear
 
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($clr_2, .7)
+    backdrop-filter: blur(6px)
+    transition: backdrop-filter .2s linear
+
   &.menu-active
     backdrop-filter: none
 
@@ -21,8 +32,6 @@
     animation-name: fadeInUp
     animation-duration: 1s
     z-index: 500
-    background-color: rgba($clr_2, .7)
-    backdrop-filter: blur(6px)
 
   +large
     font-size: 18px
@@ -85,6 +94,9 @@
 
         +medium
           margin-right: 20px
+
+    // &__link-item
+    //   padding-bottom: 10px
 
     &__item
 
@@ -151,6 +163,8 @@
     &__link
       position: relative
       overflow: hidden
+      margin-bottom: 10px
+      padding-top: 10px
 
       &::before
         content: ''
@@ -167,17 +181,21 @@
     // ВЫПАДАЮЩИЙ СПИСОК НА ДЕСКТОПЕ
     .list-inner
       position: absolute
-      top: 22px
+      top: 45px
       left: 0
       z-index: 100
-      opacity: 0
-      visibility: hidden
+      display: flex
+      flex-direction: column
       padding: 10px
       width: 258px
-      background-color: $clr_4
+      background-color: rgba($clr_1, .3)
+      backdrop-filter: blur(10px)
       font-size: 16px
+      color: $clr_1
+      opacity: 0
+      visibility: hidden
       transform: translateY(50px)
-      transition: visibility .2s linear, opacity .3s linear, transform .2s linear
+      transition: visibility .2s linear, opacity .3s linear, transform .2s linear, backdrop-filter .2s linear
 
       .menu__item
         position: relative
@@ -206,7 +224,7 @@
             bottom: 0
             width: 95%
             height: 1px
-            background-color: rgba($clr_1, .4)
+            background-color: $clr_1
 
       &__link-item
         transition: color .2s ease-in-out

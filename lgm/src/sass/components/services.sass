@@ -6,8 +6,8 @@
       margin-bottom: 80px
 
     .list
-      grid-template-columns: repeat(auto-fill, minmax(265px, 1fr))
-      grid-auto-rows: minmax(300px, auto)
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+      grid-auto-rows: minmax(378px, auto)
       gap: 10px
 
       +small
@@ -25,22 +25,36 @@
   +phone
     margin-bottom: 40px
 
+  // .list
+  //   display: grid
+  //   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
+  //   grid-auto-rows: minmax(378px, auto)
+  //   gap: 10px
+
+  //   +small
+  //     grid-template-columns: repeat(2, 1fr)
+  //     grid-auto-rows: 20vh
+
+  //   +phone
+  //     grid-template-columns: 1fr
+  //     gap: 6px
+
   .list
     display: grid
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
-    grid-auto-rows: minmax(300px, auto)
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+    grid-auto-rows: minmax(378px, auto)
     gap: 10px
 
     +small
-      grid-template-columns: repeat(2, 1fr)
-      grid-auto-rows: 20vh
+      grid-template-columns: repeat(3, 1fr)
+      grid-auto-rows: 35vh
 
     +phone
       grid-template-columns: 1fr
       gap: 6px
 
     &__item
-      border: 1px solid rgba(0, 73, 73, 1)
+      // border: 1px solid rgba(0, 73, 73, 1)
 
       .link
         position: relative

@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
         <!-- SEO -->
-        <title>Контакты | Новострой гарант</title>
+        <title>Проекты | Новострой гарант</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!-- STYLES -->
@@ -24,7 +24,7 @@
 
     <body>
         <!-- HEADER -->
-        <header id="header" class="header">
+        <header class="header">
             <!-- HEADER-TOP -->
             <div class="header__top header-top">
                 <div class="header-top__container container">
@@ -82,10 +82,36 @@
                                     <span class="menu__link-item"> О компании </span>
                                 </a>
                             </li>
-                            <li class="menu__item">
+                            <li class="menu__item parent active">
                                 <a class="menu__link" href="./projects.html">
                                     <span class="menu__link-item"> Проекты домов </span>
+                                    <svg class="menu__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
                                 </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="menu__item active">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                Все проекты
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                1 этаж
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                2 этажа
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="menu__item">
                                 <a class="menu__link" href="./portfolio.html">
@@ -144,7 +170,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu__item active">
+                            <li class="menu__item">
                                 <a class="menu__link" href="./contacts.html">
                                     <span class="menu__link-item"> Контакты </span>
                                 </a>
@@ -174,10 +200,26 @@
                                     О компании
                                 </a>
                             </li>
-                            <li class="list__item item">
+                            <li class="list__item item parent active">
                                 <a href="./projects.html" class="item__link" target="_blank">
                                     Проекты домов
                                 </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item active">
+                                        <a class="item__link" href="./service.html"> Все проекты </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html"> 1 этаж </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html"> 2 этажа</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="list__item item">
                                 <a href="./portfolio.html" class="item__link" target="_blank">
@@ -214,7 +256,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="list__item item active">
+                            <li class="list__item item">
                                 <a href="./contacts.html" class="item__link">
                                     <span class="link-item"> Контакты </span>
                                 </a>
@@ -270,47 +312,247 @@
         </header>
         <!-- MAIN -->
         <main>
-            <!-- CONTACTS -->
-            <section class="contacts section-reset">
-                <div class="contacts__container container">
-                    <h2 class="contacts__title h-2"> Контакты </h2>
-                    <div class="contacts__content content">
-                        <ul class="content__list list">
-                            <li class="list__item item">
-                                <h3 class="item__title"> Адрес </h3>
-                                <a href="/" class="item__link">
-                                    ул. ​Кутузовская 10, БЦ&nbsp;&laquo;Кутузовский&raquo;
-                                </a>
-                                <p class="item__descr"> (по предварительной записи) </p>
-                            </li>
-                            <li class="list__item item">
-                                <h3 class="item__title"> Телефон </h3>
-                                <a href="tel:+79528150000" class="item__link">
-                                    +7 (952) 815-00-00
-                                </a>
-                            </li>
-                            <li class="list__item item">
-                                <h3 class="item__title"> Почта </h3>
-                                <a href="mailto:novostroy-garant@ya.ru" class="item__link">
-                                    novostroy-garant@ya.ru
-                                </a>
-                            </li>
-                            <li class="list__item item">
-                                <h3 class="item__title"> Мессенджеры </h3>
-                                <a class="item__link" href="https://wa.me/+79528150000" target="_blank">
-                                    WhatsApp
-                                </a>
-                                <a class="item__link" href="https://t.me/+79528150000" target="_blank">
-                                    Telegram
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="content__map map">
-                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0fa48c4de99f5998eeeeaa24d0f19fd1993f49e4f434f474090abc8023d298c4&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+            <section class="projects-inner section-reset">
+                <div class="projects-inner__container container">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            &nbsp;Все проекты
+                        </li>
+                    </ol>
+                    <h1 class="h-0"> Каталог проектов | Страница - 1 </h1>
+                    <h2 class="projects-inner__title h-2"> Все проекты </h2>
+                    <div class="projects-inner__catalog catalog">
+                        <div class="catalog__filter filter">
+                            <button id="filter-btn" class="filter__btn btn">
+                                <span class="btn__text"> Фильтр </span>
+                                <svg class="btn__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <div id="filter-content" class="filter__wrapper overflow-hidden">
+                                <h3 class="filter__title h-3 filter-title"> Этажность </h3>
+                                <ul class="filter__floors floors">
+                                    <li class="floors__item active">
+                                        <a href="/" class="floors__item-link">
+                                            Все проекты
+                                        </a>
+                                    </li>
+                                    <li class="floors__item">
+                                        <a href="/" class="floors__item-link">
+                                            1 этаж
+                                        </a>
+                                    </li>
+                                    <li class="floors__item">
+                                        <a href="/" class="floors__item-link">
+                                            2 этажа
+                                        </a>
+                                    </li>
+                                </ul>
+                                <form class="filter__form form" action="/">
+                                    <h3 class="form__title h-3 filter-title"> Площадь </h3>
+                                    <ul class="form__square square">
+                                        <li class="square__item">
+                                            <label class="form__item form-note">
+                                                <input class="form-note__input" type="checkbox" checked />
+                                                <div class="form-note__checkbox"></div>
+                                                <p class="form-note__text">
+                                                    до 100 м2
+                                                </p>
+                                            </label>
+                                        </li>
+                                        <li class="square__item">
+                                            <label class="form__item form-note">
+                                                <input class="form-note__input" type="checkbox" />
+                                                <div class="form-note__checkbox"></div>
+                                                <p class="form-note__text">
+                                                    от 100 м2 до 200 м2
+                                                </p>
+                                            </label>
+                                        </li>
+                                        <li class="square__item">
+                                            <label class="form__item form-note">
+                                                <input class="form-note__input" type="checkbox" />
+                                                <div class="form-note__checkbox"></div>
+                                                <p class="form-note__text">
+                                                    от 200 м2 до 300 м2
+                                                </p>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="catalog__goods goods">
+                            <ul class="goods__list goods-list">
+                                <li class="goods-list__item">
+                                    <a href="./project.html" class="goods-list__link goods-link">
+                                        <div class="goods-link__img-wrap">
+                                            <img
+                                                src="./app/img/projects/img-1.jpg"
+                                                class="goods-link__img"
+                                            />
+                                        </div>
+                                        <div class="goods-link__descr descr">
+                                            <h3 class="descr__title">
+                                                Проект дома &laquo;Z144&raquo;
+                                            </h3>
+                                            <p class="descr__text">
+                                                Проект одноэтажного дома c&nbsp;гаражом для двух авто, с&nbsp;возможностью обустройства мансарды
+                                            </p>
+                                            <div class="descr__content-bottom content-bottom">
+                                                <ul class="content-bottom__list list">
+                                                    <li class="list__item">
+                                                        1 этаж
+                                                    </li>
+                                                    <li class="list__item">
+                                                        159 м2
+                                                    </li>
+                                                </ul>
+                                                <span class="content-bottom__arrow-wrap arrow-wrap">
+                                                    <svg class="arrow-wrap__icon">
+                                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="goods-list__item">
+                                    <a href="./project.html" class="goods-list__link goods-link">
+                                        <div class="goods-link__img-wrap">
+                                            <img
+                                                src="./app/img/projects/img-1.jpg"
+                                                class="goods-link__img"
+                                            />
+                                        </div>
+                                        <div class="goods-link__descr descr">
+                                            <h3 class="descr__title">
+                                                Проект дома &laquo;Z144&raquo;
+                                            </h3>
+                                            <p class="descr__text">
+                                                Проект одноэтажного дома c&nbsp;гаражом для двух авто, с&nbsp;возможностью обустройства мансарды
+                                            </p>
+                                            <div class="descr__content-bottom content-bottom">
+                                                <ul class="content-bottom__list list">
+                                                    <li class="list__item">
+                                                        1 этаж
+                                                    </li>
+                                                    <li class="list__item">
+                                                        159 м2
+                                                    </li>
+                                                </ul>
+                                                <span class="content-bottom__arrow-wrap arrow-wrap">
+                                                    <svg class="arrow-wrap__icon">
+                                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="goods-list__item">
+                                    <a href="./project.html" class="goods-list__link goods-link">
+                                        <div class="goods-link__img-wrap">
+                                            <img
+                                                src="./app/img/projects/img-1.jpg"
+                                                class="goods-link__img"
+                                            />
+                                        </div>
+                                        <div class="goods-link__descr descr">
+                                            <h3 class="descr__title">
+                                                Проект дома &laquo;Z144&raquo;
+                                            </h3>
+                                            <p class="descr__text">
+                                                Проект одноэтажного дома c&nbsp;гаражом для двух авто, с&nbsp;возможностью обустройства мансарды
+                                            </p>
+                                            <div class="descr__content-bottom content-bottom">
+                                                <ul class="content-bottom__list list">
+                                                    <li class="list__item">
+                                                        1 этаж
+                                                    </li>
+                                                    <li class="list__item">
+                                                        159 м2
+                                                    </li>
+                                                </ul>
+                                                <span class="content-bottom__arrow-wrap arrow-wrap">
+                                                    <svg class="arrow-wrap__icon">
+                                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="goods-list__item">
+                                    <a href="./project.html" class="goods-list__link goods-link">
+                                        <div class="goods-link__img-wrap">
+                                            <img
+                                                src="./app/img/projects/img-1.jpg"
+                                                class="goods-link__img"
+                                            />
+                                        </div>
+                                        <div class="goods-link__descr descr">
+                                            <h3 class="descr__title">
+                                                Проект дома &laquo;Z144&raquo;
+                                            </h3>
+                                            <p class="descr__text">
+                                                Проект одноэтажного дома c&nbsp;гаражом для двух авто, с&nbsp;возможностью обустройства мансарды
+                                            </p>
+                                            <div class="descr__content-bottom content-bottom">
+                                                <ul class="content-bottom__list list">
+                                                    <li class="list__item">
+                                                        1 этаж
+                                                    </li>
+                                                    <li class="list__item">
+                                                        159 м2
+                                                    </li>
+                                                </ul>
+                                                <span class="content-bottom__arrow-wrap arrow-wrap">
+                                                    <svg class="arrow-wrap__icon">
+                                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="mse2_pagination" class="goods__pagination">
+                                <ul class="pagination">
+                                    <li class="control">
+                                        <a href="#" class="page-link">«</a>
+                                    </li>
+                                    <li class="control">
+                                        <a href="#" class="page-link">‹</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a href="#" class="page-link">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link">4</a>
+                                    </li>
+                                    <li class="control">
+                                        <a href="#" class="page-link">›</a>
+                                    </li>
+                                    <li class="control">
+                                        <a href="#" class="page-link">»</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+            
             <!-- FORM-CALLBACK -->
             <article class="modal form-callback" id="form-callback">
                 <div class="form-callback__box modal-box">
@@ -391,12 +633,12 @@
                                         Главная
                                     </a>
                                 </li>
-                                <li class="list__item active">
+                                <li class="list__item">
                                     <a href="/" class="list__item-link link">
                                         О компании
                                     </a>
                                 </li>
-                                <li class="list__item">
+                                <li class="list__item active">
                                     <a href="/" class="list__item-link link">
                                         Проекты домов
                                     </a>
@@ -488,11 +730,7 @@
         <script src="/app/js/libs/swiper-bundle.min.js"></script>
         <script src="/app/js/libs/webp.js"></script>
         <script src="/app/js/libs/modal-window.js"></script>
-        <script src="/app/js/libs/scroll-library.js"></script>
-        <!-- <script src="/app/js/libs/SmoothScroll.min.js" crossorigin="anonymous"></script> -->
-        <!-- <script src="/app/js/libs/ScrollTrigger.min.js"></script> -->
-        <!-- <script src="/app/js/libs/gsap.min.js"></script> -->
-        <script src="/app/js/main.min.js"></script>
         <!-- <script src="/app/js/main.js"></script> -->
+        <script src="/app/js/main.min.js"></script>
     </body>
 </html>

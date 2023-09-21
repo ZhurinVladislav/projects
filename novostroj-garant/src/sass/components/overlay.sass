@@ -13,7 +13,7 @@
   overflow-y: auto
   visibility: hidden
   opacity: 0
-  color: $clr_1
+  color: $clr_2
   transition: opacity .4s, visibility .4s
 
   .modal-box
@@ -23,17 +23,16 @@
     z-index: 1
     padding: 60px 40px 40px 40px
     margin: 30px 15px
-    width: 500px
-    background-color: $clr_2
+    max-width: 500px
+    background-color: $clr_1
+    border-radius: 8px
     overflow: hidden
     box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2)
     transform: scale(0)
     transition: transform .8s
 
     +phone
-      margin: 0
       padding: 40px 20px 20px 20px
-      width: 320px
 
   &.open
     visibility: visible
@@ -48,17 +47,23 @@
     display: block
     top: 0px
     right: 0px
-    width: 40px
-    height: 40px
+    width: 50px
+    height: 50px
     cursor: pointer
-    background-color: $clr_0
-    transition: all .4s linear
+    background-color: $clr_3
+    border: 2px solid $clr_3
+    border-radius: 0 8px 0 8px
+    transition: background-color .2s linear
+
+    +phone
+      width: 40px
+      height: 40px
 
     &:hover
-      background-color: $clr_5
+      background-color: $clr_1
 
     &:hover:before, &:hover:after
-      background-color: $clr_1
+      background-color: $clr_3
 
     &:before, &:after
       content: ""
@@ -83,7 +88,7 @@
     font-size: 40px
     line-height: normal
     font-weight: 700
-    text-transform: uppercase
 
     +phone
+      margin-bottom: 20px
       font-size: 25px
