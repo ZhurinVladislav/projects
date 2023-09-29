@@ -160,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	function submitCalculator() {
 		const wrap = document.getElementById('submit-wrap'),
 			btnOpen = document.getElementById('submit-calculator'),
-			btnForm = document.getElementById('form-calculator-btn'),
 			form = document.getElementById('form-calculator');
 
 		btnOpen.addEventListener('click', e => {
@@ -169,11 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			form.classList.add('open');
 		});
 
-		btnForm.addEventListener('click', () => {
-			btnOpen.classList.remove('hidden');
-			wrap.style.maxHeight = '60px';
-			form.classList.remove('open');
-		});
 	}
 
 	if (document.querySelector('#calculator')) {

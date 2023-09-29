@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg">
+    <!-- SEO -->
+    <title>Портфолио видео проектов  | Новострой гарант</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="app/css/main.min.css">
+    <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+    <!-- PRELOADER -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('body').classList.add('loading');
+        });
+    </script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <!-- HEADER-TOP -->
+        <div class="header__top header-top">
+            <div class="header-top__container container">
+                <a href="/" title="Новострой гарант" class="header-top__logo logo">
+                    <img class="logo__img" src="/app/img/logo.svg" alt="Новострой гарант" title="Новострой гарант">
+                </a>
+                <a href="/" class="header-top__address address">
+                    <svg class="address__icon svg-reset">
+                        <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                    </svg>
+                    <address class="address__text text">
+                        <span class="text__city"> Новороссийск </span>
+                        <span class="text__street">
+                            ул. ​Кутузовская 10, БЦ&nbsp;&laquo;Кутузовский&raquo;
+                        </span>
+                    </address>
+                </a>
+                <div class="header-top__feedback feedback">
+                    <svg class="feedback__icon svg-reset">
+                        <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                    </svg>
+                    <ul class="feedback__list list">
+                        <li class="list__item list__item_phone">
+                            <a class="list__item-link" href="tel:+79528150000"> +7 (952) 815-00-00 </a>
+                        </li>
+                        <li class="list__item list__item_email">
+                            <a class="list__item-link" href="mailto:novostroy-garant@ya.ru"> novostroy-garant@ya.ru </a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="burger-toggle" aria-label="Мобильное меню" class="header-top__menu-toggle menu-toggle">
+                    <span class="menu-toggle__item"></span>
+                    <span class="menu-toggle__item"></span>
+                    <span class="menu-toggle__item"></span>
+                </button>
+            </div>
+        </div>
+        <!-- HEADER-BOTTOM -->
+        <div class="header__bottom header-bottom">
+            <div class="header-bottom__container container">
+                <nav class="header-bottom__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="/">
+                                <span class="menu__link-item"> Главная </span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./main.html">
+                                <span class="menu__link-item"> О компании </span>
+                            </a>
+                        </li>
+                        <li class="menu__item parent">
+                            <a class="menu__link" href="./projects.html">
+                                <span class="menu__link-item"> Проекты домов </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./projects.html">
+                                        <span class="list-inner__link-item">
+                                            Все проекты
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./projects.html">
+                                        <span class="list-inner__link-item">
+                                            1 этаж
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./projects.html">
+                                        <span class="list-inner__link-item">
+                                            2 этажа
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item parent active">
+                            <a class="menu__link" href="./portfolio.html">
+                                <span class="menu__link-item"> Портфолио </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./photo.html">
+                                        <span class="list-inner__link-item">
+                                            Фото проектов
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item active">
+                                    <a class="list-inner__link" href="./video.html">
+                                        <span class="list-inner__link-item">
+                                            Видео проектов
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item parent">
+                            <a class="menu__link" href="./service.html">
+                                <span class="menu__link-item"> Доп услуги </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./service.html">
+                                        <span class="list-inner__link-item">
+                                            Строительство хоз. помещений
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./service.html">
+                                        <span class="list-inner__link-item">
+                                            Строительство летних кухонь
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./service.html">
+                                        <span class="list-inner__link-item">
+                                            Строительство зон барбекю
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./service.html">
+                                        <span class="list-inner__link-item">
+                                            Установка септиков
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./service.html">
+                                        <span class="list-inner__link-item">
+                                            Подбор земельных участков
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./service.html">
+                                        <span class="list-inner__link-item">
+                                            Кадастровые работы
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./contacts.html">
+                                <span class="menu__link-item"> Контакты </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="https://www.youtube.com/@user-se3vj1cz1d" class="menu__link link" target="_blank">
+                        <svg class="link__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#yt"></use>
+                        </svg>
+                        <span class="link__text"> YouTube </span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <!-- BURGER-MENU -->
+        <div id="burger-menu" class="header__burger menu-mobile">
+            <div class="menu-mobile__wrap">
+                <nav class="menu-mobile__menu menu">
+                    <ul class="menu__list list">
+                        <li class="list__item item">
+                            <a href="/" class="item__link" target="_blank">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="list__item item">
+                            <a href="./main.html" class="item__link" target="_blank">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="list__item item parent">
+                            <a href="./projects.html" class="item__link" target="_blank">
+                                Проекты домов
+                            </a>
+                            <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                <svg class="item__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <ul class="item__list list">
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Все проекты </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> 1 этаж </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> 2 этажа</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list__item item active">
+                            <a href="./portfolio.html" class="item__link" target="_blank">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="list__item item parent">
+                            <a href="./service.html" class="item__link" target="_blank">
+                                Доп. услуги
+                            </a>
+                            <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                <svg class="item__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <ul class="item__list list">
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Строительство хоз. помещений </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Строительство летних кухонь </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Строительство зон барбекю </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Установка септиков </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Подбор земельных участков </a>
+                                </li>
+                                <li class="list__item item">
+                                    <a class="item__link" href="./service.html"> Кадастровые работы </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list__item item">
+                            <a href="./contacts.html" class="item__link">
+                                <span class="link-item"> Контакты </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="list-link">
+                    <li class="list-link__item">
+                        <a class="list-link__link" href="mailto:novostroy-garant@ya.ru">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                            </svg>
+                            <span class="list-link__descr"> novostroy-garant@ya.ru </span>
+                        </a>
+                    </li>
+                    <li class="list-link__item">
+                        <a target="_blank" class="list-link__link" href="https://wa.me/+79528150000">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                            </svg>
+                            <span class="list-link__descr"> WhatsApp </span>
+                        </a>
+                    </li>
+                    <li class="list-link__item">
+                        <a target="_blank" class="list-link__link" href="https://t.me/+79528150000">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                            </svg>
+                            <span class="list-link__descr"> Telegram </span>
+                        </a>
+                    </li>
+                    <li class="list-link__item">
+                        <a class="list-link__link" href="tel:+79528150000">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                            </svg>
+                            <span class="list-link__descr"> +7 (952) 815-00-00 </span>
+                        </a>
+                    </li>
+                    <li class="list-link__item">
+                        <a class="list-link__link" href="/">
+                            <svg class="list-link__icon icon-reset">
+                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                            </svg>
+                            <address class="list-link__descr">
+                                г. Новороссийск, ул. Кутузовская 10, БЦ&nbsp;&laquo;Кутузовский&raquo;
+                            </address>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <section class="portfolio-video section-reset">
+            <div class="portfolio-video__container container">
+                <h1 class="h-0"> Портфолио компании Новострой гарант</h1>
+                <h2 class="portfolio-video__title h-2"> Портфолио видео проектов </h2>
+                <ul class="portfolio-video__list list">
+                    <li class="list__item item">
+                        <h3 class="item__title h-3"> Проект 1 </h3>
+                        <div class="item__video">
+                            <iframe src="https://www.youtube.com/embed/W2Q8JtCmRXM?si=RPG5yrn1h9bE67jS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </li>
+                    <li class="list__item item">
+                        <h3 class="item__title h-3"> Проект 2 </h3>
+                        <div class="item__video">
+                            <iframe src="https://www.youtube.com/embed/W2Q8JtCmRXM?si=RPG5yrn1h9bE67jS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </li>
+                    <li class="list__item item">
+                        <h3 class="item__title h-3"> Проект 3 </h3>
+                        <div class="item__video">
+                            <iframe src="https://www.youtube.com/embed/W2Q8JtCmRXM?si=RPG5yrn1h9bE67jS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="modal form-callback" id="form-callback">
+            <div class="form-callback__box modal-box">
+                <button aria-label="Закрыть окно обратной связи"
+                    class="form-callback__close-btn modal-close js-close-modal"></button>
+                <p class="form-callback__title modal-title"> <span class="modal-title__color color">Связаться</span> с
+                    нами </p>
+
+                <form action="/" class="form form-mod">
+                    <div class="form-mod__wrap-input wrap-input">
+                        <input class="wrap-input__input input" type="text" placeholder="Имя*">
+                        <input class="wrap-input__input input" type="text" placeholder="Email*">
+                        <label class="wrap-input__item form-note">
+                            <input class="form-note__input" type="checkbox" checked>
+                            <span class="form-note__checkbox"></span>
+                            <span class="form-note__text">
+                                Даю согласие на&nbsp;обработку персональных данных
+                            </span>
+                        </label>
+                    </div>
+                    <button aria-label="Отправить заявку" type="submit"
+                        class="form-mod__btn button js-btn-submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+ 
+        <!-- FORM-SUCCESS -->
+        <div class="modal form-success" id="form-success">
+            <div class="form-success__box modal-box">
+                <button aria-label="Закрыть окно обратной связи"
+                    class="form-success__close-btn modal-close js-close-modal"></button>
+                <div class="form-success">
+                    <p class="form-success__descr">Спасибо!</p>
+                    <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__top footer-top">
+                <a href="/" title="Новострой гаран" class="footer-top__logo logo">
+                    <img class="logo__img" src="/app/img/logo-reverse.svg" alt="Новострой гарант"
+                        title="Новострой гарант">
+                </a>
+                <div class="footer-top__content content">
+                    <!-- LIST-CONTACTS -->
+                    <ul class="content__list-contacts list-contacts content-item">
+                        <li class="list-contacts__item item item_title">
+                            <p class="item__title footer-title"> Контакты </p>
+                        </li>
+                        <li class="list-contacts__item item">
+                            <p class="item__descr"> Адрес </p>
+                            <a href="/" class="item__link link">
+                                ул. ​Кутузовская 10, БЦ&nbsp;&laquo;Кутузовский&raquo;
+                            </a>
+                            <p class="item__descr item__descr_last"> (по предварительной записи) </p>
+                        </li>
+                        <li class="list-contacts__item item">
+                            <p class="item__descr"> Телефон </p>
+                            <a href="tel:+79528150000" class="item__link link">
+                                +7 (952) 815-00-00
+                            </a>
+                        </li>
+                        <li class="list-contacts__item item">
+                            <p class="item__descr"> Почта </p>
+                            <a href="mailto:novostroy-garant@ya.ru" class="item__link link">
+                                novostroy-garant@ya.ru
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- MENU -->
+                    <nav class="content__menu menu content-item">
+                        <p class="menu__title footer-title"> Меню </p>
+                        <ul class="menu__list list">
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    Проекты домов
+                                </a>
+                            </li>
+                            <li class="list__item active">
+                                <a href="/" class="list__item-link link">
+                                    Портфолио
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="/" class="list__item-link link">
+                                    Доп. услуги
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- LIST-SOCIAL -->
+                    <ul class="content__list-social list-social content-item">
+                        <li class="list-social__item item item_title">
+                            <p class="item__title footer-title"> Социальные сети </p>
+                        </li>
+                        <li class="list-social__item item">
+                            <a href="https://wa.me/+79528150000" target="_blank" class="item__link link">
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li class="list-social__item item">
+                            <a href="https://t.me/+79528150000" class="item__link link" target="_blank">
+                                Telegram
+                            </a>
+                        </li>
+                        <li class="list-social__item item">
+                            <a href="https://www.youtube.com/@user-se3vj1cz1d" class="item__link link" target="_blank">
+                                YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright copyright">
+                <p class="copyright__text item">
+                    Все права защищены copyright &copy;&nbsp;2023
+                </p>
+                <a class="copyright__link link item" href="https://web2.agency/" target="_blank">
+                    Пользовательское соглашение
+                </a>
+                <a class="copyright__link link item" href="https://web2.agency/" target="_blank">
+                    <svg class="link__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                    </svg>
+                    <span class="link__text"> Создание сайтов </span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- SOCIAL PANEL -->
+    <ul class="social-panel">
+        <li class="social-panel__item">
+            <a aria-label="Ссылка на WhatsApp" target="_blank" href="https://wa.me/+79528150000"
+                class="social-panel__link">
+                <svg class="social-panel__icon">
+                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-panel__item">
+            <a aria-label="Ссылка на Telegram" target="_blank" href="https://t.me/+79528150000"
+                class="social-panel__link">
+                <svg class="social-panel__icon">
+                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-panel__item">
+            <a aria-label="Ссылка на калькулятор" target="_blank" href="./calculator.html" class="social-panel__link">
+                <svg class="social-panel__icon">
+                    <use xlink:href="/app/img/icons/icons.svg#calc"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    <!-- SCROLL-TOP -->
+    <button id="scrollTop" class="scroll-top scroll-top_active" aria-label="Наверх страницы">
+        <svg class="scroll-top__icon">
+            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+        </svg>
+    </button>
+    <!-- SCRIPTS -->
+    <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/app/js/libs/lightgallery-all.min.js"></script>
+    <script src="/app/js/libs/swiper-bundle.min.js"></script>
+    <script src="/app/js/libs/webp.js"></script>
+    <script src="/app/js/libs/modal-window.js"></script>
+    <script src="/app/js/libs/calculator.js"></script>
+    <!-- <script src="/app/js/main.js"></script> -->
+    <script src="/app/js/main.min.js"></script>
+</body>
+
+</html>

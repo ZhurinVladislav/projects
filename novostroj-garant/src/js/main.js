@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 3,
       speed: 700,
       navigation: {
-        nextEl: '.projects__swiper-wrapper .arrow_next',
-        prevEl: '.projects__swiper-wrapper .arrow_prev',
+        nextEl: '.projects__swiper-wrapper .arrow-slider_next',
+        prevEl: '.projects__swiper-wrapper .arrow-slider_prev',
       },
       breakpoints: {
         50: {
@@ -163,8 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
       speed: 700,
       allowTouchMove: false,
       navigation: {
-        nextEl: '.portfolio__swiper-wrapper .arrow_next',
-        prevEl: '.portfolio__swiper-wrapper .arrow_prev',
+        nextEl: '.portfolio__swiper-wrapper .arrow-slider_next',
+        prevEl: '.portfolio__swiper-wrapper .arrow-slider_prev',
       },
       breakpoints: {
         50: {
@@ -190,29 +190,22 @@ document.addEventListener('DOMContentLoaded', () => {
     swiperSliderTwo();
   };
 
-  // СЛАЙДЕР СТРАНИЦЫ "PORTFOLIO"
-  // /*
-  var mySwiper = new Swiper('.portfolio-inner-slider', {
-
-
-    // Navigation arrows
-    nextButton: '.arrow_next',
-    prevButton: '.arrow_prev',
-  })
-  if ($('.portfolio-inner-slider').length > 0) {
+  // СЛАЙДЕР СТРАНИЦЫ "PORTFOLIO-IMAGE"
+  if ($('.portfolio-image-slider').length > 0) {
     let swiperInstances = [];
-    $(".portfolio-inner-slider").each(function (i) {
+    $(".portfolio-image-slider").each(function (i) {
       const $this = $(this);
-      // console.log($this);
       $this.addClass("slide-" + i);
 
-      $this.parent().find(".arrow_prev").addClass("p-" + i);
-      $this.parent().find(".arrow_next").addClass("n-" + i);
+      $this.parent().find(".arrow-slider_prev").addClass("p-" + i);
+      $this.parent().find(".arrow-slider_next").addClass("n-" + i);
 
       swiperInstances[i] = new Swiper(".slide-" + i, {
         spaceBetween: 28,
         slidesPerView: 3,
+        // allowTouchMove: false,
         speed: 700,
+        a11y: false,
         navigation: {
           prevEl: ".p-" + i,
           nextEl: ".n-" + i,
@@ -238,8 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   // */
-
-
 
   /*
   function sliderPortfolio() {
@@ -333,8 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 3,
       speed: 700,
       navigation: {
-        nextEl: '.arrow_next',
-        prevEl: '.arrow_prev',
+        nextEl: '.arrow-slider_next',
+        prevEl: '.arrow-slider_prev',
       },
       breakpoints: {
         50: {
@@ -382,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getCaptionFromTitleOrAlt: false,
   });
 
-  $('.portfolio-inner-slider').lightGallery({
+  $('.portfolio-image-slider').lightGallery({
     thumbnail: false,
     share: false,
     selector: '.slide__link',
@@ -400,6 +391,11 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         html.classList.remove('galleryActive');
       };
+    });
+
+    // УБИРАЕМ КЛАСС ПРИ НАЖАТИЕ НА "ESC"
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') html.classList.remove('galleryActive')
     });
   })();
 
@@ -431,35 +427,112 @@ document.addEventListener('DOMContentLoaded', () => {
   // SPOILER ФИЛЬТРА
   function spoilerFilter() {
     const btn = document.getElementById('filter-btn'),
-      content = document.getElementById('filter-content');
+          content = document.getElementById('filter-content'),
+          label = document.querySelectorAll('.js-label');
 
-    btn.addEventListener('click', e => {
-      const nextItem = e.currentTarget.nextElementSibling;
+    content.setAttribute('open', '0');
 
-      if (content.style.maxHeight) {
-        nextItem.style.maxHeight = null
-        e.currentTarget.classList.remove('active');
-      } else {
-        nextItem.style.maxHeight = null
-        content.style.maxHeight = content.scrollHeight + 'px';
-        e.currentTarget.classList.add('active');
-      }
-    })
-  }
+    if (content.getAttribute('open') === '0') {
+      btn.addEventListener('click', e => {
+        content.setAttribute('open', '1');
+
+        const nextItem = e.currentTarget.nextElementSibling;
+
+        if (content.style.maxHeight) {
+          nextItem.style.maxHeight = null;
+          e.currentTarget.classList.remove('active');
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          e.currentTarget.classList.add('active');
+        };
+      });
+    };
+    
+    label.forEach(e => {
+      e.addEventListener('click', () => {
+        if (content.getAttribute('open') === '1') {
+          content.setAttribute('open', '0');
+          content.style.maxHeight = content.scrollHeight + 75 + 'px';
+        };
+      });
+    });
+
+  };
 
   if (document.querySelector('.filter')) {
-    console.log('asd');
     window.addEventListener('resize', () => {
       if (window.innerWidth <= 991) {
-        console.log('asd');
-        spoilerFilter()
+        spoilerFilter();
       }
     })
 
     if (window.innerWidth <= 991) {
-      console.log('asd');
       spoilerFilter();
     }
+  }
+
+    
+  // ТАБЫ НА СТРАНИЦЕ "PROJECT"
+  function tabProject() {
+    let tab = document.querySelectorAll('.js-btn'),
+        tabWrapper = document.querySelector('.js-btn-wrapper'),
+        tabContent = document.querySelectorAll('.js-item-content');
+
+    function hideTabContent(a) {
+      for (let i = a; i < tabContent.length; i++) {
+        tabContent[i].classList.remove('show');
+        tabContent[i].classList.add('hide');
+      }
+    }
+
+    hideTabContent(1);
+
+    // ДОБАВЛЕНИЕ ПЕРВЫМ ЭЛЕМЕНТАМ КЛАССЫ ACTIVE И SHOW
+    function addActiveItem() {
+      for (let i = 0; i < tab.length; i++) {
+        let e = tab[i];
+        if (i === 0) {
+          e.classList.add('active');
+        };
+      }
+      for (let i = 0; i < tabContent.length; i++) {
+        let e = tabContent[i];
+        if (i === 0) {
+          e.classList.add('show');
+        };
+      }
+    }
+
+    addActiveItem()
+
+    function showTabContent(b) {
+      if (tabContent[b].classList.contains('hide')) {
+        tabContent[b].classList.remove('hide');
+        tabContent[b].classList.add('show');
+      }
+    }
+
+    tabWrapper.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target && target.classList.contains('js-btn')) {
+        for(let i = 0; i < tab.length; i++) {
+          
+          if (target == tab[i]) {
+            for (let a = 0; a < tab.length; a++) {
+              tab[a].classList.remove('active')
+            }
+            tab[i].classList.add('active');
+            hideTabContent(0);
+            showTabContent(i);
+            break;
+          }
+        }
+      }
+    });
+  }
+
+  if(document.querySelector('.project')) {
+    tabProject();
   }
 
 });

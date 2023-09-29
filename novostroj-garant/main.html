@@ -108,10 +108,29 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu__item">
+                        <li class="menu__item parent">
                             <a class="menu__link" href="./portfolio.html">
                                 <span class="menu__link-item"> Портфолио </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
                             </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./photo.html">
+                                        <span class="list-inner__link-item">
+                                            Фото проектов
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./video.html">
+                                        <span class="list-inner__link-item">
+                                            Видео проектов
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="menu__item parent">
                             <a class="menu__link" href="./service.html">
@@ -370,57 +389,60 @@
                             nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla praesentium quas
                             qui ab corrupti! Dolorum, deleniti debitis?
                         </p>
-                        <h2 class="h-2">
-                            Фотогалерея
-                        </h2>
-                        <ul class="text-default__gallery gallery">
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-1.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-1.jpg" alt="img-1">
-                                </a>
-                            </li>
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-2.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-2.jpg" alt="img-2">
-                                </a>
-                            </li>
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-3.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-3.jpg" alt="img-3">
-                                </a>
-                            </li>
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-4.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-4.jpg" alt="img-4">
-                                </a>
-                            </li>
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-5.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-5.jpg" alt="img-5">
-                                </a>
-                            </li>
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-6.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
-                                </a>
-                            </li>
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-7.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-7.jpg" alt="img-7">
-                                </a>
-                            </li>
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-8.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-8.jpg" alt="img-8">
-                                </a>
-                            </li>
-                            <li class="gallery__item">
-                                <a class="gallery__link" href="./app/img/gallery-inner/img-9.jpg">
-                                    <img class="gallery__img" src="./app/img/gallery-inner/img-9.jpg" alt="img-9">
-                                </a>
-                            </li>
-                        </ul>
-
+                        <div class="text-default__gallery-warapper gallery-wrapper">
+                            <h2 class="gallery-wrapper__title h-2">
+                                Фотогалерея
+                            </h2>
+                            <ul class="gallery-wrapper__gallery gallery">
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-1.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-1.jpg" alt="img-1">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-2.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-2.jpg" alt="img-2">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-3.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-3.jpg" alt="img-3">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-4.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-4.jpg" alt="img-4">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-5.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-5.jpg" alt="img-5">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-6.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-6.jpg" alt="img-6">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-7.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-7.jpg" alt="img-7">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-8.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-8.jpg" alt="img-8">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" href="./app/img/gallery-inner/img-9.jpg">
+                                        <img class="gallery__img" src="./app/img/gallery-inner/img-9.jpg" alt="img-9">
+                                    </a>
+                                </li>
+                            </ul>
+    
+                        </div>
+                        
                     </div>
                 </div>
             </div>

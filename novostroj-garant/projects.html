@@ -108,10 +108,29 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu__item">
+                        <li class="menu__item parent">
                             <a class="menu__link" href="./portfolio.html">
                                 <span class="menu__link-item"> Портфолио </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
                             </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./photo.html">
+                                        <span class="list-inner__link-item">
+                                            Фото проектов
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./video.html">
+                                        <span class="list-inner__link-item">
+                                            Видео проектов
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="menu__item parent">
                             <a class="menu__link" href="./service.html">
@@ -348,35 +367,38 @@
                             </ul>
                             <form class="filter__form form" action="/">
                                 <h3 class="form__title h-3 filter-title"> Площадь </h3>
-                                <ul class="form__square square">
-                                    <li class="square__item">
-                                        <label class="form__item form-note">
-                                            <input class="form-note__input" type="checkbox" checked>
-                                            <span class="form-note__checkbox"></span>
-                                            <span class="form-note__text">
-                                                до 100 м2
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li class="square__item">
-                                        <label class="form__item form-note">
-                                            <input class="form-note__input" type="checkbox">
-                                            <span class="form-note__checkbox"></span>
-                                            <span class="form-note__text">
-                                                от 100 м2 до 200 м2
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li class="square__item">
-                                        <label class="form__item form-note">
-                                            <input class="form-note__input" type="checkbox">
-                                            <span class="form-note__checkbox"></span>
-                                            <span class="form-note__text">
-                                                от 200 м2 до 300 м2
-                                            </span>
-                                        </label>
-                                    </li>
-                                </ul>
+                                <div class="form__square square">
+                                    <fieldset class="square__fieldset">
+                                        <div class="square__item">
+                                            <label class="form__item form-note js-label">
+                                                <input class="form-note__input" type="checkbox" checked>
+                                                <span class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    до 100 м2
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="square__item">
+                                            <label class="form__item form-note js-label">
+                                                <input class="form-note__input" type="checkbox">
+                                                <span class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    от 100 м2 до 200 м2
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="square__item">
+                                            <label class="form__item form-note js-label">
+                                                <input class="form-note__input" type="checkbox">
+                                                <span class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    от 200 м2 до 300 м2
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <button class="form__btn button js-btn hidden"> Сбросить фильтр </button>
                             </form>
                         </div>
                     </div>
@@ -511,31 +533,33 @@
                                 </a>
                             </li>
                         </ul>
-                        <div id="mse2_pagination" class="goods__pagination">
-                            <ul class="pagination">
-                                <li class="control">
-                                    <a href="#" class="page-link">«</a>
+                        <div id="mse2_pagination" class="goods__pagination pagination">
+                            <ul class="pagination__list list">
+                                <li class="list__item">
+                                    <a href="#" class="list__item-link link">
+                                        <svg class="link__icon link__icon_left">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </a>
                                 </li>
-                                <li class="control">
-                                    <a href="#" class="page-link">‹</a>
+                                <li class="list__item active">
+                                    <a href="#" class="list__item-link">1</a>
                                 </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">1</a>
+                                <li class="list__item">
+                                    <a href="#" class="list__item-link">2</a>
                                 </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">2</a>
+                                <li class="list__item">
+                                    <a href="#" class="list__item-link">3</a>
                                 </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">3</a>
+                                <li class="list__item">
+                                    <a href="#" class="list__item-link">4</a>
                                 </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">4</a>
-                                </li>
-                                <li class="control">
-                                    <a href="#" class="page-link">›</a>
-                                </li>
-                                <li class="control">
-                                    <a href="#" class="page-link">»</a>
+                                <li class="list__item">
+                                    <a href="#" class="list__item-link link">
+                                        <svg class="link__icon link__icon_right">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

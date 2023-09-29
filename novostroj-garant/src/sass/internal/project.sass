@@ -13,7 +13,7 @@
 
 		.swiper-slide
 			font-size: 0
-			background-color: $clr_4
+			background-color: $clr_3
 
 		&__img-wrapp
 			max-height: 400px
@@ -81,10 +81,6 @@
 					+small
 						background-color: $clr_1
 						border-color: $clr_1
-
-						// &:hover
-						// 	background-color: $clr_1
-						// 	border-color: $clr_1
 
 					+phone
 						width: 40px
@@ -196,28 +192,90 @@
 					font-weight: 700
 
 	.content-bottom
-		margin-bottom: 20px
+		margin-bottom: 40px
 
 		+phone
 			margin-bottom: 30px
 
-		&__title
-			margin-bottom: 30px
-
-		&__text
+		.info
 			margin-bottom: 40px
-			color: $clr_2
+
+		.btn-wrapper
+			display: flex
+			z-index: 1
+			margin-bottom: 20px
+			border-radius: 8px
+			border: 2px solid rgba($clr_3, .2)
+			background-color: rgba($clr_3, .2)
+			max-width: max-content
+			overflow: hidden
 
 			+phone
-				margin-bottom: 20px
+				flex-shrink: 0
+				width: 100%
+				overflow-x: auto
 
-		&__btn
-			padding: 14px 27px
-			font-size: 16px
+			&__btn
+				padding: 15px 20px
+				height: 100%
+				font-weight: 700
+				font-size: 18px
+				transition: background-color .2s linear
 
-			+phone
-				margin: 0 auto
+				+small
+					font-size: 16px
 
+				+phone
+					width: 200px
+					font-size: 14px
+					padding: 10px 15px
+
+
+				&:hover
+					background-color: rgba($clr_3, .3)
+
+				&.active
+					background-color: $clr_1
+
+					&:hover
+						background-color: rgba($clr_1, .7)
+
+		.text-wrapper
+			position: relative
+			display: flex
+			max-height: 100%
+			min-height: 200px
+
+
+			&__item
+				flex-direction: column
+				width: 100%
+				height: 100%
+				border-radius: 0 8px 8px 8px
+
+				&.hide
+					display: none
+
+				&.show
+					display: flex
+					flex-direction: column
+					animation-fill-mode: forwards
+					animation-name: tabAnimate
+					animation-duration: .6s
+					animation-timing-functio: cubic-bezier(0, 0.1, 0.2, 1)
+		
+		@keyframes tabAnimate
+			0%
+				opacity: 0
+				transform: translateX(-20%)
+
+			50%
+				transform: translateX(2%)
+
+			100%
+				opacity: 1
+				transform: translateX(0)
+				
 	.similar-projects
 
 		.title-wrap
@@ -264,6 +322,7 @@
 					transition: fill .2s linear
 
 		.swiper-wrapper
+			min-height: 550px
 
 			.similar-projects-slider
 				position: relative
@@ -278,6 +337,9 @@
 					user-select: none
 
 				.slide
+					display: flex
+					flex-direction: column
+					// justify-content: space-between
 					border-radius: 8px
 					overflow: hidden
 					background-color: $clr_3
@@ -293,6 +355,8 @@
 
 					&__img-wrapp
 						position: relative
+						max-height: 60%
+						height: 100%
 						border-radius: 8px
 						box-shadow: 0px 14px 20px 0px rgba(49, 62, 71, 0.20)
 						overflow: hidden
@@ -322,8 +386,10 @@
 						display: flex
 						flex-direction: column
 						justify-content: space-between
+						box-sizing: border-box
 						padding: 20px
-						min-height: 180px
+						max-height: 40%
+						height: 100%
 						color: $clr_1
 						background-color: $clr_3
 
@@ -343,6 +409,7 @@
 					.content-bottom
 						display: flex
 						justify-content: space-between
+						margin: 0
 						margin-top: auto
 
 						.list
@@ -388,74 +455,3 @@
 								fill: $clr_1
 								transform: rotate(-90deg)
 								transition: fill .2s linear
-
-			.arrow
-				position: absolute
-				top: 50%
-				bottom: 50%
-				z-index: 3
-				display: flex
-				align-items: center
-				justify-content: center
-				width: 52px
-				height: 52px
-				background-color: $clr_3
-				border: 2px solid $clr_3
-				border-radius: 8px
-				transition: background-color .2s linear
-
-				+phone
-					width: 40px
-					height: 40px
-
-				&.swiper-button-disabled
-					opacity: .5
-					cursor: auto
-
-					&:hover
-						background-color: $clr_3
-						border: 2px solid $clr_3
-
-						.arrow__icon
-							fill: $clr_1
-
-							+small
-								fill: $clr_3
-
-						+small
-							background-color: $clr_1
-							border-color: $clr_1
-
-				+small
-					background-color: $clr_1
-					border-color: $clr_1
-
-				&:hover
-					background-color: $clr_1
-
-					.arrow__icon
-						fill: $clr_3
-
-				&__icon
-					flex-shrink: 0
-					width: 16px
-					height: 16px
-					fill: $clr_1
-					transition: fill .2s linear
-
-					+small
-						fill: $clr_3
-
-				&_prev
-					left: -26px
-					transform: translateY(-50%) rotate(90deg)
-
-					+max(1379px)
-						left: 0
-
-				&_next
-					right: -26px
-					transform: translateY(-50%) rotate(-90deg)
-
-					+max(1379px)
-						right: 0
