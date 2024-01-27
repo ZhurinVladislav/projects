@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // СКРОЛЛ В БЛОКЕ КАРТЫ
 function scroll() {
-  const blockFinish = document.querySelector('.content-wrapp__map');
+  const blockFinish = document.querySelector('.content__map-list');
 
-  const tabWrapper = document.querySelector('.content__list');
+  const tabWrapper = document.querySelector('.contacts__list');
 
   
   function offset(el) {
@@ -31,7 +31,7 @@ function scroll() {
   
 };
 
-if(document.querySelector('.content-wrapp__map')) {
+if(document.querySelector('.content__map-list')) {
   scroll();
 };
 
@@ -66,15 +66,6 @@ function openList() {
         acContent.classList.add('active');
         e.classList.add('active');
       }
-
-      // if (acContent.style.maxHeight) {
-      //   document.querySelectorAll('.menu-list__inner').forEach(e => (e.style.maxHeight = null));
-      //   e.classList.remove('active');
-      // } else {
-      //   document.querySelectorAll('.menu-list__inner').forEach(e => (e.style.maxHeight = null));
-      //   acContent.style.maxHeight = acContent.scrollHeight + 'px';
-      //   e.classList.add('active');
-      // }
     });
   });
 };
@@ -120,10 +111,15 @@ scrollTop();
 
 // ТАБЫ В СЕКЦИИ "CONTACTS"
 function tabMap() {
-  let tab = document.querySelectorAll('.btn'),
-      tabWrapper = document.querySelector('.content__list'),
+  let tab = document.querySelectorAll('.js-btn-map'),
+      tabWrapper = document.querySelector('.contacts__list'),
       tabContent = document.querySelectorAll('.map__item');
 
+
+  for (let i = 0; i < tab.length; i++) {
+    if (i === 0) tab[i].classList.add('active');
+  }
+  
   function hideTabContent(a) {
     for (let i = a; i < tabContent.length; i++) {
       tabContent[i].classList.remove('show');
@@ -143,12 +139,10 @@ function tabMap() {
 
   tabWrapper.addEventListener('click', function(event) {
     let target = event.target;
-    if (target && target.classList.contains('btn')) {
-      // target.classList.add('active');
+    if (target && target.classList.contains('js-btn-map')) {
       for(let i = 0; i < tab.length; i++) {
         
         if (target == tab[i]) {
-          // console.log(tab[i]);
           for (let a = 0; a < tab.length; a++) {
             tab[a].classList.remove('active')
           }

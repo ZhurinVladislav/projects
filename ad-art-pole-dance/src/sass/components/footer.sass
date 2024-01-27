@@ -1,0 +1,255 @@
+.footer
+  margin-top: auto
+
+  .footer-content
+    display: flex
+    justify-content: space-between
+    padding: 60px 49px 60px 60px
+    border: 1px solid $clr_3
+    border-radius: 50px
+
+    +md
+      flex-direction: column
+
+    +sm
+      border-radius: 30px
+
+    +ph
+      align-items: center
+      padding: 20px
+
+    &__img-wrapper
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-right: 20px
+
+      +md
+        flex-direction: row
+        align-items: center
+        margin-right: 0
+        margin-bottom: 20px
+        max-width: 350px
+
+      +ph
+        flex-direction: column
+
+    &__logo
+
+      +md
+        margin-right: 20px
+
+      +ph
+        margin-right: 0
+        margin-bottom: 20px
+        max-width: 130px
+
+    &__img-link
+
+      +ph
+        max-width: 130px
+
+    &__list-wrapper
+      display: flex
+      justify-content: space-between
+
+      +sm
+        flex-wrap: wrap
+        justify-content: flex-start
+
+
+      +ph
+        flex-direction: column
+
+    &__menu-title
+      @include textReset
+      margin-bottom: 30px
+      font-weight: 700
+      line-height: 1
+      font-size: 20px
+      color: $clr_3
+
+      +sm
+        display: none
+
+  &__services-list
+    max-width: 357px
+
+    +ph
+      max-width: 100%
+
+  .footer-list
+    margin-right: 58px
+
+    +sm
+      display: none
+
+    &__item
+
+      &:not(:last-child)
+        margin-bottom: 10px
+
+      &_active
+        .footer-list__link
+          color: $clr_3
+          opacity: 1
+
+    &__link
+      line-height: 1.1
+      font-size: 18px
+      border-bottom: 1px solid $clr_0
+      opacity: .7
+      transition: border-color .2s linear, opacity .2s linear
+
+      +ph
+        font-size: 16px
+
+      &:hover
+        border-color: $clr_2
+        opacity: 1
+
+  .footer-contacts
+    max-width: 229px
+
+    +ph
+      align-items: center
+      margin-bottom: 20px
+      max-width: 100%
+      text-align: center
+
+    &__title
+      @include textReset
+      margin-bottom: 30px
+      font-weight: 700
+      line-height: 1
+      font-size: 20px
+      color: $clr_3
+
+      +ph
+        font-size: 18px
+        margin-bottom: 20px
+
+    &__list-item
+      display: flex
+      flex-direction: column
+
+      +ph
+        align-items: center
+
+      &:not(:last-child)
+        margin-bottom: 20px
+
+        +ph
+          margin-bottom: 10px
+
+    &__list-item-title
+      @include textReset
+      margin-bottom: 10px
+      font-weight: 700
+      line-height: 1.1
+
+    &__list-link
+      max-width: max-content
+      font-weight: 500
+      line-height: 1.1
+      border-bottom: 1px solid $clr_0
+      transition: border-color .2s linear, opacity .2s linear
+
+      &:hover
+        border-color: $clr_2
+        opacity: 1
+
+      &:not(:last-child)
+        margin-bottom: 5px
+
+  .footer-feedback
+    margin-top: auto
+    padding-bottom: 46px
+
+    +md
+      margin-top: 0
+
+    +ph
+      padding-bottom: 0
+
+    &__btn
+      margin-bottom: 30px
+
+      +ph
+        margin-bottom: 15px
+
+    &__content
+      display: flex
+      flex-direction: column
+
+      +ph
+        align-items: center
+      
+    &__title
+      @include textReset
+      margin-bottom: 10px
+      font-weight: 700
+      line-height: 1.1
+
+    &__link
+      max-width: max-content
+      border-bottom: 1px solid $clr_0
+      transition: border-color .2s linear
+
+      &:not(:last-child)
+        margin-bottom: 5px
+
+      &:hover
+        border-color: $clr_2
+
+      &_last
+        margin-bottom: 0
+
+  .copyright
+    display: flex
+    align-items: center
+    padding: 22px 56px
+    font-size: 14px
+    line-height: 1.1
+
+    +sm
+      justify-content: space-between
+
+    +ph
+      flex-direction: column
+      padding: 15px 0px
+
+    .item
+
+      &:first-child
+        margin-right: 104px
+
+        +sm
+          margin-right: 0
+
+      &:not(:last-child)
+        +sm
+          margin-right: 10px
+
+        +ph
+          margin-right: 0
+          margin-bottom: 5px
+
+    &__text
+      @include textReset
+      opacity: .7
+
+    .link
+      border-bottom: 1px solid $clr_0
+      opacity: .7
+      transition: border-color .2s linear, opacity .2s linear
+
+      &:hover
+        border-color: $clr_2
+        opacity: 1
+
+      &_web2
+        margin-left: auto
+
+        +sm
+          margin-left: 0

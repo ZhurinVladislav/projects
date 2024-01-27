@@ -1,0 +1,133 @@
+.services
+
+  &__title-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 33px
+
+    +ph
+      flex-direction: column
+      align-items: flex-start
+
+  &__title
+    margin-bottom: 0
+
+    +ph
+      margin-bottom: 15px
+
+  &__btn
+
+    +md
+      display: none
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-auto-rows: minmax(80px, auto)
+    gap: 31px
+
+    +md
+      grid-template-columns: repeat(2, 1fr)
+
+    +ph
+      grid-template-columns: 1fr
+      grid-auto-rows: minmax(60px, auto)
+      gap: 20px
+
+  &__list-item
+
+    &_last
+      display: none
+
+      +md
+        display: flex
+
+      .services__list-link
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        color: $clr_1
+        background-color: $clr_3
+
+  &__list-link
+    display: flex
+    align-items: center
+    padding: 29px 32px
+    max-width: 100%
+    min-height: 100%
+    background-color: $clr_4
+    border-radius: 30px
+
+    +ph
+      padding: 25px
+
+    &:hover
+      .services__list-icon
+        opacity: 0
+
+        +ph
+          opacity: 1
+
+      .services__list-icon_hover
+        opacity: 1
+
+        +ph
+          opacity: 0
+
+      .services__list-descr
+        color: $clr_1
+        
+        +ph
+          color: $clr_2
+
+      .button-icon__img
+        transform: rotate(0)
+
+  &__list-icon-wrapper
+    position: relative
+    flex-shrink: 0
+    margin-right: 15px
+    width: 41px
+    height: 41px
+
+    +ph
+      width: 30px
+      height: 30px
+
+  &__list-icon
+    transition: opacity .2s linear
+
+    &_hover
+      position: absolute
+      z-index: 2
+      top: 0
+      left: 0
+      opacity: 0
+      filter: grayscale(1) brightness(1000%)
+
+  &__list-icon-btn
+    flex-shrink: 0
+    width: 41px
+    height: 41px
+
+    +ph
+      width: 30px
+      height: 30px
+
+  &__list-descr
+    position: relative
+    z-index: 2
+    @include textReset
+    margin-right: 10px
+    max-width: 250px
+    line-height: 1.2
+    font-size: 20px
+    transition: color .2s linear
+
+    +sm
+      font-size: 16px
+
+  &__list-btn
+    margin-left: auto

@@ -1,0 +1,213 @@
+.hero
+  line-height: 1
+  box-sizing: border-box
+
+  &__container
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    margin-bottom: 26px
+
+    +ph
+      flex-direction: column
+      align-items: flex-start
+
+  &__title
+    margin-right: 10px
+    font-size: 100px
+    color: $clr_3
+    max-width: 1100px
+
+    +lr
+      font-size: 80px
+
+    +md
+      font-size: 70px
+
+    +sm
+      font-size: 60px
+
+    +ph
+      margin-right: 0
+      margin-bottom: 15px
+      font-size: 40px
+
+  &__text-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 18px 17px
+    font-size: 20px
+    max-width: 314px
+    border-radius: 20px
+    background-color: $clr_4
+
+    +sm
+      font-size: 18px
+
+    +ph
+      padding: 15px
+      font-size: 16px
+      max-width: 100%
+
+  &__text
+    @include textReset
+
+  .hero-slider
+    position: relative
+    display: flex
+    width: 100%
+    height: 100%
+
+    &__btn-wrapper
+      position: absolute
+      z-index: 10
+      right: 268px
+      bottom: 65px
+
+      +lr
+        right: 100px
+
+      +md
+        right: 65px
+
+      +sm
+        right: 25px
+        bottom: 25px
+
+      +ph
+        top: 25px
+        bottom: auto
+
+    &__pagination
+      position: absolute
+      right: 50%
+      left: 50%
+      z-index: 5
+      display: flex
+      margin-bottom: 57px
+      max-width: max-content
+      transform: translateX(-50%)
+
+      +sm
+        margin-bottom: 10px
+
+    &__pagination-item
+      width: 20px
+      height: 20px
+      cursor: pointer
+      background-image: url(../img/star.svg)
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      opacity: .4
+      transition: opacity .2s linear
+
+      &:hover
+        opacity: .6
+
+      &:not(:last-child)
+        margin-right: 10px
+
+      &_active
+        opacity: 1
+
+  .hero-slide
+    display: flex
+    font-size: 18px
+    min-height: 658px
+    // background-color: $clr_4
+    // background-position: center
+    // background-size: cover
+    // background-repeat: no-repeat
+    box-sizing: border-box
+
+    +md
+      min-height: 400px
+
+    &__img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      
+
+    &__content-wrapper
+      display: flex
+      max-width: $size_1
+      width: 100%
+      min-height: 658px
+      margin: 0 auto
+      padding-left: 25px
+      padding-right: 25px
+      padding-bottom: 65px
+
+      +md
+        min-height: 400px
+
+      +ph
+        padding-left: 10px
+        padding-right: 10px
+        padding-bottom: 48px
+
+    &__content
+      position: relative
+      margin-top: auto
+      padding: 42px 100px 50px 40px
+      max-width: 530px
+      border-radius: 50px
+      background-color: $clr_1
+
+      +sm
+        border-radius: 30px
+
+      +ph
+        padding: 25px 60px 25px 25px
+        max-width: 100%
+    
+    &__content-title
+      margin-bottom: 16px
+
+      +ph
+        margin-bottom: 15px
+
+    &__content-text
+      @include textReset
+      font-size: 26px
+
+      +sm
+        font-size: 20px
+
+      +ph
+        font-size: 16px
+
+    &__content-btn
+      position: absolute
+      top: 25px
+      right: 25px
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 50px
+      height: 50px
+      border-radius: 100px
+      background-color: $clr_3
+      transition: background-color .2s linear
+
+      +ph
+        top: 15px
+        right: 15px
+        width: 40px
+        height: 40px
+
+      &:hover
+        .hero-slide__content-btn-icon
+          transform: rotate(0)
+
+    &__content-btn-icon
+      width: 16px
+      height: 16px
+      fill: $clr_1
+      transform: rotate(-45deg)
+      transition: fill .2s linear, transform .2s linear
+  

@@ -1,0 +1,112 @@
+.reviews
+	margin-bottom: 60px
+
+	&__content-wrapper
+		display: flex
+		justify-content: space-between
+		padding: 38px 100px
+		border-radius: 50px
+		background-color: $clr_3
+
+		+lr
+			padding: 38px 80px
+
+		+sm
+			flex-direction: column
+			padding: 20px 20px
+			border-radius: 30px
+
+		+ph
+			padding: 20px 10px
+
+	&__content
+		margin-right: 20px
+		max-width: 55%
+		color: $clr_1
+
+		+sm
+			margin-right: 0
+			margin-bottom: 20px
+			max-width: 100%
+
+	&__title
+		@include textReset
+		margin-bottom: 25px
+		font-weight: 600
+		line-height: 1
+		font-size: 40px
+
+		+sm
+			font-size: 30px
+		
+	&__descr
+		@include textReset
+		line-height: 1.3
+		font-size: 20px
+
+		+md
+			font-size: 18px
+
+		+ph
+			font-size: 16px
+
+	&__list
+		max-width: 35%
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-auto-rows: minmax(80px, auto)
+		gap: 20px
+		width: 100%
+
+		+md
+			grid-template-columns: 1fr
+
+		+sm
+			grid-template-columns: repeat(2, 1fr)
+			gap: 15px
+			max-width: 100%
+
+		+ph
+			grid-template-columns: 1fr
+			grid-auto-rows: minmax(40px, auto)
+
+	&__item
+		width: 100%
+		height: 100%
+
+	&__link
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 20px 25px
+		width: 100%
+		height: 100%
+		font-size: 20px
+		border-radius: 20px
+		background-color: $clr_1
+		text-align: center
+		// transition: background-color .6s linear, color .2s linear
+		transition: box-shadow .2s linear
+
+		+sm
+			padding: 15px 20px
+			font-size: 16px
+
+		&:hover
+			box-shadow: 0 20px 50px 0 rgba($clr_2, 0.8)
+			// color: $clr_1
+			// background-color: $clr_2
+
+	&__link-img
+		width: 180px
+		height: 40px
+
+		+ph
+			height: 50px
+
+	// &__link-text
+	// 	position: relative
+	// 	z-index: 2
+
+	// .js-hover-btn__bg
+	// 	background-color: $clr_2

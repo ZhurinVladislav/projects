@@ -412,6 +412,69 @@ input[type='number']
     line-height: 1.1
     transition: opacity .2s linear
 
+.textarea
+  padding: 14px 20px
+  width: 100%
+  resize: none
+  min-height: 70px
+  border: 2px solid rgba($clr_5, .5)
+  background-color: $clr_0
+  border-radius: 8px
+  line-height: 1.1
+  color: $clr_2
+  transition: border-color .2s linear
+
+  +phone
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: red
+
+    &:hover
+      border-color: red
+
+    &:focus
+      border-color: red
+
+  &:hover
+    border-color: $clr_3
+
+  &:focus
+    border-color: $clr_3
+
+    &::-webkit-input-placeholder
+      opacity: 0
+
+    &::-moz-placeholder
+      opacity: 0
+
+    &:-ms-input-placeholder
+      opacity: 0
+
+    &:-moz-placeholder
+      opacity: 0
+
+  &::-webkit-input-placeholder
+    color: $clr_2
+    line-height: 1.1
+    transition: opacity .2s linear
+
+  &::-moz-placeholder
+    color: $clr_2
+    line-height: 1.1
+    transition: opacity .2s linear
+
+  &:-ms-input-placeholder
+    color: $clr_2
+    line-height: 1.1
+    transition: opacity .2s linear
+
+  &:-moz-placeholder
+    color: $clr_2
+    line-height: 1.1
+    transition: opacity .2s linear
+
 .input-invert
   padding: 18px 20px
   width: 100%
@@ -1045,6 +1108,9 @@ input[type='number']
 // КАПЧА
 .grecaptcha-badge
   opacity: 0
+
+.slide__img
+  background-color: rgba($clr_3, .6)
 
 // АНИМАЦИЯ
 [data-scroll]

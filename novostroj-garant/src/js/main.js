@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+  function addMap() {
+    const mapScript = document.getElementById('map-wrapper').querySelector('script');
+    const x = mapScript.getAttribute('x');
+    const y = mapScript.getAttribute('y');
+    const title = mapScript.getAttribute('mapTitle');
+    const content = mapScript.getAttribute('mapContent');
+    const zoom = mapScript.getAttribute('zoom');
+
+    ymaps.ready(init);
+    function init() {
+      const map = new ymaps.Map('map', {
+        center: [x, y],
+        zoom: zoom,
+        controls: ['zoomControl', 'fullscreenControl'],
+      });
+      const mark = new ymaps.Placemark([x, y], {
+        iconCaption: title,
+        balloonContent: content,
+      });
+
+      map.geoObjects.add(mark);
+    }
+  }
+
+  if (document.getElementById('map')) addMap();
 
   // МОБИЛЬНОЕ МЕНЮ
   (() => {
@@ -33,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let arrLength;
 
-    listInner.forEach((e) => {
+    listInner.forEach(e => {
       e.classList.add('overflow-hidden');
     });
 
@@ -53,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
           arrow.classList.add('active');
         }
-      };
-    };
+      }
+    }
 
     parentItem.forEach(e => {
       e.addEventListener('click', () => {
@@ -69,16 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
           document.querySelectorAll('.menu__list .list').forEach(e => {
             e.style.maxHeight = null;
             console.log(e.previousElementSibling.classList);
-            e.previousElementSibling.classList.remove('active')
+            e.previousElementSibling.classList.remove('active');
           });
           acContent.style.maxHeight = acContent.scrollHeight + 'px';
           e.classList.add('active');
         }
-
       });
-
     });
-
   })();
 
   // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
@@ -119,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (paginationChild.length === 0) pagination.style.paddingTop = '0';
     })();
-  };
+  }
 
   // СЛАЙДЕР БЛОКА "PROJECTS"
   function swiperSliderOne() {
@@ -127,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 28,
       slidesPerView: 3,
       speed: 700,
+      lazy: true,
       navigation: {
         nextEl: '.projects__swiper-wrapper .arrow-slider_next',
         prevEl: '.projects__swiper-wrapper .arrow-slider_prev',
@@ -149,11 +172,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       },
     });
-  };
+  }
 
   if (document.querySelector('.projects')) {
     swiperSliderOne();
-  };
+  }
 
   // СЛАЙДЕР БЛОКА "PORTFOLIO"
   function swiperSliderTwo() {
@@ -161,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 28,
       slidesPerView: 3,
       speed: 700,
+      lazy: true,
       allowTouchMove: false,
       navigation: {
         nextEl: '.portfolio__swiper-wrapper .arrow-slider_next',
@@ -184,31 +208,39 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       },
     });
-  };
+  }
 
   if (document.querySelector('.portfolio')) {
     swiperSliderTwo();
-  };
+  }
 
   // СЛАЙДЕР СТРАНИЦЫ "PORTFOLIO-IMAGE"
+  /*
   if ($('.portfolio-image-slider').length > 0) {
     let swiperInstances = [];
-    $(".portfolio-image-slider").each(function (i) {
+    $('.portfolio-image-slider').each(function (i) {
       const $this = $(this);
-      $this.addClass("slide-" + i);
+      $this.addClass('slide-' + i);
 
-      $this.parent().find(".arrow-slider_prev").addClass("p-" + i);
-      $this.parent().find(".arrow-slider_next").addClass("n-" + i);
+      $this
+        .parent()
+        .find('.arrow-slider_prev')
+        .addClass('p-' + i);
+      $this
+        .parent()
+        .find('.arrow-slider_next')
+        .addClass('n-' + i);
 
-      swiperInstances[i] = new Swiper(".slide-" + i, {
+      swiperInstances[i] = new Swiper('.slide-' + i, {
         spaceBetween: 28,
         slidesPerView: 3,
         // allowTouchMove: false,
+        lazy: true,
         speed: 700,
         a11y: false,
         navigation: {
-          prevEl: ".p-" + i,
-          nextEl: ".n-" + i,
+          prevEl: '.p-' + i,
+          nextEl: '.n-' + i,
         },
         breakpoints: {
           50: {
@@ -230,18 +262,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-  // */
+  */
 
-  /*
+  ///*
   function sliderPortfolio() {
-    let swiperArr = [],
-      sliderArr = [];
+    let swiperArr = [];
+    let sliderArr = [];
 
-    const wrapper = document.querySelector('#portfolio-inner'),
-      item = Array.from(wrapper.querySelectorAll('.portfolio-inner-slider__wrapper'));
+    const wrapper = document.getElementById('portfolio-inner');
+    const item = Array.from(wrapper.querySelectorAll('.portfolio-image-slider'));
 
-    item.forEach((e, i) => {
-      const parent = e.parentNode.parentNode;
+    console.log(wrapper);
+
+    item.forEach(function (e, i) {
+      const parent = e.parentNode;
+      console.log(parent);
       e.classList.add(`slider-${i}`);
       parent.querySelector('.arrow_prev').classList.add(`p-${i}`);
       parent.querySelector('.arrow_next').classList.add(`n-${i}`);
@@ -252,10 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
         arrowNext: document.querySelector(`.n-${i}`),
       });
 
-      swiperArr[0] = new Swiper(".slider-" + 0, {
+      swiperArr[0] = new Swiper('.slider-' + 0, {
         navigation: {
-          prevEl: ".p-" + 0,
-          nextEl: ".n-" + 0,
+          prevEl: '.p-' + 0,
+          nextEl: '.n-' + 0,
         },
         spaceBetween: 28,
         slidesPerView: 3,
@@ -278,21 +313,20 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
       });
-
     });
-
   }
 
-  if (document.querySelector('#portfolio-inner')) {
-    sliderPortfolio()
+  if (document.getElementById('portfolio-inner')) {
+    sliderPortfolio();
   }
-  */
+  //*/
   // СЛАЙДЕРЫ НА СТРАНИЦЕ ПРОЕКТА
   function sliderProject() {
     let swiper = new Swiper('.slider-bottom', {
       spaceBetween: 10,
       slidesPerView: 4,
       speed: 700,
+      lazy: true,
       freeMode: true,
       watchSlidesProgress: true,
       breakpoints: {
@@ -303,13 +337,13 @@ document.addEventListener('DOMContentLoaded', () => {
         768: {
           slidesPerView: 4,
         },
-
       },
     });
 
     let swiper2 = new Swiper('.slider-top', {
       spaceBetween: 10,
       speed: 700,
+      lazy: true,
       navigation: {
         nextEl: '.slider-arrow_next',
         prevEl: '.slider-arrow_prev',
@@ -323,6 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 10,
       slidesPerView: 3,
       speed: 700,
+      lazy: true,
       navigation: {
         nextEl: '.arrow-slider_next',
         prevEl: '.arrow-slider_prev',
@@ -390,12 +425,12 @@ document.addEventListener('DOMContentLoaded', () => {
         html.classList.add('galleryActive');
       } else {
         html.classList.remove('galleryActive');
-      };
+      }
     });
 
     // УБИРАЕМ КЛАСС ПРИ НАЖАТИЕ НА "ESC"
     window.addEventListener('keydown', e => {
-      if (e.key === 'Escape') html.classList.remove('galleryActive')
+      if (e.key === 'Escape') html.classList.remove('galleryActive');
     });
   })();
 
@@ -404,11 +439,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const acItem = document.querySelectorAll('.spoiler .js-ac-btn'),
       acText = document.querySelectorAll('.spoiler .js-ac-text');
 
-    acText.forEach((e) => {
+    acText.forEach(e => {
       e.classList.add('overflow-hidden');
     });
 
-    acItem.forEach((e) => {
+    acItem.forEach(e => {
       e.addEventListener('click', () => {
         const acContent = e.nextElementSibling;
 
@@ -427,8 +462,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // SPOILER ФИЛЬТРА
   function spoilerFilter() {
     const btn = document.getElementById('filter-btn'),
-          content = document.getElementById('filter-content'),
-          label = document.querySelectorAll('.js-label');
+      content = document.getElementById('filter-content'),
+      label = document.querySelectorAll('.js-label');
 
     content.setAttribute('open', '0');
 
@@ -444,39 +479,37 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           content.style.maxHeight = content.scrollHeight + 'px';
           e.currentTarget.classList.add('active');
-        };
+        }
       });
-    };
-    
+    }
+
     label.forEach(e => {
       e.addEventListener('click', () => {
         if (content.getAttribute('open') === '1') {
           content.setAttribute('open', '0');
           content.style.maxHeight = content.scrollHeight + 75 + 'px';
-        };
+        }
       });
     });
-
-  };
+  }
 
   if (document.querySelector('.filter')) {
     window.addEventListener('resize', () => {
       if (window.innerWidth <= 991) {
         spoilerFilter();
       }
-    })
+    });
 
     if (window.innerWidth <= 991) {
       spoilerFilter();
     }
   }
 
-    
   // ТАБЫ НА СТРАНИЦЕ "PROJECT"
   function tabProject() {
     let tab = document.querySelectorAll('.js-btn'),
-        tabWrapper = document.querySelector('.js-btn-wrapper'),
-        tabContent = document.querySelectorAll('.js-item-content');
+      tabWrapper = document.querySelector('.js-btn-wrapper'),
+      tabContent = document.querySelectorAll('.js-item-content');
 
     function hideTabContent(a) {
       for (let i = a; i < tabContent.length; i++) {
@@ -493,17 +526,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let e = tab[i];
         if (i === 0) {
           e.classList.add('active');
-        };
+        }
       }
       for (let i = 0; i < tabContent.length; i++) {
         let e = tabContent[i];
         if (i === 0) {
           e.classList.add('show');
-        };
+        }
       }
     }
 
-    addActiveItem()
+    addActiveItem();
 
     function showTabContent(b) {
       if (tabContent[b].classList.contains('hide')) {
@@ -512,14 +545,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    tabWrapper.addEventListener('click', function(event) {
+    tabWrapper.addEventListener('click', function (event) {
       let target = event.target;
       if (target && target.classList.contains('js-btn')) {
-        for(let i = 0; i < tab.length; i++) {
-          
+        for (let i = 0; i < tab.length; i++) {
           if (target == tab[i]) {
             for (let a = 0; a < tab.length; a++) {
-              tab[a].classList.remove('active')
+              tab[a].classList.remove('active');
             }
             tab[i].classList.add('active');
             hideTabContent(0);
@@ -531,8 +563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if(document.querySelector('.project')) {
+  if (document.querySelector('.project')) {
     tabProject();
   }
-
 });

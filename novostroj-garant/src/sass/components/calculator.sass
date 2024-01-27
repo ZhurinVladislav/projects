@@ -66,7 +66,10 @@
 				margin-bottom: 20px
 
 			.item
-				
+				.form-note
+					&__checkbox
+						top: 2px
+
 				&__title
 					z-index: 1
 					@include textReset
@@ -201,7 +204,7 @@
 								margin-bottom: 10px
 
 							&:last-child
-								padding-bottom: 5px
+								padding-bottom: 10px
 
 		.summa
 			margin-bottom: 32px
@@ -345,6 +348,43 @@
 
 				&:hover
 					border-color: $clr_3
+
+			ul
+				margin-bottom: 20px
+				padding-left: 34px
+				list-style: inherit
+				list-style: disc
+
+				+phone
+					padding-left: 30px
+
+				li
+					&::marker
+						font-family: $ff_1
+						font-size: 18px
+						font-weight: 600
+						color: $clr_3
+
+					&:not(:last-child)
+						margin-bottom: 10px
+
+			ol
+				margin-bottom: 20px
+				padding-left: 40px
+
+				+phone
+					padding-left: 30px
+
+				li
+
+					&::marker
+						font-family: $ff_1
+						font-size: 18px
+						font-weight: 600
+						color: $clr_3
+
+				li:not(:last-child)
+					margin-bottom: 10px
 
 			strong
 				color: $clr_3

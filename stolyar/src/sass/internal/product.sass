@@ -60,7 +60,6 @@
       display: flex
       flex-direction: column
       max-width: 50%
-      // max-height: 65vh
       max-height: 80vh
       margin-right: 40px
       overflow: hidden
@@ -150,9 +149,6 @@
         +small
           font-size: 30px
 
-      // &__number
-      //   color: $color__3
-
       &__text
         margin-bottom: 20px
         font-size: 16px
@@ -175,7 +171,6 @@
 
           &:hover
             border-color: $color__0
-
 
       &__btn
         padding: 14px 27px
@@ -262,8 +257,6 @@
       font-size: 16px
       text-align: center
 
-
-
     .swiper-slide
       position: relative
       font-size: 0
@@ -278,7 +271,6 @@
         .swiper-img
           opacity: .7
         
-
     .swiper-slide .swiper-img
       background-color: $color__3
       margin-bottom: 10px
@@ -349,3 +341,12 @@
       opacity: 0
       transform: translate(-50%, -50%) scale(0.7)
       transition: transform .3s linear, opacity .2s linear
+
+    .see-also-slider__wrapper
+      &.beds
+        .swiper-slide
+          background-color: $color__1
+
+        .swiper-img
+          background-color: $color__1
+          object-fit: contain

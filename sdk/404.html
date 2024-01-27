@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Страница не найдена | СДК</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="/app/css/main.min.css" />
+        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/preloader.js"></script>
+        <script src="/app/js/libs/jquery-3.3.1.min.js" defer></script>
+        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
+        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
+        <script src="/app/js/libs/webp.js" defer></script>
+        <script src="/app/js/libs/modal-window.js" defer></script>
+        <script src="/app/js/libs/SmoothScroll.min.js" crossorigin="anonymous" defer></script>
+        <script src="/app/js/libs/ScrollTrigger.min.js" defer></script>
+        <script src="/app/js/libs/gsap.min.js" defer></script>
+        <script src="/app/js/main.min.js" defer></script>
+        <!-- <script src="/app/js/main.js" defer></script> -->
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header id="header" class="home-page__header header">
+            <!-- HEADER-TOP -->
+            <div class="header__top header-top">
+                <div class="header-top__container container">
+                    <a href="/" title="Логотип СДК" class="header-top__logo logo">
+                        <img
+                            class="logo__img"
+                            src="/app/img/logo.svg"
+                            alt="Логотип СДК"
+                            title="Логотип СДК"
+                        />
+                    </a>
+                    <address class="header-top__address">
+                        г. Новороссийск, проспект Дзержинского 156В
+                    </address>
+                    <ul class="header-top__list-phone">
+                        <li class="header-top__list-phone-item">
+                            <a
+                                href="tel:+78617302715"
+                                class="header-top__list-phone-link header-phone-link link"
+                            >
+                                <svg class="header-phone-link__icon link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="header-phone-link__text link__text">
+                                    +7 (8617) 302-715
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header-top__list-phone-item">
+                            <a
+                                href="tel:+79892396777"
+                                class="header-top__list-phone-link header-phone-link link"
+                            >
+                                <svg class="header-phone-link__icon link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="header-phone-link__text link__text">
+                                    +7 (989) 239-6777
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-top__content-right">
+                        <ul class="header-top__list-social header-social">
+                            <li class="header-social__item">
+                                <a
+                                    href="https://wa.me/+79892396777"
+                                    class="header-social__link button-invert js-hover-btn"
+                                    target="_blank"
+                                >
+                                    <svg class="header-social__link-icon button-invert__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                    </svg>
+                                    <span class="header-social__link-text button-invert__text">
+                                        WhatsApp
+                                    </span>
+                                    <span class="button-invert__bg js-hover-btn__bg"></span>
+                                </a>
+                            </li>
+                            <li class="header-social__item">
+                                <a
+                                    href="https://t.me/+79892396777"
+                                    class="header-social__link button-invert js-hover-btn"
+                                    target="_blank"
+                                >
+                                    <svg class="header-social__link-icon button-invert__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                    </svg>
+                                    <span class="header-social__link-text button-invert__text">
+                                        Telegram
+                                    </span>
+                                    <span class="button-invert__bg js-hover-btn__bg"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <button
+                            data-open="form-callback"
+                            class="header-top__btn button js-open-modal js-hover-btn"
+                        >
+                            <span class="button__text"> Записаться </span>
+                            <svg class="button__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#star"></use>
+                            </svg>
+                            <span class="button__bg js-hover-btn__bg"></span>
+                        </button>
+                    </div>
+                    <button
+                        id="burger-toggle"
+                        aria-label="Мобильное меню"
+                        class="header-top__menu-toggle menu-toggle"
+                    >
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- HEADER-BOTTOM -->
+            <div class="header__bottom header-bottom">
+                <div class="header-bottom__container container">
+                    <nav class="header-bottom__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item active">
+                                <a class="menu__link js-hover-btn" href="/">
+                                    <span class="menu__link-item"> Главная </span>
+                                    <span class="menu__link-bg js-hover-btn__bg"></span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link js-hover-btn" href="./main.html">
+                                    <span class="menu__link-item"> О клинике </span>
+                                    <span class="menu__link-bg js-hover-btn__bg"></span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link js-hover-btn" href="./services.html">
+                                    <span class="menu__link-item"> Услуги </span>
+                                    <span class="menu__link-bg js-hover-btn__bg"></span>
+                                </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                Консультация
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                Профессиональная гигиена полости рта
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item"> Отбеливание </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                Лечение зубов
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                Протезирование зубов
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item"> Хирургия </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item"> Имплантация </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item"> Ортодонтия </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./projects.html">
+                                            <span class="list-inner__link-item">
+                                                Рентген-кабинет
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link js-hover-btn" href="./portfolio.html">
+                                    <span class="menu__link-item"> Акции </span>
+                                    <span class="menu__link-bg js-hover-btn__bg"></span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link js-hover-btn" href="./specialists.html">
+                                    <span class="menu__link-item"> Специалисты </span>
+                                    <span class="menu__link-bg js-hover-btn__bg"></span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link js-hover-btn" href="./price.html">
+                                    <span class="menu__link-item"> Прайс </span>
+                                    <span class="menu__link-bg js-hover-btn__bg"></span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link js-hover-btn" href="./contacts.html">
+                                    <span class="menu__link-item"> Контакты </span>
+                                    <span class="menu__link-bg js-hover-btn__bg"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- BURGER-MENU -->
+            <div id="burger-menu" class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu menu">
+                        <ul class="menu__list list">
+                            <li class="list__item item active">
+                                <a href="/" class="item__link" target="_blank"> Главная </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./main.html" class="item__link" target="_blank">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="list__item item parent">
+                                <a href="./projects.html" class="item__link" target="_blank">
+                                    Услуги
+                                </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html">
+                                            Консультация
+                                        </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html">
+                                            Профессиональная гигиена полости рта
+                                        </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html">
+                                            Отбеливание
+                                        </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html">
+                                            Лечение зубов
+                                        </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html">
+                                            Протезирование зубов
+                                        </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html"> Хирургия </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html">
+                                            Имплантация
+                                        </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html"> Ортодонтия </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./service.html">
+                                            Рентген-кабинет
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./portfolio.html" class="item__link" target="_blank">
+                                    Акции
+                                </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./contacts.html" class="item__link"> Специалисты </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./contacts.html" class="item__link"> Прайс </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./contacts.html" class="item__link"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+78617302715">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (8617) 302-715 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+79892396777">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (989) 239-6777 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a
+                                target="_blank"
+                                class="list-link__link"
+                                href="https://wa.me/+79528150000"
+                            >
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="list-link__descr"> WhatsApp </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a
+                                target="_blank"
+                                class="list-link__link"
+                                href="https://t.me/+79528150000"
+                            >
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                                <span class="list-link__descr"> Telegram </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="/">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <address class="list-link__descr">
+                                    г. Новороссийск, проспект Дзержинского 156В
+                                </address>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <button
+                                data-open="form-callback"
+                                class="list-link__btn button js-open-modal js-hover-btn"
+                            >
+                                <span class="button__text"> Записаться </span>
+                                <svg class="button__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="button__bg js-hover-btn__bg"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main id="main">
+            <section class="not-found">
+                <div class="not-found__container container">
+                    <div class="not-found__content content">
+                        <h1 class="content__title-hidden h-0">
+                            Страница не найдена | Новострой гарант
+                        </h1>
+                        <h2 class="content__title h-2">
+                            <span class="content__color color">404</span> - страница не найдена
+                        </h2>
+                        <p class="content__text">
+                            К&nbsp;сожалению, страница
+                            <span class="content__color color">не&nbsp;была обнаружена.</span>
+                        </p>
+                        <p class="content__text content__text_last">
+                            Пожалуйста, проверьте корректность веденного
+                            <span class="content__color color">URL-адреса.</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div class="modal form-callback" id="form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"
+                    ></button>
+                    <p class="form-callback__title modal-title">
+                        <span class="modal-title__color color">Связаться</span> с нами
+                    </p>
+
+                    <form action="/" class="form form-mod">
+                        <div class="form-mod__wrap-input wrap-input">
+                            <input class="wrap-input__input input" type="text" placeholder="Имя*" />
+                            <input
+                                class="wrap-input__input input"
+                                type="text"
+                                placeholder="Email*"
+                            />
+                            <label class="wrap-input__item form-note">
+                                <input class="form-note__input" type="checkbox" checked />
+                                <span class="form-note__checkbox"></span>
+                                <span class="form-note__text">
+                                    Даю согласие на&nbsp;обработку персональных данных
+                                </span>
+                            </label>
+                        </div>
+                        <button
+                            aria-label="Отправить заявку"
+                            type="submit"
+                            class="form-mod__btn button js-btn-submit"
+                        >
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div class="modal form-success" id="form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"
+                    ></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="home-page__footer footer">
+            <div class="footer__container container">
+                <div class="footer__content footer-content">
+                    <div class="footer-content__img-wrapper">
+                        <a
+                            class="footer-content__logo logo"
+                            href="/"
+                            aria-label="Перейти на главную страницу"
+                        >
+                            <img
+                                class="logo__img"
+                                src="/app/img/logo-footer.svg"
+                                alt="Логотип СДК"
+                                title="Логотип СДК"
+                            />
+                        </a>
+                        <a
+                            href="/"
+                            class="footer-content__img-link logo"
+                            target="_blank"
+                            aria-label="Перейти на Продокторов"
+                        >
+                            <img
+                                class="footer-content__img logo__img"
+                                src="/app/img/footer/prodoktorov.png"
+                                alt="Продокторов"
+                                title="Продокторов"
+                            />
+                        </a>
+                    </div>
+                    <div class="footer-content__list-wrapper">
+                        <ul class="footer-content__services-list footer-list">
+                            <li class="footer-content__services-list-title footer-list__title">
+                                Наши услуги
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Консультация
+                                </a>
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Профессиональная гигиена полости рта
+                                </a>
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Отбеливание
+                                </a>
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Лечение зубов
+                                </a>
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Протезирование зубов
+                                </a>
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Хирургия
+                                </a>
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Имплантация
+                                </a>
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Ортодонтия
+                                </a>
+                            </li>
+                            <li class="footer-content__services-list-item footer-list__item">
+                                <a
+                                    class="footer-content__services-list-link footer-list__link"
+                                    href="/"
+                                >
+                                    Рентген-кабинет
+                                </a>
+                            </li>
+                        </ul>
+                        <nav class="footer-content__menu">
+                            <ul class="footer-content__menu-list footer-list">
+                                <li class="footer-content__menu-list-title footer-list__title">
+                                    Меню
+                                </li>
+                                <li
+                                    class="footer-content__menu-list-item footer-list__item footer-list__item_active"
+                                >
+                                    <a
+                                        class="footer-content__menu-list-link footer-list__link"
+                                        href="/"
+                                    >
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="footer-content__menu-list-item footer-list__item">
+                                    <a
+                                        class="footer-content__menu-list-link footer-list__link"
+                                        href="/"
+                                    >
+                                        О клинике
+                                    </a>
+                                </li>
+                                <li class="footer-content__menu-list-item footer-list__item">
+                                    <a
+                                        class="footer-content__menu-list-link footer-list__link"
+                                        href="/"
+                                    >
+                                        Услуги
+                                    </a>
+                                </li>
+                                <li class="footer-content__menu-list-item footer-list__item">
+                                    <a
+                                        class="footer-content__menu-list-link footer-list__link"
+                                        href="/"
+                                    >
+                                        Акции
+                                    </a>
+                                </li>
+                                <li class="footer-content__menu-list-item footer-list__item">
+                                    <a
+                                        class="footer-content__menu-list-link footer-list__link"
+                                        href="/"
+                                    >
+                                        Специалисты
+                                    </a>
+                                </li>
+                                <li class="footer-content__menu-list-item footer-list__item">
+                                    <a
+                                        class="footer-content__menu-list-link footer-list__link"
+                                        href="/"
+                                    >
+                                        Прайс
+                                    </a>
+                                </li>
+                                <li class="footer-content__menu-list-item footer-list__item">
+                                    <a
+                                        class="footer-content__menu-list-link footer-list__link"
+                                        href="/"
+                                    >
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="footer-content__contacts footer-contacts">
+                            <p class="footer-contacts__title">Контакты</p>
+                            <ul class="footer-contacts__list">
+                                <li class="footer-contacts__list-item">
+                                    <p class="footer-contacts__list-item-title">Адрес:</p>
+                                    <address class="footer-contacts__list-address">
+                                        г. Новороссийск, проспект Дзержинского 156В
+                                    </address>
+                                </li>
+                                <li class="footer-contacts__list-item">
+                                    <p class="footer-contacts__list-item-title">Телефон:</p>
+                                    <a class="footer-contacts__list-link" href="tel:+78617302715">
+                                        +7 (8617) 302-715
+                                    </a>
+                                    <a class="footer-contacts__list-link" href="tel:+79892396777">
+                                        +7 (989) 239-6777
+                                    </a>
+                                </li>
+                                <li class="footer-contacts__list-item">
+                                    <p class="footer-contacts__list-item-title">Почта:</p>
+                                    <a
+                                        class="footer-contacts__list-link"
+                                        href="mailto:info@stomdr.ru"
+                                    >
+                                        info@stomdr.ru
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-content__feedback footer-feedback">
+                            <button
+                                class="footer-feedback__btn button js-open-modal js-hover-btn"
+                                data-open="form-callback"
+                            >
+                                <span class="button__text"> Записаться </span>
+                                <svg class="button__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="button__bg js-hover-btn__bg"></span>
+                            </button>
+                            <div class="footer-feedback__content">
+                                <p class="footer-feedback__title">Мессенджеры:</p>
+                                <a
+                                    class="footer-feedback__link"
+                                    href="https://wa.me/+79892396777"
+                                    target="_blank"
+                                >
+                                    WhatsApp
+                                </a>
+                                <a
+                                    class="footer-feedback__link footer-feedback__link_last"
+                                    href="https://t.me/+79892396777"
+                                    target="_blank"
+                                >
+                                    Telegram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright copyright">
+                    <a class="copyright__link link item" href="/" target="_blank">
+                        Политика конфиденциальности
+                    </a>
+                    <p class="copyright__text item">Все права защищены</p>
+                    <a
+                        class="copyright__link link item link_web2"
+                        href="https://web2.agency/"
+                        target="_blank"
+                    >
+                        Создание сайтов WEB2
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- SOCIAL PANEL -->
+        <ul class="home-page__social-panel social-panel">
+            <li class="social-panel__item">
+                <a
+                    aria-label="Ссылка на WhatsApp"
+                    target="_blank"
+                    href="https://wa.me/+79528150000"
+                    class="social-panel__link"
+                >
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-panel__item">
+                <a
+                    aria-label="Ссылка на Telegram"
+                    target="_blank"
+                    href="https://t.me/+79528150000"
+                    class="social-panel__link"
+                >
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- SCROLL-TOP -->
+        <button id="scrollTop" class="scroll-top scroll-top_active" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+    </body>
+</html>

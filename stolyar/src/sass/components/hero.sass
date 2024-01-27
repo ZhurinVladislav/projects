@@ -15,8 +15,31 @@
     padding-bottom: 160px
 
   +phone
-    padding-bottom: 80px
+    padding-bottom: 0
     min-height: 35vh
+    background-image: none!important
+
+  &__bg-img-ph
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+    display: none
+    width: 100%
+    min-height: 400px
+    background-image: url(../img/hero/bg-img-ph.jpg)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+    +phone
+      display: block
+
+    +max(500px)
+      min-height: 410px
+
+    +max(394px)
+      min-height: 460px
 
   .content
     display: flex
@@ -24,7 +47,13 @@
     max-width: 785px
 
     +phone
-      margin-bottom: 30px
+      padding-bottom: 30px
+
+    +max(500px)
+      padding-bottom: 60px
+
+    +max(394px)
+      padding-bottom: 40px
     
     &__title
       color: $color__1
@@ -130,7 +159,4 @@
       &__descr
         @include textReset
         font-size: 10px
-      
-
-
   
