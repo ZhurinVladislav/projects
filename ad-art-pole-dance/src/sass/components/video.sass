@@ -1,0 +1,30 @@
+.video-slider
+	display: flex
+	flex-direction: column
+
+	&__wrapper
+		margin-bottom: 40px
+
+		+ph
+			margin-bottom: 20px
+
+	&__slide
+		background-color: $clr_3
+		min-height: 699px
+		border-radius: 20px
+
+		+ph
+			min-height: 500px
+			border-radius: 15px
+		
+		iframe
+			max-width: 100%
+			width: 100%
+			min-height: 699px
+
+			+ph
+				min-height: 75vh
+
+	&__arrows
+		margin: 0 auto
+		

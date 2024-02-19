@@ -1,0 +1,104 @@
+.footer
+  margin-top: auto
+  background-color: $clr_3
+  color: $clr_1
+
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 18px
+    margin-bottom: 18px
+
+    +sm
+      flex-direction: column
+      justify-content: center
+
+  .menu
+    &__list
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-right: 20px
+      font-weight: 500
+      font-size: 16px
+
+      +sm
+        margin-right: 0
+        margin-bottom: 30px
+
+      +ph
+        flex-direction: column
+        justify-content: center
+        margin-bottom: 20px
+
+    &__list-item
+      &:not(:last-child)
+        margin-right: 40px
+
+        +sm
+          margin-right: 30px
+
+        +ph
+          margin-right: 0
+          margin-bottom: 15px
+
+      &.active
+        color: $clr_2
+
+        &:hover
+          +hover
+            color: $clr_2
+
+    &__list-link
+      border-bottom: 1px solid $clr_0
+      transition: color .2s linear, border-color .2s linear
+
+      &:hover
+        +hover
+          color: $clr_2
+
+      &:focus:not(:active)
+        outline: none
+        border-color: $clr_1
+
+  .link
+    font-weight: 800
+    font-size: 12px
+    text-transform: uppercase
+
+    &:hover
+      +hover
+        color: $clr_2
+
+        .link__icon
+          fill: $clr_2
+
+        .link__text
+          &::before
+            background-color: $clr_2
+
+    &:focus:not(:active)
+      outline: none
+        
+    &__icon
+      margin-right: 10px
+      width: 47px
+      height: 20px
+      fill: $clr_1
+
+    &__text
+      position: relative
+      padding-left: 10px
+
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        z-index: 1
+        width: 1px
+        height: 18px
+        background-color: $clr_1
+        transform: translateY(-50%)
+        transition: background-color .2s linear

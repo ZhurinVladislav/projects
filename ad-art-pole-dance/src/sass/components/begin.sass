@@ -1,0 +1,50 @@
+.begin
+	&__content
+		display: flex
+		justify-content: space-between
+		padding: 60px
+		background-image: url(../img/begin/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+		+md
+			padding: 40px
+
+		+sm
+			padding: 30px
+		
+		+ph
+			flex-direction: column
+			padding: 30px 20px
+
+	&__content-left
+		margin-right: 20px
+		max-width: 40% 
+
+		+ph
+			margin-right: 0
+			margin-bottom: 20px
+			max-width: 100%
+
+	&__content-title
+		margin-bottom: 20px
+		
+		+ph
+			margin-bottom: 10px
+
+	&__content-subtitle
+		font-size: 24px
+		text-transform: uppercase
+
+		+md
+			font-size: 20px
+
+		+ph
+			font-size: 16px
+
+	&__content-text-wrapper
+		max-width: 60%
+
+		+ph
+			max-width: 100%

@@ -1,0 +1,63 @@
+.contacts
+
+	&__content
+		display: flex
+		justify-content: space-between
+
+		+sm
+			flex-direction: column
+
+	&__map
+		margin-right: 16px
+		flex: 1 0 64%
+		width: 100%
+		min-height: 598px
+		overflow: hidden
+
+		+sm
+			margin-right: 0
+			margin-bottom: 20px
+			flex: 0 0 100%
+			min-height: 350px
+
+		iframe
+			+sm
+				height: 350px
+
+	&__info
+		display: flex
+		flex-direction: column
+		padding: 60px
+		flex: 1 0 30%
+		width: 100%
+		background-image: url(../img/contacts/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+		+md
+			padding: 40px
+
+		+sm
+			padding: 30px
+			flex: 0 0 100%
+
+		+ph
+			padding: 30px 20px
+
+	&__info-title
+		margin-bottom: 16px
+
+	&__info-item
+		&:not(:last-child)
+			margin-bottom: 40px
+
+			+md
+				margin-bottom: 30px
+
+	&__info-social-list
+		justify-content: flex-start
+
+		.social-list__item
+			&:not(:last-child)
+				margin-right: 20px

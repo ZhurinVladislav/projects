@@ -1,0 +1,67 @@
+.main-section
+	.events
+		&__title
+			text-align: left
+	
+.events
+
+	&__title
+		margin-bottom: 40px
+		text-align: center
+
+		+ph
+			margin-bottom: 30px
+			text-align: left
+
+	&__content-wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		+ph
+			align-items: flex-start
+
+	&__list
+		margin-bottom: 40px
+
+	&__content
+		flex-direction: row-reverse
+
+		+ph
+			flex-direction: column-reverse
+
+	.content-column
+		
+		&__title
+			margin-bottom: 36px
+
+		&__text-wrapper
+			margin-right: 16px
+			flex: 1 0 47%
+			
+			+ph
+				margin-right: 0
+				margin-bottom: 20px
+				flex: 0 0 100%
+
+		&__media
+			margin-right: 0
+			flex: 1 0 47%
+			height: 556px
+
+			+ph
+				flex: 0 0 100%
+				height: 300px
+				min-height: 300px
+
+		&__btn
+			margin-top: auto
+			max-width: 279px
+
+			+ph
+				max-width: 100%
+
+	&__list-item
+
+		&:not(:last-child)
+			margin-bottom: 20px

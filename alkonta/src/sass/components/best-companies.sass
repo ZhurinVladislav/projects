@@ -1,0 +1,100 @@
+.best-companies
+
+	&__content-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		+sm
+			flex-direction: column-reverse
+
+	&__content-left
+		flex: 0 0 50%
+		margin-right: 20px
+
+		+sm
+			flex: 0 0 100%
+			margin-right: 0
+
+	&__content-right
+		position: relative
+		display: flex
+		z-index: 1
+		margin-right: -295px
+		padding-right: 295px
+		max-width: 837px
+		width: 100%
+		
+		+sm
+			margin-right: -102px
+			margin-bottom: 40px
+			padding-right: 102px
+
+		+ph
+			margin-right: -20px
+			margin-bottom: 30px
+			padding-right: 20px
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 0
+			z-index: -1
+			width: 60%
+			height: 86%
+			border-radius: 20px 0 0 20px
+			background-color: $clr_3
+			transform: translateY(-50%)
+
+			+ph
+				border-radius: 15px 0 0 15px
+
+	&__img-wrapper
+		position: relative
+		display: flex
+		padding-right: 114px
+		max-width: 545px
+		min-height: 530px
+		font-size: 0
+
+		+sm
+			min-height: 37vh
+
+		+ph
+			padding-right: 60px
+		
+	&__img
+		max-width: 100%
+		height: 100%
+		object-fit: cover
+
+		&_left
+			box-shadow: 0 6px 12px 0 rgba(209, 0, 2, 0.05), 0 23px 23px 0 rgba(209, 0, 2, 0.04), 0 51px 31px 0 rgba(209, 0, 2, 0.03), 0 90px 36px 0 rgba(209, 0, 2, 0.01), 0 141px 40px 0 rgba(209, 0, 2, 0)
+
+		&_right
+			position: absolute
+			top: 50%
+			right: 0
+			max-width: 257px
+			width: 100%
+			height: 70%
+			transform: translateY(-50%)
+			box-shadow: 0 6px 12px 0 rgba(209, 0, 2, 0.05), 0 23px 23px 0 rgba(209, 0, 2, 0.04), 0 51px 31px 0 rgba(209, 0, 2, 0.03), 0 90px 36px 0 rgba(209, 0, 2, 0.01), 0 141px 40px 0 rgba(209, 0, 2, 0)
+
+			+ph
+				max-width: 250px
+
+			+xs
+				max-width: 160px
+
+	&__icon
+		position: absolute
+		top: 110px
+		left: -177px
+		z-index: 2
+		width: 359px
+		height: 328px
+
+		+sm
+			display: none

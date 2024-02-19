@@ -6,7 +6,7 @@
         "tabWidth": 2,
         "singleQuote": true,
         "arrowParens": "avoid",
-        "printWidth": 120
+        "printWidth": 200
       }
     },
     {
@@ -15,7 +15,9 @@
         "tabWidth": 4,
         "singleAttributePerLine": false,
         "embeddedLanguageFormatting": "off",
-        "printWidth": 100
+        "printWidth": 120,
+        "bracketSameLine": true,
+        "jsxBracketSameLine": true
       }
     }
   ]

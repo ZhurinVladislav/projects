@@ -1,3 +1,96 @@
 .hero
 
+	&__container
+		padding-bottom: 104px
+
+		+sm
+			padding-bottom: 87px
+
+		+ph
+			padding-bottom: 58px
+
+	&__content-top
+		display: flex
+		justify-content: space-between
+		margin-bottom: 62px
+
+		+ph
+			flex-direction: column
+			justify-content: center
+			margin-bottom: 40px
+
+	&__content-left
+		max-width: 504px
+		margin-bottom: 10px
+
+		+ph
+			display: none
   
+	&__content-right
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		max-width: 813px
+		text-align: end
+
+		+ph
+			align-items: flex-start
+			text-align: left
+
+	&__title
+		margin-bottom: 10px
+
+	&__subtitle
+		font-size: 18px
+		line-height: 1.4
+		letter-spacing: .36px
+
+	&__images-wrapper
+		position: relative
+		width: 100%
+		height: 100%
+
+	&__img
+		position: absolute
+		bottom: -103px
+		left: 74px
+		z-index: -1
+		width: 830px
+		height: 1030px
+
+		+md
+			left: -22px
+
+		+sm
+			bottom: -89px
+			width: 723px
+			height: 891px
+
+		+ph
+			right: -199px
+			bottom: -64px
+			left: auto
+			max-width: inherit
+			width: 510px
+			height: 645px
+
+	&__img-bottom
+		position: relative
+		z-index: -2
+		max-width: 100%
+		min-height: 414px
+		background-color: $clr_3
+		background-image: url(../img/hero/img-2.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+		+lr
+			min-height: 300px
+
+		+sm
+			max-width: 100%
+			min-height: 280px
+
+		+ph
+			min-height: 140px

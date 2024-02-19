@@ -1,112 +1,226 @@
+.main-section
+	.reviews
+
+		&__title
+			max-width: 329px
+			line-height: 1.2
+			
+
+			+md
+				max-width: 100%
+				margin-bottom: 0
+
+			+ph
+				margin-bottom: 20px
+				text-align: center
+
+		&__content
+			max-width: 100%
+			padding: 60px
+			background-image: url(../img/reviews/bg-img.jpg)
+			background-position: center
+			background-size: cover
+			background-repeat: no-repeat
+
+			+md
+				flex-direction: column
+				padding: 40px
+
+			+ph
+				padding: 20px 10px
+			
+		&__text
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			padding: 0
+			max-width: 357px
+			background-repeat: 0
+			background-image: none!important
+
+			+md
+				flex-direction: row
+				margin-right: 0
+				margin-bottom: 20px
+				padding: 0
+				max-width: 100%
+
+			+ph
+				flex-direction: column
+				padding: 0
+				
+		&__right-content
+			max-width: 100%
+
+		&__iframe
+			flex: 0 0 52%
+
+			+md
+				flex: 0 0 50%
+
+			+ph
+				flex: 0 0 100%
+				min-height: 500px
+
 .reviews
-	margin-bottom: 60px
 
 	&__content-wrapper
 		display: flex
-		justify-content: space-between
-		padding: 38px 100px
-		border-radius: 50px
-		background-color: $clr_3
+		flex-direction: column
+		align-items: center
 
-		+lr
-			padding: 38px 80px
+		+ph
+			align-items: flex-start
+
+	h1.reviews__title
+		margin-bottom: 40px
+		font-weight: 40
+		font-size: 36px
+		line-height: 0.9
+		// text-transform: uppercase
+		// text-align: center
 
 		+sm
+			font-size: 30px
+
+		+ph
+			margin-bottom: 30px
+			font-size: 26px
+
+	&__content
+		display: flex
+		justify-content: space-between
+		width: 100%
+
+		+ph
 			flex-direction: column
-			padding: 20px 20px
-			border-radius: 30px
+
+	&__text
+		margin-right: 35px
+		padding: 60px
+		width: 100%
+		background-image: url(../img/reviews/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+		+md
+			margin-right: 0
+			margin-bottom: 20px
+			padding: 40px
+			max-width: 100%
 
 		+ph
 			padding: 20px 10px
 
-	&__content
-		margin-right: 20px
-		max-width: 55%
-		color: $clr_1
+	&__right-content
+		display: flex
+		max-width: 50%
+		width: 100%
+		justify-content: space-between
 
-		+sm
+		+ph
+			max-width: 100%
+			flex-direction: column
+
+	&__video-wrapper
+		flex: 0 0 44%
+		margin-right: 38px
+		width: 100%
+		max-height: 610px
+
+		+md
+			flex: 0 0 50%
+			margin-right: 20px
+
+		+ph
+			flex: 0 0 100%
 			margin-right: 0
 			margin-bottom: 20px
-			max-width: 100%
+			max-height: 100%
 
+	&__iframe
+		position: relative
+		flex: 0 0 100%
+		width: 100%
+		min-height: 500px
+		overflow: hidden
+
+		iframe
+			width: 100%
+			height: 100%
+			border-radius: 20px
+			border: 1px solid #e6e6e6
+			box-sizing: border-box
+
+			+ph
+				height: 500px
+				border-radius: 15px
+
+.reviews-inner
 	&__title
-		@include textReset
-		margin-bottom: 25px
-		font-weight: 600
-		line-height: 1
-		font-size: 40px
-
-		+sm
-			font-size: 30px
-		
-	&__descr
-		@include textReset
-		line-height: 1.3
-		font-size: 20px
-
-		+md
-			font-size: 18px
+		text-align: center
 
 		+ph
-			font-size: 16px
+			text-align: left
 
 	&__list
-		max-width: 35%
 		display: grid
 		grid-template-columns: repeat(2, 1fr)
-		grid-auto-rows: minmax(80px, auto)
-		gap: 20px
-		width: 100%
-
-		+md
-			grid-template-columns: 1fr
+		grid-auto-rows: minmax(500px, auto)
+		gap: 30px
 
 		+sm
-			grid-template-columns: repeat(2, 1fr)
-			gap: 15px
-			max-width: 100%
+			grid-auto-rows: minmax(400px, auto)
+			grid-template-columns: 1fr
 
 		+ph
-			grid-template-columns: 1fr
-			grid-auto-rows: minmax(40px, auto)
+			grid-auto-rows: minmax(300px, auto)
 
-	&__item
-		width: 100%
-		height: 100%
-
-	&__link
+	&__list-item
 		display: flex
-		align-items: center
-		justify-content: center
-		padding: 20px 25px
-		width: 100%
-		height: 100%
-		font-size: 20px
-		border-radius: 20px
-		background-color: $clr_1
-		text-align: center
-		// transition: background-color .6s linear, color .2s linear
-		transition: box-shadow .2s linear
-
-		+sm
-			padding: 15px 20px
-			font-size: 16px
-
-		&:hover
-			box-shadow: 0 20px 50px 0 rgba($clr_2, 0.8)
-			// color: $clr_1
-			// background-color: $clr_2
-
-	&__link-img
-		width: 180px
-		height: 40px
+		justify-content: space-between
+		// background-image: url(../img/content-bg-img.jpg)
+		// background-position: center
+		// background-size: cover
+		// background-repeat: no-repeat
 
 		+ph
-			height: 50px
+			flex-direction: column
 
-	// &__link-text
-	// 	position: relative
-	// 	z-index: 2
+	&__list-video
+		flex: 0 0 50%
+		margin-right: 10px
 
-	// .js-hover-btn__bg
-	// 	background-color: $clr_2
+		+ph
+			flex: 0 1 100%
+			margin-right: 0
+			margin-bottom: 20px
+
+	&__list-text-wrapper
+		flex: 0 0 50%
+		min-height: 100%
+
+		+ph
+			flex: 0 1 100%
+
+	&__list-text
+		position: sticky
+		top: 120px
+		height: max-content
+		padding: 20px
+		background-image: url(../img/content-bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+		+ph
+			position: relative
+			top: 0
+
+	&__list-name
+		margin-bottom: 10px
+
+	.video-wrapper__video
+		+ph
+			height: 50vh

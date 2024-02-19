@@ -1,0 +1,328 @@
+.home-page
+  .header
+    position: absolute
+    z-index: 100
+    margin-bottom: 0
+    background-color: $clr_0
+
+.header
+  margin-bottom: 40px
+  font-weight: 500
+  font-size: 16px
+  color: $clr_1
+  background-color: $clr_1
+
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 30px
+    padding-bottom: 30px
+
+    +sm
+      justify-content: flex-start
+
+  .logo
+    margin-right: 40px
+    max-width: 50px
+    height: 63px
+
+    +md
+      margin-right: 10px
+
+  .menu
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 10px
+
+
+    +md
+      font-size: 14px
+
+    +sm
+      display: none
+
+    &__list
+      display: flex
+      justify-content: space-between
+      max-width: 663px
+      width: 100%
+
+    &__item
+      position: relative
+
+      &:hover
+        +hover
+
+          .menu__link
+            color: $clr_3
+
+          .list-inner
+            visibility: visible
+            opacity: 1
+            transform: translateY(0)
+
+          &.active
+            .menu__link
+              color: $clr_3
+
+          .menu__icon
+            transform: rotateX(180deg)
+
+      &.active
+        .menu__link
+          color: $clr_3
+
+      &:not(:last-child)
+        margin-right: 10px
+
+    &__link
+      position: relative
+      display: flex
+      align-items: center
+      padding-bottom: 7px
+      color: $clr_1
+      transition: color .2s linear
+
+      &:focus:not(:active)
+        color: $clr_3
+
+    &__link-item
+      margin-right: 10px
+
+    &__icon
+      width: 14px
+      height: 8px
+      fill: $clr_1
+      transition: transform .2s linear
+
+    // ВЫПАДАЮЩИЙ СПИСОК НА ДЕСКТОПЕ
+    .list-inner
+      position: absolute
+      top: 30px
+      left: 0
+      z-index: 100
+      display: flex
+      flex-direction: column
+      width: 300px
+      background-color: $clr_1
+      box-shadow: 0px 4px 20px 0px rgba(43, 42, 40, 0.3)
+      font-size: 16px
+      color: $clr_2
+      overflow: hidden
+      opacity: 0
+      visibility: hidden
+      transform: translateY(30px)
+      transition: visibility .2s linear, opacity .3s linear, transform .2s linear
+
+      .menu__item
+        position: relative
+        text-align: start
+
+        &:not(:last-child)
+          margin-right: 0
+
+        &:hover
+          .list-inner__link
+            background-color: $clr_3
+            color: $clr_1
+
+        &.active
+          .list-inner__link
+            background-color: rgba($clr_3, .8)
+            color: $clr_1
+
+            &:hover
+              background-color: rgba($clr_3, .8)
+              color: $clr_1
+
+      &__link
+        display: flex
+        width: 100%
+        transition: background-color .2s linear
+
+      &__link-item
+        position: relative
+        padding: 15px 20px
+        transition: color .2s ease-in-out
+
+  &__list-phone
+    display: flex
+    flex-direction: column
+    margin-right: 10px
+
+  &__list-phone-link
+    display: flex
+    align-items: center
+
+  // КНОПКА ОТКРЫТИЯ МОБИЛЬНОГО МЕНЮ
+  .menu-toggle
+    position: relative
+    z-index: 30000
+    display: none
+    // margin-left: auto
+    width: 30px
+    height: 25px
+
+    +sm
+      display: block
+
+    &__item
+      display: block
+      width: 100%
+      height: 2px
+      border-radius: 1px
+      background-color: $clr_1
+      position: absolute
+      transition: all .3s linear
+      transform: rotate(0) translate(0, 0)
+
+      &:nth-child(1)
+        top: 0
+        left: 0
+
+      &:nth-child(2)
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        opacity: 1
+
+      &:nth-child(3)
+        bottom: 0
+        left: 0
+
+    &.menu-toggle_active
+
+      .menu-toggle__item
+        background-color: $clr_2
+
+        &:nth-child(1)
+          transform: rotate(45deg) translate(-50%, -50%)
+          transform-origin: top left
+          left: 50%
+          top: 50%
+          
+        &:nth-child(2)
+          left: 100%
+          transform: translateY(0)
+          opacity: 0
+
+        &:nth-child(3)
+          transform: rotate(-45deg) translate(-50%, 50%)
+          transform-origin: bottom left
+          left: 50%
+          bottom: 50%
+
+  &__content-right
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 372px
+    width: 100%
+
+    +max(1244px)
+      flex-direction: column
+      align-items: flex-start
+      max-width: max-content
+
+    +sm
+      display: none
+
+  &__link-language-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 5px
+    border-radius: 30px
+    backdrop-filter: blur(10px)
+    box-shadow: inset 0 4px 4px 0 rgba(200, 200, 200, 0.2)
+    background: rgba(255, 255, 255, 0.3)
+
+    +sm
+      margin-right: 40px
+      margin-left: auto
+
+    +sm
+      margin-right: 20px
+
+  &__link-language
+    padding: 6px 10px
+    line-height: 110%
+    border-radius: 30px
+    transition: background-color .2s linear, color .2s linear
+
+    &.active
+      background-color: $clr_3
+
+    &:hover
+      +hover
+        color: $clr_1
+        background-color: $clr_3
+
+        &.active
+          color: $clr_1
+          background-color: $clr_3
+
+.site-wrapper
+  position: relative
+  margin-right: 10px
+
+  &__btn
+    display: flex
+    align-items: center
+    color: $clr_1
+
+    &:hover
+      +hover
+        .site-wrapper__icon
+          fill: $clr_3
+
+        .site-wrapper__text
+          color: $clr_3
+
+    &.active
+
+      .site-wrapper__icon-arrow
+        transform: rotateX(180deg)
+
+  &__icon
+    margin-right: 12px
+    width: 13px
+    height: 16px
+    fill: $clr_1
+    transition: fill .2s linear
+
+  &__text
+    margin-right: 9px
+    transition: color .2s linear
+
+  &__icon-arrow
+    width: 13px
+    height: 8px
+    fill: $clr_1
+    transition: transform .2s linear
+
+  &__list
+    position: absolute
+    top: 25px
+    display: flex
+    flex-direction: column
+    width: 200px
+    background-color: $clr_1
+
+    &.hidden
+      max-height: 0
+      overflow: hidden
+      transition: max-height .2s linear
+
+  &__list-link
+    display: flex
+    padding: 10px 20px
+    color: $clr_2
+    transition: background-color .2s linear, color .2s linear
+
+    &:hover
+      +hover
+        color: $clr_1
+        background-color: $clr_3

@@ -1,0 +1,185 @@
+.yacht
+
+	.content-top
+		display: flex
+		justify-content: space-between
+
+		+sm
+			flex-direction: column-reverse
+
+		&__title
+			margin-bottom: 40px
+
+			+ph
+				margin-bottom: 30px
+
+		&__left
+			position: relative
+			margin-right: 20px
+			padding: 0px 20px
+			max-width: 582px
+
+			+sm
+				max-width: 100%
+				margin-right: 0
+				padding: 0px 10px
+
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				z-index: -1
+				width: 100%
+				height: 93%
+				border: 3px solid $clr_3
+				transform: translate(-50%, -50%)
+
+		&__left-content
+			display: flex
+			flex-direction: column
+			justify-content: center
+			padding: 60px
+			height: 100%
+			color: $clr_1
+			background-color: $clr_2
+			background-image: url(../img/common/bg-img.jpg)
+			background-position: center
+			background-size: cover
+			background-repeat: no-repeat
+			box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+			
+			+md
+				padding: 40px 30px
+
+		&__text
+
+			p
+				&:not(:last-child)
+					margin-bottom: 10px
+
+		&__book
+			padding-top: 40px
+
+		.link-invert
+			display: inline
+
+	.yacht-slider
+		position: relative
+		display: flex
+		flex-direction: column
+		padding-top: 20px
+		max-width: 50%
+		max-height: 60vh
+		overflow: hidden
+		box-sizing: border-box
+
+		.swiper-slide
+			display: flex
+			font-size: 0
+			background-color: $clr_2
+			box-sizing: border-box
+
+		.swiper-img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+		+sm
+			margin-right: 0
+			margin-bottom: 30px
+			padding-top: 0
+			max-width: 100%
+
+		+ph
+			max-height: 40vh
+
+		.slider-top
+			display: flex
+			margin-bottom: 20px
+			width: 100%
+			height: 75%
+
+			&__slide
+				
+				&:hover
+					+hover
+						.slider-top__img
+							transform: scale(1.1)
+
+			&__wrapper
+				height: auto
+
+			&__img
+				transition: transform .3s linear
+
+			.arrow
+				position: absolute
+				z-index: 10
+				top: 50%
+				padding: 10px
+				width: 50px
+				height: 50px
+				background-color: $clr_3
+				transform: translateY(-50%)
+				transition: background-color .2s linear
+
+				&.swiper-button-disabled
+					background-color: rgba($clr_3, .5)
+					cursor: auto
+
+					.arrow__icon
+						fill: rgba($clr_1, .5)
+
+					&:hover
+						+hover
+							background-color: rgba($clr_3, .5)
+
+							.arrow__icon
+								fill: rgba($clr_1, .5)
+
+				&:hover
+					+hover
+						background-color: $clr_1
+
+						.arrow__icon
+							fill: $clr_2
+
+				&_prev
+					left: 10px
+
+				&_next
+					right: 10px
+					transform: translateY(-50%)
+
+				&__icon
+					fill: $clr_1
+
+		.slider-bottom
+			width: 100%
+			height: 20%
+			box-sizing: border-box
+
+			&__wrapper
+				height: auto
+				box-sizing: border-box
+
+			&__slide
+				height: auto
+				font-size: 0
+				opacity: .6
+				cursor: pointer
+				user-select: none
+				overflow: hidden
+				transition: opacity .3s linear
+
+				&:hover
+					+hover
+						opacity: 1
+
+				&.swiper-slide-thumb-active
+					opacity: 1
+
+.yacht-description
+	&__text
+		max-width: 1100px

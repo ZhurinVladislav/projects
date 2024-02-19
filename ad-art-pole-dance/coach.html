@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Тренеры | Школа танцев на пилоне</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="/app/css/main.min.css" />
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/preloader.js" defer></script>
+        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
+        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
+        <script src="/app/js/libs/webp.js" defer></script>
+        <script src="/app/js/libs/modal-window.js" defer></script>
+        <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
+        <script src="/app/js/main.min.js" defer></script>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header id="header" class="home-page__header header">
+            <div class="header__container container">
+                <div class="header__content-left">
+                    <a href="/" aria-label="Перейти на главную страницу" class="header__logo logo">
+                        <img
+                            class="logo__img"
+                            src="/app/img/logo.svg"
+                            alt="Логотип Advanced art pole dance"
+                            title="Логотип Advanced art pole dance"
+                        />
+                    </a>
+                    <address class="header__address">Новороссийск, ул. Луначарского, 21/1</address>
+                </div>
+                <div class="header__content-right">
+                    <ul class="header__social-list social-list">
+                        <li class="social-list__item">
+                            <a
+                                href="https://vk.com/"
+                                class="social-list__link link-icon"
+                                target="_blank"
+                                aria-label="Перейти на страницу в Вконтакте"
+                            >
+                                <svg class="social-list__icon link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a
+                                href="https://www.instagram.com/"
+                                class="social-list__link link-icon"
+                                target="_blank"
+                                aria-label="Перейти на страницу в Instagram"
+                            >
+                                <svg class="social-list__icon link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a
+                                href="https://wa.me/+79186400782"
+                                class="social-list__link link-icon"
+                                target="_blank"
+                                aria-label="Связаться в WhatsApp"
+                            >
+                                <svg class="social-list__icon link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="tel:+79186400782" class="header__phone link">+7 (918) 640-07-82</a>
+                    <button
+                        id="open-menu"
+                        aria-label="Открыть меню"
+                        class="header__menu-toggle menu-toggle"
+                    >
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                </div>
+                <nav id="menu" class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-list-item">
+                            <a href="/" class="header__menu-list-link"> Главная </a>
+                        </li>
+                        <li class="header__menu-list-item">
+                            <a href="./directions.html" class="header__menu-list-link">
+                                Направления
+                            </a>
+                        </li>
+                        <li class="header__menu-list-item active">
+                            <a href="./coach.html" class="header__menu-list-link"> Тренеры </a>
+                        </li>
+                        <li class="header__menu-list-item">
+                            <a href="./reviews.html" class="header__menu-list-link"> Отзывы </a>
+                        </li>
+                        <li class="header__menu-list-item">
+                            <a href="./development.html" class="header__menu-list-link">
+                                Развитие
+                            </a>
+                        </li>
+                        <li class="header__menu-list-item">
+                            <a href="./contacts.html" class="header__menu-list-link"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- BURGER-MENU -->
+            <div id="burger-menu" class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu menu">
+                        <ul class="menu__list list">
+                            <li class="list__item item">
+                                <a href="/" class="item__link"> Главная </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./directions.html" class="item__link"> Направления </a>
+                            </li>
+                            <li class="list__item item active">
+                                <a href="./coach.html" class="item__link"> Тренеры </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./reviews.html" class="item__link"> Отзывы </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./development.html" class="item__link"> Развитие </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./contacts.html" class="item__link"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+79186400782">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (918) 640-07-82 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a
+                                href="https://vk.com/"
+                                target="_blank"
+                                class="list-link__link"
+                                aria-label="Перейти на страницу в Вконтакте"
+                            >
+                                <svg class="list-link__icon list-link__icon_wa">
+                                    <use xlink:href="/app/img/icons/icons.svg#vk"></use>
+                                </svg>
+                                <span class="list-link__descr"> Вконтакте </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a
+                                target="_blank"
+                                href="https://www.instagram.com/"
+                                class="list-link__link"
+                                aria-label="Перейти на страницу в Instagram"
+                            >
+                                <svg class="list-link__icon list-link__icon_tg">
+                                    <use xlink:href="/app/img/icons/icons.svg#inst"></use>
+                                </svg>
+                                <span class="list-link__descr"> Instagram </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a
+                                target="_blank"
+                                class="list-link__link"
+                                href="https://wa.me/+79186400782"
+                                aria-label="Связаться в WhatsApp"
+                            >
+                                <svg class="list-link__icon list-link__icon_tg">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="list-link__descr"> WhatsApp </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <svg class="list-link__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                            </svg>
+                            <address class="list-link__descr">
+                                г. Новороссийск, ул. Луначарского, 21/1
+                            </address>
+                        </li>
+                        <li class="list-link__item">
+                            <button
+                                data-open="form-callback"
+                                class="list-link__btn button js-open-modal"
+                            >
+                                <span class="button__text"> Записаться </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main id="main">
+            <!-- ABOUT-INNER -->
+            <section class="about-inner section-reset">
+                <div class="about-inner__container container">
+                    <ol class="about-inner__breadcrumb breadcrumb">
+                        <li>
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumb-item active">&nbsp;Тренеры</li>
+                    </ol>
+                    <div class="about-inner__content-wrapper">
+                        <h1 class="about-inner__title h-0">Тренеры школы танцев на пилоне</h1>
+                        <h2 class="about-inner__title h-1">Коротко о&nbsp;нас</h2>
+                        <div class="about-inner__content text-default">
+                            <p class="about-inner__content-text">
+                                Pole dance&nbsp;&mdash; уникальное спортивное направление, которое
+                                подходит для всех девушек без исключения&nbsp;&mdash; вне
+                                зависимости от&nbsp;возраста, роста и&nbsp;веса.
+                            </p>
+                            <p class="about-inner__content-text">
+                                Наши тренеры действующие участники и&nbsp;призёры чемпионатов Pole
+                                Dance, которые постоянно развиваются, проходят множество обучений,
+                                посещают различные мастер классы, готовят учеников
+                                к&nbsp;соревнованиям, а&nbsp;также к&nbsp;ежегодным отчетным
+                                концертам внутри школы.
+                            </p>
+                            <p class="about-inner__content-text">
+                                Наши преподаватели учат не&nbsp;только танцевать,
+                                но&nbsp;и&nbsp;чувствовать музыку, вкладывать душу и&nbsp;эмоции
+                                в&nbsp;каждый элемент. Знают все тонкости обучения, поэтому техника
+                                элементов объясняется очень подробно и&nbsp;наглядно, они всегда
+                                готовы помочь, подстраховать и&nbsp;объяснить столько раз, сколько
+                                вам потребуется.
+                            </p>
+                            <p class="about-inner__content-text">
+                                Мы&nbsp;разработали поэтапную систему обучения
+                                &laquo;с&nbsp;нуля&raquo; до&nbsp;продвинутого уровня. Занятия
+                                выстраиваются по&nbsp;принципу &laquo;от&nbsp;простого
+                                к&nbsp;сложному&raquo; , нагрузка дается по&nbsp;мере сил
+                                и&nbsp;возможностей, сила в&nbsp;теле нарабатывается от&nbsp;занятия
+                                к&nbsp;занятию, поэтому данный вид спорта подходит для людей
+                                с&nbsp;любой физической подготовкой.
+                            </p>
+                            <p class="about-inner__content-text">
+                                С&nbsp;новичками в&nbsp;первую очередь работаем над улучшением
+                                физической подготовки, выполняем офп и&nbsp;сфп, учимся управлять
+                                своим телом, осваиваем базовые вращения на&nbsp;пилоне, которые
+                                помогают укреплению мышц рук, спины и&nbsp;пресса.
+                            </p>
+                            <p class="about-inner__content-text">
+                                Благодаря нашей методике обучения, ваша адаптация на&nbsp;пилоне
+                                будет мягкой и&nbsp;постепенной.
+                            </p>
+                            <p class="about-inner__content-text">
+                                Мы&nbsp;будем рады подарить вам новое спортивное увлечение, эмоции
+                                и&nbsp;запоминающиеся тренировки! Тренеры будут вдохновлять
+                                и&nbsp;наставлять вас на&nbsp;нужный путь.
+                            </p>
+                            <p class="about-inner__content-text">
+                                Нас выбирают за&nbsp;профессионализм и&nbsp;любовь к&nbsp;своему
+                                делу!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- COACH -->
+            <section class="coach section-reset">
+                <div class="coach__container container">
+                    <h2 class="coach__title-hidden h-0">Тренеры школы танцев на пилоне</h2>
+                    <div class="coach__content-top">
+                        <h3 class="coach__title h-2">Тренеры</h3>
+                        <p class="coach__subtitle">
+                            Большой опыт и&nbsp;чуткое отношение для каждого
+                        </p>
+                    </div>
+                    <ul class="coach__content-list">
+                        <li class="coach__content-list-item content-column">
+                            <div class="content-column__text-wrapper b-r">
+                                <h3 class="content-column__title h-2">Алина Стасевич</h3>
+                                <div class="content-column__text text-default">
+                                    <p><strong>Направления:</strong> Pole dance, Exotic</p>
+                                    <p><strong>Опыт:</strong> с&nbsp;2011 года</p>
+                                    <p><strong>Награды:</strong></p>
+                                    <p class="content-column__text-item">
+                                        Привет! Я&nbsp;Алина, преподаватель по&nbsp;Pole dance. Мои
+                                        занятия направлены на&nbsp;развитие силы, гибкости
+                                        и&nbsp;техники танца на&nbsp;пилоне, а&nbsp;также
+                                        на&nbsp;повышение самооценки учеников. Я&nbsp;люблю помогать
+                                        людям открывать для себя новые возможности
+                                        и&nbsp;показывать, что Pole dance&nbsp;&mdash; это отличный
+                                        способ тренировки тела и&nbsp;души. Надеюсь, что наши
+                                        занятия принесут вам уверенность и&nbsp;радость
+                                        от&nbsp;движения!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content-column__media b-r">
+                                <img
+                                    src="./app/img/common/img-1.jpg"
+                                    alt="Тестовое изображение"
+                                    class="content-column__img"
+                                />
+                            </div>
+                        </li>
+                        <li class="coach__content-list-item content-column">
+                            <div class="content-column__text-wrapper b-r">
+                                <h3 class="content-column__title h-2">Алина Стасевич</h3>
+                                <div class="content-column__text text-default">
+                                    <p><strong>Направления:</strong> Pole dance, Exotic</p>
+                                    <p><strong>Опыт:</strong> с&nbsp;2011 года</p>
+                                    <p><strong>Награды:</strong></p>
+                                    <p class="content-column__text-item">
+                                        Привет! Я&nbsp;Алина, преподаватель по&nbsp;Pole dance. Мои
+                                        занятия направлены на&nbsp;развитие силы, гибкости
+                                        и&nbsp;техники танца на&nbsp;пилоне, а&nbsp;также
+                                        на&nbsp;повышение самооценки учеников. Я&nbsp;люблю помогать
+                                        людям открывать для себя новые возможности
+                                        и&nbsp;показывать, что Pole dance&nbsp;&mdash; это отличный
+                                        способ тренировки тела и&nbsp;души. Надеюсь, что наши
+                                        занятия принесут вам уверенность и&nbsp;радость
+                                        от&nbsp;движения!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content-column__media b-r">
+                                <img
+                                    src="./app/img/common/img-1.jpg"
+                                    alt="Тестовое изображение"
+                                    class="content-column__img"
+                                />
+                            </div>
+                        </li>
+                        <li class="coach__content-list-item content-column">
+                            <div class="content-column__text-wrapper b-r">
+                                <h3 class="content-column__title h-2">Алина Стасевич</h3>
+                                <div class="content-column__text text-default">
+                                    <p><strong>Направления:</strong> Pole dance, Exotic</p>
+                                    <p><strong>Опыт:</strong> с&nbsp;2011 года</p>
+                                    <p><strong>Награды:</strong></p>
+                                    <p class="content-column__text-item">
+                                        Привет! Я&nbsp;Алина, преподаватель по&nbsp;Pole dance. Мои
+                                        занятия направлены на&nbsp;развитие силы, гибкости
+                                        и&nbsp;техники танца на&nbsp;пилоне, а&nbsp;также
+                                        на&nbsp;повышение самооценки учеников. Я&nbsp;люблю помогать
+                                        людям открывать для себя новые возможности
+                                        и&nbsp;показывать, что Pole dance&nbsp;&mdash; это отличный
+                                        способ тренировки тела и&nbsp;души. Надеюсь, что наши
+                                        занятия принесут вам уверенность и&nbsp;радость
+                                        от&nbsp;движения!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content-column__media b-r">
+                                <img
+                                    src="./app/img/common/img-1.jpg"
+                                    alt="Тестовое изображение"
+                                    class="content-column__img"
+                                />
+                            </div>
+                        </li>
+                        <li class="coach__content-list-item content-column">
+                            <div class="content-column__text-wrapper b-r">
+                                <h3 class="content-column__title h-2">Алина Стасевич</h3>
+                                <div class="content-column__text text-default">
+                                    <p><strong>Направления:</strong> Pole dance, Exotic</p>
+                                    <p><strong>Опыт:</strong> с&nbsp;2011 года</p>
+                                    <p><strong>Награды:</strong></p>
+                                    <p class="content-column__text-item">
+                                        Привет! Я&nbsp;Алина, преподаватель по&nbsp;Pole dance. Мои
+                                        занятия направлены на&nbsp;развитие силы, гибкости
+                                        и&nbsp;техники танца на&nbsp;пилоне, а&nbsp;также
+                                        на&nbsp;повышение самооценки учеников. Я&nbsp;люблю помогать
+                                        людям открывать для себя новые возможности
+                                        и&nbsp;показывать, что Pole dance&nbsp;&mdash; это отличный
+                                        способ тренировки тела и&nbsp;души. Надеюсь, что наши
+                                        занятия принесут вам уверенность и&nbsp;радость
+                                        от&nbsp;движения!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content-column__media b-r">
+                                <img
+                                    src="./app/img/common/img-1.jpg"
+                                    alt="Тестовое изображение"
+                                    class="content-column__img"
+                                />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- CONTACTS -->
+            <section class="contacts">
+                <div class="contacts__container container">
+                    <h2 class="contacts__title h-2">Наши контакты</h2>
+                    <div class="contacts__content">
+                        <div class="contacts__map b-r">
+                            <script
+                                type="text/javascript"
+                                charset="utf-8"
+                                async
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aef0cc2fe52eef3070090b565d5e44b44013b31efaab2ca5d493e2287e11b074b&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
+                            ></script>
+                        </div>
+                        <ul class="contacts__info b-r">
+                            <li class="contacts__info-item">
+                                <p class="contacts__info-title h-3">Адрес:</p>
+                                <address class="contacts__info-address">
+                                    Новороссийск, ул. Луначарского, 21/1
+                                </address>
+                            </li>
+                            <li class="contacts__info-item">
+                                <p class="contacts__info-title h-3">Телефон:</p>
+                                <a class="contacts__info-link link" href="tel:+79186400782">
+                                    +7 (918) 640-07-82
+                                </a>
+                            </li>
+                            <li class="contacts__info-item">
+                                <p class="contacts__info-title h-3">Мессенджеры:</p>
+                                <ul class="contacts__info-social-list social-list">
+                                    <li class="social-list__item">
+                                        <a
+                                            href="https://t.me/+79186400782"
+                                            class="social-list__link link-icon"
+                                            target="_blank"
+                                            aria-label="Связаться в Telegram"
+                                        >
+                                            <svg class="social-list__icon link-icon__item">
+                                                <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a
+                                            href="https://wa.me/+79186400782"
+                                            class="social-list__link link-icon"
+                                            target="_blank"
+                                            aria-label="Связаться в WhatsApp"
+                                        >
+                                            <svg class="social-list__icon link-icon__item">
+                                                <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="contacts__info-item">
+                                <p class="contacts__info-title h-3">Cоц. сети:</p>
+                                <ul class="contacts__info-social-list social-list">
+                                    <li class="social-list__item">
+                                        <a
+                                            href="https://www.instagram.com/"
+                                            class="social-list__link link-icon"
+                                            target="_blank"
+                                            aria-label="Перейти на страницу в Instagram"
+                                        >
+                                            <svg class="social-list__icon link-icon__item">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#inst"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a
+                                            href="https://vk.com/"
+                                            class="social-list__link link-icon"
+                                            target="_blank"
+                                            aria-label="Перейти на страницу в Вконтакте"
+                                        >
+                                            <svg class="social-list__icon link-icon__item">
+                                                <use xlink:href="/app/img/icons/icons.svg#vk"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-section__bg-img main-section__bg-img_bottom"></div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div class="modal form-callback" id="form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"
+                    ></button>
+                    <p class="form-callback__title modal-title">
+                        <span class="modal-title__color color">Связаться</span> с нами
+                    </p>
+
+                    <form action="/" class="form form-mod">
+                        <div class="form-mod__wrap-input wrap-input">
+                            <input class="wrap-input__input input" type="text" placeholder="Имя*" />
+                            <input
+                                class="wrap-input__input input"
+                                type="text"
+                                placeholder="Email*"
+                            />
+                            <label class="wrap-input__item form-note">
+                                <input class="form-note__input" type="checkbox" checked />
+                                <span class="form-note__checkbox"></span>
+                                <span class="form-note__text">
+                                    Даю согласие на&nbsp;обработку персональных данных
+                                </span>
+                            </label>
+                        </div>
+                        <button
+                            aria-label="Отправить заявку"
+                            type="submit"
+                            class="form-mod__btn button js-btn-submit"
+                        >
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div class="modal form-success" id="form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"
+                    ></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="./main.html" class="footer__list-link link" target="_blank">
+                            Пользовательское соглашение
+                        </a>
+                    </li>
+                    <li class="footer__list-item">Все права защищены COPYRIGHT &copy;&nbsp;2024</li>
+                    <li class="footer__list-item">
+                        <a
+                            href="https://web2.agency/"
+                            class="footer__list-link link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <svg class="link__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                            </svg>
+                            <span class="link__text"> Создание сайтов </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- SOCIAL PANEL -->
+        <ul class="social-panel">
+            <li class="social-panel__item">
+                <a
+                    aria-label="Ссылка на Telegram"
+                    target="_blank"
+                    href="https://t.me/+79528150000"
+                    class="social-panel__link"
+                >
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-panel__item">
+                <a
+                    aria-label="Перейти на страницу в Instagram"
+                    target="_blank"
+                    href="https://t.me/+79528150000"
+                    class="social-panel__link"
+                >
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#inst"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-panel__item">
+                <a
+                    aria-label="Ссылка на WhatsApp"
+                    target="_blank"
+                    href="https://wa.me/+79528150000"
+                    class="social-panel__link"
+                >
+                    <svg class="social-panel__icon social-panel__icon_wa">
+                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

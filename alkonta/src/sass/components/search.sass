@@ -1,0 +1,74 @@
+.search
+
+	&__content-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		+sm
+			flex-direction: column
+
+	&__content
+		position: relative
+		margin-right: -164px
+		padding: 60px 164px 60px 40px
+		color: $clr_1
+
+		+sm
+			margin-right: 0
+			margin-bottom: 40px
+			padding: 60px
+
+		+ph
+			margin-bottom: 30px
+			padding: 20px
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			z-index: -1
+			width: 100%
+			height: 100%
+			border-radius: 20px
+			background-color: $clr_3
+			transform: translateY(-50%)
+
+			+ph
+				border-radius: 15px
+
+	&__text
+		margin-bottom: 20px
+
+	&__img-wrapper
+		position: relative
+		display: flex
+		max-width: 645px
+		min-height: 451px
+		width: 100%
+		font-size: 0
+
+		+sm
+			max-width: 100%
+			min-height: 350px
+			max-height: 400px
+
+		+ph
+			min-height: 300px
+			max-height: 300px
+
+	&__img
+		width: 100%
+		object-fit: cover
+
+	&__icon
+		position: absolute
+		top: 119px
+		left: -220px
+		z-index: 2
+		width: 412px
+		height: 60px
+
+		+sm
+			display: none

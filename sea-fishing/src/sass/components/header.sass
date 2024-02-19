@@ -1,0 +1,272 @@
+.home-page
+  .header
+    position: absolute
+    z-index: 100
+    margin-bottom: 0
+    background-color: $clr_0
+    background-image: none
+    box-shadow: none
+
+    .header-top
+      margin-bottom: 42px
+
+    .header-bottom
+      padding-bottom: 0
+
+.header
+  line-height: 120%
+  background-color: $clr_2
+  background-image: url(../img/common/bg-img.jpg)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+  margin-bottom: 40px
+
+  +sm
+    box-shadow: none
+
+  .header-top
+    background-color: $clr_1
+    margin-bottom: 20px
+
+    +sm
+      margin-bottom: 0
+
+    &__container
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-top: 20px
+      padding-bottom: 20px
+
+    &__content-left
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 20px
+
+    .logo
+      margin-right: 40px
+      max-width: 180px
+      height: 60px
+
+      +sm
+        height: 50px
+
+    &__address
+
+      +sm
+        display: none
+
+    .social-list
+
+      &__item
+
+        &:not(:last-child)
+          margin-right: 24px
+
+    &__social-list
+      display: flex
+      margin-left: auto
+      margin-right: 24px
+
+      +sm
+        display: none
+
+    &__social-list-item
+      display: flex
+
+      &:not(:last-child)
+        margin-right: 10px
+
+    &__social-list-link
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 30px
+      height: 30px
+      border: 1px solid $clr_3
+      border-radius: 50%
+
+    &__link-phone
+      +sm
+        display: none
+
+    // КНОПКА ОТКРЫТИЯ МОБИЛЬНОГО МЕНЮ
+    .menu-toggle
+      position: relative
+      z-index: 30000
+      display: none
+      margin-left: auto
+      width: 30px
+      height: 25px
+
+      +sm
+        display: block
+
+      &__item
+        display: block
+        width: 100%
+        height: 2px
+        border-radius: 1px
+        background-color: $clr_2
+        position: absolute
+        transition: all .3s linear
+        transform: rotate(0) translate(0, 0)
+
+        &:nth-child(1)
+          top: 0
+          left: 0
+
+        &:nth-child(2)
+          top: 50%
+          left: 0
+          transform: translateY(-50%)
+          opacity: 1
+
+        &:nth-child(3)
+          bottom: 0
+          left: 0
+
+      &.menu-toggle_active
+
+        .menu-toggle__item
+          background-color: $clr_2
+
+          &:nth-child(1)
+            transform: rotate(45deg) translate(-50%, -50%)
+            transform-origin: top left
+            left: 50%
+            top: 50%
+            
+          &:nth-child(2)
+            left: 100%
+            transform: translateY(0)
+            opacity: 0
+
+          &:nth-child(3)
+            transform: rotate(-45deg) translate(-50%, 50%)
+            transform-origin: bottom left
+            left: 50%
+            bottom: 50%
+
+  .header-bottom
+    padding-bottom: 20px
+
+    +sm
+      display: none
+
+    .menu
+      display: flex
+      align-items: center
+      justify-content: center
+      text-transform: uppercase
+      letter-spacing: 0.04em
+
+      +sm
+        display: none
+
+      &__list
+        display: flex
+
+      &__item
+        
+        &:not(:last-child)
+          margin-right: 23px
+
+      &__item
+        position: relative
+
+        &:hover
+
+          .list-inner
+            visibility: visible
+            opacity: 1
+            transform: translateY(0)
+
+          &.active
+            .menu__link
+              &::after
+                opacity: 1
+
+        &.active
+          .menu__link
+            &::after
+              opacity: 1
+
+      &__link
+        position: relative
+        padding-bottom: 7px
+        color: $clr_1
+        transition: color .2s linear
+
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          bottom: 0
+          width: 100%
+          height: 3px
+          background-color: $clr_3
+          opacity: 0
+          transition: background-color .2s linear, opacity .2s linear
+
+        &:hover
+          +hover
+            &::after
+              opacity: .4
+
+        &:focus:not(:active)
+          outline: 0
+          color: $clr_3
+
+      // ВЫПАДАЮЩИЙ СПИСОК НА ДЕСКТОПЕ
+      .list-inner
+        position: absolute
+        top: 30px
+        left: 0
+        z-index: 100
+        display: flex
+        flex-direction: column
+        width: 300px
+        background-color: $clr_1
+        box-shadow: 0px 4px 20px 0px rgba(43, 42, 40, 0.3)
+        font-size: 16px
+        color: $clr_2
+        overflow: hidden
+        opacity: 0
+        visibility: hidden
+        transform: translateY(30px)
+        transition: visibility .2s linear, opacity .3s linear, transform .2s linear
+
+        .menu__item
+          position: relative
+          text-align: start
+
+          &:not(:last-child)
+            margin-right: 0
+
+          &:hover
+            .list-inner__link
+              background-color: $clr_3
+              color: $clr_1
+
+          &.active
+            .list-inner__link
+              background-color: rgba($clr_3, .8)
+              color: $clr_1
+
+              &:hover
+                background-color: rgba($clr_3, .8)
+                color: $clr_1
+
+        &__link
+          display: flex
+          width: 100%
+          transition: background-color .2s linear
+
+        &__link-item
+          position: relative
+          padding: 15px 20px
+          transition: color .2s ease-in-out

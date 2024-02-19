@@ -461,48 +461,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // SPOILER ФИЛЬТРА
   function spoilerFilter() {
-    const btn = document.getElementById('filter-btn'),
-      content = document.getElementById('filter-content'),
-      label = document.querySelectorAll('.js-label');
+    const btn = document.getElementById('filter-btn');
+    const content = document.getElementById('filter-content');
 
-    content.setAttribute('open', '0');
-
-    if (content.getAttribute('open') === '0') {
-      btn.addEventListener('click', e => {
-        content.setAttribute('open', '1');
-
-        const nextItem = e.currentTarget.nextElementSibling;
-
-        if (content.style.maxHeight) {
-          nextItem.style.maxHeight = null;
-          e.currentTarget.classList.remove('active');
+    btn.addEventListener('click', e => {
+      if (window.innerWidth <= 991) {
+        if (content.classList.contains('overflow-hidden')) {
+          content.classList.remove('overflow-hidden');
+          btn.classList.add('active');
         } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-          e.currentTarget.classList.add('active');
+          content.classList.add('overflow-hidden');
+          btn.classList.remove('active');
         }
-      });
-    }
-
-    label.forEach(e => {
-      e.addEventListener('click', () => {
-        if (content.getAttribute('open') === '1') {
-          content.setAttribute('open', '0');
-          content.style.maxHeight = content.scrollHeight + 75 + 'px';
-        }
-      });
+      }
     });
   }
 
   if (document.querySelector('.filter')) {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth <= 991) {
-        spoilerFilter();
-      }
-    });
-
-    if (window.innerWidth <= 991) {
-      spoilerFilter();
-    }
+    spoilerFilter();
   }
 
   // ТАБЫ НА СТРАНИЦЕ "PROJECT"

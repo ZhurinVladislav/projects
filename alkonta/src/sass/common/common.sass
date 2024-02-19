@@ -1,0 +1,1219 @@
+// ОБЩИЕ СТИЛИ
+html
+  width: 100%
+  max-width: 100%
+  box-sizing: border-box
+  overflow-x: hidden
+
+  &.overflow
+    overflow-x: auto
+
+html.galleryActive
+  overflow-y: hidden !important
+  padding-right: 16px
+
+  +lr
+    padding-right: 0
+
+  .header_active
+    left: -8px
+
+    +lr
+      left: 0
+
+  .scroll-top,.social-panel
+    right: 46px
+
+    +ph
+      right: 20px
+
+header,section,main,footer
+  width: 100%
+
+html.mod-open
+  overflow-y: hidden !important
+  padding-right: 16px
+
+  +lr
+    padding-right: 0
+
+  .header_active
+    left: -8px
+
+    +lr
+      left: 0
+
+  .scroll-top,.social-panel
+    right: 46px
+
+    +ph
+      right: 20px
+  
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+body
+  position: relative
+  display: flex
+  flex-direction: column
+  margin: 0
+  width: 100%
+  max-width: 100%
+  min-width: 320px
+  min-height: 100vh
+  overflow-x: hidden
+  font-family: $ff_1
+  font-weight: 400
+  font-size: 18px
+  line-height: 130%
+  color: $clr_2
+  background-color: $clr_1
+  opacity: 0
+
+  +ph
+    font-size: 16px
+
+  &.overflow
+    overflow-x: visible
+
+  &.loading
+    opacity: 1
+
+  &::-webkit-scrollbar
+    width: 16px
+    background-color: $clr_2
+
+  &::-webkit-scrollbar-thumb
+    background-color: $clr_3
+
+html.menu-open,
+body.menu-open
+  +sm
+    overflow: hidden
+
+*::selection
+  background-color: rgba($clr_3, .8)
+  color: $clr_2
+
+ul,ol,h1,h2,h3,h4,h5,h6,p
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+  color: inherit
+
+ul
+  list-style: none
+
+img
+  max-width: 100%
+
+svg
+  width: 100%
+  height: 100%
+  flex-shrink: 0
+  font-size: 0
+
+address
+  font-style: normal
+
+input,
+textarea
+  outline: none
+  border: none
+
+button
+  display: block
+  padding: 0
+  outline: none
+  border: none
+  background-color: transparent
+  cursor: pointer
+
+// УБИРАЕМ СТРЕЛКИ В INPUT NUMBER
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+
+input[type='number']
+  -moz-appearance: textfield
+
+.section-reset
+  position: relative
+  margin-bottom: 120px
+
+  +ph
+    margin-bottom: 80px
+
+.container
+  position: relative
+  max-width: $size_1
+  width: 100%
+  margin: 0 auto
+  padding-left: 25px
+  padding-right: 25px
+
+  +ph
+    padding: 0 10px
+
+.breadcrumb
+  display: flex
+  list-style: none
+  margin: 0
+  margin-bottom: 40px
+  max-width: max-content
+  font-size: 14px
+  text-transform: uppercase
+  overflow: hidden
+
+  +ph
+    flex-wrap: wrap
+    font-size: 12px
+
+  li
+    position: relative
+    padding: 0 10px
+    color: $clr_2
+    transition: color .2s linear
+
+    &:first-child
+      padding-left: 0
+
+    &:not(:last-child)
+
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        right: -4px
+        z-index: 2
+        width: 5px
+        height: 1px
+        background-color: $clr_2
+        transform: translateY(-50%)
+
+    &:last-child
+      padding-right: 0
+
+    &:hover
+      +hover
+        color: $clr_3
+
+  li.active
+    color: $clr_3
+
+.color
+  color: $clr_3
+
+.b-r
+  border-radius: 20px
+
+  +ph
+    border-radius: 15px
+
+.up-case
+  text-transform: uppercase
+
+.overflow-hidden
+
+  +sm
+    max-height: 0
+    overflow: hidden
+    transition: max-height .3s linear
+
+.logo
+  font-size: 0
+  flex-shrink: 0
+
+  &__img
+    width: 100%
+    height: 100%
+    font-size: 0
+    transition: opacity .2s linear
+
+    &:hover
+      +hover
+        opacity: .7
+
+.link
+  display: flex
+  align-items: center
+  border-bottom: 1px solid $clr_0
+  transition: color .2s linear, border-color .2s linear
+
+  &:hover
+    +hover
+      color: $clr_3
+
+      .link__icon
+        fill: $clr_3
+
+  &:focus:not(:active)
+    outline: none
+    border-color: $clr_3
+
+  &__icon
+    flex-shrink: 0
+    margin-right: 8px
+    width: 26px
+    height: 26px
+    fill: $clr_2
+    transition: fill .2s linear
+
+.link-invert
+  display: flex
+  color: $clr_2
+  border-bottom: 1px solid $clr_0
+  transition: color .2s linear, border-color .2s linear
+
+  &:hover
+    +hover
+      color: rgba($clr_3, .7)
+
+  &:focus:not(:active)
+    outline: none
+    border-color: $clr_3
+
+  &__icon
+    flex-shrink: 0
+    margin-right: 8px
+    width: 26px
+    height: 26px
+    fill: $clr_3
+    transition: fill .2s linear
+
+.link-icon
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+  border: 1px solid $clr_0
+  transition: border-color .2s linear
+
+  &:hover
+    +hover
+      .link-icon__text
+        color: $clr_3
+
+      .link-icon__item
+        fill: $clr_3
+
+  &:focus:not(:active)
+    outline: none
+    border-color: $clr_3
+
+    .link-icon__item
+      fill: $clr_3
+
+  &__text
+    transition: color .2s linear
+
+  &__item
+    margin-right: 12px
+    width: 14px
+    height: 14px
+    fill: $clr_1
+    transition: fill .2s linear
+
+.h-0
+  position: absolute
+  clip: rect(0,0,0,0)
+  margin: -1px
+  padding: 0
+  border: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+
+.h-1
+  font-family: $ff_1
+  margin-bottom: 40px
+  font-weight: 700
+  line-height: 130%
+  font-size: 50px
+  letter-spacing: -0.02em
+  text-transform: uppercase
+
+  +lr
+    font-size: 40px
+
+  +sm
+    font-size: 35px
+
+  +ph
+    font-size: 28px
+
+.h-2
+  margin-bottom: 40px
+  font-family: $ff_1
+  font-weight: 700
+  font-size: 36px
+  line-height: 130%
+  text-transform: uppercase
+
+  +sm
+    font-size: 30px
+
+  +ph
+    margin-bottom: 20px
+    font-size: 26px
+
+.h-3
+  font-family: $ff_1
+  font-weight: 400
+  font-size: 24px
+  letter-spacing: 0.06em
+  color: $clr_2
+  text-transform: uppercase
+
+  +md
+    font-size: 20px
+
+  +ph
+    font-size: 18px
+
+.h-4
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  color: $clr_2
+
+.h-5
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  color: $clr_2
+
+.h-6
+  margin-bottom: 30px
+  font-family: $ff_1
+  font-size: 30px
+  font-weight: 700
+  color: $clr_2
+  text-transform: uppercase
+
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 9px 9px 9px 20px
+  max-width: 328px
+  min-height: 58px
+  font-weight: 700
+  font-size: 16px
+  color: $clr_3
+  text-align: center
+  border: 1px solid $clr_1
+  border-radius: 30px
+  background-color: $clr_1
+  transition: background-color .2s linear, color .2s linear, border-color .2s linear, color .2s linear
+
+  +md
+    padding: 14px
+    font-size: 15px
+
+  +ph
+    padding: 10px
+    min-height: 60px
+    max-width: 100%
+    width: 100%
+
+  &:hover
+    +hover
+      color: $clr_1
+      background-color: $clr_3
+      border-color: $clr_3
+
+      .button__icon-wrapper
+        background-color: $clr_1
+
+      .button__icon
+        fill: $clr_3
+
+  &:focus:not(:active)
+    border-color: $clr_2
+
+  &__text
+    margin-right: 15px
+
+  &__icon-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 38px
+    height: 38px
+    border-radius: 50%
+    background-color: $clr_3
+    transition: background-color .2s linear
+
+  &__icon
+    width: 14px
+    height: 8px
+    fill: $clr_1
+    transition: fill .2s linear
+
+.button-invert
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 9px 9px 9px 20px
+  max-width: 328px
+  min-height: 58px
+  font-weight: 700
+  font-size: 16px
+  color: $clr_1
+  text-align: center
+  border: 1px solid $clr_3
+  border-radius: 30px
+  background-color: $clr_3
+  transition: background-color .2s linear, color .2s linear, border-color .2s linear, color .2s linear
+
+  +md
+    padding: 14px
+    font-size: 15px
+
+  +ph
+    padding: 10px
+    min-height: 60px
+    max-width: 100%
+    width: 100%
+
+  &:hover
+    +hover
+      color: $clr_3
+      background-color: $clr_1
+      border-color: $clr_1
+
+      .button-invert__icon-wrapper
+        background-color: $clr_3
+
+      .button-invert__icon
+        fill: $clr_1
+
+  &:focus:not(:active)
+    border-color: $clr_2
+
+  &__text
+    margin-right: 15px
+
+  &__icon-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 38px
+    height: 38px
+    border-radius: 50%
+    background-color: $clr_1
+    transition: background-color .2s linear
+
+  &__icon
+    width: 14px
+    height: 8px
+    fill: $clr_3
+    transition: fill .2s linear
+
+.input-list
+  display: flex
+  flex-direction: column
+
+  &__item
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+.input
+  padding: 16px 20px
+  width: 100%
+  min-height: 55px
+  color: $clr_2
+  border: 1px solid $clr_0
+  border-radius: 20px
+  background-color: $clr_1
+  box-shadow: 0 6px 12px 0 rgba(209, 0, 2, 0.05), 0 23px 23px 0 rgba(209, 0, 2, 0.04), 0 51px 31px 0 rgba(209, 0, 2, 0.03), 0 90px 36px 0 rgba(209, 0, 2, 0.01), 0 141px 40px 0 rgba(209, 0, 2, 0)
+  transition: border-color .2s linear, background-color .2s linear
+
+  +ph
+    width: 100%
+    font-size: 14px
+    border-radius: 15px
+
+  &.error
+    border-color: $clr_er
+
+    &:hover
+      +hover
+        border-color: $clr_er
+
+    &:focus
+      border-color: $clr_er
+
+  &:hover
+    +hover
+      background-color: rgba($clr_3, .1)
+
+  &:focus:not(:active)
+    border-color: $clr_2
+
+    &::-webkit-input-placeholder
+      opacity: 0
+
+    &::-moz-placeholder
+      opacity: 0
+
+    &:-ms-input-placeholder
+      opacity: 0
+
+    &:-moz-placeholder
+      opacity: 0
+
+  &::-webkit-input-placeholder
+    color: rgba($clr_2, .5)
+    transition: opacity .2s linear
+
+  &::-moz-placeholder
+    color: rgba($clr_2, .5)
+    transition: opacity .2s linear
+
+  &:-ms-input-placeholder
+    color: rgba($clr_2, .5)
+    transition: opacity .2s linear
+
+  &:-moz-placeholder
+    color: rgba($clr_2, .5)
+    transition: opacity .2s linear
+
+.textarea
+  padding: 14px 20px
+  width: 100%
+  resize: none
+  min-height: 70px
+  border: 1px solid $clr_0
+  background-color: rgba($clr_3, .4)
+  border-radius: 10px
+  line-height: 1.1
+  color: $clr_2
+  transition: border-color .2s linear
+
+  +ph
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: $clr_er
+
+    &:hover
+      +hover
+        border-color: $clr_er
+
+    &:focus
+      border-color: $clr_er
+
+  &:hover
+    +hover
+      border-color: $clr_3
+
+  &:focus + .label
+    top: -6px
+    font-size: 14px
+
+  &:not(:placeholder-shown) + .label
+    top: -6px
+    font-size: 14px
+
+.input-invert
+  padding: 18px 20px
+  width: 100%
+  min-height: 55px
+  background-color: $clr_0
+  border: 2px solid $clr_1
+  border-radius: 8px
+  line-height: 1.1
+  color: $clr_1
+  transition: border-color .2s linear
+
+  +ph
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: $clr_er
+
+    &:hover
+      +hover
+        border-color: $clr_er
+
+    &:focus
+      border-color: $clr_er
+
+  &:hover
+    +hover
+      border-color: $clr_3
+
+  &:focus
+    border-color: $clr_3
+
+    &::-webkit-input-placeholder
+      opacity: 0
+
+    &::-moz-placeholder
+      opacity: 0
+
+    &:-ms-input-placeholder
+      opacity: 0
+
+    &:-moz-placeholder
+      opacity: 0
+
+  &::-webkit-input-placeholder
+    color: $clr_1
+    line-height: 1.2
+    transition: opacity .2s linear
+
+  &::-moz-placeholder
+    color: $clr_1
+    line-height: 1.2
+    transition: opacity .2s linear
+
+  &:-ms-input-placeholder
+    color: $clr_1
+    line-height: 1.2
+    transition: opacity .2s linear
+
+  &:-moz-placeholder
+    color: $clr_1
+    line-height: 1.2
+    transition: opacity .2s linear
+
+.form-note
+  position: relative
+  display: flex
+  align-items: center
+  cursor: pointer
+
+  &:hover
+    +hover
+      .form-note__text
+        color: $clr_3
+
+  &__input
+    display: none
+
+    &:checked + .form-note__checkbox
+      &::after
+        opacity: 1
+        visibility: visible
+
+  &__checkbox
+    position: absolute
+    top: 50%
+    left: 0
+    width: 22px
+    height: 22px
+    border: 1px solid $clr_3
+    border-radius: 50%
+    cursor: pointer
+    transform: translateY(-50%)
+
+    &::after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 13px
+      height: 13px
+      border-radius: 50%
+      background-color: $clr_3
+      transform: translate(-50%, -50%)
+      visibility: hidden
+      opacity: 0
+      transition: opacity .2s linear, visibility .2s linear, background-color .2s linear
+
+  &__text
+    padding-left: 32px
+    max-width: 444px
+    font-size: 16px
+    color: rgba($clr_2, .5)
+    transition: color .2s linear
+
+    +ph
+      font-size: 14px
+
+// СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ
+.main
+  .text-default
+     max-width: 1200px
+
+.text-default
+  font-size: 18px
+  line-height: 130%
+
+  +sm
+    font-size: 18px
+
+  h1
+    font-family: $ff_1
+    font-weight: 700
+    font-size: 60px
+    text-transform: uppercase
+
+    +md
+      font-size: 45px
+
+    +sm
+      font-size: 40px
+
+    +ph
+      font-size: 30px
+
+  h2
+    font-family: $ff_1
+    margin-bottom: 20px
+    font-weight: 700
+    font-size: 40px
+    text-transform: uppercase
+
+    +md
+      font-size: 34px
+
+    +sm
+      margin-bottom: 25px
+      font-size: 30px
+
+    +ph
+      margin-bottom: 15px
+      font-size: 26px
+
+  h3
+    font-family: $ff_1
+    margin-bottom: 20px
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+
+    +md
+      font-size: 24px
+
+    +sm
+      margin-bottom: 25px
+
+    +ph
+      margin-bottom: 15px
+
+  h4
+    font-family: $ff_1
+    font-size: 20px
+    font-weight: 700
+    line-height: 1.3
+    color: $clr_2
+    text-transform: uppercase
+
+    +md
+      font-size: 24px
+
+    +sm
+      margin-bottom: 25px
+
+    +ph
+      margin-bottom: 15px
+
+  p
+
+    &:not(:last-child)
+      margin-bottom: 24px
+
+      +ph
+        margin-bottom: 15px
+
+  a
+    font-weight: 700
+    color: $clr_3
+    border-bottom: 2px solid $clr_0
+    transition: border-color .2s linear
+
+    &:hover
+      +hover
+        border-color: $clr_3
+
+  img
+    
+    +ph
+      margin: 0!important
+      margin-bottom: 15px!important
+      width: 100%
+
+  ul
+    margin-bottom: 20px
+    padding-left: 42px
+    list-style-image: url(../img/mark-list.svg)
+
+    +ph
+      padding-left: 30px
+
+    li:not(:last-child)
+      margin-bottom: 10px
+
+  ol
+    margin-bottom: 20px
+    padding-left: 40px
+
+    +ph
+      padding-left: 30px
+
+    li
+
+      &::marker
+        font-family: $ff_1
+        font-size: 20px
+        font-weight: 600
+        color: $clr_3
+
+    li:not(:last-child)
+      margin-bottom: 10px
+
+  blockquote
+    margin: 0
+    margin-bottom: 20px
+    padding: 20px 10px 20px 20px
+    color: $clr_1
+    background-color: $clr_2
+    background-image: url(../img/common/bg-img.jpg)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+
+    ul
+      margin-bottom: 0
+
+    p
+      margin: 0
+
+  table
+    margin-bottom: 30px
+    max-width: 100%
+    width: 100%
+    border-collapse: collapse
+    overflow: hidden
+    text-transform: uppercase
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+
+    +lr
+      font-size: 16px
+
+    +ph
+      display: block
+      margin: auto
+      font-size: 14px
+      width: fit-content
+      overflow-x: auto
+
+    p
+      @include textReset
+
+    tr
+      background-color: $clr_1
+      
+
+      &:nth-child(2n)
+        color: $clr_1
+        background-color: rgba($clr_2, .5)
+        
+      &:nth-child(1)
+        color: $clr_1
+        background-color: $clr_2
+        background-image: url(../img/common/bg-img.jpg)
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        text-align: center
+
+        td
+          border: none
+
+    th, td
+      padding: 20px
+
+      +ph
+        padding: 14px
+
+    td
+
+      &:not(:first-child)
+        min-width: 129px
+
+// НАВЕРХ СТРАНИЦЫ
+.scroll-top
+  position: fixed
+  z-index: 30
+  right: 30px
+  bottom: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  background-color: $clr_3
+  opacity: 0
+  box-shadow: 1px 8px 17px 0px rgba(0, 0, 0, 0.05), 3px 31px 31px 0px rgba(0, 0, 0, 0.04), 8px 70px 42px 0px rgba(0, 0, 0, 0.02), 13px 124px 50px 0px rgba(0, 0, 0, 0.01), 21px 194px 55px 0px rgba(0, 0, 0, 0)
+  transform: translateY(200px)
+  transition: background-color .2s linear, transform .3s linear, opacity .2s linear
+
+  +sm
+    width: 50px
+    height: 50px
+
+  +ph
+    right: 10px
+    bottom: 10px
+    width: 45px
+    height: 45px
+
+  &_active
+    opacity: 1
+    transform: translateY(0px)
+
+  &:hover
+    +hover
+      background-color: $clr_1
+
+      .scroll-top__icon
+        fill: $clr_3
+        transform: rotate(-90deg) translateX(3px)
+
+  &__icon
+    display: inline-flex
+    width: 20px
+    height: 20px
+    fill: $clr_1
+    transform: rotate(-90deg)
+    transition: fill .2s linear, transform .2s linear
+
+    +ph
+      width: 15px
+      height: 15px
+
+// ПАГИНАЦИЯ
+.pagination
+  display: flex
+  justify-content: center
+  padding-top: 40px
+  font-family: $ff_1
+  font-size: 18px
+  color: $clr_2
+
+  +ph
+    font-size: 16px
+
+  .list
+    display: flex
+    align-items: center
+
+    &__item
+      &:not(:last-child)
+        margin-right: 15px
+
+      &.active
+        .list__item-link
+          color: $clr_3
+
+        &:hover
+          +hover
+            .list__item-link
+              color: $clr_2
+
+    &__item-link
+      transition: color .2s linear
+
+      &:hover
+        +hover
+          color: $clr_3
+
+    .link
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 40px
+      height: 40px
+      background-color: $clr_3
+      border-radius: 50%
+      transition: background-color .2s linear
+
+      &:hover
+        +hover
+          background-color: $clr_2
+
+      &__icon
+        flex-shrink: 0
+        margin-right: 0
+        width: 12px
+        height: 12px
+        fill: $clr_1
+        transition: fill .2s linear
+
+        &_left
+          transform: rotate(-180deg)
+
+// СЛАЙДЕР
+.slider
+  width: 100%
+  height: 100%
+  margin-left: auto
+  margin-right: auto
+
+.swiper-slide
+  position: relative
+  font-size: 0
+  overflow: hidden
+
+.swiper-slide
+  user-select: none
+
+.swiper-scrollbar
+  background-color: rgba($clr_2, .6)
+  height: 6px !important
+
+.swiper-scrollbar-drag
+  background-color: $clr_3
+
+// СТРЕЛКИ ДЛЯ СЛАЙДЕРА
+.slider-arrows
+  display: flex
+
+  &__arrow
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    border: 1px solid $clr_2
+    border-radius: 100%
+    transition: opacity .2s linear, border-color .2s linear
+
+    &:hover
+      +hover
+        border-color: $clr_3
+
+        .arrow__icon
+          fill: $clr_3
+
+    &:focus:not(:active)
+      border-color: $clr_3
+
+    &:not(:last-child)
+      margin-right: 12px
+
+      +ph
+        margin-right: 10px
+
+.arrow
+  &_prev
+    .arrow__icon
+      transform: rotate(180deg)
+  
+  &__icon
+    width: 20px
+    height: 15px
+    fill: $clr_2
+    transition: fill .2s linear
+
+  &_disable
+    opacity: .5
+    cursor: auto
+
+    &:hover
+      border-color: $clr_2
+
+      +hover
+        .arrow__icon
+          fill: $clr_2
+
+.slide__img
+  background-color: rgba($clr_3, .6)
+
+// ГАЛЕРЕЯ
+.gallery-wrapper
+
+  .gallery
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-auto-rows: 370px
+    gap: 10px
+    @include textReset
+    font-size: 0
+    line-height: 0
+
+    li
+      &:not(:last-child)
+        margin-bottom: 0
+
+    +sm
+      grid-template-columns: repeat(2, 1fr)
+
+    +ph
+      grid-auto-rows: 40vh
+      grid-template-columns: 1fr
+
+    &__item
+      position: relative
+      overflow: hidden
+
+    &__link
+      position: relative
+      display: flex
+      width: 100%
+      height: 100%
+      font-size: 0
+      line-height: 0
+      overflow: hidden
+
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 100
+        width: 100%
+        height: 100%
+        background-color: rgba($clr_3, .3)
+        opacity: 0
+        transform: translate(-100px, 100px)
+        transition: opacity .2s linear, transform .2s linear
+
+      &:hover
+        +hover
+          &::before
+            opacity: 1
+            transform: translate(0)
+
+          .gallery__img
+            transform: scale(1.1)
+
+    &__img
+      position: relative
+      max-width: 100%
+      width: 100%
+      min-height: 100%
+      object-fit: cover
+      transition: transform .2s linear
+
+  +md
+    .content
+      width: 90%
+
+      h1
+        margin-bottom: 30px
+
+  +sm
+    margin-bottom: 80px
+
+    .content
+      width: 100%
+
+      h1
+        margin-bottom: 20px

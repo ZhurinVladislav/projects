@@ -1,0 +1,90 @@
+.feedback
+
+	&__content-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		+sm
+			flex-direction: column-reverse
+
+	&__form-wrapper
+		position: relative
+		flex: 0 0 40%
+		margin-right: 20px
+
+		+sm
+			flex: 0 0 100%
+			margin-right: 0
+
+	&__title
+		max-width: 389px
+
+		+sm
+			max-width: 100%
+
+	.input-list
+		margin-bottom: 40px
+
+		+ph
+			margin-bottom: 30px
+
+	&__icon
+		position: absolute
+		top: 23px
+		right: -303px
+		z-index: 2
+
+		+sm
+			display: none
+
+	&__content-right
+		position: relative
+		display: flex
+		z-index: 1
+		margin-right: -295px
+		padding-right: 295px
+		max-width: 950px
+		width: 100%
+		
+		+sm
+			margin-right: -102px
+			margin-bottom: 40px
+			padding-right: 102px
+
+		+ph
+			margin-right: -20px
+			padding-right: 20px
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			z-index: -1
+			width: 100%
+			height: 88%
+			border-radius: 20px 0 0 20px
+			background-color: $clr_3
+			transform: translateY(-50%)
+
+			+ph
+				border-radius: 15px 0 0 15px
+
+	&__img-wrapper
+		display: flex
+		max-width: 658px
+		min-height: 676px
+		font-size: 0
+		box-shadow: 0 6px 12px 0 rgba(209, 0, 2, 0.05), 0 23px 23px 0 rgba(209, 0, 2, 0.04), 0 51px 31px 0 rgba(209, 0, 2, 0.03), 0 90px 36px 0 rgba(209, 0, 2, 0.01), 0 141px 40px 0 rgba(209, 0, 2, 0)
+		
+		+sm
+			min-height: 37vh
+		
+	&__img
+		max-width: 100%
+		height: 100%
+		object-fit: cover
+
+.form__btn
+	margin-bottom: 20px

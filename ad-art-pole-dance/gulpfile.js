@@ -1,9 +1,9 @@
 // Основной модуль
-import gulp from "gulp";
+import gulp from 'gulp';
 // Импорт путей
-import { path } from "./gulp/config/path.js";
+import { path } from './gulp/config/path.js';
 // Импорт общих плагинов
-import { plugins } from "./gulp/config/plugins.js";
+import { plugins } from './gulp/config/plugins.js';
 
 // Передаём значения в глобальную переменную
 global.app = {
@@ -12,20 +12,19 @@ global.app = {
   path: path,
   gulp: gulp,
   plugins: plugins,
-}
+};
 
 // Импорт задач
-import { copyScripts } from "./gulp/tasks/copy.js";
-import { copyStyles } from "./gulp/tasks/copy.js";
-import { reset } from "./gulp/tasks/reset.js";
-import { html } from "./gulp/tasks/html.js";
-import { server } from "./gulp/tasks/server.js";
-import { sass } from "./gulp/tasks/sass.js";
-import { js } from "./gulp/tasks/js.js";
-import { images } from "./gulp/tasks/images.js";
-import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
-import { svgSprive } from "./gulp/tasks/svgSprive.js";
-import { zip } from "./gulp/tasks/zip.js";
+import { copyScripts, copyStyles } from './gulp/tasks/copy.js';
+import { fontsStyle, otfToTtf, ttfToWoff } from './gulp/tasks/fonts.js';
+import { html } from './gulp/tasks/html.js';
+import { images } from './gulp/tasks/images.js';
+import { js } from './gulp/tasks/js.js';
+import { reset } from './gulp/tasks/reset.js';
+import { sass } from './gulp/tasks/sass.js';
+import { server } from './gulp/tasks/server.js';
+import { svgSprive } from './gulp/tasks/svgSprive.js';
+import { zip } from './gulp/tasks/zip.js';
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -39,7 +38,6 @@ function watcher() {
   gulp.watch(path.watch.images, svgSprive);
 }
 
-
 // Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
@@ -51,9 +49,7 @@ const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 
 // Экспорт сценариев
-export { dev }
-export { build }
-export { deployZIP }
+export { build, deployZIP, dev };
 
 // Выполнение сценария по умолчанию
 gulp.task('default', dev);

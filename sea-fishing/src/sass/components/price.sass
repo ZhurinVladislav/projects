@@ -1,0 +1,104 @@
+.price
+	color: $clr_1
+
+	&__content-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin: 0 20px
+		padding: 58px
+		background-color: $clr_2
+		background-image: url(../img/price/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+
+		+md
+			margin: 0px 10px
+			padding: 40px 30px
+
+		+sm
+			flex-direction: column
+			align-items: flex-start
+
+		+ph
+			margin: 0px 5px
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index: -1
+			max-width: 1424px
+			width: 97%
+			height: 87%
+			border: 3px solid $clr_3
+			transform: translate(-50%, -50%)
+
+	&__content-left
+		margin-right: 20px
+		max-width: 426px
+		width: 100%
+
+		+sm
+			margin-right: 0
+			margin-bottom: 40px
+	
+	&__text
+		display: block
+		
+	.link-invert
+		display: inline
+		letter-spacing: .06em
+
+	&__content-right
+		display: flex
+		justify-content: space-between
+		max-width: 472px
+		width: 100%
+
+		+ph
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin: 0 auto
+
+	&__list
+		display: flex
+		flex-direction: column
+		padding-left: 40px
+		text-align: center
+		border-left: 3px solid $clr_3
+
+		+md
+			padding-left: 30px
+
+		+ph
+			padding-left: 0
+			padding-bottom: 20px
+			border-left: none
+			border-bottom: 3px solid $clr_3
+
+		&:not(:last-child)
+			padding-right: 40px
+
+			+md
+				padding-right: 30px
+
+			+ph
+				padding-right: 0
+				margin-bottom: 20px
+
+	&__list-item
+
+		&:not(:last-child)
+			margin-bottom: 12px
+
+		&_title
+			margin-bottom: 20px
+			font-size: 24px
+
+			+sm
+				font-size: 20px
