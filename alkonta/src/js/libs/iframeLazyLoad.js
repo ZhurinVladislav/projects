@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+export const iframeLazyLoad = () => {
   const arrIframe = document.querySelectorAll('iframe');
   const arrImg = document.querySelectorAll('img');
 
@@ -9,4 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
   arrImg.forEach(el => {
     el.setAttribute('loading', 'lazy');
   });
-});
+};

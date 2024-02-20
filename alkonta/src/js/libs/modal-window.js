@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+export const modalWindow = () => {
   // ОБЪЯВЛЕНИЕ ГЛОБАЛЬНЫХ ПЕРЕМЕННЫХ
   const openButton = document.querySelectorAll('.js-open-modal');
   const closeButton = document.querySelectorAll('.js-close-modal');
@@ -75,4 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
   $(document).on('af_complete', function (event, response) {
     if (response.success) openFormSuccess();
   });
-});
+};

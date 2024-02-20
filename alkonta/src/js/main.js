@@ -42,21 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // СПИСОК ПЕРЕКЛЮЧЕНИЯ ГОРОДОВ
   const toggleSite = () => {
-    const btn = document.getElementById('site-toggle');
-    const list = document.getElementById('list-site');
+    const toggleSiteWrapper = document.querySelectorAll('.js-site-wrapper');
 
-    btn.addEventListener('click', () => {
-      if (list.style.maxHeight) {
-        list.style.maxHeight = null;
-        btn.classList.remove('active');
-      } else {
-        list.style.maxHeight = list.scrollHeight + 'px';
-        btn.classList.add('active');
-      }
-    });
+    toggleSiteWrapper.forEach(el => {
+      const btn = el.querySelector('.js-btn-site-toggle');
+      const list = el.querySelector('.js-list-site');
 
-    window.addEventListener('keydown', ev => {
-      if (ev.key === 'Escape') {
+      btn.addEventListener('click', () => {
         if (list.style.maxHeight) {
           list.style.maxHeight = null;
           btn.classList.remove('active');
@@ -64,22 +56,30 @@ document.addEventListener('DOMContentLoaded', () => {
           list.style.maxHeight = list.scrollHeight + 'px';
           btn.classList.add('active');
         }
-      }
+      });
+
+      window.addEventListener('keydown', ev => {
+        if (ev.key === 'Escape') {
+          if (list.style.maxHeight) {
+            list.style.maxHeight = null;
+            btn.classList.remove('active');
+          }
+        }
+      });
     });
   };
-  if (document.getElementById('site-toggle')) toggleSite();
+  if (document.querySelector('.js-site-wrapper')) toggleSite();
 
   // АНИМАЦИЯ С ЧИСЛАМИ В HERO
-  const zeroValues = () => {
-    const stat = document.getElementsByClassName('js-number');
-    for (let i = 0; i < stat.length; i++) {
-      stat[i].innerHTML = 0;
-    }
-  };
-
-  zeroValues();
 
   const numberAnimate = () => {
+    const zeroValues = () => {
+      const stat = document.getElementsByClassName('js-number');
+      for (let i = 0; i < stat.length; i++) {
+        stat[i].innerHTML = 0;
+      }
+    };
+    zeroValues();
     const numScroll = () => {
       const animationDuration = 3000;
       const frameDuration = 1000 / 60;
@@ -106,37 +106,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }, frameDuration);
       };
 
-      const runAnimations = () => {
-        const countupEls = document.querySelectorAll('.js-number');
-        countupEls.forEach(animateCountUp);
+      const numbersWrapper = document.querySelectorAll('.js-number-wrapper');
+
+      numbersWrapper.forEach(el => {
+        el.setAttribute('position', `${el.offsetTop}`);
+        el.setAttribute('animate', false);
+      });
+
+      const startAnimate = el => {
+        el.setAttribute('animate', true);
+        el.querySelectorAll('.js-number').forEach(animateCountUp);
       };
-      runAnimations();
+
+      window.addEventListener('scroll', () => {
+        let scrollY = 0;
+
+        numbersWrapper.forEach(el => {
+          const position = parseInt(el.getAttribute('position')) - document.documentElement.clientWidth / 3;
+          const animate = el.getAttribute('animate');
+
+          scrollY = window.scrollY;
+
+          if (position <= scrollY && animate === 'false') startAnimate(el);
+          return;
+        });
+      });
+
+      for (let i = 0; i < 1; i++) {
+        const el = numbersWrapper[i];
+        const position = parseInt(el.getAttribute('position'));
+
+        if (position <= 0) startAnimate(el);
+      }
     };
     zeroValues();
 
-    // window.addEventListener('load', () => {
-    //   numScroll();
-    // });
-    const numbersWrapper = document.querySelectorAll('.js-number-wrapper');
-
-    window.addEventListener('scroll', () => {
-      numbersWrapper.forEach(el => {
-        let scrollY = 0;
-        const elDistanceTop = el.getBoundingClientRect().top;
-        const elDistanceBottom = el.getBoundingClientRect().bottom;
-        const windowHeight = window.innerHeight;
-
-        scrollY = window.scrollY;
-
-        if (el.getAttribute('data-number-animate')) return;
-
-        if (scrollY < elDistanceTop - windowHeight || scrollY > elDistanceBottom) {
-          console.log('Вне области видимости');
-        } else {
-          numScroll();
-          el.setAttribute('data-number-animate', true);
-        }
-      });
+    window.addEventListener('load', () => {
+      numScroll();
     });
   };
 

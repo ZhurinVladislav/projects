@@ -83,10 +83,10 @@ body
 
   &::-webkit-scrollbar
     width: 16px
-    background-color: $clr_2
+    background-color: $clr_3
 
   &::-webkit-scrollbar-thumb
-    background-color: $clr_3
+    background-color: $clr_1
 
 html.menu-open,
 body.menu-open
@@ -398,20 +398,21 @@ input[type='number']
   text-transform: uppercase
 
 .button
+  position: relative
   display: flex
   align-items: center
   justify-content: center
   padding: 9px 9px 9px 20px
-  max-width: 328px
+  max-width: 329px
   min-height: 58px
   font-weight: 700
-  font-size: 16px
+  font-size: 18px
   color: $clr_3
   text-align: center
-  border: 1px solid $clr_1
   border-radius: 30px
   background-color: $clr_1
-  transition: background-color .2s linear, color .2s linear, border-color .2s linear, color .2s linear
+  overflow: hidden
+  transition: background-color .4s linear, color .2s linear, color .2s linear
 
   +md
     padding: 14px
@@ -423,11 +424,32 @@ input[type='number']
     max-width: 100%
     width: 100%
 
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    right: 10px
+    z-index: 0
+    width: 36px
+    height: 36px
+    border-radius: 50%
+    background-color: $clr_3
+    transform: translateY(-50%)
+    transition: width .3s linear, height .3s linear, transform .4s linear, right .2s linear
+
   &:hover
     +hover
       color: $clr_1
-      background-color: $clr_3
-      border-color: $clr_3
+      background-color: $clr_1
+      animation-fill-mode: forwards
+      animation-name: hoverBtn
+      animation-duration: .6s
+
+      &::after
+        right: 0
+        width: 103%
+        height: 200px
+        transform: translateY(-50%)
 
       .button__icon-wrapper
         background-color: $clr_1
@@ -436,12 +458,18 @@ input[type='number']
         fill: $clr_3
 
   &:focus:not(:active)
-    border-color: $clr_2
+    .button__icon-wrapper
+      background-color: $clr_1
+
+    .button__icon
+      fill: $clr_3
 
   &__text
+    z-index: 1
     margin-right: 15px
 
   &__icon-wrapper
+    z-index: 1
     display: flex
     align-items: center
     justify-content: center
@@ -458,19 +486,20 @@ input[type='number']
     transition: fill .2s linear
 
 .button-invert
+  position: relative
   display: flex
   align-items: center
   justify-content: center
   padding: 9px 9px 9px 20px
-  max-width: 328px
+  max-width: 329px
   min-height: 58px
   font-weight: 700
-  font-size: 16px
+  font-size: 18px
   color: $clr_1
   text-align: center
-  border: 1px solid $clr_3
   border-radius: 30px
   background-color: $clr_3
+  overflow: hidden
   transition: background-color .2s linear, color .2s linear, border-color .2s linear, color .2s linear
 
   +md
@@ -483,11 +512,31 @@ input[type='number']
     max-width: 100%
     width: 100%
 
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    right: 10px
+    z-index: 0
+    width: 36px
+    height: 36px
+    border-radius: 50%
+    background-color: $clr_1
+    transform: translateY(-50%)
+    transition: width .3s linear, height .3s linear, transform .4s linear, right .2s linear
+
   &:hover
     +hover
       color: $clr_3
-      background-color: $clr_1
-      border-color: $clr_1
+      animation-fill-mode: forwards
+      animation-name: hoverBtn
+      animation-duration: .6s
+
+      &::after
+        right: 0
+        width: 103%
+        height: 200px
+        transform: translateY(-50%)
 
       .button-invert__icon-wrapper
         background-color: $clr_3
@@ -496,12 +545,18 @@ input[type='number']
         fill: $clr_1
 
   &:focus:not(:active)
-    border-color: $clr_2
+    .button__icon-wrapper
+      background-color: $clr_3
+
+    .button__icon
+      fill: $clr_1
 
   &__text
+    z-index: 1
     margin-right: 15px
 
   &__icon-wrapper
+    z-index: 1
     display: flex
     align-items: center
     justify-content: center
@@ -1217,3 +1272,11 @@ input[type='number']
 
       h1
         margin-bottom: 20px
+
+// АНИМАЦИЯ
+@keyframes hoverBtn
+  // from
+  //   background-color: $clr_0
+  
+  to
+    background-color: $clr_0

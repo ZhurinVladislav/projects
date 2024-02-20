@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // УБИРАЕМ ФОКУС ПОСЛЕ НАЖАТИЯ НА КНОПКУ ИЛИ ССЫЛКУ
-  function removeFocus() {
+  const removeFocus = () => {
     const arrBtn = document.querySelectorAll('button');
     const arrLink = document.querySelectorAll('a');
 
@@ -21,11 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         el.preventDefault();
       });
     });
-  }
+  };
+
   removeFocus();
 
   // ДОБАВЛЕНИЕ ОТСТУПА СПРАВА ПРИ ОТКРЫТИЕ ГАЛЕРИИ
-  function addIndent() {
+  const addIndent = () => {
     const html = document.querySelector('html');
     const body = window.document.body;
 
@@ -34,14 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // УБИРАЕМ КЛАСС ПРИ НАЖАТИЕ НА "ESC"
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape') html.classList.remove('galleryActive');
+    window.addEventListener('keydown', ev => {
+      if (ev.key === 'Escape') html.classList.remove('galleryActive');
     });
-  }
+  };
+
   addIndent();
 
   // МОБИЛЬНОЕ МЕНЮ
-  function mobMenu() {
+  const mobMenu = () => {
     const burgerBtn = document.getElementById('burger-toggle');
     const burgerMenu = document.getElementById('burger-menu');
     const html = document.querySelector('html');
@@ -56,26 +58,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ КНОПКОЙ "ESC"
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
+    window.addEventListener('keydown', ev => {
+      if (ev.key === 'Escape') {
         burgerBtn.classList.remove('menu-toggle_active');
         burgerMenu.classList.remove('active');
         body.classList.remove('menu-open');
         html.classList.remove('menu-open');
       }
     });
-  }
+  };
+
   mobMenu();
 
   // ОТКРЫТИЕ ВСПЛЫВАЮЩЕГО СПИСКА В МОБ. МЕНЮ
-  function mobMenuList() {
+  const mobMenuList = () => {
     const parentItem = document.querySelectorAll('.item__btn');
     const listInner = document.querySelectorAll('.parent .list');
 
     let arrLength;
 
-    listInner.forEach(e => {
-      e.classList.add('overflow-hidden');
+    listInner.forEach(el => {
+      el.classList.add('overflow-hidden');
     });
 
     for (let i = 0; i < listInner.length; i++) {
@@ -89,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arrLength = elChild.length;
 
         if (elChild[i].classList.contains('active')) {
-          document.querySelectorAll('.list').forEach(e => (e.style.maxHeight = null));
+          document.querySelectorAll('.list').forEach(el => (el.style.maxHeight = null));
           parent.style.maxHeight = 'max-content';
 
           arrow.classList.add('active');
@@ -97,29 +100,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    parentItem.forEach(e => {
-      e.addEventListener('click', () => {
-        const acContent = e.nextElementSibling;
+    parentItem.forEach(el => {
+      el.addEventListener('click', () => {
+        const acContent = el.nextElementSibling;
 
         if (acContent.style.maxHeight) {
-          document.querySelectorAll('.menu__list .list').forEach(e => {
-            e.style.maxHeight = null;
+          document.querySelectorAll('.menu__list .list').forEach(el => {
+            el.style.maxHeight = null;
           });
-          e.classList.remove('active');
+          el.classList.remove('active');
         } else {
-          document.querySelectorAll('.menu__list .list').forEach(e => {
-            e.style.maxHeight = null;
-            e.previousElementSibling.classList.remove('active');
+          document.querySelectorAll('.menu__list .list').forEach(el => {
+            el.style.maxHeight = null;
+            el.previousElementSibling.classList.remove('active');
           });
           acContent.style.maxHeight = acContent.scrollHeight + 'px';
-          e.classList.add('active');
+          el.classList.add('active');
         }
       });
     });
-  }
+  };
+
   mobMenuList();
 
-  function scrollHero() {
+  const scrollHero = () => {
     const btn = document.getElementById('btn-hero');
 
     btn.addEventListener('click', () => {
@@ -127,11 +131,12 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 100, behavior: 'smooth' });
       }
     });
-  }
-  if (document.querySelector('.hero')) scrollHero();
+  };
+
+  if (document.getElementById('btn-hero')) scrollHero();
 
   // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
-  function scrollTop() {
+  const scrollTop = () => {
     const btn = document.getElementById('scroll-top');
     let scrollY = 0;
 
@@ -148,11 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  }
+  };
+
   scrollTop();
 
   // СЛАЙДЕР В БЛОКЕ РЫБА НА ГЛАВНОЙ СТРАНИЦЕ
-  function fishSlider() {
+  const fishSlider = () => {
     const swiper = new Swiper('#fish-slider', {
       spaceBetween: 20,
       slidesPerView: 1,
@@ -165,11 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
         prevEl: '#fish-btn-prev',
       },
     });
-  }
+  };
+
   if (document.getElementById('fish-slider')) fishSlider();
 
   // СЛАЙДЕР В БЛОКЕ ФЛОТ НА ГЛАВНОЙ СТРАНИЦЕ
-  function fleetSlider() {
+  const fleetSlider = () => {
     const swiper = new Swiper('#fleet-slider', {
       spaceBetween: 20,
       slidesPerView: 1,
@@ -182,10 +189,11 @@ document.addEventListener('DOMContentLoaded', () => {
         prevEl: '#fleet-btn-prev',
       },
     });
-  }
+  };
+
   if (document.getElementById('fleet-slider')) fleetSlider();
 
-  function yachtSlider() {
+  const yachtSlider = () => {
     const swiper = new Swiper('.slider-bottom', {
       spaceBetween: 10,
       speed: 700,
@@ -216,7 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
         swiper: swiper,
       },
     });
-  }
+  };
+
   if (document.getElementById('yacht-slider')) yachtSlider();
 
   // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
