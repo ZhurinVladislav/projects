@@ -6,6 +6,47 @@
     background-color: rgba($clr_1, .1)
     backdrop-filter: blur(4px)
 
+    .menu
+      &__item
+        &:hover
+          +hover
+            .menu__link
+              color: $clr_3
+
+            &.active
+              .menu__link
+                color: $clr_3
+
+        &.active
+          .menu__link
+            color: $clr_3
+
+    .link-icon
+      &:hover
+        +hover
+          .link-icon__text
+            color: $clr_3
+
+          .link-icon__item
+            fill: $clr_3
+
+      &:focus:not(:active)
+        outline: none
+        border-color: $clr_3
+
+        .link-icon__item
+          fill: $clr_3
+
+    .site-wrapper
+      &__btn
+        &:hover
+          +hover
+            .site-wrapper__icon
+              fill: $clr_3
+
+            .site-wrapper__text
+              color: $clr_3
+
 .header
   margin-bottom: 40px
   font-weight: 500
@@ -63,7 +104,7 @@
         +hover
 
           .menu__link
-            color: $clr_3
+            color: $clr_2
 
           .list-inner
             visibility: visible
@@ -72,14 +113,14 @@
 
           &.active
             .menu__link
-              color: $clr_3
+              color: $clr_2
 
           .menu__icon
             transform: rotateX(180deg)
 
       &.active
         .menu__link
-          color: $clr_3
+          color: $clr_2
 
       &:not(:last-child)
         margin-right: 28px
@@ -156,6 +197,22 @@
         position: relative
         padding: 15px 20px
         transition: color .2s ease-in-out
+
+  .link-icon
+    &:hover
+      +hover
+        .link-icon__text
+          color: $clr_2
+
+        .link-icon__item
+          fill: $clr_2
+
+    &:focus:not(:active)
+      outline: none
+      border-color: $clr_2
+
+      .link-icon__item
+        fill: $clr_2
 
   &__list-phone
     display: flex
@@ -286,10 +343,10 @@
     &:hover
       +hover
         .site-wrapper__icon
-          fill: $clr_3
+          fill: $clr_2
 
         .site-wrapper__text
-          color: $clr_3
+          color: $clr_2
 
     &.active
 

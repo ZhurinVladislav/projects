@@ -163,7 +163,7 @@ input[type='number']
   display: flex
   list-style: none
   margin: 0
-  margin-bottom: 40px
+  margin-bottom: 30px
   max-width: max-content
   font-size: 14px
   text-transform: uppercase
@@ -428,10 +428,10 @@ input[type='number']
     content: ''
     position: absolute
     top: 50%
-    right: 10px
+    right: 12px
     z-index: 0
-    width: 36px
-    height: 36px
+    width: 33px
+    height: 33px
     border-radius: 50%
     background-color: $clr_3
     transform: translateY(-50%)
@@ -516,10 +516,10 @@ input[type='number']
     content: ''
     position: absolute
     top: 50%
-    right: 10px
+    right: 12px
     z-index: 0
-    width: 36px
-    height: 36px
+    width: 33px
+    height: 33px
     border-radius: 50%
     background-color: $clr_1
     transform: translateY(-50%)
@@ -808,7 +808,7 @@ input[type='number']
   line-height: 130%
 
   +sm
-    font-size: 18px
+    font-size: 16px
 
   h1
     font-family: $ff_1
@@ -934,13 +934,12 @@ input[type='number']
     margin: 0
     margin-bottom: 20px
     padding: 20px 10px 20px 20px
+    border-radius: 20px
     color: $clr_1
     background-color: $clr_2
-    background-image: url(../img/common/bg-img.jpg)
-    background-position: center
-    background-size: cover
-    background-repeat: no-repeat
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+
+    +ph
+      border-radius: 15px
 
     ul
       margin-bottom: 0
@@ -954,8 +953,9 @@ input[type='number']
     width: 100%
     border-collapse: collapse
     overflow: hidden
+    border-radius: 20px
     text-transform: uppercase
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+    box-shadow: 0 6px 12px 0 rgba(209, 0, 2, 0.05), 0 23px 23px 0 rgba(209, 0, 2, 0.04), 0 51px 31px 0 rgba(209, 0, 2, 0.03), 0 90px 36px 0 rgba(209, 0, 2, 0.01), 0 141px 40px 0 rgba(209, 0, 2, 0)
 
     +lr
       font-size: 16px
@@ -965,6 +965,7 @@ input[type='number']
       margin: auto
       font-size: 14px
       width: fit-content
+      border-radius: 15px
       overflow-x: auto
 
     p
@@ -980,8 +981,7 @@ input[type='number']
         
       &:nth-child(1)
         color: $clr_1
-        background-color: $clr_2
-        background-image: url(../img/common/bg-img.jpg)
+        background-color: $clr_3
         background-position: center
         background-size: cover
         background-repeat: no-repeat
@@ -1216,6 +1216,7 @@ input[type='number']
 
     &__item
       position: relative
+      display: flex
       overflow: hidden
 
     &__link
@@ -1225,7 +1226,7 @@ input[type='number']
       height: 100%
       font-size: 0
       line-height: 0
-      overflow: hidden
+      border: none
 
       &::before
         content: ''
@@ -1251,10 +1252,10 @@ input[type='number']
 
     &__img
       position: relative
-      max-width: 100%
       width: 100%
-      min-height: 100%
+      height: 100%
       object-fit: cover
+      font-size: 0
       transition: transform .2s linear
 
   +md

@@ -22,7 +22,7 @@
 
     <body>
         <!-- HEADER -->
-        <header class="header">
+        <header class="home-page__header header">
             <div class="header__container container">
                 <a href="/" class="header__logo logo" aria-label="Перейти на главную страницу сайта">
                     <img
@@ -47,42 +47,42 @@
                             </a>
                             <ul class="menu__list-inner list-inner">
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./service.html">
+                                    <a class="list-inner__link" href="./card-internal.html">
                                         <span class="list-inner__link-item"> Таможенное оформление </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./service.html">
+                                    <a class="list-inner__link" href="./card-internal.html">
                                         <span class="list-inner__link-item"> Грузоперевозки из Турции </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./service.html">
+                                    <a class="list-inner__link" href="./card-internal.html">
                                         <span class="list-inner__link-item"> Экспорт из Новороссийска </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./service.html">
+                                    <a class="list-inner__link" href="./card-internal.html">
                                         <span class="list-inner__link-item"> Автомобильные перевозки </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./service.html">
+                                    <a class="list-inner__link" href="./card-internal.html">
                                         <span class="list-inner__link-item"> Морские перевозки </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./service.html">
+                                    <a class="list-inner__link" href="./card-internal.html">
                                         <span class="list-inner__link-item"> Авиаперевозки </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./service.html">
+                                    <a class="list-inner__link" href="./card-internal.html">
                                         <span class="list-inner__link-item"> ЖД перевозки из Китая </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./service.html">
+                                    <a class="list-inner__link" href="./card-internal.html">
                                         <span class="list-inner__link-item"> Экспедирование грузов </span>
                                     </a>
                                 </li>
@@ -105,24 +105,24 @@
                             </a>
                             <ul class="menu__list-inner list-inner">
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./news.html">
+                                    <a class="list-inner__link" href="./card-list.html">
                                         <span class="list-inner__link-item"> Новости </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./news.html">
+                                    <a class="list-inner__link" href="./card-list.html">
                                         <span class="list-inner__link-item"> Полезная информация </span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="list-inner__link" href="./main.html">
+                                    <a class="list-inner__link" href="./search.html">
                                         <span class="list-inner__link-item"> Поиск контейнера </span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="./price.html">
+                            <a class="menu__link" href="./card-list.html">
                                 <span class="menu__link-item"> Наши работы </span>
                                 <svg class="menu__icon">
                                     <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
@@ -141,7 +141,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu__item active">
+                        <li class="menu__item">
                             <a class="menu__link" href="./contacts.html">
                                 <span class="menu__link-item"> Контакты </span>
                             </a>
@@ -306,7 +306,7 @@
                                 </ul>
                             </li>
                             <li class="list__item item parent">
-                                <a href="./services.html" class="item__link"> Наши работы </a>
+                                <a href="./our-works.html" class="item__link"> Наши работы </a>
                                 <button class="item__btn" aria-label="Раскрыть выпадающий список">
                                     <svg class="item__icon">
                                         <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
@@ -321,7 +321,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="list__item item active">
+                            <li class="list__item item">
                                 <a href="./contacts.html" class="item__link"> Контакты </a>
                             </li>
                         </ul>
@@ -367,91 +367,122 @@
         </header>
         <!-- MAIN -->
         <main>
-            <!-- CONTACTS -->
-            <section class="contacts">
-                <div class="contacts__container container">
-                    <ol class="breadcrumb">
+            <!-- cards -->
+            <section class="cards section-reset">
+                <div class="cards__container container">
+                    <ol class="cards__breadcrumb breadcrumb">
                         <li>
                             <a href="">Главная</a>
                         </li>
-                        <li class="breadcrumb-item active">&nbsp;Контакты</li>
+                        <li class="breadcrumb-item active">&nbsp;Наши работы</li>
                     </ol>
-                    <h1 class="contacts__title-hidden h-0">
+                    <h1 class="cards__title-hidden h-0">
                         Контакты логистической компании в Новороссийске Alkonta Logistics
                     </h1>
-                    <h2 class="contacts__title-hidden h-0">Основная контактная информация</h2>
-                    <div class="contacts__content-wrapper">
-                        <div class="contacts__map-wrapper">
-                            <script
-                                type="text/javascript"
-                                charset="utf-8"
-                                async
-                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A62223611137fe947cd68fba638e637d8b009cb16488f1549c63f331e7879b8cd&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
-                        </div>
-                        <div class="contacts__content contacts-content">
-                            <div class="contacts-content__logo-wrapper">
-                                <a
-                                    href="/"
-                                    class="contacts-content__logo logo"
-                                    aria-label="Перейти на главную страницу сайта">
-                                    <img
-                                        class="logo__img"
-                                        src="/app/img/logo-invert.svg"
-                                        alt="Логотип логистической компании Альконта"
-                                        title="Логистическая компания Альконта" />
-                                    <span class="logo__logo-text"> Международные перевозки грузов </span>
-                                </a>
-                            </div>
-                            <ul class="contacts-content__list">
-                                <li class="contacts-content__list-item">
-                                    <a
-                                        href="/"
-                                        class="contacts-content__list-link link-icon"
-                                        aria-label="Перейти на общую страницу контактов">
-                                        <svg class="link-icon__item">
-                                            <use xlink:href="/app/img/icons/icons.svg#mark"></use>
-                                        </svg>
-                                        <span class="link-icon__text"
-                                            >353900, Россия, Краснодарский край, г. Новороссийск, ул.
-                                            Коммунистическая&nbsp;42, офис&nbsp;6</span
-                                        >
-                                    </a>
-                                </li>
-                                <li class="contacts-content__list-item contacts-content__list-item_ph">
-                                    <a
-                                        href="tel:+79385460760"
-                                        class="contacts-content__list-link link-icon"
-                                        aria-label="Позвонить по номеру +7 (938) 546-07-60">
-                                        <svg class="link-icon__item">
-                                            <use xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                        </svg>
-                                        <span class="link-icon__text">+7 (938) 546-07-60</span>
-                                    </a>
-                                </li>
-                                <li class="contacts-content__list-item">
-                                    <a
-                                        href="tel:+79385460760"
-                                        class="contacts-content__list-link link-icon"
-                                        aria-label="Позвонить по номеру +7 (928) 24-14-920">
-                                        <svg class="link-icon__item">
-                                            <use xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                        </svg>
-                                        <span class="link-icon__text">+7 (928) 24-14-920</span>
-                                    </a>
-                                </li>
-                                <li class="contacts-content__list-item">
-                                    <a
-                                        href="mailto:info@alkonta.com"
-                                        class="contacts-content__list-link link-icon"
-                                        aria-label="Написать на почту info@alkonta.com">
-                                        <svg class="link-icon__item">
-                                            <use xlink:href="/app/img/icons/icons.svg#mail"></use>
-                                        </svg>
-                                        <span class="link-icon__text">info@alkonta.com</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <h2 class="cards__title h-1">Наши работы</h2>
+                    <ul class="cards__list">
+                        <li class="cards__list-item b-r">
+                            <a href="/" aria-label="ссылка" class="cards__list-item-link">
+                                <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    alt="изображение"
+                                    class="cards__list-item-img" />
+                                <div class="cards__list-item-content">
+                                    <p class="cards__list-item-text">Текст ссылки</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cards__list-item b-r">
+                            <a href="/" aria-label="ссылка" class="cards__list-item-link">
+                                <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    alt="изображение"
+                                    class="cards__list-item-img" />
+                                <div class="cards__list-item-content">
+                                    <p class="cards__list-item-text">
+                                        Текст ссылки Текст ссылки Текст ссылки Текст ссылки Текст ссылки
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="cards__list-item b-r">
+                            <a href="/" aria-label="ссылка" class="cards__list-item-link">
+                                <img
+                                    src="./app/img/gallery-inner/img-1.jpg"
+                                    alt="изображение"
+                                    class="cards__list-item-img" />
+                                <div class="cards__list-item-content">
+                                    <p class="cards__list-item-text">Текст ссылкиТекст ссылки</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="cards__text text-default">
+                        <p>
+                             Приглашаем в нашу
+                            <strong><a href="[[~1]]">логистическую компанию в Новороссийске,</a></strong> если вам
+                            необходимо привезти товары в город, либо отправить их за пределы страны. Гарантируем высокий
+                            уровень профессионализма, оперативность, соблюдение сроков и удобные условия сотрудничества.
+                            Нашими клиентами и постоянными партнерами уже стали сотни предпринимателей.
+                        </p>
+                        <p>Какую работу мы выполняем?</p>
+                        <p>
+                            Импорт или <strong><a href="[[~59]]">экспорт из Новороссийска</a></strong> – не единственная
+                            сфера нашей деятельности. Мы выполняем много видов работ:
+                        </p>
+                        <ol>
+                            <li>
+                                Планирование маршрутов. Если этот процесс не выполняется грамотно, то
+                                <strong><a href="[[~6]]">международные перевозки в Новороссийске</a></strong> не будут
+                                соответствовать уровню, что требуется клиенту. При планировании учитывается расстояние,
+                                ограничения, время и другие факторы.
+                            </li>
+                            <li>
+                                Управление транспортом.<strong
+                                    ><a href="[[~11]]"> Международные морские перевозки в Новороссийске</a></strong
+                                >
+                                невозможны, если не осуществляется профессиональное координирование транспортных
+                                маршрутов. Нередко составляются комбинации маршрутов, когда
+                                <strong><a href="[[~59]]">экспорт из Новороссийска</a></strong> направлен в далекую
+                                страну. Например, сначала товар отправляется на автомобиле или поезде, затем
+                                перекалывается в багаж самолета.
+                            </li>
+                            <li>
+                                Упаковка и складирование. Без этого не пройти
+                                <strong><a href="[[~13]]">таможенное оформление в Новороссийске,</a></strong> т.к.
+                                компания должна знать, какой груз и в каком количестве она перевозит. К этой же работе
+                                можно отнести прием и складирование.
+                            </li>
+                            <li>
+                                Отслеживание.
+                                <strong><a href="[[~60]]">Доставка груза из Турции в Новороссийск</a></strong>
+                                выполняется под постоянным наблюдением, наши специалисты всегда в курсе местоположения и
+                                прогресса доставки.
+                            </li>
+                            <li>
+                                <strong><a href="[[~13]]">Таможенное оформление в Новороссийске.</a></strong> Для
+                                получения разрешений и пересечения границы без этого не обойтись.
+                            </li>
+                            <li>
+                                Управление связью. Когда осуществляются
+                                <strong><a href="[[~6]]">международные перевозки в Новороссийске,</a></strong> с каждым
+                                участником процесса постоянно поддерживается связь, происходит обмен информацией.
+                            </li>
+                        </ol>
+                        <p>
+                            Все международные морские перевозки в Новороссийске обеспечивают эффективным, своевременными
+                            и безопасным перемещением товаров от отправителей к получателям. И мы не боимся брать на
+                            себя ответственность за сохранность груза.
+                        </p>
+                        <p>
+                            Наша <strong><a href="[[~1]]">логистическая компания Новороссийска</a></strong> обладает
+                            большим опытом работы не только на территории России, но и во всем мире. Мы готовы помочь
+                            даже с самыми сложными проектами, как с доставкой товара из Турции в Новороссийск, так и в
+                            любых других направлениях. Поэтому независимо от того, в какой стране вам требуется
+                            логистический сервис, мы готовы помочь.
+                        </p>
+                        <p><a href="[[~62]]">В стране отправления</a></p>
+                        <p><a href="[[~63]]">На территории РФ</a></p>
                     </div>
                 </div>
             </section>

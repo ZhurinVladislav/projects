@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // FIXME: Сделать условия вызова внутри функций
+
   // УБИРАЕМ ФОКУС ПОСЛЕ НАЖАТИЯ НА КНОПКУ ИЛИ ССЫЛКУ
   const removeFocus = () => {
     const arrBtn = document.querySelectorAll('button');
@@ -259,6 +261,36 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   mobMenuList();
+
+  // АККОРДЕОН
+  const accordion = () => {
+    const ac = document.querySelectorAll('.js-ac');
+    const acBtn = document.querySelectorAll('.js-ac-btn');
+    const acText = document.querySelectorAll('.js-ac-content');
+
+    if (ac) {
+      acText.forEach(el => el.classList.add('ac-hidden'));
+
+      acBtn.forEach(el => {
+        el.addEventListener('click', () => {
+          const acContent = el.nextElementSibling;
+
+          if (acContent.style.maxHeight) {
+            acText.forEach(el => (el.style.maxHeight = null));
+            el.classList.remove('ac-active');
+          } else {
+            acText.forEach(el => {
+              el.style.maxHeight = null;
+              el.previousElementSibling.classList.remove('ac-active');
+            });
+            acContent.style.maxHeight = acContent.scrollHeight + 'px';
+            element.classList.add('ac-active');
+          }
+        });
+      });
+    }
+  };
+  if (document.querySelector('.js-ac')) accordion();
 
   // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
   const scrollTop = () => {
