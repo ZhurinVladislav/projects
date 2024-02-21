@@ -268,29 +268,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const acBtn = document.querySelectorAll('.js-ac-btn');
     const acText = document.querySelectorAll('.js-ac-content');
 
-    if (ac) {
-      acText.forEach(el => el.classList.add('ac-hidden'));
+    if (!ac) return;
 
-      acBtn.forEach(el => {
-        el.addEventListener('click', () => {
-          const acContent = el.nextElementSibling;
+    acText.forEach(el => el.classList.add('ac-hidden'));
 
-          if (acContent.style.maxHeight) {
-            acText.forEach(el => (el.style.maxHeight = null));
-            el.classList.remove('ac-active');
-          } else {
-            acText.forEach(el => {
-              el.style.maxHeight = null;
-              el.previousElementSibling.classList.remove('ac-active');
-            });
-            acContent.style.maxHeight = acContent.scrollHeight + 'px';
-            element.classList.add('ac-active');
-          }
-        });
+    acBtn.forEach(el => {
+      el.addEventListener('click', () => {
+        const acContent = el.nextElementSibling;
+
+        if (acContent.style.maxHeight) {
+          acText.forEach(el => (el.style.maxHeight = null));
+          el.classList.remove('ac-active');
+        } else {
+          acText.forEach(el => {
+            el.style.maxHeight = null;
+            el.previousElementSibling.classList.remove('ac-active');
+          });
+          acContent.style.maxHeight = acContent.scrollHeight + 'px';
+          el.classList.add('ac-active');
+        }
       });
-    }
+    });
   };
-  if (document.querySelector('.js-ac')) accordion();
+
+  accordion();
 
   // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
   const scrollTop = () => {

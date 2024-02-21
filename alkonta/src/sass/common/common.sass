@@ -15,19 +15,13 @@ html.galleryActive
   +lr
     padding-right: 0
 
-  .header_active
-    left: -8px
-
-    +lr
-      left: 0
-
   .scroll-top,.social-panel
     right: 46px
 
     +ph
       right: 20px
 
-header,section,main,footer
+header,main,footer,section,article
   width: 100%
 
 html.mod-open
@@ -98,8 +92,7 @@ body.menu-open
   color: $clr_2
 
 ul,ol,h1,h2,h3,h4,h5,h6,p
-  margin: 0
-  padding: 0
+  @include textReset
 
 a
   text-decoration: none
@@ -110,6 +103,7 @@ ul
 
 img
   max-width: 100%
+  width: 100%
 
 svg
   width: 100%
@@ -133,14 +127,7 @@ button
   background-color: transparent
   cursor: pointer
 
-// УБИРАЕМ СТРЕЛКИ В INPUT NUMBER
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button
-  -webkit-appearance: none
-
-input[type='number']
-  -moz-appearance: textfield
-
+// ОБЩИЕ КЛАССЫ
 .section-reset
   position: relative
   margin-bottom: 120px
@@ -214,8 +201,10 @@ input[type='number']
   +ph
     border-radius: 15px
 
-.up-case
-  text-transform: uppercase
+.section-text
+
+  &__content
+    max-width: 1200px
 
 .overflow-hidden
 
@@ -375,28 +364,6 @@ input[type='number']
   +ph
     font-size: 18px
 
-.h-4
-  margin-bottom: 30px
-  font-family: $ff_1
-  font-size: 30px
-  font-weight: 700
-  color: $clr_2
-
-.h-5
-  margin-bottom: 30px
-  font-family: $ff_1
-  font-size: 30px
-  font-weight: 700
-  color: $clr_2
-
-.h-6
-  margin-bottom: 30px
-  font-family: $ff_1
-  font-size: 30px
-  font-weight: 700
-  color: $clr_2
-  text-transform: uppercase
-
 .button
   position: relative
   display: flex
@@ -436,6 +403,9 @@ input[type='number']
     background-color: $clr_3
     transform: translateY(-50%)
     transition: width .3s linear, height .3s linear, transform .4s linear, right .2s linear
+
+    +sm
+      display: none
 
   &:hover
     +hover
@@ -524,6 +494,9 @@ input[type='number']
     background-color: $clr_1
     transform: translateY(-50%)
     transition: width .3s linear, height .3s linear, transform .4s linear, right .2s linear
+
+    +sm
+      display: none
 
   &:hover
     +hover
@@ -642,108 +615,6 @@ input[type='number']
     color: rgba($clr_2, .5)
     transition: opacity .2s linear
 
-.textarea
-  padding: 14px 20px
-  width: 100%
-  resize: none
-  min-height: 70px
-  border: 1px solid $clr_0
-  background-color: rgba($clr_3, .4)
-  border-radius: 10px
-  line-height: 1.1
-  color: $clr_2
-  transition: border-color .2s linear
-
-  +ph
-    width: 100%
-    font-size: 14px
-
-  &.error
-    border-color: $clr_er
-
-    &:hover
-      +hover
-        border-color: $clr_er
-
-    &:focus
-      border-color: $clr_er
-
-  &:hover
-    +hover
-      border-color: $clr_3
-
-  &:focus + .label
-    top: -6px
-    font-size: 14px
-
-  &:not(:placeholder-shown) + .label
-    top: -6px
-    font-size: 14px
-
-.input-invert
-  padding: 18px 20px
-  width: 100%
-  min-height: 55px
-  background-color: $clr_0
-  border: 2px solid $clr_1
-  border-radius: 8px
-  line-height: 1.1
-  color: $clr_1
-  transition: border-color .2s linear
-
-  +ph
-    width: 100%
-    font-size: 14px
-
-  &.error
-    border-color: $clr_er
-
-    &:hover
-      +hover
-        border-color: $clr_er
-
-    &:focus
-      border-color: $clr_er
-
-  &:hover
-    +hover
-      border-color: $clr_3
-
-  &:focus
-    border-color: $clr_3
-
-    &::-webkit-input-placeholder
-      opacity: 0
-
-    &::-moz-placeholder
-      opacity: 0
-
-    &:-ms-input-placeholder
-      opacity: 0
-
-    &:-moz-placeholder
-      opacity: 0
-
-  &::-webkit-input-placeholder
-    color: $clr_1
-    line-height: 1.2
-    transition: opacity .2s linear
-
-  &::-moz-placeholder
-    color: $clr_1
-    line-height: 1.2
-    transition: opacity .2s linear
-
-  &:-ms-input-placeholder
-    color: $clr_1
-    line-height: 1.2
-    transition: opacity .2s linear
-
-  &:-moz-placeholder
-    color: $clr_1
-    line-height: 1.2
-    transition: opacity .2s linear
-
 .form-note
   position: relative
   display: flex
@@ -829,11 +700,8 @@ input[type='number']
     font-family: $ff_1
     margin-bottom: 20px
     font-weight: 700
-    font-size: 40px
+    font-size: 32px
     text-transform: uppercase
-
-    +md
-      font-size: 34px
 
     +sm
       margin-bottom: 25px
@@ -863,7 +731,6 @@ input[type='number']
     font-family: $ff_1
     font-size: 20px
     font-weight: 700
-    line-height: 1.3
     color: $clr_2
     text-transform: uppercase
 
@@ -904,13 +771,21 @@ input[type='number']
   ul
     margin-bottom: 20px
     padding-left: 42px
-    list-style-image: url(../img/mark-list.svg)
+    list-style: inherit
 
     +ph
       padding-left: 30px
 
-    li:not(:last-child)
-      margin-bottom: 10px
+    li
+      &::marker
+        font-size: 20px
+        color: $clr_3
+
+        +ph
+          font-size: 18px
+        
+      &:not(:last-child)
+        margin-bottom: 10px
 
   ol
     margin-bottom: 20px
@@ -922,10 +797,12 @@ input[type='number']
     li
 
       &::marker
-        font-family: $ff_1
         font-size: 20px
         font-weight: 600
         color: $clr_3
+
+        +ph
+          font-size: 18px
 
     li:not(:last-child)
       margin-bottom: 10px
@@ -1136,61 +1013,6 @@ input[type='number']
 .swiper-scrollbar-drag
   background-color: $clr_3
 
-// СТРЕЛКИ ДЛЯ СЛАЙДЕРА
-.slider-arrows
-  display: flex
-
-  &__arrow
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 40px
-    height: 40px
-    border: 1px solid $clr_2
-    border-radius: 100%
-    transition: opacity .2s linear, border-color .2s linear
-
-    &:hover
-      +hover
-        border-color: $clr_3
-
-        .arrow__icon
-          fill: $clr_3
-
-    &:focus:not(:active)
-      border-color: $clr_3
-
-    &:not(:last-child)
-      margin-right: 12px
-
-      +ph
-        margin-right: 10px
-
-.arrow
-  &_prev
-    .arrow__icon
-      transform: rotate(180deg)
-  
-  &__icon
-    width: 20px
-    height: 15px
-    fill: $clr_2
-    transition: fill .2s linear
-
-  &_disable
-    opacity: .5
-    cursor: auto
-
-    &:hover
-      border-color: $clr_2
-
-      +hover
-        .arrow__icon
-          fill: $clr_2
-
-.slide__img
-  background-color: rgba($clr_3, .6)
-
 // ГАЛЕРЕЯ
 .gallery-wrapper
 
@@ -1236,10 +1058,14 @@ input[type='number']
         z-index: 100
         width: 100%
         height: 100%
+        border-radius: 20px
         background-color: rgba($clr_3, .3)
         opacity: 0
         transform: translate(-100px, 100px)
         transition: opacity .2s linear, transform .2s linear
+
+        +ph
+          border-radius: 15px
 
       &:hover
         +hover
@@ -1276,8 +1102,6 @@ input[type='number']
 
 // АНИМАЦИЯ
 @keyframes hoverBtn
-  // from
-  //   background-color: $clr_0
-  
   to
     background-color: $clr_0
+    

@@ -47,6 +47,21 @@
             .site-wrapper__text
               color: $clr_3
 
+    &__link-language
+
+      &.active
+        color: $clr_1
+        background-color: $clr_3
+
+      &:hover
+        +hover
+          color: $clr_1
+          background-color: $clr_3
+
+          &.active
+            color: $clr_1
+            background-color: $clr_3
+
 .header
   margin-bottom: 40px
   font-weight: 500
@@ -303,9 +318,9 @@
     padding: 5px
     border-radius: 30px
     backdrop-filter: blur(10px)
+    background-color: rgba($clr_1, .3)
     box-shadow: inset 0 4px 4px 0 rgba(200, 200, 200, 0.2)
-    background: rgba(255, 255, 255, 0.3)
-
+    
     +lr
       margin-left: 0
 
@@ -320,16 +335,17 @@
     transition: background-color .2s linear, color .2s linear
 
     &.active
-      background-color: $clr_3
+      color: $clr_2
+      background-color: $clr_1
 
     &:hover
       +hover
-        color: $clr_1
-        background-color: $clr_3
+        color: $clr_2
+        background-color: $clr_1
 
         &.active
-          color: $clr_1
-          background-color: $clr_3
+          color: $clr_2
+          background-color: $clr_1
 
 .site-wrapper
   position: relative
