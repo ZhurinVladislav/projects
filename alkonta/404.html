@@ -7,188 +7,318 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
         <!-- SEO -->
-        <title>Страница не найдена | СДК</title>
+        <title>Страница не найдена | Alkonta</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!-- STYLES -->
-        <link rel="stylesheet" href="/app/css/main.min.css" />
-        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+        <link rel="stylesheet" href="./app/css/main.min.css" />
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/preloader.js" defer></script>
+        <script src="./app/js/libs/libs.js" type="module"></script>
         <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
-        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
-        <script src="/app/js/libs/webp.js" defer></script>
-        <script src="/app/js/libs/modal-window.js" defer></script>
-        <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
-        <script src="/app/js/main.min.js" defer></script>
+        <script src="./app/js/libs/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
     </head>
 
     <body>
         <!-- HEADER -->
-        <header id="header" class="home-page__header header">
-            <!-- HEADER-TOP -->
-            <div class="header__top header-top">
-                <div class="header-top__container container">
-                    <div class="header-top__content-left">
-                        <a href="/" class="header-top__logo logo">
-                            <img
-                                class="logo__img"
-                                src="/app/img/logo.svg"
-                                alt="Логотип Морская рыбалка Геленджик"
-                                title="Морская рыбалка Геленджик"
-                            />
-                        </a>
-                        <address class="header-top__address">
-                            <a
-                                href="./contacts.html"
-                                class="header-top__address-link link"
-                                aria-label="Перейти за подробной контактной информацией"
-                            >
-                                г. Геленджик, Центральный причал
-                            </a>
-                        </address>
-                    </div>
-                    <ul class="header-top__social-list social-list">
-                        <li class="social-list__item">
-                            <a
-                                href="https://wa.me/+79284400014"
-                                aria-label="Связаться с нами в WhatsApp"
-                                class="social-list__link link-icon"
-                                target="_blank"
-                            >
-                                <svg class="social-list__icon link-icon__item">
-                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                                </svg>
+        <header class="header">
+            <div class="header__container container">
+                <a href="/" class="header__logo logo" aria-label="Перейти на главную страницу сайта">
+                    <img
+                        class="logo__img"
+                        src="/app/img/logo.svg"
+                        alt="Логотип логистической компании Альконта"
+                        title="Логистическая компания Альконта" />
+                </a>
+                <nav class="header-bottom__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="./main.html">
+                                <span class="menu__link-item"> О компании </span>
                             </a>
                         </li>
-                        <li class="social-list__item">
-                            <a
-                                href="https://t.me/+79284400014"
-                                aria-label="Связаться с нами в Telegram"
-                                class="social-list__link link-icon"
-                                target="_blank"
-                            >
-                                <svg class="social-list__icon link-icon__item">
-                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                        <li class="menu__item parent">
+                            <a class="menu__link" href="./services.html">
+                                <span class="menu__link-item"> Услуги </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
                                 </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Таможенное оформление </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Грузоперевозки из Турции </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Экспорт из Новороссийска </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Автомобильные перевозки </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Морские перевозки </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Авиаперевозки </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> ЖД перевозки из Китая </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Экспедирование грузов </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./faq.html">
+                                <span class="menu__link-item"> FAQ </span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a
+                                class="menu__link"
+                                href="./main
+                            .html">
+                                <span class="menu__link-item"> Информация </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-list.html">
+                                        <span class="list-inner__link-item"> Новости </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-list.html">
+                                        <span class="list-inner__link-item"> Полезная информация </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./search.html">
+                                        <span class="list-inner__link-item"> Поиск контейнера </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./card-list.html">
+                                <span class="menu__link-item"> Наши работы </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./gallery.html">
+                                        <span class="list-inner__link-item"> В стране отправителя </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./gallery.html">
+                                        <span class="list-inner__link-item"> На территории РФ </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./contacts.html">
+                                <span class="menu__link-item"> Контакты </span>
                             </a>
                         </li>
                     </ul>
-                    <a
-                        class="header-top__link-phone link"
-                        href="tel:+79284400014"
-                        aria-label="Позвонить по +79284400014"
-                    >
-                        <svg class="link__icon">
-                            <use xlink:href="/app/img/icons/icons.svg#ph"></use>
-                        </svg>
-                        <span class="link__text"> +7 (928) 440-00-14 </span>
-                    </a>
-                    <button
-                        id="burger-toggle"
-                        aria-label="Открыть мобильное меню"
-                        class="header-top__menu-toggle menu-toggle"
-                    >
-                        <span class="menu-toggle__item"></span>
-                        <span class="menu-toggle__item"></span>
-                        <span class="menu-toggle__item"></span>
-                    </button>
-                </div>
-            </div>
-            <!-- HEADER-BOTTOM -->
-            <div class="header__bottom header-bottom">
-                <div class="header-bottom__container container">
-                    <nav class="header-bottom__menu menu">
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <a class="menu__link" href="/"> Главная </a>
+                </nav>
+                <div class="header__content-right">
+                    <ul class="header__list-phone">
+                        <li class="header__list-phone-item">
+                            <a
+                                href="tel:+79385460760"
+                                class="header__list-phone-link link-icon"
+                                aria-label="Позвонить по номеру +7 (938) 546-07-60">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-icon__text">+7 (938) 546-07-60</span>
+                            </a>
+                        </li>
+                        <li class="header__list-phone-item">
+                            <a
+                                href="tel:+79282414920"
+                                class="header__list-phone-link link-icon"
+                                aria-label="Позвонить по номеру +7 (928) 241-49-20">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-icon__text">+7 (928) 241-49-20</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="header__site-wrapper site-wrapper js-site-wrapper"
+                        tabindex="0"
+                        aria-label="Раскрыть список городов">
+                        <button class="site-wrapper__btn js-btn-site-toggle">
+                            <svg class="site-wrapper__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                            </svg>
+                            <span class="site-wrapper__text">Новороссийск</span>
+                            <svg class="site-wrapper__icon-arrow">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                            </svg>
+                        </button>
+                        <ul class="site-wrapper__list hidden js-list-site">
+                            <li class="site-wrapper__list-item">
+                                <a
+                                    href="/"
+                                    class="site-wrapper__list-link"
+                                    aria-label="Перейти на сайт Краснодара"
+                                    target="_blank"
+                                    >Краснодар</a
+                                >
                             </li>
-                            <li class="menu__item active">
-                                <a class="menu__link" href="./main.html"> О нас </a>
-                            </li>
-                            <li class="menu__item parent">
-                                <a class="menu__link" href="./types-of-fishing.html">
-                                    Виды рыбалки
-                                </a>
-                                <ul class="menu__list-inner list-inner">
-                                    <li class="menu__item">
-                                        <a class="list-inner__link" href="./main.html">
-                                            <span class="list-inner__link-item">
-                                                Рыбалка с берега
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a class="list-inner__link" href="./main.html">
-                                            <span class="list-inner__link-item">
-                                                Рыбалка в море
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="./fleet.html"> Флот </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="./price.html"> Прайс </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="./stocks.html"> Акции </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="./contacts.html"> Контакты </a>
+                            <li class="site-wrapper__list-item">
+                                <a
+                                    href="/"
+                                    class="site-wrapper__list-link"
+                                    aria-label="Перейти на сайт Ростова-на-Дону"
+                                    target="_blank"
+                                    >Ростов-на-Дону</a
+                                >
                             </li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
+                <div class="header__link-language-wrapper">
+                    <span class="header__link-language active">ru</span>
+                    <a href="/" class="header__link-language" aria-label="Перейти на сайт английский сайт">eng</a>
+                </div>
+                <button
+                    id="burger-toggle"
+                    aria-label="Открыть мобильное меню"
+                    class="header-top__menu-toggle menu-toggle">
+                    <span class="menu-toggle__item"></span>
+                    <span class="menu-toggle__item"></span>
+                    <span class="menu-toggle__item"></span>
+                </button>
             </div>
             <!-- BURGER-MENU -->
-            <div id="burger-menu" class="header__burger menu-mobile">
+            <div id="burger-menu" class="header__menu-mobile menu-mobile">
                 <div class="menu-mobile__wrap">
+                    <div class="menu-mobile__site-wrapper site-wrapper js-site-wrapper">
+                        <button class="site-wrapper__btn js-btn-site-toggle">
+                            <svg class="site-wrapper__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                            </svg>
+                            <span class="site-wrapper__text">Новороссийск</span>
+                            <svg class="site-wrapper__icon-arrow">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                            </svg>
+                        </button>
+                        <ul class="site-wrapper__list hidden js-list-site">
+                            <li class="site-wrapper__list-item">
+                                <a href="/" class="site-wrapper__list-link">Краснодар</a>
+                            </li>
+                            <li class="site-wrapper__list-item">
+                                <a href="/" class="site-wrapper__list-link">Ростов-на-Дону</a>
+                            </li>
+                        </ul>
+                    </div>
+
                     <nav class="menu-mobile__menu menu">
                         <ul class="menu__list list">
                             <li class="list__item item">
-                                <a href="/" class="item__link"> Главная </a>
-                            </li>
-                            <li class="list__item item active">
-                                <a href="./main.html" class="item__link"> О нас </a>
+                                <a href="./main.html" class="item__link"> О компании </a>
                             </li>
                             <li class="list__item item parent">
-                                <a href="./types-of-fishing.html" class="item__link">
-                                    Виды рыбалки
-                                </a>
+                                <a href="./services.html" class="item__link"> Услуги </a>
                                 <button class="item__btn" aria-label="Раскрыть выпадающий список">
                                     <svg class="item__icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
                                     </svg>
                                 </button>
                                 <ul class="item__list list">
                                     <li class="list__item item">
-                                        <a class="item__link" href="./main.html">
-                                            Рыбалка с берега
-                                        </a>
+                                        <a class="item__link" href="./card-internal.html"> Таможенное оформление </a>
                                     </li>
                                     <li class="list__item item">
-                                        <a class="item__link" href="./main.html">
-                                            Рыбалка в море
-                                        </a>
+                                        <a class="item__link" href="./card-internal.html"> Грузоперевозки из Турции </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./card-internal.html"> Экспорт из Новороссийска </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./card-internal.html"> Автомобильные перевозки </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./card-internal.html"> Морские перевозки </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./card-internal.html"> Авиаперевозки </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./card-internal.html"> ЖД перевозки из Китая </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./card-internal.html"> Экспедирование грузов </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="list__item item">
-                                <a href="./portfolio.html" class="item__link" target="_blank">
-                                    Акции
-                                </a>
+                                <a href="./faq.html" class="item__link"> FAQ </a>
                             </li>
-                            <li class="list__item item">
-                                <a href="./fleet.html" class="item__link"> Флот </a>
+                            <li class="list__item item parent">
+                                <a href="./services.html" class="item__link"> Информация </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./card-list.html"> Новости </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./card-list.html"> Полезная информация </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./search.html"> Поиск контейнера </a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="list__item item">
-                                <a href="./price.html" class="item__link"> Цены </a>
-                            </li>
-                            <li class="list__item item">
-                                <a href="./stocks.html" class="item__link"> Акции </a>
+                            <li class="list__item item parent">
+                                <a href="./card-list.html" class="item__link"> Наши работы </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./gallery.html"> В стране отправителя </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./gallery.html"> На территории РФ </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="list__item item">
                                 <a href="./contacts.html" class="item__link"> Контакты </a>
@@ -197,56 +327,38 @@
                     </nav>
                     <ul class="list-link">
                         <li class="list-link__item">
-                            <a class="list-link__link" href="tel:+79284400014">
+                            <a class="list-link__link" href="tel:+79385460760">
                                 <svg class="list-link__icon icon-reset">
                                     <use xlink:href="/app/img/icons/icons.svg#ph"></use>
                                 </svg>
-                                <span class="list-link__descr"> +7 (928) 440-00-14 </span>
+                                <span class="list-link__descr"> +7 (938) 546-07-60 </span>
                             </a>
                         </li>
                         <li class="list-link__item">
-                            <a
-                                target="_blank"
-                                class="list-link__link"
-                                aria-label="Связаться с нами в WhatsApp"
-                                href="https://wa.me/+79284400014"
-                            >
-                                <svg class="list-link__icon list-link__icon_wa">
-                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                            <a class="list-link__link" href="tel:+79282414920">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
                                 </svg>
-                                <span class="list-link__descr"> WhatsApp </span>
+                                <span class="list-link__descr"> +7 (928) 241-49-20 </span>
                             </a>
                         </li>
                         <li class="list-link__item">
-                            <a
-                                target="_blank"
-                                class="list-link__link"
-                                aria-label="Связаться с нами в Telegram"
-                                href="https://t.me/+79284400014"
-                            >
-                                <svg class="list-link__icon list-link__icon_tg">
-                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                            <a class="list-link__link" href="mailto:info@alkonta.com">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
                                 </svg>
-                                <span class="list-link__descr"> Telegram </span>
+                                <span class="list-link__descr"> info@alkonta.com </span>
                             </a>
                         </li>
                         <li class="list-link__item">
-                            <a class="list-link__link" href="/">
+                            <a class="list-link__link" href="./contacts.html">
                                 <svg class="list-link__icon">
                                     <use xlink:href="/app/img/icons/icons.svg#mark"></use>
                                 </svg>
                                 <address class="list-link__descr">
-                                    г. Геленджик, Центральный причал
+                                    353900, Россия, Краснодарский край, г. Новороссийск, ул. Коммунистическая 42, офис 6
                                 </address>
                             </a>
-                        </li>
-                        <li class="list-link__item">
-                            <button
-                                data-open="form-callback"
-                                class="list-link__btn button js-open-modal"
-                            >
-                                Записаться
-                            </button>
                         </li>
                     </ul>
                 </div>
@@ -257,9 +369,7 @@
             <section class="not-found">
                 <div class="not-found__container container">
                     <div class="not-found__content content">
-                        <h1 class="content__title-hidden h-0">
-                            Страница не найдена | Новострой гарант
-                        </h1>
+                        <h1 class="content__title-hidden h-0">Страница не найдена | Новострой гарант</h1>
                         <h2 class="content__title h-2">
                             <span class="content__color color">404</span> - страница не найдена
                         </h2>
@@ -274,117 +384,91 @@
                     </div>
                 </div>
             </section>
-        </main>
-        <!-- FOOTER -->
-        <footer class="home-page__footer footer">
-            <div class="footer__top footer-top">
-                <div class="footer-top__container container">
-                    <div class="footer-top__content">
-                        <a href="/" class="footer-top__logo logo">
-                            <img
-                                class="logo__img"
-                                src="/app/img/logo.svg"
-                                alt="Логотип Морская рыбалка Геленджик"
-                                title="Морская рыбалка Геленджик"
-                            />
-                        </a>
-                        <nav class="footer-top__menu menu">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a class="menu__link" href="/"> Главная </a>
-                                </li>
-                                <li class="menu__item active">
-                                    <a class="menu__link" href="./main.html"> О нас </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./types-of-fishing.html">
-                                        Виды рыбалки
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./fleet.html"> Флот </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./price.html"> Прайс </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./stocks.html"> Акции </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./contacts.html"> Контакты </a>
-                                </li>
-                            </ul>
-                        </nav>
+            <!-- FORM-CALLBACK -->
+            <div class="form-callback modal" id="form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"></button>
+                    <p class="form-callback__title modal-title">
+                        Узнать <span class="modal-title__color color">стоимость доставки</span> груза
+                    </p>
+
+                    <form action="/" class="form form-mod">
+                        <div class="form-mod__wrap-input wrap-input">
+                            <input class="wrap-input__input input" type="text" placeholder="Откуда*" />
+                            <input class="wrap-input__input input" type="text" placeholder="Куда*" />
+                            <input class="wrap-input__input input" type="number" placeholder="Телефон*" />
+                            <label class="wrap-input__item form-note">
+                                <input class="form-note__input" type="checkbox" checked />
+                                <span class="form-note__checkbox"></span>
+                                <span class="form-note__text">
+                                    Даю согласие на&nbsp;обработку персональных данных
+                                </span>
+                            </label>
+                        </div>
+                        <button aria-label="Отправить заявку" class="form-mod__btn button-invert">
+                            <span class="button-invert__text"> Оставить заявку </span>
+                            <span class="button-invert__icon-wrapper">
+                                <svg class="button-invert__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div class="form-success modal" id="form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
                     </div>
                 </div>
             </div>
-            <div class="footer__copyright copyright">
-                <div class="copyright__container container">
-                    <ul class="copyright__list">
-                        <li class="copyright__list-item">Все права защищены &copy;&nbsp;2024</li>
-                        <li class="copyright__list-item">
-                            <a href="./main.html" class="copyright__list-link link" target="_blank">
-                                Пользовательское соглашение
-                            </a>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <nav class="footer__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="/"> О компании </a>
                         </li>
-
-                        <li class="copyright__list-item">
-                            <a
-                                href="https://web2.agency/"
-                                class="copyright__list-link link"
-                                title="Перейти на сайт разработки сайтов в Новороссийске"
-                                aria-label="Перейти на сайт разработки сайтов в Новороссийске"
-                                target="_blank"
-                            >
-                                <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
-                                </svg>
-                                <span class="link__text"> Создание сайтов </span>
-                            </a>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./main.html"> Информация </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./types-of-fishing.html"> Услуги </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./fleet.html"> Наши работы </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./price.html"> FAQ </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./contacts.html"> Контакты </a>
                         </li>
                     </ul>
-                </div>
+                </nav>
+                <a
+                    href="https://web2.agency/"
+                    class="footer__link link"
+                    title="Перейти на сайт разработки сайтов в Новороссийске"
+                    aria-label="Перейти на сайт разработки сайтов в Новороссийске"
+                    target="_blank">
+                    <svg class="link__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                    </svg>
+                    <span class="link__text"> Создание сайтов </span>
+                </a>
             </div>
-            <div class="footer__container container"></div>
         </footer>
-        <!-- SOCIAL PANEL -->
-        <ul class="home-page__social-panel social-panel">
-            <li class="social-panel__item">
-                <a
-                    aria-label="Связаться с нами в WhatsApp"
-                    target="_blank"
-                    href="https://wa.me/+79284400014"
-                    class="social-panel__link"
-                >
-                    <svg class="social-panel__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="social-panel__item">
-                <a
-                    aria-label="Связаться с нами в Telegram"
-                    target="_blank"
-                    href="https://t.me/+79284400014"
-                    class="social-panel__link"
-                >
-                    <svg class="social-panel__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="social-panel__item">
-                <a
-                    aria-label="Позвонить по +79284400014"
-                    href="tel:+79284400014"
-                    class="social-panel__link"
-                >
-                    <svg class="social-panel__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#ph"></use>
-                    </svg>
-                </a>
-            </li>
-        </ul>
         <!-- SCROLL-TOP -->
         <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
             <svg class="scroll-top__icon">

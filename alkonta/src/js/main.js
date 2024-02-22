@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // FIXME: Сделать условия вызова внутри функций
+  // ДОБАВЛЕНИЕ КЛАССА ДЛЯ HTML
+  const addOverflowClass = () => {
+    if (!document.getElementById('card-internal')) return;
+
+    document.querySelector('html').classList.add('overflow');
+    document.querySelector('body').classList.add('overflow');
+  };
+  addOverflowClass();
 
   // УБИРАЕМ ФОКУС ПОСЛЕ НАЖАТИЯ НА КНОПКУ ИЛИ ССЫЛКУ
   const removeFocus = () => {
@@ -46,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleSite = () => {
     const toggleSiteWrapper = document.querySelectorAll('.js-site-wrapper');
 
+    if (!toggleSiteWrapper) return;
+
     toggleSiteWrapper.forEach(el => {
       const btn = el.querySelector('.js-btn-site-toggle');
       const list = el.querySelector('.js-list-site');
@@ -70,11 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   };
-  if (document.querySelector('.js-site-wrapper')) toggleSite();
+  toggleSite();
 
   // АНИМАЦИЯ С ЧИСЛАМИ В HERO
 
   const numberAnimate = () => {
+    if (!document.querySelector('.js-number')) return;
+
     const zeroValues = () => {
       const stat = document.getElementsByClassName('js-number');
       for (let i = 0; i < stat.length; i++) {
@@ -82,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
     zeroValues();
+
     const numScroll = () => {
       const animationDuration = 3000;
       const frameDuration = 1000 / 60;
@@ -148,12 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  if (document.querySelector('.js-number')) numberAnimate();
+  numberAnimate();
 
   // HOVER В БЛОКЕ УСЛУГИ
   const hoverServices = () => {
     const arrLinks = document.querySelectorAll('.js-service-link');
     const arrImg = document.querySelectorAll('.js-service-img');
+
+    if (!arrLinks) return;
 
     for (let i = 0; i < arrLinks.length; i++) {
       const el = arrLinks[i];
@@ -179,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  if (document.getElementById('services')) hoverServices();
+  hoverServices();
 
   // МОБИЛЬНОЕ МЕНЮ
   const mobMenu = () => {
@@ -214,8 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const parentItem = document.querySelectorAll('.item__btn');
     const listInner = document.querySelectorAll('.parent .list');
 
-    let arrLength;
-
     listInner.forEach(el => {
       el.classList.add('overflow-hidden');
     });
@@ -225,10 +237,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const elChild = el.children;
 
       for (let i = 0; i < elChild.length; i++) {
-        let parent = elChild[i].parentNode;
+        const parent = elChild[i].parentNode;
         const arrow = parent.previousElementSibling;
-
-        arrLength = elChild.length;
 
         if (elChild[i].classList.contains('active')) {
           document.querySelectorAll('.list').forEach(el => (el.style.maxHeight = null));
@@ -316,7 +326,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // СЛАЙДЕР В БЛОКЕ РЫБА НА ГЛАВНОЙ СТРАНИЦЕ
   const servicesSlider = () => {
-    const swiper = new Swiper('#services-slider', {
+    if (!document.getElementById('services')) return;
+
+    new Swiper('#services-slider', {
       cssMode: true,
       spaceBetween: 10,
       scrollbar: {
@@ -350,7 +362,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   };
-  if (document.getElementById('services')) servicesSlider();
+  servicesSlider();
 
   // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
   $('.gallery').lightGallery({
