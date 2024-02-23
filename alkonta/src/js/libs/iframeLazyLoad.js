@@ -1,4 +1,4 @@
-export const iframeLazyLoad = () => {
+const iframeLazyLoad = () => {
   const arrIframe = document.querySelectorAll('iframe');
   const arrImg = document.querySelectorAll('img');
 
@@ -10,3 +10,5 @@ export const iframeLazyLoad = () => {
     el.setAttribute('loading', 'lazy');
   });
 };
+
+iframeLazyLoad();

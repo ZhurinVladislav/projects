@@ -1,3 +1,5 @@
-export const preloader = () => {
+const preloader = () => {
   document.querySelector('body').classList.add('loading');
 };
+
+preloader();

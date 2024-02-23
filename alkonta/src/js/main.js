@@ -171,11 +171,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < arrLinks.length; i++) {
       const el = arrLinks[i];
+
       el.setAttribute('data-hover-link', `${i}`);
     }
 
     for (let i = 0; i < arrImg.length; i++) {
       const el = arrImg[i];
+
+      if (i === 0) el.classList.add('active');
+      
       el.setAttribute('data-hover-img', `${i}`);
     }
 

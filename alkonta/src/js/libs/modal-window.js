@@ -1,4 +1,4 @@
-export const modalWindow = () => {
+const modalWindow = () => {
   // ОБЪЯВЛЕНИЕ ГЛОБАЛЬНЫХ ПЕРЕМЕННЫХ
   const openButton = document.querySelectorAll('.js-open-modal');
   const closeButton = document.querySelectorAll('.js-close-modal');
@@ -76,3 +76,5 @@ export const modalWindow = () => {
     if (response.success) openFormSuccess();
   });
 };
+
+modalWindow();

@@ -1,5 +1,5 @@
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
-export const webp = () => {
+const webp = () => {
   function testWebp(callback) {
     const webP = new Image();
     webP.onload = webP.onerror = function () {
@@ -13,3 +13,5 @@ export const webp = () => {
     document.documentElement.classList.add(className);
   });
 };
+
+webp();
