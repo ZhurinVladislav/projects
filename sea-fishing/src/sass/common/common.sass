@@ -446,8 +446,8 @@ input[type='number']
     font-size: 15px
 
   +ph
-    padding: 10px
-    min-height: 60px
+    padding: 14px 25px
+    min-height: 50px
     max-width: 100%
     width: 100%
 
@@ -479,6 +479,8 @@ input[type='number']
     font-size: 15px
 
   +ph
+    padding: 14px 25px
+    min-height: 50px
     max-width: 100%
     width: 100%
 
@@ -584,70 +586,6 @@ input[type='number']
   &:not(:placeholder-shown) + .label
     top: -6px
     font-size: 14px
-
-.input-invert
-  padding: 18px 20px
-  width: 100%
-  min-height: 55px
-  background-color: $clr_0
-  border: 2px solid $clr_1
-  border-radius: 8px
-  line-height: 1.1
-  color: $clr_1
-  transition: border-color .2s linear
-
-  +ph
-    width: 100%
-    font-size: 14px
-
-  &.error
-    border-color: $clr_er
-
-    &:hover
-      +hover
-        border-color: $clr_er
-
-    &:focus
-      border-color: $clr_er
-
-  &:hover
-    +hover
-      border-color: $clr_3
-
-  &:focus
-    border-color: $clr_3
-
-    &::-webkit-input-placeholder
-      opacity: 0
-
-    &::-moz-placeholder
-      opacity: 0
-
-    &:-ms-input-placeholder
-      opacity: 0
-
-    &:-moz-placeholder
-      opacity: 0
-
-  &::-webkit-input-placeholder
-    color: $clr_1
-    line-height: 1.2
-    transition: opacity .2s linear
-
-  &::-moz-placeholder
-    color: $clr_1
-    line-height: 1.2
-    transition: opacity .2s linear
-
-  &:-ms-input-placeholder
-    color: $clr_1
-    line-height: 1.2
-    transition: opacity .2s linear
-
-  &:-moz-placeholder
-    color: $clr_1
-    line-height: 1.2
-    transition: opacity .2s linear
 
 .form-note
   position: relative
@@ -1325,30 +1263,3 @@ input[type='number']
 
       h1
         margin-bottom: 20px
-
-// КАПЧА
-.grecaptcha-badge
-  opacity: 0
-
-// АНИМАЦИЯ
-@keyframes tabAnimate
-  0%
-    opacity: 0
-    transform: translateX(-20%)
-
-  50%
-    transform: translateX(2%)
-
-  100%
-    opacity: 1
-    transform: translateX(0)
-
-@keyframes transform
-  0%
-    transform: translateY(-10%)
-
-  50%
-    transform: translateY(2%)
-
-  100%
-    transform: translateY(-10%)

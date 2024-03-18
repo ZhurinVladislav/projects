@@ -1,1 +1,5 @@
-document.querySelector('body').classList.add('loading');
+const preloader = () => {
+  document.querySelector('body').classList.add('loading');
+};
+
+preloader();

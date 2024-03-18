@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Услуга</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="/app/css/main.min.css" />
+        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/libs.js" type="module"></script>
+        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
+        <script src="./app/js/libs/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__container container">
+                <a href="/" class="header__logo logo" aria-label="Перейти на главную страницу сайта">
+                    <img
+                        class="logo__img"
+                        src="/app/img/logo.svg"
+                        alt="Логотип логистической компании Альконта"
+                        title="Логистическая компания Альконта" />
+                </a>
+                <nav class="header-bottom__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="./main.html">
+                                <span class="menu__link-item"> О компании </span>
+                            </a>
+                        </li>
+                        <li class="menu__item parent">
+                            <a class="menu__link" href="./services.html">
+                                <span class="menu__link-item"> Услуги </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Таможенное оформление </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Грузоперевозки из Турции </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Экспорт из Новороссийска </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Автомобильные перевозки </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Морские перевозки </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Авиаперевозки </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> ЖД перевозки из Китая </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-internal.html">
+                                        <span class="list-inner__link-item"> Экспедирование грузов </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./faq.html">
+                                <span class="menu__link-item"> FAQ </span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a
+                                class="menu__link"
+                                href="./information
+                            .html">
+                                <span class="menu__link-item"> Информация </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-list.html">
+                                        <span class="list-inner__link-item"> Новости </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./card-list.html">
+                                        <span class="list-inner__link-item"> Полезная информация </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./search.html">
+                                        <span class="list-inner__link-item"> Поиск контейнера </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./card-list.html">
+                                <span class="menu__link-item"> Наши работы </span>
+                                <svg class="menu__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list-inner list-inner">
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./gallery.html">
+                                        <span class="list-inner__link-item"> В стране отправителя </span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="list-inner__link" href="./gallery.html">
+                                        <span class="list-inner__link-item"> На территории РФ </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="./contacts.html">
+                                <span class="menu__link-item"> Контакты </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__content-right">
+                    <ul class="header__list-phone">
+                        <li class="header__list-phone-item">
+                            <a
+                                href="tel:+79385460760"
+                                class="header__list-phone-link link-icon"
+                                aria-label="Позвонить по номеру +7 (938) 546-07-60">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-icon__text">+7 (938) 546-07-60</span>
+                            </a>
+                        </li>
+                        <li class="header__list-phone-item">
+                            <a
+                                href="tel:+79282414920"
+                                class="header__list-phone-link link-icon"
+                                aria-label="Позвонить по номеру +7 (928) 241-49-20">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-icon__text">+7 (928) 241-49-20</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="header__site-wrapper site-wrapper js-site-wrapper"
+                        tabindex="0"
+                        aria-label="Раскрыть список городов">
+                        <button class="site-wrapper__btn js-btn-site-toggle">
+                            <svg class="site-wrapper__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                            </svg>
+                            <span class="site-wrapper__text">Новороссийск</span>
+                            <svg class="site-wrapper__icon-arrow">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                            </svg>
+                        </button>
+                        <ul class="site-wrapper__list hidden js-list-site">
+                            <li class="site-wrapper__list-item">
+                                <a
+                                    href="/"
+                                    class="site-wrapper__list-link"
+                                    aria-label="Перейти на сайт Краснодара"
+                                    target="_blank"
+                                    >Краснодар</a
+                                >
+                            </li>
+                            <li class="site-wrapper__list-item">
+                                <a
+                                    href="/"
+                                    class="site-wrapper__list-link"
+                                    aria-label="Перейти на сайт Ростова-на-Дону"
+                                    target="_blank"
+                                    >Ростов-на-Дону</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__link-language-wrapper">
+                    <span class="header__link-language active">ru</span>
+                    <a href="/" class="header__link-language" aria-label="Перейти на сайт английский сайт">eng</a>
+                </div>
+                <button
+                    id="burger-toggle"
+                    aria-label="Открыть мобильное меню"
+                    class="header-top__menu-toggle menu-toggle">
+                    <span class="menu-toggle__item"></span>
+                    <span class="menu-toggle__item"></span>
+                    <span class="menu-toggle__item"></span>
+                </button>
+            </div>
+            <!-- BURGER-MENU -->
+            <div id="burger-menu" class="header__menu-mobile menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <div class="menu-mobile__site-wrapper site-wrapper js-site-wrapper">
+                        <button class="site-wrapper__btn js-btn-site-toggle">
+                            <svg class="site-wrapper__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                            </svg>
+                            <span class="site-wrapper__text">Новороссийск</span>
+                            <svg class="site-wrapper__icon-arrow">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                            </svg>
+                        </button>
+                        <ul class="site-wrapper__list hidden js-list-site">
+                            <li class="site-wrapper__list-item">
+                                <a href="/" class="site-wrapper__list-link">Краснодар</a>
+                            </li>
+                            <li class="site-wrapper__list-item">
+                                <a href="/" class="site-wrapper__list-link">Ростов-на-Дону</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <nav class="menu-mobile__menu menu">
+                        <ul class="menu__list list">
+                            <li class="list__item item">
+                                <a href="./main.html" class="item__link"> О компании </a>
+                            </li>
+                            <li class="list__item item parent">
+                                <a href="./services.html" class="item__link"> Услуги </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./main.html"> Таможенное оформление </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./main.html"> Грузоперевозки из Турции </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./main.html"> Экспорт из Новороссийска </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./main.html"> Автомобильные перевозки </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./main.html"> Морские перевозки </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./main.html"> Авиаперевозки </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./main.html"> ЖД перевозки из Китая </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./main.html"> Экспедирование грузов </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./faq.html" class="item__link"> FAQ </a>
+                            </li>
+                            <li class="list__item item parent">
+                                <a href="./services.html" class="item__link"> Информация </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./news.html"> Новости </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./news.html"> Полезная информация </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./search.html"> Поиск контейнера </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list__item item parent">
+                                <a href="./our-works.html" class="item__link"> Наши работы </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./gallery.html"> В стране отправителя </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./gallery.html"> На территории РФ </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./contacts.html" class="item__link"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+79385460760">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (938) 546-07-60 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+79282414920">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (928) 241-49-20 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:info@alkonta.com">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="list-link__descr"> info@alkonta.com </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="./contacts.html">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <address class="list-link__descr">
+                                    353900, Россия, Краснодарский край, г. Новороссийск, ул. Коммунистическая 42, офис 6
+                                </address>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main>
+            <!-- CARD-INTERNAL -->
+            <section id="card-internal" class="card-internal section-reset">
+                <div class="card-internal__container container">
+                    <ol class="card-internal__breadcrumb breadcrumb">
+                        <li>
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumb-item active">&nbsp;Услуга</li>
+                    </ol>
+                    <h1 class="card-internal__title h-0">Услуга</h1>
+                    <div class="card-internal__content-wrapper">
+                        <nav class="card-internal__menu">
+                            <div class="card-internal__menu-block">
+                                <ul id="card-internal-list" class="card-internal__menu-list b-r">
+                                    <li class="card-internal__menu-list-item active">
+                                        <a href="/" class="card-internal__menu-list-link"> Таможенное оформление </a>
+                                    </li>
+                                    <li class="card-internal__menu-list-item">
+                                        <a href="/" class="card-internal__menu-list-link"> Грузоперевозки из Турции </a>
+                                    </li>
+                                    <li class="card-internal__menu-list-item">
+                                        <a href="/" class="card-internal__menu-list-link"> Экспорт из Новороссийска </a>
+                                    </li>
+                                    <li class="card-internal__menu-list-item">
+                                        <a href="/" class="card-internal__menu-list-link"> Автомобильные перевозки </a>
+                                    </li>
+                                    <li class="card-internal__menu-list-item">
+                                        <a href="/" class="card-internal__menu-list-link"> Морские перевозки </a>
+                                    </li>
+                                    <li class="card-internal__menu-list-item">
+                                        <a href="/" class="card-internal__menu-list-link"> Авиаперевозки </a>
+                                    </li>
+                                    <li class="card-internal__menu-list-item">
+                                        <a href="/" class="card-internal__menu-list-link"> ЖД перевозки из Китая </a>
+                                    </li>
+                                    <li class="card-internal__menu-list-item">
+                                        <a href="/" class="card-internal__menu-list-link"> Экспедирование грузов </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="card-internal__content-right">
+                            <h2 class="text-default__title h-2">Консультация</h2>
+                            <div class="card-internal__content text-default">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere
+                                    consequuntur fuga dolor dolorum, earum quod repellat ipsum harum, voluptatum sed
+                                    eveniet perspiciatis at omnis id delectus necessitatibus quisquam voluptates?
+                                </p>
+                                <p>
+                                    Fuga mollitia recusandae asperiores, <a href="#">qui tenetur</a> sint sapiente culpa
+                                    quis? Laborum recusandae et porro optio amet dolorum labore vero incidunt cum
+                                    repellat ea nemo alias vitae eveniet voluptates, eos ipsum! Consequatur recusandae
+                                    cumque alias a nam, ab reiciendis quisquam incidunt, adipisci consequuntur
+                                </p>
+                                <blockquote>
+                                    <p>
+                                        illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure
+                                        possimus, atque fugit! Natus praesentium ullam, repudiandae culpa accusantium
+                                        corporis! Culpa exercitationem fugit beatae molestias ratione maxime laudantium
+                                        harum asperiores illo perferendis dolorem reprehenderit, eos necessitatibus,
+                                        provident delectus molestiae atque eius nobis? Commodi temporibus sequi
+                                        consequuntur excepturi enim recusandae ducimus!
+                                    </p>
+                                </blockquote>
+                                <p>
+                                    illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure
+                                    possimus, atque fugit! Natus praesentium ullam, repudiandae culpa accusantium
+                                    corporis! Culpa exercitationem fugit beatae molestias ratione maxime laudantium
+                                    harum asperiores illo perferendis dolorem reprehenderit, eos necessitatibus,
+                                    provident delectus molestiae atque eius nobis? Commodi temporibus sequi consequuntur
+                                    excepturi enim recusandae ducimus!
+                                </p>
+                                <ul>
+                                    <li>Point 1</li>
+                                    <li>Point 2</li>
+                                    <li>Point 3</li>
+                                    <li>Point 4</li>
+                                    <li>Point 5</li>
+                                </ul>
+                                <h2>Heading 2</h2>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos
+                                    quae! Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate
+                                    nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+                                </p>
+                                <ol>
+                                    <li>Point 1</li>
+                                    <li>Point 2</li>
+                                    <li>Point 3</li>
+                                    <li>Point 4</li>
+                                    <li>Point 5</li>
+                                </ol>
+                                <h3>Heading 3</h3>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos
+                                    quae! Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate
+                                    nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+                                </p>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos
+                                    quae! Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate
+                                    nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+                                </p>
+                            </div>
+                            <div class="card-internal__gallery-wrapper gallery-wrapper">
+                                <h2 class="gallery-wrapper__title h-2">Фотогалерея</h2>
+                                <ul class="gallery-wrapper__gallery gallery">
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-1.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-1.jpg"
+                                                alt="img-1" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-2.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-2.jpg"
+                                                alt="img-2" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-3.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-3.jpg"
+                                                alt="img-3" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-4.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-4.jpg"
+                                                alt="img-4" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-5.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-5.jpg"
+                                                alt="img-5" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-6.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-6.jpg"
+                                                alt="img-6" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-7.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-7.jpg"
+                                                alt="img-7" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-8.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-8.jpg"
+                                                alt="img-8" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-9.jpg">
+                                            <img
+                                                class="gallery__img"
+                                                src="./app/img/gallery-inner/img-9.jpg"
+                                                alt="img-9" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div class="form-callback modal" id="form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"></button>
+                    <p class="form-callback__title modal-title">
+                        Узнать <span class="modal-title__color color">стоимость доставки</span> груза
+                    </p>
+
+                    <form action="/" class="form form-mod">
+                        <div class="form-mod__wrap-input wrap-input">
+                            <input class="wrap-input__input input" type="text" placeholder="Откуда*" />
+                            <input class="wrap-input__input input" type="text" placeholder="Куда*" />
+                            <input class="wrap-input__input input" type="number" placeholder="Телефон*" />
+                            <label class="wrap-input__item form-note">
+                                <input class="form-note__input" type="checkbox" checked />
+                                <span class="form-note__checkbox"></span>
+                                <span class="form-note__text">
+                                    Даю согласие на&nbsp;обработку персональных данных
+                                </span>
+                            </label>
+                        </div>
+                        <button aria-label="Отправить заявку" class="form-mod__btn button-invert">
+                            <span class="button-invert__text"> Оставить заявку </span>
+                            <span class="button-invert__icon-wrapper">
+                                <svg class="button-invert__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div class="form-success modal" id="form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="home-page__footer footer">
+            <div class="footer__container container">
+                <nav class="footer__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="/"> О компании </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./main.html"> Информация </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./types-of-fishing.html"> Услуги </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./fleet.html"> Наши работы </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./price.html"> FAQ </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="./contacts.html"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a
+                    href="https://web2.agency/"
+                    class="footer__link link"
+                    title="Перейти на сайт разработки сайтов в Новороссийске"
+                    aria-label="Перейти на сайт разработки сайтов в Новороссийске"
+                    target="_blank">
+                    <svg class="link__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                    </svg>
+                    <span class="link__text"> Создание сайтов </span>
+                </a>
+            </div>
+        </footer>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

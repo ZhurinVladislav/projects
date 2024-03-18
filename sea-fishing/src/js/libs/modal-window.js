@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
+
     // ЗАКРЫТИЕ НАЖАТИЕМ КНОПКИ "ESC"
     window.addEventListener('keydown', ev => {
       if (ev.key === 'Escape') {
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
+
     // ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КНОПКЕ ИЛИ КЛИКУ НА ФОН
     modWindow.addEventListener('click', ev => {
       ev._isClickWithInModal = true;

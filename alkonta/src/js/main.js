@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // ДОБАВЛЕНИЕ КЛАССА ДЛЯ HTML
+  const addOverflowClass = () => {
+    if (!document.getElementById('card-internal')) return;
+
+    document.querySelector('html').classList.add('overflow');
+    document.querySelector('body').classList.add('overflow');
+  };
+  addOverflowClass();
+
   // УБИРАЕМ ФОКУС ПОСЛЕ НАЖАТИЯ НА КНОПКУ ИЛИ ССЫЛКУ
   const removeFocus = () => {
     const arrBtn = document.querySelectorAll('button');
@@ -42,21 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // СПИСОК ПЕРЕКЛЮЧЕНИЯ ГОРОДОВ
   const toggleSite = () => {
-    const btn = document.getElementById('site-toggle');
-    const list = document.getElementById('list-site');
+    const toggleSiteWrapper = document.querySelectorAll('.js-site-wrapper');
 
-    btn.addEventListener('click', () => {
-      if (list.style.maxHeight) {
-        list.style.maxHeight = null;
-        btn.classList.remove('active');
-      } else {
-        list.style.maxHeight = list.scrollHeight + 'px';
-        btn.classList.add('active');
-      }
-    });
+    if (!toggleSiteWrapper) return;
 
-    window.addEventListener('keydown', ev => {
-      if (ev.key === 'Escape') {
+    toggleSiteWrapper.forEach(el => {
+      const btn = el.querySelector('.js-btn-site-toggle');
+      const list = el.querySelector('.js-list-site');
+
+      btn.addEventListener('click', () => {
         if (list.style.maxHeight) {
           list.style.maxHeight = null;
           btn.classList.remove('active');
@@ -64,22 +67,33 @@ document.addEventListener('DOMContentLoaded', () => {
           list.style.maxHeight = list.scrollHeight + 'px';
           btn.classList.add('active');
         }
-      }
+      });
+
+      window.addEventListener('keydown', ev => {
+        if (ev.key === 'Escape') {
+          if (list.style.maxHeight) {
+            list.style.maxHeight = null;
+            btn.classList.remove('active');
+          }
+        }
+      });
     });
   };
-  if (document.getElementById('site-toggle')) toggleSite();
+  toggleSite();
 
   // АНИМАЦИЯ С ЧИСЛАМИ В HERO
-  const zeroValues = () => {
-    const stat = document.getElementsByClassName('js-number');
-    for (let i = 0; i < stat.length; i++) {
-      stat[i].innerHTML = 0;
-    }
-  };
-
-  zeroValues();
 
   const numberAnimate = () => {
+    if (!document.querySelector('.js-number')) return;
+
+    const zeroValues = () => {
+      const stat = document.getElementsByClassName('js-number');
+      for (let i = 0; i < stat.length; i++) {
+        stat[i].innerHTML = 0;
+      }
+    };
+    zeroValues();
+
     const numScroll = () => {
       const animationDuration = 3000;
       const frameDuration = 1000 / 60;
@@ -106,54 +120,66 @@ document.addEventListener('DOMContentLoaded', () => {
         }, frameDuration);
       };
 
-      const runAnimations = () => {
-        const countupEls = document.querySelectorAll('.js-number');
-        countupEls.forEach(animateCountUp);
+      const numbersWrapper = document.querySelectorAll('.js-number-wrapper');
+
+      numbersWrapper.forEach(el => {
+        el.setAttribute('position', `${el.offsetTop}`);
+        el.setAttribute('animate', false);
+      });
+
+      const startAnimate = el => {
+        el.setAttribute('animate', true);
+        el.querySelectorAll('.js-number').forEach(animateCountUp);
       };
-      runAnimations();
+
+      window.addEventListener('scroll', () => {
+        let scrollY = 0;
+
+        numbersWrapper.forEach(el => {
+          const position = parseInt(el.getAttribute('position')) - document.documentElement.clientWidth / 3;
+          const animate = el.getAttribute('animate');
+
+          scrollY = window.scrollY;
+
+          if (position <= scrollY && animate === 'false') startAnimate(el);
+          return;
+        });
+      });
+
+      for (let i = 0; i < 1; i++) {
+        const el = numbersWrapper[i];
+        const position = parseInt(el.getAttribute('position'));
+
+        if (position <= 0) startAnimate(el);
+      }
     };
     zeroValues();
 
-    // window.addEventListener('load', () => {
-    //   numScroll();
-    // });
-    const numbersWrapper = document.querySelectorAll('.js-number-wrapper');
-
-    window.addEventListener('scroll', () => {
-      numbersWrapper.forEach(el => {
-        let scrollY = 0;
-        const elDistanceTop = el.getBoundingClientRect().top;
-        const elDistanceBottom = el.getBoundingClientRect().bottom;
-        const windowHeight = window.innerHeight;
-
-        scrollY = window.scrollY;
-
-        if (el.getAttribute('data-number-animate')) return;
-
-        if (scrollY < elDistanceTop - windowHeight || scrollY > elDistanceBottom) {
-          console.log('Вне области видимости');
-        } else {
-          numScroll();
-          el.setAttribute('data-number-animate', true);
-        }
-      });
+    window.addEventListener('load', () => {
+      numScroll();
     });
   };
 
-  if (document.querySelector('.js-number')) numberAnimate();
+  numberAnimate();
 
   // HOVER В БЛОКЕ УСЛУГИ
   const hoverServices = () => {
     const arrLinks = document.querySelectorAll('.js-service-link');
     const arrImg = document.querySelectorAll('.js-service-img');
 
+    if (!arrLinks) return;
+
     for (let i = 0; i < arrLinks.length; i++) {
       const el = arrLinks[i];
+
       el.setAttribute('data-hover-link', `${i}`);
     }
 
     for (let i = 0; i < arrImg.length; i++) {
       const el = arrImg[i];
+
+      if (i === 0) el.classList.add('active');
+      
       el.setAttribute('data-hover-img', `${i}`);
     }
 
@@ -171,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  if (document.getElementById('services')) hoverServices();
+  hoverServices();
 
   // МОБИЛЬНОЕ МЕНЮ
   const mobMenu = () => {
@@ -206,8 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const parentItem = document.querySelectorAll('.item__btn');
     const listInner = document.querySelectorAll('.parent .list');
 
-    let arrLength;
-
     listInner.forEach(el => {
       el.classList.add('overflow-hidden');
     });
@@ -217,10 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const elChild = el.children;
 
       for (let i = 0; i < elChild.length; i++) {
-        let parent = elChild[i].parentNode;
+        const parent = elChild[i].parentNode;
         const arrow = parent.previousElementSibling;
-
-        arrLength = elChild.length;
 
         if (elChild[i].classList.contains('active')) {
           document.querySelectorAll('.list').forEach(el => (el.style.maxHeight = null));
@@ -254,6 +276,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobMenuList();
 
+  // АККОРДЕОН
+  const accordion = () => {
+    const ac = document.querySelectorAll('.js-ac');
+    const acBtn = document.querySelectorAll('.js-ac-btn');
+    const acText = document.querySelectorAll('.js-ac-content');
+
+    if (!ac) return;
+
+    acText.forEach(el => el.classList.add('ac-hidden'));
+
+    acBtn.forEach(el => {
+      el.addEventListener('click', () => {
+        const acContent = el.nextElementSibling;
+
+        if (acContent.style.maxHeight) {
+          acText.forEach(el => (el.style.maxHeight = null));
+          el.classList.remove('ac-active');
+        } else {
+          acText.forEach(el => {
+            el.style.maxHeight = null;
+            el.previousElementSibling.classList.remove('ac-active');
+          });
+          acContent.style.maxHeight = acContent.scrollHeight + 'px';
+          el.classList.add('ac-active');
+        }
+      });
+    });
+  };
+
+  accordion();
+
   // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
   const scrollTop = () => {
     const btn = document.getElementById('scroll-top');
@@ -277,7 +330,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // СЛАЙДЕР В БЛОКЕ РЫБА НА ГЛАВНОЙ СТРАНИЦЕ
   const servicesSlider = () => {
-    const swiper = new Swiper('#services-slider', {
+    if (!document.getElementById('services')) return;
+
+    new Swiper('#services-slider', {
       cssMode: true,
       spaceBetween: 10,
       scrollbar: {
@@ -311,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   };
-  if (document.getElementById('services')) servicesSlider();
+  servicesSlider();
 
   // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
   $('.gallery').lightGallery({

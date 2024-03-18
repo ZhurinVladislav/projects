@@ -1,4 +1,16 @@
+.home-page
+	.contacts
+		margin-bottom: 0
+		
+	+sm
+		margin-bottom: 40px
+
+	+ph
+		margin-bottom: 30px
+
 .contacts
+	margin-bottom: 80px
+
 	+sm
 		margin-bottom: 40px
 
@@ -9,6 +21,7 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		padding-right: 24px
 
 		+sm
 			flex-direction: column
@@ -46,9 +59,9 @@
 				height: 300px
 
 .contacts-content
-	max-width: 408px
 	display: flex
 	flex-direction: column
+	max-width: 408px
 	
 	+sm
 		max-width: 100%
@@ -116,6 +129,7 @@
 			margin-bottom: 10px
 
 	.link-icon
+		max-width: max-content
 
 		&__item
 			fill: $clr_3
