@@ -24,12 +24,18 @@
     +sm
       padding-top: 150px
 
+    +ph
+      padding-top: 150px
+
   &__content-wrapper
     position: relative
     z-index: 1
     margin-left: -292px
     padding: 40px 40px 40px 292px
     max-width: 857px
+
+    +ph
+      padding: 20px 20px 20px 292px
 
     &::after
       content: ''
@@ -43,7 +49,7 @@
       background-color: $clr_3
       
       +sm
-        background-color: rgba($clr_3, .6)
+        background-color: rgba(#999999, .6)
         backdrop-filter: blur(2px)
 
   &__title
@@ -73,7 +79,7 @@
     display: flex
     justify-content: space-between
     margin-bottom: 20px
-    max-width: 420px
+    max-width: 100%
 
   &__list-item
     display: flex
@@ -93,6 +99,7 @@
 
   &__list-text
     font-size: 16px
+    text-align: center
 
   .button
 

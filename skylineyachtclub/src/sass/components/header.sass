@@ -1,0 +1,261 @@
+.home-page
+  .header
+    position: absolute
+    z-index: 100
+    margin-bottom: 0
+    background-color: $clr_0
+    background-image: none !important
+    box-shadow: none
+
+    .header-bottom
+      padding-bottom: 0
+
+.header
+  line-height: 120%
+  color: $clr_1
+  background-color: $clr_2
+  margin-bottom: 40px
+
+  +sm
+    box-shadow: none
+
+  .header-top
+    margin-bottom: 20px
+
+    +sm
+      margin-bottom: 0
+
+    &__container
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-top: 20px
+
+    &__content-left
+      display: flex
+      flex-direction: column
+      margin-right: 20px
+
+      +ph
+        display: none
+
+    &__content-left-text
+      margin-bottom: 4px
+
+    &__logo
+      +sm
+        display: none
+
+      &_ph
+        display: none
+
+        +sm
+          display: flex
+
+    .logo
+      margin-right: 20px
+      max-width: 86px
+      height: 84px
+
+      +sm
+        height: 70px
+
+    &__content-right
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+
+      +sm
+        align-items: flex-start
+
+      +ph
+        display: none
+
+    &__link-phone
+      margin-bottom: 4px
+
+    // КНОПКА ОТКРЫТИЯ МОБИЛЬНОГО МЕНЮ
+    .menu-toggle
+      position: relative
+      z-index: 30000
+      display: none
+      margin-left: auto
+      width: 30px
+      height: 25px
+
+      +sm
+        display: block
+
+      &__item
+        display: block
+        width: 100%
+        height: 2px
+        border-radius: 1px
+        background-color: $clr_1
+        position: absolute
+        transition: all .3s linear
+        transform: rotate(0) translate(0, 0)
+
+        &:nth-child(1)
+          top: 0
+          left: 0
+
+        &:nth-child(2)
+          top: 50%
+          left: 0
+          transform: translateY(-50%)
+          opacity: 1
+
+        &:nth-child(3)
+          bottom: 0
+          left: 0
+
+      &.menu-toggle_active
+
+        .menu-toggle__item
+          background-color: $clr_2
+
+          &:nth-child(1)
+            transform: rotate(45deg) translate(-50%, -50%)
+            transform-origin: top left
+            left: 50%
+            top: 50%
+            
+          &:nth-child(2)
+            left: 100%
+            transform: translateY(0)
+            opacity: 0
+
+          &:nth-child(3)
+            transform: rotate(-45deg) translate(-50%, 50%)
+            transform-origin: bottom left
+            left: 50%
+            bottom: 50%
+
+  .header-bottom
+    padding-bottom: 20px
+    border-top: .5px solid $clr_1
+    border-bottom: .5px solid $clr_1
+
+    &__container
+      padding-top: 20px
+      padding-bottom: 20px
+
+    +sm
+      display: none
+
+    .menu
+      display: flex
+      align-items: center
+      justify-content: space-between
+      text-transform: uppercase
+      line-height: 120%
+      letter-spacing: 0.06em
+
+      +sm
+        display: none
+
+      &__list
+        display: flex
+        max-width: 100%
+        width: 100%
+        justify-content: space-between
+
+      &__item
+        position: relative
+
+        &:not(:last-child)
+          margin-right: 10px
+
+        &:hover
+
+          .list-inner
+            visibility: visible
+            opacity: 1
+            transform: translateY(0)
+
+          &.active
+            .menu__link
+              &::after
+                opacity: 1
+
+        &.active
+          .menu__link
+            &::after
+              opacity: 1
+
+      &__link
+        position: relative
+        padding-bottom: 20px
+        color: $clr_1
+        transition: color .2s linear
+
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          bottom: 0
+          width: 100%
+          height: 3px
+          background-color: $clr_1
+          opacity: 0
+          transition: background-color .2s linear, opacity .2s linear
+
+        &:hover
+          +hover
+            &::after
+              opacity: .8
+
+        &:focus:not(:active)
+          outline: 0
+          color: $clr_3
+
+      // ВЫПАДАЮЩИЙ СПИСОК НА ДЕСКТОПЕ
+      .list-inner
+        position: absolute
+        top: 40px
+        left: 0
+        z-index: 100
+        display: flex
+        flex-direction: column
+        width: 300px
+        background-color: $clr_1
+        box-shadow: 0px 4px 20px 0px rgba(43, 42, 40, 0.3)
+        font-size: 14px
+        color: $clr_2
+        overflow: hidden
+        opacity: 0
+        visibility: hidden
+        transform: translateY(30px)
+        transition: visibility .2s linear, opacity .3s linear, transform .2s linear
+
+        .menu__item
+          position: relative
+          text-align: start
+
+          &:not(:last-child)
+            margin-right: 0
+
+          &:hover
+            .list-inner__link
+              background-color: $clr_3
+              color: $clr_1
+
+          &.active
+            .list-inner__link
+              background-color: rgba($clr_3, .8)
+              color: $clr_1
+
+              &:hover
+                background-color: rgba($clr_3, .8)
+                color: $clr_1
+
+        &__link
+          display: flex
+          width: 100%
+          transition: background-color .2s linear
+
+        &__link-item
+          position: relative
+          padding: 10px 15px
+          transition: color .2s ease-in-out

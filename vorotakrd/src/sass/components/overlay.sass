@@ -1,0 +1,89 @@
+.modal
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100vh
+  z-index: 99999
+  background-color: rgba($clr_2, .8)
+  display: grid
+  align-items: center
+  justify-content: center
+  padding: 30px 15px
+  overflow-y: auto
+  visibility: hidden
+  opacity: 0
+  color: $clr_2
+  transition: opacity .4s, visibility .4s
+
+  .modal-box
+    position: relative
+    display: flex
+    flex-direction: column
+    z-index: 1
+    padding: 80px 40px 40px 40px
+    max-width: 500px
+    width: 100%
+    background-color: $clr_1
+    overflow: hidden
+    box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2)
+    transform: scale(0)
+    transition: transform .8s
+
+    +ph
+      padding: 40px 20px 20px 20px
+
+  &.open
+    visibility: visible
+    opacity: 1
+
+  &.open .modal-box
+    transform: scale(1)
+
+  .modal-close
+    position: absolute
+    z-index: 3
+    display: block
+    top: 10px
+    right: 10px
+    width: 50px
+    height: 50px
+    cursor: pointer
+    background-color: $clr_4
+    transition: background-color .2s linear
+
+    +ph
+      width: 40px
+      height: 40px
+
+    &:hover
+      +hover
+        background-color: $clr_1
+
+    &:hover:before, &:hover:after
+      background-color: $clr_4
+
+    &:before, &:after
+      content: ""
+      position: absolute
+      width: 20px
+      height: 2px
+      background-color: $clr_1
+      top: 47%
+      left: 50%
+      transition: background-color .2s linear
+
+    &:before
+      transform: translateX(-50%) rotate(45deg)
+
+    &:after
+      transform: translateX(-50%) rotate(-45deg)
+
+  .modal-title
+    margin-bottom: 30px
+    font-weight: 700
+    font-size: 35px
+
+    +ph
+      margin-bottom: 20px
+      font-size: 25px

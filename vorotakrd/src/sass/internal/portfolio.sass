@@ -1,0 +1,73 @@
+.portfolio
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-auto-rows: 452px
+		gap: 10px
+		@include textReset
+		font-size: 0
+		line-height: 0
+
+		+sm
+			grid-template-columns: repeat(2, 1fr)
+
+		+ph
+			grid-auto-rows: 40vh
+			grid-template-columns: 1fr
+
+	&__list-item
+		position: relative
+		display: flex
+		overflow: hidden
+
+	&__list-link
+		position: relative
+		display: flex
+		width: 100%
+		height: 100%
+		font-size: 0
+		line-height: 0
+		border: none
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 2
+			width: 100%
+			height: 100%
+			background-color: rgba($clr_2, .5)
+			opacity: 0
+			transform: translateX(-20px)
+			transition: opacity .2s linear, transform .2s linear
+
+		&:hover
+			+hover
+				&::before
+					opacity: 1
+					transform: translate(0)
+
+				.portfolio__list-img
+					transform: scale(1.1)
+
+	&__list-img
+		position: relative
+		width: 100%
+		height: 100%
+		object-fit: cover
+		font-size: 0
+		transition: transform .2s linear
+
+
+	&__list-text-wrapper
+		position: absolute
+		bottom: 0
+		left: 0
+		z-index: 4
+		padding: 20px 0
+		width: 100%
+		height: max-content
+		font-size: 18px
+		background-color: $clr_1

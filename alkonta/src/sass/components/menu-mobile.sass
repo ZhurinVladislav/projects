@@ -142,6 +142,8 @@
       fill: $clr_3
 
   .site-wrapper
+    display: block
+    padding-top: 20px
     margin-bottom: 15px
     max-width: max-content
 
@@ -168,3 +170,27 @@
     &__list-link
       padding: 10px 10px
       font-size: 16px
+
+  .language-wrapper
+    position: absolute
+    top: 24px
+    left: 20px
+    display: flex
+    max-width: max-content
+    background-color: $clr_2
+    color: $clr_1
+    
+    &__link
+
+      &.active
+        color: $clr_1
+        background-color: $clr_3
+
+      &:hover
+        +hover
+          color: $clr_1
+          background-color: $clr_3
+
+          &.active
+            color: $clr_1
+            background-color: $clr_3

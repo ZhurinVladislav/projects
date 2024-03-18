@@ -13,7 +13,7 @@
         <!-- STYLES -->
         <link rel="stylesheet" href="./app/css/main.min.css" />
         <!-- SCRIPTS -->
-        <!-- <script src="./app/js/libs/libs.js" type="module"></script> -->
+
         <script src="./app/js/libs/preloader.js" defer></script>
         <script src="./app/js/libs/modal-window.js" defer></script>
         <script src="./app/js/libs/iframeLazyLoad.js" defer></script>
@@ -211,9 +211,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header__link-language-wrapper">
-                    <span class="header__link-language active">ru</span>
-                    <a href="/" class="header__link-language" aria-label="Перейти на сайт английский сайт">eng</a>
+                <div class="header__link-language-wrapper language-wrapper">
+                    <span class="language-wrapper__link active">ru</span>
+                    <a href="/" class="language-wrapper__link" aria-label="Перейти на сайт английский сайт">eng</a>
                 </div>
                 <button
                     id="burger-toggle"
@@ -227,6 +227,10 @@
             <!-- BURGER-MENU -->
             <div id="burger-menu" class="header__menu-mobile menu-mobile">
                 <div class="menu-mobile__wrap">
+                    <div class="menu-mobile__link-language-wrapper language-wrapper">
+                        <span class="language-wrapper__link active">ru</span>
+                        <a href="/" class="language-wrapper__link" aria-label="Перейти на сайт английский сайт">eng</a>
+                    </div>
                     <div class="menu-mobile__site-wrapper site-wrapper js-site-wrapper">
                         <button class="site-wrapper__btn js-btn-site-toggle">
                             <svg class="site-wrapper__icon">

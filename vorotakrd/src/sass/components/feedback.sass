@@ -1,0 +1,79 @@
+.feedback
+
+	&__content-wrapper
+		position: relative
+		display: flex
+		padding: 60px 300px 60px 0
+
+		+sm
+			padding: 40px 200px 40px 0
+
+		+ph
+			flex-direction: column-reverse
+			padding: 0
+
+	.form
+		padding: 60px
+		max-width: 799px
+		width: 100%
+		background-color: $clr_1
+		box-shadow: 0 13px 28px 0 rgba(0, 0, 0, 0.06), 0 50px 50px 0 rgba(0, 0, 0, 0.05), 0 113px 68px 0 rgba(0, 0, 0, 0.03), 0 202px 81px 0 rgba(0, 0, 0, 0.01), 0 315px 88px 0 rgba(0, 0, 0, 0)
+
+		+sm
+			padding: 40px
+
+		+ph
+			padding: 20px 10px
+
+		&__text
+			margin-bottom: 20px
+
+		&__btn-wrapper
+			display: flex
+			align-items: flex-end
+
+			+ph
+				flex-direction: column
+				align-items: center
+
+		&__btn
+			margin-right: 12px
+
+			+ph
+				margin-right: 0
+				margin-bottom: 15px
+
+	.input-list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 12px
+		margin-bottom: 28px
+
+		+ph
+			grid-template-columns: 1fr
+
+		&__item
+			display: flex
+			margin: 0
+
+			&:last-child
+				grid-column: span 2
+
+				+ph
+					grid-column: 1
+
+	&__img-wrapper
+		position: absolute
+		top: 0
+		right: 0
+		z-index: -1
+		max-width: 794px
+		height: 100%
+
+		+ph
+			position: static
+			margin-bottom: 20px
+
+	&__img
+		height: 100%
+		

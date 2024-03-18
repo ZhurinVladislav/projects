@@ -1,0 +1,141 @@
+.menu-mobile
+  position: fixed
+  z-index: 2000
+  top: 0
+  right: 0
+  display: none
+  width: 50%
+  height: 100vh
+  padding: 72px 20px 72px 40px
+  font-size: 16px
+  line-height: 1.1
+  color: $clr_2
+  background-color: rgba($clr_1, .6)
+  backdrop-filter: blur(10px)
+  border-radius: 30px 0 0 30px
+  overflow: hidden auto
+  transform: translateX(100%)
+  transition: transform .3s linear, opacity .3s linear
+  will-change: transform
+  text-transform: uppercase
+  opacity: 0
+  box-shadow: 0px 4px 20px 0px rgba(43, 42, 40, 0.3)
+
+  +sm
+    display: block
+
+    &.active
+      transform: translateX(0)
+      opacity: 1
+
+  +ph
+    padding: 72px 20px
+    width: 100%
+    border-radius: 0
+
+  .menu
+    display: flex
+    flex-direction: column
+    margin-bottom: 40px
+
+    +sm
+      display: flex
+
+    +ph
+      margin-bottom: 30px
+
+    .list
+      display: flex
+      flex-direction: column
+
+      .item
+        &.active > .item__link
+          color: $clr_3
+          
+        &:not(:last-child)
+          margin-bottom: 20px
+
+          +ph
+            margin-bottom: 15px
+
+        &.parent
+          position: relative
+
+          &.active > .item__link
+            color: $clr_3
+
+        &__btn
+          position: absolute
+          top: 10px
+          display: inline
+          width: 30px
+          height: 30px
+          transform: translateY(-50%)
+
+          +ph
+            top: 9px
+
+          &.active
+
+            .item__icon
+              fill: $clr_2
+              transform: rotate(90deg)
+
+        &__icon
+          display: inline-flex
+          width: 14px
+          height: 14px
+          fill: $clr_2
+          transition: transform .2s linear
+
+        .list
+          padding-left: 10px
+          max-height: 0
+          transition: all .2s linear
+
+          &.overflow-hidden
+            max-height: 0
+            overflow: hidden
+            transition: max-height .3s linear
+
+          .item
+            font-size: 14px
+
+            &.active
+              .item__link
+                color: $clr_3
+
+            &:first-child
+              padding-top: 20px
+
+            &:not(:last-child)
+              margin-bottom: 20px
+
+  .list-link
+    display: flex
+    flex-direction: column
+    max-width: 400px
+    font-size: 16px
+
+    +ph
+      font-size: 14px
+
+    &__item
+
+      &:not(:last-child)
+        margin-bottom: 20px
+
+        +ph
+          margin-bottom: 15px
+
+    &__link
+      display: flex
+      align-items: center
+
+    &__icon
+      flex-shrink: 0
+      margin-right: 10px
+      width: 20px
+      height: 20px
+      fill: $clr_2
+      

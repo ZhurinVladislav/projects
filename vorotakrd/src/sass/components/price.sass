@@ -1,0 +1,109 @@
+.price
+	position: relative
+	background-image: url(../img/price/bg-img.jpg)
+	background-position: center
+	background-color: $clr_2
+	background-repeat: no-repeat
+	background-size: cover
+
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(38, 54, 64, .8)
+
+	&__content-wrapper
+		position: relative
+		z-index: 1
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 80px 0
+
+		+sm
+			padding: 60px 0
+
+		+ph
+			flex-direction: column
+			align-items: flex-start
+			padding: 40px 0
+
+	&__content
+		margin-right: 20px
+		color: $clr_1
+		max-width: 678px
+
+		+md
+			max-width: 550px
+
+		+ph
+			margin-right: 0
+			margin-bottom: 30px
+			max-width: 100%
+
+.price-more
+	display: flex
+	flex-direction: column
+	max-width: 393px
+	width: 100%
+	
+	&__text-wrapper
+		margin-bottom: 20px
+		padding: 20px 40px
+		background-color: $clr_1
+		
+		+sm
+			padding: 20px
+
+	&__text
+		margin-bottom: 12px
+		font-weight: 700
+		line-height: 120%
+		font-size: 20px
+
+	&__list
+		padding-left: 20px
+		list-style: url(../img/mark-list.svg)
+
+	&__list-item
+
+		&:not(:last-child)
+			margin-bottom: 8px
+
+	&__links
+		display: flex
+		justify-content: space-between
+		gap: 20px
+
+		+sm
+			flex-direction: column
+
+	&__links-item
+		display: flex
+		max-width: 50%
+		width: 100%
+
+		+sm
+			max-width: 100%
+
+	.button
+		max-width: 100%
+		width: 100%
+
+	.button-invert
+		max-width: 100%
+		width: 100%
+
+		&:hover
+			+hover
+				color: $clr_1
+				border-color: $clr_1
+
+				.button-invert__icon
+					fill: $clr_1
+
+		&:focus:not(:active)
+			border-color: $clr_1

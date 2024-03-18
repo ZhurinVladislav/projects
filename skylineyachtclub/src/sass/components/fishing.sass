@@ -1,0 +1,94 @@
+.fishing
+	padding-top: 60px
+	padding-bottom: 60px
+
+	+sm
+		padding-top: 0
+		padding-bottom: 0
+
+	&__container
+
+		+sm
+			display: flex
+			flex-direction: column-reverse
+
+	&__content-wrapper
+		margin-right: 20px
+		padding: 60px 714px 60px 60px
+		max-width: 100%
+		color: $clr_1
+		background-color: $clr_2
+		background-image: url(../img/fishing/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+
+		+lr
+			padding: 60px 550px 60px 60px
+
+		+sm
+			margin-right: 0
+			padding: 40px 30px
+			background-image: url(../img/fishing/bg-img-ph.jpg)
+
+	&__content
+		max-width: 542px
+
+		+sm
+			max-width: 100%
+
+	&__img-wrapper
+		position: absolute
+		top: 50%
+		right: 45px
+		z-index: 2
+		display: flex
+		align-items: center
+		justify-content: center
+		max-width: 671px
+		width: 100%
+		min-height: 671px
+		height: 100%
+		font-size: 0
+		transform: translateY(-50%)
+
+		+lr
+			max-width: 500px
+			min-height: 700px
+
+		+sm
+			position: relative
+			top: auto
+			right: auto
+			margin-bottom: 40px
+			padding: 0px 10px
+			max-width: 100%
+			min-height: 100%
+			height: 550px
+			transform: none
+
+		+ph
+			margin-bottom: 30px
+			height: 400px
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index: -1
+			width: 106%
+			height: 93%
+			border: 3px solid $clr_3
+			transform: translate(-50%, -50%)
+
+			+sm
+				width: 100%
+
+	&__img
+		position: relative
+		width: 100%
+		height: 100%
+		object-fit: cover
+		box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)

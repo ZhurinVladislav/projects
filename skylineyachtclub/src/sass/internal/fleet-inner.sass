@@ -1,0 +1,103 @@
+.fleet-inner
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		justify-items: center
+		gap: 20px
+		grid-auto-rows: minmax(300px, 340px)
+
+		+sm
+			grid-template-columns: repeat(2, 1fr)
+
+		+ph
+			grid-auto-rows: 40vh
+			grid-template-columns: 1fr
+
+	&__list-item
+		position: relative
+		display: flex
+		width: 100%
+		height: 100%
+		overflow: hidden
+
+	&__list-link
+		display: flex
+		flex-direction: column
+		width: 100%
+		height: 100%
+
+		&:hover
+			+hover
+				+ .fleet-inner__list-content
+					opacity: 1
+					transform: translateX(0)
+
+				.fleet-inner__list-img
+					transform: scale(1.1)
+
+				.fleet-inner__list-title
+					color: $clr_3
+
+
+		&:focus:not(:active)
+			outline: 0
+			
+			+ .fleet-inner__list-content
+				opacity: 1
+				transform: translateX(0)
+
+			.fleet-inner__list-img
+				transform: scale(1.1)
+
+			.fleet-inner__list-title
+				color: $clr_3
+
+	&__list-title
+		margin-bottom: 10px
+		font-size: 22px
+		transition: color .2s linear
+
+		+ph
+			font-size: 20px
+
+	&__list-img-wrapper
+		display: flex
+		width: 100%
+		height: 100%
+		overflow: hidden
+
+	&__list-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		transition: transform .2s linear
+
+	&__list-content
+		position: absolute
+		bottom: 0
+		left: 0
+		display: flex
+		justify-content: space-between
+		padding: 10px 15px
+		color: $clr_1
+		background-image: url(../img/common/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+		width: 100%
+		z-index: 1
+		opacity: 0
+		transform: translateY(50px)
+		transition: opacity .2s linear, transform .2s linear
+
+		&:hover
+			+hover
+				opacity: 1
+				transform: translateX(0)
+
+		+sm
+			opacity: 1
+			transform: translateX(0)
+	

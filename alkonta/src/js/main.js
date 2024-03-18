@@ -82,20 +82,20 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleSite();
 
   // АНИМАЦИЯ С ЧИСЛАМИ В HERO
-
   const numberAnimate = () => {
     if (!document.querySelector('.js-number')) return;
 
-    const zeroValues = () => {
-      const stat = document.getElementsByClassName('js-number');
-      for (let i = 0; i < stat.length; i++) {
-        stat[i].innerHTML = 0;
-      }
-    };
-    zeroValues();
+    // const zeroValues = () => {
+    //   const stat = document.getElementsByClassName('js-number');
+    //   for (let i = 0; i < stat.length; i++) {
+    //     stat[i].innerHTML = 0;
+    //   }
+    // };
+    // zeroValues();
 
     const numScroll = () => {
       const animationDuration = 3000;
+      // const animationDuration = 1000;
       const frameDuration = 1000 / 60;
       const totalFrames = Math.round(animationDuration / frameDuration);
       const easeOutQuad = t => t * (2 - t);
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (position <= 0) startAnimate(el);
       }
     };
-    zeroValues();
+    // zeroValues();
 
     window.addEventListener('load', () => {
       numScroll();
@@ -178,21 +178,25 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < arrImg.length; i++) {
       const el = arrImg[i];
 
-      if (i === 0) el.classList.add('active');
-      
+      arrImg[0].classList.add('active');
+
       el.setAttribute('data-hover-img', `${i}`);
     }
 
     arrLinks.forEach(el => {
       el.addEventListener('mouseover', () => {
         const attr = el.getAttribute('data-hover-link');
+
+        for (let i = 0; i < arrImg.length; i++) {
+          arrImg[i].classList.remove('active');
+        }
+
         document.querySelector(`[data-hover-img="${attr}"]`).classList.add('active');
       });
 
       el.addEventListener('mouseout', () => {
         const attr = el.getAttribute('data-hover-link');
-        document.querySelector(`[data-hover-img="${attr}"]`).classList.remove('active');
-        document.querySelector(`[data-hover-img="0"]`).classList.add('active');
+        document.querySelector(`[data-hover-img="${attr}"]`).classList.add('active');
       });
     });
   };
@@ -373,6 +377,13 @@ document.addEventListener('DOMContentLoaded', () => {
     thumbnail: false,
     share: false,
     selector: '.gallery__link',
+    getCaptionFromTitleOrAlt: false,
+  });
+
+  $('#news-img-list').lightGallery({
+    thumbnail: false,
+    share: false,
+    selector: '.img-list__link',
     getCaptionFromTitleOrAlt: false,
   });
 });

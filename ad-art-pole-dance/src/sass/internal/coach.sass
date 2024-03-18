@@ -36,17 +36,17 @@
     margin-bottom: 15px
 
   &__content-list-item
+    +ph
+      flex-direction: column-reverse
+
     &:not(:last-child)
       margin-bottom: 40px
-
-      +ph
-        margin-bottom: 20px
 
     &:nth-child(2n)
       flex-direction: row-reverse
 
       +ph
-        flex-direction: column
+        flex-direction: column-reverse
 
       .content-column
         &__text-wrapper
@@ -68,12 +68,19 @@
       +ph
         margin-right: 0
         margin-bottom: 16px
-
+    
     &__text
       margin-bottom: 0
 
     &__media
-      margin-right: 0
+      display: flex
+      min-height: 100%
+      overflow: inherit
+
+    &__img
+      position: sticky
+      display: block
+      top: 120px
       max-height: 500px
 
       +ph

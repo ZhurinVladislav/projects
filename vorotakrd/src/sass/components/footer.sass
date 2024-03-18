@@ -1,0 +1,48 @@
+.footer
+  margin-top: auto
+  background-color: $clr_2
+  line-height: 140%
+  letter-spacing: .01em
+  color: rgba($clr_1, .5)
+  text-transform: uppercase
+
+  +sm
+    font-size: 14px
+
+  &__container
+    display: flex
+
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 12px
+    padding-bottom: 12px
+    width: 100%
+
+    +sm
+      flex-direction: column
+      justify-content: center
+
+    +ph
+      padding-top: 20px
+      padding-bottom: 20px
+
+  &__list-item
+    display: flex
+    align-items: center
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      +sm
+        margin-right: 0
+        margin-bottom: 10px
+
+  .link-icon
+    &__item
+      margin-right: 10px
+      width: 47px
+      height: 20px
+      fill: rgba($clr_1, .5)
+

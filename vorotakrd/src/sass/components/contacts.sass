@@ -1,0 +1,68 @@
+.home-page
+	.contacts
+		padding-bottom: 0
+		
+		+sm
+			padding-bottom: 40px
+
+		+ph
+			padding-bottom: 30px
+
+.contacts
+	background-color: $clr_3
+	padding-bottom: 120px
+
+	+sm
+		padding-bottom: 40px
+
+	+ph
+		padding-bottom: 80px
+	
+	&__content-wrapper
+		display: flex
+
+		+sm
+			flex-direction: column-reverse
+
+	&__content
+		margin-right: 20px
+		padding: 60px 0
+
+		+sm
+			@include textReset
+
+	&__list-item
+		display: flex
+		max-width: max-content
+
+		&:not(:last-child)
+			margin-bottom: 20px
+
+		&_indent
+			padding-left: 24px
+
+	&__list-icon
+		margin-right: 8px
+		width: 16px
+		height: 16px
+
+	.link-icon
+		&__item
+			margin-right: 8px
+			width: 16px
+			height: 16px
+
+	&__map
+		margin-right: -272px
+		max-width: 970px
+		width: 100%
+
+		+max(1800px)
+			margin-right: -25px
+
+		+sm
+			margin-bottom: 40px
+			height: 500px
+
+		+ph
+			height: 400px

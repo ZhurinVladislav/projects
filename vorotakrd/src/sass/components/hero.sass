@@ -1,0 +1,112 @@
+.hero
+
+  .hero-slider
+    position: relative
+    display: flex
+    width: 100%
+    height: 100%
+    
+  .slider-navigation
+    position: absolute
+    z-index: 10
+    bottom: 160px
+    left: 50%
+    display: flex
+    align-items: center
+    padding: 0px 25px
+    max-width: $size_1
+    width: 100%
+    transform: translateX(-50%)
+
+    +lr
+      bottom: 100px
+
+    +sm
+      bottom: 80px
+
+    +ph
+      padding: 0px 10px
+
+  &__wrapper
+    max-width: 200px
+    width: 100%
+
+  .hero-slide
+    position: relative
+    display: flex
+    width: 100%
+    height: 100%
+    box-sizing: border-box
+
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(35deg, #263640 23.88%, rgba(38, 54, 64, 0) 76.42%)
+      opacity: .7
+    
+    &__img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &__content-wrapper
+      z-index: 1
+      display: flex
+      max-width: $size_1
+      width: 100%
+      height: 100%
+      margin: 0 auto
+      padding: 161px 25px 212px 25px
+
+      +lr
+        padding: 100px 25px
+
+      +sm
+        padding: 70px 25px
+
+      +ph
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-left: 10px
+        padding-right: 10px
+        padding-bottom: 48px
+
+    &__content
+      position: relative
+      margin-top: auto
+      max-width: 866px
+      min-height: 314px
+      color: $clr_1
+
+      +sm
+        border-radius: 30px
+
+      +ph
+        max-width: 100%
+    
+    &__content-title
+      margin-bottom: 20px
+      font-size: 78px
+      color: $clr_1
+
+      +lr
+        font-size: 40px
+
+      +sm
+        font-size: 35px
+
+      +ph
+        margin-bottom: 15px
+        font-size: 28px
+
+    &__content-text
+      margin-bottom: 40px
+      font-size: 16px
+      opacity: .8
