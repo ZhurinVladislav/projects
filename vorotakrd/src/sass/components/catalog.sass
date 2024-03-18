@@ -1,0 +1,58 @@
+.catalog
+	&__list-main
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-auto-rows: minmax(517px, auto)
+		gap: 20px
+
+		+md
+			grid-template-columns: repeat(3, 1fr)
+
+		+sm
+			grid-template-columns: repeat(2, 1fr)
+
+		+ph
+			grid-template-columns: 1fr
+
+	&__list-main-img
+		margin-bottom: 20px
+		max-height: 329px
+		object-fit: cover
+
+		+ph
+			margin-bottom: 15px
+
+	&__list-main-title
+		margin-bottom: 20px
+
+		+ph
+			margin-bottom: 15px
+
+	&__list
+		display: flex
+		flex-direction: column
+
+	&__list-item
+		&:not(:last-child)
+			margin-bottom: 16px
+
+			+ph
+				margin-bottom: 10px
+	
+	&__list-item-link
+		justify-content: space-between
+
+	.link
+
+		&:hover
+			+hover
+				.link__icon
+					opacity: 1
+
+		&__text
+			margin-right: 10px
+
+		&__icon
+			fill: $clr_4
+			opacity: 0
+			transition: opacity .2s linear

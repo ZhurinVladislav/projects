@@ -1,0 +1,119 @@
+.feedback
+	padding-top: 60px
+	padding-bottom: 60px
+
+	+sm
+		padding-top: 0
+		padding-bottom: 0
+	
+	&__img-wrapper
+		position: absolute
+		top: 50%
+		left: 45px
+		z-index: 2
+		display: flex
+		align-items: center
+		justify-content: center
+		max-width: 682px
+		width: 100%
+		min-height: 682px
+		height: 100%
+		font-size: 0
+		transform: translateY(-50%)
+
+		+lr
+			max-width: 500px
+			min-height: 700px
+
+		+sm
+			position: relative
+			top: auto
+			left: auto
+			margin-bottom: 40px
+			padding: 0px 10px
+			max-width: 100%
+			min-height: 100%
+			height: 550px
+			transform: none
+
+		+ph
+			margin-bottom: 30px
+			height: 400px
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index: -1
+			width: 106%
+			height: 93%
+			border: 3px solid $clr_3
+			transform: translate(-50%, -50%)
+
+			+sm
+				width: 100%
+
+	&__img
+		position: relative
+		width: 100%
+		height: 100%
+		object-fit: cover
+		box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+
+	&__content-wrapper
+		display: flex
+		flex-direction: column
+		margin-left: 20px
+		padding: 60px 60px 60px 784px
+		max-width: 100%
+		color: $clr_1
+		background-color: $clr_2
+		background-image: url(../img/feedback/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+
+		+lr
+			padding: 60px 60px 60px 550px
+
+		+sm
+			margin-left: 0
+			padding: 40px 30px
+			background-image: url(../img/feedback/bg-img-ph.jpg)
+
+		+ph
+			padding: 30px 20px
+
+	&__text
+		margin-bottom: 24px
+
+	.wrap-input
+		margin-bottom: 24px
+
+	.form
+		max-width: 502px
+
+		&__bottom-content
+			display: flex
+			align-items: flex-end
+
+			+ph
+				flex-direction: column
+				align-items: flex-start
+
+		&__btn
+			margin-right: 12px
+
+			+ph
+				margin-right: 0
+				margin-bottom: 12px
+
+		&__text
+			max-width: 266px
+			font-size: 14px
+			line-height: 140%
+
+		.link-invert
+			display: inline

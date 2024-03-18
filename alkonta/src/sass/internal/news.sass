@@ -1,0 +1,64 @@
+.news
+	&__content-wrapper 
+		display: flex
+		margin-bottom: 40px
+
+		+lr
+			max-width: 100%
+
+		+ph
+			flex-direction: column
+    
+	&__content
+		flex: 0 0 50%
+		margin-right: 20px
+		font-size: 18px
+
+		+ph
+			flex: 0 0 100%
+			margin-right: 0
+			margin-bottom: 20px
+			font-size: 16px
+    
+	.img-list
+		max-width: 45%
+		display: grid
+		grid-template-columns: repeat( auto-fit, minmax(45%, 1fr))
+		grid-auto-rows: 460px
+		gap: 10px
+		font-size: 0
+		line-height: 0
+    
+		+ph
+			max-width: 100%
+			grid-template-columns: 1fr
+			grid-auto-rows: 30vh
+			gap: 20px
+    
+		&__item
+			overflow: hidden
+    
+		&__link 
+			width: 100%
+			height: 100%
+			font-size: 0
+			line-height: 0
+    
+			&:hover
+				+hover
+					.img-list__link-img
+						transform: scale(1.1)
+    
+		&__link-img
+			max-width: 100%
+			width: 100%
+			min-height: 100%
+			transition: transform .2s linear
+
+			+ph
+				object-fit: cover
+    
+	&__link
+		justify-content: space-between
+		margin-bottom: 40px
+	

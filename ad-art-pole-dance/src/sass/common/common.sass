@@ -660,6 +660,7 @@ textarea
 .video-wrapper
   position: relative
   display: flex
+  background-color: $clr_3
 
   &:hover
     +hover
@@ -1033,6 +1034,7 @@ textarea
         border-color: $clr_3
 
   img
+    width: auto
     border-radius: 20px
     
     +ph
@@ -1043,26 +1045,21 @@ textarea
 
   ul
     margin-bottom: 20px
-    padding-left: 42px
-    list-style: inherit
+    padding-left: 30px
+    list-style: url(../img/mark-list.svg)
 
     +ph
       padding-left: 30px
 
     li
-      &::marker
-        font-family: $ff_1
-        font-size: 18px
-        font-weight: 600
-        color: $clr_3
-
-    li:not(:last-child)
-      margin-bottom: 10px
+      &:not(:last-child)
+        margin-bottom: 10px
 
   ol
     margin-bottom: 20px
     padding-left: 40px
 
+
     +ph
       padding-left: 30px
 
@@ -1074,8 +1071,8 @@ textarea
         font-weight: 600
         color: $clr_3
 
-    li:not(:last-child)
-      margin-bottom: 10px
+      &:not(:last-child)
+        margin-bottom: 10px
 
   blockquote
     margin: 0
@@ -1478,6 +1475,65 @@ textarea
 // КАПЧА
 .grecaptcha-badge
   opacity: 0
+
+.poster-wrapper
+  position: absolute
+  width: 100%
+  height: 100%
+  transition: opacity .2s linear, visibility .2s linear
+
+  &.active
+    cursor: pointer
+
+  &.hidden
+    opacity: 0
+    visibility: hidden
+
+  &__preloader
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($clr_2, .5)
+    opacity: 0
+    visibility: hidden
+    transition: opacity .2s linear, visibility .2s linear
+
+    &.active
+      opacity: 1
+      visibility: visible
+  
+  &__img
+    width: 100%
+    height: 100%
+
+    +ph
+      max-width: 140%
+      width: 140%
+      height: 120%
+  
+// ПРЕЛОАДЕР НА РОЛИКЕ
+.spinner
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+  width: 70px
+  height: 70px
+  border: 4px solid $clr_1
+  border-top: 4px solid $clr_2
+  border-radius: 100%
+  animation: spin 1s infinite ease
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)
 
 // АНИМАЦИЯ
 @keyframes tabAnimate

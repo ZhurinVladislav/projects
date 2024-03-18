@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Видео</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./app/css/main.min.css" />
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/preloader.js" defer></script>
+        <script src="./app/js/libs/modal-window.js" defer></script>
+        <script src="./app/js/libs/iframeLazyLoad.js" defer></script>
+        <script src="./app/js/libs/webp.js" defer></script>
+        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
+        <script src="./app/js/libs/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header id="header" class="header">
+            <!-- HEADER-TOP -->
+            <div class="header__top header-top">
+                <div class="header-top__container container">
+                    <a
+                        href="/"
+                        class="header-top__logo header-top__logo_main logo"
+                        aria-label="Перейти на главную страницу сайта">
+                        <img
+                            class="logo__img"
+                            src="/app/img/logo.svg"
+                            alt="Логотип официального представителя Alutech"
+                            title="Официальный представитель Alutech" />
+                    </a>
+                    <a href="/" class="header-top__logo logo" aria-label="Перейти на главную страницу сайта">
+                        <img
+                            class="logo__img"
+                            src="/app/img/logo-ag.svg"
+                            alt="Логотип компании Автоматические ворота"
+                            title="Компания Автоматические ворота" />
+                    </a>
+                    <ul class="header-top__social-list">
+                        <li class="header-top__social-list-item">
+                            <a
+                                href="https://vk.com/"
+                                aria-label="Перейти на страницу Вконтакте"
+                                target="_blank"
+                                class="header-top__social-list-link social-link">
+                                <svg class="social-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-top__social-list-item">
+                            <a
+                                href="https://t.me/"
+                                aria-label="Написать нам в Telegram"
+                                target="_blank"
+                                class="header-top__social-list-link social-link">
+                                <svg class="social-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-top__social-list-item">
+                            <a
+                                href="https://wa.me/"
+                                aria-label="Написать нам в WhatsApp"
+                                target="_blank"
+                                class="header-top__social-list-link social-link">
+                                <svg class="social-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header-top__feedback-list">
+                        <li class="header-top__feedback-list-item">
+                            <a href="tel:+79581110305" class="header-top__feedback-list-link link-icon">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-icon__text"> +7 (958) 111-03-05 </span>
+                            </a>
+                        </li>
+                        <li class="header-top__feedback-list-item">
+                            <a href="mailto:av_vorota@mail.ru" class="header-top__feedback-list-link link-icon">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="link-icon__text"> av_vorota@mail.ru </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button
+                        id="burger-toggle"
+                        aria-label="Открыть мобильное меню"
+                        class="header-top__menu-toggle menu-toggle">
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- HEADER-BOTTOM -->
+            <div class="header__bottom header-bottom">
+                <div class="header-bottom__container container">
+                    <nav class="header-bottom___menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item active">
+                                <a class="menu__link" href="/">
+                                    <span class="menu__link-item"> Главная </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./main.html">
+                                    <span class="menu__link-item"> О нас </span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent">
+                                <a class="menu__link" href="./products.html">
+                                    <span class="menu__link-item"> Продукция </span>
+                                </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="list-inner__item parent">
+                                        <a class="list-inner__link" target="_blank" href="./category.html">
+                                            <span class="list-inner__link-item"> Воротные системы </span>
+                                        </a>
+                                        <ul class="list-inner list-inner_level-2">
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Гаражные ворота </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Промышленные ворота </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Распашные ворота </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Откатные ворота </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item">
+                                                        Секции ограждения (заборные)
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item">
+                                                        Комплекты для откатных ворот
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-inner__item parent">
+                                        <a class="list-inner__link" target="_blank" href="./category.html">
+                                            <span class="list-inner__link-item"> Роллетные системы </span>
+                                        </a>
+                                        <ul class="list-inner list-inner_level-2">
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Рольставни </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Роллетные ворота </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Роллетные решетки </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item">
+                                                        Система умной автоматики
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Роллеты умный дом </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-inner__item parent">
+                                        <a class="list-inner__link" target="_blank" href="./category.html">
+                                            <span class="list-inner__link-item"> Автоматика и шлагбаумы </span>
+                                        </a>
+                                        <ul class="list-inner list-inner_level-2">
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Автоматика для ворот </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item">
+                                                        Автоматические шлагбаумы
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Приводы для роллет </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Аксессуары </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-inner__item parent">
+                                        <a class="list-inner__link" target="_blank" href="./category.html">
+                                            <span class="list-inner__link-item"> Перегрузочная техника </span>
+                                        </a>
+                                        <ul class="list-inner list-inner_level-2">
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Уравнительные платформы </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Герметизатор проема </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item"> Выносные шлюз-тамбуры </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item">
+                                                        Дополнительное оборудование
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inner__item">
+                                                <a class="list-inner__link" target="_blank" href="./product.html">
+                                                    <span class="list-inner__link-item">
+                                                        Подбор перегрузочного оборудования
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./information.html">
+                                    <span class="menu__link-item"> Информация </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./video.html">
+                                    <span class="menu__link-item"> Видео </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./portfolio.html">
+                                    <span class="menu__link-item"> Портфолио </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html">
+                                    <span class="menu__link-item"> Контакты </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header-bottom__right-content">
+                        <a
+                            href="/"
+                            aria-label="Перейти на страницу расчёта суммы"
+                            title="Расчёт суммы на автоворота"
+                            class="header-bottom__link link-icon">
+                            <svg class="link-icon__item">
+                                <use xlink:href="/app/img/icons/icons.svg#calc"></use>
+                            </svg>
+                            <span class="link-icon__text">Калькулятор</span>
+                        </a>
+                        <button class="header-bottom__btn button js-open-modal" data-open="form-callback">
+                            Заказать
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- MENU-MOBILE -->
+            <div id="burger-menu" class="header__menu-mobile menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu menu">
+                        <ul class="menu__list list">
+                            <li class="list__item item active">
+                                <a class="item__link" href="/"> Главная </a>
+                            </li>
+                            <li class="list__item item">
+                                <a class="item__link" href="./main.html"> О нас </a>
+                            </li>
+                            <li class="list__item item parent active">
+                                <a class="item__link" href="./products.html"> Продукция </a>
+                                <button class="item__btn">
+                                    <svg class="item__btn-icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item parent active">
+                                        <a class="list__link" href="./category.html"> Воротные системы </a>
+                                        <button class="item__btn">
+                                            <svg class="item__btn-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <ul class="item__list list">
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Гаражные ворота </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Промышленные ворота </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Распашные ворота </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Откатные ворота </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html">
+                                                    Секции ограждения (заборные)
+                                                </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html">
+                                                    Комплекты для откатных ворот
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list__item item parent">
+                                        <a class="item__link" href="./category.html"> Роллетные системы </a>
+                                        <button class="item__btn">
+                                            <svg class="item__btn-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <ul class="item__list list">
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Рольставни </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Роллетные ворота </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Роллетные решетки </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html">
+                                                    Система умной автоматики
+                                                </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Роллеты умный дом </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list__item item parent">
+                                        <a class="item__link" href="./category.html"> Автоматика и шлагбаумы </a>
+                                        <button class="item__btn">
+                                            <svg class="item__btn-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <ul class="item__list list">
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Автоматика для ворот </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html">
+                                                    Автоматические шлагбаумы
+                                                </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Приводы для роллет </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Аксессуары </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list__item item parent">
+                                        <a class="item__link" href="./category.html"> Перегрузочная техника </a>
+                                        <button class="item__btn">
+                                            <svg class="item__btn-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <ul class="item__list list">
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html">
+                                                    Уравнительные платформы
+                                                </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Герметизатор проема </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html"> Выносные шлюз-тамбуры </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html">
+                                                    Дополнительное оборудование
+                                                </a>
+                                            </li>
+                                            <li class="list__item item">
+                                                <a class="item__link" href="./product.html">
+                                                    Подбор перегрузочного оборудования
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item item">
+                                <a class="item__link" href="./information.html"> Информация </a>
+                            </li>
+                            <li class="menu__item item">
+                                <a class="item__link" href="./video.html"> Видео </a>
+                            </li>
+                            <li class="menu__item item">
+                                <a class="item__link" href="./portfolio.html"> Портфолио </a>
+                            </li>
+                            <li class="menu__item item">
+                                <a class="item__link" href="./contacts.html"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (958) 111-03-05 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="list-link__descr"> av_vorota@mail.ru </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="./contacts.html">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <address class="list-link__descr">350072, г. Краснодар, Ростовское шоссе 27/1</address>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main id="main">
+            <!-- VIDEO -->
+            <section class="video section-reset">
+                <div class="video__container container">
+                    <h1 class="video__title-hidden h-0">Видео работ компании Автоматические ворота в Краснодаре</h1>
+                    <h2 class="video__title h-1">Видео</h2>
+                    <ul class="video__list">
+                        <li class="video__list-item">
+                            <iframe
+                                title="YouTube video player"
+                                src="https://www.youtube.com/embed/wkKnp9cUeAc?start=16"
+                                frameborder="0"
+                                width="100%"
+                                height="415"></iframe>
+                            <h3 class="video__list-title h-3">Воротные системы</h3>
+                        </li>
+                        <li class="video__list-item">
+                            <iframe
+                                title="YouTube video player"
+                                src="https://www.youtube.com/embed/wkKnp9cUeAc?start=16"
+                                frameborder="0"
+                                width="100%"
+                                height="415"></iframe>
+                            <h3 class="video__list-title h-3">Воротные системы</h3>
+                        </li>
+                        <li class="video__list-item">
+                            <iframe
+                                title="YouTube video player"
+                                src="https://www.youtube.com/embed/wkKnp9cUeAc?start=16"
+                                frameborder="0"
+                                width="100%"
+                                height="415"></iframe>
+                            <h3 class="video__list-title h-3">Воротные системы</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div class="form-callback modal" id="form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"></button>
+                    <p class="form-callback__title modal-title">Узнать стоимость</p>
+
+                    <form action="/" class="form form-mod">
+                        <ul class="form-mod__input-list input-list">
+                            <li class="input-list__item">
+                                <input class="input-list__input input" type="text" name="name" placeholder=" " />
+                                <label class="input-list__label label">Имя</label>
+                            </li>
+                            <li class="input-list__item">
+                                <input class="input-list__input input" type="text" name="mail" placeholder=" " />
+                                <label class="input-list__label label">E-mail</label>
+                            </li>
+                            <li class="input-list__item">
+                                <textarea
+                                    class="input-list__textarea textarea"
+                                    name="message"
+                                    cols="30"
+                                    rows="10"
+                                    placeholder=" "></textarea>
+                                <label class="input-list__label label">Сообщение</label>
+                            </li>
+                        </ul>
+                        <label class="form-mod__label form-note">
+                            <input class="form-note__input" type="checkbox" checked />
+                            <span class="form-note__checkbox"></span>
+                            <span class="form-note__text">
+                                Согласен с&nbsp;<a
+                                    class="form-note__link link"
+                                    href="/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >политикой конфиденциальности</a
+                                >
+                            </span>
+                        </label>
+                        <button aria-label="Отправить заявку" class="form-mod__btn button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div class="form-success modal" id="form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <ul class="footer__list">
+                    <li class="footer__list-item">Все права защищены &copy;&nbsp;2024</li>
+                    <li class="footer__list-item">
+                        <a href="/" class="footer__link link">Пользовательское соглашение</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a
+                            href="https://web2.agency/"
+                            class="footer__link link-icon"
+                            title="Перейти на сайт разработки сайтов в Новороссийске"
+                            aria-label="Перейти на сайт разработки сайтов в Новороссийске"
+                            target="_blank">
+                            <svg class="link-icon__item">
+                                <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                            </svg>
+                            <span class="link-icon__text"> Создание сайтов </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- SOCIAL PANEL -->
+        <ul class="social-panel">
+            <li class="social-panel__item">
+                <a aria-label="Позвонить по +79581110305" href="tel:+79284400014" class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-panel__item">
+                <a
+                    aria-label="Связаться с нами в Telegram"
+                    target="_blank"
+                    href="https://t.me/"
+                    class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-panel__item">
+                <a
+                    aria-label="Связаться с нами в WhatsApp"
+                    target="_blank"
+                    href="https://wa.me/"
+                    class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

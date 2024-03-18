@@ -12,20 +12,23 @@
 
 	&__btn
 		display: flex
-		justify-content: space-between
 		align-items: center
 		padding: 18px
 		min-height: 30px
 		color: $clr_1
+		border: 2px solid $clr_3
 		background-color: $clr_3
 		cursor: pointer
-		box-shadow: 0 6px 12px 0 rgba(209, 0, 2, 0.05), 0 23px 23px 0 rgba(209, 0, 2, 0.04), 0 51px 31px 0 rgba(209, 0, 2, 0.03), 0 90px 36px 0 rgba(209, 0, 2, 0.01), 0 141px 40px 0 rgba(209, 0, 2, 0)
 		transition: background-color .2s linear, color .2s linear
 
 		&:hover
 			+hover
 				color: $clr_3
 				background-color: $clr_1
+
+				.faq__btn-number-wrapper
+					&::after
+						background-color: $clr_3
 
 				.faq__btn-wrapper-icon
 					background-color: $clr_3
@@ -37,7 +40,35 @@
 
 			.faq__btn-icon
 				transform: rotate(90deg)
-    
+  
+	&__btn-number-wrapper
+		position: relative
+		margin-top: -20px
+		margin-right: 30px
+		margin-bottom: -20px
+		padding: 20px 30px 20px 15px
+		font-weight: 700
+		font-size: 24px
+
+		+sm
+			font-size: 20px
+
+		+ph
+			margin-right: 20px
+			padding: 20px 20px 20px 10px
+			font-size: 18px
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 0
+			width: 2px
+			height: 100%
+			background-color: $clr_1
+			transform: translateY(-50%)
+			transition: background-color .2s linear
+
 	&__btn-text
 		margin-right: 20px
 		text-align: left
@@ -48,6 +79,8 @@
 		display: flex
 		align-items: center
 		justify-content: center
+		flex-shrink: 0
+		margin-left: auto
 		width: 40px
 		height: 40px
 		border-radius: 50%

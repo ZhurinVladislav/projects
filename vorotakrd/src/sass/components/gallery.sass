@@ -1,0 +1,134 @@
+.gallery
+
+	&__content-top
+		display: flex
+		flex-direction: column
+		margin-bottom: 16px
+
+	&__content
+		display: flex
+		justify-content: space-between
+		margin-bottom: 16px
+
+		+ph
+			flex-direction: column
+			justify-content: flex-start
+
+	&__text
+		margin-right: 20px
+		max-width: 445px
+
+		+ph
+			margin-right: 0
+			margin-bottom: 15px
+
+		&_last
+			margin-right: 0
+			text-align: end
+
+			+ph
+				margin-bottom: 0
+				text-align: start
+
+	.link
+		display: inline
+		font-weight: 600
+		color: $clr_4
+		text-transform: uppercase
+
+		&:hover
+			+hover
+				color: $clr_2
+
+	&__btn-wrapper
+		margin-left: auto
+
+		+ph
+			margin-left: 0
+
+	.slider-navigation
+		&__pagination
+			color: $clr_2
+
+		&__btn
+			fill: $clr_2
+
+			&_disable
+				&:hover
+					+hover
+					.slider-navigation__btn-icon
+						fill: $clr_2 !important
+
+			&:hover
+				+hover
+					.slider-navigation__btn-icon
+						fill: $clr_4
+
+		&__btn-icon
+			fill: $clr_2
+
+	&__slider
+		margin: 0
+
+	.slider
+		max-width: 445px
+		min-height: 489px
+		overflow: visible
+
+		+ph
+			min-height: 200px
+
+		&__slide-link
+			display: flex
+			flex-direction: column
+
+			&:hover
+				+hover
+					.slider__slide-link-text
+						color: $clr_4
+
+					.slider__img-wrapper
+						&::after
+							opacity: 1
+							transform: translateX(0)
+
+					.slider__img
+						transform: scale(1.1)
+
+		&__img-wrapper
+			position: relative
+			display: flex
+			margin-bottom: 20px
+			max-height: 445px
+			height: 100%
+			overflow: hidden
+
+			+ph
+				margin-bottom: 10px
+
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 2
+				width: 100%
+				height: 100%
+				background-color: rgba($clr_2, .5)
+				opacity: 0
+				transform: translateX(-20px)
+				transition: opacity .2s linear, transform .2s linear
+
+		&__img
+			height: 100%
+			object-fit: cover
+			transition: transform .3s linear
+
+		&__slide-link-text
+			font-weight: 700
+			line-height: 120%
+			font-size: 20px
+			transition: color .2s linear
+
+			+ph
+				font-size: 18px

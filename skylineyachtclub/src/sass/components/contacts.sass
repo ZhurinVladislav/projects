@@ -1,0 +1,96 @@
+.home-page
+	.contacts
+		&__map-wrapper
+			padding-right: 50px
+
+			+ph
+				padding-right: 0
+	
+
+.contacts
+
+	&__content-main-wrapper
+		position: relative
+		display: flex
+		align-items: center
+		min-height: 600px
+
+		+ph
+			flex-direction: column
+
+	&__content-wrapper
+		position: relative
+		z-index: 2
+		padding: 0px 17px
+		max-width: 511px
+		width: 100%
+		
+		+sm
+			padding: 0px 10px
+			max-width: 350px
+
+		+ph
+			margin-bottom: 30px
+			max-width: 100%
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index: 1
+			width: 100%
+			height: 93%
+			border: 3px solid $clr_3
+			transform: translate(-50%, -50%)
+
+	&__content
+		position: relative
+		z-index: 2
+		padding: 60px
+		color: $clr_1
+		background-color: $clr_2
+		background-image: url(../img/price/bg-img.jpg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+
+		+md
+			padding: 40px 30px
+
+	&__list-item
+		&:not(:last-child)
+			margin-bottom: 20px
+
+	&__list-item-title
+		margin-bottom: 10px
+		font-family: $ff_1
+		color: $clr_1
+
+	.social-list
+
+		&__item
+			&:not(:last-child)
+				margin-right: 12px
+
+	&__map-wrapper
+		position: absolute
+		top: 0
+		z-index: 0
+		width: 100%
+		height: 100%
+		padding-left: 360px
+
+		+md
+			padding-left: 250px
+
+		+ph
+			position: static
+			padding-left: 0
+			height: 350px
+
+
+		iframe
+			width: 100%
+			height: 100%

@@ -1,0 +1,29 @@
+.gallery-section
+	.gallery
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-auto-rows: 300px
+		gap: 10px
+		@include textReset
+		font-size: 0
+		line-height: 0
+		margin-bottom: 40px
+
+		+md
+			grid-template-columns: repeat(3, 1fr)
+
+		+sm
+			grid-template-columns: repeat(2, 1fr)
+
+		+ph
+			grid-auto-rows: 30vh
+			grid-template-columns: 1fr
+
+		&__item
+			border-radius: 20px
+
+			+ph
+				border-radius: 15px
+
+	&__wrapper-text
+		max-width: 1200px

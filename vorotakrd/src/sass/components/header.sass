@@ -1,0 +1,482 @@
+.home-page
+  .header
+    margin-bottom: 0
+
+.header
+  &.header_active
+    position: fixed
+    padding-bottom: 0
+    max-height: 116px
+    animation-name: fadeInUp
+    animation-duration: 1s
+    z-index: 500
+
+    .header-top
+      opacity: 0
+      visibility: hidden
+      height: 0
+
+      +sm
+        opacity: 1
+        visibility: visible
+        height: auto
+    
+    .menu
+      font-size: 15px
+
+      &__item
+        &:not(:last-child)
+          margin-right: 15px
+
+    .list-inner
+      .menu
+        &__item
+          &:not(:last-child)
+            margin-right: 0
+
+    .header-bottom
+
+      &__link
+        +lr
+          font-size: 14px
+
+        &:not(:last-child)
+          margin-right: 15px
+
+          +lr
+            margin-right: 10px
+
+        &_ph
+          display: flex
+
+// ВЕРХНЕЕ МЕНЮ
+.header-top
+  letter-spacing: .02em
+  background-color: $clr_1
+  transition: opacity .2s linear, visibility .2s linear, height .2s linear
+
+  &__container
+    position: relative
+    display: flex
+    align-items: center
+    padding-top: 21px
+    padding-bottom: 21px
+
+    +ph
+      padding-top: 21px
+      padding-bottom: 21px
+    
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      width: calc(100% -  50px)
+      height: 1px
+      background-color: #bec3c6
+      transform: translateX(-50%)
+
+      +sm
+        display: none
+
+  &__logo
+    margin-right: 40px
+    max-width: 80px
+    height: 57px
+
+    +sm
+      max-width: 60px
+
+    +ph
+      max-width: 50px
+      height: 30px
+
+    &_main
+      margin-right: 10px
+      max-width: 347px
+      height: 57px
+
+      +sm
+        max-width: 250px
+        height: 33px
+
+      +ph
+        max-width: 210px
+
+    +md
+      margin-right: 10px
+
+  &__social-list
+    display: flex
+    align-items: center
+    margin-right: 40px
+
+    +sm
+      display: none
+
+  &__social-list-item
+
+    &:not(:last-child)
+      margin-right: 20px
+
+  &__feedback-list
+    display: flex
+
+    +md
+      flex-direction: column
+
+    +sm
+      margin-left: auto
+      margin-right: 40px
+
+    +ph
+      display: none
+
+  &__feedback-list-item
+
+    &:not(:last-child)
+      margin-right: 40px
+
+      +md
+        margin-right: 0
+        margin-bottom: 10px
+
+
+.site-wrapper
+  position: relative
+  margin-right: 20px
+  margin-left: auto
+
+  +sm
+    display: none
+
+  &__btn
+    display: flex
+    align-items: center
+    color: $clr_2
+
+    &:hover
+      +hover
+        .site-wrapper__icon
+          fill: $clr_4
+
+        .site-wrapper__text
+          color: $clr_4
+
+    &.active
+
+      .site-wrapper__icon-arrow
+        transform: rotate(90deg)
+
+  &__icon
+    margin-right: 12px
+    width: 13px
+    height: 16px
+    fill: $clr_2
+    transition: fill .2s linear
+
+  &__text
+    margin-right: 9px
+    transition: color .2s linear
+
+  &__icon-arrow
+    width: 12px
+    height: 12px
+    fill: $clr_2
+    transition: transform .2s linear
+
+  &__list
+    position: absolute
+    top: 25px
+    z-index: 100
+    display: flex
+    flex-direction: column
+    width: 200px
+    background-color: $clr_3
+
+    &.hidden
+      max-height: 0
+      overflow: hidden
+      transition: max-height .2s linear
+
+  &__list-link
+    display: flex
+    padding: 10px 20px
+    color: $clr_2
+    transition: background-color .2s linear, color .2s linear
+
+    &:hover
+      +hover
+        color: $clr_4
+        background-color: $clr_1
+
+// КНОПКА МОБИЛЬНОГО МЕНЮ
+.menu-toggle
+  position: relative
+  z-index: 30000
+  display: none
+  width: 30px
+  height: 25px
+
+  +sm
+    display: block
+
+  +ph
+    margin-left: auto
+
+  &__item
+    display: block
+    width: 100%
+    height: 2px
+    border-radius: 1px
+    background-color: $clr_2
+    position: absolute
+    transition: all .3s linear
+    transform: rotate(0) translate(0, 0)
+
+    &:nth-child(1)
+      top: 0
+      left: 0
+
+    &:nth-child(2)
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      opacity: 1
+
+    &:nth-child(3)
+      bottom: 0
+      left: 0
+
+  &.menu-toggle_active
+
+    .menu-toggle__item
+      background-color: $clr_2
+
+      &:nth-child(1)
+        transform: rotate(45deg) translate(-50%, -50%)
+        transform-origin: top left
+        left: 50%
+        top: 50%
+        
+      &:nth-child(2)
+        left: 100%
+        transform: translateY(0)
+        opacity: 0
+
+      &:nth-child(3)
+        transform: rotate(-45deg) translate(-50%, 50%)
+        transform-origin: bottom left
+        left: 50%
+        bottom: 50%
+
+// НИЖНЕЕ МЕНЮ
+.header-bottom
+  background-color: $clr_1
+  
+  +sm
+    display: none
+
+  &__container
+    display: flex
+    justify-content: space-between
+    
+    +ph
+      padding-top: 21px
+      padding-bottom: 21px
+
+  .menu
+    margin-right: 20px
+    font-weight: 600
+    text-transform: uppercase
+
+    +md
+      font-size: 15px
+
+    &__list
+      display: flex
+
+    &__item
+      position: relative
+      display: flex
+      
+      &:hover
+        +hover
+
+          > .list-inner
+              visibility: visible
+              opacity: 1
+              transform: translateX(0)
+
+          > .menu__link
+              .menu__arrow-icon
+                transform: rotate(90deg)
+
+
+      &:not(:last-child)
+        margin-right: 30px
+
+        +md
+          margin-right: 20px
+
+      &.active
+        .menu__link
+          border-color: $clr-4
+
+      &.parent
+        .menu__link-item
+          margin-right: 10px
+
+    &__link
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 18px 0
+      border-bottom: 2px solid $clr_0
+      transition: color .2s linear, border-color .2s linear
+
+      &:hover
+        +hover
+          color: $clr_4
+
+      &:focus:not(:active)
+        outline: 0
+        border-color: $clr_4
+
+    &__arrow-icon
+      flex-shrink: 0
+      width: 15px
+      height: 15px
+      transition: fill .2s linear, transform .2s linear
+
+  &__right-content
+    display: flex
+
+  &__link
+    margin-right: 40px
+
+    +md
+      margin-right: 30px
+
+    &_ph
+      display: none
+
+  .link-icon
+    width: max-content
+    font-weight: 600
+    text-transform: uppercase
+
+    &__item
+      fill: $clr_4
+
+      +md
+        width: 40px
+        height: 40px
+
+    &__text
+      +md
+        display: none
+
+    &:focus:not(:active)
+      .link-icon__item
+        fill: $clr_2
+  
+// ВЫПАДАЮЩИЙ СПИСОК НА ДЕСКТОПЕ
+.list-inner
+  position: absolute
+  top: 57px
+  left: 0
+  z-index: 100
+  display: flex
+  flex-direction: column
+  width: 300px
+  background-color: $clr_1
+  box-shadow: 0px 4px 20px 0px rgba(43, 42, 40, 0.3)
+  font-size: 14px
+  color: $clr_2
+  opacity: 0
+  visibility: hidden
+  transform: translateX(-20px)
+  transition: visibility .2s linear, opacity .3s linear, transform .2s linear
+
+  &__item
+    &.active
+      background-color: $clr_4
+      color: $clr_1
+
+  .menu__item
+    position: relative
+    text-align: start
+
+    > .list-inner
+        top: 0
+        left: 300px
+
+    &:not(:last-child)
+      margin-right: 0
+
+    &.active
+
+      > .menu__link
+          background-color: $clr_4
+          color: $clr_1
+
+          .menu__arrow-icon
+            fill: $clr_1
+
+    &.parent
+
+      > .menu__link
+        border-color: $clr_0
+
+      .menu__link
+        display: flex
+        padding: 0
+        padding-right: 20px
+        width: 100%
+        transition: background-color .2s linear
+
+      .menu__link-item
+        position: relative
+        padding: 10px 15px
+        transition: color .2s linear
+
+    &:hover
+      +hover
+        > .menu__link
+            background-color: $clr_4
+            color: $clr_1
+
+            .menu__arrow-icon
+              fill: $clr_1
+
+        > .list-inner
+            visibility: visible
+            opacity: 1
+            transform: translateX(0)
+
+    &.active
+      > .list-inner__link
+          background-color: rgba($clr_4, .8)
+          color: $clr_1
+
+          &:hover
+            +hover
+              background-color: rgba($clr_4, .8)
+              color: $clr_1
+
+  &__link
+    display: flex
+    width: 100%
+    border-color: $clr_0
+    transition: background-color .2s linear
+
+    &:hover
+      +hover
+        background-color: $clr_4
+        color: $clr_1
+
+  &__link-item
+    position: relative
+    padding: 10px 15px
+    transition: color .2s linear

@@ -126,6 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollHero = () => {
     const btn = document.getElementById('btn-hero');
 
+    if (!document.getElementById('btn-hero')) return;
+
     btn.addEventListener('click', () => {
       if (window.scrollY <= 100) {
         window.scrollTo({ top: 100, behavior: 'smooth' });
@@ -133,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  if (document.getElementById('btn-hero')) scrollHero();
+  scrollHero();
 
   // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
   const scrollTop = () => {
@@ -159,6 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // СЛАЙДЕР В БЛОКЕ РЫБА НА ГЛАВНОЙ СТРАНИЦЕ
   const fishSlider = () => {
+    if (!document.getElementById('fish-slider')) return;
+
     const swiper = new Swiper('#fish-slider', {
       spaceBetween: 20,
       slidesPerView: 1,
@@ -173,10 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  if (document.getElementById('fish-slider')) fishSlider();
+  fishSlider();
 
   // СЛАЙДЕР В БЛОКЕ ФЛОТ НА ГЛАВНОЙ СТРАНИЦЕ
   const fleetSlider = () => {
+    if (!document.getElementById('fleet-slider')) return;
+
     const swiper = new Swiper('#fleet-slider', {
       spaceBetween: 20,
       slidesPerView: 1,
@@ -191,9 +197,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  if (document.getElementById('fleet-slider')) fleetSlider();
+  fleetSlider();
 
   const yachtSlider = () => {
+    if (!document.getElementById('yacht-slider')) return;
+
     const swiper = new Swiper('.slider-bottom', {
       spaceBetween: 10,
       speed: 700,
@@ -226,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  if (document.getElementById('yacht-slider')) yachtSlider();
+  yachtSlider();
 
   // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
   $('.gallery').lightGallery({

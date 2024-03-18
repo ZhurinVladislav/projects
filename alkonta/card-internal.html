@@ -14,7 +14,10 @@
         <link rel="stylesheet" href="/app/css/main.min.css" />
         <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
         <!-- SCRIPTS -->
-        <script src="./app/js/libs/libs.js" type="module"></script>
+        <script src="./app/js/libs/preloader.js" defer></script>
+        <script src="./app/js/libs/modal-window.js" defer></script>
+        <script src="./app/js/libs/iframeLazyLoad.js" defer></script>
+        <script src="./app/js/libs/webp.js" defer></script>
         <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
         <script src="./app/js/libs/swiper-bundle.min.js" defer></script>
         <script src="./app/js/main.min.js" defer></script>
@@ -472,83 +475,25 @@
                                     nulla praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
                                 </p>
                             </div>
-                            <div class="card-internal__gallery-wrapper gallery-wrapper">
-                                <h2 class="gallery-wrapper__title h-2">Фотогалерея</h2>
-                                <ul class="gallery-wrapper__gallery gallery">
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-1.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-1.jpg"
-                                                alt="img-1" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-2.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-2.jpg"
-                                                alt="img-2" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-3.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-3.jpg"
-                                                alt="img-3" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-4.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-4.jpg"
-                                                alt="img-4" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-5.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-5.jpg"
-                                                alt="img-5" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-6.jpg"
-                                                alt="img-6" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-7.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-7.jpg"
-                                                alt="img-7" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-8.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-8.jpg"
-                                                alt="img-8" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-9.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-9.jpg"
-                                                alt="img-9" />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <a href="[[~[[*parent]]]]" class="card-internal__content-btn button-invert">
+                                <span class="button-invert__text"> Читать другие статьи </span>
+                                <span class="button-invert__icon-wrapper">
+                                    <svg class="button-invert__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                            <!-- <button
+                                class="card-internal__content-btn button-invert js-open-modal"
+                                aria-label="Оставить заявку на сайте"
+                                data-open="form-callback">
+                                <span class="button-invert__text"> Оставить заявку </span>
+                                <span class="button-invert__icon-wrapper">
+                                    <svg class="button-invert__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </span>
+                            </button> -->
                         </div>
                     </div>
                 </div>
