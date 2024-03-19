@@ -123,19 +123,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobMenuList();
 
-  const scrollHero = () => {
-    const btn = document.getElementById('btn-hero');
+  // АККОРДЕОН
+  const accordion = () => {
+    const ac = document.querySelectorAll('.js-ac');
+    const acBtn = document.querySelectorAll('.js-ac-btn');
+    const acText = document.querySelectorAll('.js-ac-content');
 
-    if (!document.getElementById('btn-hero')) return;
+    if (!ac) return;
 
-    btn.addEventListener('click', () => {
-      if (window.scrollY <= 100) {
-        window.scrollTo({ top: 100, behavior: 'smooth' });
-      }
+    acText.forEach(el => el.classList.add('ac-hidden'));
+
+    acBtn.forEach(el => {
+      el.addEventListener('click', () => {
+        const acContent = el.nextElementSibling;
+
+        if (acContent.style.maxHeight) {
+          acText.forEach(el => (el.style.maxHeight = null));
+          el.classList.remove('ac-active');
+        } else {
+          acText.forEach(el => {
+            el.style.maxHeight = null;
+            el.previousElementSibling.classList.remove('ac-active');
+          });
+          acContent.style.maxHeight = acContent.scrollHeight + 'px';
+          el.classList.add('ac-active');
+        }
+      });
     });
   };
 
-  scrollHero();
+  accordion();
 
   // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
   const scrollTop = () => {

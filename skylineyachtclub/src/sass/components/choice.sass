@@ -1,0 +1,105 @@
+.choice
+	background-color: $clr_2
+
+	&__content-wrapper
+		display: flex
+		justify-content: space-between
+		padding: 60px 0
+
+		+ph
+			flex-direction: column
+			padding: 40px 0
+
+	&__title
+		max-width: 472px
+		width: 100%
+		color: $clr_1
+
+		+ph
+			margin-bottom: 40px
+
+	&__list
+		max-width: 568px
+		width: 100%
+
+		+ph
+			max-width: 100%
+
+	&__list-item 
+		display: flex
+		flex-direction: column
+
+		&:not(:last-child)
+			margin-bottom: 20px
+			border-bottom: .5px solid $clr_1
+
+			.choice__list-btn
+				padding-bottom: 24px
+
+	&__list-btn
+		display: flex
+		align-items: center
+		min-height: 30px
+		font-family: $ff_2
+		font-weight: 500
+		line-height: 120%
+		font-size: 24px
+		color: $clr_1
+		cursor: pointer
+		transition: background-color .2s linear, color .2s linear
+
+		+sm
+			font-size: 22px
+
+		+ph
+			font-size: 20px
+
+		&:hover
+			+hover
+				color: $clr_3
+
+				.choice__list-btn-icon
+					fill: $clr_3
+
+		&.ac-active
+			color: $clr_3
+
+			.choice__list-btn-wrapper-icon
+				transform: rotateX(180deg)
+
+	&__list-btn-number
+		margin-right: 24px
+  
+	&__list-btn-text
+		margin-right: 20px
+		text-align: left
+    
+	&__list-btn-wrapper-icon
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		margin-left: auto
+		width: 24px
+		height: 24px
+		transition: background-color .2s linear, transform .2s linear
+    
+	&__list-btn-icon
+		width: 20px
+		height: 20px
+		fill: $clr_1
+		transform: rotate(90deg)
+		transition: fill .2s linear
+    
+	&__list-text
+		color: $clr_1
+		
+		&.text-default
+			padding: 24px 0
+			box-sizing: border-box
+			overflow-x: hidden
+    
+	.ac-hidden
+		max-height: 0
+		overflow: hidden
+		transition: max-height .3s linear
