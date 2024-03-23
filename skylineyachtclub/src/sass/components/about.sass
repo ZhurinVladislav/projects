@@ -1,130 +1,79 @@
 .about
-	line-height: 1.3
-
-	&__title
-		margin-bottom: 30px
-		color: $clr_3
-
 	&__content-wrapper
 		display: flex
-		margin-bottom: 46px
+		justify-content: space-between
 
-		+md
-			flex-wrap: wrap
+		+ph
+			flex-direction: column
 
-		+sm
-			margin-bottom: 25px
-
-	&__content-text
-		@include textReset
-		margin-right: 54px
-		max-width: 506px
-		font-size: 20px
-
-		+lr
-			max-width: 420px
-
-		+md
-			margin-bottom: 20px
-			max-width: 45%
+	&__img-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-right: 30px
+		max-width: 568px
+		line-height: 0
+		font-size: 0
 
 		+sm
-			margin-right: 30px
-			font-size: 18px
+			justify-content: flex-start
 
 		+ph
 			margin-right: 0
+			margin-bottom: 30px
 			max-width: 100%
-			font-size: 16px
 
-		&_last
-			margin-right: 10px
+	&__img
+		object-fit: cover
+		background-color: $clr_2
+		box-shadow: 0 13px 28px 0 rgba(5, 41, 67, 0.1), 0 51px 51px 0 rgba(5, 41, 67, 0.09), 0 116px 70px 0 rgba(5, 41, 67, 0.05), 0 206px 82px 0 rgba(5, 41, 67, 0.01), 0 322px 90px 0 rgba(5, 41, 67, 0)
 
-	&__btn
-		margin-top: auto
-		margin-left: auto
-		max-width: 238px
+		&_left
+			margin-right: 24px
+			max-width: 31%
+			
+			+sm
+				max-width: 30%
 
-		+md
-			margin: 0
+			+ph
+				margin-right: 12px
 
-	.block-image
-		margin: 0 -50px 0 -50px
-		padding: 329px 50px 50px 50px
-		min-height: 658px
-		border-radius: 50px
-		background-color: $clr_4
-		background-image: url(../img/about/bg-img.jpg)
-		background-position: center
-		background-size: cover
-		background-repeat: no-repeat
+		&_right
+			max-width: 67%
 
-		+md
-			margin: 0
+			+sm
+				max-width: 66%
+
+	&__content
+		display: flex
+		flex-direction: column
+		padding-top: 58px
+		max-width: 484px
+		width: 100%
 
 		+sm
-			display: flex
-			padding: 25px
-			min-height: 500px
-			border-radius: 30px
-		
+			padding-top: 0
+
 		+ph
-			padding: 0
-			min-height: auto
-			background-image: none
+			min-width: 100%
 
-		&__content
-			padding: 35px 50px 30px 40px
-			max-width: 736px
-			min-height: 275px
-			border-radius: 50px
-			background-color: $clr_1
+	&__text
 
-			+sm
-				margin-top: auto
-				padding: 25px
-				border-radius: 30px
+		&_hidden
+			margin-bottom: 18px
+			max-height: 0
+			overflow: hidden
+			transition: max-height .3s linear
 
-			+ph
-				padding: 30px 20px
-				max-width: 100%
-				width: 100%
-				min-height: 100%
-				background-color: $clr_4
+	.button-invert
+		max-width: 253px
 
-		&__content-top
-			display: flex
-			margin-bottom: 9px
+		+ph
+			max-width: 100%
 
-			+xs
-				flex-direction: column
+		&__icon
+			transform: rotate(90deg)
 
-		&__content-img
-			margin-right: 30px
-			width: 100px
-			height: 100px
-			border-radius: 50%
-
-			+ph
-				margin-right: 15px
-				margin-bottom: 20px
-				width: 70px
-				height: 70px
-
-		&__content-descr
-			@include textReset
-			max-width: 484px
-			font-size: 18px
-
-			+sm
-				font-size: 16px
-
-		&__content-signature
-			@include textReset
-			margin-left: auto
-			text-align: end
-			max-width: 248px
-			font-weight: 600
-
-			+ph
-				font-size: 14px
+		&.active
+			.button-invert__icon
+				transform: rotate(-90deg)

@@ -4,17 +4,16 @@
 		width: 100%
 		height: 100%
 		overflow-x: auto
+		opacity: 0
 
 		&.hide
 			display: none
 
 		&.show
 			display: flex
-			flex-direction: column
 			animation-fill-mode: forwards
-			animation-name: tabAnimate
-			animation-duration: .6s
-			animation-timing-function: cubic-bezier(0, 0.1, 0.2, 1)
+			animation-name: opacity
+			animation-duration: .8s
 
 .btns-list
 	display: flex

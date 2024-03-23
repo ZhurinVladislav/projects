@@ -1,16 +1,27 @@
 .form-mod
   display: flex
   flex-direction: column
+  max-width: 500px
+  width: 100%
   color: $clr_2
 
   .input-list
+    display: flex
+    flex-direction: column
     margin-bottom: 20px
 
     &__item
       display: flex
+      width: 100%
       
       &:not(:last-child)
         margin-bottom: 20px
+
+    &__input
+      width: 500px
+
+    &__textarea
+      width: 500px
 
   &__label
     margin-bottom: 10px

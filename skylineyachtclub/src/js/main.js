@@ -123,82 +123,114 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobMenuList();
 
-  const scrollHero = () => {
-    const btn = document.getElementById('btn-hero');
-
-    if (!document.getElementById('btn-hero')) return;
-
-    btn.addEventListener('click', () => {
-      if (window.scrollY <= 100) {
-        window.scrollTo({ top: 100, behavior: 'smooth' });
-      }
-    });
-  };
-
-  scrollHero();
-
-  // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
-  const scrollTop = () => {
-    const btn = document.getElementById('scroll-top');
+  // СМЕНА ЦВЕТА ПРИ СКРОЛЛЕ В БЛОКЕ СОЦ. СЕТЕЙ
+  const scrollColor = () => {
+    const wrapper = document.getElementById('social-panel');
+    const heroHomePage = document.getElementById('home-hero');
     let scrollY = 0;
+
+    if (!wrapper) return;
+
+    if (!heroHomePage) {
+      wrapper.classList.add('js-scroll-active');
+      return;
+    }
 
     window.addEventListener(
       'scroll',
       () => {
         scrollY = window.scrollY;
 
-        window.scrollY >= 100 ? btn.classList.add('scroll-top_active') : btn.classList.remove('scroll-top_active');
+        window.scrollY >= 400 ? wrapper.classList.add('js-scroll-active') : wrapper.classList.remove('js-scroll-active');
       },
       { passive: true }
     );
+  };
 
-    btn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  scrollColor();
+
+  // ДОПОЛНИТЕЛЬНЫЙ ТЕКСТ В БЛОКЕ "ABOUT"
+  const textHidden = () => {
+    const text = document.getElementById('about-text');
+    const btn = document.getElementById('about-btn');
+
+    if (!text) return;
+
+    btn.addEventListener('click', ev => {
+      const el = ev.currentTarget;
+
+      if (text.style.maxHeight) {
+        text.style.maxHeight = null;
+        el.classList.remove('active');
+      } else {
+        text.style.maxHeight = text.scrollHeight + 'px';
+        el.classList.add('active');
+      }
+
+      if (el.classList.contains('active')) {
+        el.querySelector('.button-invert__text').textContent = `Свернуть текст`;
+      } else {
+        el.querySelector('.button-invert__text').textContent = `Читать больше`;
+      }
     });
+  };
+
+  textHidden();
+
+  // АККОРДЕОН
+  const accordion = () => {
+    const ac = document.querySelectorAll('.js-ac');
+    const acBtn = document.querySelectorAll('.js-ac-btn');
+    const acText = document.querySelectorAll('.js-ac-content');
+
+    if (!ac) return;
+
+    acText.forEach(el => el.classList.add('ac-hidden'));
+
+    acBtn.forEach(el => {
+      el.addEventListener('click', () => {
+        const acContent = el.nextElementSibling;
+
+        if (acContent.style.maxHeight) {
+          acText.forEach(el => (el.style.maxHeight = null));
+          el.classList.remove('ac-active');
+        } else {
+          acText.forEach(el => {
+            el.style.maxHeight = null;
+            el.previousElementSibling.classList.remove('ac-active');
+          });
+          acContent.style.maxHeight = acContent.scrollHeight + 'px';
+          el.classList.add('ac-active');
+        }
+      });
+    });
+  };
+
+  accordion();
+
+  // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
+  const scrollTop = () => {
+    const btn = document.getElementById('scroll-top');
+    let scrollY = 0;
+
+    const addClassBtn = () => {
+      scrollY = window.scrollY;
+
+      window.scrollY >= 100 ? btn.classList.add('scroll-top_active') : btn.classList.remove('scroll-top_active');
+    };
+
+    const scrollPage = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.addEventListener('scroll', addClassBtn, { passive: true });
+
+    btn.addEventListener('click', scrollPage);
   };
 
   scrollTop();
 
-  // СЛАЙДЕР В БЛОКЕ РЫБА НА ГЛАВНОЙ СТРАНИЦЕ
-  const fishSlider = () => {
-    if (!document.getElementById('fish-slider')) return;
-
-    const swiper = new Swiper('#fish-slider', {
-      spaceBetween: 20,
-      slidesPerView: 1,
-      loop: false,
-      onlyExternal: false,
-      speed: 500,
-      navigation: {
-        disabledClass: 'arrow_disable',
-        nextEl: '#fish-btn-next',
-        prevEl: '#fish-btn-prev',
-      },
-    });
-  };
-
-  fishSlider();
-
-  // СЛАЙДЕР В БЛОКЕ ФЛОТ НА ГЛАВНОЙ СТРАНИЦЕ
-  const fleetSlider = () => {
-    if (!document.getElementById('fleet-slider')) return;
-
-    const swiper = new Swiper('#fleet-slider', {
-      spaceBetween: 20,
-      slidesPerView: 1,
-      loop: false,
-      onlyExternal: false,
-      speed: 500,
-      navigation: {
-        disabledClass: 'arrow_disable',
-        nextEl: '#fleet-btn-next',
-        prevEl: '#fleet-btn-prev',
-      },
-    });
-  };
-
-  fleetSlider();
-
+  // СЛАЙДЕР НА СТРАНИЦЕ ЯХТЫ
   const yachtSlider = () => {
     if (!document.getElementById('yacht-slider')) return;
 
@@ -236,6 +268,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   yachtSlider();
 
+  const cookiesHidden = () => {
+    const wrapper = document.getElementById('cookies');
+    const btn = document.getElementById('cookies-btn');
+    let closeBtn = window.sessionStorage.getItem('close');
+
+    if (!wrapper) return;
+
+    if (closeBtn) wrapper.style.display = 'none';
+
+    btn.addEventListener('click', () => {
+      wrapper.style.display = 'none';
+      window.sessionStorage.setItem('close', true);
+    });
+  };
+
+  cookiesHidden();
+
   // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
   $('.gallery').lightGallery({
     thumbnail: false,
@@ -244,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getCaptionFromTitleOrAlt: false,
   });
 
-  $('.yacht-slider').lightGallery({
+  $('#yacht-slider').lightGallery({
     thumbnail: false,
     share: false,
     selector: '.slider-top__slide',
