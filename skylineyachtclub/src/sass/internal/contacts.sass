@@ -1,76 +1,69 @@
 .contacts
-	
-	.content
-		display: flex
-		background-color: rgba($clr_4, .6)
-		border-radius: 50px
-		box-shadow: 0 20px 50px 0 rgba($clr_2, .15)
 
-		+sm
-			flex-direction: column
-			border-radius: 30px
+	&__container
+		position: relative
+		max-width: 1920px
+		width: 100%
+		margin: 0 auto
+
+	&__content-wrapper
+		display: flex
+		color: $clr_1
+		background-color: $clr_2
+		background-image: url(../img/common/pattern-invert.svg)
 
 		+ph
 			flex-direction: column
 
-		.list
-			display: flex
-			flex-direction: column
-			justify-content: center
-			flex: 0 0 40%
-			margin-right: 10px
-			padding: 20px 40px
+	&__map-wrapper
+		display: flex
+		margin-bottom: -.5px
+		max-width: 50%
+		width: 100%
 
-			+sm
-				margin-bottom: 20px
-				padding: 15px 10px 0px 10px
+		+ph
+			max-width: 100%
 
-			+ph
-				flex: 0 0 100%
-				margin-right: 0
-
-			.item
-				display: flex
-				flex-direction: column
-
-				&:not(:last-child)
-					margin-bottom: 20px
-
-				&__title
-					@include textReset
-					margin-bottom: 10px
-
-				&__link
-					max-width: max-content
-					border-bottom: 2px solid $clr_0
-					transition: color .2s linear, border-color .2s linear
-
-					&:not(:last-child)
-						margin-bottom: 10px
-
-					&:hover
-						color: $clr_3
-						border-color: $clr_3
-
-				&__descr
-					@include textReset
-					font-weight: 300
-					font-size: 14px
-					color: $clr_3
-
-		.map
-			flex: 0 0 60%
-			min-height: 400px
-			border-radius: 30px
-			overflow: hidden
+		iframe
+			width: 100%
+			height: 100%
 
 			+ph
-				flex: 0 0 100%
-				min-height: 350px
+				height: 400px
 
-			iframe
-				min-height: 350px
-				border-radius: 50px
+	&__content
+		padding: 60px
+		max-width: 50%
+		width: 100%
 
-				+sm
-					border-radius: 30px
+		+sm
+			padding: 40px
+
+		+ph
+			padding: 30px 10px
+			max-width: 100%
+
+	&__title
+		max-width: 335px
+
+	// &__form-text
+		// margin-bottom: 16px
+		// max-width: 335px
+		// line-height: 130%
+		// letter-spacing: .02em
+
+
+	&__list-item
+		&:not(:last-child)
+			margin-bottom: 20px
+
+	&__list-item-title
+		margin-bottom: 10px
+		font-family: $ff_1
+		color: $clr_1
+
+	.social-list
+
+		&__item
+			&:not(:last-child)
+				margin-right: 12px

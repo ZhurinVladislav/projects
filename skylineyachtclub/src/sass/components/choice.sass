@@ -1,5 +1,6 @@
 .choice
 	background-color: $clr_2
+	background-image: url(../img/common/pattern-invert.svg)
 
 	&__content-wrapper
 		display: flex
@@ -30,11 +31,15 @@
 		flex-direction: column
 
 		&:not(:last-child)
-			margin-bottom: 20px
+			margin-bottom: 22px
 			border-bottom: .5px solid $clr_1
 
 			.choice__list-btn
 				padding-bottom: 24px
+
+		&:last-child
+			.choice__list-text
+				padding-top: 24px
 
 	&__list-btn
 		display: flex
@@ -95,7 +100,7 @@
 		color: $clr_1
 		
 		&.text-default
-			padding: 24px 0
+			padding-bottom: 24px
 			box-sizing: border-box
 			overflow-x: hidden
     

@@ -7,10 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg" />
         <!-- SEO -->
-        <title>Контакты</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <!-- STYLES -->
+        <title>Яхта</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!-- STYLES -->
@@ -95,7 +92,7 @@
                             <li class="menu__item">
                                 <a class="menu__link" href="./main.html"> О нас </a>
                             </li>
-                            <li class="menu__item">
+                            <li class="menu__item active">
                                 <a class="menu__link" href="./catalog.html"> Каталог яхт </a>
                             </li>
                             <li class="menu__item parent">
@@ -129,7 +126,7 @@
                             <li class="menu__item">
                                 <a class="menu__link" href="./reviews.html"> Отзывы </a>
                             </li>
-                            <li class="menu__item active">
+                            <li class="menu__item">
                                 <a class="menu__link" href="./contacts.html"> Контакты </a>
                             </li>
                         </ul>
@@ -147,7 +144,7 @@
                             <li class="list__item item">
                                 <a href="./main.html" class="item__link"> О нас </a>
                             </li>
-                            <li class="list__item item">
+                            <li class="list__item item active">
                                 <a href="./catalog.html" class="item__link"> Каталог яхт </a>
                             </li>
                             <li class="list__item item parent">
@@ -178,7 +175,7 @@
                             <li class="list__item item">
                                 <a class="item__link" href="./reviews.html"> Отзывы </a>
                             </li>
-                            <li class="list__item item active">
+                            <li class="list__item item">
                                 <a class="item__link" href="./contacts.html"> Контакты </a>
                             </li>
                         </ul>
@@ -228,87 +225,289 @@
                 </div>
             </div>
         </header>
-        <!-- MAIN -->
         <main>
-            <!-- CONTACTS -->
-            <section class="contacts">
-                <div class="contacts__container">
-                    <h1 class="contacts__title-hidden h-0">Основная контактная информация яхт-клуба SkyLine</h1>
-                    <div class="contacts__breadcrumb-container container">
-                        <ol class="contacts__breadcrumb breadcrumb">
-                            <li>
-                                <a href="/">Главная</a>
-                            </li>
-                            <li class="breadcrumb-item active">&nbsp;Контакты</li>
-                        </ol>
-                    </div>
-                    <div class="contacts__content-wrapper">
-                        <div class="contacts__map-wrapper">
-                            <script
-                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aff2899ec578ce086bf251264c2c3a80ba884814d50b584e584d30cff8a6a6be0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"
-                                async></script>
-                        </div>
-                        <div class="contacts__content">
-                            <h2 class="contacts__title h-2">Контакты</h2>
-                            <ul class="contacts__list">
-                                <li class="contacts__list-item">
-                                    <h3 class="contacts__list-item-title h-3">Наш адрес</h3>
-                                    <address class="contacts__list-item-address">
-                                        г. Геленджик, Центральный причал
-                                    </address>
-                                </li>
-                                <li class="contacts__list-item">
-                                    <h3 class="contacts__list-item-title h-3">Телефон</h3>
-                                    <a
-                                        href="tel:+79284400014"
-                                        class="contacts__link link"
-                                        aria-label="Позвонить по номеру +7 (928) 440-00-14">
-                                        +7 (928) 440-00-14
+            <!-- YACHT -->
+            <section class="yacht section-reset">
+                <div class="yacht__container container">
+                    <ol class="yacht__breadcrumb breadcrumb">
+                        <li>
+                            <a href="/">Главная</a>
+                        </li>
+                        <li>
+                            <a href="/">&nbsp;Каталог яхт</a>
+                        </li>
+                        <li class="breadcrumb-item active">&nbsp;Яхта</li>
+                    </ol>
+                    <h1 class="yacht__title-hidden h-0">Аренда катеров для рыбалки в Геленджике</h1>
+                    <h2 class="yacht__title h-2">Яхта pershing 50 «Александра»</h2>
+                    <div class="yacht__content yacht-content">
+                        <div id="yacht-slider" class="content-top__slider yacht-slider">
+                            <div class="content-top__swiper swiper slider-top">
+                                <div class="swiper-wrapper slider-top__wrapper">
+                                    <a href="./app/img/gallery-inner/img-1.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-1.jpg"
+                                            class="slider-top__img swiper-img" />
                                     </a>
-                                </li>
-                                <li class="contacts__list-item">
-                                    <h3 class="contacts__list-item-title h-3">График работы</h3>
-                                    <p class="contacts__list-item-text">
-                                        Мы&nbsp;работаем ежедневно с&nbsp;07:00 до&nbsp;24:00
-                                    </p>
-                                </li>
-                                <li class="contacts__list-item">
-                                    <h3 class="contacts__list-item-title h-3">Счёт для бронирования</h3>
-                                    <p class="contacts__list-item-text">Сбербанка: 4276300011491498</p>
-                                </li>
-                                <li class="contacts__list-item">
-                                    <h3 class="contacts__list-item-title h-3">Мессенджеры</h3>
-                                    <ul class="contacts__social-list social-list">
-                                        <li class="social-list__item">
-                                            <a
-                                                aria-label="Связаться с нами в WhatsApp"
-                                                target="_blank"
-                                                href="https://wa.me/+79284400014"
-                                                class="social-list__link">
-                                                <svg class="social-list__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="social-list__item">
-                                            <a
-                                                aria-label="Связаться с нами в Telegram"
-                                                target="_blank"
-                                                href="https://t.me/+79284400014"
-                                                class="social-list__link">
-                                                <svg class="social-list__icon">
-                                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                                    <a href="./app/img/gallery-inner/img-2.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-2.jpg"
+                                            class="slider-top__img swiper-img" />
+                                    </a>
+                                    <a href="./app/img/gallery-inner/img-3.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-3.jpg"
+                                            class="slider-top__img swiper-img" />
+                                    </a>
+                                    <a href="./app/img/gallery-inner/img-4.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-4.jpg"
+                                            class="slider-top__img swiper-img" />
+                                    </a>
+                                    <a href="./app/img/gallery-inner/img-5.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-5.jpg"
+                                            class="slider-top__img swiper-img" />
+                                    </a>
+                                    <a href="./app/img/gallery-inner/img-6.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-6.jpg"
+                                            class="slider-top__img swiper-img" />
+                                    </a>
+                                    <a href="./app/img/gallery-inner/img-7.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-7.jpg"
+                                            class="slider-top__img swiper-img" />
+                                    </a>
+                                    <a href="./app/img/gallery-inner/img-8.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-8.jpg"
+                                            class="slider-top__img swiper-img" />
+                                    </a>
+                                    <a href="./app/img/gallery-inner/img-9.jpg" class="swiper-slide slider-top__slide">
+                                        <img
+                                            src="./app/img/gallery-inner/img-9.jpg"
+                                            class="slider-top__img swiper-img" />
+                                    </a>
+                                </div>
+                                <button class="slider-top__arrow arrow arrow_next">
+                                    <svg class="arrow__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <button class="slider-top__arrow arrow arrow_prev">
+                                    <svg class="arrow__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="swiper slider-bottom">
+                                <div class="swiper-wrapper slider-bottom__wrapper">
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-4.jpg" />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-5.jpg" />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-6.jpg" />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-7.jpg" />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-8.jpg" />
+                                    </div>
+                                    <div class="swiper-slide slider-bottom__slide">
+                                        <img
+                                            class="slider-bottom__img swiper-img"
+                                            src="./app/img/gallery-inner/img-9.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yacht-content__description-wrapper">
+                            <div class="yacht-content__text text-default">
+                                <p><strong>Пассажиров:</strong> до 12 человек</p>
+                                <p><strong>Ширина яхты:</strong> 4,8 м</p>
+                                <p><strong>Длина яхты:</strong> 15,53 м</p>
+                                <p><strong>Число кают:</strong> 3 шт</p>
+                                <p><strong>Спальные места:</strong> 8 шт</p>
+                            </div>
+                            <p class="yacht-content__book">
+                                Забронировать:
+                                <a class="yacht-content__book-link link-invert" href="tel:+79284400014"
+                                    >+7 (928) 440-00-14</a
+                                >
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- YACHT-DESCRIPTION -->
+            <section class="yacht-description section-reset">
+                <div class="yacht-description__container container">
+                    <h2 class="yacht-description__title h-2">Описание яхты</h2>
+                    <div class="yacht-description__text text-default">
+                        <p>
+                            Среднеразмерный скоростной открытый круизер Pershing 50 оптимален для тех, кто готов
+                            обойтись без команды. У этого небольшого Pershing есть все необходимое, чтобы оправдывать
+                            свое название — агрессивные линии экстерьера и, конечно, нетривиальные ходовые качества.
+                            Максимальная скорость у этой модели составляет 45 узлов, при этом круизная не намного меньше
+                            — 41 узел.
+                        </p>
+                        <p>
+                            Скоростные характеристики и прекрасно спланированные жилые помещения делают эту модель очень
+                            популярной.
+                        </p>
+                        <p>
+                            Несмотря на небольшие размеры, Pershing 50.1 в дневных плаваниях с комфортом разместит на
+                            своем борту до 12 гостей. Жилая палуба включает 3 двухместные каюты, два санузла, небольшой
+                            камбуз и компактную столовую с диваном и столиком.
+                        </p>
+                        <p>
+                            В главном салоне кроме столовой зоны есть также бар с холодильником и грилем. На лежаках в
+                            кокпите и на носовой палубе можно позагорать в свое удовольствие.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- FEEDBACK -->
+            <section class="feedback">
+                <div class="feedback__container">
+                    <div class="feedback__content-wrapper">
+                        <div class="feedback__map-wrapper">
+                            <script
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aff2899ec578ce086bf251264c2c3a80ba884814d50b584e584d30cff8a6a6be0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"
+                                async></script>
+                        </div>
+                        <div class="feedback__form-wrapper">
+                            <h2 class="feedback__form-title h-2">Арендовать яхту в&nbsp;Геленджике</h2>
+                            <p class="feedback__form-text">
+                                Оставьте свои контакты и&nbsp;наш менеджер с&nbsp;вами свяжется
+                            </p>
+                            <form class="feedback__form feedback-form">
+                                <div class="feedback-form__wrap-input wrap-input">
+                                    <div class="wrap-input__item">
+                                        <input
+                                            class="wrap-input__input input"
+                                            type="text"
+                                            name="name"
+                                            placeholder=" " />
+                                        <label class="wrap-input__label label">Имя</label>
+                                    </div>
+                                    <div class="wrap-input__item">
+                                        <input
+                                            class="wrap-input__input input"
+                                            type="number"
+                                            name="phone"
+                                            placeholder=" " />
+                                        <label class="wrap-input__label label">Телефон</label>
+                                    </div>
+                                    <div class="wrap-input__item">
+                                        <input
+                                            class="wrap-input__input input"
+                                            type="text"
+                                            name="e-mail"
+                                            placeholder=" " />
+                                        <label class="wrap-input__label label">E-mail</label>
+                                    </div>
+                                </div>
+                                <button aria-label="Отправить заявку" class="feedback-form__btn button">
+                                    Отправить
+                                </button>
+                                <label class="feedback-form__text form-note">
+                                    <input class="form-note__input" type="checkbox" checked />
+                                    <span class="form-note__checkbox"></span>
+                                    <span class="form-note__text">
+                                        Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
+                                        <a href="/" class="feedback-form__text-link">Пользовательского соглашения</a>
+                                    </span>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div class="modal form-callback" id="form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"></button>
+                    <p class="form-callback__title modal-title">Оставить заявку</p>
+
+                    <form action="/" class="form form-mod">
+                        <div class="form-mod__wrap-input wrap-input">
+                            <div class="wrap-input__item">
+                                <input class="wrap-input__input input" type="text" name="name" placeholder=" " />
+                                <label class="wrap-input__label label">Имя</label>
+                            </div>
+                            <div class="wrap-input__item">
+                                <input class="wrap-input__input input" type="number" name="phone" placeholder=" " />
+                                <label class="wrap-input__label label">Телефон</label>
+                            </div>
+                            <div class="wrap-input__item">
+                                <input class="wrap-input__input input" type="text" name="e-mail" placeholder=" " />
+                                <label class="wrap-input__label label">E-mail</label>
+                            </div>
+
+                            <label class="wrap-input__item form-note">
+                                <input class="form-note__input" type="checkbox" checked />
+                                <span class="form-note__checkbox"></span>
+                                <span class="form-note__text">
+                                    Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
+                                    <a href="/" class="form-note__text-link link-invert"
+                                        >Пользовательского соглашения</a
+                                    >
+                                </span>
+                            </label>
+                        </div>
+                        <button aria-label="Отправить заявку" type="submit" class="form-mod__btn button">
+                            <span class="button__text"> Отправить </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div class="modal form-success" id="form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
         </main>
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer__top footer-top">
                 <div class="footer-top__container container">
@@ -326,7 +525,7 @@
                                 <li class="footer-menu__item">
                                     <a class="footer-menu__link" href="/"> Главная </a>
                                 </li>
-                                <li class="footer-menu__item">
+                                <li class="footer-menu__item active">
                                     <a class="footer-menu__link" href="./main.html"> О нас </a>
                                 </li>
                                 <li class="footer-menu__item">
@@ -341,7 +540,7 @@
                                 <li class="footer-menu__item">
                                     <a class="footer-menu__link" href="./reviews.html"> Отзывы </a>
                                 </li>
-                                <li class="footer-menu__item active">
+                                <li class="footer-menu__item">
                                     <a class="footer-menu__link" href="./contacts.html"> Контакты </a>
                                 </li>
                             </ul>

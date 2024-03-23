@@ -12,9 +12,8 @@
         <meta name="keywords" content="" />
         <!-- STYLES -->
         <link rel="stylesheet" href="/app/css/main.min.css" />
-        <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/preloader.js" defer></script>
+        <script src="/app/js/libs/preloader.js"></script>
         <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
         <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
         <script src="/app/js/libs/webp.js" defer></script>
@@ -24,8 +23,17 @@
     </head>
 
     <body class="home-page">
+        <div id="preloader" class="home-page__preloader preloader">
+            <ul class="preloader__icon-wrapper">
+                <li class="preloader__list-item"></li>
+                <li class="preloader__list-item"></li>
+                <li class="preloader__list-item"></li>
+                <li class="preloader__list-item"></li>
+                <li class="preloader__list-item"></li>
+            </ul>
+        </div>
         <!-- HEADER -->
-        <header id="header" class="home-page__header header">
+        <header class="home-page__header header">
             <!-- HEADER-TOP -->
             <div class="header__top header-top">
                 <div class="header-top__container container">
@@ -43,7 +51,7 @@
                                 href="./contacts.html"
                                 class="header-top__address-link link"
                                 aria-label="Перейти за подробной контактной информацией">
-                                г. Геленджик, Центральный причал
+                                г. Геленджик, ул. Ленина, д. 1
                             </a>
                         </address>
                     </div>
@@ -210,7 +218,7 @@
                                 <svg class="list-link__icon">
                                     <use xlink:href="/app/img/icons/icons.svg#mark"></use>
                                 </svg>
-                                <address class="list-link__descr">г. Геленджик, Центральный причал</address>
+                                <address class="list-link__descr">г. Геленджик, ул. Ленина, д. 1</address>
                             </a>
                         </li>
                     </ul>
@@ -220,9 +228,9 @@
         <!-- MAIN -->
         <main class="home-page__main main-section">
             <!-- HERO -->
-            <section class="main-section__hero hero">
+            <section id="home-hero" class="main-section__hero hero">
                 <div class="hero__container container">
-                    <h1 class="hero__title h-1">Морская рыбалка в&nbsp;Геленджике</h1>
+                    <h1 class="hero__title h-1">Аренда яхты в&nbsp;Геленджике</h1>
                     <p class="hero__subtitle up-case">Открытое море, солнце, уединение</p>
                 </div>
             </section>
@@ -236,12 +244,12 @@
                             <p class="advantages__content-text">
                                 Уникальная возможность погрузиться в&nbsp;морское приключение
                             </p>
-                            <p class="advantages__content-text">
+                            <p class="advantages__content-text advantages__content-text_last">
                                 С&nbsp;нами можно насладиться яркими эмоциями, свежим морским воздухом, бескрайними
                                 просторами и&nbsp;приятным обществом друзей. Также можно провести романтический ужин
                                 на&nbsp;закате, или просто расслабиться и&nbsp;насладиться спокойствием морской глади
                             </p>
-                            <p class="advantages__content-text advantages__content-text_last">
+                            <p class="advantages__content-text advantages__content-text_more ">
                                 Подробная информация и бронирование по номеру:
                             </p>
                             <a
@@ -319,7 +327,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -353,7 +364,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -387,7 +401,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -421,7 +438,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -455,7 +475,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -489,7 +512,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -523,7 +549,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -557,7 +586,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -591,7 +623,10 @@
                                     </button>
                                 </li>
                                 <li class="btns-list__item">
-                                    <a class="btns-list__item-link" href="Перейти на подробную страницу о яхте">
+                                    <a
+                                        class="btns-list__item-link"
+                                        href="./yacht.html"
+                                        aria-label="Перейти на подробную страницу о яхте">
                                         Подробнее
                                     </a>
                                 </li>
@@ -607,16 +642,21 @@
                 </div>
             </section>
             <!-- ABOUT -->
-            <!--
             <section class="main-section__about about section-reset">
                 <div class="about__container container">
-                    <h2 class="about__title-hidden h-0">
-                        О яхт-клубе SkyLine в Геленджике
-                    </h2>
+                    <h2 class="about__title-hidden h-0">О яхт-клубе SkyLine в Геленджике</h2>
                     <div class="about__content-wrapper">
                         <div class="about__img-wrapper">
-                            <img class="about__img-left" src="./app/img/about/img-1.jpg" alt="аренда яхт в Геленджике" title="аренда яхт в Геленджике" />
-                            <img class="about__img-right" src="./app/img/about/img-2.jpg" alt="аренда яхт в Геленджике" title="аренда яхт в Геленджике" />
+                            <img
+                                class="about__img about__img_left"
+                                src="./app/img/about/img-1.jpg"
+                                alt="аренда яхт в Геленджике"
+                                title="аренда яхт в Геленджике" />
+                            <img
+                                class="about__img about__img_right"
+                                src="./app/img/about/img-2.jpg"
+                                alt="аренда яхт в Геленджике"
+                                title="аренда яхт в Геленджике" />
                         </div>
                         <div class="about__content">
                             <div class="about__text text-default">
@@ -646,11 +686,42 @@
                                     и&nbsp;отправляетесь в&nbsp;места, которые лишь вам угодны.
                                 </p>
                             </div>
+                            <div id="about-text" class="about__text about__text_hidden text-default">
+                                <p>
+                                    Катание на&nbsp;яхтах уже много лет является неотъемлемой частью туризма, потому
+                                    как, где ещё такая свобода действий, красота морской природы, самые комфортабельные
+                                    условия, непередаваемая романтика и&nbsp;лучший отдых. В&nbsp;современном мире
+                                    яхтинг охватывает собой всё новые точки земного шара, отправляясь в&nbsp;разные
+                                    неизведанные страны и&nbsp;их&nbsp;города.
+                                </p>
+                                <p>
+                                    Наша компания готова предложить аренду яхт в&nbsp;Геленджике по&nbsp;самым низким
+                                    ценам, прямо от&nbsp;хозяина, но&nbsp;вы&nbsp;всегда можете заказать дополнительные
+                                    услуги и&nbsp;разнообразить поездку.
+                                </p>
+                                <p>
+                                    Данный вид туризма получил жизнь, благодаря появлению всё новых видов и&nbsp;типов
+                                    морских кораблей. У&nbsp;нас яхту можно арендовать на&nbsp;пару часов, на&nbsp;целые
+                                    сутки, или даже, на более долгое время. Все услуги у&nbsp;нас доступны. Зачастую
+                                    люди арендуют у&nbsp;нас моторные яхты известных производителей (Feretti, Princess
+                                    или Azimut). Да, это дороже, чем парусное судно аналогичных размеров, потому как
+                                    учитываются затраты на&nbsp;топливо. Но, при этом, такая яхта намного комфортнее,
+                                    весь интерьер и&nbsp;жилые помещения сделаны только из&nbsp;самых дорогих
+                                    и&nbsp;лучших материалов. Да&nbsp;и&nbsp;путешествие на&nbsp;моторной яхте дарит
+                                    самые незабываемые впечатления&nbsp;&mdash; запускаете двигатель,
+                                    и&nbsp;отправляетесь в&nbsp;места, которые лишь вам угодны.
+                                </p>
+                            </div>
+                            <button id="about-btn" class="about__btn button-invert" aria-label="Открыть больше">
+                                <span class="button-invert__text">Читать больше</span>
+                                <svg class="button-invert__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
-            -->
             <!-- CHOICE -->
             <section class="main-section__choice choice section-reset">
                 <div class="choice__container container">
@@ -857,117 +928,58 @@
                 </div>
             </section>
             <!-- FEEDBACK -->
-            <section class="main-section__feedback feedback section-reset">
-                <div class="feedback__container container">
-                    <div class="feedback__img-wrapper">
-                        <img
-                            src="./app/img/feedback/img-1.jpg"
-                            alt="Рыбалка на катере в Геленджике"
-                            title="Рыбалка на катере в Геленджике"
-                            class="feedback__img" />
-                    </div>
+            <section class="main-section__feedback feedback">
+                <div class="feedback__container">
                     <div class="feedback__content-wrapper">
-                        <h2 class="feedback__title h-2">Оставить заявку</h2>
-                        <img src="./app/img/common/harpoon.svg" alt="Гарпун" class="feedback__icon icon-common" />
-                        <p class="feedback__text">
-                            Заполните поля, с&nbsp;вами свяжется оператор и&nbsp;ответит на&nbsp;все вопросы
-                        </p>
-                        <form class="feedback__form form">
-                            <div class="form__wrap-input wrap-input">
-                                <div class="wrap-input__item">
-                                    <input class="wrap-input__input input" type="text" name="name" placeholder=" " />
-                                    <label class="wrap-input__label label">Имя</label>
-                                </div>
-                                <div class="wrap-input__item">
-                                    <input class="wrap-input__input input" type="number" name="phone" placeholder=" " />
-                                    <label class="wrap-input__label label">Телефон</label>
-                                </div>
-                                <div class="wrap-input__item">
-                                    <input class="wrap-input__input input" type="text" name="e-mail" placeholder=" " />
-                                    <label class="wrap-input__label label">E-mail</label>
-                                </div>
-                            </div>
-                            <div class="form__bottom-content">
-                                <button aria-label="Отправить заявку" class="form__btn button-invert">
-                                    Оставить заявку
-                                </button>
-                                <p class="form__text">
-                                    Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
-                                    <a href="/" class="form__text-link link-invert">Пользовательского соглашения</a>
-                                </p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!-- CONTACTS -->
-            <section class="main-section__contacts contacts">
-                <div class="contacts__container container">
-                    <div class="contacts__content-main-wrapper">
-                        <div class="contacts__content-wrapper">
-                            <div class="contacts__content">
-                                <h2 class="contacts__title h-2">Контакты</h2>
-                                <img
-                                    src="./app/img/common/harpoon.svg"
-                                    alt="Гарпун"
-                                    class="contacts__icon icon-common" />
-                                <ul class="contacts__list">
-                                    <li class="contacts__list-item">
-                                        <h3 class="contacts__list-item-title h-3">Наш адрес</h3>
-                                        <address class="contacts__list-item-address">
-                                            <a
-                                                href="/"
-                                                class="contacts__link link"
-                                                aria-label="Перейти на общую страницу контактов">
-                                                г. Геленджик, Центральный причал
-                                            </a>
-                                        </address>
-                                    </li>
-                                    <li class="contacts__list-item">
-                                        <h3 class="contacts__list-item-title h-3">Телефон</h3>
-                                        <a
-                                            href="tel:+79284400014"
-                                            class="contacts__link link"
-                                            aria-label="Позвонить по номеру +7 (928) 440-00-14">
-                                            +7 (928) 440-00-14
-                                        </a>
-                                    </li>
-                                    <li class="contacts__list-item">
-                                        <h3 class="contacts__list-item-title h-3">Мессенджеры</h3>
-                                        <ul class="contacts__social-list social-list">
-                                            <li class="social-list__item">
-                                                <a
-                                                    aria-label="Связаться с нами в WhatsApp"
-                                                    target="_blank"
-                                                    href="https://wa.me/+79284400014"
-                                                    class="social-list__link">
-                                                    <svg class="social-list__icon">
-                                                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li class="social-list__item">
-                                                <a
-                                                    aria-label="Связаться с нами в Telegram"
-                                                    target="_blank"
-                                                    href="https://t.me/+79284400014"
-                                                    class="social-list__link">
-                                                    <svg class="social-list__icon">
-                                                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="contacts__map-wrapper">
+                        <div class="feedback__map-wrapper">
                             <script
-                                type="text/javascript"
-                                charset="utf-8"
-                                async
-                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaf839be983af99403268768d31de7d96f4b09d4b65d19bc2d2659d8b6ce01c7f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aff2899ec578ce086bf251264c2c3a80ba884814d50b584e584d30cff8a6a6be0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"
+                                async></script>
+                        </div>
+                        <div class="feedback__form-wrapper">
+                            <h2 class="feedback__form-title h-2">Арендовать яхту в&nbsp;Геленджике</h2>
+                            <p class="feedback__form-text">
+                                Оставьте свои контакты и&nbsp;наш менеджер с&nbsp;вами свяжется
+                            </p>
+                            <form class="feedback__form feedback-form">
+                                <div class="feedback-form__wrap-input wrap-input">
+                                    <div class="wrap-input__item">
+                                        <input
+                                            class="wrap-input__input input"
+                                            type="text"
+                                            name="name"
+                                            placeholder=" " />
+                                        <label class="wrap-input__label label">Имя</label>
+                                    </div>
+                                    <div class="wrap-input__item">
+                                        <input
+                                            class="wrap-input__input input"
+                                            type="number"
+                                            name="phone"
+                                            placeholder=" " />
+                                        <label class="wrap-input__label label">Телефон</label>
+                                    </div>
+                                    <div class="wrap-input__item">
+                                        <input
+                                            class="wrap-input__input input"
+                                            type="text"
+                                            name="e-mail"
+                                            placeholder=" " />
+                                        <label class="wrap-input__label label">E-mail</label>
+                                    </div>
+                                </div>
+                                <button aria-label="Отправить заявку" class="feedback-form__btn button">
+                                    Отправить
+                                </button>
+                                <label class="feedback-form__text form-note">
+                                    <input class="form-note__input" type="checkbox" checked />
+                                    <span class="form-note__checkbox"></span>
+                                    <span class="form-note__text">
+                                        Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
+                                        <a href="/" class="form-note__text-link link">Пользовательского соглашения</a>
+                                    </span>
+                                </label>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -1006,7 +1018,7 @@
                                 </span>
                             </label>
                         </div>
-                        <button aria-label="Отправить заявку" type="submit" class="form-mod__btn button-invert">
+                        <button aria-label="Отправить заявку" type="submit" class="form-mod__btn button">
                             <span class="button__text"> Отправить </span>
                         </button>
                     </form>
@@ -1029,39 +1041,66 @@
         <footer class="home-page__footer footer">
             <div class="footer__top footer-top">
                 <div class="footer-top__container container">
-                    <div class="footer-top__content">
+                    <div class="footer-top__content-wrapper">
                         <a href="/" class="footer-top__logo logo">
                             <img
                                 class="logo__img"
-                                src="/app/img/logo.svg"
+                                src="/app/img/logo-invert.svg"
                                 alt="Логотип Морская рыбалка Геленджик"
                                 title="Морская рыбалка Геленджик" />
                         </a>
-                        <nav class="footer-top__menu menu">
-                            <ul class="menu__list">
-                                <li class="menu__item active">
-                                    <a class="menu__link" href="/"> Главная </a>
+                        <nav class="footer-top__menu footer-menu">
+                            <p class="footer-menu__title up-case footer-title">Меню</p>
+                            <ul class="footer-menu__list">
+                                <li class="footer-menu__item active">
+                                    <a class="footer-menu__link active" href="/"> Главная </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./main.html"> О нас </a>
+                                <li class="footer-menu__item">
+                                    <a class="footer-menu__link" href="./main.html"> О нас </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./types-of-fishing.html"> Виды рыбалки </a>
+                                <li class="footer-menu__item">
+                                    <a class="footer-menu__link" href="./catalog.html"> Каталог яхт </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./fleet.html"> Флот </a>
+                                <li class="footer-menu__item">
+                                    <a class="footer-menu__link" href="./services.html"> Услуги </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./price.html"> Прайс </a>
+                                <li class="footer-menu__item">
+                                    <a class="footer-menu__link" href="./booking.html"> Условия бронирования </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./stocks.html"> Акции </a>
+                                <li class="footer-menu__item">
+                                    <a class="footer-menu__link" href="./reviews.html"> Отзывы </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="./contacts.html"> Контакты </a>
+                                <li class="footer-menu__item">
+                                    <a class="footer-menu__link" href="./contacts.html"> Контакты </a>
                                 </li>
                             </ul>
                         </nav>
+                        <div class="footer-top__contacts footer-contacts">
+                            <p class="footer-contacts__title up-case footer-title">Контакты</p>
+                            <ul class="footer-contacts__list">
+                                <li class="footer-contacts__list-item">
+                                    <p class="footer-contacts__text up-case">Яхт-клуб SkyLine</p>
+                                </li>
+                                <li class="footer-contacts__list-item">
+                                    <address class="footer-contacts__address">
+                                        <a href="/" class="footer-contacts__address-link"
+                                            >г. Геленджик, ул. Ленина, д. 1</a
+                                        >
+                                    </address>
+                                </li>
+                                <li class="footer-contacts__list-item">
+                                    <a
+                                        class="footer-contacts__link"
+                                        href="tel:"
+                                        aria-label="Позвонить по номеру +7 (928) 440-00-14"
+                                        >+7 (928) 440-00-14</a
+                                    >
+                                </li>
+                                <li class="footer-contacts__list-item">
+                                    <p class="footer-contacts__text">Ежедневно: с&nbsp;07:00 до&nbsp;24:00</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1093,7 +1132,7 @@
             </div>
         </footer>
         <!-- SOCIAL PANEL -->
-        <ul class="home-page__social-panel social-panel">
+        <ul id="social-panel" class="home-page__social-panel social-panel">
             <li class="social-panel__item">
                 <a
                     aria-label="Связаться с нами в WhatsApp"
@@ -1116,20 +1155,33 @@
                     </svg>
                 </a>
             </li>
-            <li class="social-panel__item">
-                <a aria-label="Позвонить по +79284400014" href="tel:+79284400014" class="social-panel__link">
-                    <svg class="social-panel__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#ph"></use>
-                    </svg>
-                </a>
-            </li>
         </ul>
         <!-- SCROLL-TOP -->
-        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+        <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
             <svg class="scroll-top__icon">
                 <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
             </svg>
         </button>
+        <!-- COOKIES -->
+        <div id="cookies" class="home-page__cookies cookies">
+            <div class="cookies__container container">
+                <div class="cookies__content-wrapper">
+                    <p class="cookies__content-text">
+                        Наш сайт использует куки. Продолжая им&nbsp;пользоваться, вы&nbsp;соглашаетесь на&nbsp;обработку
+                        персональных данных в&nbsp;соответствии с
+                        <a
+                            href="/"
+                            class="cookies__content-text-link link-invert"
+                            aria-label="Перейти на страницу с Политикой конфиденциальности"
+                            >&nbsp;Политикой конфиденциальности</a
+                        >
+                    </p>
+                    <button id="cookies-btn" aria-label="Закрыть окно c куками" class="cookies__btn button">
+                        Принять и закрыть
+                    </button>
+                </div>
+            </div>
+        </div>
         <!-- SCRIPTS -->
         <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
     </body>

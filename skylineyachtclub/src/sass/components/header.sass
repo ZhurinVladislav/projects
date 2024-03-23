@@ -7,13 +7,17 @@
     background-image: none !important
     box-shadow: none
 
-    .header-bottom
-      padding-bottom: 0
+    .header-top
+      margin-bottom: 20px
+
+      +sm
+        margin-bottom: 0
 
 .header
   line-height: 120%
   color: $clr_1
   background-color: $clr_2
+  background-image: url(../img/common/pattern-invert.svg)
   margin-bottom: 40px
 
   +sm
@@ -21,15 +25,19 @@
 
   .header-top
     margin-bottom: 20px
+    font-weight: 500
 
     +sm
-      margin-bottom: 0
+      margin-bottom: 10px
 
     &__container
       display: flex
       justify-content: space-between
       align-items: center
       padding-top: 20px
+
+      +ph
+        padding-top: 10px
 
     &__content-left
       display: flex
@@ -113,7 +121,7 @@
       &.menu-toggle_active
 
         .menu-toggle__item
-          background-color: $clr_2
+          background-color: $clr_3
 
           &:nth-child(1)
             transform: rotate(45deg) translate(-50%, -50%)
@@ -133,7 +141,6 @@
             bottom: 50%
 
   .header-bottom
-    padding-bottom: 20px
     border-top: .5px solid $clr_1
     border-bottom: .5px solid $clr_1
 
