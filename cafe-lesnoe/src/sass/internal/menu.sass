@@ -1,0 +1,212 @@
+.menu-inner
+	&__title
+		line-height: 90%
+	
+.catalog
+	display: flex
+	justify-content: space-between
+	gap: 40px
+
+	+sm
+		flex-direction: column
+
+	+ph
+		gap: 20px
+
+	&__categories
+		max-width: 20%
+		width: 100%
+
+		+sm
+			max-width: 100%
+
+	&__categories-title
+		margin-bottom: 20px
+		font-weight: 700
+		font-size: 25px
+
+.dishes
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+
+.dishes-list
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	gap: 20px
+	width: 100%
+
+	+lr
+		grid-template-columns: repeat(2, 1fr)
+
+	+ph
+		grid-template-columns: 1fr
+		max-width: 500px
+
+	&__item
+		display: flex
+		flex-direction: column
+		width: 100%
+		height: 100%
+		background-color: rgba($clr_3, .2)
+
+.categories-list
+	position: sticky
+	top: 40px
+
+	+sm
+		display: flex
+		flex-wrap: wrap
+		gap: 20px
+
+	+ph
+		flex-wrap: nowrap
+		display: flex
+		padding-bottom: 20px
+		font-size: 18px
+		overflow-x: auto
+		
+	&__item
+		display: flex
+		width: 100%
+		height: 100%
+
+		&.active
+			.categories-list__item-link
+				color: $clr_3
+
+	&__item-link
+		display: flex
+		padding: 10px 0
+		width: 100%
+		height: 100%
+		border-bottom: 1px solid $clr_2
+		transition: color .2s linear, border-color .2s linear
+
+		+sm
+			padding: 0
+			border-color: $clr_0
+
+		+ph
+			width: max-content
+
+		&:hover
+			+hover
+				color: $clr_3
+
+		&:focus:not(:active)
+			color: $clr_3
+			border-color: $clr_3
+
+.sort-list
+	display: flex
+	align-items: center
+	margin-right: auto
+	margin-bottom: 20px
+
+	+ph
+		flex-wrap: wrap
+
+	&__item
+		position: relative
+
+		&:not(:last-child)
+			margin-right: 30px
+
+			+ph
+				margin-right: 20px
+
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				right: -15px
+				width: 1px
+				height: 70%
+				background-color: $clr_2
+				transform: translateY(-50%)
+
+				+ph
+					right: -10px
+
+		&:first-child
+			margin-right: 10px
+
+			&::after
+				display: none
+
+	&__item-btn
+		transition: color .2s linear
+
+		&:hover
+			+hover
+				color: $clr_3
+
+		&:focus:not(:active)
+			color: rgba($clr_3, .8)
+
+.dish-link
+	position: relative
+	display: flex
+	flex-direction: column
+	margin-bottom: 20px
+	font-size: 18px
+	color: $clr_2
+
+	&:hover
+		+hover
+			.dish-link__title
+				color: $clr_3
+
+	&__img-wrapper
+		position: relative
+		display: flex
+		margin-bottom: 20px
+		max-height: 220px
+		height: 100%
+
+	&__img
+		width: 100%
+		height: 100%
+		font-size: 0
+		line-height: 0
+		object-fit: cover
+
+	&__weight
+		position: absolute
+		right: 10px
+		bottom: -15px
+		padding: 5px 10px
+		color: $clr_1
+		background-color: $clr_2
+
+	&__title
+		margin-bottom: 10px
+		padding-left: 10px
+		transition: color .2s linear
+
+	&__descr
+		padding-left: 10px
+
+.dish-form
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-top: auto
+	padding: 0 10px 10px 10px
+	font-size: 18px
+	
+	+ph
+		gap: 20px
+
+	&__price
+		font-weight: 700
+
+	&__btn
+		padding: 5px 10px
+		min-height: 40px
+		font-size: 16px
+
+		+ph
+			max-width: 100px

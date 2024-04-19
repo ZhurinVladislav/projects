@@ -130,8 +130,40 @@
 		&.contacts-content__list-item_ph
 			margin-bottom: 10px
 
+	&__list-item-text
+		margin-bottom: 10px
+		font-weight: 700
+
 	.link-icon
 		max-width: max-content
 
 		&__item
 			fill: $clr_3
+
+.contacts-social-list
+	display: flex
+	align-items: center
+	gap: 20px
+
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 30px
+		height: 30px
+
+	&__item-link
+		flex-shrink: 0
+		width: 100%
+		height: 100%
+
+		&:hover
+			+hover
+				.contacts-social-list__item-link-icon
+					fill: $clr_2
+		
+	&__item-link-icon
+		fill: $clr_3
+		width: 100%
+		height: 100%
+		transition: fill .2s linear

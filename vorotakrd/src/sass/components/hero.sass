@@ -5,7 +5,7 @@
     display: flex
     width: 100%
     height: 100%
-    
+
   .slider-navigation
     position: absolute
     z-index: 10
@@ -22,9 +22,11 @@
       bottom: 100px
 
     +sm
-      bottom: 80px
+      bottom: 50%
+      justify-content: flex-end
 
     +ph
+      bottom: 65%
       padding: 0px 10px
 
   &__wrapper
@@ -38,6 +40,9 @@
     height: 100%
     box-sizing: border-box
 
+    +sm
+      flex-direction: column
+
     &::after
       content: ''
       position: absolute
@@ -48,12 +53,24 @@
       height: 100%
       background: linear-gradient(35deg, #263640 23.88%, rgba(38, 54, 64, 0) 76.42%)
       opacity: .7
+
+      +sm
+        display: none
     
     &__img
       position: absolute
       width: 100%
       height: 100%
       object-fit: cover
+      object-position: right
+
+      +sm
+        position: relative
+        margin-bottom: 40px
+
+      +ph
+        margin-bottom: 20px
+        min-height: 168px
 
     &__content-wrapper
       z-index: 1
@@ -68,25 +85,25 @@
         padding: 100px 25px
 
       +sm
-        padding: 70px 25px
+        padding: 0 20px
 
       +ph
         display: flex
         flex-direction: column
         align-items: center
-        padding-left: 10px
-        padding-right: 10px
-        padding-bottom: 48px
+        padding: 0 10px
 
     &__content
       position: relative
       margin-top: auto
       max-width: 866px
+      width: 100%
       min-height: 314px
       color: $clr_1
 
       +sm
-        border-radius: 30px
+        min-height: 176px
+        color: $clr_2
 
       +ph
         max-width: 100%
@@ -101,6 +118,7 @@
 
       +sm
         font-size: 35px
+        color: $clr_2
 
       +ph
         margin-bottom: 15px
@@ -110,3 +128,6 @@
       margin-bottom: 40px
       font-size: 16px
       opacity: .8
+
+      +ph
+        margin-bottom: 20px

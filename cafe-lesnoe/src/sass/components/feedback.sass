@@ -1,0 +1,92 @@
+.feedback
+	background-color: $clr_2
+	background-image: url(../img/common/pattern-invert.svg)
+	
+	&__container
+		position: relative
+		max-width: 1920px
+		width: 100%
+		margin: 0 auto
+
+	&__content-wrapper
+		display: flex
+		color: $clr_1
+
+		+ph
+			flex-direction: column
+
+	&__map-wrapper
+		display: flex
+		margin-bottom: -.5px
+		max-width: 50%
+		width: 100%
+
+		+ph
+			max-width: 100%
+
+		iframe
+			width: 100%
+			height: 100%
+
+			+ph
+				height: 400px
+
+	&__form-wrapper
+		padding: 60px
+		max-width: 50%
+		width: 100%
+
+		+sm
+			padding: 40px
+
+		+ph
+			padding: 30px 10px
+			max-width: 100%
+
+	&__form-title
+		max-width: 335px
+
+	&__form-text
+		margin-bottom: 16px
+		max-width: 335px
+		line-height: 130%
+		letter-spacing: .02em
+
+.feedback-form
+	max-width: 409px
+	width: 100%
+
+	+ph
+		max-width: 100%
+
+	.wrap-input
+		margin-bottom: 24px
+
+		&__item
+			
+			&:not(:last-child)
+				margin-bottom: 12px
+
+	&__btn
+		margin-bottom: 12px
+
+		&:hover
+			+hover
+				background-color: $clr_0
+				border-color: $clr_3
+
+	&__text
+		max-width: 358px
+		font-size: 14px
+		line-height: 130%
+		letter-spacing: .02em
+
+	&__text-link
+		display: inline
+		border-bottom: .5px solid $clr_1
+		transition: border-color .2s linear, color .2s linear
+
+		&:hover
+			+hover
+				color: $clr_3
+				border-color: $clr_0

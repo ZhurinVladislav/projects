@@ -332,7 +332,24 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   scrollTop();
 
-  // СЛАЙДЕР В БЛОКЕ РЫБА НА ГЛАВНОЙ СТРАНИЦЕ
+  const cookiesHidden = () => {
+    const wrapper = document.getElementById('cookies');
+    const btn = document.getElementById('cookies-btn');
+    let closeBtn = window.sessionStorage.getItem('close');
+
+    if (!wrapper) return;
+
+    if (closeBtn) wrapper.style.display = 'none';
+
+    btn.addEventListener('click', () => {
+      wrapper.style.display = 'none';
+      window.sessionStorage.setItem('close', true);
+    });
+  };
+
+  cookiesHidden();
+
+  // СЛАЙДЕР В БЛОКЕ УСЛУГИ НА ГЛАВНОЙ СТРАНИЦЕ
   const servicesSlider = () => {
     if (!document.getElementById('services')) return;
 

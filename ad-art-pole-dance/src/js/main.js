@@ -101,7 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabWrapper = document.querySelector('.js-btn-wrapper');
     const tabContent = document.querySelectorAll('.js-item-content');
 
-    if (!tab) return;
+    if (!tab || !tabWrapper) return;
+    // if (!tabWrapper) return;
 
     function hideTabContent(a) {
       for (let i = a; i < tabContent.length; i++) {

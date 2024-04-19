@@ -18,6 +18,31 @@
       padding-top: 30px
       padding-bottom: 30px
 
+
+  &__link-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 20px 10px
+
+    +lr
+      flex-direction: column
+      align-items: flex-start
+
+    +sm
+      flex-direction: row
+      align-items: center
+
+    +ph
+      flex-direction: column
+      gap: 10px
+
+  // &__link
+  //   margin-right: 10px
+
+  //   &_last
+  //     margin-right: 0
+
   .menu
     &__list
       display: flex

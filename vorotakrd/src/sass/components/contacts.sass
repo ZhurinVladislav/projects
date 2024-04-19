@@ -39,7 +39,11 @@
 			margin-bottom: 20px
 
 		&_indent
-			padding-left: 24px
+			display: flex
+			gap: 20px
+
+			+ph
+				flex-direction: column
 
 	&__list-icon
 		margin-right: 8px
@@ -51,6 +55,14 @@
 			margin-right: 8px
 			width: 16px
 			height: 16px
+
+	&__lists-item
+		display: flex
+
+	&__list-inner-wrapper
+		display: flex
+		flex-direction: column
+		gap: 10px
 
 	&__map
 		margin-right: -272px

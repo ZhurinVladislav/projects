@@ -2,7 +2,20 @@
 	.events
 		&__title
 			text-align: left
-	
+
+		.content-column
+
+			+ph
+				border-radius: 0
+				background-image: none !important
+
+			&__text-wrapper
+				
+				+ph
+					margin-bottom: 20px
+					padding: 30px 20px
+					background-image: url(../img/content-bg-img.jpg) !important
+
 .events
 
 	&__title
@@ -31,18 +44,27 @@
 			flex-direction: column-reverse
 
 	.content-column
+
+		+ph
+			border-radius: 15px
+			background-image: url(../img/content-bg-img.jpg)
+			background-position: center
+			background-size: cover
+			background-repeat: no-repeat
 		
 		&__title
 			margin-bottom: 36px
+			line-height: 120%
 
 		&__text-wrapper
 			margin-right: 16px
 			flex: 1 0 47%
 			
 			+ph
-				margin-right: 0
-				margin-bottom: 20px
 				flex: 0 0 100%
+				margin-right: 0
+				padding: 30px 20px 0 20px
+				background-image: none !important
 
 		&__media
 			margin-right: 0
@@ -51,6 +73,7 @@
 
 			+ph
 				flex: 0 0 100%
+				margin-bottom: 0
 				height: 300px
 				min-height: 300px
 
@@ -65,3 +88,9 @@
 
 		&:not(:last-child)
 			margin-bottom: 20px
+
+			+sm
+				margin-bottom: 80px
+
+			+ph
+				margin-bottom: 60px
