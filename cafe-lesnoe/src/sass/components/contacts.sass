@@ -1,0 +1,147 @@
+.home-page
+	.contacts
+		margin-bottom: 0
+	
+.contacts
+	position: relative
+	margin-bottom: 40px
+	padding: 129px 25px 129px 248px
+	min-height: 700px
+	color: $clr_1
+	text-align: center
+
+	+max(1716px)
+		padding: 130px 25px 130px 25px
+
+	+sm
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 0px 20px
+
+	+ph
+		padding: 0 10px
+
+	&__breadcrumb
+		position: absolute
+		top: 20px
+		z-index: 2
+		padding: 5px 10px
+		background-color: rgba($clr_1, .4)
+		backdrop-filter: blur(10px)
+
+		+sm
+			left: 40px
+
+		+ph
+			left: 20px
+
+	&__map-wrapper
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 0
+
+		+sm
+			position: static
+			margin-bottom: 20px
+			height: 450px
+
+	&__content-wrapper
+		position: relative
+		z-index: 1
+		display: flex
+		padding: 20px
+		max-width: 572px
+		width: 100%
+		min-height: 442px
+		background-color: rgba(37, 37, 37, 0.9)
+
+		+max(1262px)
+			max-width: 489px
+
+		+sm
+			max-width: 100%
+
+		+ph
+			margin-bottom: 80px
+			min-height: 335px
+
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		padding: 22px 80px
+		border: .5px solid $clr_1
+
+		+max(1262px)
+			padding: 22px 40px
+
+		+sm
+			padding: 28px
+			width: 100%
+
+		+ph
+			padding: 10px
+
+	&__title
+		padding-top: 42px
+		max-width: 383px
+		line-height: 44%
+
+		+ph
+			max-width: 316px
+			font-size: 70px
+
+	&__title-color
+		color: $clr_1
+
+		+lr
+			font-size: 30px
+
+		+sm
+			font-size: 25px
+
+		+ph
+			font-size: 20px
+
+	&__icon
+		fill: $clr_1
+
+	&__address
+		margin-bottom: 12px
+
+	&__link
+		margin-bottom: 15px
+
+.contacts-soc-list
+	display: flex
+	gap: 16px
+
+	&__item
+		width: 26px
+		height: 26px
+
+	&__link
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		height: 100%
+		border: .5px solid $clr_0
+		transition: border-color .2s linear
+
+		&:hover
+			+hover
+				.contacts-soc-list__link-icon
+					fill: $clr_3
+
+		&:focus:not(:active)
+			border-color: $clr_3
+
+	&__link-icon
+		fill: $clr_1
+		transition: fill .2s linear

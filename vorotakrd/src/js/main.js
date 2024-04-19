@@ -192,11 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const removeClass = (item, list, className) => {
       list.classList.toggle(className);
 
-      if (item.classList.contains('js-active')) {
-        item.classList.remove('js-active');
-      } else {
-        item.classList.add('js-active');
-      }
+      item.classList.contains('js-active') ? item.classList.remove('js-active') : item.classList.add('js-active');
     };
 
     acParentList.forEach(el => {
@@ -227,12 +223,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    for (let i = 0; i < listInner.length; i++) {
-      const el = listInner[i];
+    if (window.innerWidth >= 991) {
+      for (let i = 0; i < listInner.length; i++) {
+        const el = listInner[i];
 
-      if (el.classList.contains('parent') && el.classList.contains('active')) {
-        el.classList.add('js-active');
-        el.querySelector('.js-ac-content').classList.remove('ac-hidden');
+        if (el.classList.contains('parent') && el.classList.contains('active')) {
+          el.classList.add('js-active');
+          el.querySelector('.js-ac-content').classList.remove('ac-hidden');
+        }
       }
     }
   };
@@ -318,6 +316,13 @@ document.addEventListener('DOMContentLoaded', () => {
     thumbnail: false,
     share: false,
     selector: '.certificates__list-item-link',
+    getCaptionFromTitleOrAlt: false,
+  });
+
+  $('#otkatnye-vorota').lightGallery({
+    thumbnail: false,
+    share: false,
+    selector: '.link-otkatnye-vorota',
     getCaptionFromTitleOrAlt: false,
   });
 

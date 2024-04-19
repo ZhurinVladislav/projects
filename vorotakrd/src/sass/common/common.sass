@@ -704,6 +704,31 @@ input[type='number']
   +sm
     font-size: 16px
 
+  &__feedback
+    padding: 20px
+    border: 1px solid $clr_4
+
+    a
+      font-size: 18px
+
+      &:nth-child(2)
+        display: inline-block
+        max-width: max-content
+
+    button
+      font-size: 18px
+
+  button
+    display: inline
+    font-weight: 700
+    color: $clr_4
+    border-bottom: 2px solid $clr_4
+    transition: border-color .2s linear
+
+    &:hover
+      +hover
+        border-color: $clr_0
+
   h1
     font-family: $ff_1
     font-weight: 700
@@ -778,12 +803,12 @@ input[type='number']
   a
     font-weight: 700
     color: $clr_4
-    border-bottom: 2px solid $clr_0
+    border-bottom: 2px solid $clr_4
     transition: border-color .2s linear
 
     &:hover
       +hover
-        border-color: $clr_4
+        border-color: $clr_0
 
   img
     width: revert-layer
@@ -836,8 +861,8 @@ input[type='number']
     margin: 0
     margin-bottom: 20px
     padding: 20px 10px 20px 20px
-    color: $clr_1
-    background-color: $clr_2
+    color: $clr_2
+    background-color: rgba($clr_2, .1)
 
     ul
       margin-bottom: 0
@@ -846,13 +871,11 @@ input[type='number']
       margin: 0
 
   table
-    margin-bottom: 30px
+    margin-bottom: 24px
     max-width: 100%
     width: 100%
     border-collapse: collapse
     overflow: hidden
-    // text-transform: uppercase
-    box-shadow: 0 13px 28px 0 rgba(0, 0, 0, 0.06), 0 50px 50px 0 rgba(0, 0, 0, 0.05), 0 113px 68px 0 rgba(0, 0, 0, 0.03), 0 202px 81px 0 rgba(0, 0, 0, 0.01), 0 315px 88px 0 rgba(0, 0, 0, 0)
 
     +lr
       font-size: 16px
@@ -860,9 +883,32 @@ input[type='number']
     +ph
       display: block
       margin: auto
+      margin-bottom: 15px
       font-size: 14px
       width: fit-content
       overflow-x: auto
+
+    &.color-wh
+      tr
+        background-color: $clr_0
+
+    &.overflow
+      display: block
+      margin: auto
+      width: fit-content
+      overflow-x: auto
+
+    &.two-col
+      tr
+        td
+          &:first-child
+            width: 70%
+
+          &:last-child
+            width: 30%
+
+          img
+            width: 100%
 
     ul
       padding-left: 20px
@@ -871,18 +917,9 @@ input[type='number']
       @include textReset
 
     tr
-      color: $clr_1
-      background-color: $clr_2
-      
-
-      &:nth-child(2n)
-        color: $clr_1
-        background-color: rgba($clr_2, .5)
-        
-      &:nth-child(1)
-
-        td
-          border: none
+      color: $clr_2
+      border: 1px solid $clr_1
+      background-color: rgba($clr_2, .09)
 
     th, td
       padding: 20px
@@ -890,8 +927,13 @@ input[type='number']
       +ph
         padding: 14px
 
-    td
+    th
+      vertical-align: top
 
+    td
+      vertical-align: top
+      border: 1px solid $clr_1
+      
       &:not(:first-child)
         min-width: 129px
 
@@ -1139,6 +1181,9 @@ input[type='number']
     &.swiper-pagination-lock
       display: none
 
+
+.grecaptcha-badge
+  opacity: 0
 
 // ГАЛЕРЕЯ
 .gallery-wrapper

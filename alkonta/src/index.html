@@ -13,7 +13,6 @@
         <!-- STYLES -->
         <link rel="stylesheet" href="./app/css/main.min.css" />
         <!-- SCRIPTS -->
-
         <script src="./app/js/libs/preloader.js" defer></script>
         <script src="./app/js/libs/modal-window.js" defer></script>
         <script src="./app/js/libs/iframeLazyLoad.js" defer></script>
@@ -613,7 +612,15 @@
                                     <input class="form-note__input" type="checkbox" checked />
                                     <span class="form-note__checkbox"></span>
                                     <span class="form-note__text">
-                                        Даю согласие на&nbsp;обработку персональных данных *
+                                        Даю согласие на&nbsp;обработку
+                                        <a
+                                            class="form-note__text-link link"
+                                            href="/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >персональных данных</a
+                                        >
+                                        *
                                     </span>
                                 </label>
                             </form>
@@ -922,6 +929,25 @@
                                         <span class="link-icon__text">info@alkonta.com</span>
                                     </a>
                                 </li>
+                                <li class="contacts-content__list-item">
+                                    <p class="contacts-content__list-item-text">Наши мессенджеры:</p>
+                                    <ul class="contacts-content__list-item-social contacts-social-list">
+                                        <li class="contacts-social-list__item">
+                                            <a href="/" class="contacts-social-list__item-link">
+                                                <svg class="contacts-social-list__item-link-icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#vk"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="contacts-social-list__item">
+                                            <a href="/" class="contacts-social-list__item-link">
+                                                <svg class="contacts-social-list__item-link-icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#ok"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -946,7 +972,14 @@
                                 <input class="form-note__input" type="checkbox" checked />
                                 <span class="form-note__checkbox"></span>
                                 <span class="form-note__text">
-                                    Даю согласие на&nbsp;обработку персональных данных
+                                    Даю согласие на&nbsp;обработку
+                                    <a
+                                        class="form-note__text-link link"
+                                        href="/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >персональных данных</a
+                                    >
                                 </span>
                             </label>
                         </div>
@@ -999,17 +1032,26 @@
                         </li>
                     </ul>
                 </nav>
-                <a
-                    href="https://web2.agency/"
-                    class="footer__link link"
-                    title="Перейти на сайт разработки сайтов в Новороссийске"
-                    aria-label="Перейти на сайт разработки сайтов в Новороссийске"
-                    target="_blank">
-                    <svg class="link__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
-                    </svg>
-                    <span class="link__text"> Создание сайтов </span>
-                </a>
+                <div class="footer__link-wrapper">
+                    <a
+                        class="footer__link link"
+                        href="#"
+                        target="_blank"
+                        aria-label="Перейти на страницу пользовательского соглашения"
+                        >Пользовательское соглашение</a
+                    >
+                    <a
+                        href="https://web2.agency/"
+                        class="footer__link footer__link_last link"
+                        title="Перейти на сайт разработки сайтов в Новороссийске"
+                        aria-label="Перейти на сайт разработки сайтов в Новороссийске"
+                        target="_blank">
+                        <svg class="link__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                        </svg>
+                        <span class="link__text"> Создание сайтов </span>
+                    </a>
+                </div>
             </div>
         </footer>
         <!-- SCROLL-TOP -->
@@ -1018,6 +1060,19 @@
                 <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
             </svg>
         </button>
+        <!-- COOKIES -->
+        <article id="cookies" class="home-page__cookies cookies">
+            <h2 class="cookies__title h-0">Cookie сайта Alkonta</h2>
+            <div class="cookies__content-wrapper b-r">
+                <p class="cookies__content-text">
+                    Мы используем <strong>cookie-файлы.</strong> Продолжая пользоваться сайтом, Вы даёте
+                    <a class="cookies__content-text-link link" href="/" target="_blank" rel="noopener noreferrer">
+                        согласие на использование cookie-файлов
+                    </a>
+                </p>
+                <button id="cookies-btn" class="cookies__btn" aria-label="Закрыть окно c куками">Хорошо</button>
+            </div>
+        </article>
         <!-- SCRIPTS -->
         <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
     </body>

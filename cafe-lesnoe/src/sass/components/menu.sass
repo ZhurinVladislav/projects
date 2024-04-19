@@ -1,0 +1,134 @@
+.menu
+  position: relative
+  padding-top: 120px
+
+  +ph
+    padding-top: 80px
+
+  &__bg-img
+    
+    +ph
+      opacity: .5
+
+    &_left
+      top: -12px
+      left: -8px
+      width: 192px
+      height: 263px
+
+      +ph
+        top: 10px
+        left: 0
+        width: 120px
+        height: 154px
+
+    &_right
+      top: 44px
+      right: -31px
+      width: 262px
+      height: 409px
+
+      +ph
+        top: 10px
+        width: 136px
+        height: 240px
+
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__title
+    margin-bottom: 28px
+    line-height: 100%
+
+.menu-list
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-auto-rows: minmax(453px, auto)
+  gap: 20px
+
+  +sm
+    grid-template-columns: repeat(2, 1fr)
+    grid-auto-rows: minmax(400px, auto)
+
+  +ph
+    grid-template-columns: 1fr
+    grid-auto-rows: 40vh
+
+  &__item
+    &_last
+      .menu-list__item-link
+        
+        +ph
+          padding: 40px 0
+
+  &__item-link
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    font-size: 0
+    background-color: $clr_2
+    overflow: hidden
+    
+    &:hover
+      +hover
+        .menu-list__item-img
+          transform: scale(1.1)
+
+        .menu-list__item-text
+          font-size: 22px
+
+        .menu-list__item-link-text
+          color: $clr_1
+
+        .menu-list__icon
+          fill: $clr_3
+
+  &__item-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: transform .3s linear
+
+  &__item-text-wrapper
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 20px
+    width: 100%
+    min-height: 76px
+    background-color: rgba(37, 37, 37, .8)
+
+    +ph
+      min-height: 50px
+
+  &__item-text
+    font-weight: 400
+    font-size: 24px
+    color: $clr_1
+    letter-spacing: .02em
+    text-transform: uppercase
+    transition: font-size .3s linear
+    
+    +sm
+      font-size: 20px
+    
+    +ph
+      font-size: 18px
+
+  &__item-link-text
+    margin-bottom: 0
+    line-height: 90%
+    transition: color .2s linear
+
+  &__icon
+    fill: $clr_1

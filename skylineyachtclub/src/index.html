@@ -230,8 +230,10 @@
             <!-- HERO -->
             <section id="home-hero" class="main-section__hero hero">
                 <div class="hero__container container">
-                    <h1 class="hero__title h-1">Аренда яхты в&nbsp;Геленджике</h1>
-                    <p class="hero__subtitle up-case">Открытое море, солнце, уединение</p>
+                    <div class="hero__content-wrapper">
+                        <h1 class="hero__title h-1">Аренда яхты в&nbsp;Геленджике</h1>
+                        <p class="hero__subtitle up-case">Открытое море, солнце, уединение</p>
+                    </div>
                 </div>
             </section>
             <!-- ADVANTAGES -->
@@ -322,7 +324,8 @@
                                     <button
                                         class="btns-list__item-btn button js-open-modal"
                                         aria-label="Забронировать яхту"
-                                        data-open="form-callback">
+                                        data-open="form-callback"
+                                        data-title="Pershing 50 «Александра»">
                                         Забронировать
                                     </button>
                                 </li>
@@ -359,7 +362,8 @@
                                     <button
                                         class="btns-list__item-btn button js-open-modal"
                                         aria-label="Забронировать яхту"
-                                        data-open="form-callback">
+                                        data-open="form-callback"
+                                        data-title="Pr Marine 62 «Valentina»">
                                         Забронировать
                                     </button>
                                 </li>
@@ -990,10 +994,17 @@
                     <button
                         aria-label="Закрыть окно обратной связи"
                         class="form-callback__close-btn modal-close js-close-modal"></button>
-                    <p class="form-callback__title modal-title">Оставить заявку</p>
+                    <p id="modal-title" class="form-callback__title modal-title">Оставить заявку</p>
 
                     <form action="/" class="form form-mod">
                         <div class="form-mod__wrap-input wrap-input">
+                            <div class="wrap-input__item">
+                                <input
+                                    id="product-input"
+                                    class="wrap-input__input wrap-input__input_hidden"
+                                    type="text"
+                                    name="product" />
+                            </div>
                             <div class="wrap-input__item">
                                 <input class="wrap-input__input input" type="text" name="name" placeholder=" " />
                                 <label class="wrap-input__label label">Имя</label>
@@ -1163,25 +1174,18 @@
             </svg>
         </button>
         <!-- COOKIES -->
-        <div id="cookies" class="home-page__cookies cookies">
-            <div class="cookies__container container">
-                <div class="cookies__content-wrapper">
-                    <p class="cookies__content-text">
-                        Наш сайт использует куки. Продолжая им&nbsp;пользоваться, вы&nbsp;соглашаетесь на&nbsp;обработку
-                        персональных данных в&nbsp;соответствии с
-                        <a
-                            href="/"
-                            class="cookies__content-text-link link-invert"
-                            aria-label="Перейти на страницу с Политикой конфиденциальности"
-                            >&nbsp;Политикой конфиденциальности</a
-                        >
-                    </p>
-                    <button id="cookies-btn" aria-label="Закрыть окно c куками" class="cookies__btn button">
-                        Принять и закрыть
-                    </button>
-                </div>
+        <article id="cookies" class="home-page__cookies cookies">
+            <h2 class="cookies__title h-0">Cookie сайта Яхт-Клуба SkyLine</h2>
+            <div class="cookies__content-wrapper b-r">
+                <p class="cookies__content-text">
+                    Мы используем <strong>cookie-файлы.</strong> Продолжая пользоваться сайтом, Вы даёте
+                    <a class="cookies__content-text-link link" href="/" target="_blank" rel="noopener noreferrer">
+                        согласие на использование cookie-файлов
+                    </a>
+                </p>
+                <button id="cookies-btn" class="cookies__btn" aria-label="Закрыть окно c куками">Хорошо</button>
             </div>
-        </div>
+        </article>
         <!-- SCRIPTS -->
         <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
     </body>

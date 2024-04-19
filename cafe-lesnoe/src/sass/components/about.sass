@@ -1,0 +1,192 @@
+.about
+	position: relative
+	padding-top: 120px
+
+	+ph
+		padding-top: 80px
+
+	&__bg-img
+		top: 13px
+		left: -8px
+		width: 282px
+		height: 365px
+
+		+max(1548px)
+			width: 240px
+			height: 300px
+
+		+lr
+			opacity: 0.5
+
+		+ph
+			width: 200px
+			height: 240px
+
+
+	&__content-wrapper
+		display: flex
+
+		+sm
+			flex-direction: column
+
+	&__content
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding-top: 41px
+		padding-left: 2px
+		width: 100%
+		text-align: center
+
+		+sm
+			margin-bottom: 40px
+			padding: 0
+			max-width: 100%
+
+	&__title
+		margin-bottom: 6px
+		max-width: 184px
+		line-height: 43%
+		letter-spacing: .02em
+
+		+ph
+			line-height: 60%
+
+	&__title-color
+		padding-left: 13px
+		text-transform: uppercase
+
+	&__text
+		margin-bottom: 16px
+		max-width: 444px
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 15px 36px
+		margin-bottom: 23px
+		text-transform: uppercase
+		letter-spacing: .02em
+
+.about-slider
+	display: flex
+	align-items: center
+	margin: 0 -54px
+	max-width: 60%
+	width: 100%
+
+	+max(1530px)
+		margin: 0
+
+	+sm
+		max-width: 100%
+
+	&__arrow
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		width: 42px
+		height: 42px
+		transition: opacity .2s linear
+
+		+ph
+			position: absolute
+			z-index: 2
+			padding: 10px
+			width: 40px
+			height: 40px
+
+		&:hover
+			+hover
+				.arrow__icon
+					fill: $clr_2
+
+		&:focus:not(:active)
+			opacity: .5
+
+			.arrow__icon
+				fill: $clr_2
+
+.arrow
+	+ph
+		background-color: $clr_1
+
+	&_prev
+		margin-right: 23px
+
+		+ph
+			left: 20px
+			margin-right: 0
+
+		.arrow__icon
+			transform: rotate(180deg)
+
+	&_next
+		margin-left: 23px
+
+		+ph
+			right: 20px
+			margin-left: 0
+  
+	&__icon
+		width: 100%
+		height: 100%
+		fill: $clr_3
+		transition: fill .2s linear
+
+
+	&_disable
+		opacity: .5
+		cursor: auto
+
+		&:hover
+			+hover
+				border-color: $clr_2
+
+				.arrow__icon
+					fill: $clr_2
+
+.slider
+	max-width: 690px
+	min-height: 536px
+
+	+ph
+		min-height: 350px
+
+	&__slide-link
+		position: relative
+		display: flex
+		overflow: hidden
+
+		&:hover
+			+hover
+				&::after
+					opacity: 1
+					transform: translateX(0)
+
+				.slider__img
+					transform: scale(1.1)
+
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 2
+			width: 100%
+			height: 100%
+			background-color: rgba($clr_3, .3)
+			opacity: 0
+			transform: translateX(-20px)
+			transition: opacity .2s linear, transform .2s linear
+
+	&__img
+		min-height: 536px
+		height: 100%
+		object-fit: cover
+		transition: transform .3s linear
+
+		+ph
+			min-height: 350px

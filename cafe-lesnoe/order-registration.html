@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Оформление заказа</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="/app/css/main.min.css" />
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/preloader.js"></script>
+        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
+        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
+        <script src="/app/js/libs/webp.js" defer></script>
+        <script src="/app/js/libs/modal-window.js" defer></script>
+        <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
+        <script src="/app/js/main.min.js" defer></script>
+    </head>
+
+    <body>
+        <div id="preloader" class="preloader">
+            <ul class="preloader__list">
+                <li class="preloader__list-item"></li>
+                <li class="preloader__list-item"></li>
+                <li class="preloader__list-item"></li>
+                <li class="preloader__list-item"></li>
+            </ul>
+        </div>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__content-left">
+                    <a href="/" class="header__logo header__logo logo">
+                        <img class="logo__img" src="/app/img/logo.svg" alt="Кафе Лесное" title="Кафе Лесное" />
+                    </a>
+                    <a class="header__link link-invert" href="tel:+79385400848">
+                        <svg class="link-invert__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                        </svg>
+                        <span class="link-invert__text"> +7 (938) 540-08-48 </span>
+                    </a>
+                </div>
+                <nav class="header__menu header-menu">
+                    <ul class="header-menu__list">
+                        <li class="header-menu__item parent">
+                            <a class="header-menu__link" href="./menu.html">
+                                <span class="header-menu__link-text">Меню</span>
+                                <svg class="header-menu__link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="header-menu__list-inner list-inner">
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Первые блюда </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Блюда на мангале </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Горячее, гарниры </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Пицца </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Салаты </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Холодные закуски </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Закуски к пиву </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Десерты </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Хлеб </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Соусы </span>
+                                    </a>
+                                </li>
+                                <li class="list-inner__item">
+                                    <a class="list-inner__link" href="./category.html">
+                                        <span class="list-inner__link-item"> Напитки </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-menu__item">
+                            <a class="header-menu__link" href="./main.html"> О кафе </a>
+                        </li>
+                        <li class="header-menu__item">
+                            <a class="header-menu__link" href="./information.html"> Информация </a>
+                        </li>
+                        <li class="header-menu__item">
+                            <a class="header-menu__link" href="./reviews.html"> Отзывы </a>
+                        </li>
+                        <li class="header-menu__item">
+                            <a class="header-menu__link" href="./contacts.html"> Контакты </a>
+                        </li>
+                    </ul>
+                    <div class="header-menu__btn-wrapper header-btns">
+                        <div id="msMiniCart" class="{$total_count > 0 ? 'full' : ''}">
+                            <button class="header-btns__btn empty" title="Корзина пуста">
+                                <svg class="header-btns__btn-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
+                                </svg>
+                            </button>
+                            <!--
+                            <button class="header-btns__btn not_empty">
+                                <a href="/" class="header-btns__link absolute"></a>
+                                <svg class="header-btns__btn-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
+                                </svg>
+                                <span class="header-btns__btn-text ms2_total_count">1</span>
+                            </button>
+                            -->
+                        </div>
+                    </div>
+                </nav>
+                <ul class="header__list-info header-info">
+                    <li class="header-info__item">
+                        <svg class="header-info__item-icon">
+                            <use xlink:href="/app/img/icons/icons.svg#time"></use>
+                        </svg>
+                        <span class="header-info__item-descr"> Кафе: 10:00&nbsp;&mdash; 00:00 </span>
+                    </li>
+                    <li class="header-info__item">
+                        <svg class="header-info__item-icon">
+                            <use xlink:href="/app/img/icons/icons.svg#time"></use>
+                        </svg>
+                        <span class="header-info__item-descr"> Доставка: 10:00&nbsp;&mdash; 21:30 </span>
+                    </li>
+                </ul>
+                <button id="burger-toggle" aria-label="Открыть мобильное меню" class="header__menu-toggle menu-toggle">
+                    <span class="menu-toggle__item"></span>
+                    <span class="menu-toggle__item"></span>
+                    <span class="menu-toggle__item"></span>
+                </button>
+            </div>
+            <!-- BURGER-MENU -->
+            <div id="burger-menu" class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <div class="menu-mobile__btn-wrapper header-btns">
+                        <div id="msMiniCart" class="{$total_count > 0 ? 'full' : ''}">
+                            <button class="header-btns__btn empty" title="Корзина пуста">
+                                <svg class="header-btns__btn-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
+                                </svg>
+                            </button>
+                            <!--
+                            <button class="header-btns__btn not_empty">
+                                <a href="/" class="header-btns__link absolute"></a>
+                                <svg class="header-btns__btn-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
+                                </svg>
+                                <span class="header-btns__btn-text ms2_total_count">1</span>
+                            </button>
+                            -->
+                        </div>
+                    </div>
+                    <nav class="menu-mobile__menu menu">
+                        <ul class="menu__list list">
+                            <li class="list__item item parent">
+                                <a class="item__link" href="./menu.html"> Меню </a>
+                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
+                                    <svg class="item__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <ul class="item__list list">
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Первые блюда </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Блюда на мангале </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Горячее, гарниры </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Пицца </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Салаты </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Холодные закуски </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Закуски к пиву </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Десерты </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Хлеб </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Соусы </a>
+                                    </li>
+                                    <li class="list__item item">
+                                        <a class="item__link" href="./category.html"> Напитки </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./main.html" class="item__link"> О кафе </a>
+                            </li>
+                            <li class="list__item item">
+                                <a href="./information.html" class="item__link"> Информация </a>
+                            </li>
+                            <li class="list__item item">
+                                <a class="item__link" href="./reviews.html"> Отзывы </a>
+                            </li>
+                            <li class="list__item item">
+                                <a class="item__link" href="./contacts.html"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+79385400848">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="list-link__descr"> +7 (938) 540-08-48 </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a
+                                target="_blank"
+                                class="list-link__link"
+                                aria-label="Наша страница в Instagram"
+                                href="https://instagram.com/">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#inst"></use>
+                                </svg>
+                                <span class="list-link__descr"> Instagram </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a
+                                target="_blank"
+                                class="list-link__link"
+                                aria-label="Связаться с нами в WhatsApp"
+                                href="https://wa.me/+79385400848">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="list-link__descr"> WhatsApp </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a
+                                target="_blank"
+                                class="list-link__link"
+                                aria-label="Связаться с нами в Telegram"
+                                href="https://t.me/+79385400848">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                                <span class="list-link__descr"> Telegram </span>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="/">
+                                <svg class="list-link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <address class="list-link__descr">Геленджик М4&nbsp;Дон 1501&nbsp;км.</address>
+                            </a>
+                        </li>
+                        <li class="list-link__item">
+                            <svg class="list-link__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#time"></use>
+                            </svg>
+                            <span class="list-link__descr"> Кафе: 10:00&nbsp;&mdash; 00:00 </span>
+                        </li>
+                        <li class="list-link__item">
+                            <svg class="list-link__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#time"></use>
+                            </svg>
+                            <span class="list-link__descr"> Доставка: 10:00&nbsp;&mdash; 21:30 </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main>
+            <!-- ORDER-REGISTRATION -->
+            <section class="order-registration section-reset">
+                <div class="order-registration__container container">
+                    <ol class="order-registration__breadcrumb breadcrumb">
+                        <li>
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumb-item active">&nbsp;Оформление заказа</li>
+                    </ol>
+                    <h1 class="order-registration__title-hidden h-0">Оформление заказа | Кафе "Лесное"</h1>
+                    <h2 class="order-registration__title h-1">Оформление заказа</h2>
+                    <div class="order-registration__content-wrapper">
+                        <form class="order-registration__form form-order ms2_form" id="msOrder" method="post">
+                            <ul class="form-order__input-wrapper wrap-input">
+                                <li class="wrap-input__item">
+                                    <input
+                                        class="wrap-input__input input"
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder=" " />
+                                    <label class="wrap-input__label label">Имя</label>
+                                </li>
+                                <li class="wrap-input__item">
+                                    <input
+                                        class="wrap-input__input input"
+                                        type="number"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder=" " />
+                                    <label class="wrap-input__label label">Телефон</label>
+                                </li>
+                                <li class="wrap-input__item">
+                                    <input
+                                        class="wrap-input__input input"
+                                        type="text"
+                                        name="email"
+                                        id="email"
+                                        placeholder=" " />
+                                    <label class="wrap-input__label label">E-mail</label>
+                                </li>
+                                <li class="wrap-input__item">
+                                    <input
+                                        class="wrap-input__input input"
+                                        type="text"
+                                        name="street"
+                                        id="street"
+                                        placeholder=" " />
+                                    <label class="wrap-input__label label">Улица</label>
+                                </li>
+                                <li class="wrap-input__item">
+                                    <input
+                                        class="wrap-input__input input"
+                                        type="text"
+                                        name="building"
+                                        id="building"
+                                        placeholder=" " />
+                                    <label class="wrap-input__label label">Дом</label>
+                                </li>
+                                <li class="wrap-input__item">
+                                    <input
+                                        class="wrap-input__input input"
+                                        type="text"
+                                        name="room"
+                                        id="room"
+                                        placeholder=" " />
+                                    <label class="wrap-input__label label">Квартира</label>
+                                </li>
+                                <li class="wrap-input__item">
+                                    <textarea
+                                        id="comment"
+                                        class="wrap-input__textarea textarea"
+                                        name="comment"
+                                        placeholder=" "></textarea>
+                                    <label class="wrap-input__label label">Комментарий к заказу</label>
+                                </li>
+                            </ul>
+
+                            <ul id="delivery" class="form-order__list form-order__list form-order-list">
+                                <li class="form-order-list__item">
+                                    <h3 class="form-order-list__title">Способ доставки</h3>
+                                    <ul class="form-order-list__radio-wrapper radio-wrapper">
+                                        <li class="radio-wrapper__item">
+                                            <label class="radio-wrapper__label custom-radio">
+                                                <input
+                                                    class="radio-wrapper__input custom-radio-input"
+                                                    type="radio"
+                                                    name="delivery"
+                                                    checked
+                                                    data-payments="[4,1]" />
+                                                <span class="radio-wrapper__text custom-radio-text">
+                                                    Доставить по адресу
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="radio-wrapper__item">
+                                            <label class="radio-wrapper__label custom-radio">
+                                                <input
+                                                    class="radio-wrapper__input custom-radio-input"
+                                                    type="radio"
+                                                    name="delivery"
+                                                    data-payments="[4,1]" />
+                                                <span class="radio-wrapper__text custom-radio-text">
+                                                    Самовывоз (Анапское шоссе, 27)
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul
+                                id="payments"
+                                class="form-order__list form-order__list form-order-list form-order-list_last">
+                                <li class="form-order-list__item">
+                                    <h3 class="form-order-list__title">Способы оплаты</h3>
+                                    <ul class="form-order-list__radio-wrapper radio-wrapper">
+                                        <li class="radio-wrapper__item">
+                                            <label class="radio-wrapper__label custom-radio">
+                                                <input
+                                                    class="radio-wrapper__input custom-radio-input"
+                                                    type="radio"
+                                                    name="payment"
+                                                    checked />
+                                                <span class="radio-wrapper__text custom-radio-text">
+                                                    Картой на сайте
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="radio-wrapper__item">
+                                            <label class="radio-wrapper__label custom-radio">
+                                                <input
+                                                    class="radio-wrapper__input custom-radio-input"
+                                                    type="radio"
+                                                    name="payment" />
+                                                <span class="radio-wrapper__text custom-radio-text">
+                                                    Оплата курьеру
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <div class="form-order__total">
+                                <p class="form-order__total-text">
+                                    Итого:
+                                    <span id="ms2_order_cost" class="form-order__total-price">4 554</span>
+                                    <span class="form-order__total-currency">руб.</span>
+                                </p>
+
+                                <label class="form-order__checkbox form-note">
+                                    <input
+                                        id="agreementorder"
+                                        class="form-note__input"
+                                        name="agreement"
+                                        type="checkbox"
+                                        checked />
+                                    <span class="form-note__checkbox"></span>
+                                    <span class="form-note__text">
+                                        Даю согласие на
+                                        <a href="/" class="form-note__text-link"> обработку персональных данных </a>
+                                    </span>
+                                </label>
+
+                                <button
+                                    class="form-order__btn button"
+                                    type="submit"
+                                    name="ms2_action"
+                                    value="order/submit">
+                                    Сделать заказ
+                                </button>
+                            </div>
+                        </form>
+                        <div class="order-registration__content text-default">
+                            <p>
+                                После оформления заказа с Вами в течении 5 минут свяжется менеджер для подтверждения
+                                заказа.&nbsp;
+                            </p>
+                            <p><strong>Доставка осуществляется только в пределах города.</strong></p>
+                            <p><strong>Доставка блюд пекарни осуществляется только до 18:00.</strong></p>
+                            <p><strong>Бесплатная доставка от 1000 руб.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div class="modal form-callback" id="form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"></button>
+                    <p class="form-callback__title modal-title">Оставить заявку</p>
+
+                    <form action="/" class="form form-mod">
+                        <div class="form-mod__wrap-input wrap-input">
+                            <div class="wrap-input__item">
+                                <input class="wrap-input__input input" type="text" name="name" placeholder=" " />
+                                <label class="wrap-input__label label">Имя</label>
+                            </div>
+                            <div class="wrap-input__item">
+                                <input class="wrap-input__input input" type="number" name="phone" placeholder=" " />
+                                <label class="wrap-input__label label">Телефон</label>
+                            </div>
+                            <div class="wrap-input__item">
+                                <input class="wrap-input__input input" type="text" name="e-mail" placeholder=" " />
+                                <label class="wrap-input__label label">E-mail</label>
+                            </div>
+
+                            <label class="wrap-input__item form-note">
+                                <input class="form-note__input" type="checkbox" checked />
+                                <span class="form-note__checkbox"></span>
+                                <span class="form-note__text">
+                                    Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
+                                    <a href="/" class="form-note__text-link link-invert"
+                                        >Пользовательского соглашения</a
+                                    >
+                                </span>
+                            </label>
+                        </div>
+                        <button aria-label="Отправить заявку" type="submit" class="form-mod__btn button">
+                            <span class="button__text"> Отправить </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div class="modal form-success" id="form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__top footer-top">
+                <div class="footer-top__container container">
+                    <div class="footer-top__content-wrapper">
+                        <a href="/" class="footer-top__logo logo">
+                            <img
+                                class="logo__img"
+                                src="/app/img/logo.svg"
+                                alt="Логотип кафе Лесное"
+                                title="Кафе Лесное" />
+                        </a>
+                        <div class="footer-top__content-right">
+                            <nav class="footer-top__menu-left footer-main-menu">
+                                <p class="footer-main-menu__title footer-list-title">О нас</p>
+                                <ul class="footer-main-menu__list footer-list">
+                                    <li class="footer-main-menu__item footer-list__item">
+                                        <a class="footer-main-menu__link footer-list__link" href="./main.html">
+                                            Условия доставки
+                                        </a>
+                                    </li>
+                                    <li class="footer-main-menu__item footer-list__item">
+                                        <a class="footer-main-menu__link footer-list__link" href="./reviews.html">
+                                            Отзывы
+                                        </a>
+                                    </li>
+                                    <li class="footer-main-menu__item footer-list__item">
+                                        <a class="footer-main-menu__link footer-list__link" href="./main.html">
+                                            Акции
+                                        </a>
+                                    </li>
+                                    <li class="footer-main-menu__item footer-list__item">
+                                        <a class="footer-main-menu__link footer-list__link" href="./contacts.html">
+                                            Контакты
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav class="footer-top__menu footer-menu">
+                                <p class="footer-menu__title footer-list-title">Меню</p>
+                                <ul class="footer-menu__list footer-list">
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html">
+                                            Первые блюда
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html">
+                                            Блюда на мангале
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html">
+                                            Горячее, гарниры
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Пицца </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Салаты </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html">
+                                            Холодные закуски
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html">
+                                            Закуски к пиву
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Десерты </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Хлеб </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Соусы </a>
+                                    </li>
+                                    <li class="footer-menu__item footer-list__item">
+                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Напитки </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="footer-top__contacts footer-contacts">
+                                <p class="footer-contacts__title footer-list-title">Контакты</p>
+                                <ul class="footer-contacts__list">
+                                    <li class="footer-contacts__list-item">
+                                        <a
+                                            class="footer-contacts__link"
+                                            href="tel:"
+                                            aria-label="Позвонить по номеру +7 (938) 540-08-48"
+                                            >+7 (938) 540-08-48</a
+                                        >
+                                    </li>
+                                    <li class="footer-contacts__list-item">
+                                        <p class="footer-contacts__text">
+                                            <strong>Кафе:</strong> 10:00&nbsp;&mdash; 00:00
+                                        </p>
+                                        <p class="footer-contacts__text">
+                                            <strong>Доставка:</strong> 10:00&nbsp;&mdash; 21:30
+                                        </p>
+                                        <p class="footer-contacts__text"><strong>Без выходных</strong></p>
+                                    </li>
+                                    <li class="footer-contacts__list-item">
+                                        <a
+                                            class="footer-contacts__link"
+                                            href="https://instagram.com/"
+                                            target="_blank"
+                                            aria-label="Наша страница в Instagram">
+                                            <strong>Inst: </strong>cafe_lesnoe_gel
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright copyright">
+                <div class="copyright__container container">
+                    <ul class="copyright__list">
+                        <li class="copyright__list-item">
+                            <a href="./main.html" class="copyright__list-link link" target="_blank">
+                                Пользовательское соглашение
+                            </a>
+                        </li>
+                        <li class="copyright__list-item">Все права защищены copyright &copy;&nbsp;2024</li>
+
+                        <li class="copyright__list-item">
+                            <a
+                                href="https://web2.agency/"
+                                class="copyright__list-link link"
+                                title="Перейти на сайт разработки сайтов в Новороссийске"
+                                aria-label="Перейти на сайт разработки сайтов в Новороссийске"
+                                target="_blank">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                                </svg>
+                                <span class="link__text"> Создание сайтов </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- SOCIAL-PANEL -->
+        <ul id="social-panel" class="social-panel">
+            <li class="social-panel__item">
+                <a
+                    aria-label="Связаться с нами в WhatsApp"
+                    target="_blank"
+                    href="https://wa.me/+79284400014"
+                    class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-panel__item">
+                <a
+                    aria-label="Связаться с нами в Telegram"
+                    target="_blank"
+                    href="https://t.me/+79284400014"
+                    class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

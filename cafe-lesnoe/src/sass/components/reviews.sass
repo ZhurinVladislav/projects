@@ -1,0 +1,121 @@
+.home-page
+	.reviews
+		padding: 120px 0
+
+		+ph
+			padding: 80px 0
+
+.reviews
+	position: relative
+	padding: 0 0 120px 0
+
+	+ph
+		padding: 0 0 80px 0
+
+	&__bg-img
+
+		+ph
+			opacity: .5
+
+		&_one
+			bottom: 0
+			left: -12px
+			width: 345px
+			height: 414px
+
+			+ph
+				width: 252px
+				height: 260px
+
+		&_two
+			top: -27px
+			right: -52px
+			width: 132px
+			height: 148px
+
+			+sm
+				top: -120px
+
+			+ph
+				top: -80px
+
+	&__content-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		+ph
+			flex-direction: column
+
+	&__content
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+		margin-right: 20px
+		padding: 154px 40px
+		max-width: 50%
+		width: 100%
+
+		+sm
+			padding: 20px
+
+		+ph
+			margin-right: 0
+			margin-bottom: 20px
+			padding: 10px 0
+			max-width: 100%
+
+	&__title
+		max-width: 397px
+		line-height: 44%
+
+		+sm
+			max-width: 329px
+		
+		+ph
+			max-width: 251px
+			line-height: 60%
+
+	&__text
+		max-width: 592px
+
+		+ph
+			max-width: 100%
+
+	&__iframe-wrapper
+		position: relative
+		max-width: 43%
+		width: 100%
+		height: 624px
+		overflow: hidden
+
+		+ph
+			max-width: 100%
+
+		iframe
+			width: 100%
+			height: 100%
+			border: 1px solid #e6e6e6
+			border-radius: 8px
+			box-sizing: border-box
+
+		a
+			position: absolute
+			bottom: 8px
+			left: 0
+			display: block
+			padding: 0 16px
+			width: 100%
+			max-height: 20px
+			font-family: YS Text, sans-serif
+			font-size: 10px
+			color: #b3b3b3
+			text-decoration: none
+			text-align: center
+			text-overflow: ellipsis
+			white-space: nowrap
+			overflow: hidden
+			box-sizing: border-box
