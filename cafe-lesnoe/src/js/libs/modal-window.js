@@ -98,7 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ev._isClickWithInModal) return;
         ev.currentTarget.classList.remove('open');
         html.classList.remove(`mod-open`);
-        if (modalImg) modalImg.querySelector('.js-modal-img').remove();
+        if (modalImg) {
+          setTimeout(() => {
+            modalImg.querySelector('.js-modal-img').remove();
+          }, 200);
+        }
       });
     });
   }

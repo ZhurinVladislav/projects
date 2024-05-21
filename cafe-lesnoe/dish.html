@@ -328,7 +328,6 @@
                         <li class="breadcrumb-item active">&nbsp;Блюдо 1</li>
                     </ol>
                     <h1 class="dish__title-hidden h-0">Заказать Блюдо 1 | Кафе "Лесное"</h1>
-                    <h2 class="dish__title h-1">Блюдо 1</h2>
                     <div class="dish__content-wrapper">
                         <div class="dish__img-wrapper">
                             <ul class="dish__stickers stickers">
@@ -343,6 +342,7 @@
                                 title="Блюдо 1" />
                         </div>
                         <div class="dish__content">
+                            <h2 class="dish__title h-1">Блюдо 1</h2>
                             <p class="dish__content-descr">
                                 люля кебаб из курицы, свинины и говядины, картофель, пита, томаты, лук, шпинат, соус
                                 Дзадзыки
@@ -353,8 +353,18 @@
                                 <p class="form-dish__weight">350 гр</p>
 
                                 <div class="form-dish__price-wrapper">
-                                    <span class="form-dish__price msoptionsprice-cost msoptionsprice-1203">420</span>
-                                    <span class="form-dish__price-currency">₽</span>
+                                    <div class="form-dish__price form-dish__price_old">
+                                        <span class="form-dish__price-cost msoptionsprice-cost msoptionsprice-1203"
+                                            >420</span
+                                        >
+                                        <span class="form-dish__price-currency">₽</span>
+                                    </div>
+                                    <div class="form-dish__price">
+                                        <span class="form-dish__price-cost msoptionsprice-cost msoptionsprice-1203"
+                                            >420</span
+                                        >
+                                        <span class="form-dish__price-currency">₽</span>
+                                    </div>
                                 </div>
 
                                 <input type="hidden" name="options[delivery]" value="" />

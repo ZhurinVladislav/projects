@@ -1,1 +1,193 @@
+.home-page
+	.portfolio
+		padding-bottom: 120px
+		border-bottom: 2px solid $clr_1
+		
+		+ph
+			padding-bottom: 80px
+
 .portfolio
+	padding-bottom: 80px
+
+	&__descr
+		margin-bottom: 60px
+		max-width: 466px
+		color: $clr_6
+
+		+ph
+			margin-bottom: 40px
+
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 120px
+
+		+sm
+			gap: 80px
+		
+.portfolio-item
+	display: flex
+	justify-content: space-between
+	gap: 48px
+
+	+sm
+		gap: 30px
+	
+	+ph
+		flex-direction: column
+		gap: 10px
+
+	&__img-wrapper
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding: 126px 57px
+		max-width: 600px
+		width: 100%
+		min-height: 600px
+		border-radius: 14px
+		background-image: url(../img/portfolio/bg-img.png)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+		+md
+			padding: 80px 30px
+			min-height: 400px
+
+		+sm
+			padding: 40px 20px
+
+		+ph
+			padding: 40px 10px
+			max-width: 100%
+			min-height: 320px
+
+	&__img
+		width: 100%
+		border-radius: 14px
+		object-fit: cover
+
+	&__content
+		display: flex
+		flex-direction: column
+		padding-top: 40px
+		max-width: 576px
+		width: 100%
+
+	&__title
+		margin-bottom: 14px
+		line-height: 140%
+		font-size: 32px
+		
+		+sm
+			font-size: 30px
+
+		+ph
+			font-size: 24px
+
+	&__descr
+		margin-bottom: 16px
+
+	&__list-title
+		margin-bottom: 16px
+		font-weight: 600
+		text-transform: uppercase
+
+	&__list
+		display: flex
+		flex-direction: column
+		margin-bottom: 48px
+
+		+ph
+			margin-bottom: 30px
+
+	&__list-item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 16px 0
+		border-bottom: 1px solid $clr_4
+
+		&:first-child
+			border-top: 1px solid $clr_4
+
+.portfolio-links
+	display: flex
+	align-items: center
+	gap: 24px
+
+	&__item
+		display: flex
+
+.portfolio-link
+	display: flex
+	align-items: center
+	font-weight: 700
+	color: $clr_3
+	border-bottom: 1px solid $clr_0
+	text-transform: uppercase
+	transition: color .2s linear, border-color .2s linear, transform .2s linear
+
+	+ph
+		font-size: 14px
+	
+	&:hover
+		+hover
+			color: $clr_1
+
+			.portfolio-link__icon
+				fill: $clr_1
+
+			.portfolio-link__icon_arrow
+				transform: rotate(45deg)
+
+	&:focus:not(:active)
+		border-color: $clr_1
+
+	&:active
+		transform: scale(.94)
+
+	&__text
+		margin-right: 6px
+
+	&__icon
+		flex-shrink: 0
+		width: 26px
+		height: 26px
+		fill: $clr_3
+		transition: fill .2s linear
+
+		&_arrow
+			width: 18px
+			height: 15px
+			transition: transform .2s linear
+
+.tag-list
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	gap: 8px
+	margin-top: -100px
+	margin-bottom: 60px
+
+	+md
+		margin-top: -40px
+
+	+sm
+		margin-top: -20px
+		margin-bottom: 30px
+
+	+ph
+		margin-bottom: 20px
+
+	&__item
+		padding: 10px 13px
+		font-weight: 500
+		font-size: 14px
+		border-radius: 20px
+		background-color: $clr_2
+
+		+ph
+			font-size: 12px
