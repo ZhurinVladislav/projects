@@ -5,157 +5,95 @@
         <base href="/" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href="./app/img/favicon.svg" />
         <!-- SEO -->
         <title>Frontend разработка</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!-- STYLES -->
-        <link rel="stylesheet" href="/app/css/main.min.css" />
+        <link rel="stylesheet" href="./app/css/main.min.css" />
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/preloader.js"></script>
-        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
-        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
-        <script src="/app/js/libs/webp.js" defer></script>
-        <script src="/app/js/libs/modal-window.js" defer></script>
-        <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
-        <script src="/app/js/main.min.js" defer></script>
+        <script src="./app/js/libs/preloader.js"></script>
+        <script src="./app/js/libs/lightgallery-all.min.js" defer></script>
+        <script src="./app/js/libs/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/webp.js" defer></script>
+        <script src="./app/js/libs/modal-window.js" defer></script>
+        <script src="./app/js/libs/iframeLazyLoad.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
     </head>
 
     <body class="home-page">
         <div id="preloader" class="home-page__preloader preloader">
-            <ul class="preloader__list">
-                <li class="preloader__list-item"></li>
-                <li class="preloader__list-item"></li>
-                <li class="preloader__list-item"></li>
-                <li class="preloader__list-item"></li>
-            </ul>
+            <span class="preloader__item">{</span>
+            <span class="preloader__item preloader__item_last">}</span>
         </div>
+        <div class="home-page__page-bg-img page-bg-img page-bg-img_left"></div>
+        <div class="home-page__page-bg-img page-bg-img page-bg-img_right"></div>
         <!-- HEADER -->
-        <header class="home-page__header header">
+        <header id="header" class="home-page__header header">
             <div class="header__container container">
-                <div class="header__content-left">
-                    <a href="/" class="header__logo header__logo logo">
-                        <img class="logo__img" src="/app/img/logo.svg" alt="Кафе Лесное" title="Кафе Лесное" />
-                    </a>
-                    <a class="header__link link-invert" href="tel:+79385400848">
-                        <svg class="link-invert__icon">
-                            <use xlink:href="/app/img/icons/icons.svg#ph"></use>
-                        </svg>
-                        <span class="link-invert__text"> +7 (938) 540-08-48 </span>
-                    </a>
-                </div>
+                <a class="header__logo logo" href="/">
+                    <img
+                        class="logo__img"
+                        src="./app/img/logo.svg"
+                        alt="Логотип Frontend разработчика Журина Владислава"
+                        title="Frontend разработчик Журин Владислав" />
+                </a>
+
                 <nav class="header__menu header-menu">
                     <ul class="header-menu__list">
-                        <li class="header-menu__item parent active">
-                            <a class="header-menu__link" href="./menu.html">
-                                <span class="header-menu__link-text">Меню</span>
-                                <svg class="header-menu__link-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </a>
-                            <ul class="header-menu__list-inner list-inner">
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Первые блюда </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Блюда на мангале </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Горячее, гарниры </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Пицца </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Салаты </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Холодные закуски </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Закуски к пиву </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Десерты </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Хлеб </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Соусы </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Напитки </span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <li class="header-menu__list-item active">
+                            <a class="header-menu__list-link" href="/"> Главная </a>
                         </li>
-                        <li class="header-menu__item">
-                            <a class="header-menu__link" href="./main.html"> О кафе </a>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./about.html"> Обо мне </a>
                         </li>
-                        <li class="header-menu__item">
-                            <a class="header-menu__link" href="./information.html"> Информация </a>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./portfolio.html"> Портфолио </a>
                         </li>
-                        <li class="header-menu__item">
-                            <a class="header-menu__link" href="./reviews.html"> Отзывы </a>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./certificates.html"> Сертификаты </a>
                         </li>
-                        <li class="header-menu__item">
-                            <a class="header-menu__link" href="./contacts.html"> Контакты </a>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./contacts.html"> Контакты </a>
                         </li>
                     </ul>
-                    <div class="header-menu__links-wrapper header-basket">
-                        <div id="msMiniCart" class="{$total_count > 0 ? 'full' : ''}">
-                            <a href="./basket.html" class="header-basket__link not_empty" title="Корзина пуста">
-                                <svg class="header-basket__link-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
-                                </svg>
-                            </a>
-                            <a href="./basket.html" class="header-basket__link empty">
-                                <svg class="header-basket__link-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
-                                </svg>
-                                <span class="header-basket__link-text ms2_total_count">1</span>
-                            </a>
-                        </div>
-                    </div>
                 </nav>
-                <ul class="header__list-info header-info">
-                    <li class="header-info__item">
-                        <svg class="header-info__item-icon">
-                            <use xlink:href="/app/img/icons/icons.svg#time"></use>
-                        </svg>
-                        <span class="header-info__item-descr"> Кафе: 10:00&nbsp;&mdash; 00:00 </span>
+
+                <ul class="header__list-btn header-list-btn">
+                    <li class="header-list-btn__item">
+                        <a
+                            class="header-list-btn__item-link"
+                            href="https://t.me/+79002521890"
+                            target="_blank"
+                            aria-label="Написать мне в Telegram">
+                            <svg class="header-list-btn__item-icon">
+                                <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="header-info__item">
-                        <svg class="header-info__item-icon">
-                            <use xlink:href="/app/img/icons/icons.svg#time"></use>
-                        </svg>
-                        <span class="header-info__item-descr"> Доставка: 10:00&nbsp;&mdash; 21:30 </span>
+                    <li class="header-list-btn__item">
+                        <a
+                            class="header-list-btn__item-link"
+                            href="https://github.com/ZhurinVladislav"
+                            target="_blank"
+                            aria-label="Перейти в мой GitHub">
+                            <svg class="header-list-btn__item-icon">
+                                <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header-list-btn__item header-list-btn__item_btn">
+                        <button class="header-list-btn__item-btn button js-open-modal" data-open="form-callback">
+                            <span class="button__text button__text_ph">Написать</span>
+                            <svg class="button__icon button__icon_ph">
+                                <use xlink:href="/app/img/icons/icons.svg#message"></use>
+                            </svg>
+                        </button>
                     </li>
                 </ul>
-                <button id="burger-toggle" aria-label="Открыть мобильное меню" class="header__menu-toggle menu-toggle">
+
+                <button id="burger-toggle" class="header__menu-toggle menu-toggle" aria-label="Открыть мобильное меню">
                     <span class="menu-toggle__item"></span>
                     <span class="menu-toggle__item"></span>
                     <span class="menu-toggle__item"></span>
@@ -166,57 +104,17 @@
                 <div class="menu-mobile__wrap">
                     <nav class="menu-mobile__menu menu">
                         <ul class="menu__list list">
-                            <li class="list__item item parent">
-                                <a class="item__link" href="./menu.html"> Меню </a>
-                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
-                                    <svg class="item__icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                    </svg>
-                                </button>
-                                <ul class="item__list list">
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Первые блюда </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Блюда на мангале </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Горячее, гарниры </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Пицца </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Салаты </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Холодные закуски </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Закуски к пиву </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Десерты </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Хлеб </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Соусы </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Напитки </a>
-                                    </li>
-                                </ul>
+                            <li class="list__item item">
+                                <a class="item__link" href="/"> Главная </a>
                             </li>
                             <li class="list__item item">
-                                <a href="./main.html" class="item__link"> О кафе </a>
+                                <a class="item__link" href="./about.html"> Обо мне </a>
                             </li>
                             <li class="list__item item">
-                                <a href="./information.html" class="item__link"> Информация </a>
+                                <a class="item__link" href="./portfolio.html"> Портфолио </a>
                             </li>
                             <li class="list__item item">
-                                <a class="item__link" href="./reviews.html"> Отзывы </a>
+                                <a class="item__link" href="./certificates.html"> Сертификаты </a>
                             </li>
                             <li class="list__item item">
                                 <a class="item__link" href="./contacts.html"> Контакты </a>
@@ -225,47 +123,19 @@
                     </nav>
                     <ul class="list-link">
                         <li class="list-link__item">
-                            <a class="list-link__link" href="tel:+79385400848">
+                            <a class="list-link__link" href="tel:+79002521890">
                                 <svg class="list-link__icon icon-reset">
                                     <use xlink:href="/app/img/icons/icons.svg#ph"></use>
                                 </svg>
-                                <span class="list-link__descr"> +7 (938) 540-08-48 </span>
+                                <span class="list-link__descr"> +7 (900) 252-18-90 </span>
                             </a>
                         </li>
                         <li class="list-link__item">
-                            <a
-                                target="_blank"
-                                class="list-link__link"
-                                aria-label="Наша страница в Instagram"
-                                href="https://instagram.com/">
-                                <svg class="list-link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#inst"></use>
+                            <a class="list-link__link" href="mailto:info@front-web.com">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
                                 </svg>
-                                <span class="list-link__descr"> Instagram </span>
-                            </a>
-                        </li>
-                        <li class="list-link__item">
-                            <a
-                                target="_blank"
-                                class="list-link__link"
-                                aria-label="Связаться с нами в WhatsApp"
-                                href="https://wa.me/+79385400848">
-                                <svg class="list-link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                                </svg>
-                                <span class="list-link__descr"> WhatsApp </span>
-                            </a>
-                        </li>
-                        <li class="list-link__item">
-                            <a
-                                target="_blank"
-                                class="list-link__link"
-                                aria-label="Связаться с нами в Telegram"
-                                href="https://t.me/+79385400848">
-                                <svg class="list-link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                                </svg>
-                                <span class="list-link__descr"> Telegram </span>
+                                <span class="list-link__descr"> info@front-web.com </span>
                             </a>
                         </li>
                         <li class="list-link__item">
@@ -273,461 +143,320 @@
                                 <svg class="list-link__icon">
                                     <use xlink:href="/app/img/icons/icons.svg#mark"></use>
                                 </svg>
-                                <address class="list-link__descr">Геленджик М4&nbsp;Дон 1501&nbsp;км.</address>
+                                <address class="list-link__descr">Краснодарский край, г. Новороссийск</address>
                             </a>
-                        </li>
-                        <li class="list-link__item">
-                            <svg class="list-link__icon">
-                                <use xlink:href="/app/img/icons/icons.svg#time"></use>
-                            </svg>
-                            <span class="list-link__descr"> Кафе: 10:00&nbsp;&mdash; 00:00 </span>
-                        </li>
-                        <li class="list-link__item">
-                            <svg class="list-link__icon">
-                                <use xlink:href="/app/img/icons/icons.svg#time"></use>
-                            </svg>
-                            <span class="list-link__descr"> Доставка: 10:00&nbsp;&mdash; 21:30 </span>
                         </li>
                     </ul>
                 </div>
             </div>
         </header>
         <!-- MAIN -->
-        <main class="home-page__main main-section">
+        <main id="main" class="home-page__main main-section">
             <!-- HERO -->
-            <section id="home-hero" class="main-section__hero hero">
+            <section class="main-section__hero hero">
                 <div class="hero__container container">
-                    <h1 class="hero__title h-1">Геленджик, Кафе &laquo;Лесное&raquo;</h1>
-                    <ul class="hero__list">
-                        <li class="hero__list-item">Вкусное мясо</li>
-                        <li class="hero__list-item">Доставка блюд</li>
-                        <li class="hero__list-item">Близость к&nbsp;природе</li>
-                    </ul>
-                    <button id="hero-btn" class="hero__btn">
-                        <svg class="hero__btn-icon">
-                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                        </svg>
-                        <svg class="hero__btn-icon hero__btn-icon_bg">
-                            <use xlink:href="/app/img/icons/icons.svg#icon-btn"></use>
-                        </svg>
-                    </button>
+                    <div class="hero__content-wrapper">
+                        <div class="hero__content">
+                            <h1 class="hero__title-hidden hidden-text">
+                                Frontend разработка в Краснодарской крае. Создание сайтов и приложений
+                            </h1>
+                            <p class="hero__subtitle">
+                                <span class="hero__subtitle-color color">Создание сайтов</span> и&nbsp;web-приложений
+                            </p>
+                            <h2 class="hero__title h-1">WEB<span class="hero__title-color color">-разработка</span></h2>
+                        </div>
+                        <div class="hero__img-wrapper">
+                            <img class="hero__img" src="./app/img/hero/img-1.png" alt="Робот" />
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- ABOUT -->
-            <section class="main-section__about about">
-                <img class="about__bg-img bg-img" src="./app/img/about/bg-img.png" alt="Олива европейская" />
+            <section class="main-section__about about section-reset">
                 <div class="about__container container">
                     <div class="about__content-wrapper">
-                        <div class="about__content">
-                            <h2 class="about__title h-2">
-                                Наше <span class="about__title-color color-inverter">кафе</span>
-                            </h2>
-                            <svg class="about__icon icon-common">
-                                <use xlink:href="/app/img/icons/icons.svg#icon"></use>
-                            </svg>
-                            <p class="about__text">
-                                Кафе &laquo;Лесное&raquo; у&nbsp;реки&nbsp;&mdash; это отличное место для отдыха
-                                на&nbsp;природе. Здесь можно насладиться прекрасным видом на&nbsp;природу, слушая шум
-                                реки и&nbsp;наслаждаясь свежим воздухом леса.
-                            </p>
-                            <ul class="about__list">
-                                <li class="about__list-item">Детская площадка</li>
-                                <li class="about__list-item">Банкетный зал</li>
-                                <li class="about__list-item">Блюда с&nbsp;мангала</li>
-                                <li class="about__list-item">Беседки у&nbsp;реки</li>
-                            </ul>
-                            <a href="./main.html" class="about__link link">Узнать больше</a>
+                        <div class="about__img-wrapper">
+                            <img class="about__img" src="./app/img/about/img-1.png" alt="Ноутбук" />
                         </div>
-                        <div class="about__slider about-slider">
-                            <button
-                                id="about-btn-prev"
-                                class="about-slider__arrow arrow arrow_prev"
-                                aria-label="Перейти не предыдущий слайд">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow-slider"></use>
-                                </svg>
-                            </button>
-                            <div id="about-slider" class="swiper about-slider__slider slider">
-                                <ul class="swiper-wrapper slider__wrapper">
-                                    <li class="swiper-slide slider__slide">
+                        <div class="about__content">
+                            <h2 class="about__title h-2">Обо мне</h2>
+                            <p class="about__intro">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim nemo libero debit
+                            </p>
+                            <div class="about__text text-default">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim nemo libero debitis
+                                    asperiores dolorem laborum in suscipit, ut incidunt distinctio amet provident
+                                    consequuntur harum laudantium inventore dolore quae quidem quia?
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim nemo libero debitis
+                                    asperiores dolorem laborum in suscipit, ut incidunt distinctio amet provident
+                                    consequuntur harum laudantium inventore dolore quae quidem quia?
+                                </p>
+                            </div>
+                            <a class="about__link link" href="./about.html" aria-label="Перейти на страницу обо мне">
+                                Больше обо мне
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PORTFOLIO -->
+            <section class="main-section__portfolio portfolio section-reset">
+                <div class="portfolio__container container">
+                    <h2 class="portfolio__title h-2">Избранные проекты</h2>
+                    <p class="portfolio__descr">
+                        Вот некоторые из&nbsp;отобранных проектов, которые демонстрируют мою страсть к&nbsp;front-end
+                        разработке.
+                    </p>
+                    <ul class="portfolio__list">
+                        <li class="portfolio__list-item portfolio-item">
+                            <div class="portfolio-item__img-wrapper">
+                                <ul class="portfolio-item__tag-list tag-list">
+                                    <li class="tag-list__item">Концептуальная работа</li>
+                                    <li class="tag-list__item">Концептуальная работа</li>
+                                    <!-- <li class="tag-list__item">Концептуальная работа</li> -->
+                                </ul>
+                                <img
+                                    class="portfolio-item__img"
+                                    src="./app/img/portfolio/img-1.jpg"
+                                    alt="Тестовое изображения портфолио" />
+                            </div>
+                            <div class="portfolio-item__content">
+                                <h3 class="portfolio-item__title">Promotional landing page for our favorite show</h3>
+                                <div class="portfolio-item__descr text-default">
+                                    <p>
+                                        Teamed up with a designer to breathe life into a promotional webpage for our
+                                        beloved show, Adventure Time. Delivered a fully responsive design with dynamic
+                                        content capabilities, seamlessly integrating a newsletter feature to keep fans
+                                        updated with the latest adventures.
+                                    </p>
+                                </div>
+                                <p class="portfolio-item__list-title">Информация</p>
+                                <ul class="portfolio-item__list">
+                                    <li class="portfolio-item__list-item">
+                                        <p class="portfolio-item__list-item-title">Год</p>
+                                        <p class="portfolio-item__list-item-descr">2023</p>
+                                    </li>
+                                    <li class="portfolio-item__list-item">
+                                        <p class="portfolio-item__list-item-title">Роль</p>
+                                        <p class="portfolio-item__list-item-descr">Front-end developer</p>
+                                    </li>
+                                </ul>
+                                <ul class="portfolio-item__list-link portfolio-links">
+                                    <li class="portfolio-links__item">
                                         <a
-                                            href="./app/img/about/img-1.jpg"
-                                            aria-label="Открыть галерею фотографий"
-                                            class="slider__slide-link">
-                                            <img
-                                                src="./app/img/about/img-1.jpg"
-                                                alt="Беседка у реки"
-                                                class="slider__img" />
+                                            class="portfolio-links__item-link portfolio-link"
+                                            href="/"
+                                            aria-label="Перейти на страницу демо проекта">
+                                            <span class="portfolio-link__text"> Демо </span>
+                                            <svg class="portfolio-link__icon portfolio-link__icon_arrow">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
                                         </a>
                                     </li>
-                                    <li class="swiper-slide slider__slide">
+                                    <li class="portfolio-links__item">
                                         <a
-                                            href="./app/img/about/img-1.jpg"
-                                            aria-label="Открыть галерею фотографий"
-                                            class="slider__slide-link">
-                                            <img
-                                                src="./app/img/about/img-2.jpg"
-                                                alt="Беседка с мангалом"
-                                                class="slider__img" />
-                                        </a>
-                                    </li>
-                                    <li class="swiper-slide slider__slide">
-                                        <a
-                                            href="./app/img/about/img-1.jpg"
-                                            aria-label="Открыть галерею фотографий"
-                                            class="slider__slide-link">
-                                            <img
-                                                src="./app/img/about/img-1.jpg"
-                                                alt="Беседка у реки"
-                                                class="slider__img" />
-                                        </a>
-                                    </li>
-                                    <li class="swiper-slide slider__slide">
-                                        <a
-                                            href="./app/img/about/img-1.jpg"
-                                            aria-label="Открыть галерею фотографий"
-                                            class="slider__slide-link">
-                                            <img
-                                                src="./app/img/about/img-2.jpg"
-                                                alt="Беседка с мангалом"
-                                                class="slider__img" />
-                                        </a>
-                                    </li>
-                                    <li class="swiper-slide slider__slide">
-                                        <a
-                                            href="./app/img/about/img-1.jpg"
-                                            aria-label="Открыть галерею фотографий"
-                                            class="slider__slide-link">
-                                            <img
-                                                src="./app/img/about/img-1.jpg"
-                                                alt="Беседка у реки"
-                                                class="slider__img" />
-                                        </a>
-                                    </li>
-                                    <li class="swiper-slide slider__slide">
-                                        <a
-                                            href="./app/img/about/img-1.jpg"
-                                            aria-label="Открыть галерею фотографий"
-                                            class="slider__slide-link">
-                                            <img
-                                                src="./app/img/about/img-2.jpg"
-                                                alt="Беседка с мангалом"
-                                                class="slider__img" />
-                                        </a>
-                                    </li>
-                                    <li class="swiper-slide slider__slide">
-                                        <a
-                                            href="./app/img/about/img-1.jpg"
-                                            aria-label="Открыть галерею фотографий"
-                                            class="slider__slide-link">
-                                            <img
-                                                src="./app/img/about/img-1.jpg"
-                                                alt="Беседка у реки"
-                                                class="slider__img" />
-                                        </a>
-                                    </li>
-                                    <li class="swiper-slide slider__slide">
-                                        <a
-                                            href="./app/img/about/img-1.jpg"
-                                            aria-label="Открыть галерею фотографий"
-                                            class="slider__slide-link">
-                                            <img
-                                                src="./app/img/about/img-2.jpg"
-                                                alt="Беседка с мангалом"
-                                                class="slider__img" />
+                                            class="portfolio-links__item-link portfolio-link"
+                                            href="https://github.com/ZhurinVladislav"
+                                            target="_blank"
+                                            aria-label="Перейти в мой GitHub">
+                                            <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
+                                            <svg class="portfolio-link__icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                            </svg>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <button
-                                id="about-btn-next"
-                                class="about-slider__arrow arrow arrow_next"
-                                aria-label="Перейти не следующий слайд">
-                                <svg class="arrow__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow-slider"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- MENU -->
-            <section class="main-section__menu menu">
-                <img class="menu__bg-img menu__bg-img_left bg-img" src="./app/img/menu/bg-img-1.png" alt="Перец" />
-                <img
-                    class="menu__bg-img menu__bg-img_right bg-img"
-                    src="./app/img/menu/bg-img-2.png"
-                    alt="Кухонный нож" />
-                <div class="menu__container container">
-                    <h2 class="menu__title h-2">Наше меню</h2>
-                    <ul class="menu__list menu-list">
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-1.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Первые блюда</p>
-                                </div>
-                            </a>
                         </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-2.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Блюда на мангале</p>
+                        <li class="portfolio__list-item portfolio-item">
+                            <div class="portfolio-item__img-wrapper">
+                                <img
+                                    class="portfolio-item__img"
+                                    src="./app/img/portfolio/img-1.jpg"
+                                    alt="Тестовое изображения портфолио" />
+                            </div>
+                            <div class="portfolio-item__content">
+                                <h3 class="portfolio-item__title">Promotional landing page for our favorite show</h3>
+                                <div class="portfolio-item__descr text-default">
+                                    <p>
+                                        Teamed up with a designer to breathe life into a promotional webpage for our
+                                        beloved show, Adventure Time. Delivered a fully responsive design with dynamic
+                                        content capabilities, seamlessly integrating a newsletter feature to keep fans
+                                        updated with the latest adventures.
+                                    </p>
                                 </div>
-                            </a>
+                                <p class="portfolio-item__list-title">Информация</p>
+                                <ul class="portfolio-item__list">
+                                    <li class="portfolio-item__list-item">
+                                        <p class="portfolio-item__list-item-title">Год</p>
+                                        <p class="portfolio-item__list-item-descr">2023</p>
+                                    </li>
+                                    <li class="portfolio-item__list-item">
+                                        <p class="portfolio-item__list-item-title">Роль</p>
+                                        <p class="portfolio-item__list-item-descr">Front-end developer</p>
+                                    </li>
+                                </ul>
+                                <ul class="portfolio-item__list-link portfolio-links">
+                                    <li class="portfolio-links__item">
+                                        <a
+                                            class="portfolio-links__item-link portfolio-link"
+                                            href="/"
+                                            aria-label="Перейти на страницу демо проекта">
+                                            <span class="portfolio-link__text"> Демо </span>
+                                            <svg class="portfolio-link__icon portfolio-link__icon_arrow">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="portfolio-links__item">
+                                        <a
+                                            class="portfolio-links__item-link portfolio-link"
+                                            href="https://github.com/ZhurinVladislav"
+                                            target="_blank"
+                                            aria-label="Перейти в мой GitHub">
+                                            <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
+                                            <svg class="portfolio-link__icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-3.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Горячее, гарниры</p>
+                        <li class="portfolio__list-item portfolio-item">
+                            <div class="portfolio-item__img-wrapper">
+                                <img
+                                    class="portfolio-item__img"
+                                    src="./app/img/portfolio/img-1.jpg"
+                                    alt="Тестовое изображения портфолио" />
+                            </div>
+                            <div class="portfolio-item__content">
+                                <h3 class="portfolio-item__title">Promotional landing page for our favorite show</h3>
+                                <div class="portfolio-item__descr text-default">
+                                    <p>
+                                        Teamed up with a designer to breathe life into a promotional webpage for our
+                                        beloved show, Adventure Time. Delivered a fully responsive design with dynamic
+                                        content capabilities, seamlessly integrating a newsletter feature to keep fans
+                                        updated with the latest adventures.
+                                    </p>
                                 </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-4.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Пицца</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-5.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Салаты</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-6.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Холодные закуски</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-7.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Закуски к пиву</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-8.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Десерты</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-9.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Хлеб</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-10.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Соусы</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <img src="./app/img/menu/img-11.jpg" alt="Блюдо из меню" class="menu-list__item-img" />
-                                <div class="menu-list__item-text-wrapper">
-                                    <p class="menu-list__item-text">Напитки</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-list__item menu-list__item_last">
-                            <a class="menu-list__item-link" href="/" aria-label="Перейти на страницу ">
-                                <p class="menu-list__item-link-text h-2">Всё меню</p>
-                                <svg class="menu-list__icon icon-common">
-                                    <use xlink:href="/app/img/icons/icons.svg#icon"></use>
-                                </svg>
-                            </a>
+                                <p class="portfolio-item__list-title">Информация</p>
+                                <ul class="portfolio-item__list">
+                                    <li class="portfolio-item__list-item">
+                                        <p class="portfolio-item__list-item-title">Год</p>
+                                        <p class="portfolio-item__list-item-descr">2023</p>
+                                    </li>
+                                    <li class="portfolio-item__list-item">
+                                        <p class="portfolio-item__list-item-title">Роль</p>
+                                        <p class="portfolio-item__list-item-descr">Front-end developer</p>
+                                    </li>
+                                </ul>
+                                <ul class="portfolio-item__list-link portfolio-links">
+                                    <li class="portfolio-links__item">
+                                        <a
+                                            class="portfolio-links__item-link portfolio-link"
+                                            href="/"
+                                            aria-label="Перейти на страницу демо проекта">
+                                            <span class="portfolio-link__text"> Демо </span>
+                                            <svg class="portfolio-link__icon portfolio-link__icon_arrow">
+                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="portfolio-links__item">
+                                        <a
+                                            class="portfolio-links__item-link portfolio-link"
+                                            href="https://github.com/ZhurinVladislav"
+                                            target="_blank"
+                                            aria-label="Перейти в мой GitHub">
+                                            <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
+                                            <svg class="portfolio-link__icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </section>
-            <!-- MORE-DETAILED -->
-            <section class="main-section__more-detailed more-detailed">
-                <img
-                    class="more-detailed__bg-img more-detailed__bg-img_one bg-img"
-                    src="./app/img/more-detailed/bg-img-1.png"
-                    alt="Стейк" />
-                <img
-                    class="more-detailed__bg-img more-detailed__bg-img_two bg-img"
-                    src="./app/img/more-detailed/bg-img-2.png"
-                    alt="Соус" />
-                <div class="more-detailed__container container">
-                    <div class="more-detailed__content-wrapper">
-                        <div class="more-detailed__content">
-                            <h2 class="more-detailed__title h-2">
-                                Для наших <span class="more-detailed__title-color color-inverter">гостей</span>
-                            </h2>
-                            <svg class="more-detailed__icon icon-common">
-                                <use xlink:href="/app/img/icons/icons.svg#icon"></use>
-                            </svg>
-                            <div class="more-detailed__text-wrapper text-default">
-                                <p class="more-detailed__text">
-                                    На&nbsp;территории кафе расположены уютные беседки, где можно посидеть
-                                    с&nbsp;друзьями или семьей, наслаждаясь природой и&nbsp;вкусной едой.
-                                </p>
-                                <p class="more-detailed__text">
-                                    Кафе прекрасно подходит для проведения различных мероприятий: от&nbsp;дружеских
-                                    посиделок до&nbsp;свадеб и&nbsp;корпоративов. Профессиональный сервис и&nbsp;уютная
-                                    атмосфера делают каждое торжество незабываемым.
-                                </p>
-                            </div>
-                        </div>
-                        <ul id="list-img" class="more-detailed__list-img list-img">
-                            <li class="list-img__item">
-                                <a href="./app/img/more-detailed/img-1.jpg" class="list-img__item-link">
-                                    <img
-                                        src="./app/img/more-detailed/img-1.jpg"
-                                        alt="Шашлык"
-                                        class="list-img__item-img" />
-                                </a>
-                            </li>
-                            <li class="list-img__item">
-                                <a href="./app/img/more-detailed/img-2.jpg" class="list-img__item-link">
-                                    <img
-                                        src="./app/img/more-detailed/img-2.jpg"
-                                        alt="Беседка"
-                                        class="list-img__item-img" />
-                                </a>
-                            </li>
-                            <li class="list-img__item">
-                                <a href="./app/img/more-detailed/img-3.jpg" class="list-img__item-link">
-                                    <img
-                                        src="./app/img/more-detailed/img-3.jpg"
-                                        alt="Река"
-                                        class="list-img__item-img" />
-                                </a>
-                            </li>
-                            <li class="list-img__item">
-                                <a href="./app/img/more-detailed/img-4.jpg" class="list-img__item-link">
-                                    <img
-                                        src="./app/img/more-detailed/img-4.jpg"
-                                        alt="Рыба"
-                                        class="list-img__item-img" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- CARE -->
-            <section class="main-section__care care">
-                <div class="care__container container">
-                    <h2 class="care__title-hidden h-0">Забота о качестве наших блюд</h2>
-                    <div class="care__text-wrapper">
-                        <p class="care__text">Мы&nbsp;заботимся о&nbsp;качестве наших блюд!</p>
-                    </div>
-                </div>
-            </section>
-            <!-- REVIEWS -->
-            <section class="main-section__reviews reviews">
-                <img
-                    class="reviews__bg-img reviews__bg-img_one bg-img"
-                    src="./app/img/reviews/bg-img-2.png"
-                    alt="Рыба" />
-                <div class="reviews__container container">
-                    <div class="reviews__content-wrapper">
-                        <div class="reviews__content">
-                            <img
-                                class="reviews__bg-img reviews__bg-img_two bg-img"
-                                src="./app/img/reviews/bg-img-1.png"
-                                alt="Чеснок" />
-                            <h2 class="reviews__title h-2">
-                                Отзывы <span class="reviews__title-color color-inverter">наших гостей</span>
-                            </h2>
-                            <svg class="reviews__icon icon-common">
-                                <use xlink:href="/app/img/icons/icons.svg#icon"></use>
-                            </svg>
-                            <p class="reviews__text">
-                                Каждому гостю в&nbsp;нашем кафе уделяется особое внимание. Поэтому мы&nbsp;будем рады
-                                услышать Ваши отзывы и&nbsp;пожелания. Поделитесь с&nbsp;нами Вашими впечатлениями
-                                и&nbsp;мы&nbsp;будем стараться стать лучше благодаря Вам!
+            <!-- FEEDBACK -->
+            <section class="main-section__feedback feedback section-reset">
+                <div class="feedback__container container">
+                    <div class="feedback__content-wrapper">
+                        <div class="feedback__content">
+                            <h2 class="feedback__title-hidden hidden-text">Связаться со мной</h2>
+                            <h3 class="feedback__title h-2">Связаться</h3>
+                            <p class="feedback__descr">
+                                Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque porro
+                                elit NeDque porro
                             </p>
+                            <ul class="feedback__list feedback-list">
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon feedback-list__item-icon_mark">
+                                        <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Адрес</h3>
+                                        <a
+                                            class="feedback-list__item-link"
+                                            href="./contacts.html"
+                                            aria-label="Перейти на страницу с контактной информацией">
+                                            Россия, Краснодарский край, г. Новороссийск
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Позвонить</h3>
+                                        <a
+                                            class="feedback-list__item-link"
+                                            href="tel:+79002521890"
+                                            aria-label="Позвонить по номеру +7 (900) 252-18-90">
+                                            +7 (900) 252-18-90
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Написать</h3>
+                                        <a
+                                            class="feedback-list__item-link"
+                                            href="mailto:info@front-web.com"
+                                            aria-label="Написать мне на почту info@front-web.com">
+                                            info@front-web.com
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="reviews__iframe-wrapper">
-                            <iframe src="https://yandex.ru/maps-reviews-widget/107576348898?comments"></iframe
-                            ><a href="https://yandex.ru/maps/org/lesnoye/107576348898/" target="_blank"
-                                >Лесное на карте Краснодарского края — Яндекс Карты</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- CONTACTS -->
-            <section class="main-section__contacts contacts">
-                <div class="contacts__map-wrapper">
-                    <script
-                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adb28e6208179fa54eda64da39ae79b3ccaf022b420bd6d8de864aaab3a3a47a9&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"
-                        async></script>
-                </div>
-                <div class="contacts__content-wrapper">
-                    <div class="contacts__content">
-                        <h2 class="contacts__title h-2">
-                            Контакты <span class="contacts__title-color color-inverter">нашего кафе</span>
-                        </h2>
-                        <svg class="contacts__icon icon-common">
-                            <use xlink:href="/app/img/icons/icons.svg#icon"></use>
-                        </svg>
-                        <address class="contacts__address">Геленджик М4&nbsp;Дон 1501&nbsp;км.</address>
-                        <a
-                            class="contacts__link link-invert"
-                            href="tel:+79385400848"
-                            aria-label="Позвонить по номеру +7 (938) 540-08-48"
-                            >+7 (938) 540-08-48</a
-                        >
-                        <ul class="contacts__social-list contacts-soc-list">
-                            <li class="contacts-soc-list__item">
-                                <a
-                                    aria-label="Связаться с нами в Telegram"
-                                    target="_blank"
-                                    href="https://t.me/+79385400848"
-                                    class="contacts-soc-list__link">
-                                    <svg class="contacts-soc-list__link-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="contacts-soc-list__item">
-                                <a
-                                    aria-label="Наша страница в Instagram"
-                                    target="_blank"
-                                    href="https://instagram.com/"
-                                    class="contacts-soc-list__link">
-                                    <svg class="contacts-soc-list__link-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#inst"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="contacts-soc-list__item">
-                                <a
-                                    aria-label="Связаться с нами в WhatsApp"
-                                    target="_blank"
-                                    href="https://wa.me/+79385400848"
-                                    class="contacts-soc-list__link">
-                                    <svg class="contacts-soc-list__link-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+                        <form class="feedback__form feedback-form">
+                            <ul class="feedback-form__list form-list">
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">Имя</label>
+                                    <input class="form-list__item-input input" type="text" name="name" />
+                                </li>
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">E-mail</label>
+                                    <input class="form-list__item-input input" type="text" name="email" />
+                                </li>
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">Сообщение</label>
+                                    <textarea class="form-list__item-textarea textarea" name="message"></textarea>
+                                </li>
+                            </ul>
+                            <button class="feedback-form__btn button-invert">Отправить</button>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -739,35 +468,30 @@
                         class="form-callback__close-btn modal-close js-close-modal"></button>
                     <p class="form-callback__title modal-title">Оставить заявку</p>
 
-                    <form action="/" class="form form-mod">
-                        <div class="form-mod__wrap-input wrap-input">
-                            <div class="wrap-input__item">
-                                <input class="wrap-input__input input" type="text" name="name" placeholder=" " />
-                                <label class="wrap-input__label label">Имя</label>
-                            </div>
-                            <div class="wrap-input__item">
-                                <input class="wrap-input__input input" type="number" name="phone" placeholder=" " />
-                                <label class="wrap-input__label label">Телефон</label>
-                            </div>
-                            <div class="wrap-input__item">
-                                <input class="wrap-input__input input" type="text" name="e-mail" placeholder=" " />
-                                <label class="wrap-input__label label">E-mail</label>
-                            </div>
-
-                            <label class="wrap-input__item form-note">
-                                <input class="form-note__input" type="checkbox" checked />
-                                <span class="form-note__checkbox"></span>
-                                <span class="form-note__text">
-                                    Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
-                                    <a href="/" class="form-note__text-link link-invert"
-                                        >Пользовательского соглашения</a
-                                    >
-                                </span>
-                            </label>
-                        </div>
-                        <button aria-label="Отправить заявку" type="submit" class="form-mod__btn button">
-                            <span class="button__text"> Отправить </span>
-                        </button>
+                    <form class="form form-mod">
+                        <ul class="form-mod__list form-list">
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">Имя</label>
+                                <input class="form-list__item-input input" type="text" name="name" />
+                            </li>
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">E-mail</label>
+                                <input class="form-list__item-input input" type="text" name="email" />
+                            </li>
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">Сообщение</label>
+                                <textarea class="form-list__item-textarea textarea" name="message"></textarea>
+                            </li>
+                        </ul>
+                        <label class="form-mod__agreement form-note">
+                            <input class="form-note__input" type="checkbox" checked />
+                            <span class="form-note__checkbox"></span>
+                            <span class="form-note__text">
+                                Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
+                                <a href="/" class="form-note__text-link link-invert">Пользовательского соглашения</a>
+                            </span>
+                        </label>
+                        <button class="form-mod__btn button-invert">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -786,183 +510,98 @@
         </main>
         <!-- FOOTER -->
         <footer class="home-page__footer footer">
-            <div class="footer__top footer-top">
-                <div class="footer-top__container container">
-                    <div class="footer-top__content-wrapper">
-                        <a href="/" class="footer-top__logo logo">
-                            <img
-                                class="logo__img"
-                                src="/app/img/logo.svg"
-                                alt="Логотип кафе Лесное"
-                                title="Кафе Лесное" />
-                        </a>
-                        <div class="footer-top__content-right">
-                            <nav class="footer-top__menu-left footer-main-menu">
-                                <p class="footer-main-menu__title footer-list-title">О нас</p>
-                                <ul class="footer-main-menu__list footer-list">
-                                    <li class="footer-main-menu__item footer-list__item">
-                                        <a class="footer-main-menu__link footer-list__link" href="./main.html">
-                                            Условия доставки
-                                        </a>
-                                    </li>
-                                    <li class="footer-main-menu__item footer-list__item">
-                                        <a class="footer-main-menu__link footer-list__link" href="./reviews.html">
-                                            Отзывы
-                                        </a>
-                                    </li>
-                                    <li class="footer-main-menu__item footer-list__item">
-                                        <a class="footer-main-menu__link footer-list__link" href="./main.html">
-                                            Акции
-                                        </a>
-                                    </li>
-                                    <li class="footer-main-menu__item footer-list__item">
-                                        <a class="footer-main-menu__link footer-list__link" href="./contacts.html">
-                                            Контакты
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <nav class="footer-top__menu footer-menu">
-                                <p class="footer-menu__title footer-list-title">Меню</p>
-                                <ul class="footer-menu__list footer-list">
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Первые блюда
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Блюда на мангале
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Горячее, гарниры
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Пицца </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Салаты </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Холодные закуски
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Закуски к пиву
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Десерты </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Хлеб </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Соусы </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Напитки </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="footer-top__contacts footer-contacts">
-                                <p class="footer-contacts__title footer-list-title">Контакты</p>
-                                <ul class="footer-contacts__list">
-                                    <li class="footer-contacts__list-item">
-                                        <a
-                                            class="footer-contacts__link"
-                                            href="tel:"
-                                            aria-label="Позвонить по номеру +7 (938) 540-08-48"
-                                            >+7 (938) 540-08-48</a
-                                        >
-                                    </li>
-                                    <li class="footer-contacts__list-item">
-                                        <p class="footer-contacts__text">
-                                            <strong>Кафе:</strong> 10:00&nbsp;&mdash; 00:00
-                                        </p>
-                                        <p class="footer-contacts__text">
-                                            <strong>Доставка:</strong> 10:00&nbsp;&mdash; 21:30
-                                        </p>
-                                        <p class="footer-contacts__text"><strong>Без выходных</strong></p>
-                                    </li>
-                                    <li class="footer-contacts__list-item">
-                                        <a
-                                            class="footer-contacts__link"
-                                            href="https://instagram.com/"
-                                            target="_blank"
-                                            aria-label="Наша страница в Instagram">
-                                            <strong>Inst: </strong>cafe_lesnoe_gel
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__copyright copyright">
-                <div class="copyright__container container">
-                    <ul class="copyright__list">
-                        <li class="copyright__list-item">
-                            <a href="./main.html" class="copyright__list-link link" target="_blank">
-                                Пользовательское соглашение
+            <div class="footer__container container">
+                <div class="footer__content-wrapper">
+                    <a class="footer__logo logo" href="/">
+                        <img
+                            class="logo__img"
+                            src="./app/img/logo.svg"
+                            alt="Логотип Frontend разработчика Журина Владислава"
+                            title="Frontend разработчик Журин Владислав" />
+                    </a>
+                    <nav class="footer__menu footer-menu">
+                        <ul class="footer-menu__list">
+                            <li class="footer-menu__list-item active">
+                                <a class="footer-menu__list-item-link" href="/"> Главная </a>
+                            </li>
+                            <li class="footer-menu__list-item">
+                                <a class="footer-menu__list-item-link" href="./about.html"> Обо мне </a>
+                            </li>
+                            <li class="footer-menu__list-item">
+                                <a class="footer-menu__list-item-link" href="./portfolio.html"> Портфолио </a>
+                            </li>
+                            <li class="footer-menu__list-item">
+                                <a class="footer-menu__list-item-link" href="./certificates.html"> Сертификаты </a>
+                            </li>
+                            <li class="footer-menu__list-item">
+                                <a class="footer-menu__list-item-link" href="./contacts.html"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="footer__list-link footer-links">
+                        <li class="footer-links__item">
+                            <a
+                                class="footer-links__item-link"
+                                href="https://wa.me/+79002521890"
+                                target="_blank"
+                                aria-label="Написать мне в WhatsApp">
+                                <svg class="footer-links__item-link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
                             </a>
                         </li>
-                        <li class="copyright__list-item">Все права защищены copyright &copy;&nbsp;2024</li>
-
-                        <li class="copyright__list-item">
+                        <li class="footer-links__item">
                             <a
-                                href="https://web2.agency/"
-                                class="copyright__list-link link"
-                                title="Перейти на сайт разработки сайтов в Новороссийске"
-                                aria-label="Перейти на сайт разработки сайтов в Новороссийске"
-                                target="_blank">
-                                <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                                class="footer-links__item-link"
+                                href="https://t.me/+79002521890"
+                                target="_blank"
+                                aria-label="Написать мне в Telegram">
+                                <svg class="footer-links__item-link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                                 </svg>
-                                <span class="link__text"> Создание сайтов </span>
+                            </a>
+                        </li>
+                        <li class="footer-links__item">
+                            <a
+                                class="footer-links__item-link"
+                                href="https://github.com/ZhurinVladislav"
+                                target="_blank"
+                                aria-label="Перейти в мой GitHub">
+                                <svg class="footer-links__item-link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                </svg>
                             </a>
                         </li>
                     </ul>
+                    <small class="footer__copyright">
+                        Copyright &copy;&nbsp;2020-2024&nbsp;ZHURIN VLADISLAV Все права защищены.
+                    </small>
                 </div>
             </div>
         </footer>
-        <!-- SOCIAL-PANEL -->
-        <ul id="social-panel" class="home-page__social-panel social-panel">
-            <li class="social-panel__item">
-                <a
-                    aria-label="Связаться с нами в WhatsApp"
-                    target="_blank"
-                    href="https://wa.me/+79284400014"
-                    class="social-panel__link">
-                    <svg class="social-panel__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="social-panel__item">
-                <a
-                    aria-label="Связаться с нами в Telegram"
-                    target="_blank"
-                    href="https://t.me/+79284400014"
-                    class="social-panel__link">
-                    <svg class="social-panel__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                    </svg>
-                </a>
-            </li>
-        </ul>
         <!-- SCROLL-TOP -->
         <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
             <svg class="scroll-top__icon">
                 <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
             </svg>
         </button>
+        <!-- COOKIES -->
+        <article id="cookies" class="home-page__cookies cookies">
+            <h2 class="cookies__title hidden-text">Cookie сайта Frontend-разработчика Журина Владислава</h2>
+            <div class="cookies__content-wrapper">
+                <p class="cookies__content-text">
+                    Мы используем <strong>cookie-файлы.</strong> Продолжая пользоваться сайтом, Вы даёте
+                    <a
+                        class="cookies__content-text-link link-invert"
+                        href="/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        согласие на использование cookie-файлов
+                    </a>
+                </p>
+                <button id="cookies-btn" class="cookies__btn" aria-label="Закрыть окно c куками">Хорошо</button>
+            </div>
+        </article>
         <!-- SCRIPTS -->
         <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
     </body>

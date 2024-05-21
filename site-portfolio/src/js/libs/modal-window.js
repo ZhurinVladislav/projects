@@ -6,26 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const html = document.querySelector('html');
   let modalAtr, modWindow;
 
-  const getSrcImg = src => {
-    const imgWrapper = document.querySelector('.js-img-wrapper');
-    const img = document.createElement('img');
-    img.classList.add('modal-img__img', 'js-modal-img');
-    img.alt = document.title;
-    img.src = src;
-
-    imgWrapper.append(img);
-  };
-
   // ОТКРЫТИЕ МОДАЛЬНОГО ОКНА
   openButton.forEach(el => {
-    el.addEventListener('click', ev => {
-      const btn = ev.currentTarget;
+    el.addEventListener('click', () => {
       modalAtr = el.getAttribute('data-open');
       document.getElementById(modalAtr).classList.add('open');
       html.classList.add(`mod-open`);
       modWindow = document.querySelector(`.${modalAtr} .modal-box`);
-
-      if (btn.hasAttribute('src')) getSrcImg(btn.getAttribute('src'));
 
       closeMod();
     });
@@ -43,17 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
   function closeMod(closeAll = null) {
     const modalArr = document.querySelectorAll('.modal');
-    const modalImg = document.getElementById('modal-img');
 
     if (closeAll !== null) {
       modalArr.forEach(el => {
         el.classList.remove('open');
         html.classList.remove('mod-open');
-        if (modalImg) {
-          setTimeout(() => {
-            modalImg.querySelector('.js-modal-img').remove();
-          }, 200);
-        }
       });
       return;
     }
@@ -64,11 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         modalArr.forEach(el => {
           el.classList.remove('open');
           html.classList.remove('mod-open');
-          if (modalImg) {
-            setTimeout(() => {
-              modalImg.querySelector('.js-modal-img').remove();
-            }, 200);
-          }
         });
       });
     });
@@ -79,11 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         modalArr.forEach(el => {
           el.classList.remove('open');
           html.classList.remove('mod-open');
-          if (modalImg) {
-            setTimeout(() => {
-              modalImg.querySelector('.js-modal-img').remove();
-            }, 200);
-          }
         });
       }
     });
@@ -98,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ev._isClickWithInModal) return;
         ev.currentTarget.classList.remove('open');
         html.classList.remove(`mod-open`);
-        if (modalImg) modalImg.querySelector('.js-modal-img').remove();
       });
     });
   }

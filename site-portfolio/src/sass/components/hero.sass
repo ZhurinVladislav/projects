@@ -1,2 +1,69 @@
 .hero
- 
+	margin-bottom: 214px
+
+	+sm
+		margin-bottom: 120px
+
+	+ph
+		margin-bottom: 80px
+
+	&__container
+		max-width: 1670px
+
+	&__content-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 20px
+		width: 100%
+
+		+md
+			align-items: flex-start
+
+		+sm
+			flex-direction: column-reverse
+
+	&__subtitle
+		margin-bottom: 20px
+		font-family: $ff_2
+		font-size: 20px
+		text-transform: uppercase
+
+		+sm
+			font-size: 16px
+
+		+ph
+			font-size: 14px
+
+	&__title
+
+		+ph
+			font-size: 25px
+
+	&__img-wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 55px
+		max-width: 37%
+		width: 100%
+		max-height: 700px
+		height: 100%
+		border-radius: 12px
+		background-image: url(../img/hero/bg-img.png)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+		+md
+			min-height: 500px
+
+		+sm
+			max-width: 70%
+			min-height: 400px
+
+		+ph
+			max-width: 100%
+		
+	&__img
+		object-fit: cover

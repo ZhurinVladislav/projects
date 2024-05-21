@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg" />
         <!-- SEO -->
-        <title>Отзывы</title>
+        <title>Сертификаты</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!-- STYLES -->
@@ -24,141 +24,76 @@
 
     <body>
         <div id="preloader" class="preloader">
-            <ul class="preloader__list">
-                <li class="preloader__list-item"></li>
-                <li class="preloader__list-item"></li>
-                <li class="preloader__list-item"></li>
-                <li class="preloader__list-item"></li>
-            </ul>
+            <span class="preloader__item">{</span>
+            <span class="preloader__item preloader__item_last">}</span>
         </div>
+        <div class="page-bg-img page-bg-img_left"></div>
+        <div class="page-bg-img page-bg-img_right"></div>
         <!-- HEADER -->
-        <header class="header">
+        <header id="header" class="header">
             <div class="header__container container">
-                <div class="header__content-left">
-                    <a href="/" class="header__logo header__logo logo">
-                        <img class="logo__img" src="/app/img/logo.svg" alt="Кафе Лесное" title="Кафе Лесное" />
-                    </a>
-                    <a class="header__link link-invert" href="tel:+79385400848">
-                        <svg class="link-invert__icon">
-                            <use xlink:href="/app/img/icons/icons.svg#ph"></use>
-                        </svg>
-                        <span class="link-invert__text"> +7 (938) 540-08-48 </span>
-                    </a>
-                </div>
+                <a class="header__logo logo" href="/">
+                    <img
+                        class="logo__img"
+                        src="./app/img/logo.svg"
+                        alt="Логотип Frontend разработчика Журина Владислава"
+                        title="Frontend разработчик Журин Владислав" />
+                </a>
+
                 <nav class="header__menu header-menu">
                     <ul class="header-menu__list">
-                        <li class="header-menu__item parent">
-                            <a class="header-menu__link" href="./menu.html">
-                                <span class="header-menu__link-text">Меню</span>
-                                <svg class="header-menu__link-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                </svg>
-                            </a>
-                            <ul class="header-menu__list-inner list-inner">
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Первые блюда </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Блюда на мангале </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Горячее, гарниры </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Пицца </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Салаты </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Холодные закуски </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Закуски к пиву </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Десерты </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Хлеб </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Соусы </span>
-                                    </a>
-                                </li>
-                                <li class="list-inner__item">
-                                    <a class="list-inner__link" href="./category.html">
-                                        <span class="list-inner__link-item"> Напитки </span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="/"> Главная </a>
                         </li>
-                        <li class="header-menu__item active">
-                            <a class="header-menu__link" href="./main.html"> О кафе </a>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./about.html"> Обо мне </a>
                         </li>
-                        <li class="header-menu__item">
-                            <a class="header-menu__link" href="./information.html"> Информация </a>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./portfolio.html"> Портфолио </a>
                         </li>
-                        <li class="header-menu__item">
-                            <a class="header-menu__link" href="./reviews.html"> Отзывы </a>
+                        <li class="header-menu__list-item active">
+                            <a class="header-menu__list-link" href="./certificates.html"> Сертификаты </a>
                         </li>
-                        <li class="header-menu__item">
-                            <a class="header-menu__link" href="./contacts.html"> Контакты </a>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./contacts.html"> Контакты </a>
                         </li>
                     </ul>
-                    <div class="header-menu__btn-wrapper header-btns">
-                        <div id="msMiniCart" class="{$total_count > 0 ? 'full' : ''}">
-                            <button class="header-btns__btn empty" title="Корзина пуста">
-                                <svg class="header-btns__btn-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
-                                </svg>
-                            </button>
-                            <!--
-                            <button class="header-btns__btn not_empty">
-                                <a href="/" class="header-btns__link absolute"></a>
-                                <svg class="header-btns__btn-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
-                                </svg>
-                                <span class="header-btns__btn-text ms2_total_count">1</span>
-                            </button>
-                            -->
-                        </div>
-                    </div>
                 </nav>
-                <ul class="header__list-info header-info">
-                    <li class="header-info__item">
-                        <svg class="header-info__item-icon">
-                            <use xlink:href="/app/img/icons/icons.svg#time"></use>
-                        </svg>
-                        <span class="header-info__item-descr"> Кафе: 10:00&nbsp;&mdash; 00:00 </span>
+
+                <ul class="header__list-btn header-list-btn">
+                    <li class="header-list-btn__item">
+                        <a
+                            class="header-list-btn__item-link"
+                            href="https://t.me/+79002521890"
+                            target="_blank"
+                            aria-label="Написать мне в Telegram">
+                            <svg class="header-list-btn__item-icon">
+                                <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="header-info__item">
-                        <svg class="header-info__item-icon">
-                            <use xlink:href="/app/img/icons/icons.svg#time"></use>
-                        </svg>
-                        <span class="header-info__item-descr"> Доставка: 10:00&nbsp;&mdash; 21:30 </span>
+                    <li class="header-list-btn__item">
+                        <a
+                            class="header-list-btn__item-link"
+                            href="https://github.com/ZhurinVladislav"
+                            target="_blank"
+                            aria-label="Перейти в мой GitHub">
+                            <svg class="header-list-btn__item-icon">
+                                <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header-list-btn__item header-list-btn__item_btn">
+                        <button class="header-list-btn__item-btn button js-open-modal" data-open="form-callback">
+                            <span class="button__text button__text_ph">Написать</span>
+                            <svg class="button__icon button__icon_ph">
+                                <use xlink:href="/app/img/icons/icons.svg#message"></use>
+                            </svg>
+                        </button>
                     </li>
                 </ul>
-                <button id="burger-toggle" aria-label="Открыть мобильное меню" class="header__menu-toggle menu-toggle">
+
+                <button id="burger-toggle" class="header__menu-toggle menu-toggle" aria-label="Открыть мобильное меню">
                     <span class="menu-toggle__item"></span>
                     <span class="menu-toggle__item"></span>
                     <span class="menu-toggle__item"></span>
@@ -167,77 +102,19 @@
             <!-- BURGER-MENU -->
             <div id="burger-menu" class="header__burger menu-mobile">
                 <div class="menu-mobile__wrap">
-                    <div class="menu-mobile__btn-wrapper header-btns">
-                        <div id="msMiniCart" class="{$total_count > 0 ? 'full' : ''}">
-                            <button class="header-btns__btn empty" title="Корзина пуста">
-                                <svg class="header-btns__btn-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
-                                </svg>
-                            </button>
-                            <!--
-                            <button class="header-btns__btn not_empty">
-                                <a href="/" class="header-btns__link absolute"></a>
-                                <svg class="header-btns__btn-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#basket"></use>
-                                </svg>
-                                <span class="header-btns__btn-text ms2_total_count">1</span>
-                            </button>
-                            -->
-                        </div>
-                    </div>
                     <nav class="menu-mobile__menu menu">
                         <ul class="menu__list list">
-                            <li class="list__item item parent">
-                                <a class="item__link" href="./menu.html"> Меню </a>
-                                <button class="item__btn" aria-label="Раскрыть выпадающий список">
-                                    <svg class="item__icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                    </svg>
-                                </button>
-                                <ul class="item__list list">
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Первые блюда </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Блюда на мангале </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Горячее, гарниры </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Пицца </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Салаты </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Холодные закуски </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Закуски к пиву </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Десерты </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Хлеб </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Соусы </a>
-                                    </li>
-                                    <li class="list__item item">
-                                        <a class="item__link" href="./category.html"> Напитки </a>
-                                    </li>
-                                </ul>
+                            <li class="list__item item">
+                                <a class="item__link" href="/"> Главная </a>
+                            </li>
+                            <li class="list__item item">
+                                <a class="item__link" href="./about.html"> Обо мне </a>
+                            </li>
+                            <li class="list__item item">
+                                <a class="item__link" href="./portfolio.html"> Портфолио </a>
                             </li>
                             <li class="list__item item active">
-                                <a href="./main.html" class="item__link"> О кафе </a>
-                            </li>
-                            <li class="list__item item">
-                                <a href="./information.html" class="item__link"> Информация </a>
-                            </li>
-                            <li class="list__item item">
-                                <a class="item__link" href="./reviews.html"> Отзывы </a>
+                                <a class="item__link" href="./certificates.html"> Сертификаты </a>
                             </li>
                             <li class="list__item item">
                                 <a class="item__link" href="./contacts.html"> Контакты </a>
@@ -246,47 +123,19 @@
                     </nav>
                     <ul class="list-link">
                         <li class="list-link__item">
-                            <a class="list-link__link" href="tel:+79385400848">
+                            <a class="list-link__link" href="tel:+79002521890">
                                 <svg class="list-link__icon icon-reset">
                                     <use xlink:href="/app/img/icons/icons.svg#ph"></use>
                                 </svg>
-                                <span class="list-link__descr"> +7 (938) 540-08-48 </span>
+                                <span class="list-link__descr"> +7 (900) 252-18-90 </span>
                             </a>
                         </li>
                         <li class="list-link__item">
-                            <a
-                                target="_blank"
-                                class="list-link__link"
-                                aria-label="Наша страница в Instagram"
-                                href="https://instagram.com/">
-                                <svg class="list-link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#inst"></use>
+                            <a class="list-link__link" href="mailto:info@front-web.com">
+                                <svg class="list-link__icon icon-reset">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
                                 </svg>
-                                <span class="list-link__descr"> Instagram </span>
-                            </a>
-                        </li>
-                        <li class="list-link__item">
-                            <a
-                                target="_blank"
-                                class="list-link__link"
-                                aria-label="Связаться с нами в WhatsApp"
-                                href="https://wa.me/+79385400848">
-                                <svg class="list-link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                                </svg>
-                                <span class="list-link__descr"> WhatsApp </span>
-                            </a>
-                        </li>
-                        <li class="list-link__item">
-                            <a
-                                target="_blank"
-                                class="list-link__link"
-                                aria-label="Связаться с нами в Telegram"
-                                href="https://t.me/+79385400848">
-                                <svg class="list-link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                                </svg>
-                                <span class="list-link__descr"> Telegram </span>
+                                <span class="list-link__descr"> info@front-web.com </span>
                             </a>
                         </li>
                         <li class="list-link__item">
@@ -294,227 +143,158 @@
                                 <svg class="list-link__icon">
                                     <use xlink:href="/app/img/icons/icons.svg#mark"></use>
                                 </svg>
-                                <address class="list-link__descr">Геленджик М4&nbsp;Дон 1501&nbsp;км.</address>
+                                <address class="list-link__descr">Краснодарский край, г. Новороссийск</address>
                             </a>
-                        </li>
-                        <li class="list-link__item">
-                            <svg class="list-link__icon">
-                                <use xlink:href="/app/img/icons/icons.svg#time"></use>
-                            </svg>
-                            <span class="list-link__descr"> Кафе: 10:00&nbsp;&mdash; 00:00 </span>
-                        </li>
-                        <li class="list-link__item">
-                            <svg class="list-link__icon">
-                                <use xlink:href="/app/img/icons/icons.svg#time"></use>
-                            </svg>
-                            <span class="list-link__descr"> Доставка: 10:00&nbsp;&mdash; 21:30 </span>
                         </li>
                     </ul>
                 </div>
             </div>
         </header>
         <!-- MAIN -->
-        <main>
-            <!-- SECTION-MAIN -->
-            <section class="main">
-                <div class="main__container container">
-                    <ol class="main__breadcrumb breadcrumb">
-                        <li>
-                            <a href="/">Главная</a>
-                        </li>
-                        <li class="breadcrumb-item active">&nbsp;О компании</li>
-                    </ol>
-                    <div class="main__content content">
-                        <h1 class="content__title h-1">О компании</h1>
-                        <div class="content__text-default text-default">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere consequuntur
-                                fuga dolor dolorum, earum quod repellat ipsum harum, voluptatum sed eveniet perspiciatis
-                                at omnis id delectus necessitatibus quisquam voluptates?
+        <main id="main">
+            <!-- CERTIFICATES -->
+            <div class="certificates">
+                <div class="certificates__container container-inner">
+                    <h1 class="certificates__title-hidden hidden-text">
+                        Сертификаты Frontend-разработчика Журина Владислава
+                    </h1>
+                    <h2 class="certificates__title h-2">Сертификаты</h2>
+                    <div class="certificates__content-wrapper">
+                        <div id="certificates-text" class="certificates__content">
+                            <p class="certificates__content-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices tortor a
+                                lectus venenatis, quis efficitur justo rhoncus. Praesent interdum dignissim ligula sed
+                                viverra.
                             </p>
-                            <p>
-                                Fuga mollitia recusandae asperiores,
-                                <a href="#">qui tenetur</a> sint sapiente culpa quis? Laborum recusandae et porro optio
-                                amet dolorum labore vero incidunt cum repellat ea nemo alias vitae eveniet voluptates,
-                                eos ipsum! Consequatur recusandae cumque alias a nam, ab reiciendis quisquam incidunt,
-                                adipisci consequuntur
-                            </p>
-                            <blockquote>
-                                <p>
-                                    illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure
-                                    possimus, atque fugit! Natus praesentium ullam, repudiandae culpa accusantium
-                                    corporis! Culpa exercitationem fugit beatae molestias ratione maxime laudantium
-                                    harum asperiores illo perferendis dolorem reprehenderit, eos necessitatibus,
-                                    provident delectus molestiae atque eius nobis? Commodi temporibus sequi consequuntur
-                                    excepturi enim recusandae ducimus!
-                                </p>
-                            </blockquote>
-                            <p>
-                                illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure possimus,
-                                atque fugit! Natus praesentium ullam, repudiandae culpa accusantium corporis! Culpa
-                                exercitationem fugit beatae molestias ratione maxime laudantium harum asperiores illo
-                                perferendis dolorem reprehenderit, eos necessitatibus, provident delectus molestiae
-                                atque eius nobis? Commodi temporibus sequi consequuntur excepturi enim recusandae
-                                ducimus!
-                            </p>
-                            <ul>
-                                <li>Point 1</li>
-                                <li>Point 2</li>
-                                <li>Point 3</li>
-                                <li>Point 4</li>
-                                <li>Point 5</li>
+                        </div>
+                        <div id="certificates-slider" class="certificates__slider swiper certificates-slider">
+                            <ul class="swiper-wrapper certificates-slider__wrapper">
+                                <li class="swiper-slide certificates-slider__slide">
+                                    <a
+                                        class="certificates-slider__slide-link"
+                                        href="./app/img/certificates/img-2.png"
+                                        title="Сертификат"
+                                        aria-label="Открыть изображение в галереи">
+                                        <div class="certificates-slider__img-wrapper">
+                                            <img
+                                                class="certificates-slider__img"
+                                                src="./app/img/certificates/img-1.png"
+                                                alt="Сертификат" />
+                                            <svg class="certificates-slider__img-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#resize"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-slider__slide">
+                                    <a
+                                        class="certificates-slider__slide-link"
+                                        href="./app/img/certificates/img-2.png"
+                                        title="Сертификат"
+                                        aria-label="Открыть изображение в галереи">
+                                        <div class="certificates-slider__img-wrapper">
+                                            <img
+                                                class="certificates-slider__img"
+                                                src="./app/img/certificates/img-2.png"
+                                                alt="Сертификат" />
+                                            <svg class="certificates-slider__img-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#resize"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-slider__slide">
+                                    <a
+                                        class="certificates-slider__slide-link"
+                                        href="./app/img/certificates/img-3.png"
+                                        title="Сертификат"
+                                        aria-label="Открыть изображение в галереи">
+                                        <div class="certificates-slider__img-wrapper">
+                                            <img
+                                                class="certificates-slider__img"
+                                                src="./app/img/certificates/img-3.png"
+                                                alt="Сертификат" />
+                                            <svg class="certificates-slider__img-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#resize"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-slider__slide">
+                                    <a
+                                        class="certificates-slider__slide-link"
+                                        href="./app/img/certificates/img-1.png"
+                                        title="Сертификат"
+                                        aria-label="Открыть изображение в галереи">
+                                        <div class="certificates-slider__img-wrapper">
+                                            <img
+                                                class="certificates-slider__img"
+                                                src="./app/img/certificates/img-1.png"
+                                                alt="Сертификат" />
+                                            <svg class="certificates-slider__img-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#resize"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-slider__slide">
+                                    <a
+                                        class="certificates-slider__slide-link"
+                                        href="./app/img/certificates/img-2.png"
+                                        title="Сертификат"
+                                        aria-label="Открыть изображение в галереи">
+                                        <div class="certificates-slider__img-wrapper">
+                                            <img
+                                                class="certificates-slider__img"
+                                                src="./app/img/certificates/img-2.png"
+                                                alt="Сертификат" />
+                                            <svg class="certificates-slider__img-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#resize"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-slider__slide">
+                                    <a
+                                        class="certificates-slider__slide-link"
+                                        href="./app/img/certificates/img-3.png"
+                                        title="Сертификат"
+                                        aria-label="Открыть изображение в галереи">
+                                        <div class="certificates-slider__img-wrapper">
+                                            <img
+                                                class="certificates-slider__img"
+                                                src="./app/img/certificates/img-3.png"
+                                                alt="Сертификат" />
+                                            <svg class="certificates-slider__img-icon">
+                                                <use xlink:href="/app/img/icons/icons.svg#resize"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
-                            <h2>Heading 2</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
-                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
-                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <ol>
-                                <li>Point 1</li>
-                                <li>Point 2</li>
-                                <li>Point 3</li>
-                                <li>Point 4</li>
-                                <li>Point 5</li>
-                            </ol>
-                            <h3>Heading 3</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
-                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
-                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
-                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
-                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td> </td>
-                                        <td>пн</td>
-                                        <td>вт</td>
-                                        <td>ср</td>
-                                        <td>чт</td>
-                                        <td>пт</td>
-                                        <td>сб</td>
-                                        <td>вс</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pole dance + Stretching</td>
-                                        <td> </td>
-                                        <td style="text-align: center;">
-                                            10:00
-                                            <p>16:00</p>
-                                        </td>
-                                        <td style="text-align: center;">19:00</td>
-                                        <td> </td>
-                                        <td style="text-align: center;">
-                                            10:00
-                                            <p>16:00</p>
-                                        </td>
-                                        <td> </td>
-                                        <td style="text-align: center;">14:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exotic + Stretching</td>
-                                        <td> </td>
-                                        <td style="text-align: center;">
-                                            11:00
-                                            <p>20:00</p>
-                                        </td>
-                                        <td style="text-align: center;">20:00</td>
-                                        <td> </td>
-                                        <td style="text-align: center;">
-                                            11:00
-                                            <p>20:00</p>
-                                        </td>
-                                        <td> </td>
-                                        <td style="text-align: center;">15:00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="text-default__gallery-warapper gallery-wrapper">
-                                <h2 class="gallery-wrapper__title h-2">Фотогалерея</h2>
-                                <ul class="gallery-wrapper__gallery gallery">
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-1.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-1.jpg"
-                                                alt="img-1" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-2.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-2.jpg"
-                                                alt="img-2" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-3.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-3.jpg"
-                                                alt="img-3" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-4.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-4.jpg"
-                                                alt="img-4" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-5.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-5.jpg"
-                                                alt="img-5" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-6.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-6.jpg"
-                                                alt="img-6" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-7.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-7.jpg"
-                                                alt="img-7" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-8.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-8.jpg"
-                                                alt="img-8" />
-                                        </a>
-                                    </li>
-                                    <li class="gallery__item">
-                                        <a class="gallery__link" href="./app/img/gallery-inner/img-9.jpg">
-                                            <img
-                                                class="gallery__img"
-                                                src="./app/img/gallery-inner/img-9.jpg"
-                                                alt="img-9" />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="certificates__slider-navigation slider-navigation">
+                        <div id="certificates-pagination" class="slider-navigation__pagination"></div>
+                        <div class="slider-navigation__btn-wrapper">
+                            <button
+                                id="certificates-btn-prev"
+                                class="slider-navigation__btn slider-navigation__btn_prev">
+                                <svg class="slider-navigation__btn-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <button
+                                id="certificates-btn-next"
+                                class="slider-navigation__btn slider-navigation__btn_next">
+                                <svg class="hero-slider__btn-icon slider-navigation__btn-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- FORM-CALLBACK -->
             <div class="modal form-callback" id="form-callback">
                 <div class="form-callback__box modal-box">
@@ -523,35 +303,30 @@
                         class="form-callback__close-btn modal-close js-close-modal"></button>
                     <p class="form-callback__title modal-title">Оставить заявку</p>
 
-                    <form action="/" class="form form-mod">
-                        <div class="form-mod__wrap-input wrap-input">
-                            <div class="wrap-input__item">
-                                <input class="wrap-input__input input" type="text" name="name" placeholder=" " />
-                                <label class="wrap-input__label label">Имя</label>
-                            </div>
-                            <div class="wrap-input__item">
-                                <input class="wrap-input__input input" type="number" name="phone" placeholder=" " />
-                                <label class="wrap-input__label label">Телефон</label>
-                            </div>
-                            <div class="wrap-input__item">
-                                <input class="wrap-input__input input" type="text" name="e-mail" placeholder=" " />
-                                <label class="wrap-input__label label">E-mail</label>
-                            </div>
-
-                            <label class="wrap-input__item form-note">
-                                <input class="form-note__input" type="checkbox" checked />
-                                <span class="form-note__checkbox"></span>
-                                <span class="form-note__text">
-                                    Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
-                                    <a href="/" class="form-note__text-link link-invert"
-                                        >Пользовательского соглашения</a
-                                    >
-                                </span>
-                            </label>
-                        </div>
-                        <button aria-label="Отправить заявку" type="submit" class="form-mod__btn button">
-                            <span class="button__text"> Отправить </span>
-                        </button>
+                    <form class="form form-mod">
+                        <ul class="form-mod__list form-list">
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">Имя</label>
+                                <input class="form-list__item-input input" type="text" name="name" />
+                            </li>
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">E-mail</label>
+                                <input class="form-list__item-input input" type="text" name="email" />
+                            </li>
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">Сообщение</label>
+                                <textarea class="form-list__item-textarea textarea" name="message"></textarea>
+                            </li>
+                        </ul>
+                        <label class="wrap-input__item form-note">
+                            <input class="form-note__input" type="checkbox" checked />
+                            <span class="form-note__checkbox"></span>
+                            <span class="form-note__text">
+                                Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
+                                <a href="/" class="form-note__text-link link-invert">Пользовательского соглашения</a>
+                            </span>
+                        </label>
+                        <button class="form-mod__btn button-invert">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -569,184 +344,99 @@
             </div>
         </main>
         <!-- FOOTER -->
-        <footer class="footer">
-            <div class="footer__top footer-top">
-                <div class="footer-top__container container">
-                    <div class="footer-top__content-wrapper">
-                        <a href="/" class="footer-top__logo logo">
-                            <img
-                                class="logo__img"
-                                src="/app/img/logo.svg"
-                                alt="Логотип кафе Лесное"
-                                title="Кафе Лесное" />
-                        </a>
-                        <div class="footer-top__content-right">
-                            <nav class="footer-top__menu-left footer-main-menu">
-                                <p class="footer-main-menu__title footer-list-title">О нас</p>
-                                <ul class="footer-main-menu__list footer-list">
-                                    <li class="footer-main-menu__item footer-list__item">
-                                        <a class="footer-main-menu__link footer-list__link" href="./main.html">
-                                            Условия доставки
-                                        </a>
-                                    </li>
-                                    <li class="footer-main-menu__item footer-list__item">
-                                        <a class="footer-main-menu__link footer-list__link" href="./reviews.html">
-                                            Отзывы
-                                        </a>
-                                    </li>
-                                    <li class="footer-main-menu__item footer-list__item">
-                                        <a class="footer-main-menu__link footer-list__link" href="./main.html">
-                                            Акции
-                                        </a>
-                                    </li>
-                                    <li class="footer-main-menu__item footer-list__item">
-                                        <a class="footer-main-menu__link footer-list__link" href="./contacts.html">
-                                            Контакты
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <nav class="footer-top__menu footer-menu">
-                                <p class="footer-menu__title footer-list-title">Меню</p>
-                                <ul class="footer-menu__list footer-list">
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Первые блюда
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Блюда на мангале
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Горячее, гарниры
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Пицца </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Салаты </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Холодные закуски
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html">
-                                            Закуски к пиву
-                                        </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Десерты </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Хлеб </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Соусы </a>
-                                    </li>
-                                    <li class="footer-menu__item footer-list__item">
-                                        <a class="footer-menu__link footer-list__link" href="./main.html"> Напитки </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="footer-top__contacts footer-contacts">
-                                <p class="footer-contacts__title footer-list-title">Контакты</p>
-                                <ul class="footer-contacts__list">
-                                    <li class="footer-contacts__list-item">
-                                        <a
-                                            class="footer-contacts__link"
-                                            href="tel:"
-                                            aria-label="Позвонить по номеру +7 (938) 540-08-48"
-                                            >+7 (938) 540-08-48</a
-                                        >
-                                    </li>
-                                    <li class="footer-contacts__list-item">
-                                        <p class="footer-contacts__text">
-                                            <strong>Кафе:</strong> 10:00&nbsp;&mdash; 00:00
-                                        </p>
-                                        <p class="footer-contacts__text">
-                                            <strong>Доставка:</strong> 10:00&nbsp;&mdash; 21:30
-                                        </p>
-                                        <p class="footer-contacts__text"><strong>Без выходных</strong></p>
-                                    </li>
-                                    <li class="footer-contacts__list-item">
-                                        <a
-                                            class="footer-contacts__link"
-                                            href="https://instagram.com/"
-                                            target="_blank"
-                                            aria-label="Наша страница в Instagram">
-                                            <strong>Inst: </strong>cafe_lesnoe_gel
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__copyright copyright">
-                <div class="copyright__container container">
-                    <ul class="copyright__list">
-                        <li class="copyright__list-item">
-                            <a href="./main.html" class="copyright__list-link link" target="_blank">
-                                Пользовательское соглашение
+        <footer class="home-page__footer footer">
+            <div class="footer__container container">
+                <div class="footer__content-wrapper">
+                    <a class="footer__logo logo" href="/">
+                        <img
+                            class="logo__img"
+                            src="./app/img/logo.svg"
+                            alt="Логотип Frontend разработчика Журина Владислава"
+                            title="Frontend разработчик Журин Владислав" />
+                    </a>
+                    <nav class="footer__menu footer-menu">
+                        <ul class="footer-menu__list">
+                            <li class="footer-menu__list-item">
+                                <a class="footer-menu__list-item-link" href="/"> Главная </a>
+                            </li>
+                            <li class="footer-menu__list-item">
+                                <a class="footer-menu__list-item-link" href="./about.html"> Обо мне </a>
+                            </li>
+                            <li class="footer-menu__list-item">
+                                <a class="footer-menu__list-item-link" href="./portfolio.html"> Портфолио </a>
+                            </li>
+                            <li class="footer-menu__list-item active">
+                                <a class="footer-menu__list-item-link" href="./certificates.html"> Сертификаты </a>
+                            </li>
+                            <li class="footer-menu__list-item">
+                                <a class="footer-menu__list-item-link" href="./contacts.html"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="footer__list-link footer-links">
+                        <li class="footer-links__item">
+                            <a
+                                class="footer-links__item-link"
+                                href="https://wa.me/+79002521890"
+                                target="_blank"
+                                aria-label="Написать мне в WhatsApp">
+                                <svg class="footer-links__item-link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
                             </a>
                         </li>
-                        <li class="copyright__list-item">Все права защищены copyright &copy;&nbsp;2024</li>
-
-                        <li class="copyright__list-item">
+                        <li class="footer-links__item">
                             <a
-                                href="https://web2.agency/"
-                                class="copyright__list-link link"
-                                title="Перейти на сайт разработки сайтов в Новороссийске"
-                                aria-label="Перейти на сайт разработки сайтов в Новороссийске"
-                                target="_blank">
-                                <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                                class="footer-links__item-link"
+                                href="https://t.me/+79002521890"
+                                target="_blank"
+                                aria-label="Написать мне в Telegram">
+                                <svg class="footer-links__item-link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                                 </svg>
-                                <span class="link__text"> Создание сайтов </span>
+                            </a>
+                        </li>
+                        <li class="footer-links__item">
+                            <a
+                                class="footer-links__item-link"
+                                href="https://github.com/ZhurinVladislav"
+                                target="_blank"
+                                aria-label="Перейти в мой GitHub">
+                                <svg class="footer-links__item-link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                </svg>
                             </a>
                         </li>
                     </ul>
+                    <small class="footer__copyright">
+                        Copyright &copy;&nbsp;2020-2024&nbsp;ZHURIN VLADISLAV Все права защищены.
+                    </small>
                 </div>
             </div>
         </footer>
-        <!-- SOCIAL-PANEL -->
-        <ul id="social-panel" class="social-panel">
-            <li class="social-panel__item">
-                <a
-                    aria-label="Связаться с нами в WhatsApp"
-                    target="_blank"
-                    href="https://wa.me/+79284400014"
-                    class="social-panel__link">
-                    <svg class="social-panel__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="social-panel__item">
-                <a
-                    aria-label="Связаться с нами в Telegram"
-                    target="_blank"
-                    href="https://t.me/+79284400014"
-                    class="social-panel__link">
-                    <svg class="social-panel__icon">
-                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                    </svg>
-                </a>
-            </li>
-        </ul>
         <!-- SCROLL-TOP -->
-        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+        <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
             <svg class="scroll-top__icon">
                 <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
             </svg>
         </button>
+        <!-- COOKIES -->
+        <article id="cookies" class="home-page__cookies cookies">
+            <h2 class="cookies__title hidden-text">Cookie сайта Frontend-разработчика Журина Владислава</h2>
+            <div class="cookies__content-wrapper">
+                <p class="cookies__content-text">
+                    Мы используем <strong>cookie-файлы.</strong> Продолжая пользоваться сайтом, Вы даёте
+                    <a
+                        class="cookies__content-text-link link-invert"
+                        href="/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        согласие на использование cookie-файлов
+                    </a>
+                </p>
+                <button id="cookies-btn" class="cookies__btn" aria-label="Закрыть окно c куками">Хорошо</button>
+            </div>
+        </article>
         <!-- SCRIPTS -->
         <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
     </body>

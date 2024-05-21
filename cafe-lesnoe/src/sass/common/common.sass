@@ -766,6 +766,9 @@ input[type='number']
       + .radio-wrapper__text
           color: $clr_3
 
+    &[disabled] + .radio-wrapper__text
+      display: none
+
   &__text
     position: relative
     padding-left: 20px
