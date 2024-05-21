@@ -54,23 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   overflowHTML();
 
-  // ДОБАВЛЕНИЕ ОТСТУПА СПРАВА ПРИ ОТКРЫТИЕ ГАЛЕРИИ
-  const addIndent = () => {
-    const html = document.querySelector('html');
-    const body = window.document.body;
-
-    html.addEventListener('click', () => {
-      body.classList.contains('lg-on') ? html.classList.add('galleryActive') : html.classList.remove('galleryActive');
-    });
-
-    // УБИРАЕМ КЛАСС ПРИ НАЖАТИЕ НА "ESC"
-    window.addEventListener('keydown', ev => {
-      if (ev.key === 'Escape') html.classList.remove('galleryActive');
-    });
-  };
-
-  // addIndent();
-
   // МОБИЛЬНОЕ МЕНЮ
   const mobMenu = () => {
     const burgerBtn = document.getElementById('burger-toggle');
@@ -239,34 +222,4 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   certificatesSlider();
-
-  const hiddenTextSlider = () => {
-    const slides = document.getElementById('certificates-slider');
-
-    console.log(slides);
-  };
-
-  hiddenTextSlider();
-
-  // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
-  $('.gallery').lightGallery({
-    thumbnail: false,
-    share: false,
-    selector: '.gallery__link',
-    getCaptionFromTitleOrAlt: false,
-  });
-
-  $('#about-slider').lightGallery({
-    thumbnail: false,
-    share: false,
-    selector: '.slider__slide-link',
-    getCaptionFromTitleOrAlt: false,
-  });
-
-  $('#list-img').lightGallery({
-    thumbnail: false,
-    share: false,
-    selector: '.list-img__item-link',
-    getCaptionFromTitleOrAlt: false,
-  });
 });
