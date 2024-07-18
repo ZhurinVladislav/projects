@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="./app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Типовая страница | Спектр вэд</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./app/css/main.min.css" />
+        <link rel="stylesheet" href="./app/js/libs/photoswipe.css" />
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/photoswipe.esm.min.js" defer></script>
+        <script src="./app/js/libs/photoswipe-lightbox.esm.min.js" defer></script>
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/libs/min/iframe-lazy-load.min.js" defer></script>
+        <script src="./app/js/libs/scrollLibrary.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
+    </head>
+
+    <body>
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER -->
+        <header id="header" class="header">
+            <div class="header__content-top header-top">
+                <div class="header-top__container container">
+                    <a class="header-top__logo logo" href="/">
+                        <img class="logo__img" src="./app/img/logo.svg" alt="Логотип Спектр вэд" title="Спектр вэд" />
+                    </a>
+                    <ul class="header-top__links header-links">
+                        <li class="header-links__item">
+                            <a
+                                class="header-links__link link"
+                                href="tel:+79615866187"
+                                aria-label="Позвонить по номеру +7 961 586-61-87">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link__text link__text_sm">+7 961 586-61-87</span>
+                            </a>
+                        </li>
+                        <li class="header-links__item">
+                            <a
+                                class="header-links__link link"
+                                href="mailto:director@spectrved.ru"
+                                aria-label="Написать на почту director@spectrved.ru">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="link__text link__text_sm">director@spectrved.ru</span>
+                            </a>
+                        </li>
+                        <li class="header-links__item header-links__item_ph">
+                            <a
+                                class="header-links__link-icon link"
+                                href="https://t.me/+79615866187"
+                                target="_blank"
+                                aria-label="Написать в чат в Telegram">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-links__item header-links__item_ph">
+                            <a
+                                class="header-links__link-icon link"
+                                href="https://wa.me/+79615866187"
+                                target="_blank"
+                                aria-label="Написать в чат в whatsapp">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <button id="burger-toggle" class="header-top__menu-toggle menu-toggle">
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header__content-bottom">
+                <div class="header__container container">
+                    <nav class="header__menu header-menu">
+                        <ul class="header-menu__list">
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="/"> Главная </a>
+                            </li>
+                            <li class="header-menu__list-item active">
+                                <a class="header-menu__list-link" href="./main.html"> О нас </a>
+                            </li>
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="./tariffs.html"> Тарифы </a>
+                            </li>
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="./faq.html"> Вопрос-ответ </a>
+                            </li>
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="./contacts.html"> Отзывы </a>
+                            </li>
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="./contacts.html"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- BURGER-MENU -->
+            <!--
+            <div id="menu-mobile" class="header__menu-mobile menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-mobile__menu-list menu-mobile-list">
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="/"> Главная </a>
+                            </li>
+                            <li class="menu-mobile-list__item active">
+                                <a class="menu-mobile-list__link" href="./main.html"> О нас </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="./tariffs.html"> Тарифы </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="./faq.html"> Вопрос-ответ </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="./reviews.html"> Отзывы </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="./contacts.html"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="menu-mobile__links menu-mobile-links">
+                        <li class="menu-mobile-links__item">
+                            <a class="menu-mobile-links__link link-text" href="tel:+79615866187">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-text__descr">+7 961 586-61-87</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a class="menu-mobile-links__link link-text" href="mailto:director@spectrved.ru">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="link-text__descr">director@spectrved.ru</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a class="menu-mobile-links__link link-text" href="https://t.me/+79615866187">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                                <span class="link-text__descr">Telegram</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a class="menu-mobile-links__link link-text" href="https://wa.me/+79615866187">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="link-text__descr">WhatsApp</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            -->
+        </header>
+        <!-- MAIN -->
+        <main id="main">
+            <!-- SECTION-MAIN -->
+            <section class="main">
+                <div class="main__container container">
+                    <div class="main__content content">
+                        <a class="main__link-back link-back" href="/" aria-label="Вернуться на главную страницу">
+                            <svg class="link-back__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                            <span class="link-back__text"> Вернуться на главную страницу </span>
+                        </a>
+                        <h1 class="content__title h-1">Типовая страница</h1>
+                        <div class="content__text-default text-default">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere consequuntur
+                                fuga dolor dolorum, earum quod repellat ipsum harum, voluptatum sed eveniet perspiciatis
+                                at omnis id delectus necessitatibus quisquam voluptates?
+                            </p>
+                            <p>
+                                Fuga mollitia recusandae asperiores,
+                                <a href="#">qui tenetur</a> sint sapiente culpa quis? Laborum recusandae et porro optio
+                                amet dolorum labore vero incidunt cum repellat ea nemo alias vitae eveniet voluptates,
+                                eos ipsum! Consequatur recusandae cumque alias a nam, ab reiciendis quisquam incidunt,
+                                adipisci consequuntur
+                            </p>
+                            <blockquote>
+                                <p>
+                                    illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure
+                                    possimus, atque fugit! Natus praesentium ullam, repudiandae culpa accusantium
+                                    corporis! Culpa exercitationem fugit beatae molestias ratione maxime laudantium
+                                    harum asperiores illo perferendis dolorem reprehenderit, eos necessitatibus,
+                                    provident delectus molestiae atque eius nobis? Commodi temporibus sequi consequuntur
+                                    excepturi enim recusandae ducimus!
+                                </p>
+                            </blockquote>
+                            <p>
+                                illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure possimus,
+                                atque fugit! Natus praesentium ullam, repudiandae culpa accusantium corporis! Culpa
+                                exercitationem fugit beatae molestias ratione maxime laudantium harum asperiores illo
+                                perferendis dolorem reprehenderit, eos necessitatibus, provident delectus molestiae
+                                atque eius nobis? Commodi temporibus sequi consequuntur excepturi enim recusandae
+                                ducimus!
+                            </p>
+                            <ul>
+                                <li>Point 1</li>
+                                <li>Point 2</li>
+                                <li>Point 3</li>
+                                <li>Point 4</li>
+                                <li>Point 5</li>
+                            </ul>
+                            <h2>Heading 2</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
+                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
+                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+                            </p>
+                            <ol>
+                                <li>Point 1</li>
+                                <li>Point 2</li>
+                                <li>Point 3</li>
+                                <li>Point 4</li>
+                                <li>Point 5</li>
+                            </ol>
+                            <h3>Heading 3</h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
+                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
+                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+                            </p>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
+                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
+                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
+                            </p>
+                            <h4>Heading 4</h4>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td> </td>
+                                        <td>пн</td>
+                                        <td>вт</td>
+                                        <td>ср</td>
+                                        <td>чт</td>
+                                        <td>пт</td>
+                                        <td>сб</td>
+                                        <td>вс</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pole dance + Stretching</td>
+                                        <td> </td>
+                                        <td style="text-align: center;">
+                                            10:00
+                                            <p>16:00</p>
+                                        </td>
+                                        <td style="text-align: center;">19:00</td>
+                                        <td> </td>
+                                        <td style="text-align: center;">
+                                            10:00
+                                            <p>16:00</p>
+                                        </td>
+                                        <td> </td>
+                                        <td style="text-align: center;">14:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Exotic + Stretching</td>
+                                        <td> </td>
+                                        <td style="text-align: center;">
+                                            11:00
+                                            <p>20:00</p>
+                                        </td>
+                                        <td style="text-align: center;">20:00</td>
+                                        <td> </td>
+                                        <td style="text-align: center;">
+                                            11:00
+                                            <p>20:00</p>
+                                        </td>
+                                        <td> </td>
+                                        <td style="text-align: center;">15:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div class="modal form-callback" id="form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"></button>
+                    <p class="form-callback__title modal-title">Оставить заявку</p>
+
+                    <form class="form form-mod">
+                        <ul class="form-mod__list form-list">
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">Имя</label>
+                                <input class="form-list__item-input input" type="text" name="name" />
+                            </li>
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">E-mail</label>
+                                <input class="form-list__item-input input" type="text" name="email" />
+                            </li>
+                            <li class="form-list__item">
+                                <label class="form-list__item-label">Сообщение</label>
+                                <textarea class="form-list__item-textarea textarea" name="message"></textarea>
+                            </li>
+                        </ul>
+                        <label class="wrap-input__item form-note">
+                            <input class="form-note__input" type="checkbox" checked />
+                            <span class="form-note__checkbox"></span>
+                            <span class="form-note__text">
+                                Нажимая кнопку &laquo;Оставить заявку&raquo;, я&nbsp;принимаю условия
+                                <a href="/" class="form-note__text-link link-invert">Пользовательского соглашения</a>
+                            </span>
+                        </label>
+                        <button class="form-mod__btn button-invert">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div class="modal form-success" id="form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__content-wrapper animation-top delay-300" data-scroll="800">
+                    <p class="footer__text">Все права защищены &copy;&nbsp;2024</p>
+                    <a class="footer__link link-text" href="/" target="_blank">
+                        <span class="link-text__descr">Пользовательское соглашение</span>
+                    </a>
+                    <a class="footer__link link-text" href="/" target="_blank">
+                        <svg class="link-text__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#logo-dev"></use>
+                        </svg>
+                        <span class="link-text__descr">Создание сайтов</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- SOCIAL-PANEL -->
+        <ul id="social-panel" class="social-panel">
+            <li class="social-panel__item">
+                <a
+                    aria-label="Связаться с нами в WhatsApp"
+                    target="_blank"
+                    href="https://wa.me/"
+                    class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-panel__item">
+                <a
+                    aria-label="Связаться с нами в Telegram"
+                    target="_blank"
+                    href="https://t.me/"
+                    class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/min/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

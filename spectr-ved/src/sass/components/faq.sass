@@ -1,0 +1,104 @@
+.faq
+	&__title
+		text-align: center
+
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 8px
+    
+	&__list-item 
+		display: flex
+		flex-direction: column
+		border-radius: 8px
+		background-color: $clr_1
+
+	&__btn
+		display: flex
+		align-items: center
+		padding: 8px 28px
+		min-height: 70px
+		color: $clr_3
+		border: 1px solid $clr_1
+		border-radius: 8px
+		background-color: $clr_1
+		cursor: pointer
+		transition: background-color .2s linear, color .2s linear, border-radius .1s linear, box-shadow .2s linear
+
+		+ph
+			padding: 8px 10px
+
+		&:hover:not(.ac-active)
+			+hover
+				color: $clr_3
+				background-color: $clr_1
+				box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+
+		&:focus:not(:active)
+			box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+
+		&.ac-active
+			color: $clr_1
+			background-color: $clr_3
+
+			&:hover
+				+hover
+					box-shadow: none
+
+					.faq__btn-text
+						opacity: .7
+
+					.faq__btn-icon
+						transform: rotate(-90deg) translateX(-3px)
+
+			.faq__btn-icon
+				fill: $clr_1
+				transform: rotate(-90deg)
+
+	&__btn-text
+		margin-right: 20px
+		text-align: left
+		font-weight: 600
+		font-size: 18px
+		transition: opacity .2s linear
+
+		+ph
+			font-size: 16px
+    
+	&__btn-wrapper-icon
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		margin-left: auto
+		width: 50px
+		height: 50px
+		transition: background-color .2s linear
+
+		+ph
+			width: 30px
+			height: 30px
+    
+	&__btn-icon
+		width: 12px
+		height: 20px
+		fill: $clr_3
+		transform: rotate(90deg)
+		transition: transform .2s linear
+
+		+ph
+			width: 10px
+			height: 15px
+    
+	&__text
+		border-radius: 0 0 8px 8px
+
+		&.text-default
+			padding: 25px 28px
+			box-sizing: border-box
+			overflow-x: hidden
+			color: $clr_5
+
+			+ph
+				padding: 15px
+				font-size: 14px

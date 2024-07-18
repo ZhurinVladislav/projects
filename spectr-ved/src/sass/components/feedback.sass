@@ -1,0 +1,57 @@
+.feedback
+	&__content-wrapper
+		display: flex
+		justify-content: space-between
+		border-radius: 8px
+		background-color: $clr_3
+
+		+ph
+			flex-direction: column-reverse
+
+	&__img
+		max-width: 580px
+		width: 100%
+		min-height: 100%
+		border-radius: 12px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		background-color: $clr_3
+		box-shadow: -4px 0 9px 0 rgba(0, 135, 203, 0.08), -17px 0 17px 0 rgba(0, 135, 203, 0.07), -38px 0 23px 0 rgba(0, 135, 203, 0.04), -68px 0 27px 0 rgba(0, 135, 203, 0.01), -107px 0 30px 0 rgba(0, 135, 203, 0)
+
+		+sm
+			max-width: 50%
+
+		+ph
+			max-width: 100%
+			min-height: 300px
+
+.feedback-form
+	padding: 40px
+	max-width: 530px
+	color: $clr_1
+
+	+sm
+		padding: 20px
+
+	&__title
+		margin-bottom: 20px
+		color: $clr_1
+
+	&__text
+		margin-bottom: 16px
+		max-width: 348px
+
+	&__list-wrapper
+		max-width: 332px
+
+	&__list
+		margin-bottom: 16px
+
+		.label
+			opacity: .5
+		
+	&__btn
+		margin-bottom: 8px
+		max-width: 100%
+		width: 100%

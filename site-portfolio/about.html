@@ -13,13 +13,12 @@
         <!-- STYLES -->
         <link rel="stylesheet" href="/app/css/main.min.css" />
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/preloader.js"></script>
-        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
-        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
-        <script src="/app/js/libs/webp.js" defer></script>
-        <script src="/app/js/libs/modal-window.js" defer></script>
-        <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
-        <script src="/app/js/main.min.js" defer></script>
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/libs/min/iframe-lazy-load.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
     </head>
 
     <body>
@@ -63,22 +62,22 @@
                 <ul class="header__list-btn header-list-btn">
                     <li class="header-list-btn__item">
                         <a
-                            class="header-list-btn__item-link"
+                            class="header-list-btn__item-link link-icon"
                             href="https://t.me/+79002521890"
                             target="_blank"
                             aria-label="Написать мне в Telegram">
-                            <svg class="header-list-btn__item-icon">
+                            <svg class="link-icon__img">
                                 <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="header-list-btn__item">
                         <a
-                            class="header-list-btn__item-link"
+                            class="header-list-btn__item-link link-icon"
                             href="https://github.com/ZhurinVladislav"
                             target="_blank"
                             aria-label="Перейти в мой GitHub">
-                            <svg class="header-list-btn__item-icon">
+                            <svg class="link-icon__img">
                                 <use xlink:href="/app/img/icons/icons.svg#gh"></use>
                             </svg>
                         </a>
@@ -152,120 +151,183 @@
         </header>
         <!-- MAIN -->
         <main id="main">
-            <!-- SECTION-MAIN -->
-            <section class="main">
-                <div class="main__container container">
-                    <div class="main__content content">
-                        <h1 class="content__title h-1">О компании</h1>
-                        <div class="content__text-default text-default">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere consequuntur
-                                fuga dolor dolorum, earum quod repellat ipsum harum, voluptatum sed eveniet perspiciatis
-                                at omnis id delectus necessitatibus quisquam voluptates?
-                            </p>
-                            <p>
-                                Fuga mollitia recusandae asperiores,
-                                <a href="#">qui tenetur</a> sint sapiente culpa quis? Laborum recusandae et porro optio
-                                amet dolorum labore vero incidunt cum repellat ea nemo alias vitae eveniet voluptates,
-                                eos ipsum! Consequatur recusandae cumque alias a nam, ab reiciendis quisquam incidunt,
-                                adipisci consequuntur
-                            </p>
-                            <blockquote>
+            <!-- ABOUT-INTERNAL-->
+            <section class="about-internal section-reset">
+                <div class="about-internal__container container">
+                    <div class="about-internal__content-wrapper">
+                        <div class="about-internal__content-left">
+                            <p class="about-internal__subtitle subtitle">Обо мне</p>
+                            <h1 class="about-internal__title h-2">Обо мне</h1>
+                            <span class="about-internal__line line"></span>
+                            <div class="about-internal__text text-default">
                                 <p>
-                                    illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure
-                                    possimus, atque fugit! Natus praesentium ullam, repudiandae culpa accusantium
-                                    corporis! Culpa exercitationem fugit beatae molestias ratione maxime laudantium
-                                    harum asperiores illo perferendis dolorem reprehenderit, eos necessitatibus,
-                                    provident delectus molestiae atque eius nobis? Commodi temporibus sequi consequuntur
-                                    excepturi enim recusandae ducimus!
+                                    Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque
+                                    porro elit NeDque porro Neque porro quisquam est qui do lorem ipsum quia dolor sit
+                                    amets ipsum
                                 </p>
-                            </blockquote>
-                            <p>
-                                illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure possimus,
-                                atque fugit! Natus praesentium ullam, repudiandae culpa accusantium corporis! Culpa
-                                exercitationem fugit beatae molestias ratione maxime laudantium harum asperiores illo
-                                perferendis dolorem reprehenderit, eos necessitatibus, provident delectus molestiae
-                                atque eius nobis? Commodi temporibus sequi consequuntur excepturi enim recusandae
-                                ducimus!
-                            </p>
-                            <ul>
-                                <li>Point 1</li>
-                                <li>Point 2</li>
-                                <li>Point 3</li>
-                                <li>Point 4</li>
-                                <li>Point 5</li>
-                            </ul>
-                            <h2>Heading 2</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
-                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
-                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <ol>
-                                <li>Point 1</li>
-                                <li>Point 2</li>
-                                <li>Point 3</li>
-                                <li>Point 4</li>
-                                <li>Point 5</li>
-                            </ol>
-                            <h3>Heading 3</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
-                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
-                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
-                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
-                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
-                            </p>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td> </td>
-                                        <td>пн</td>
-                                        <td>вт</td>
-                                        <td>ср</td>
-                                        <td>чт</td>
-                                        <td>пт</td>
-                                        <td>сб</td>
-                                        <td>вс</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pole dance + Stretching</td>
-                                        <td> </td>
-                                        <td style="text-align: center;">
-                                            10:00
-                                            <p>16:00</p>
-                                        </td>
-                                        <td style="text-align: center;">19:00</td>
-                                        <td> </td>
-                                        <td style="text-align: center;">
-                                            10:00
-                                            <p>16:00</p>
-                                        </td>
-                                        <td> </td>
-                                        <td style="text-align: center;">14:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Exotic + Stretching</td>
-                                        <td> </td>
-                                        <td style="text-align: center;">
-                                            11:00
-                                            <p>20:00</p>
-                                        </td>
-                                        <td style="text-align: center;">20:00</td>
-                                        <td> </td>
-                                        <td style="text-align: center;">
-                                            11:00
-                                            <p>20:00</p>
-                                        </td>
-                                        <td> </td>
-                                        <td style="text-align: center;">15:00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <p>
+                                    Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque
+                                    porro elit NeDque porro Neque porro quisquam est qui do lorem ipsum quia dolor sit
+                                    amets ipsum
+                                </p>
+                            </div>
                         </div>
+                        <ul class="about-internal__content-right about-internal-list">
+                            <li class="about-internal-list__item about-internal-list__item_one">
+                                <div class="about-internal-list__item-img about-internal-list__item-img_one"></div>
+                                <h3 class="about-internal-list__item-title">Разработка сайтов</h3>
+                                <p class="about-internal-list__item-descr">
+                                    Lorem ipsum Neque do porro quisquam est qui do quam
+                                </p>
+                            </li>
+                            <li class="about-internal-list__item about-internal-list__item_two">
+                                <div class="about-internal-list__item-img about-internal-list__item-img_two"></div>
+                                <h3 class="about-internal-list__item-title">Разработка приложений</h3>
+                                <p class="about-internal-list__item-descr">
+                                    Lorem ipsum Neque do porro quisquam est qui do quam
+                                </p>
+                            </li>
+                            <li class="about-internal-list__item about-internal-list__item_three">
+                                <div class="about-internal-list__item-img about-internal-list__item-img_three"></div>
+                                <h3 class="about-internal-list__item-title">UI/UX дизайн</h3>
+                                <p class="about-internal-list__item-descr">
+                                    Lorem ipsum Neque do porro quisquam est qui do quam
+                                </p>
+                            </li>
+                            <li class="about-internal-list__item about-internal-list__item_four">
+                                <div class="about-internal-list__item-img about-internal-list__item-img_four"></div>
+                                <h3 class="about-internal-list__item-title">Дизайн вебсайтов</h3>
+                                <p class="about-internal-list__item-descr">
+                                    Lorem ipsum Neque do porro quisquam est qui do quam
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- ADVANTAGES -->
+            <section class="advantages section-reset">
+                <div class="advantages__container container">
+                    <ul class="advantages__list">
+                        <li class="advantages__list-item">
+                            <div class="advantages__list-item-img advantages__list-item-img_one"></div>
+                            <p class="advantages__list-item-number">50+</p>
+                            <p class="advantages__list-item-descr">Team members</p>
+                        </li>
+                        <li class="advantages__list-item">
+                            <div class="advantages__list-item-img advantages__list-item-img_two"></div>
+                            <p class="advantages__list-item-number">200+</p>
+                            <p class="advantages__list-item-descr">Project done</p>
+                        </li>
+                        <li class="advantages__list-item">
+                            <div class="advantages__list-item-img advantages__list-item-img_three"></div>
+                            <p class="advantages__list-item-number">500+</p>
+                            <p class="advantages__list-item-descr">Happy customers</p>
+                        </li>
+                        <li class="advantages__list-item">
+                            <div class="advantages__list-item-img advantages__list-item-img_four"></div>
+                            <p class="advantages__list-item-number">75+</p>
+                            <p class="advantages__list-item-descr">Award Winning</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--  OPPORTUNITIES -->
+            <section class="opportunities section-reset">
+                <div class="opportunities__container container">
+                    <div class="opportunities__content-wrapper">
+                        <h2 class="opportunities__title h-2">Мои возможности</h2>
+                        <div class="opportunities__content">
+                            <p class="opportunities__content-descr">
+                                Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque porro
+                                elit NeDque porro Neque porro quisquam est qui do lorem ipsum quia dolor sit amets ipsum
+                            </p>
+                            <ul class="opportunities__list">
+                                <li class="opportunities__list-item">Html</li>
+                                <li class="opportunities__list-item">Css</li>
+                                <li class="opportunities__list-item">JavaScript</li>
+                                <li class="opportunities__list-item">JQuery</li>
+                                <li class="opportunities__list-item">Accessibility</li>
+                                <li class="opportunities__list-item">Figma</li>
+                                <li class="opportunities__list-item">Tailwind Css</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FEEDBACK -->
+            <section class="feedback section-reset">
+                <div class="feedback__container container">
+                    <div class="feedback__content-wrapper">
+                        <div class="feedback__content">
+                            <h2 class="feedback__title-hidden hidden-text">Связаться со мной</h2>
+                            <h3 class="feedback__title h-2">Связаться</h3>
+                            <p class="feedback__descr">
+                                Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque porro
+                                elit NeDque porro
+                            </p>
+                            <ul class="feedback__list feedback-list">
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon feedback-list__item-icon_mark">
+                                        <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Адрес</h3>
+                                        <a
+                                            class="feedback-list__item-link"
+                                            href="./contacts.html"
+                                            aria-label="Перейти на страницу с контактной информацией">
+                                            Россия, Краснодарский край, г. Новороссийск
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Позвонить</h3>
+                                        <a
+                                            class="feedback-list__item-link"
+                                            href="tel:+79002521890"
+                                            aria-label="Позвонить по номеру +7 (900) 252-18-90">
+                                            +7 (900) 252-18-90
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Написать</h3>
+                                        <a
+                                            class="feedback-list__item-link"
+                                            href="mailto:info@front-web.com"
+                                            aria-label="Написать мне на почту info@front-web.com">
+                                            info@front-web.com
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="feedback__form feedback-form">
+                            <ul class="feedback-form__list form-list">
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">Имя</label>
+                                    <input class="form-list__item-input input" type="text" name="name" />
+                                </li>
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">E-mail</label>
+                                    <input class="form-list__item-input input" type="text" name="email" />
+                                </li>
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">Сообщение</label>
+                                    <textarea class="form-list__item-textarea textarea" name="message"></textarea>
+                                </li>
+                            </ul>
+                            <button class="feedback-form__btn button-invert">Отправить</button>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -318,7 +380,7 @@
             </div>
         </main>
         <!-- FOOTER -->
-        <footer class="home-page__footer footer">
+        <footer class="footer">
             <div class="footer__container container">
                 <div class="footer__content-wrapper">
                     <a class="footer__logo logo" href="/">
@@ -387,6 +449,7 @@
                     </small>
                 </div>
             </div>
+            <div class="footer__bg-img"></div>
         </footer>
         <!-- SCROLL-TOP -->
         <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
@@ -412,6 +475,6 @@
             </div>
         </article>
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
+        <script src="/app/js/libs/min/jquery-3.7.1.min.js"></script>
     </body>
 </html>
