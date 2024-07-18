@@ -1,0 +1,53 @@
+.about
+	&__title
+		margin-bottom: 20px
+
+	&__content-wrapper
+		display: flex
+		justify-content: space-between
+		gap: 20px
+
+		+ph
+			flex-direction: column-reverse
+
+	&__content
+		display: flex
+		flex-direction: column
+		max-width: 780px
+		width: 100%
+
+	&__content-top
+		margin-bottom: 20px
+		padding: 40px 90px 40px 20px
+		background-color: $clr_1
+		border-radius: 8px
+
+		+ph
+			padding: 40px 20px
+
+	&__text
+
+		&_wh
+			color: $clr_1
+
+	&__content-bottom
+		margin-top: auto
+		padding: 20px 100px 20px 20px
+		border-radius: 8px
+		background-color: $clr_3
+	
+		+sm
+			padding: 20px
+
+	&__img
+		max-width: 380px
+		width: 100%
+		min-height: 454px
+		border-radius: 8px
+		background-color: $clr_3
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+
+		+ph
+			max-width: 450px

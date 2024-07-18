@@ -1,0 +1,135 @@
+.portfolio-inner
+
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__title-wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		margin-bottom: 50px
+		text-align: center
+
+	&__title
+		margin-bottom: 50px
+		max-width: 688px
+
+	&__subtitle-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 10px
+		max-width: 400px
+		width: 100%
+
+	&__subtitle-line
+		width: 30%
+		height: 3px
+		background-color: $clr_1
+
+	&__subtitle-text
+		font-size: 18px
+		letter-spacing: .14em
+		color: $clr_3
+		text-transform: uppercase
+
+.portfolio-slider
+	display: flex
+	align-items: center
+	margin-bottom: 50px
+	max-width: 757px
+	width: 100%
+	min-height: 692px
+	height: 100%
+	overflow: visible
+
+	&__slide
+		position: relative
+		display: flex
+		height: 100%
+		font-size: 0
+		user-select: none
+
+		&_active
+			.portfolio-slider__slide-img
+				transform: scale(1.1)
+
+			.portfolio-slide-content
+				display: flex
+
+	&__slide-img
+		display: flex
+		width: 100%
+		min-height: 628px
+		height: 100%
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		background-color: $clr_1
+		transition: transform .2s linear
+
+.portfolio-slide-content
+	position: absolute
+	bottom: 0
+	left: 50%
+	display: none
+	flex-direction: column
+	padding: 24px 85px
+	width: 100%
+	background-color: rgba($clr_2, .8)
+	backdrop-filter: blur(8px)
+	transform: translateX(-50%)
+	// transform: scale(1.1)
+	// display: none
+
+.portfolio-pagination
+	position: static
+	display: flex
+	gap: 28px
+	max-width: max-content
+	width: 100%
+
+	&__item
+		position: relative
+		display: flex
+		width: 10px
+		height: 10px
+		border-radius: 2px
+		background-color: $clr_1
+		cursor: pointer
+		transition: background-color .2s linear, transform .2s linear
+
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 30px
+			height: 30px
+			border: 3px solid $clr_3
+			border-radius: 2px
+			opacity: 0
+			transform: translate(-50%, -50%)
+			transition: opacity .3s linear
+
+		&:hover:not(.portfolio-pagination__item_active)
+			+hover
+				background-color: $clr_3
+
+		&:focus:not(:active)
+			outline: none
+
+			&::after
+				opacity: 1
+
+		&:active:not(.portfolio-pagination__item_active)
+			transform: scale(.98)
+
+		&_active
+			cursor: auto
+
+			&::after
+				opacity: 1

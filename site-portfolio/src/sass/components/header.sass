@@ -141,31 +141,8 @@
         display: none
 
   &__item-link
-    display: flex
-    align-items: center
-    justify-content: center
     width: 100%
     height: 100%
-    border-radius: 2px
-    background-color: rgba($clr_4, .2)
-    transition: background-color .2s linear, transform .2s linear
-
-    &:hover
-      +hover
-        .header-list-btn__item-icon
-          fill: $clr_1
-
-    &:focus:not(:active)
-      background-color: rgba($clr_4, .8)
-
-    &:active
-      transform: scale(.94)
-
-  &__item-icon
-    width: 26px
-    height: 26px
-    fill: $clr_3
-    transition: fill .2s linear
 
   &__item-btn
     +ph

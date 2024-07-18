@@ -1,0 +1,89 @@
+.advantages
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	background-image: url(../img/advantages/bg-img.png)
+
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		gap: 20px
+		padding: 76px 0
+
+		+sm
+			padding: 40px 0
+
+	&__list-item
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: center
+		gap: 10px
+
+	&__list-item-img
+		flex-shrink: 0
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+
+		&_one
+			width: 90px
+			height: 90px
+			background-image: url(../img/advantages/img-1.svg)
+
+			+sm
+				width: 80px
+				height: 80px
+
+		&_two
+			width: 95px
+			height: 108px
+			background-image: url(../img/advantages/img-2.svg)
+
+			+sm
+				width: 80px
+				height: 90px
+
+		&_three
+			width: 95px
+			height: 92px
+			background-image: url(../img/advantages/img-3.svg)
+
+			+sm
+				width: 85px
+				height: 80px
+
+		&_four
+			width: 104px
+			height: 96px
+			background-image: url(../img/advantages/img-4.svg)
+
+			+sm
+				width: 90px
+				height: 80px
+
+	&__list-item-number
+		font-weight: 700
+		font-size: 64px
+		text-align: center
+
+		+md
+			font-size: 50px
+
+		+ph
+			font-size: 40px
+
+	&__list-item-descr
+		line-height: 120%
+		font-size: 20px
+		letter-spacing: .04em
+		color: $clr_3
+		text-transform: capitalize
+		text-align: center
+
+		+sm
+			font-size: 18px
+
+		+ph
+			font-size: 16px

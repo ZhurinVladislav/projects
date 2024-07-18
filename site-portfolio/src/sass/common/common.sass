@@ -119,6 +119,10 @@ button
   background-color: transparent
   cursor: pointer
 
+a
+  &:focus:not(:active)
+    outline: none
+
 .section-reset
   position: relative
   margin-bottom: 150px
@@ -190,7 +194,6 @@ button
   height: 1px
   overflow: hidden
 
-
 .overflow-hidden
 
   +sm
@@ -217,16 +220,13 @@ button
   align-items: center
   max-width: max-content
   line-height: 150%
-  font-weight: 700
-  color: $clr_3
-  text-transform: uppercase
-  border-bottom: 2px solid $clr_1
-  transition: color .2s linear, border-color .2s linear
+  color: $clr_1
+  border-bottom: 2px solid $clr_3
+  transition: color .2s linear, border-color .2s linear, transform .1s linear
 
   &:hover
     +hover
-      color: $clr_1
-      border-color: $clr_0
+      border-color: $clr_1
 
       .link__icon
         fill: $clr_2
@@ -234,6 +234,9 @@ button
   &:focus:not(:active)
     outline: none
     border-color: $clr_2
+
+  &:active
+    transform: scale(.98)
 
   &__icon
     flex-shrink: 0
@@ -336,6 +339,31 @@ button
   font-weight: 700
   color: $clr_2
   text-transform: uppercase
+
+.subtitle
+  margin-bottom: 10px
+  font-size: 20px
+  font-weight: 500
+  color: $clr_3
+  text-transform: uppercase
+
+  +md
+    font-size: 18px
+  
+  +sm
+    font-size: 16px
+
+  +ph
+    margin-bottom: 10px
+    font-size: 14px
+
+.line
+  display: block
+  margin-bottom: 32px
+  width: 100px
+  height: 3px
+  border-radius: 1px
+  background-color: $clr_1
 
 .button
   display: flex
@@ -444,6 +472,36 @@ button
     +ph
       margin-bottom: 10px
 
+.link-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+  width: 45px
+  height: 45px
+  border-radius: 2px
+  background-color: rgba($clr_4, .2)
+  transition: background-color .2s linear, 
+
+  &:hover
+    +hover
+      .link-icon__img
+        fill: $clr_1
+
+  &:focus:not(:active)
+    background-color: rgba($clr_4, .8)
+
+  &:active
+    .link-icon__img
+      transform: scale(.94)
+
+  &__img
+    width: 26px
+    height: 26px
+    fill: $clr_3
+    transition: fill .2s linear, transform .2s linear
+
+  
 .input
   padding: 16px 20px
   width: 100%
@@ -474,6 +532,37 @@ button
 
   &:focus:not(:active)
     border-color: $clr_3
+
+.input-invert
+  padding: 16px 20px
+  width: 100%
+  min-height: 50px
+  border: 1px solid $clr_0
+  border-radius: 4px
+  background-color: rgba($clr_1, .2)
+  color: $clr_1
+  transition: border-color .2s linear, background-color .2s linear
+
+  +ph
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: $clr_er
+
+    &:hover
+      +hover
+        border-color: $clr_er
+
+    &:focus
+      border-color: $clr_er
+
+  &:hover
+    +hover
+      background-color: rgba($clr_1, .4)
+
+  &:focus:not(:active)
+    border-color: $clr_1
 
 .textarea
   padding: 14px 20px
@@ -507,6 +596,39 @@ button
 
   &:focus:not(:active)
     border-color: $clr_3
+
+.textarea-invert
+  padding: 14px 20px
+  width: 100%
+  resize: none
+  min-height: 178px
+  border: 1px solid $clr_0
+  border-radius: 4px
+  background-color: rgba($clr_1, .2)
+  line-height: 120%
+  color: $clr_1
+  transition: border-color .2s linear, background-color .2s linear
+
+  +ph
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: $clr_er
+
+    &:hover
+      +hover
+        border-color: $clr_er
+
+    &:focus
+      border-color: $clr_er
+
+  &:hover
+    +hover
+      background-color: rgba($clr_1, .4)
+
+  &:focus:not(:active)
+    border-color: $clr_1
 
 .form-note
   position: relative

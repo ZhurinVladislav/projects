@@ -1,4 +1,5 @@
 .footer
+	position: relative
 	margin-top: auto
 
 	&__content-wrapper
@@ -6,28 +7,16 @@
 		flex-direction: column
 		align-items: center
 		justify-content: center
-		padding-bottom: 12px
+		padding-bottom: 40px
 
 	&__logo
 		position: relative
 		display: flex
 		margin-bottom: 23px
-		padding-bottom: 32px
 		width: 296px
 		
 		+sm
 			width: 200px
-			padding-bottom: 22px
-
-		&::after
-			content: ''
-			position: absolute
-			bottom: 0
-			left: 50%
-			width: 101px
-			height: 2px
-			background-color: $clr_1
-			transform: translateX(-50%)
 
 	&__copyright
 		font-weight: 300
@@ -38,6 +27,19 @@
 		+ph
 			font-size: 12px
 
+	&__bg-img
+		position: absolute
+		left: 50%
+		bottom: 0
+		z-index: -1
+		width: 100%
+		height: 400px
+		background-image: url(../img/footer/bg-img.png)
+		transform: translateX(-50%)
+
+		+ph
+			height: 400px
+
 .footer-menu
 	margin-bottom: 26px
 
@@ -47,7 +49,6 @@
 		gap: 42px
 		font-weight: 500
 		font-size: 20px
-		color: $clr_3
 
 		+sm
 			gap: 20px
@@ -63,7 +64,7 @@
 
 			.footer-menu__list-item-link
 				&::after
-					background-color: $clr_1
+					background-color: $clr_3
 
 				&:hover
 					+hover
@@ -91,7 +92,7 @@
 
 		&:hover
 			+hover
-				color: $clr_1
+				color: $clr_6
 
 		&:focus:not(:active)
 			&::after
@@ -103,17 +104,36 @@
 .footer-links
 	display: flex
 	gap: 26px
-	margin-bottom: 60px
+	margin-bottom: 160px
 	
 	+sm
+		margin-bottom: 80px
+
+	+ph
 		margin-bottom: 40px
 
 	&__item-link
 		display: flex
 		align-items: center
 		justify-content: center
-		width: 22px
-		height: 22px
+		width: 24px
+		height: 24px
+		border: 1px solid $clr_0
+		transition: border-color .2s linear, transform .2s linear
+
+		&:hover
+			+hover
+				.footer-links__item-link-icon
+					fill: $clr_1
+
+		&:focus:not(:active)
+			border-color: $clr_1
+
+		&:active
+			transform: scale(.94)
 
 	&__item-link-icon
+		width: 24px
+		height: 24px
 		fill: $clr_3
+		transition: fill .2s linear

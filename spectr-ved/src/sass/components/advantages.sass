@@ -1,0 +1,38 @@
+.advantages
+	&__title
+		text-align: center
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-auto-rows: minmax(317px, auto-fit)
+		gap: 20px
+
+		+ph
+			grid-template-columns: 1fr
+
+	&__list-item
+		display: flex
+		flex-direction: column
+		padding: 40px 20px
+		color: $clr_3
+		border-radius: 8px
+		background-color: $clr_1
+		box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+		
+		+ph
+			padding: 20px
+
+	&__list-title
+		margin-bottom: 20px
+		max-width: 380px
+		font-weight: 600
+		line-height: 120%
+		font-size: 24px
+
+		+ph
+			font-size: 20px
+
+	&__list-text
+		font-weight: 500
+		

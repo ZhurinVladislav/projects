@@ -13,13 +13,12 @@
         <!-- STYLES -->
         <link rel="stylesheet" href="/app/css/main.min.css" />
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/preloader.js"></script>
-        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
-        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
-        <script src="/app/js/libs/webp.js" defer></script>
-        <script src="/app/js/libs/modal-window.js" defer></script>
-        <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
-        <script src="/app/js/main.min.js" defer></script>
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/libs/min/iframe-lazy-load.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
     </head>
 
     <body>
@@ -63,22 +62,22 @@
                 <ul class="header__list-btn header-list-btn">
                     <li class="header-list-btn__item">
                         <a
-                            class="header-list-btn__item-link"
+                            class="header-list-btn__item-link link-icon"
                             href="https://t.me/+79002521890"
                             target="_blank"
                             aria-label="Написать мне в Telegram">
-                            <svg class="header-list-btn__item-icon">
+                            <svg class="link-icon__img">
                                 <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="header-list-btn__item">
                         <a
-                            class="header-list-btn__item-link"
+                            class="header-list-btn__item-link link-icon"
                             href="https://github.com/ZhurinVladislav"
                             target="_blank"
                             aria-label="Перейти в мой GitHub">
-                            <svg class="header-list-btn__item-icon">
+                            <svg class="link-icon__img">
                                 <use xlink:href="/app/img/icons/icons.svg#gh"></use>
                             </svg>
                         </a>
@@ -152,56 +151,65 @@
         </header>
         <!-- MAIN -->
         <main id="main">
-            <!-- CONTACTS -->
-            <section class="contacts">
-                <div class="contacts__container container">
-                    <h1 class="contacts__title-hidden hidden-text">Моя контактная информация</h1>
-                    <h2 class="contacts__title h-1">Контакты</h2>
-                    <div class="contacts__content-wrapper">
-                        <ul class="contacts__list contacts-list">
-                            <li class="contacts-list__item">
-                                <svg class="contacts-list__item-icon contacts-list__item-icon_mark">
-                                    <use xlink:href="/app/img/icons/icons.svg#mark"></use>
-                                </svg>
-                                <div class="contacts-list__item-link-wrapper">
-                                    <h3 class="contacts-list__item-title">Адрес</h3>
-                                    <p class="contacts-list__item-text">Россия, Краснодарский край, г. Новороссийск</p>
-                                </div>
-                            </li>
-                            <li class="contacts-list__item">
-                                <svg class="contacts-list__item-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                </svg>
-                                <div class="contacts-list__item-link-wrapper">
-                                    <h3 class="contacts-list__item-title">Позвонить</h3>
+            <!-- FEEDBACK-PAGE -->
+            <section class="feedback-page section-reset">
+                <div class="feedback-page__container container-inner">
+                    <div class="feedback-page__content-wrapper">
+                        <div class="feedback-page__content">
+                            <h1 class="feedback-page__title-hidden hidden-text">Обратная связи со мной</h1>
+                            <h2 class="feedback-page__title h-2">Давайте свяжемся</h2>
+                            <p class="feedback-page__descr">
+                                Поздороваться в
+                                <a href="mailto:" class="feedback-page__descr-link link">test@gmail.com</a>
+                            </p>
+                            <p class="feedback-page__descr feedback-page__descr_last">
+                                Для получения дополнительной информации, вот моё
+                                <a href="mailto:" class="feedback-page__descr-link link">резюме</a>
+                            </p>
+                            <ul class="feedback-page__social-list social-list">
+                                <li class="social-list__item">
                                     <a
-                                        class="contacts-list__item-link"
-                                        href="tel:+79002521890"
-                                        aria-label="Позвонить по номеру +7 (900) 252-18-90">
-                                        +7 (900) 252-18-90
+                                        class="social-list__item-link link-icon"
+                                        href="https://t.me/+79002521890"
+                                        target="_blank"
+                                        aria-label="Написать мне в Telegram">
+                                        <svg class="link-icon__img">
+                                            <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                        </svg>
                                     </a>
-                                </div>
-                            </li>
-                            <li class="contacts-list__item">
-                                <svg class="contacts-list__item-icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
-                                </svg>
-                                <div class="contacts-list__item-link-wrapper">
-                                    <h3 class="contacts-list__item-title">Написать</h3>
+                                </li>
+                                <li class="social-list__item">
                                     <a
-                                        class="contacts-list__item-link"
-                                        href="mailto:info@front-web.com"
-                                        aria-label="Написать мне на почту info@front-web.com">
-                                        info@front-web.com
+                                        class="social-list__item-link link-icon"
+                                        href="https://github.com/ZhurinVladislav"
+                                        target="_blank"
+                                        aria-label="Перейти в мой GitHub">
+                                        <svg class="link-icon__img">
+                                            <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                        </svg>
                                     </a>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="contacts__map-wrapper">
-                            <script
-                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6bd376141f3ae44de0e4d626a8250c5cb4ba04cf38756d4473c2167b2312f34f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
-                                async></script>
+                                </li>
+                            </ul>
                         </div>
+                        <form class="feedback-page__form feedback-page-form">
+                            <ul class="feedback-page-form__list form-list">
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">Имя</label>
+                                    <input class="form-list__item-input input-invert" type="text" name="name" />
+                                </li>
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">E-mail</label>
+                                    <input class="form-list__item-input input-invert" type="text" name="email" />
+                                </li>
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">Сообщение</label>
+                                    <textarea
+                                        class="form-list__item-textarea textarea-invert"
+                                        name="message"></textarea>
+                                </li>
+                            </ul>
+                            <button class="feedback-page-form__btn button-invert">Отправить</button>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -254,7 +262,7 @@
             </div>
         </main>
         <!-- FOOTER -->
-        <footer class="home-page__footer footer">
+        <footer class="footer">
             <div class="footer__container container">
                 <div class="footer__content-wrapper">
                     <a class="footer__logo logo" href="/">
@@ -323,6 +331,7 @@
                     </small>
                 </div>
             </div>
+            <div class="footer__bg-img"></div>
         </footer>
         <!-- SCROLL-TOP -->
         <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
@@ -348,6 +357,6 @@
             </div>
         </article>
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
+        <script src="/app/js/libs/min/jquery-3.7.1.min.js"></script>
     </body>
 </html>

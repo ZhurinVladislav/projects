@@ -1,0 +1,245 @@
+.home-page
+  .header
+    position: absolute
+    top: 0
+    z-index: 100
+    margin-bottom: 0
+    background-color: $clr_0
+
+  .header-top
+    margin-bottom: 40px
+    background-color: $clr_1
+
+    +sm
+      margin-bottom: 20px
+
+  .header-menu
+    display: flex
+
+    &__list-link
+      color: $clr_1
+
+      &:hover
+        +hover
+          color: $clr_3
+          background-color: $clr_1
+
+      &:focus:not(:active)
+        color: $clr_1
+        background-color: rgba($clr_1, .5)
+
+.header
+  margin-bottom: 40px
+  background-color: $clr_1
+  transition: max-height .2s linear
+
+  +sm
+    position: static
+
+  &.header_active
+    position: fixed
+    z-index: 500
+    animation-name: fadeInUp
+    max-height: 104px
+    background-color: $clr_1
+    box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+    animation-duration: 1s
+
+    +sm
+      max-height: 100%
+
+    &:hover
+      +hover
+        max-height: 100%
+
+        .header-menu
+          max-height: 45px
+          opacity: 1
+          transform: translateY(0)
+
+    .header-top
+      margin: 0
+
+    .header-menu
+      max-height: 0
+      border: none
+      opacity: 0
+      transform: translateY(-20px)
+
+      +sm
+        max-height: max-content
+        opacity: 1
+        transform: translateY(0)
+
+      &__list-link
+        color: $clr_3
+
+        &:hover
+          +hover
+            color: $clr_1
+            background-color: $clr_3
+
+        &:focus:not(:active)
+          background-color: rgba($clr_3, .5)
+
+.header-top
+  margin-bottom: 0
+  padding: 20px 0
+  background-color: $clr_1
+  max-width: 100%
+  width: 100%
+  transition: margin .2s linear
+
+  +sm
+    margin-bottom: 0
+
+  +ph
+    padding: 15px 0
+
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__logo
+    margin-right: 20px
+    max-width: 217px
+    height: 64px
+
+    +ph
+      max-width: 150px
+      height: 53px
+
+  &__content
+    display: flex
+    align-items: center
+
+.header-links
+  display: flex
+  gap: 8px
+  align-items: center
+
+  +sm
+    margin-left: auto
+    // margin-right: 20px
+
+  // +xs
+  //   display: none
+
+  &__item
+    &_ph
+      +ph
+        display: none
+
+  &__link
+    padding: 8px 18px
+
+    +sm
+      padding: 8px 10px
+
+    +ph
+      padding: 8px
+
+.header-menu
+  display: none
+  border-bottom: 1px solid rgba($clr_1, .2)
+  transition:  border .2s linear, opacity .2s linear, transform .2s linear, max-height .2s linear
+
+  // +sm
+  //   border-bottom: none
+
+  +ph
+    min-height: 40px
+    overflow-y: hidden
+    overflow-x: scroll
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+    +ph
+      flex-wrap: nowrap
+      gap: 20px
+
+    // +sm
+    //   display: none
+
+  &__list-link
+    display: flex
+    padding: 12px 20px
+    font-weight: 500
+    color: $clr_3
+    border-radius: 4px 4px 0 0
+    transition: background-color .2s linear, color .2s linear, opacity .2s linear
+
+    +ph
+      display: inline-block
+      padding: 10px
+      width: max-content
+
+    &:hover
+      +hover
+        color: $clr_1
+        background-color: $clr_3
+
+    &:focus:not(:active)
+      color: $clr_1
+      background-color: rgba($clr_3, .5)
+
+    &:active
+      opacity: .8
+
+// КНОПКА ОТКРЫТИЯ МОБИЛЬНОГО МЕНЮ
+.menu-toggle
+  position: relative
+  z-index: 30000
+  display: none
+  width: 30px
+  height: 25px
+
+  // +sm
+  //   display: block
+
+  &__item
+    position: absolute
+    display: block
+    width: 100%
+    height: 2px
+    background-color: $clr_3
+    transform: rotate(0) translate(0, 0)
+    transition: all .3s linear
+
+    &:nth-child(1)
+      top: 0
+      left: 0
+
+    &:nth-child(2)
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      opacity: 1
+
+    &:nth-child(3)
+      bottom: 0
+      left: 0
+
+  &.menu-toggle_active
+
+    .menu-toggle__item
+
+      &:nth-child(1)
+        transform: rotate(45deg) translate(-50%, -50%)
+        transform-origin: top left
+        left: 50%
+        top: 50%
+        
+      &:nth-child(2)
+        left: 100%
+        transform: translateY(0)
+        opacity: 0
+
+      &:nth-child(3)
+        transform: rotate(-45deg) translate(-50%, 50%)
+        transform-origin: bottom left
+        left: 50%
+        bottom: 50%

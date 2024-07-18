@@ -1,0 +1,148 @@
+.hero
+	margin-top: 104px
+	padding-top: 119px
+	padding-bottom: 120px
+
+	+sm
+		padding: 0
+
+	+ph
+		margin-top: 83px
+
+	&__container
+		padding: 0
+
+		+ph
+			padding: 0
+
+	&__img-bg
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -2
+		display: flex
+		max-width: 100%
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+		+sm
+			display: none
+
+		&_sm
+			display: none
+
+			+sm
+				display: flex
+
+	&__content-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 20px
+
+		+sm
+			flex-direction: column
+			align-items: flex-start
+			gap: 40px
+			max-width: 100%
+			width: 100%
+
+	&__content
+		max-width: 526px
+		width: 100%
+
+		+sm
+			position: relative
+			max-width: 100%
+			padding: 80px 25px 40px 25px
+			border-radius: 8px
+			overflow: hidden
+
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				z-index: -1
+				width: 100%
+				height: 100%
+				background-color: rgba($clr_3, .4)
+
+	&__title
+		margin-bottom: 40px
+		font-weight: 700
+		line-height: 120%
+		font-size: 48px
+		color: $clr_1
+
+		+sm
+			font-size: 40px
+
+		+ph
+			margin-bottom: 20px
+			font-size: 25px
+
+	&__list
+		display: flex
+		flex-direction: column
+		
+		+ph
+			font-size: 14px
+
+	&__list-item
+		display: inline-flex
+		align-items: center
+		gap: 8px
+		color: $clr_1
+
+		+ph
+			gap: 6px
+			font-size: 14px
+
+		&:not(:last-child)
+			margin-bottom: 16px
+
+			+ph
+				margin-bottom: 12px
+		
+	&__list-img
+		width: 29px
+		height: 29px
+
+		+ph
+			width: 20px
+			height: 20px
+
+.hero-form
+	padding: 40px
+	max-width: 412px
+	min-height: 508px
+	border-radius: 8px
+	background-color: $clr_1
+	backdrop-filter: blur(14px)
+	box-shadow: 0 6px 14px 0 rgba(25, 60, 99, 0.27), 0 25px 25px 0 rgba(25, 60, 99, 0.23), 0 57px 34px 0 rgba(25, 60, 99, 0.14), 0 102px 41px 0 rgba(25, 60, 99, 0.04), 0 159px 45px 0 rgba(25, 60, 99, 0.01)
+
+	+sm
+		margin: 0px 25px
+		padding: 20px
+		box-shadow: none
+
+	+ph
+		margin: 0px 10px
+		padding: 20px 10px
+		max-width: 100%
+		min-height: auto
+
+	&__title
+		margin-bottom: 16px
+		text-align: center
+
+	&__list
+		margin-bottom: 16px
+
+	&__btn
+		margin-bottom: 8px
+		padding: 16px 20px
+		max-width: 100%
+		width: 100%

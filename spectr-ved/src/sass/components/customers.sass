@@ -1,0 +1,111 @@
+.customers
+	&__title
+		padding-left: 60px
+		text-align: center
+
+		+lr
+			padding: 0
+
+	&__swiper-main-wrapper
+		position: relative
+
+		+lr
+			padding: 0 50px
+
+		+ph
+			padding: 0 40px
+
+.customers-swiper
+	display: flex
+	align-items: center
+	justify-content: center
+	
+	&__wrapper
+		max-width: 1180px
+
+	&__btn
+		position: absolute
+		top: 50%
+		width: 53px
+		height: 53px
+		border-radius: 8px
+		transform: translateY(-50%)
+		transition: box-shadow .2s linear, background-color .2s linear, transform .2s linear
+		
+		+ph
+			width: 40px
+			height: 40px
+
+		&:hover:not(&_prev)
+			+hover
+				.customers-swiper__btn-icon
+					transform: translateX(5px)
+
+		&:focus:not(:active)
+			background-color: $clr_1
+			box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+
+		&:active:not(&_prev)
+			.customers-swiper__btn-icon
+				transform: scale(.96) translateX(5px)
+
+				// +ph
+				// 	transform: rotate(180deg)
+
+		&:active:not(&_next)
+			.customers-swiper__btn-icon
+				+ph
+					transform: rotate(180deg) scale(.96) translateX(5px)
+			
+		&_prev
+			left: -60px
+
+			+lr
+				left: 0
+
+			.customers-swiper__btn-icon
+				transform: rotate(180deg)
+
+			&:hover
+				+hover
+					.customers-swiper__btn-icon
+						transform: rotate(180deg) translateX(5px)
+
+			&:active
+				.customers-swiper__btn-icon
+					transform: rotate(180deg) scale(.96) translateX(5px)
+
+					+ph
+						transform: rotate(180deg) scale(.96)
+
+		&_next
+			right: -60px
+			
+			+lr
+				right: 0
+
+	&__btn-icon
+		width: 12px
+		height: 20px
+		transition: fill .2s linear, transform .3s linear
+
+	&__slide
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 150px
+		border-radius: 8px
+		background-color: $clr_1
+
+		+ph
+			height: 120px
+
+	&__slide-img-wrapper
+		display: flex
+
+	&__slide-img
+		max-width: 230px
+		width: 100%
+		min-height: 40px
+		height: 100%
+		object-fit: contain

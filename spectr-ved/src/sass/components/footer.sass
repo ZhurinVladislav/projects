@@ -1,0 +1,35 @@
+.footer
+	margin-top: auto
+	
+	&__content-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 20px
+		padding: 20px 0
+		font-weight: 500
+		font-size: 14px
+		color: $clr_3
+		text-transform: uppercase
+
+		+sm
+			font-size: 12px
+
+		+ph
+			flex-direction: column
+			gap: 10px
+
+	&__link
+		font-weight: 500
+		font-size: 14px
+
+		+sm
+			font-size: 12px
+
+	.link-text
+		&__icon
+			width: 47px
+			height: 20px
+
+		&__descr
+			padding-top: 2px

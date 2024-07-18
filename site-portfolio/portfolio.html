@@ -13,13 +13,12 @@
         <!-- STYLES -->
         <link rel="stylesheet" href="/app/css/main.min.css" />
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/preloader.js"></script>
-        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
-        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
-        <script src="/app/js/libs/webp.js" defer></script>
-        <script src="/app/js/libs/modal-window.js" defer></script>
-        <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
-        <script src="/app/js/main.min.js" defer></script>
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/libs/min/iframe-lazy-load.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
     </head>
 
     <body>
@@ -63,22 +62,22 @@
                 <ul class="header__list-btn header-list-btn">
                     <li class="header-list-btn__item">
                         <a
-                            class="header-list-btn__item-link"
+                            class="header-list-btn__item-link link-icon"
                             href="https://t.me/+79002521890"
                             target="_blank"
                             aria-label="Написать мне в Telegram">
-                            <svg class="header-list-btn__item-icon">
+                            <svg class="link-icon__img">
                                 <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="header-list-btn__item">
                         <a
-                            class="header-list-btn__item-link"
+                            class="header-list-btn__item-link link-icon"
                             href="https://github.com/ZhurinVladislav"
                             target="_blank"
                             aria-label="Перейти в мой GitHub">
-                            <svg class="header-list-btn__item-icon">
+                            <svg class="link-icon__img">
                                 <use xlink:href="/app/img/icons/icons.svg#gh"></use>
                             </svg>
                         </a>
@@ -153,181 +152,264 @@
         <!-- MAIN -->
         <main id="main">
             <!-- PORTFOLIO -->
-            <section class="portfolio">
-                <div class="portfolio__container container">
-                    <h2 class="portfolio__title h-2">Мои проекты</h2>
-                    <p class="portfolio__descr">В данном разделе перечислены все мои проекты</p>
-                    <ul class="portfolio__list">
-                        <li class="portfolio__list-item portfolio-item">
-                            <div class="portfolio-item__img-wrapper">
-                                <ul class="portfolio-item__tag-list tag-list">
-                                    <li class="tag-list__item">Концептуальная работа</li>
-                                    <li class="tag-list__item">Концептуальная работа</li>
-                                </ul>
-                                <img
-                                    class="portfolio-item__img"
-                                    src="./app/img/portfolio/img-1.jpg"
-                                    alt="Тестовое изображения портфолио" />
-                            </div>
-                            <div class="portfolio-item__content">
-                                <h3 class="portfolio-item__title">Promotional landing page for our favorite show</h3>
-                                <div class="portfolio-item__descr text-default">
-                                    <p>
-                                        Teamed up with a designer to breathe life into a promotional webpage for our
-                                        beloved show, Adventure Time. Delivered a fully responsive design with dynamic
-                                        content capabilities, seamlessly integrating a newsletter feature to keep fans
-                                        updated with the latest adventures.
-                                    </p>
+            <section class="portfolio-inner section-reset">
+                <div class="portfolio-inner__container container">
+                    <div class="portfolio-inner__title-wrapper">
+                        <h1 class="portfolio-inner__title-hidden hidden-text">Проекты</h1>
+                        <h2 class="portfolio-inner__title h-2">
+                            Мои <span class="portfolio-inner__title-color color">последние</span> проекты
+                        </h2>
+                        <div class="portfolio-inner__subtitle-wrapper">
+                            <span class="portfolio-inner__subtitle-line"></span>
+                            <p class="portfolio-inner__subtitle-text">Мои работы</p>
+                            <span class="portfolio-inner__subtitle-line"></span>
+                        </div>
+                    </div>
+                    <div id="portfolio-slider" class="portfolio__slider swiper portfolio-slider">
+                        <ul class="swiper-wrapper portfolio-slider__wrapper">
+                            <li class="swiper-slide portfolio-slider__slide">
+                                <div
+                                    class="portfolio-slider__slide-img"
+                                    style="background-image: url(./app/img/portfolio/img-1.jpg);"></div>
+                                <div class="portfolio-slider__slide-content portfolio-slide-content">
+                                    <h3 class="portfolio-slide-content__title">
+                                        Promotional landing page for our favorite show
+                                    </h3>
+                                    <div class="portfolio-slide-content__text text-default">
+                                        <p>
+                                            Teamed up with a designer to breathe life into a promotional webpage for our
+                                            beloved show, Adventure Time. Delivered a fully responsive design with
+                                            dynamic content capabilities, seamlessly integrating a newsletter feature to
+                                            keep fans updated with the latest adventures.
+                                        </p>
+                                    </div>
+                                    <p class="portfolio-item__list-title">Информация</p>
+                                    <ul class="portfolio-item__list">
+                                        <li class="portfolio-item__list-item">
+                                            <p class="portfolio-item__list-item-title">Год</p>
+                                            <p class="portfolio-item__list-item-descr">2023</p>
+                                        </li>
+                                        <li class="portfolio-item__list-item">
+                                            <p class="portfolio-item__list-item-title">Роль</p>
+                                            <p class="portfolio-item__list-item-descr">Front-end developer</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="portfolio-item__list-link portfolio-links">
+                                        <li class="portfolio-links__item">
+                                            <a
+                                                class="portfolio-links__item-link portfolio-link"
+                                                href="/"
+                                                aria-label="Перейти на страницу демо проекта">
+                                                <span class="portfolio-link__text"> Демо </span>
+                                                <svg class="portfolio-link__icon portfolio-link__icon_arrow">
+                                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="portfolio-links__item">
+                                            <a
+                                                class="portfolio-links__item-link portfolio-link"
+                                                href="https://github.com/ZhurinVladislav"
+                                                target="_blank"
+                                                aria-label="Перейти в мой GitHub">
+                                                <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
+                                                <svg class="portfolio-link__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <p class="portfolio-item__list-title">Информация</p>
-                                <ul class="portfolio-item__list">
-                                    <li class="portfolio-item__list-item">
-                                        <p class="portfolio-item__list-item-title">Год</p>
-                                        <p class="portfolio-item__list-item-descr">2023</p>
-                                    </li>
-                                    <li class="portfolio-item__list-item">
-                                        <p class="portfolio-item__list-item-title">Роль</p>
-                                        <p class="portfolio-item__list-item-descr">Front-end developer</p>
-                                    </li>
-                                </ul>
-                                <ul class="portfolio-item__list-link portfolio-links">
-                                    <li class="portfolio-links__item">
-                                        <a
-                                            class="portfolio-links__item-link portfolio-link"
-                                            href="/"
-                                            aria-label="Перейти на страницу демо проекта">
-                                            <span class="portfolio-link__text"> Демо </span>
-                                            <svg class="portfolio-link__icon portfolio-link__icon_arrow">
-                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="portfolio-links__item">
-                                        <a
-                                            class="portfolio-links__item-link portfolio-link"
-                                            href="https://github.com/ZhurinVladislav"
-                                            target="_blank"
-                                            aria-label="Перейти в мой GitHub">
-                                            <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
-                                            <svg class="portfolio-link__icon">
-                                                <use xlink:href="/app/img/icons/icons.svg#gh"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="portfolio__list-item portfolio-item">
-                            <div class="portfolio-item__img-wrapper">
-                                <img
-                                    class="portfolio-item__img"
-                                    src="./app/img/portfolio/img-1.jpg"
-                                    alt="Тестовое изображения портфолио" />
-                            </div>
-                            <div class="portfolio-item__content">
-                                <h3 class="portfolio-item__title">Promotional landing page for our favorite show</h3>
-                                <div class="portfolio-item__descr text-default">
-                                    <p>
-                                        Teamed up with a designer to breathe life into a promotional webpage for our
-                                        beloved show, Adventure Time. Delivered a fully responsive design with dynamic
-                                        content capabilities, seamlessly integrating a newsletter feature to keep fans
-                                        updated with the latest adventures.
-                                    </p>
+                            </li>
+                            <li class="swiper-slide portfolio-slider__slide">
+                                <div
+                                    class="portfolio-slider__slide-img"
+                                    style="background-image: url(./app/img/portfolio/img-1.jpg);"></div>
+                                <div class="portfolio-slider__slide-content portfolio-slide-content">
+                                    <h3 class="portfolio-slide-content__title">
+                                        Promotional landing page for our favorite show
+                                    </h3>
+                                    <div class="portfolio-slide-content__text text-default">
+                                        <p>
+                                            Teamed up with a designer to breathe life into a promotional webpage for our
+                                            beloved show, Adventure Time. Delivered a fully responsive design with
+                                            dynamic content capabilities, seamlessly integrating a newsletter feature to
+                                            keep fans updated with the latest adventures.
+                                        </p>
+                                    </div>
+                                    <p class="portfolio-item__list-title">Информация</p>
+                                    <ul class="portfolio-item__list">
+                                        <li class="portfolio-item__list-item">
+                                            <p class="portfolio-item__list-item-title">Год</p>
+                                            <p class="portfolio-item__list-item-descr">2023</p>
+                                        </li>
+                                        <li class="portfolio-item__list-item">
+                                            <p class="portfolio-item__list-item-title">Роль</p>
+                                            <p class="portfolio-item__list-item-descr">Front-end developer</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="portfolio-item__list-link portfolio-links">
+                                        <li class="portfolio-links__item">
+                                            <a
+                                                class="portfolio-links__item-link portfolio-link"
+                                                href="/"
+                                                aria-label="Перейти на страницу демо проекта">
+                                                <span class="portfolio-link__text"> Демо </span>
+                                                <svg class="portfolio-link__icon portfolio-link__icon_arrow">
+                                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="portfolio-links__item">
+                                            <a
+                                                class="portfolio-links__item-link portfolio-link"
+                                                href="https://github.com/ZhurinVladislav"
+                                                target="_blank"
+                                                aria-label="Перейти в мой GitHub">
+                                                <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
+                                                <svg class="portfolio-link__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <p class="portfolio-item__list-title">Информация</p>
-                                <ul class="portfolio-item__list">
-                                    <li class="portfolio-item__list-item">
-                                        <p class="portfolio-item__list-item-title">Год</p>
-                                        <p class="portfolio-item__list-item-descr">2023</p>
-                                    </li>
-                                    <li class="portfolio-item__list-item">
-                                        <p class="portfolio-item__list-item-title">Роль</p>
-                                        <p class="portfolio-item__list-item-descr">Front-end developer</p>
-                                    </li>
-                                </ul>
-                                <ul class="portfolio-item__list-link portfolio-links">
-                                    <li class="portfolio-links__item">
-                                        <a
-                                            class="portfolio-links__item-link portfolio-link"
-                                            href="/"
-                                            aria-label="Перейти на страницу демо проекта">
-                                            <span class="portfolio-link__text"> Демо </span>
-                                            <svg class="portfolio-link__icon portfolio-link__icon_arrow">
-                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="portfolio-links__item">
-                                        <a
-                                            class="portfolio-links__item-link portfolio-link"
-                                            href="https://github.com/ZhurinVladislav"
-                                            target="_blank"
-                                            aria-label="Перейти в мой GitHub">
-                                            <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
-                                            <svg class="portfolio-link__icon">
-                                                <use xlink:href="/app/img/icons/icons.svg#gh"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="portfolio__list-item portfolio-item">
-                            <div class="portfolio-item__img-wrapper">
-                                <img
-                                    class="portfolio-item__img"
-                                    src="./app/img/portfolio/img-1.jpg"
-                                    alt="Тестовое изображения портфолио" />
-                            </div>
-                            <div class="portfolio-item__content">
-                                <h3 class="portfolio-item__title">Promotional landing page for our favorite show</h3>
-                                <div class="portfolio-item__descr text-default">
-                                    <p>
-                                        Teamed up with a designer to breathe life into a promotional webpage for our
-                                        beloved show, Adventure Time. Delivered a fully responsive design with dynamic
-                                        content capabilities, seamlessly integrating a newsletter feature to keep fans
-                                        updated with the latest adventures.
-                                    </p>
+                            </li>
+                            <li class="swiper-slide portfolio-slider__slide">
+                                <div
+                                    class="portfolio-slider__slide-img"
+                                    style="background-image: url(./app/img/portfolio/img-1.jpg);"></div>
+                                <div class="portfolio-slider__slide-content portfolio-slide-content">
+                                    <h3 class="portfolio-slide-content__title">
+                                        Promotional landing page for our favorite show
+                                    </h3>
+                                    <div class="portfolio-slide-content__text text-default">
+                                        <p>
+                                            Teamed up with a designer to breathe life into a promotional webpage for our
+                                            beloved show, Adventure Time. Delivered a fully responsive design with
+                                            dynamic content capabilities, seamlessly integrating a newsletter feature to
+                                            keep fans updated with the latest adventures.
+                                        </p>
+                                    </div>
+                                    <p class="portfolio-item__list-title">Информация</p>
+                                    <ul class="portfolio-item__list">
+                                        <li class="portfolio-item__list-item">
+                                            <p class="portfolio-item__list-item-title">Год</p>
+                                            <p class="portfolio-item__list-item-descr">2023</p>
+                                        </li>
+                                        <li class="portfolio-item__list-item">
+                                            <p class="portfolio-item__list-item-title">Роль</p>
+                                            <p class="portfolio-item__list-item-descr">Front-end developer</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="portfolio-item__list-link portfolio-links">
+                                        <li class="portfolio-links__item">
+                                            <a
+                                                class="portfolio-links__item-link portfolio-link"
+                                                href="/"
+                                                aria-label="Перейти на страницу демо проекта">
+                                                <span class="portfolio-link__text"> Демо </span>
+                                                <svg class="portfolio-link__icon portfolio-link__icon_arrow">
+                                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="portfolio-links__item">
+                                            <a
+                                                class="portfolio-links__item-link portfolio-link"
+                                                href="https://github.com/ZhurinVladislav"
+                                                target="_blank"
+                                                aria-label="Перейти в мой GitHub">
+                                                <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
+                                                <svg class="portfolio-link__icon">
+                                                    <use xlink:href="/app/img/icons/icons.svg#gh"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <p class="portfolio-item__list-title">Информация</p>
-                                <ul class="portfolio-item__list">
-                                    <li class="portfolio-item__list-item">
-                                        <p class="portfolio-item__list-item-title">Год</p>
-                                        <p class="portfolio-item__list-item-descr">2023</p>
-                                    </li>
-                                    <li class="portfolio-item__list-item">
-                                        <p class="portfolio-item__list-item-title">Роль</p>
-                                        <p class="portfolio-item__list-item-descr">Front-end developer</p>
-                                    </li>
-                                </ul>
-                                <ul class="portfolio-item__list-link portfolio-links">
-                                    <li class="portfolio-links__item">
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        id="portfolio-pagination"
+                        class="portfolio__pagination portfolio-pagination swiper-pagination"></div>
+                </div>
+            </section>
+            <!-- FEEDBACK -->
+            <section class="feedback section-reset">
+                <div class="feedback__container container">
+                    <div class="feedback__content-wrapper">
+                        <div class="feedback__content">
+                            <h2 class="feedback__title-hidden hidden-text">Связаться со мной</h2>
+                            <h3 class="feedback__title h-2">Связаться</h3>
+                            <p class="feedback__descr">
+                                Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque porro
+                                elit NeDque porro
+                            </p>
+                            <ul class="feedback__list feedback-list">
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon feedback-list__item-icon_mark">
+                                        <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Адрес</h3>
                                         <a
-                                            class="portfolio-links__item-link portfolio-link"
-                                            href="/"
-                                            aria-label="Перейти на страницу демо проекта">
-                                            <span class="portfolio-link__text"> Демо </span>
-                                            <svg class="portfolio-link__icon portfolio-link__icon_arrow">
-                                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                            </svg>
+                                            class="feedback-list__item-link"
+                                            href="./contacts.html"
+                                            aria-label="Перейти на страницу с контактной информацией">
+                                            Россия, Краснодарский край, г. Новороссийск
                                         </a>
-                                    </li>
-                                    <li class="portfolio-links__item">
+                                    </div>
+                                </li>
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Позвонить</h3>
                                         <a
-                                            class="portfolio-links__item-link portfolio-link"
-                                            href="https://github.com/ZhurinVladislav"
-                                            target="_blank"
-                                            aria-label="Перейти в мой GitHub">
-                                            <span class="portfolio-link__text"> Смотреть на&nbsp;GitHub </span>
-                                            <svg class="portfolio-link__icon">
-                                                <use xlink:href="/app/img/icons/icons.svg#gh"></use>
-                                            </svg>
+                                            class="feedback-list__item-link"
+                                            href="tel:+79002521890"
+                                            aria-label="Позвонить по номеру +7 (900) 252-18-90">
+                                            +7 (900) 252-18-90
                                         </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                                    </div>
+                                </li>
+                                <li class="feedback-list__item">
+                                    <svg class="feedback-list__item-icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                    </svg>
+                                    <div class="feedback-list__item-link-wrapper">
+                                        <h3 class="feedback-list__item-title">Написать</h3>
+                                        <a
+                                            class="feedback-list__item-link"
+                                            href="mailto:info@front-web.com"
+                                            aria-label="Написать мне на почту info@front-web.com">
+                                            info@front-web.com
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="feedback__form feedback-form">
+                            <ul class="feedback-form__list form-list">
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">Имя</label>
+                                    <input class="form-list__item-input input" type="text" name="name" />
+                                </li>
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">E-mail</label>
+                                    <input class="form-list__item-input input" type="text" name="email" />
+                                </li>
+                                <li class="form-list__item">
+                                    <label class="form-list__item-label">Сообщение</label>
+                                    <textarea class="form-list__item-textarea textarea" name="message"></textarea>
+                                </li>
+                            </ul>
+                            <button class="feedback-form__btn button-invert">Отправить</button>
+                        </form>
+                    </div>
                 </div>
             </section>
             <!-- FORM-CALLBACK -->
@@ -379,7 +461,7 @@
             </div>
         </main>
         <!-- FOOTER -->
-        <footer class="home-page__footer footer">
+        <footer class="footer">
             <div class="footer__container container">
                 <div class="footer__content-wrapper">
                     <a class="footer__logo logo" href="/">
@@ -448,6 +530,7 @@
                     </small>
                 </div>
             </div>
+            <div class="footer__bg-img"></div>
         </footer>
         <!-- SCROLL-TOP -->
         <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
@@ -473,6 +556,6 @@
             </div>
         </article>
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/jquery-3.7.1.min.js"></script>
+        <script src="/app/js/libs/min/jquery-3.7.1.min.js"></script>
     </body>
 </html>

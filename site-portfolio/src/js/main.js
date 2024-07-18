@@ -3,13 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const removeFocus = () => {
     const arrBtn = document.querySelectorAll('button');
     const arrLink = document.querySelectorAll('a');
+    const arrElements = [...arrBtn, ...arrLink];
 
-    arrBtn.forEach(ev => {
-      ev.addEventListener('mousedown', el => el.preventDefault());
-      ev.addEventListener('mouseup', el => el.preventDefault());
-    });
-
-    arrLink.forEach(ev => {
+    arrElements.forEach(ev => {
       ev.addEventListener('mousedown', el => el.preventDefault());
       ev.addEventListener('mouseup', el => el.preventDefault());
     });
@@ -175,6 +171,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cookiesHidden();
 
+  // СЛАЙДЕР НА СТРАНИЦЕ "ПОРТФОЛИО"
+  const portfolioSlider = () => {
+    if (!document.getElementById('portfolio-slider')) return;
+
+    const swiper = new Swiper('#portfolio-slider', {
+      spaceBetween: 80,
+      slidesPerView: 1,
+      onlyExternal: false,
+      grabCursor: true,
+      speed: 500,
+      slideActiveClass: 'portfolio-slider__slide_active',
+      // navigation: {
+      //   lockClass: 'slider-navigation__btn_lock',
+      //   disabledClass: 'slider-navigation__btn_disable',
+      //   nextEl: '#certificates-btn-next',
+      //   prevEl: '#certificates-btn-prev',
+      // },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+      pagination: {
+        el: '#portfolio-pagination',
+        lockClass: 'portfolio-pagination__item_lock',
+        bulletClass: 'portfolio-pagination__item',
+        bulletActiveClass: 'portfolio-pagination__item_active',
+        clickable: true,
+      },
+      breakpoints: {
+        32: {
+          spaceBetween: 20,
+        },
+        767: {
+          spaceBetween: 80,
+        },
+      },
+    });
+  };
+
+  portfolioSlider();
+
   // СЛАЙДЕР НА СТРАНИЦЕ "СЕРТИФИКАТЫ"
   const certificatesSlider = () => {
     if (!document.getElementById('certificates-slider')) return;
@@ -199,6 +236,10 @@ document.addEventListener('DOMContentLoaded', () => {
         el: '#certificates-pagination',
         lockClass: 'slider-navigation__pagination_lock',
         type: 'fraction',
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
       },
       breakpoints: {
         32: {
