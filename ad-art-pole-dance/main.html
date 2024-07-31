@@ -23,8 +23,15 @@
     </head>
 
     <body>
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
         <!-- HEADER -->
-        <header id="header" class="home-page__header header">
+        <header id="header" class="header">
             <div class="header__container container">
                 <div class="header__content-left">
                     <a href="/" aria-label="Перейти на главную страницу" class="header__logo logo">
@@ -32,8 +39,7 @@
                             class="logo__img"
                             src="/app/img/logo.svg"
                             alt="Логотип Advanced art pole dance"
-                            title="Логотип Advanced art pole dance"
-                        />
+                            title="Логотип Advanced art pole dance" />
                     </a>
                     <address class="header__address">Новороссийск, ул. Луначарского, 21/1</address>
                 </div>
@@ -44,8 +50,7 @@
                                 href="https://vk.com/"
                                 class="social-list__link link-icon"
                                 target="_blank"
-                                aria-label="Перейти на страницу в Вконтакте"
-                            >
+                                aria-label="Перейти на страницу в Вконтакте">
                                 <svg class="social-list__icon link-icon__item">
                                     <use xlink:href="/app/img/icons/icons.svg#vk"></use>
                                 </svg>
@@ -56,8 +61,7 @@
                                 href="https://www.instagram.com/"
                                 class="social-list__link link-icon"
                                 target="_blank"
-                                aria-label="Перейти на страницу в Instagram"
-                            >
+                                aria-label="Перейти на страницу в Instagram">
                                 <svg class="social-list__icon link-icon__item">
                                     <use xlink:href="/app/img/icons/icons.svg#inst"></use>
                                 </svg>
@@ -68,8 +72,7 @@
                                 href="https://wa.me/+79186400782"
                                 class="social-list__link link-icon"
                                 target="_blank"
-                                aria-label="Связаться в WhatsApp"
-                            >
+                                aria-label="Связаться в WhatsApp">
                                 <svg class="social-list__icon link-icon__item">
                                     <use xlink:href="/app/img/icons/icons.svg#wa"></use>
                                 </svg>
@@ -77,11 +80,7 @@
                         </li>
                     </ul>
                     <a href="tel:+79186400782" class="header__phone link">+7 (918) 640-07-82</a>
-                    <button
-                        id="open-menu"
-                        aria-label="Открыть меню"
-                        class="header__menu-toggle menu-toggle"
-                    >
+                    <button id="open-menu" aria-label="Открыть меню" class="header__menu-toggle menu-toggle">
                         <span class="menu-toggle__item"></span>
                         <span class="menu-toggle__item"></span>
                         <span class="menu-toggle__item"></span>
@@ -93,9 +92,7 @@
                             <a href="/" class="header__menu-list-link"> Главная </a>
                         </li>
                         <li class="header__menu-list-item">
-                            <a href="./directions.html" class="header__menu-list-link">
-                                Направления
-                            </a>
+                            <a href="./directions.html" class="header__menu-list-link"> Направления </a>
                         </li>
                         <li class="header__menu-list-item">
                             <a href="./coach.html" class="header__menu-list-link"> Тренеры </a>
@@ -104,9 +101,7 @@
                             <a href="./reviews.html" class="header__menu-list-link"> Отзывы </a>
                         </li>
                         <li class="header__menu-list-item">
-                            <a href="./development.html" class="header__menu-list-link">
-                                Развитие
-                            </a>
+                            <a href="./development.html" class="header__menu-list-link"> Развитие </a>
                         </li>
                         <li class="header__menu-list-item">
                             <a href="./contacts.html" class="header__menu-list-link"> Контакты </a>
@@ -153,8 +148,7 @@
                                 href="https://vk.com/"
                                 target="_blank"
                                 class="list-link__link"
-                                aria-label="Перейти на страницу в Вконтакте"
-                            >
+                                aria-label="Перейти на страницу в Вконтакте">
                                 <svg class="list-link__icon list-link__icon_wa">
                                     <use xlink:href="/app/img/icons/icons.svg#vk"></use>
                                 </svg>
@@ -166,8 +160,7 @@
                                 target="_blank"
                                 href="https://www.instagram.com/"
                                 class="list-link__link"
-                                aria-label="Перейти на страницу в Instagram"
-                            >
+                                aria-label="Перейти на страницу в Instagram">
                                 <svg class="list-link__icon list-link__icon_tg">
                                     <use xlink:href="/app/img/icons/icons.svg#inst"></use>
                                 </svg>
@@ -179,8 +172,7 @@
                                 target="_blank"
                                 class="list-link__link"
                                 href="https://wa.me/+79186400782"
-                                aria-label="Связаться в WhatsApp"
-                            >
+                                aria-label="Связаться в WhatsApp">
                                 <svg class="list-link__icon list-link__icon_tg">
                                     <use xlink:href="/app/img/icons/icons.svg#wa"></use>
                                 </svg>
@@ -191,15 +183,10 @@
                             <svg class="list-link__icon">
                                 <use xlink:href="/app/img/icons/icons.svg#mark"></use>
                             </svg>
-                            <address class="list-link__descr">
-                                г. Новороссийск, ул. Луначарского, 21/1
-                            </address>
+                            <address class="list-link__descr">г. Новороссийск, ул. Луначарского, 21/1</address>
                         </li>
                         <li class="list-link__item">
-                            <button
-                                data-open="form-callback"
-                                class="list-link__btn button js-open-modal"
-                            >
+                            <button data-open="form-callback" class="list-link__btn button js-open-modal">
                                 <span class="button__text"> Записаться </span>
                             </button>
                         </li>
@@ -221,39 +208,34 @@
                         <h1 class="content__title h-1">Пользовательское соглашение</h1>
                         <div class="content__text-default text-default">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-                                facere consequuntur fuga dolor dolorum, earum quod repellat ipsum
-                                harum, voluptatum sed eveniet perspiciatis at omnis id delectus
-                                necessitatibus quisquam voluptates?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere consequuntur
+                                fuga dolor dolorum, earum quod repellat ipsum harum, voluptatum sed eveniet perspiciatis
+                                at omnis id delectus necessitatibus quisquam voluptates?
                             </p>
                             <p>
                                 Fuga mollitia recusandae asperiores,
-                                <a href="#">qui tenetur</a> sint sapiente culpa quis? Laborum
-                                recusandae et porro optio amet dolorum labore vero incidunt cum
-                                repellat ea nemo alias vitae eveniet voluptates, eos ipsum!
-                                Consequatur recusandae cumque alias a nam, ab reiciendis quisquam
-                                incidunt, adipisci consequuntur
+                                <a href="#">qui tenetur</a> sint sapiente culpa quis? Laborum recusandae et porro optio
+                                amet dolorum labore vero incidunt cum repellat ea nemo alias vitae eveniet voluptates,
+                                eos ipsum! Consequatur recusandae cumque alias a nam, ab reiciendis quisquam incidunt,
+                                adipisci consequuntur
                             </p>
                             <blockquote>
                                 <p>
-                                    illum expedita <a href="#">blanditiis</a> accusamus debitis
-                                    inventore ex iure possimus, atque fugit! Natus praesentium
-                                    ullam, repudiandae culpa accusantium corporis! Culpa
-                                    exercitationem fugit beatae molestias ratione maxime laudantium
-                                    harum asperiores illo perferendis dolorem reprehenderit, eos
-                                    necessitatibus, provident delectus molestiae atque eius nobis?
-                                    Commodi temporibus sequi consequuntur excepturi enim recusandae
-                                    ducimus!
+                                    illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure
+                                    possimus, atque fugit! Natus praesentium ullam, repudiandae culpa accusantium
+                                    corporis! Culpa exercitationem fugit beatae molestias ratione maxime laudantium
+                                    harum asperiores illo perferendis dolorem reprehenderit, eos necessitatibus,
+                                    provident delectus molestiae atque eius nobis? Commodi temporibus sequi consequuntur
+                                    excepturi enim recusandae ducimus!
                                 </p>
                             </blockquote>
                             <p>
-                                illum expedita <a href="#">blanditiis</a> accusamus debitis
-                                inventore ex iure possimus, atque fugit! Natus praesentium ullam,
-                                repudiandae culpa accusantium corporis! Culpa exercitationem fugit
-                                beatae molestias ratione maxime laudantium harum asperiores illo
-                                perferendis dolorem reprehenderit, eos necessitatibus, provident
-                                delectus molestiae atque eius nobis? Commodi temporibus sequi
-                                consequuntur excepturi enim recusandae ducimus!
+                                illum expedita <a href="#">blanditiis</a> accusamus debitis inventore ex iure possimus,
+                                atque fugit! Natus praesentium ullam, repudiandae culpa accusantium corporis! Culpa
+                                exercitationem fugit beatae molestias ratione maxime laudantium harum asperiores illo
+                                perferendis dolorem reprehenderit, eos necessitatibus, provident delectus molestiae
+                                atque eius nobis? Commodi temporibus sequi consequuntur excepturi enim recusandae
+                                ducimus!
                             </p>
                             <ul>
                                 <li>Point 1</li>
@@ -264,10 +246,9 @@
                             </ul>
                             <h2>Heading 2</h2>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa
-                                dignissimos quae! Corrupti, nam fugit. Accusamus consequatur, hic
-                                voluptatibus cumque cupiditate nulla praesentium quas qui ab
-                                corrupti! Dolorum, deleniti debitis?
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
+                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
+                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
                             </p>
                             <ol>
                                 <li>Point 1</li>
@@ -278,126 +259,88 @@
                             </ol>
                             <h3>Heading 3</h3>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa
-                                dignissimos quae! Corrupti, nam fugit. Accusamus consequatur, hic
-                                voluptatibus cumque cupiditate nulla praesentium quas qui ab
-                                corrupti! Dolorum, deleniti debitis?
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
+                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
+                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
                             </p>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa
-                                dignissimos quae! Corrupti, nam fugit. Accusamus consequatur, hic
-                                voluptatibus cumque cupiditate nulla praesentium quas qui ab
-                                corrupti! Dolorum, deleniti debitis?
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos quae!
+                                Corrupti, nam fugit. Accusamus consequatur, hic voluptatibus cumque cupiditate nulla
+                                praesentium quas qui ab corrupti! Dolorum, deleniti debitis?
                             </p>
                             <div class="text-default__gallery-warapper gallery-wrapper">
                                 <h2 class="gallery-wrapper__title h-2">Фотогалерея</h2>
                                 <ul class="gallery-wrapper__gallery gallery">
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-1.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-1.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-1.jpg"
-                                                alt="img-1"
-                                            />
+                                                alt="img-1" />
                                         </a>
                                     </li>
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-2.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-2.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-2.jpg"
-                                                alt="img-2"
-                                            />
+                                                alt="img-2" />
                                         </a>
                                     </li>
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-3.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-3.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-3.jpg"
-                                                alt="img-3"
-                                            />
+                                                alt="img-3" />
                                         </a>
                                     </li>
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-4.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-4.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-4.jpg"
-                                                alt="img-4"
-                                            />
+                                                alt="img-4" />
                                         </a>
                                     </li>
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-5.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-5.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-5.jpg"
-                                                alt="img-5"
-                                            />
+                                                alt="img-5" />
                                         </a>
                                     </li>
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-6.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-6.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-6.jpg"
-                                                alt="img-6"
-                                            />
+                                                alt="img-6" />
                                         </a>
                                     </li>
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-7.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-7.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-7.jpg"
-                                                alt="img-7"
-                                            />
+                                                alt="img-7" />
                                         </a>
                                     </li>
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-8.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-8.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-8.jpg"
-                                                alt="img-8"
-                                            />
+                                                alt="img-8" />
                                         </a>
                                     </li>
                                     <li class="gallery__item">
-                                        <a
-                                            class="gallery__link"
-                                            href="./app/img/gallery-inner/img-9.jpg"
-                                        >
+                                        <a class="gallery__link" href="./app/img/gallery-inner/img-9.jpg">
                                             <img
                                                 class="gallery__img"
                                                 src="./app/img/gallery-inner/img-9.jpg"
-                                                alt="img-9"
-                                            />
+                                                alt="img-9" />
                                         </a>
                                     </li>
                                 </ul>
@@ -406,63 +349,13 @@
                     </div>
                 </div>
             </section>
-            <!-- FORM-CALLBACK -->
-            <div class="modal form-callback" id="form-callback">
-                <div class="form-callback__box modal-box">
-                    <button
-                        aria-label="Закрыть окно обратной связи"
-                        class="form-callback__close-btn modal-close js-close-modal"
-                    ></button>
-                    <p class="form-callback__title modal-title">
-                        <span class="modal-title__color color">Связаться</span> с нами
-                    </p>
-
-                    <form action="/" class="form form-mod">
-                        <div class="form-mod__wrap-input wrap-input">
-                            <input class="wrap-input__input input" type="text" placeholder="Имя*" />
-                            <input
-                                class="wrap-input__input input"
-                                type="text"
-                                placeholder="Email*"
-                            />
-                            <label class="wrap-input__item form-note">
-                                <input class="form-note__input" type="checkbox" checked />
-                                <span class="form-note__checkbox"></span>
-                                <span class="form-note__text">
-                                    Даю согласие на&nbsp;обработку персональных данных
-                                </span>
-                            </label>
-                        </div>
-                        <button
-                            aria-label="Отправить заявку"
-                            type="submit"
-                            class="form-mod__btn button js-btn-submit"
-                        >
-                            Отправить
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <!-- FORM-SUCCESS -->
-            <div class="modal form-success" id="form-success">
-                <div class="form-success__box modal-box">
-                    <button
-                        aria-label="Закрыть окно обратной связи"
-                        class="form-success__close-btn modal-close js-close-modal"
-                    ></button>
-                    <div class="form-success">
-                        <p class="form-success__descr">Спасибо!</p>
-                        <p class="form-success__descr last">Ваши данные были отправлены.</p>
-                    </div>
-                </div>
-            </div>
         </main>
         <!-- FOOTER -->
         <footer class="footer">
             <div class="footer__container container">
                 <ul class="footer__list">
                     <li class="footer__list-item">
-                        <a href="./main.html" class="footer__list-link link" target="_blank">
+                        <a href="./main.html" class="footer__list-link link-rev" target="_blank">
                             Пользовательское соглашение
                         </a>
                     </li>
@@ -470,14 +363,13 @@
                     <li class="footer__list-item">
                         <a
                             href="https://web2.agency/"
-                            class="footer__list-link link"
+                            class="footer__list-link link-rev"
                             target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <svg class="link__icon">
+                            aria-label="Перейти на страница разработки сайтов WEB2">
+                            <svg class="link-rev__icon">
                                 <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
                             </svg>
-                            <span class="link__text"> Создание сайтов </span>
+                            <span class="link-rev__text"> Создание сайтов </span>
                         </a>
                     </li>
                 </ul>
@@ -490,8 +382,7 @@
                     aria-label="Ссылка на Telegram"
                     target="_blank"
                     href="https://t.me/+79528150000"
-                    class="social-panel__link"
-                >
+                    class="social-panel__link">
                     <svg class="social-panel__icon">
                         <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                     </svg>
@@ -502,8 +393,7 @@
                     aria-label="Перейти на страницу в Instagram"
                     target="_blank"
                     href="https://t.me/+79528150000"
-                    class="social-panel__link"
-                >
+                    class="social-panel__link">
                     <svg class="social-panel__icon">
                         <use xlink:href="/app/img/icons/icons.svg#inst"></use>
                     </svg>
@@ -514,8 +404,7 @@
                     aria-label="Ссылка на WhatsApp"
                     target="_blank"
                     href="https://wa.me/+79528150000"
-                    class="social-panel__link"
-                >
+                    class="social-panel__link">
                     <svg class="social-panel__icon social-panel__icon_wa">
                         <use xlink:href="/app/img/icons/icons.svg#wa"></use>
                     </svg>

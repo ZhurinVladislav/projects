@@ -1,8 +1,20 @@
+.home-page
+  .header
+    position: absolute
+    top: 0
+    z-index: 100
+    margin-bottom: 0
+    background-color: $clr_0
+    backdrop-filter: none
+
 .header
   position: relative
   z-index: 100
   width: 100%
-  margin-bottom: 62px
+  margin-bottom: 40px
+  color: $clr_1
+  background-color: rgba($clr_2, .7)
+  backdrop-filter: blur(6px)
   transition: max-height .2s linear
 
   +sm
@@ -11,26 +23,22 @@
 
   &.header_active
     position: fixed
-    padding-bottom: 0
-    animation-name: fadeInUp
-    animation-duration: 1s
     z-index: 500
+    animation-name: fadeInUp
+    background-color: rgba($clr_2, .7)
+    backdrop-filter: blur(6px)
+    box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+    animation-duration: 1s
 
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background-color: rgba($clr_1, .7)
-      backdrop-filter: blur(6px)
+    .header__container
+      padding-top: 20px
+      padding-bottom: 20px
 
   &__container
     display: flex
     justify-content: space-between
-    padding-top: 5px
-    padding-bottom: 5px
+    padding-top: 32px
+    padding-bottom: 32px
 
   &__content-left
     display: flex
@@ -39,17 +47,21 @@
   &__logo
     display: flex
     align-items: center
-    margin-right: 40px
-    max-width: 158px
-    min-height: 89px
+    margin-right: 42px
+    max-width: 300px
+    min-height: 48px
+
+    +sm
+      max-width: 260px
 
     +ph
-      max-width: 120px
+      max-width: 200px
       min-height: auto
-      height: 60px
 
   &__address
-    max-width: 204px
+    max-width: 180px
+    line-height: 140%
+    text-transform: none
 
     +ph
       display: none
@@ -60,7 +72,7 @@
     justify-content: center
 
   .social-list
-    margin-right: 40px
+    margin-right: 28px
 
     +sm
       display: none
@@ -69,8 +81,25 @@
       &:not(:last-child)
         margin-right: 20px
 
+    .link-icon
+      &__item
+        fill: $clr_1
+
+        &:hover
+          +hover
+            fill: $clr_3
+
   &__phone
     margin-right: 40px
+    font-weight: 350
+    font-size: 16px
+    line-height: 140%
+    color: $clr_1
+    border-bottom: $clr_0
+
+    &:hover
+      +hover
+        color: $clr_3
 
     +ph
       display: none
@@ -100,7 +129,7 @@
       width: 100%
       height: 2px
       border-radius: 5px
-      background-color: $clr_2
+      background-color: $clr_1
       transform: rotate(0) translate(0, 0)
       transition: all .2s linear
 
@@ -130,7 +159,7 @@
         background-color: $clr_1
 
         +sm
-          background-color: $clr_2
+          background-color: $clr_1
 
         &:nth-child(1)
           transform: rotate(45deg) translate(-50%, -50%)
@@ -151,24 +180,20 @@
 
   &__menu
     position: absolute
-    top: 15px
+    top: 50%
     right: 0
-    max-width: 0
+    max-width: max-content
     width: 100%
     visibility: hidden
     opacity: 0
-    transform: translateX(50px)
+    transform: translateY(-50%)
     transition: max-width .4s linear, opacity .3s linear, transform .4s linear, visibility .3s linear
-
-    +lr
-      top: 23px
 
     +sm
       display: none
 
     &.active
       opacity: 1
-      transform: translateX(0)
       visibility: visible
 
   &__menu-list
@@ -180,14 +205,12 @@
     line-height: 0.9
     color: $clr_1
     text-transform: uppercase
-    border-radius: 20px
-    background-color: $clr_3
-    box-shadow: 1px 8px 17px 0px rgba(0, 0, 0, 0.05), 3px 31px 31px 0px rgba(0, 0, 0, 0.04), 8px 70px 42px 0px rgba(0, 0, 0, 0.02), 13px 124px 50px 0px rgba(0, 0, 0, 0.01), 21px 194px 55px 0px rgba(0, 0, 0, 0.00)
+    background-color: $clr_5
+    box-shadow: 1px 8px 17px 0 rgba(0, 0, 0, 0.05), 3px 31px 31px 0 rgba(0, 0, 0, 0.04), 8px 70px 42px 0 rgba(0, 0, 0, 0.02), 13px 124px 50px 0 rgba(0, 0, 0, 0.01), 21px 194px 55px 0 rgba(0, 0, 0, 0)
 
     +lr
       min-height: 64px
       font-size: 16px
-    
 
   &__menu-list-item
     display: flex
@@ -205,12 +228,12 @@
     width: 100%
     height: 100%
     white-space: nowrap
-    border-radius: 15px
-    transition: background-color .2s linear
+    transition: background-color .2s linear, color .2s linear
 
     +lr
       padding: 20px 25px
 
     &:hover
       +hover
-        background-color: rgba($clr_1, .3)
+        color: $clr_2
+        background-color: $clr_1
