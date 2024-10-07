@@ -1,0 +1,95 @@
+.advantages
+	&__list-wrap
+		+ph
+			display: block
+			padding-bottom: 10px
+			max-width: 100%
+			width: 100%
+			overflow-x: auto
+
+		&::-webkit-scrollbar
+			height: 4px
+			background-color: $clr_1
+
+		&::-webkit-scrollbar-thumb
+			background-color: $clr_2
+
+	&__list
+		display: flex
+		justify-content: space-between
+		gap: 24px
+		color: $clr_1
+		+ph
+			max-width: 767px
+			width: 767px
+			gap: 10px
+
+.advantages-item
+	position: relative
+	display: flex
+	max-width: 15%
+	width: 100%
+	min-height: 500px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.11), 0 21px 21px 0 rgba(0, 0, 0, 0.1), 0 46px 28px 0 rgba(0, 0, 0, 0.06), 0 82px 33px 0 rgba(0, 0, 0, 0.02), 0 129px 36px 0 rgba(0, 0, 0, 0)
+	overflow: hidden
+	cursor: pointer
+	transition: max-width .4s linear
+	+ph
+		display: inline-block
+		max-width: 150px
+		width: 150px
+		min-height: 300px
+		box-shadow: none
+	
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(180deg, rgba(32, 32, 32, 0) 3%, #202020 100%)
+		opacity: 0
+		transition: opacity .2s linear
+
+	&.active
+		max-width: 50%
+		+ph
+			max-width: 300px
+			width: 300px
+
+		&::after
+			opacity: 1
+
+		.advantages-item__content
+			opacity: 1
+			visibility: visible
+			transition: opacity .2s linear, visibility .2s linear
+			+lr
+				transform: translateY(0)
+				transition: opacity .2s linear .4s, visibility .2s linear .4s, transform .2s linear .4s
+
+	&__content
+		position: absolute
+		bottom: 24px
+		left: 24px
+		z-index: 1
+		padding-right: 24px
+		width: 564px
+		opacity: 0
+		visibility: hidden
+		+lr
+			width: 90%
+			transform: translateY(10px)
+		+ph
+			bottom: 12px
+			left: 12px
+			line-height: 140%
+			font-size: 12px
+
+	&__title
+		font-size: 20px

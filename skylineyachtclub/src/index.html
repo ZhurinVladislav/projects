@@ -8,21 +8,19 @@
         <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg" />
         <!-- SEO -->
         <title>Аренда яхты в Геленджике</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
         <!-- STYLES -->
-        <link rel="stylesheet" href="/app/css/main.min.css" />
+        <link rel="stylesheet" href="./app/css/main.min.css" />
         <!-- SCRIPTS -->
-        <script src="/app/js/libs/preloader.js"></script>
-        <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
-        <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
-        <script src="/app/js/libs/webp.js" defer></script>
-        <script src="/app/js/libs/modal-window.js" defer></script>
-        <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
-        <script src="/app/js/main.min.js" defer></script>
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/lightgallery-all.min.js" defer></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/libs/min/lazy-load.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
     </head>
 
-    <body class="home-page">
+    <body class="home-page" data-image="./app/img/common/pattern.svg">
         <div id="preloader" class="home-page__preloader preloader">
             <ul class="preloader__icon-wrapper">
                 <li class="preloader__list-item"></li>
@@ -228,7 +226,7 @@
         <!-- MAIN -->
         <main class="home-page__main main-section">
             <!-- HERO -->
-            <section id="home-hero" class="main-section__hero hero">
+            <section id="home-hero" class="main-section__hero hero" data-image="./app/img/hero/bg-img.jpg">
                 <div class="hero__container container">
                     <div class="hero__content-wrapper">
                         <h1 class="hero__title h-1">Аренда яхты в&nbsp;Геленджике</h1>
@@ -727,7 +725,7 @@
                 </div>
             </section>
             <!-- CHOICE -->
-            <section class="main-section__choice choice section-reset">
+            <section class="main-section__choice choice section-reset" data-image="./app/img/common/pattern-invert.svg">
                 <div class="choice__container container">
                     <div class="choice__content-wrapper">
                         <h2 class="choice__title h-2">Почему выбирают нас</h2>
@@ -866,7 +864,7 @@
                                 class="services-list__link"
                                 href="/"
                                 aria-label="Перейти на страницу"
-                                style="background-image: url(./app/img/services/img-3.jpg);">
+                                data-image="./app/img/services/img-3.jpg">
                                 <div class="services-list__text-wrapper">
                                     <p class="services-list__text services-list__text_hidden">Рыбалка</p>
                                     <p class="services-list__text services-list__text_active">Рыбалка</p>
@@ -931,8 +929,71 @@
                     </div>
                 </div>
             </section>
+            <!-- BLOG-MAIN -->
+            <section class="main-section__blog-main blog-main section-reset">
+                <div class="blog-main__container container">
+                    <h2 class="blog-main__title-hidden h-0">Интересные статьи Яхт-клуба Skyline</h2>
+                    <h3 class="blog-main__title h-2">Интересные статьи</h3>
+                    <ul class="blog-main__list blog-main-list">
+                        <li class="blog-main-list__item">
+                            <a
+                                class="blog-main-list__link"
+                                href="/"
+                                aria-label="Перейти на страницу"
+                                style="background-image: url(./app/img/services/img-1.jpg);">
+                                <div class="blog-main-list__text-wrapper">
+                                    <p class="blog-main-list__text blog-main-list__text_hidden">Мальчишник, девичник</p>
+                                    <p class="blog-main-list__text blog-main-list__text_active">Мальчишник, девичник</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-main-list__item">
+                            <a
+                                class="blog-main-list__link"
+                                href="/"
+                                aria-label="Перейти на страницу"
+                                style="background-image: url(./app/img/services/img-2.jpg);">
+                                <div class="blog-main-list__text-wrapper">
+                                    <p class="blog-main-list__text blog-main-list__text_hidden">Романтический вечер</p>
+                                    <p class="blog-main-list__text blog-main-list__text_active">Романтический вечер</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-main-list__item">
+                            <a
+                                class="blog-main-list__link"
+                                href="/"
+                                aria-label="Перейти на страницу"
+                                style="background-image: url(./app/img/services/img-3.jpg);">
+                                <div class="blog-main-list__text-wrapper">
+                                    <p class="blog-main-list__text blog-main-list__text_hidden">Рыбалка</p>
+                                    <p class="blog-main-list__text blog-main-list__text_active">Рыбалка</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-main-list__item">
+                            <a
+                                class="blog-main-list__link"
+                                href="/"
+                                aria-label="Перейти на страницу"
+                                style="background-image: url(./app/img/services/img-4.jpg);">
+                                <div class="blog-main-list__text-wrapper">
+                                    <p class="blog-main-list__text blog-main-list__text_hidden">Дайвинг</p>
+                                    <p class="blog-main-list__text blog-main-list__text_active">Дайвинг</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="blog-main__link button-invert" href="/" aria-label="Перейти на страницу статей">
+                        <span class="button-invert__text">Читать больше</span>
+                        <svg class="button-invert__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </section>
             <!-- FEEDBACK -->
-            <section class="main-section__feedback feedback">
+            <section class="main-section__feedback feedback" data-image="./app/img/common/pattern-invert.svg">
                 <div class="feedback__container">
                     <div class="feedback__content-wrapper">
                         <div class="feedback__map-wrapper">
@@ -990,7 +1051,7 @@
             </section>
             <!-- FORM-CALLBACK -->
             <div class="modal form-callback" id="form-callback">
-                <div class="form-callback__box modal-box">
+                <div class="form-callback__box modal-box" data-image="./app/img/common/pattern-invert.svg">
                     <button
                         aria-label="Закрыть окно обратной связи"
                         class="form-callback__close-btn modal-close js-close-modal"></button>

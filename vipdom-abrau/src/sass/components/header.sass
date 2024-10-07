@@ -1,0 +1,146 @@
+.header
+  position: fixed
+  z-index: 1000
+    
+  &.header_active
+    position: fixed
+    z-index: 500
+    animation-name: fadeInUp
+    max-height: 104px
+    box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+    // animation-duration: 1s
+    +md
+      max-height: 122px
+    +sm
+      max-height: 100%
+
+    &:hover
+      +hover
+        max-height: 100%
+
+        .header-menu
+          max-height: 56px
+          opacity: 1
+          transform: translateY(0)
+
+    .header-menu
+      padding-top: 0
+      max-height: 0
+      opacity: 0
+      transform: translateY(-20px)
+
+  &__menu-container
+    +ph
+      padding: 0
+
+.header-top
+  padding: 20px 0
+  color: $clr_1
+  background-color: $clr_2
+  transition: margin .2s linear, padding-top .2s linear
+  +ph
+    gap: 0 12px
+    padding-top: 12px
+
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 20px
+    +ph
+      justify-content: flex-start
+      flex-wrap: wrap
+      gap: 20px 10px
+
+  &__logo-wrap
+    display: none
+    width: 100%
+    +ph
+      display: flex
+
+  &__logo
+    max-width: 231px
+    max-height: 20px
+    +ph
+      max-width: 190px
+    &_ph
+      +ph
+        display: none
+
+.header-list-links
+  display: flex
+  align-items: center
+  gap: 10px 16px
+  flex-wrap: wrap
+  +ph
+    justify-content: flex-start
+    gap: 10px
+    font-size: 12px
+
+  &__item
+    &:first-child
+      margin-right: 28px
+      +md
+        margin-right: 0
+
+.header-feedback
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  flex-wrap: wrap
+  gap: 10px 40px
+
+  &__item
+    &:last-child
+      +ph
+        display: none
+
+  &__item-btn
+    +ph
+      display: none
+
+.header-menu
+  display: flex
+  align-items: center
+  justify-content: center
+  color: $clr_1
+  transition: transform .2s linear, max-height .2s linear
+  +ph
+    display: block
+    max-width: 100%
+    width: 100%
+    overflow-x: auto
+
+  &::-webkit-scrollbar
+    height: 4px
+    background-color: $clr_1
+
+  &::-webkit-scrollbar-thumb
+    background-color: $clr_2
+
+  &__list
+    display: flex
+    align-items: center
+    border-bottom: 1px solid rgba($clr_2, .4)
+
+  &__list-link
+    display: flex
+    align-items: center
+    padding: 16px 20px
+    width: 100%
+    min-height: 48px
+    height: 100%
+    border-bottom: 2px solid $clr_0
+    transition: transform .2s linear, border-color .2s linear
+    +ph
+      display: inline-block
+      padding: 8px 10px
+      width: max-content
+      min-height: auto
+    &:hover
+      +hover
+        border-color: $clr_2
+    &:focus:not(:active)
+      border-color: $clr_3
+    &:active
+      transform: scale(.98)

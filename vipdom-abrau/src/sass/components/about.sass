@@ -1,0 +1,39 @@
+.about
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		gap: 168px
+		padding-top: 40px
+		padding-bottom: 40px
+		+sm
+			gap: 100px
+		+ph
+			gap: 40px
+
+	&__content-top
+		max-width: 450px
+
+	&__content-bottom
+		align-items: flex-end
+		margin-left: auto
+		max-width: 895px
+		text-align: end
+
+		.about-content__text
+			max-width: 566px
+
+.about-content
+	display: flex
+	flex-direction: column
+	width: 100%
+	color: $clr_1
+
+	&__text
+		p
+			&:not(:last-child)
+				margin-bottom: 15px
+
+	&__btn
+		margin-top: 24px
+		color: $clr_1
+		border-color: $clr_1

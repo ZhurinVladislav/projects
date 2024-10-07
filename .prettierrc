@@ -15,7 +15,6 @@
         "tabWidth": 4,
         "singleAttributePerLine": false,
         "embeddedLanguageFormatting": "off",
-        "printWidth": 120,
         "bracketSameLine": true,
         "jsxBracketSameLine": true
       }

@@ -1,0 +1,38 @@
+.clients
+	position: relative
+	display: flex
+	flex-direction: column
+	padding-top: 110px
+	padding-bottom: 124px
+
+	+ph
+		padding-top: 80px
+		padding-bottom: 80px
+	&__bg-img
+		position: absolute
+		top: 0
+		right: 0
+		z-index: -1
+		width: 1041px
+		height: 519px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		+ph
+			width: 744px
+			height: 404px
+
+	&__container
+		position: static
+
+.clients-swiper
+	// max-width: 357px
+	
+	&__slide
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: 142px
+
+	&__slide-img
+		object-fit: contain

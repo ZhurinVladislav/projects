@@ -1,0 +1,55 @@
+.price
+	color: $clr_1
+	text-align: center
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__title
+		margin-bottom: 8px
+
+	&__subtitle
+		margin-bottom: 40px
+		font-size: 14px
+		line-height: 110%
+		letter-spacing: .04em
+		text-transform: uppercase
+		text-align: center
+
+	&__text
+		margin-bottom: 24px
+		max-width: 574px
+
+	&__link
+		margin-bottom: 24px
+
+	.link-text-inv
+		&:hover
+			+hover
+				color: $clr_2
+
+			.link-text-inv__icon
+				fill: $clr_2
+
+		&:focus-visible:not(:active),
+		&:focus:not(:active)
+			background-color: rgba($clr_2, .4)
+
+.price-summa
+	margin-bottom: 40px
+	&__text
+		&_main
+			margin-bottom: 12px
+			font-weight: 600
+			font-size: 32px
+			line-height: 110%
+
+.price-feedback
+	&__text
+		margin-bottom: 8px
+
+	&__list
+		display: flex
+		gap: 24px

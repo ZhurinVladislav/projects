@@ -1,0 +1,89 @@
+.hero
+	&__container
+		display: flex
+		flex-direction: column
+		gap: 4px
+	
+	&__content
+		position: relative
+		display: flex
+		flex-direction: column
+		padding: 40px
+		max-width: 100%
+		width: 100%
+		color: $clr_1
+		border-radius: 20px
+		background-color: $clr_3
+		+sm
+			padding: 30px
+		+ph
+			padding: 20px
+			border-radius: 10px
+
+	&__bg-img
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 0
+		max-width: 448px
+		width: 100%
+		height: 100%
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+
+	&__subtitle
+		z-index: 1
+		font-weight: 400
+		font-size: 30px
+		text-transform: uppercase
+		+sm
+			font-size: 25px
+		+ph
+			font-size: 20px
+		
+	&__btn
+		z-index: 1
+
+	&__title
+		z-index: 1
+		margin-bottom: 24px
+		max-width: 70%
+		font-size: 72px
+		color: $clr_1
+		+lr
+			font-size: 60px
+		+md
+			font-size: 50px
+		+sm
+			font-size: 45px
+		+ph
+			max-width: 100%
+			font-size: 40px
+		+xs
+			font-size: 30px
+
+	&__list
+		display: grid
+		grid-template-columns: 42% 33% 1fr
+		grid-template-rows: 341px
+		gap: 4px
+		+sm
+			grid-template-rows: 250px
+		+ph
+			grid-template-rows: 150px
+		+xs
+			grid-template-rows: 100px
+
+
+	&__list-item
+		display: flex
+		width: 100%
+		height: 100%
+		border-radius: 20px
+		background-color: $clr_3
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		+ph
+			border-radius: 10px

@@ -21,6 +21,37 @@ if (document.querySelector('.services-inner')) {
   openMenu();
 }
 
+const toggleLang = () => {
+  const toggleLangWrapper = [...Array.from(document.querySelectorAll('.js-lang-wrapper'))];
+
+  if (!toggleLangWrapper) return;
+
+  toggleLangWrapper.forEach(el => {
+    const btn = el.querySelector('.js-btn-lang-toggle');
+    const list = el.querySelector('.js-list-lang');
+
+    btn.addEventListener('click', () => {
+      if (list.style.maxHeight) {
+        list.style.maxHeight = null;
+        btn.classList.remove('active');
+      } else {
+        list.style.maxHeight = list.scrollHeight + 'px';
+        btn.classList.add('active');
+      }
+    });
+
+    window.addEventListener('keydown', ev => {
+      if (ev.key === 'Escape') {
+        if (list.style.maxHeight) {
+          list.style.maxHeight = null;
+          btn.classList.remove('active');
+        }
+      }
+    });
+  });
+};
+toggleLang();
+
 // Стрелка прокрутка на вверх
 $(function () {
   //Стрелка прокрутка на вверх

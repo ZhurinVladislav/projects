@@ -1,0 +1,152 @@
+.hero
+	position: relative
+	display: flex
+	margin-bottom: 138px
+	padding-top: 188px
+	min-height: 802px
+	+md
+		margin-bottom: 128px
+		padding-top: 120px
+		min-height: 600px
+	+sm
+		padding-top: 80px
+		min-height: 500px
+	+ph
+		margin-bottom: 80px
+		padding-top: 0
+		min-height: 400px
+
+	&__content-wrapper
+		display: flex
+		flex-direction: column
+		height: 100%
+
+	&__img-bg
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -2
+		display: flex
+		max-width: 100%
+		width: 100%
+		height: 91%
+		background-color: $clr_3
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		background-attachment: fixed
+		+ph
+			display: none
+			height: 100%
+
+		&_ph
+			display: none
+			+ph
+				display: flex
+
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba($clr_2, .6)
+
+	&__content-top
+		+ph
+			position: relative
+			margin: 0 -10px
+			margin-bottom: 20px
+			padding: 20px 10px
+
+	&__title
+		margin-bottom: 12px
+		color: $clr_1
+
+	&__subtitle
+		margin-bottom: 32px
+		font-weight: 400
+		font-size: 24px
+		line-height: 140%
+		color: $clr_1
+		+md
+			font-size: 20px
+		+sm
+			font-size: 18px
+		+ph
+			font-size: 16px
+
+	&__link-wrapper
+		display: flex
+		margin-bottom: 32px
+		gap: 14px
+		+ph
+			flex-direction: column
+			margin-bottom: 0
+
+	&__link
+		max-width: 226px
+		width: 100%
+		+ph
+			max-width: 100%
+
+	&__link-in
+		max-width: 170px
+		width: 100%
+		+ph
+			max-width: 100%
+
+.advantages-hero
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	gap: 16px
+	margin-top: auto
+	+md
+		gap: 12px
+	+ph
+		flex-wrap: wrap
+	
+	&__item
+		display: flex
+		flex-direction: column
+		width: 100%
+		gap: 12px
+		padding: 32px
+		font-weight: 600
+		font-size: 20px
+		line-height: 115%
+		border-radius: 16px
+		box-shadow: 0 10px 23px 0 rgba(13, 50, 99, 0.06), 0 42px 42px 0 rgba(13, 50, 99, 0.05), 0 94px 57px 0 rgba(13, 50, 99, 0.03), 0 167px 67px 0 rgba(13, 50, 99, 0.01), 0 262px 73px 0 rgba(13, 50, 99, 0)
+		+lr
+			padding: 20px
+			font-size: 18px
+		+md
+			padding: 15px
+			font-size: 16px
+		+sm
+			padding: 12px
+			font-size: 14px
+		+ph
+			flex-direction: row
+			align-items: center
+			gap: 10px
+
+		&_one
+			background-color: #ffecec
+		&_two
+			background-color: #f4eefd
+		&_three
+			background-color: #fff5e7
+		&_four
+			background-color: #f2f9f5
+
+	&__img
+		width: 60px
+		height: 60px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		+md
+			width: 40px
+			height: 40px

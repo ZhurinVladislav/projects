@@ -1,0 +1,1055 @@
+// ОСНОВНЫЕ СТИЛИ
+html
+  &.pre-hidden
+    padding-right: 8px
+    overflow-y: hidden !important
+
+    +lr
+      padding-right: 0
+
+  &.galleryActive
+    overflow-y: hidden !important
+    padding-right: 8px
+    +lr
+      padding-right: 0
+
+header,section,main,footer
+  width: 100%
+
+html.mod-open
+  padding-right: 8px
+  overflow-y: hidden !important
+
+  +lr
+    padding-right: 0
+
+  .header_active
+    left: -8px
+
+    +lr
+      left: 0
+
+  .scroll-top
+    right: 38px
+
+    +ph
+      right: 28px
+
+body
+  font-family: $ff_1
+  font-weight: 400
+  line-height: 150%
+  font-size: 16px
+  color: $clr_2
+  background-color: $clr_1
+  // font-variant-numeric: lining-nums
+
+  &.overflow
+    overflow-x: visible
+
+  &::-webkit-scrollbar
+    width: 8px
+    background-color: $clr_4
+
+  &::-webkit-scrollbar-thumb
+    background-color: $clr_2
+
+html.menu-open,
+body.menu-open
+  +sm
+    overflow: hidden
+
+*::selection
+  background-color: rgba($clr_2, .8)
+  color: $clr_1
+
+.section-reset
+  position: relative
+  margin-bottom: 200px
+  +sm
+    margin-bottom: 140px
+  +ph
+    margin-bottom: 80px
+
+.container
+  position: relative
+  z-index: 1
+  margin: 0 auto
+  padding-left: 25px
+  padding-right: 25px
+  max-width: $size_1
+  width: 100%
+  +ph
+    padding-left: 10px
+    padding-right: 10px
+
+// .main-section
+//   padding-top: 88px
+
+// .main_active
+//   padding-top: 154px
+//   +ph
+//     padding-top: 68px
+
+.bg-img
+  position: relative
+  background-attachment: fixed
+  background-color: $clr_2
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  &::after
+    content: ''
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($clr_2, .6)
+
+.logo
+  display: flex
+  font-size: 0
+  flex-shrink: 0
+  &_ph
+    display: none
+    +ph
+      display: flex
+
+  &__img
+    width: 100%
+    height: 100%
+    font-size: 0
+    transition: opacity .2s linear
+
+    &:hover
+      +hover
+        opacity: .7
+
+// СТИЛИ ДДЯ СЛАЙДЕРА
+.swiper-wrapper
+  box-sizing: border-box
+
+.swiper-slide
+  position: relative
+  display: flex
+  font-size: 0
+  background-color: $clr_3
+  user-select: none
+  box-sizing: border-box
+  &:hover
+    +hover
+      .swiper-img
+        transform: scale(1.1)
+
+      &::after
+        transform: translateX(0)
+        opacity: 1
+        
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    width: 100%
+    height: 100%
+    background-color: rgba($clr_2, .3)
+    opacity: 0
+    transform: translateX(-30px)
+    transition: transform .2s linear, opacity .2s linear
+
+.swiper-img
+  display: flex
+  width: 100%
+  height: 100%
+  object-fit: cover
+  font-size: 0
+  transition: transform .2s linear
+
+.swiper-button-lock
+  display: none !important
+
+.swiper-btn
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 104px
+  height: 104px
+  border-radius: 100%
+  border: 1px solid $clr_2
+  background-color: $clr_0
+  transition: opacity .2s linear, transform .2s linear
+  +sm
+    width: 80px
+    height: 80px
+
+  &:hover
+    +hover
+      opacity: .6
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    opacity: .6
+
+  &:active
+    transform: scale(.96)
+
+  &_prev
+    .swiper-btn__icon
+      transform: rotateY(-180deg)
+  &_next
+    right: 0
+    // .swiper-btn__icon
+    //   transform: rotateY(90deg)
+
+  &_lock
+    display: none
+
+  &_disable
+    display: none
+
+  &__icon
+    height: 40px
+    // height: 14px
+
+.swiper-navigation
+  position: absolute
+  z-index: 100
+  display: flex
+  gap: 16px
+
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 104px
+    height: 104px
+    border-radius: 100%
+    border: 1px solid $clr_2
+    background-color: $clr_0
+    transition: opacity .2s linear, transform .2s linear
+    +sm
+      width: 80px
+      height: 80px
+
+    &:hover
+      +hover
+        opacity: .6
+
+    &:focus-visible:not(:active),
+    &:focus:not(:active)
+      opacity: .6
+
+    &:active
+      transform: scale(.96)
+
+    &_prev
+      .swiper-navigation__btn-icon
+        transform: rotateY(-180deg)
+
+    &_lock
+      display: none
+
+    &_disable
+      display: none
+
+  &__btn-icon
+    width: 40px
+    height: 40px
+    // width: 40px
+
+// СТИЛИ ДЛЯ КНОПОК И ССЫЛОК
+.link
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 8px 10px
+  max-width: 254px
+  min-height: 56px
+  font-weight: 600
+  line-height: 122%
+  font-size: 16px
+  color: $clr_1
+  text-align: center
+  border: 1px solid $clr_0
+  border-radius: 8px
+  background-color: $clr_3
+  transition: background-color .2s linear, color .2s linear, transform .2s linear, box-shadow .2s linear
+
+  +ph
+    padding: 8px
+    min-height: 40px
+
+  &:hover
+    +hover
+      color: $clr_3
+      background-color: $clr_4
+
+      .link__icon
+        fill: $clr_3
+ 
+  &:focus:not(:active)
+    box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+
+  &:active
+    transform: scale(.98)
+
+  &__icon
+    margin-right: 4px
+    width: 20px
+    height: 20px
+    fill: $clr_1
+    transition: fill .2s linear
+
+  &__text
+    &_sm
+      +sm
+        display: none
+
+.link-inv
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 16px 32px
+  max-width: 141px
+  min-height: 48px
+  font-weight: 400
+  line-height: 100%
+  font-size: 16px
+  color: $clr_1
+  text-align: center
+  border: 1px solid $clr_3
+  background-color: $clr_3
+  transition: opacity .2s linear, transform .2s linear
+
+  +ph
+    padding: 10px
+    font-size: 14px
+    min-height: 40px
+
+  &:hover
+    +hover
+      opacity: .6
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    opacity: .6
+
+  &:active
+    transform: scale(.98)
+
+.link-text
+  display: flex
+  align-items: center
+  max-width: max-content
+  line-height: 100%
+  letter-spacing: 0.04em
+  transition: color .2s linear, transform .2s linear, background-color .2s linear
+
+  &:hover
+    +hover
+      color: $clr_3
+      .link-text__icon
+        fill: $clr_3
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    background-color: rgba($clr_3, .4)
+
+  &:active
+    transform: scale(.98)
+
+  &__icon
+    margin-right: 4px
+    width: 20px
+    height: 20px
+    fill: $clr_2
+    transition: fill .2s linear, transform .2s linear
+
+.link-text-inv
+  display: flex
+  align-items: center
+  gap: 8px
+  max-width: max-content
+  line-height: 100%
+  color: $clr_1
+  transition: color .2s linear, transform .2s linear, background-color .2s linear
+
+  &:hover
+    +hover
+      color: $clr_3
+      .link-text-inv__icon
+        fill: $clr_3
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    background-color: rgba($clr_3, .4)
+
+  &:active
+    transform: scale(.98)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_1
+    transition: fill .2s linear
+
+  &__descr
+    &_ph
+      +ph
+        display: none
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 10px
+  padding: 18px 20px
+  max-width: 228px
+  min-height: 56px
+  font-weight: 600
+  line-height: 122%
+  font-size: 16px
+  color: $clr_3
+  text-align: center
+  border: 1px solid $clr_0
+  border-radius: 8px
+  background-color: $clr_1
+  transition: background-color .2s linear, color .2s linear, transform .2s linear
+  &:hover
+    +hover
+      color: $clr_1
+      background-color: $clr_3
+
+      .btn__icon
+        fill: $clr_1
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    color: $clr_1
+    background-color: $clr_3
+    .btn__icon
+      fill: $clr_1
+      
+  &:active
+    transform: scale(.98)
+
+  &__text
+    &_hidden
+      +ph
+        display: none
+
+  &__icon
+    width: 26px
+    height: 26px
+    fill: $clr_3
+    transition: fill .2s linear
+    +ph
+      width: 20px
+      height: 20px
+
+
+.btn-inv
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 14px 30px
+  max-width: 196px
+  min-height: 48px
+  line-height: 100%
+  font-size: 16px
+  text-align: center
+  border: 1px solid $clr_2
+  background-color: $clr_0
+  transition: opacity .2s linear, transform .2s linear
+
+  +ph
+    padding: 8px 10px
+
+  &:hover
+    +hover
+      opacity: .6
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    opacity: .6
+
+  &:active
+    transform: scale(.98)
+
+// СТИЛИ ДЛЯ ЗАГОЛОВКОВ И ТЕКСТА
+.h-1
+  font-family: $ff_2
+  font-style: italic
+  font-weight: 500
+  line-height: 110%
+  font-size: 84px
+  +md
+    font-size: 60px
+  +sm
+    font-size: 50px
+  +ph
+    font-size: 40px
+
+.h-2
+  font-family: $ff_2
+  font-style: italic
+  margin-bottom: 40px
+  font-weight: 400
+  line-height: 110%
+  font-size: 64px
+  +sm
+    font-size: 50px
+  +ph
+    margin-bottom: 30px
+    font-size: 40px
+
+.h-3
+  font-family: $ff_2
+  margin-bottom: 16px
+  font-weight: 500
+  line-height: 110%
+  font-size: 32px
+  +ph
+    font-size: 28px
+
+.text-hidden
+  position: absolute
+  clip: rect(0,0,0,0)
+  margin: -1px
+  padding: 0
+  border: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+
+// СТИЛИ ДЛЯ ЛИСТА ЭЛЕМЕНТОВ В ФОРМЕ
+.form-list
+  display: flex
+  flex-direction: column
+  gap: 20px
+  width: 100%
+
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  &__item-input-wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  &__item-info
+    margin-bottom: 10px
+    font-weight: 700
+    color: $clr_3
+
+  &__item-label
+    font-weight: 400
+    font-size: 16px
+    color: $clr_2
+
+.link-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+  width: 45px
+  height: 45px
+  border-radius: 2px
+  background-color: rgba($clr_4, .2)
+  transition: background-color .2s linear, 
+
+  &:hover
+    +hover
+      .link-icon__img
+        fill: $clr_1
+
+  &:focus:not(:active)
+    background-color: rgba($clr_4, .8)
+
+  &:active
+    .link-icon__img
+      transform: scale(.94)
+
+  &__img
+    width: 26px
+    height: 26px
+    fill: $clr_3
+    transition: fill .2s linear, transform .2s linear
+
+.label 
+  position: absolute
+  top: 22px
+  left: 2px
+  padding-left: 14px
+  pointer-events: none
+  transition: all .2s linear
+
+.input
+  padding: 20px 16px
+  width: 100%
+  height: 60px
+  color: $clr_2
+  border: 1px solid $clr_0
+  border-radius: 8px
+  background-color: $clr_1
+  transition: border-color .2s linear
+
+  +ph
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: $clr_er
+
+    &:hover
+      +hover
+        border-color: $clr_er
+
+    &:focus:not(:active)
+      border-color: $clr_er
+
+    + .label
+        color: $clr_er
+
+  &:hover
+    +hover
+      border-color: $clr_3
+
+  &:focus:not(:active)
+    border-color: $clr_3
+
+  &:focus + .label
+    top: 6px
+    font-size: 12px
+    width: 97%
+    line-height: 100%
+    background-color: $clr_1
+    opacity: 1
+
+  &:not(:placeholder-shown) + .label
+    top: 6px
+    font-size: 12px
+    width: 97%
+    line-height: 100%
+    background-color: $clr_1
+    opacity: 1
+
+.textarea
+  padding: 20px 16px
+  width: 100%
+  resize: none
+  height: 137px
+  border: 1px solid rgba($clr_5, 0.1)
+  border-radius: 8px
+  background-color: $clr_1
+  color: $clr_2
+  transition: border-color .2s linear
+
+  +ph
+    width: 100%
+    font-size: 14px
+
+  &.error
+    border-color: $clr_er
+
+    &:hover
+      +hover
+        border-color: $clr_er
+
+    &:focus:not(:active)
+      border-color: $clr_er
+
+    + .label
+        color: $clr_er
+
+  &:hover
+    +hover
+      border-color: $clr_3
+
+  &:focus:not(:active)
+    border-color: $clr_3
+
+  &:focus + .label
+    top: 6px
+    font-size: 12px
+    width: 97%
+    line-height: 100%
+    background-color: $clr_1
+    opacity: 1
+
+  &:not(:placeholder-shown) + .label
+    top: 6px
+    font-size: 12px
+    width: 97%
+    line-height: 100%
+    background-color: $clr_1
+    opacity: 1
+
+.form-note
+  position: relative
+  display: block
+  font-size: 14px
+  line-height: 130%
+  cursor: pointer
+
+  &:hover
+    +hover
+
+  &__input
+    display: none
+
+    &:checked + .form-note__checkbox
+      &::after
+        opacity: 1
+        visibility: visible
+
+  &__checkbox
+    flex-shrink: 0
+    display: inline-flex
+    position: absolute
+    top: 0
+    left: 0
+    width: 16px
+    height: 16px
+    border: 1px solid $clr_3
+    border-radius: 4px
+    cursor: pointer
+    transition: border-color .2s linear
+
+    &::after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 10px
+      height: 10px
+      border-radius: 1px
+      background-color: $clr_3
+      transform: translate(-50%,-50%)
+      visibility: hidden
+      opacity: 0
+      transition: opacity .2s linear, visibility .2s linear, background-color .2s linear
+
+  &__text
+    display: inline-block
+    padding-left: 24px
+    font-size: 12px
+    color: rgba($clr_3, .4)
+    transition: color .2s linear
+
+  &__text-link
+    display: inline
+    font-size: 12px
+    color: rgba($clr_3, .4)
+    border-bottom: 1px solid $clr_0
+    transition: color .2s linear
+
+    &:hover
+      +hover
+        color: $clr_3
+
+    &:focus:not(:active)
+      border-color: $clr_3
+
+// СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ
+.text-default
+
+  h1
+    margin-bottom: 20px
+    font-family: $ff_2
+    font-style: italic
+    font-weight: 500
+    line-height: 110%
+    font-size: 84px
+    +md
+      font-size: 60px
+    +sm
+      font-size: 50px
+    +ph
+      font-size: 40px
+
+  h2
+    font-family: $ff_2
+    font-style: italic
+    margin-bottom: 40px
+    font-weight: 400
+    line-height: 110%
+    font-size: 64px
+    +sm
+      font-size: 50px
+    +ph
+      margin-bottom: 30px
+      font-size: 40px
+
+  h3
+    margin-bottom: 16px
+    font-family: $ff_2
+    margin-bottom: 16px
+    font-weight: 500
+    line-height: 110%
+    font-size: 32px
+    +ph
+      font-size: 28px
+
+  p
+
+    &:not(:last-child)
+      margin-bottom: 15px
+
+  a
+    font-weight: 600
+    color: $clr_3
+    border-bottom: 2px solid $clr_3
+    transition: border-color .2s linear
+
+    &:hover
+      +hover
+        border-color: $clr_0
+
+  img
+    +ph
+      margin: 0!important
+      margin-bottom: 15px!important
+      width: 100%
+
+  ul
+    margin-bottom: 20px
+    padding-left: 35px
+    list-style: square
+    +ph
+      padding-left: 20px
+
+    li
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  ol
+    margin-bottom: 20px
+    padding-left: 35px
+
+    +ph
+      padding-left: 20px
+
+    li
+      &::marker
+        font-weight: 500
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  blockquote
+    margin: 0
+    margin-bottom: 20px
+    padding: 20px 10px 20px 20px
+    border-radius: 8px
+    background-color: $clr_4
+
+    ul
+      margin-bottom: 0
+
+    p
+      @include textReset
+
+  table
+    margin-bottom: 30px
+    max-width: 100%
+    width: 100%
+    border-collapse: collapse
+    border-radius: 8px
+    overflow: hidden
+    table-layout: fixed
+    box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+    +ph
+      display: block
+      max-width: 100%
+      font-size: 14px
+      width: fit-content
+      overflow-x: auto
+
+    p
+      @include textReset
+
+    tr
+      background-color: $clr_1
+      color: $clr_2
+      
+      &:nth-child(1)
+        font-weight: 600
+        font-size: 18px
+        color: $clr_3
+        background-color: $clr_1
+        text-align: center
+        +ph
+          font-size: 16px
+
+        td
+          border: none
+
+      &:nth-child(2n)
+        color: $clr_1
+        background-color: rgba($clr_3, .8)
+
+    th, td
+      padding: 14px
+      text-align: center
+
+// НАВЕРХ СТРАНИЦЫ
+.scroll-top
+  position: fixed
+  z-index: 30
+  right: 30px
+  bottom: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 40px
+  height: 40px
+  border: 1px solid $clr_0
+  border-radius: 100%
+  background-color: $clr_4
+  opacity: 0
+  transform: translateY(200px)
+  box-shadow: 0 10px 23px 0 rgba(13, 50, 99, 0.06), 0 42px 42px 0 rgba(13, 50, 99, 0.05), 0 94px 57px 0 rgba(13, 50, 99, 0.03), 0 167px 67px 0 rgba(13, 50, 99, 0.01), 0 262px 73px 0 rgba(13, 50, 99, 0)
+  transition: background-color .2s linear, transform .2s linear, opacity .2s linear, border-color .2s linear, box-shadow .2s linear
+
+  +ph
+    right: 10px
+    bottom: 20px
+
+  &_active
+    opacity: 1
+    transform: translateY(0px)
+
+  &:hover
+    +hover
+      background-color: $clr_3
+      transform: translateY(0px)
+
+      .scroll-top__icon
+        fill: $clr_1
+
+  &:focus:not(:active)
+    border-color: $clr_3
+
+  &:active
+    transform: scale(.94)
+
+  &__icon
+    display: inline-flex
+    width: 16px
+    height: 16px
+    fill: $clr_3
+    transform: rotate(180deg)
+    transition: fill .2s linear, transform .2s linear
+
+// PRELOADER
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 100000
+  width: 100%
+  height: 100%
+  opacity: 1
+  background-color: $clr_1
+  transition: opacity .3s linear
+
+  &__wrapper
+    width: 40px
+    height: 40px
+    opacity: 0.75
+    animation: clockwise 500ms linear infinite
+
+  &.hidden
+    animation: fadeOut 1s
+    animation-fill-mode: forwards
+
+  &__item-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    width: 20px
+    height: 40px
+    overflow: hidden
+
+  &__item
+    position: absolute
+    top: 0
+    left: 0
+    box-sizing: border-box
+    width: 40px
+    height: 40px
+    border: 4px solid $clr_3
+    border-radius: 50%
+    border-left-color: transparent
+    border-bottom-color: transparent
+    animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite
+
+// АНИМАЦИЯ
+@keyframes clockwise
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+@keyframes donut-rotate
+  0%
+    transform: rotate(0)
+  
+  50%
+    transform: rotate(-140deg)
+    
+  100%
+    transform: rotate(0)
+
+@keyframes openMobList
+  from
+    opacity: 0
+    transform: translateX(-10px)
+  
+  to
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes closeMobList
+  from
+    display: flex
+    opacity: 1
+    transform: translateX(0)
+  
+  to
+    display: none
+    opacity: 0
+    transform: translateX(-10px)
+
+@keyframes fadeOut
+  100%
+    opacity: 0
+    visibility: hidden
+
+// @keyframes fadeInUp
+//   from
+//     opacity: 0
+//     // top: -20px
+  
+//   to
+//     opacity: 1
+//     top: 0
+
+@keyframes opacity
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1

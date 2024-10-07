@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="./app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Страница не найдена</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./app/css/main.min.css" />
+        <link rel="stylesheet" href="./app/js/libs/photoswipe.css" />
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/photoswipe.esm.min.js" defer></script>
+        <script src="./app/js/libs/photoswipe-lightbox.esm.min.js" defer></script>
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/libs/min/iframe-lazy-load.min.js" defer></script>
+        <script src="./app/js/libs/scrollLibrary.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
+    </head>
+
+    <body>
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER -->
+        <header id="header" class="header">
+            <div class="header__content-top header-top">
+                <div class="header-top__container container">
+                    <a class="header-top__logo logo" href="/">
+                        <img class="logo__img" src="./app/img/logo.svg" alt="Логотип Спектр вэд" title="Спектр вэд" />
+                    </a>
+                    <ul class="header-top__links header-links">
+                        <li class="header-links__item">
+                            <a
+                                class="header-links__link link"
+                                href="tel:+79615866187"
+                                aria-label="Позвонить по номеру +7 961 586-61-87">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link__text link__text_sm">+7 961 586-61-87</span>
+                            </a>
+                        </li>
+                        <li class="header-links__item">
+                            <a
+                                class="header-links__link link"
+                                href="mailto:director@spectrved.ru"
+                                aria-label="Написать на почту director@spectrved.ru">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="link__text link__text_sm">director@spectrved.ru</span>
+                            </a>
+                        </li>
+                        <li class="header-links__item header-links__item_ph">
+                            <a
+                                class="header-links__link-icon link"
+                                href="https://t.me/+79615866187"
+                                target="_blank"
+                                aria-label="Написать в чат в Telegram">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-links__item header-links__item_ph">
+                            <a
+                                class="header-links__link-icon link"
+                                href="https://wa.me/+79615866187"
+                                target="_blank"
+                                aria-label="Написать в чат в whatsapp">
+                                <svg class="link__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- <button id="burger-toggle" class="header-top__menu-toggle menu-toggle">
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button> -->
+                </div>
+            </div>
+
+            <div class="header__content-bottom">
+                <div class="header__container container">
+                    <nav class="header__menu header-menu">
+                        <ul class="header-menu__list">
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="/"> Главная </a>
+                            </li>
+                            <li class="header-menu__list-item active">
+                                <a class="header-menu__list-link" href="./main.html"> О нас </a>
+                            </li>
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="./tariffs.html"> Тарифы </a>
+                            </li>
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="./faq.html"> Вопрос-ответ </a>
+                            </li>
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="./contacts.html"> Отзывы </a>
+                            </li>
+                            <li class="header-menu__list-item">
+                                <a class="header-menu__list-link" href="./contacts.html"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- BURGER-MENU -->
+            <!-- <div id="menu-mobile" class="header__menu-mobile menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-mobile__menu-list menu-mobile-list">
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="/"> Главная </a>
+                            </li>
+                            <li class="menu-mobile-list__item active">
+                                <a class="menu-mobile-list__link" href="./main.html"> О нас </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="./tariffs.html"> Тарифы </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="./faq.html"> Вопрос-ответ </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="./reviews.html"> Отзывы </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="./contacts.html"> Контакты </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="menu-mobile__links menu-mobile-links">
+                        <li class="menu-mobile-links__item">
+                            <a class="menu-mobile-links__link link-text" href="tel:+79615866187">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-text__descr">+7 961 586-61-87</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a class="menu-mobile-links__link link-text" href="mailto:director@spectrved.ru">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="link-text__descr">director@spectrved.ru</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a class="menu-mobile-links__link link-text" href="https://t.me/+79615866187">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                                <span class="link-text__descr">Telegram</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a class="menu-mobile-links__link link-text" href="https://wa.me/+79615866187">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="link-text__descr">WhatsApp</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+        </header>
+        <!-- MAIN -->
+        <main id="main">
+            <section class="not-found">
+                <div class="not-found__container container">
+                    <a class="main__link-back link-back" href="/" aria-label="Вернуться на главную страницу">
+                        <svg class="link-back__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                        </svg>
+                        <span class="link-back__text"> Вернуться на главную страницу </span>
+                    </a>
+                    <div class="not-found__content content">
+                        <h1 class="content__title-hidden text-hidden">Страница не найдена</h1>
+                        <h2 class="content__title h-2">
+                            <span class="content__color color">404</span> - страница не найдена
+                        </h2>
+                        <p class="content__text">
+                            К&nbsp;сожалению, страница
+                            <span class="content__color color">не&nbsp;была обнаружена.</span>
+                        </p>
+                        <p class="content__text content__text_last">
+                            Пожалуйста, проверьте корректность веденного
+                            <span class="content__color color">URL-адреса.</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__content-wrapper animation-top delay-300" data-scroll="800">
+                    <p class="footer__text">Все права защищены &copy;&nbsp;2024</p>
+                    <a class="footer__link link-text" href="/" target="_blank">
+                        <span class="link-text__descr">Пользовательское соглашение</span>
+                    </a>
+                    <a class="footer__link link-text" href="/" target="_blank">
+                        <svg class="link-text__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#logo-dev"></use>
+                        </svg>
+                        <span class="link-text__descr">Создание сайтов</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- SOCIAL-PANEL -->
+        <ul id="social-panel" class="social-panel">
+            <li class="social-panel__item">
+                <a
+                    aria-label="Связаться с нами в WhatsApp"
+                    target="_blank"
+                    href="https://wa.me/"
+                    class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-panel__item">
+                <a
+                    aria-label="Связаться с нами в Telegram"
+                    target="_blank"
+                    href="https://t.me/"
+                    class="social-panel__link">
+                    <svg class="social-panel__icon">
+                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="/app/js/libs/min/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

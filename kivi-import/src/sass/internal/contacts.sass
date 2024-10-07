@@ -1,0 +1,92 @@
+.contacts
+  &__title
+    margin-bottom: 32px
+
+  &__content-wrapper
+    display: flex
+    gap: 8px
+    +ph
+      flex-direction: column
+
+  &__map-wrapper
+    position: relative
+    max-width: 70%
+    width: 100%
+    height: 550px
+    border-radius: 20px
+    overflow: hidden
+    +sm
+      max-width: 60%
+    +ph
+      max-width: 100%
+      height: 350px
+      border-radius: 10px
+			
+  &__map-link
+    position: absolute
+    top: 0px
+    color: #eee
+    font-size: 12px
+
+    &_two
+      top: 14px
+
+  &__map
+    position: relative
+    border: none
+    width: 100%
+    height: 100%
+
+  &__content
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding: 40px
+    max-width: 30%
+    width: 100%
+    border-radius: 20px
+    background-color: $clr_3
+    color: $clr_1
+    +sm
+      padding: 30px
+      max-width: 40%
+    +ph
+      padding: 20px
+      max-width: 100%
+      border-radius: 10px
+
+  &__logo
+    max-width: 148px
+    max-height: 60px
+
+  &__link
+    color: $clr_1
+    &:hover
+      +hover
+        color: $clr_2
+
+        .link-text__icon
+          fill: $clr_2
+
+    .link-text__icon
+      fill: $clr_1
+    
+  &__links-social
+    display: flex
+    gap: 12px
+
+  &__link-icon
+    width: 30px
+    height: 30px
+    fill: $clr_1
+    &:hover
+      +hover
+        .link-icon__item
+          fill: $clr_2
+
+    .link-icon__item
+      fill: $clr_1
+
+  &__address
+    +ph
+      font-size: 16px

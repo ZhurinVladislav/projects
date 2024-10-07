@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+        <!-- SEO -->
+        <title>Яхта</title>
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./app/css/main.min.css" />
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/lazy-load.min.js"></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/lightgallery-all.min.js" defer></script>
+        <script src="./app/js/libs/min/sliders.min.js" defer></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
+    </head>
+
+    <body>
+        <!-- PRELOADER -->
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER -->
+        <header id="header" class="header">
+            <div class="header__container container">
+                <div class="header__content-top header-top">
+                    <div class="header-top__wrapper-logo">
+                        <a class="header-top__logo logo" href="/">
+                            <img
+                                class="logo__img"
+                                data-src="./app/img/logo.svg"
+                                alt="Логотип YachtVGel"
+                                title="YachtVGel" />
+                        </a>
+                        <address class="header-top__address">г. Геленджик, Центральный причал</address>
+                    </div>
+                    <ul class="header-top__links header-links">
+                        <li class="header-links__item">
+                            <a
+                                class=" header-links__link link-text"
+                                href="https://wa.me/+79284400014"
+                                aria-label="Написать в WhatsApp"
+                                target="_blank">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="link-text__descr">WhatsApp</span>
+                            </a>
+                        </li>
+                        <li class="header-links__item">
+                            <a
+                                class="header-links__link link-text"
+                                href="https://t.me/+79284400014"
+                                target="_blank"
+                                aria-label="Написать в чат в Telegram">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                                <span class="link-text__descr">Telegram</span>
+                            </a>
+                        </li>
+                        <li class="header-links__item">
+                            <a
+                                class="header-links__link link-text"
+                                href="mailto:planida_rus@mail.ru"
+                                aria-label="Написать на почту planida_rus@mail.ru">
+                                <svg class="link-text__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="link-text__descr">planida_rus@mail.ru</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-top__feedback-wrapper">
+                        <a
+                            class="header-top__link link-text"
+                            href="tel:+79284400014"
+                            aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                            +7 (928) 440-00-14
+                        </a>
+                        <button class="header-top__link-catalog link" aria-label="Подобрать яхту">
+                            Подобрать яхту
+                        </button>
+                    </div>
+                    <button id="burger-toggle" class="header-top__menu-toggle menu-toggle">
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                </div>
+                <nav class="header__menu header-menu">
+                    <ul class="header-menu__list">
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="/"> Главная </a>
+                        </li>
+                        <li class="header-menu__list-item menu-active">
+                            <a class="header-menu__list-link" href="./catalog.html"> Яхты </a>
+                        </li>
+                        <li class="header-menu__list-item menu-parent">
+                            <a class="header-menu__list-link" href="./events.html">
+                                <span class="header-menu__link-text">Мероприятия</span>
+                                <svg class="header-menu__link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                            <div class="header-menu__inner-wrapper menu-inner">
+                                <div class="menu-inner__container container">
+                                    <ul class="header-menu__inner menu-inner__list">
+                                        <li class="menu-inner__list-item menu-active">
+                                            <a class="menu-inner__list-link" href="./event.html">Фотосессия</a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">Кейтеринг</a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                День рождения на яхте
+                                            </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html"> Свадьба на яхте </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">Круизы на яхте</a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html"> Морская рыбалка </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html"> Трансфер в порт </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                Подарочные сертификаты
+                                            </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                Прокат гидроциклов в Геленджике
+                                            </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                Фотосессия на море в Геленджике
+                                            </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                Вейкбординг в Геленджике
+                                            </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                Парасейлинг в Геленджике
+                                            </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                Флайборд в Геленджике
+                                            </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                Живая музыка на яхте
+                                            </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html"> Ведущий на яхте </a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">Диджей на яхте</a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./event.html">
+                                                Фейерверки на яхте
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header-menu__list-item menu-parent">
+                            <a class="header-menu__list-link" href="./services.html">
+                                <span class="header-menu__link-text">Услуги</span>
+                                <svg class="header-menu__link-icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                            <div class="header-menu__inner-wrapper menu-inner">
+                                <div class="menu-inner__container container">
+                                    <ul class="header-menu__inner menu-inner__list">
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./service.html">Рыбалка</a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./service.html">Дельфины</a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./service.html">Свадьба</a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./service.html">День рождение</a>
+                                        </li>
+                                        <li class="menu-inner__list-item">
+                                            <a class="menu-inner__list-link" href="./service.html">Свидание</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./articles.html"> Статьи </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./about.html"> О сервисе </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link" href="./contacts.html"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- MENU-MOBILE -->
+                <div id="menu-mobile" class="header__menu-mobile menu-mobile">
+                    <div class="menu-mobile__wrap">
+                        <nav class="menu-mobile__menu">
+                            <ul class="menu-mobile__menu-list menu-mobile-list">
+                                <li class="menu-mobile-list__item">
+                                    <a class="menu-mobile-list__link" href="/"> Главная </a>
+                                </li>
+                                <li class="menu-mobile-list__item menu-active">
+                                    <a class="menu-mobile-list__link" href="./catalog.html"> Яхты </a>
+                                </li>
+                                <li class="menu-mobile-list__item menu-parent">
+                                    <a class="menu-mobile-list__link" href="./events.html"> Мероприятия </a>
+                                    <button class="menu-mobile-list__btn js-mobile-btn">
+                                        <svg class="menu-mobile-list__btn-icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <ul class="menu-mobile-list__inner menu-mobile-inner js-mobile-list">
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html">Фотосессия</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html">Кейтеринг</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >День рождения на яхте</a
+                                            >
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html">Свадьба на яхте</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html">Круизы на яхте</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html">Морская рыбалка</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html">Трансфер в порт</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >Подарочные сертификаты</a
+                                            >
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >Прокат гидроциклов в Геленджике</a
+                                            >
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >Фотосессия на море в Геленджике</a
+                                            >
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >Вейкбординг в Геленджике</a
+                                            >
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >Парасейлинг в Геленджике</a
+                                            >
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >Флайборд в Геленджике</a
+                                            >
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >Живая музыка на яхте</a
+                                            >
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html">Ведущий на яхте</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html">Диджей на яхте</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./event.html"
+                                                >Фейерверки на яхте</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-mobile-list__item menu-parent">
+                                    <a class="menu-mobile-list__link" href="./services.html"> Услуги </a>
+                                    <button class="menu-mobile-list__btn js-mobile-btn">
+                                        <svg class="menu-mobile-list__btn-icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <ul class="menu-mobile-list__inner menu-mobile-inner js-mobile-list">
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./service.html">Рыбалка</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./service.html">Дельфины</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./service.html">Свадьба</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./service.html">День рождение</a>
+                                        </li>
+                                        <li class="menu-mobile-inner__item">
+                                            <a class="menu-mobile-inner__link" href="./service.html">Свидание</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-mobile-list__item">
+                                    <a class="menu-mobile-list__link" href="./articles.html"> Статьи </a>
+                                </li>
+                                <li class="menu-mobile-list__item">
+                                    <a class="menu-mobile-list__link" href="./about.html"> О сервисе </a>
+                                </li>
+                                <li class="menu-mobile-list__item">
+                                    <a class="menu-mobile-list__link" href="./contacts.html"> Контакты </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="menu-mobile__links menu-mobile-links">
+                            <li class="menu-mobile-links__item">
+                                <a class="menu-mobile-links__link link-text" href="tel:+79615866187">
+                                    <svg class="link-text__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                    </svg>
+                                    <span class="link-text__descr">+7 961 586-61-87</span>
+                                </a>
+                            </li>
+                            <li class="menu-mobile-links__item">
+                                <a class="menu-mobile-links__link link-text" href="mailto:director@spectrved.ru">
+                                    <svg class="link-text__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                    </svg>
+                                    <span class="link-text__descr">director@spectrved.ru</span>
+                                </a>
+                            </li>
+                            <li class="menu-mobile-links__item">
+                                <a class="menu-mobile-links__link link-text" href="https://t.me/+79615866187">
+                                    <svg class="link-text__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                    </svg>
+                                    <span class="link-text__descr">Telegram</span>
+                                </a>
+                            </li>
+                            <li class="menu-mobile-links__item">
+                                <a class="menu-mobile-links__link link-text" href="https://wa.me/+79615866187">
+                                    <svg class="link-text__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                    </svg>
+                                    <span class="link-text__descr">WhatsApp</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- YACHT -->
+        <main id="main">
+            <section id="yacht" class="yacht section-reset">
+                <div class="yacht__container container">
+                    <ol class="yacht__breadcrumb breadcrumb">
+                        <li>
+                            <a href="">Главная</a>
+                        </li>
+                        <li>
+                            <a href="">каталог яхт</a>
+                        </li>
+                        <li class="breadcrumb-item active">&nbsp;яхта</li>
+                    </ol>
+                    <div class="yacht__content-wrapper">
+                        <div class="yacht__content-left yacht-main-info">
+                            <h1 class="yacht-main-info__title-hidden text-hidden">Яхта</h1>
+                            <div class="yacht-main-info__title-wrapper">
+                                <h2 class="yacht-main-info__title h-1">Яхта</h2>
+                                <!-- <button class="yacht-main-info__btn btn js-copy-btn" data-link="./asd.html">
+                                    <svg class="btn__icon">
+                                        <use xlink:href="./app/img/icons/icons.svg#sh"></use>
+                                    </svg>
+                                    <span class="btn__text btn__text_hidden">Поделиться</span>
+                                </button> -->
+                            </div>
+                            <div id="yacht-slider" class="yacht-main-info__slider yacht-slider">
+                                <div class="content-top__swiper swiper slider-top">
+                                    <button
+                                        id="slider-top-btn-prev"
+                                        class="swiper-navigation__btn swiper-navigation__btn_prev slider-top__btn slider-top__btn_prev">
+                                        <svg class="swiper-navigation__btn-icon slider-top__btn-icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="swiper-wrapper slider-top__wrapper">
+                                        <a
+                                            href="./app/img/gallery-inner/img-1.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-1.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                        <a
+                                            href="./app/img/gallery-inner/img-2.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-2.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                        <a
+                                            href="./app/img/gallery-inner/img-3.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-3.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                        <a
+                                            href="./app/img/gallery-inner/img-4.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-4.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                        <a
+                                            href="./app/img/gallery-inner/img-5.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-5.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                        <a
+                                            href="./app/img/gallery-inner/img-6.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-6.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                        <a
+                                            href="./app/img/gallery-inner/img-7.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-7.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                        <a
+                                            href="./app/img/gallery-inner/img-8.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-8.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                        <a
+                                            href="./app/img/gallery-inner/img-9.jpg"
+                                            class="swiper-slide slider-top__slide">
+                                            <img
+                                                data-src="./app/img/gallery-inner/img-9.jpg"
+                                                class="slider-top__img swiper-img"
+                                                loading="lazy" />
+                                        </a>
+                                    </div>
+                                    <button
+                                        id="slider-top-btn-next"
+                                        class="swiper-navigation__btn slider-top__btn swiper-navigation__btn_next slider-top__btn_next">
+                                        <svg class="swiper-navigation__btn-icon slider-top__btn-icon">
+                                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="swiper slider-bottom">
+                                    <div class="swiper-wrapper slider-bottom__wrapper">
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-1.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-2.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-3.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-4.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-5.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-6.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-7.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-8.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                        <div class="swiper-slide slider-bottom__slide">
+                                            <img
+                                                class="slider-bottom__img swiper-img"
+                                                data-src="./app/img/gallery-inner/img-9.jpg"
+                                                loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="yacht__content-price yacht-price yacht-price_ph">
+                                <h3 class="yacht-price__title h-3">Стоимость аренды</h3>
+                                <div class="yacht-price__weekday">
+                                    <p class="yacht-price__weekday-text">Пн, Вт, Ср, Чт, Пт, Сб, Вс,</p>
+                                </div>
+                                <div class="yacht-price__item-wrapper">
+                                    <h4 class="yacht-price__item-title">Стоимость (₽/час)</h4>
+                                    <p class="yacht-price__item-descr">8 000 ₽</p>
+                                </div>
+                                <div class="yacht__book yacht-book">
+                                    <h4 class="yacht-book__title">Забронировать</h4>
+                                    <ul class="yacht-book__links">
+                                        <li class="yacht-book__links-item">
+                                            <a
+                                                class="yacht-book__link link-text"
+                                                href="tel:+79284400014"
+                                                aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                                +7 (928) 440-00-14
+                                            </a>
+                                        </li>
+                                        <li class="yacht-book__links-item">
+                                            <a
+                                                class="yacht-book__link link-text"
+                                                href="https://wa.me/+79284400014"
+                                                aria-label="Написать в WhatsApp">
+                                                WhatsApp
+                                            </a>
+                                        </li>
+                                        <li class="yacht-book__links-item">
+                                            <a
+                                                class="yacht-book__link link-text"
+                                                href="https://t.me/+79284400014"
+                                                aria-label="Написать в чат в Telegram">
+                                                Telegram
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="yacht-main-info__specific yacht-specific">
+                                <h3 class="yacht-specific__title h-3">Характеристики</h3>
+                                <ul class="yacht-specific__list">
+                                    <li class="yacht-specific__list-item text-default">
+                                        <h4 class="yacht-specific__list-item-title">Вместимость</h4>
+                                        <p>Банкет: до 20 человек</p>
+                                        <p>Фуршет: до 20 человек</p>
+                                    </li>
+                                    <li class="yacht-specific__list-item text-default">
+                                        <h4 class="yacht-specific__list-item-title">Время аренды</h4>
+                                        <p>Минимальное время аренды - 4 часа в будние дни и 5 часов в выходные.</p>
+                                    </li>
+                                    <li class="yacht-specific__list-item text-default">
+                                        <h4 class="yacht-specific__list-item-title">Базирование</h4>
+                                        <p>г. Москва, (ст. м. Выставочная)</p>
+                                    </li>
+                                    <li class="yacht-specific__list-item text-default">
+                                        <h4 class="yacht-specific__list-item-title">Маршрут</h4>
+                                        <p>Москва и Подмосковье</p>
+                                    </li>
+                                    <li class="yacht-specific__list-item text-default">
+                                        <h4 class="yacht-specific__list-item-title">Технические характеристики</h4>
+                                        <p>Проект: 839П</p>
+                                        <p>Длина: 29,54 м</p>
+                                        <p>Ширина: 5,08 м</p>
+                                        <p>Высота борта 2,4 м</p>
+                                        <p>Осадка 1,33 м</p>
+                                        <p>Водоизмещение 91,6 т</p>
+                                    </li>
+                                    <li class="yacht-specific__list-item text-default">
+                                        <h4 class="yacht-specific__list-item-title">Техническое оснащение</h4>
+                                        <p>Аудио система;</p>
+                                        <p>Профессиональное музыкальное оборудование;</p>
+                                        <p>Караоке-система;</p>
+                                        <p>Кондиционеры;</p>
+                                        <p>TV/DVD;</p>
+                                        <p>Плазменные панели.</p>
+                                    </li>
+                                    <li class="yacht-specific__list-item text-default">
+                                        <h4 class="yacht-specific__list-item-title">Дополнительные услуги</h4>
+                                        <p>Оформление палуб;</p>
+                                        <p>Организация и проведение;</p>
+                                        <p>Банкетное обслуживание;</p>
+                                        <p>Фото- видеосъемка;</p>
+                                        <p>Аренда мебели и оборудования.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="yacht-main-info__descr text-default">
+                                <h3 class="yacht-main-info__descr-title">Описание яхты</h3>
+                                <p>
+                                    Аренда яхты-ресторана "Дельфин" подходит для организации различных торжественных,
+                                    праздничных, деловых и развлекательных мероприятий, а так же для частных речных
+                                    прогулок с участием не более 20 человек. Яхта-ресторан "Дельфин" станет для вас
+                                    настоящей находкой. Ведь на борту созданы отличные условия для отдыха, в том числе:
+                                </p>
+                                <ul>
+                                    <li>
+                                        оборудованный банкетной мебелью и необходимой техникой зал с барной стойкой;
+                                    </li>
+                                    <li>открытая прогулочная палуба;</li>
+                                    <li>
+                                        отдельная кают-компания в носовой части главной палубы с удобной мягкой мебелью;
+                                    </li>
+                                    <li>каюты адаптированные для непродолжительного отдыха и для ночевки;</li>
+                                    <li>настоящая горячая сауна.</li>
+                                </ul>
+                                <p>
+                                    Максимального срока бронирования у этой яхты нет. За раннее бронирование
+                                    предусмотрены скидки. Условия действующих акций и спецпредложений (если такие
+                                    имеются), занятость теплохода и другую интересующую информацию уточняйте у
+                                    менеджера.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="yacht__content-right">
+                            <div class="yacht__content-price yacht-price">
+                                <h3 class="yacht-price__title h-3">Стоимость аренды</h3>
+                                <div class="yacht-price__weekday">
+                                    <p class="yacht-price__weekday-text">Пн, Вт, Ср, Чт, Пт, Сб, Вс,</p>
+                                </div>
+                                <div class="yacht-price__item-wrapper">
+                                    <h4 class="yacht-price__item-title">Стоимость (₽/час)</h4>
+                                    <p class="yacht-price__item-descr">8 000 ₽</p>
+                                </div>
+                                <div class="yacht__book yacht-book">
+                                    <h4 class="yacht-book__title">Забронировать</h4>
+                                    <ul class="yacht-book__links">
+                                        <li class="yacht-book__links-item">
+                                            <a
+                                                class="yacht-book__link link-text"
+                                                href="tel:+79284400014"
+                                                aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                                +7 (928) 440-00-14
+                                            </a>
+                                        </li>
+                                        <li class="yacht-book__links-item">
+                                            <a
+                                                class="yacht-book__link link-text"
+                                                href="https://wa.me/+79284400014"
+                                                aria-label="Написать в WhatsApp">
+                                                WhatsApp
+                                            </a>
+                                        </li>
+                                        <li class="yacht-book__links-item">
+                                            <a
+                                                class="yacht-book__link link-text"
+                                                href="https://t.me/+79284400014"
+                                                aria-label="Написать в чат в Telegram">
+                                                Telegram
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div id="form-callback" class="modal form-callback">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"></button>
+                    <p class="form-callback__title modal-title">Оставить заявку</p>
+
+                    <form class="form form-mod">
+                        <ul class="form-mod__list form-list">
+                            <li class="form-list__item">
+                                <input class="form-list__item-input input" type="text" name="name" placeholder=" " />
+                                <label class="form-list__item-label label">Имя</label>
+                            </li>
+                            <li class="form-list__item">
+                                <input class="form-list__item-input input" type="number" name="phone" placeholder=" " />
+                                <label class="form-list__item-label label">Телефон</label>
+                            </li>
+                            <li class="form-list__item">
+                                <textarea
+                                    class="form-list__item-textarea textarea"
+                                    name="message"
+                                    cols="30"
+                                    rows="10"
+                                    placeholder=" "></textarea>
+                                <label class="form-list__item-label label">Комментарий</label>
+                            </li>
+                        </ul>
+                        <label class="form-mod__agreement form-note">
+                            <input class="form-note__input" type="checkbox" checked />
+                            <span class="form-note__checkbox"></span>
+                            <span class="form-note__text">
+                                Нажимая кнопку &laquo;отправить&raquo; вы&nbsp;соглашаетесь&nbsp;с
+                                <a class="form-note__text-link link-text" href="/" target="_blank">
+                                    политикой конфиденциальности
+                                </a>
+                            </span>
+                        </label>
+                        <button class="form-mod__btn btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div id="form-success" class="modal form-success">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr form-success__descr_last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__content-top footer-content">
+                    <a class="footer__logo logo" href="/">
+                        <img
+                            class="logo__img"
+                            data-src="./app/img/logo-in.svg"
+                            alt="Логотип YachtVGel"
+                            title="YachtVGel" />
+                    </a>
+                    <div class="footer__content">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list footer-menu">
+                                <li class="footer-menu__item">
+                                    <a href="/" class="footer-menu__item-link link-text">Главная</a>
+                                </li>
+                                <li class="footer-menu__item menu-active">
+                                    <a href="./catalog.html" class="footer-menu__item-link link-text">Яхты</a>
+                                </li>
+                                <li class="footer-menu__item">
+                                    <a href="./events.html" class="footer-menu__item-link link-text">Мероприятия</a>
+                                </li>
+                                <li class="footer-menu__item">
+                                    <a href="./services.html" class="footer-menu__item-link link-text">Услуги</a>
+                                </li>
+                                <li class="footer-menu__item">
+                                    <a href="./about.html" class="footer-menu__item-link link-text">О сервисе</a>
+                                </li>
+                                <li class="footer-menu__item menu-active">
+                                    <a href="./articles.html" class="footer-menu__item-link link-text">Статьи</a>
+                                </li>
+                                <li class="footer-menu__item">
+                                    <a href="./contacts.html" class="footer-menu__item-link link-text">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="footer__social-list footer-social footer-list">
+                            <li class="footer-social__item">
+                                <a
+                                    class="footer-social__item-link link-text"
+                                    href="https://wa.me/+79284400014"
+                                    aria-label="Написать в WhatsApp"
+                                    target="_blank">
+                                    <svg class="link-text__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                    </svg>
+                                    <span class="link-text__descr">WhatsApp</span>
+                                </a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a
+                                    class="footer-social__item-link link-text"
+                                    href="https://t.me/+79284400014"
+                                    target="_blank"
+                                    aria-label="Написать в чат в Telegram">
+                                    <svg class="link-text__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                    </svg>
+                                    <span class="link-text__descr">Telegram</span>
+                                </a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a
+                                    class="footer-social__item-link link-text"
+                                    href="mailto:planida_rus@mail.ru"
+                                    aria-label="Написать на почту planida_rus@mail.ru">
+                                    <svg class="link-text__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                    </svg>
+                                    <span class="link-text__descr">planida_rus@mail.ru</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer__feedback-list footer-feedback footer-list">
+                            <li class="footer-feedback__item">
+                                <a
+                                    class="footer-feedback__item-link link-text"
+                                    href="tel:+79284400014"
+                                    aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                    +7 (928) 440-00-14
+                                </a>
+                            </li>
+                            <li class="footer-feedback__item">г. Геленджик, Центральный причал</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__content-bottom footer-content">
+                    <p class="footer__text">Все права защищены &copy;&nbsp;2024</p>
+                    <a class="footer__link link-text" href="/" target="_blank">
+                        <span class="link-text__descr">Пользовательское соглашение</span>
+                    </a>
+                    <a class="footer__link link-text link-web2" href="/" target="_blank">
+                        <svg class="link-text__icon link-web2__icon">
+                            <use xlink:href="/app/img/icons/icons.svg#logo-dev"></use>
+                        </svg>
+                        <span class="link-text__descr">Создание сайтов</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/min/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

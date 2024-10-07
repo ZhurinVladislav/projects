@@ -1,0 +1,36 @@
+.gallery
+	&__title
+		color: $clr_1
+		text-align: center
+
+	&__slider-wrap
+		position: relative
+
+	.swiper-btn
+		&:active
+			transform: translateY(-50%) scale(.98)
+		&_prev
+			left: -69px
+			+max(1570px)
+				left: 0
+				background-color: $clr_1
+		&_next
+			right: -69px
+			+max(1570px)
+				right: 0
+				background-color: $clr_1
+
+.gallery-slider
+	height: 648px
+	+ph
+		height: 450px
+
+	&__slide
+		overflow: hidden
+
+	&__btn
+		position: absolute
+		z-index: 1
+		top: 50%
+		transform: translateY(-50%)
+

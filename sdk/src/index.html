@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <meta charset="UTF-8">
-    <base href="/">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/app/img/favicon.svg">
-    <!-- SEO -->
-    <title>Современная дентальная клиника | СДК</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- STYLES -->
-    <link rel="stylesheet" href="/app/css/main.min.css">
-    <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
-    <!-- SCRIPTS -->
-    <script src="/app/js/libs/preloader.js" defer></script>
-    <script src="/app/js/libs/lightgallery-all.min.js" defer></script>
-    <script src="/app/js/libs/swiper-bundle.min.js" defer></script>
-    <script src="/app/js/libs/webp.js" defer></script>
-    <script src="/app/js/libs/modal-window.js" defer></script>
-    <script src="/app/js/libs/iframeLazyLoad.js" defer></script>
-    <!-- <script src="/app/js/libs/SmoothScroll.min.js" crossorigin="anonymous" defer></script> -->
-    <!-- <script src="/app/js/libs/ScrollTrigger.min.js" defer></script> -->
-    <!-- <script src="/app/js/libs/gsap.min.js" defer></script> -->
-    <script src="/app/js/main.min.js" type="module" defer></script>
-    <!-- <script src="/app/js/main.js" defer></script> -->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <base href="/">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="./app/img/favicon.svg">
+        <!-- SEO -->
+        <title>Современная дентальная клиника | СДК</title>
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./app/css/main.min.css">
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/lazy-load.min.js"></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="/app/js/libs/min/lightgallery-all.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
+    </head>
 
 <body class="home-page">
+    <!-- PRELOADER -->
+    <div id="preloader" class="home-page__preloader preloader">
+        <div class="preloader__wrapper">
+            <div class="preloader__item-wrapper">
+                <div class="preloader__item"></div>
+            </div>
+        </div>
+    </div>
     <!-- HEADER -->
     <header id="header" class="home-page__header header">
         <!-- HEADER-TOP -->
         <div class="header__top header-top">
             <div class="header-top__container container">
                 <a href="/" title="Логотип СДК" class="header-top__logo logo">
-                    <img class="logo__img" src="/app/img/logo.svg" alt="Логотип СДК" title="Логотип СДК">
+                    <img class="logo__img" data-src="./app/img/logo.svg" alt="Логотип СДК" title="Логотип СДК">
                 </a>
                 <ul class="header-top__social-list">
                     <li class="header-top__social-list-item">
@@ -400,12 +401,17 @@
             <div id="slider-hero" class="swiper hero__slider hero-slider">
                 <div class="swiper-wrapper hero-slider__wrapper">
                     <div class="swiper-slide hero-slider__slide hero-slide">
-                        <picture>
-                            <source srcset="./app/img/hero/slide-1.jpg" media="(max-width: 767px)">
-                            <img class="hero-slide__img" src="./app/img/hero/slide-1.jpg" alt="">
-                        </picture>
-                        <img src="" alt="">
+                        <div class="hero-slide__img" data-image='./app/img/hero/slide-1.jpg'></div>
                         <div class="hero-slide__content-wrapper">
+                            <div data-swiper-parallax="-300" class="hero-slide__content-top slide-top-content">
+                                <div class="slide-top-content__text">
+                                    <span class='slide-top-content__text-main'>
+                                        Имплантация <strong>любой сложности</strong></span>
+                                    <span class='slide-top-content__text-color'>
+                                        По доступной цене
+                                    </span>
+                                </div>
+                            </div>
                             <div data-swiper-parallax="-500" class="hero-slide__content">
                                 <h3 class="hero-slide__content-title h-3">
                                     Профессиональная гигиена 
@@ -422,11 +428,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide hero-slider__slide hero-slide">
-                        <picture>
-                            <source srcset="./app/img/hero/slide-2-ph.jpg" media="(max-width: 767px)">
-                            <source srcset="./app/img/hero/slide-2-sm.jpg" media="(max-width: 991px)">
-                            <img class="hero-slide__img" src="./app/img/hero/slide-2.jpg" alt="">
-                        </picture>
+                        <div class="hero-slide__img" data-image='./app/img/hero/slide-2.jpg' data-image-sm='./app/img/hero/slide-2-sm.jpg' data-image-ph='./app/img/hero/slide-2-ph.jpg'></div>
                         <!-- <div class="hero-slide__content-wrapper">
                             <div data-swiper-parallax="-500" class="hero-slide__content">
                                 <h3 class="hero-slide__content-title h-3">
@@ -478,8 +480,8 @@
                     <li class="services__list-item">
                         <a href="./service.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-1.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-1.svg" alt="иконка">
+                                <div class="services__list-icon" data-image="/app/img/services/img-1.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-1.svg"></div>
                             </div>
                             <p class="services__list-descr"> Консультация </p>
                             <span class="services__list-btn button-icon">
@@ -493,8 +495,8 @@
                     <li class="services__list-item">
                         <a href="./404.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-2.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-2.svg" alt="иконка">
+                                <div class="services__list-icon" data-image="/app/img/services/img-2.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-2.svg"></div>
                             </div>
                             <p class="services__list-descr">
                                 Профессиональная гигиена полости рта
@@ -510,8 +512,8 @@
                     <li class="services__list-item">
                         <a href="./service.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-3.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-3.svg" alt="иконка">    
+                                <div class="services__list-icon" data-image="/app/img/services/img-3.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-3.svg"></div>
                             </div>
                             <p class="services__list-descr"> Отбеливание </p>
                             <span class="services__list-btn button-icon">
@@ -525,8 +527,8 @@
                     <li class="services__list-item">
                         <a href="./service.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-4.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-4.svg" alt="иконка">    
+                                <div class="services__list-icon" data-image="/app/img/services/img-4.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-4.svg"></div>
                             </div>
                             <p class="services__list-descr"> Лечение зубов </p>
                             <span class="services__list-btn button-icon">
@@ -540,8 +542,8 @@
                     <li class="services__list-item">
                         <a href="./service.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-5.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-5.svg" alt="иконка">    
+                                <div class="services__list-icon" data-image="/app/img/services/img-5.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-5.svg"></div>
                             </div>
                             <p class="services__list-descr"> Протезирование зубов </p>
                             <span class="services__list-btn button-icon">
@@ -555,8 +557,8 @@
                     <li class="services__list-item">
                         <a href="./service.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-6.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-6.svg" alt="иконка">    
+                                <div class="services__list-icon" data-image="/app/img/services/img-6.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-6.svg"></div>
                             </div>
                             <p class="services__list-descr"> Хирургия </p>
                             <span class="services__list-btn button-icon">
@@ -570,8 +572,8 @@
                     <li class="services__list-item">
                         <a href="./service.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-7.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-7.svg" alt="иконка">    
+                                <div class="services__list-icon" data-image="/app/img/services/img-7.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-7.svg"></div>
                             </div>
                             <p class="services__list-descr"> Имплантация </p>
                             <span class="services__list-btn button-icon">
@@ -585,8 +587,8 @@
                     <li class="services__list-item">
                         <a href="./service.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-8.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-8.svg" alt="иконка">    
+                                <div class="services__list-icon" data-image="/app/img/services/img-8.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-8.svg"></div>
                             </div>
                             <p class="services__list-descr"> Ортодонтия </p>
                             <span class="services__list-btn button-icon">
@@ -600,8 +602,8 @@
                     <li class="services__list-item">
                         <a href="./service.html" class="services__list-link js-hover-btn">
                             <div class="services__list-icon-wrapper">
-                                <img class="services__list-icon" src="/app/img/services/img-9.svg" alt="иконка">
-                                <img class="services__list-icon services__list-icon_hover" src="/app/img/services/img-9.svg" alt="иконка">    
+                                <div class="services__list-icon" data-image="/app/img/services/img-9.svg"></div>
+                                <div class="services__list-icon services__list-icon_hover" data-image="/app/img/services/img-9.svg"></div>
                             </div>
                             <p class="services__list-descr"> Рентген-кабинет </p>
                             <span class="services__list-btn button-icon">
@@ -643,10 +645,10 @@
                         <span class="button__bg js-hover-btn__bg"></span>
                     </a>
                 </div>
-                <div class="about__block-image block-image">
+                <div class="about__block-image block-image" data-image="./app/img/about/bg-img-1.jpg">
                     <div class="block-image__content">
                         <div class="block-image__content-top">
-                            <img src="/app/img/about/img-1.jpg" alt="Пономаренко Рубен Сергеевич" title="Пономаренко Рубен Сергеевич" class="block-image__content-img">
+                            <img data-src="/app/img/about/img-1.jpg" alt="Пономаренко Рубен Сергеевич" title="Пономаренко Рубен Сергеевич" class="block-image__content-img">
                             <p class="block-image__content-descr">
                                 &laquo;...наша клиника&nbsp;&mdash; одна из&nbsp;немногих, где применяется персональный подход к&nbsp;каждому пациенту. Максимум помощи при минимуме затрат пациента. Любое лечение по&nbsp;протоколу с&nbsp;обязательным диагностическим снимком и&nbsp;фотопротоколом. Обязательное пояснение каждому пациенту всех этапов плана лечения и&nbsp;конечно стоимости...&raquo;
                             </p>
@@ -666,7 +668,7 @@
                     Наши <span class="advantages__title-color color">преимущества</span>
                 </h2>
                 <div class="advantages__content-wrapper">
-                    <div class="advantages__img"></div>
+                    <div class="advantages__img" data-image="./app/img/advantages/img-2.jpg"></div>
                     <div class="advantages__content">
                         <p class="advantages__descr">
                             Перед началом лечения для пациента проводят несколько консультаций и&nbsp;составляют план лечения.
@@ -723,36 +725,29 @@
             <div id="slider-clinic" class="swiper clinic__slider">
                 <div class="swiper-wrapper clinic__slider-wrapper">
                     <div class="swiper-slide clinic__slider-slide">
-                        <a href="/app/img/clinic/slide-1.jpg" class="clinic__slider-link">
-                            <img src="/app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img">
+                        <a href="./app/img/clinic/slide-1.jpg" class="clinic__slider-link">
+                            <img data-src="./app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img" loading="lazy">
+                            <div class="clinic__slider-preloader swiper-lazy-preloader"></div>
                         </a>
                     </div>
                     <div class="swiper-slide clinic__slider-slide">
-                        <a href="/app/img/clinic/slide-1.jpg" class="clinic__slider-link">
-                            <img src="/app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img">
+                        <a href="./app/img/clinic/slide-1.jpg" class="clinic__slider-link">
+                            <img data-src="./app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img" loading="lazy">
+                            <div class="clinic__slider-preloader swiper-lazy-preloader"></div>
                         </a>
                     </div>
                     <div class="swiper-slide clinic__slider-slide">
-                        <a href="/app/img/clinic/slide-1.jpg" class="clinic__slider-link">
-                            <img src="/app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img">
+                        <a href="./app/img/clinic/slide-1.jpg" class="clinic__slider-link">
+                            <img data-src="./app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img" loading="lazy">
+                            <div class="clinic__slider-preloader swiper-lazy-preloader"></div>
                         </a>
                     </div>
                      <div class="swiper-slide clinic__slider-slide">
-                        <a href="/app/img/clinic/slide-1.jpg" class="clinic__slider-link">
-                            <img src="/app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img">
+                        <a href="./app/img/clinic/slide-1.jpg" class="clinic__slider-link">
+                            <img data-src="./app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img" loading="lazy">
+                            <div class="clinic__slider-preloader swiper-lazy-preloader"></div>
                         </a>
                     </div>
-                    <!--
-                    <div class="swiper-slide clinic__slider-slide">
-                        <a href="/app/img/clinic/slide-1.jpg" class="clinic__slider-link">
-                            <img src="/app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img">
-                        </a>
-                    </div>
-                    <div class="swiper-slide clinic__slider-slide">
-                        <a href="/app/img/clinic/slide-1.jpg" class="clinic__slider-link">
-                            <img src="/app/img/clinic/slide-1.jpg" alt="Изображение слайда" class="clinic__slider-img">
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -778,7 +773,7 @@
             <div id="slider-specialists" class="swiper specialists__slider">
                 <div class="swiper-wrapper specialists__slider-wrapper">
                     <div class="swiper-slide specialists__slider-slide">
-                        <img data-swiper-parallax="-30" src="/app/img/specialists/img-1.png" alt="Изображение слайда" class="specialists__slide-img js-img-specialist">
+                        <img data-swiper-parallax="-30" data-src="./app/img/specialists/img-1.png" alt="Изображение слайда" class="specialists__slide-img js-img-specialist">
                         <div class="specialists__slide-content">
                             <h3 class="specialists__slide-title h-3 js-title-specialist">
                                 Павлиди Константин Давидович
@@ -830,7 +825,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide specialists__slider-slide">
-                        <img data-swiper-parallax="-30" src="/app/img/specialists/img-2.png" alt="Изображение слайда" class="specialists__slide-img js-img-specialist">
+                        <img data-swiper-parallax="-30" data-src="/app/img/specialists/img-2.png" alt="Изображение слайда" class="specialists__slide-img js-img-specialist">
                         <div class="specialists__slide-content">
                             <h3 class="specialists__slide-title h-3 js-title-specialist">
                                 Жигурт Юрий Иванович
@@ -882,7 +877,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide specialists__slider-slide">
-                        <img data-swiper-parallax="-30" src="/app/img/specialists/img-3.png" alt="Изображение слайда" class="specialists__slide-img js-img-specialist">
+                        <img data-swiper-parallax="-30" data-src="/app/img/specialists/img-3.png" alt="Изображение слайда" class="specialists__slide-img js-img-specialist">
                         <div class="specialists__slide-content">
                             <h3 class="specialists__slide-title h-3 js-title-specialist">
                                 Павлиди Константин Давидович
@@ -980,22 +975,22 @@
                     <ul class="reviews__list">
                         <li class="reviews__item">
                             <a class="reviews__link" href="/" target="_blank" aria-label="Перейти Яндекс Отзывы">
-                                <img class="reviews__link-img" src="./app/img/reviews/ya-reviews.png" alt="Яндекс Отзывы" title="Яндекс Отзывы">
+                                <img class="reviews__link-img" data-src="./app/img/reviews/ya-reviews.png" alt="Яндекс Отзывы" title="Яндекс Отзывы">
                             </a>
                         </li>
                         <li class="reviews__item">
                             <a class="reviews__link" href="/" target="_blank" aria-label="Перейти в 2gis">
-                                <img class="reviews__link-img" src="./app/img/reviews/2gis.png" alt="2gis" title="2gis">
+                                <img class="reviews__link-img" data-src="./app/img/reviews/2gis.png" alt="2gis" title="2gis">
                             </a>
                         </li>
                         <li class="reviews__item">
                             <a class="reviews__link" href="/" target="_blank" aria-label="Перейти в Google maps">
-                                <img class="reviews__link-img" src="./app/img/reviews/go-maps.png" alt="Google maps" title="Google maps">
+                                <img class="reviews__link-img" data-src="./app/img/reviews/go-maps.png" alt="Google maps" title="Google maps">
                             </a>
                         </li>
                         <li class="reviews__item">
                             <a class="reviews__link" href="/" target="_blank" aria-label="Перейти в Prodoctorov">
-                                <img class="reviews__link-img" src="./app/img/reviews/prodoctorov.png" alt="Prodoctorov" title="Prodoctorov">
+                                <img class="reviews__link-img" data-src="./app/img/reviews/prodoctorov.png" alt="Prodoctorov" title="Prodoctorov">
                             </a>
                         </li>
                     </ul>
@@ -1049,11 +1044,11 @@
                     class="modal-specialist__close-btn modal-close js-close-modal"></button>
                 <div class="modal-specialist__content">
                     <div class="modal-specialist__content-left">
-                        <img src="" alt="" class="modal-specialist__img" id="mod-img">
+                        <img id="mod-img" data-src="" alt="" class="modal-specialist__img">
                     </div>
                     <div class="modal-specialist__content-right">
-                        <h3 class="modal-specialist__content-title h-3" id="mod-title"></h3>
-                        <div class="modal-specialist__content-right-descr text-default" id="mod-text"></div>
+                        <h3 id="mod-title" class="modal-specialist__content-title h-3"></h3>
+                        <div id="mod-text" class="modal-specialist__content-right-descr text-default"></div>
                     </div>
                 </div>
             </div>
@@ -1065,10 +1060,10 @@
             <div class="footer__content footer-content">
                 <div class="footer-content__img-wrapper">
                     <a class="footer-content__logo logo" href="/" aria-label="Перейти на главную страницу">
-                        <img class="logo__img" src="/app/img/logo-footer.svg" alt="Логотип СДК" title="Логотип СДК">
+                        <img class="logo__img" data-src="/app/img/logo-footer.svg" alt="Логотип СДК" title="Логотип СДК">
                     </a>
                     <a href="/" class="footer-content__img-link logo" target="_blank" aria-label="Перейти на Продокторов">
-                        <img class="footer-content__img logo__img" src="/app/img/footer/prodoktorov.png" alt="Продокторов" title="Продокторов">
+                        <img class="footer-content__img logo__img" data-src="/app/img/footer/prodoktorov.png" alt="Продокторов" title="Продокторов">
                     </a>
                 </div>
                 <div class="footer-content__list-wrapper">
@@ -1259,7 +1254,7 @@
         </svg>
     </button>
     <!-- SCRIPTS -->
-    <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="./app/js/libs/min/jquery-3.7.1.min.js"></script>
 </body>
 
 </html>
