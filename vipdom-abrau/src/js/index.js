@@ -1,7 +1,21 @@
-import removeFocus from './libs/removeFocus/index.min.js';
-
 document.addEventListener('DOMContentLoaded', () => {
+  const html = document.querySelector('html');
+  const body = document.querySelector('body');
+  const mobMenuWrap = document.getElementById('menu-mobile');
+  const mobMenuBtn = document.getElementById('burger-toggle');
+
   // УБИРАЕМ ФОКУС ПОСЛЕ НАЖАТИЯ НА КНОПКУ ИЛИ ССЫЛКУ
+  const removeFocus = () => {
+    const arrBtn = document.querySelectorAll('button');
+    const arrLink = document.querySelectorAll('a');
+    const arrElements = [...arrBtn, ...arrLink];
+
+    arrElements.forEach(ev => {
+      ev.addEventListener('mousedown', el => el.preventDefault());
+      ev.addEventListener('mouseup', el => el.preventDefault());
+    });
+  };
+
   removeFocus();
 
   //ФИКСИРОВАННАЯ ШАПКА ПРИ СКРОЛЛЕ
@@ -28,6 +42,78 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   fixedHeader();
+
+  // МОБИЛЬНОЕ МЕНЮ
+  class MobMenu {
+    html = null;
+    body = null;
+    btn = null;
+    menu = null;
+
+    constructor(html, body, btn, menu) {
+      this.html = html;
+      this.body = body;
+      this.btn = btn;
+      this.menu = menu;
+    }
+
+    handleBtn = () => {
+      this.btn.addEventListener('click', () => {
+        this.btn.classList.contains('menu-toggle_active') ? this.close() : this.open();
+      });
+    };
+
+    handleESC = () => {
+      window.addEventListener('keydown', ev => {
+        if (ev.key === 'Escape') this.close();
+      });
+    };
+
+    open = () => {
+      this.btn.classList.add('menu-toggle_active');
+      this.btn.setAttribute('aria-label', 'Закрыть мобильное меню');
+      this.menu.classList.add('active');
+      this.body.classList.add('menu-open');
+      this.html.classList.add('menu-open');
+    };
+
+    close = () => {
+      this.btn.classList.remove('menu-toggle_active');
+      this.btn.setAttribute('aria-label', 'Открыть мобильное меню');
+      this.menu.classList.remove('active');
+      this.body.classList.remove('menu-open');
+      this.html.classList.remove('menu-open');
+    };
+
+    init = () => {
+      if (this.mobMenuBtn !== null) {
+        this.handleBtn();
+        this.handleESC();
+      } else return;
+    };
+  }
+
+  const mobMenu = new MobMenu(html, body, mobMenuBtn, mobMenuWrap);
+  mobMenu.init();
+
+  const scrollMenuLink = () => {
+    const arrLink = Array.from(document.querySelectorAll('a[href^="#"]'));
+
+    if (!arrLink || arrLink.length === 0 || arrLink === null) return;
+
+    arrLink.forEach(anchor => {
+      anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        const itemLink = document.querySelector(this.getAttribute('href'));
+
+        if (mobMenuWrap.classList.contains('active')) mobMenu.close();
+
+        itemLink.scrollIntoView({ behavior: 'smooth', block: 'center' }, { passive: true });
+      });
+    });
+  };
+
+  scrollMenuLink();
 
   // ХОВЕР У ЭЛЕМЕНТА В СЕКЦИИ "ПРЕИМУЩЕСТВА"
   const hoverAdvantages = () => {

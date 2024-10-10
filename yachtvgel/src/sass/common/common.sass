@@ -382,6 +382,10 @@ body.menu-open
   border-radius: 8px
   background-color: $clr_1
   transition: background-color .2s linear, color .2s linear, transform .2s linear
+
+  &.hidden
+    display: none
+    
   &:hover
     +hover
       color: $clr_1
@@ -430,6 +434,8 @@ body.menu-open
   border-radius: 8px
   background-color: $clr_4
   transition: background-color .2s linear, color .2s linear, transform .2s linear, box-shadow .2s linear
+  &.hidden
+    display: none
 
   +ph
     padding: 8px 10px

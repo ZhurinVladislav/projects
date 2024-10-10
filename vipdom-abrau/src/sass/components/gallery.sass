@@ -1,19 +1,39 @@
 .gallery
+	&.element-show
+		.gallery__title
+			opacity: 1
+			transform: translateY(0)
+
+		.gallery__slider-wrap
+			opacity: 1
+			transform: translateY(0)
+
 	&__title
 		color: $clr_1
 		text-align: center
+		opacity: 0
+		transform: translateY(-20px)
+		transition: opacity .4s linear, transform .3s linear
 
 	&__slider-wrap
 		position: relative
+		opacity: 0
+		transform: translateY(40px)
+		transition: opacity .4s linear, transform .3s linear
 
 	.swiper-btn
 		&:active
 			transform: translateY(-50%) scale(.98)
+			+ph
+				transform: scale(.98)
 		&_prev
 			left: -69px
 			+max(1570px)
 				left: 0
 				background-color: $clr_1
+			+ph
+				right: 90px
+				left: auto
 		&_next
 			right: -69px
 			+max(1570px)
@@ -33,4 +53,8 @@
 		z-index: 1
 		top: 50%
 		transform: translateY(-50%)
+		+ph
+			top: auto
+			bottom: -40px
+			transform: none
 

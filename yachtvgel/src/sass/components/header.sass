@@ -81,6 +81,7 @@
     line-height: 130%
 
   &__link
+    white-space: nowrap
     +ph
       font-size: 14px
 
@@ -94,9 +95,12 @@
     display: flex
     align-items: center
     gap: 24px
-    margin-left: auto
+    // margin-left: auto
     max-width: 366px
-    width: 100%
+    // max-width: 202px
+    // width: 100%
+    +sm
+      margin-left: auto
     +ph
       flex-direction: column-reverse
       gap: 12px 24px
@@ -109,7 +113,7 @@
   align-items: center
   flex-wrap: wrap
   gap: 4px 24px
-  margin: 0 auto
+  margin-left: auto
   +md
     flex-direction: column
     flex-wrap: no-wrap

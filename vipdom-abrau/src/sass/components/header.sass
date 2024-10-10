@@ -1,37 +1,46 @@
+.home-page
+  .header-menu
+    display: flex
+    +sm
+      display: none
 .header
   position: fixed
-  z-index: 1000
-    
-  &.header_active
-    position: fixed
-    z-index: 500
-    animation-name: fadeInUp
-    max-height: 104px
-    box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
-    // animation-duration: 1s
-    +md
-      max-height: 122px
-    +sm
-      max-height: 100%
+  z-index: 500
+  +ph
+    background-color: $clr_2
 
+  &__menu-container
+    +ph
+      padding: 0
+
+  &.header_active
+    background-color: $clr_2
     &:hover
       +hover
         max-height: 100%
-
         .header-menu
           max-height: 56px
           opacity: 1
           transform: translateY(0)
 
     .header-menu
-      padding-top: 0
       max-height: 0
       opacity: 0
       transform: translateY(-20px)
+      +ph
+        max-height: max-content
+        opacity: 1
+        transform: translateY(0)
+      &__list
+        border-color: $clr_0
 
-  &__menu-container
-    +ph
-      padding: 0
+      &__list-link
+        &:hover
+          +hover
+            border-color: $clr_1
+        &:focus-visible:not(:active),
+        &:focus:not(:active)
+          border-color: $clr_1
 
 .header-top
   padding: 20px 0
@@ -40,42 +49,30 @@
   transition: margin .2s linear, padding-top .2s linear
   +ph
     gap: 0 12px
-    padding-top: 12px
+    padding: 18px 0
 
   &__container
+    position: static
     display: flex
     align-items: center
     justify-content: space-between
     gap: 20px
     +ph
-      justify-content: flex-start
-      flex-wrap: wrap
       gap: 20px 10px
-
-  &__logo-wrap
-    display: none
-    width: 100%
-    +ph
-      display: flex
 
   &__logo
     max-width: 231px
     max-height: 20px
     +ph
-      max-width: 190px
-    &_ph
-      +ph
-        display: none
+      max-width: 200px
 
 .header-list-links
   display: flex
   align-items: center
   gap: 10px 16px
   flex-wrap: wrap
-  +ph
-    justify-content: flex-start
-    gap: 10px
-    font-size: 12px
+  +sm
+    display: none
 
   &__item
     &:first-child
@@ -89,34 +86,19 @@
   justify-content: flex-end
   flex-wrap: wrap
   gap: 10px 40px
-
-  &__item
-    &:last-child
-      +ph
-        display: none
-
-  &__item-btn
-    +ph
-      display: none
+  +lr
+    gap: 10px 20px
+  +sm
+    display: none
 
 .header-menu
-  display: flex
+  display: none
   align-items: center
   justify-content: center
   color: $clr_1
   transition: transform .2s linear, max-height .2s linear
-  +ph
-    display: block
-    max-width: 100%
-    width: 100%
-    overflow-x: auto
-
-  &::-webkit-scrollbar
-    height: 4px
-    background-color: $clr_1
-
-  &::-webkit-scrollbar-thumb
-    background-color: $clr_2
+  +sm
+    display: none
 
   &__list
     display: flex
@@ -132,15 +114,67 @@
     height: 100%
     border-bottom: 2px solid $clr_0
     transition: transform .2s linear, border-color .2s linear
-    +ph
-      display: inline-block
-      padding: 8px 10px
-      width: max-content
-      min-height: auto
     &:hover
       +hover
         border-color: $clr_2
+    &:focus-visible:not(:active),
     &:focus:not(:active)
       border-color: $clr_3
     &:active
       transform: scale(.98)
+
+// КНОПКА ОТКРЫТИЯ МОБИЛЬНОГО МЕНЮ
+.menu-toggle
+  display: none
+  width: 30px
+  height: 25px
+  +sm
+    position: relative
+    z-index: 30000
+    display: block
+  +ph
+    width: 25px
+    height: 20px
+
+  &__item
+    position: absolute
+    display: block
+    width: 100%
+    height: 2px
+    background-color: $clr_1
+    transform: rotate(0) translate(0, 0)
+    transition: all .3s linear
+
+    &:nth-child(1)
+      top: 0
+      left: 0
+
+    &:nth-child(2)
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      opacity: 1
+
+    &:nth-child(3)
+      bottom: 0
+      left: 0
+
+  &.menu-toggle_active
+    .menu-toggle__item
+      &:nth-child(1)
+        top: 50%
+        left: 50%
+        transform: rotate(45deg) translate(-50%, -50%)
+        transform-origin: top left
+
+        
+      &:nth-child(2)
+        left: 100%
+        transform: translateY(0)
+        opacity: 0
+
+      &:nth-child(3)
+        bottom: 50%
+        left: 50%
+        transform: rotate(-45deg) translate(-50%, 50%)
+        transform-origin: bottom left

@@ -1,23 +1,33 @@
 .location
+	&.element-show
+		.location__title
+			opacity: 1
+			transform: translateY(0)
+
 	&__container
 		display: flex
 		justify-content: center
 	&__title
 		max-width: 942px
 		text-align: center
-	&__img
-		position: relative
-		margin-bottom: -100px
-		max-width: 100%
+		opacity: 0
+		transform: translateY(-40px)
+		transition: opacity .4s linear, transform .5s linear
+
+	
+	&::after
+		content: ''
+		position: absolute
+		top: 60%
+		left: 0
+		z-index: -1
 		width: 100%
-		min-height: 938px
-		background-position: center
-		background-repeat: no-repeat
-		background-size: cover
+		height: 1345px
+		background-color: $clr_3
 		+sm
-			min-height: 600px
+			height: 970px
 		+ph
-			min-height: 300px
+			height: 800px
 
 		&::after
 			content: ''
@@ -26,6 +36,61 @@
 			left: 0
 			z-index: -1
 			width: 100%
-
 			height: 1345px
 			background-color: $clr_3
+			+sm
+				height: 970px
+			+ph
+				height: 800px
+
+.location-img-list
+	display: flex
+	align-items: center
+	gap: 24px
+	+sm
+		gap: 20px
+	+ph
+		gap: 12px
+
+	&__item
+		background-color: $clr_2
+		background-position: center
+		background-size: cover
+		&_one
+			width: 248px
+			height: 408px
+			+md
+				height: 308px
+			+sm
+				display: none
+		&_two
+			width: 338px
+			height: 536px
+			+md
+				height: 436px
+			+sm
+				height: 200px
+		&_three
+			width: 700px
+			height: 876px
+			+md
+				height: 676px
+			+sm
+				height: 400px
+			+ph
+				height: 350px
+		&_four
+			width: 338px
+			height: 536px
+			+md
+				height: 436px
+			+sm
+				height: 200px
+
+		&_five
+			width: 248px
+			height: 408px
+			+md
+				height: 308px
+			+sm
+				display: none

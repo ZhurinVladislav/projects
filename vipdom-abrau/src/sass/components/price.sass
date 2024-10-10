@@ -6,6 +6,12 @@
 		display: flex
 		flex-direction: column
 		align-items: center
+		opacity: 0
+		transform: translateY(-20px)
+		transition: opacity .3s linear, transform .3s linear
+		&.element-show
+			opacity: 1
+			transform: translateY(0)
 
 	&__title
 		margin-bottom: 8px
@@ -25,12 +31,12 @@
 	&__link
 		margin-bottom: 24px
 
-	.link-text-inv
+	.link-text
 		&:hover
 			+hover
 				color: $clr_2
 
-			.link-text-inv__icon
+			.link-text__icon
 				fill: $clr_2
 
 		&:focus-visible:not(:active),
