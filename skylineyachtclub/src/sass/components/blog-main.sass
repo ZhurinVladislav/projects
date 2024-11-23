@@ -1,0 +1,85 @@
+.blog-main
+	&__link
+		max-width: 250px
+		+ph
+			max-width: 100%
+	
+.blog-main-list
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-auto-rows: minmax(300px, 400px)
+	gap: 24px
+	margin-bottom: 40px
+
+	+md
+		grid-template-columns: repeat(3, 1fr)
+
+	+sm
+		grid-template-columns: repeat(2, 1fr)
+
+	+ph
+		grid-template-columns: 1fr
+		grid-auto-rows: 34vh
+
+	&__item
+		display: flex
+		width: 100%
+		height: 100%
+
+	&__link
+		position: relative
+		display: flex
+		align-items: flex-end
+		padding: 20px
+		width: 100%
+		height: 100%
+		font-family: $ff_2
+		font-weight: 500
+		font-size: 24px
+		line-height: 120%
+		color: $clr_1
+		background-color: $clr_3
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		overflow: hidden
+
+		&:hover
+			+hover
+				.blog-main-list__text_hidden
+					transform: translateX(0)
+					opacity: 1
+
+				.blog-main-list__text_active
+					transform: translateY(5vh)
+					opacity: 0
+
+				&::after
+					opacity: .8
+
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 0
+			width: 100%
+			height: 100%
+			background-image: url(../img/services/bg-img.svg)
+			transition: opacity .2s linear
+
+	&__text-wrapper
+		position: relative
+		z-index: 1
+
+	&__text
+		&_hidden
+			position: absolute
+			bottom: 0
+			left: 0
+			transform: translateX(-10vh)
+			opacity: 0
+			transition: opacity .2s linear, transform .3s linear
+			
+		&_active
+			transition: opacity .2s linear, transform .2s linear

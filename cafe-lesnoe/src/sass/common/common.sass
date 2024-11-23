@@ -1281,8 +1281,9 @@ input[type='number']
   background-color: $clr_1
   transition: opacity .3s linear
 
-  &.loading
-    opacity: 0
+  &.hidden
+    animation: fadeOut 1s
+    animation-fill-mode: forwards
 
   &__list-item
     position: absolute
@@ -1332,6 +1333,11 @@ input[type='number']
 
   100%
     opacity: 1
+
+@keyframes fadeOut
+  100%
+    opacity: 0
+    visibility: hidden
 
 
 @keyframes opacityBtn

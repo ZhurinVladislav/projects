@@ -1,50 +1,60 @@
 .begin
-	&__content
+	background-color: $clr_1
+
+	&__container
 		display: flex
 		justify-content: space-between
-		padding: 60px
-		background-image: url(../img/begin/bg-img.jpg)
-		background-position: center
-		background-size: cover
-		background-repeat: no-repeat
+		padding: 0
+		padding-left: 25px
+		max-width: 100%
 
-		+md
-			padding: 40px
-
-		+sm
-			padding: 30px
-		
 		+ph
 			flex-direction: column
-			padding: 30px 20px
+			padding-left: 0
+			padding-right: 0
 
-	&__content-left
-		margin-right: 20px
-		max-width: 40% 
+	&__content-wrapper
+		margin-left: auto
+		padding: 134px 0
+		margin-right: 138px
+		max-width: 833px
+
+		+lr
+			margin-right: 40px
+			margin-left: 0
+			max-width: 50%
+
+		+sm
+			padding: 80px 0
 
 		+ph
-			margin-right: 0
-			margin-bottom: 20px
+			padding: 40px 10px 0 10px
+			margin-bottom: 40px
 			max-width: 100%
 
-	&__content-title
-		margin-bottom: 20px
-		
-		+ph
-			margin-bottom: 10px
+	&__title
+		color: $clr_3
 
-	&__content-subtitle
-		font-size: 24px
-		text-transform: uppercase
+		+lr
+			font-size: 50px
 
-		+md
-			font-size: 20px
+		+sm
+			font-size: 40px
 
 		+ph
-			font-size: 16px
+			font-size: 30px
 
-	&__content-text-wrapper
-		max-width: 60%
+	&__img
+		max-width: 704px
+		width: 100%
+		min-height: 100%
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+
+		+lr
+			max-width: 50%
 
 		+ph
 			max-width: 100%
+			min-height: 400px

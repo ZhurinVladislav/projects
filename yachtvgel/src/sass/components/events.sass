@@ -1,0 +1,79 @@
+.events
+	&__swiper-main-wrapper
+		position: relative
+
+		+lr
+			padding: 0 20px
+
+		+ph
+			padding: 0 12px
+
+.events-swiper
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: -10px
+
+	&__btn
+		position: absolute
+		top: 50%
+		z-index: 2
+		
+		&_prev
+			left: -20px
+			+lr
+				left: 0
+			+ph
+				left: -8px
+
+		&_next
+			right: -20px
+			+lr
+				right: 0
+			+ph
+				right: -8px
+
+	&__slide
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 10px
+		height: 442px
+		border-radius: 16px
+		background-color: $clr_1
+		transition: box-shadow .2s linear, transform .2s linear
+
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 0
+			width: 100%
+			height: 100%
+			border-radius: 16px
+			background-color: rgba($clr_2, .5)
+
+		&:hover
+			+hover
+				// box-shadow: 0 7px 16px 0 rgba(5, 23, 66, 0.13), 0 29px 29px 0 rgba(5, 23, 66, 0.11), 0 65px 39px 0 rgba(5, 23, 66, 0.07), 0 116px 46px 0 rgba(5, 23, 66, 0.02), 0 181px 51px 0 rgba(5, 23, 66, 0)
+				transform: translateY(-10px)
+
+	&__slide-img
+		display: flex
+		width: 100%
+		height: 100%
+		border-radius: 16px
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+
+	&__slide-text
+		position: absolute
+		bottom: 32px
+		left: 32px
+		z-index: 1
+		font-weight: 600
+		line-height: 115%
+		font-size: 20px
+		color: $clr_1

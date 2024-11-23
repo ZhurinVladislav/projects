@@ -18,16 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
   removeFocus();
 
   const overflowHTML = () => {
-    let scrollY = 0;
+    if (window.innerWidth >= 991) {
+      let scrollY = 0;
 
-    const toggleClassOverflow = () => {
-      scrollY = window.scrollY;
+      const toggleClassOverflow = () => {
+        scrollY = window.scrollY;
 
-      window.scrollY >= 100 ? document.body.classList.add('overflow') : document.body.classList.remove('overflow');
-    };
+        window.scrollY >= 100 ? document.body.classList.add('overflow') : document.body.classList.remove('overflow');
+      };
 
-    if (document.getElementById('menu-inner')) {
-      window.addEventListener('scroll', toggleClassOverflow, { passive: true });
+      if (document.getElementById('menu-inner')) {
+        window.addEventListener('scroll', toggleClassOverflow, { passive: true });
+      }
     }
   };
 
@@ -304,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
           slidesPerView: 1,
         },
 
-        768: {
+        992: {
           slidesPerView: 2,
         },
 

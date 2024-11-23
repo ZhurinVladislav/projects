@@ -1,645 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg" />
+        <!-- SEO -->
+        <title>Monadial</title>
+        <!-- styles -->
+        <link rel="stylesheet" href="/app/css/main.min.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <base href="/">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="app/img/favicon.svg">
-    <!-- SEO -->
-    <title>Monadial</title>
-    <meta name="description" content="Monadial">
-    <meta name="keywords" content="Monadial">
-    <!-- styles -->
-    <link rel="stylesheet" href="/app/css/main.min.css">
-    <!-- <link rel="stylesheet" href="/app/css/main.css"> -->
-</head>
-
-<body class="home-page">
-    <!-- header -->
-    <header class="home-page__header header">
-        <!-- header top -->
-        <div class="header__top header-top">
-            <div class="header-top__container container">
-                <div class="header-top__content content">
-                    <div class="content__left left">
-                        <a href="/" class="left__link-logo">
-                            <img class="left__logo" src="/app/img/logo.svg" alt="logo Monadial" title="logo Monadial">
-                        </a>
-                        <a href="./contacts.html" class="left__link">
-                            Monadial Enterprises LTD, Zinonos Sozou&nbsp;3, Limassol 3105 Cyprus
-                        </a>
-                    </div>
-                    <ul class="content__right right">
-                        <li class="right__item">
-                            <a class="right__link" href="tel:+79181890077">
-                                <svg class="right__svg svg-reset">
-                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
-                                </svg>
+    <body class="home-page">
+        <!-- header -->
+        <header class="home-page__header header">
+            <!-- header top -->
+            <div class="header__top header-top">
+                <div class="header-top__container container">
+                    <div class="header-top__content content">
+                        <div class="content__left left">
+                            <a href="/" class="left__link-logo">
+                                <img
+                                    class="left__logo"
+                                    src="/app/img/logo.svg"
+                                    alt="logo Monadial"
+                                    title="logo Monadial" />
                             </a>
-                        </li>
-                        <li class="right__item">
-                            <a class="right__link" href="mailto:info@morishotel.ru">
-                                <svg class="right__svg svg-reset">
-                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
-                                </svg>
+                            <a href="./contacts.html" class="left__link">
+                                Monadial Enterprises LTD, Zinonos Sozou&nbsp;3, Limassol 3105 Cyprus
                             </a>
-                        </li>
-                        <li class="right__item">
-                            <button aria-label="Feedback" data-open="form-callback" class="right__btn button-invert">
-                                Feedback
-                            </button>
-                        </li>
-                    </ul>
-                    <button aria-label="Open the mobile menu" class="menu__toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- header bottom -->
-        <div class="header__bottom header-bottom">
-            <div class="header-bottom__container container">
-                <nav class="header-bottom__menu menu">
-                    <ul class="menu__list">
-                        <li class="menu__item active">
-                            <a class="menu__link" href="/">
-                                <span class="menu__link-item">
-                                    Home
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="./main.html">
-                                <span class="menu__link-item">
-                                    About us
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu__item parent active">
-                            <a class="menu__link" href="./services.html">
-                                <span class="menu__link-item">
-                                    Services
-                                </span>
-                                <!-- <svg class="menu__icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                    </svg> -->
-                            </a>
-                            <ul class="menu__list-inner list-inner">
-                                <li class="menu__item active">
-                                    <a lass="list-inner__link-item" href="./main.html">
-                                        service one
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="list-inner__link" href="./main.html">
-                                        <span class="list-inner__link-item">
-                                            service two
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./services.html">
-                                <span class="menu__link-item">
-                                    Group Services
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./main.html">
-                                <span class="menu__link-item">
-                                    Our Fleet
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./main.html">
-                                <span class="menu__link-item">
-                                    Careers
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./newsroom.html">
-                                <span class="menu__link-item">
-                                    Newsroom
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./contacts.html">
-                                <span class="menu__link-item">
-                                    Contact Us
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <a class="menu__link link button" href="tel:+357 99 956 068">
-                        <svg class="link__icon">
-                            <use xlink:href="/app/img/icons/icons.svg#phone"></use>
-                        </svg>
-                        <span class="link__descr">
-                            +357 99 956 068
-                        </span>
-                    </a>
-                </nav>
-            </div>
-        </div>
-        <!-- burger menu -->
-        <div class="header__burger menu-mobile">
-            <div class="menu-mobile__wrap">
-                <nav class="menu-mobile__menu">
-                    <ul class="menu-list">
-                        <li class="menu-item active">
-                            <a href="./services.html" class="menu-link" target="_blank">
-                                Home
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="./services.html" class="menu-link" target="_blank">
-                                About us
-                            </a>
-                        </li>
-                        <li class="menu-item parent active">
-                            <a onclick="return false;" href="./main.html" class="menu-link" target="_blank">
-                                Services
-                            </a>
-                            <span class="arrow-list-mob">
-                                <svg>
+                        </div>
+                        <div
+                            class="content__lang-wrapper lang-wrapper js-lang-wrapper"
+                            tabindex="0"
+                            aria-label="Раскрыть список языков">
+                            <button class="lang-wrapper__btn js-btn-lang-toggle">
+                                <span class="lang-wrapper__text">Русский</span>
+                                <svg class="lang-wrapper__icon-arrow">
                                     <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                 </svg>
-                            </span>
-                            <ul class="menu-list__inner">
-                                <li class="menu-item">
-                                    <a class="menu-link" href="#">
-                                        service one
-                                    </a>
-                                </li>
-                                <li class="menu-item parent active">
-                                    <a class="menu-link" href="#">
-                                        service two
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link" href="#">
-                                        service three
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link" href="#">
-                                        service four
+                            </button>
+                            <ul class="lang-wrapper__list hidden js-list-lang">
+                                <li class="lang-wrapper__list-item">
+                                    <a
+                                        href="/"
+                                        class="lang-wrapper__list-link"
+                                        aria-label="Перейти на английскую версию сайта">
+                                        Английский
                                     </a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="./contacts.html" class="menu-link">
-                                <span class="link-item">
-                                    Group Services
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="./contacts.html" class="menu-link">
-                                <span class="link-item">
-                                    Our Fleet
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="./contacts.html" class="menu-link">
-                                <span class="link-item">
-                                    Careers
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="./contacts.html" class="menu-link">
-                                <span class="link-item">
-                                    Newsroom
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="./contacts.html" class="menu-link">
-                                <span class="link-item">
-                                    Contact Us
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <ul class="list-link">
-                    <li class="list-link__item">
-                        <a class="list-link__link" href="mailto:Management@monadial-shipping.com">
-                            Management@monadial-shipping.com
-                        </a>
-                    </li>
-                    <li class="list-link__item">
-                        <a class="list-link__link" href="mailto:Chartering@monadial-shipping.com">
-                            Chartering@monadial-shipping.com
-                        </a>
-                    </li>
-                    <li class="list-link__item">
-                        <a class="list-link__link" href="tel:+35799956068">
-                            +357 99 956 068
-                        </a>
-                    </li>
-                    <li class="list-link__item">
-                        <a class="list-link__link" href="/">
-                            Monadial Enterprises LTD, Zinonos Sozou&nbsp;3, Limassol 3105 Cyprus
-                        </a>
-                    </li>
-                    <li class="list-link__item item">
-                        <ul class="item__list list">
-                            <li class="list__item">
-                                <a class="list__link" href="tel:+79181890077">
-                                    <svg class="list__svg svg-reset">
-                                        <use xlink:href="/app/img/icons/icons.svg#vb"></use>
+                        </div>
+                        <ul class="content__right right">
+                            <li class="right__item">
+                                <a class="right__link" href="tel:+79181890077">
+                                    <svg class="right__svg svg-reset">
+                                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="list__item">
-                                <a class="list__link" href="mailto:info@morishotel.ru">
-                                    <svg class="list__svg svg-reset">
+                            <li class="right__item">
+                                <a class="right__link" href="mailto:info@morishotel.ru">
+                                    <svg class="right__svg svg-reset">
                                         <use xlink:href="/app/img/icons/icons.svg#wa"></use>
                                     </svg>
                                 </a>
                             </li>
+                            <li class="right__item">
+                                <button
+                                    aria-label="Feedback"
+                                    data-open="form-callback"
+                                    class="right__btn button-invert">
+                                    Feedback
+                                </button>
+                            </li>
                         </ul>
-                    </li>
-
-                </ul>
-                <button aria-label="Раскрыть окно обратной связи" class="button" data-open="form-callback">
-                    Feedback
-                </button>
-            </div>
-        </div>
-    </header>
-    <!-- hero -->
-    <section class="home-page__hero hero">
-        <div class="hero__container container">
-            <div class="hero__content content">
-                <h1 class="content__title header_1">
-                    Monadial
-                </h1>
-                <p class="content__descr">
-                    Ship management and maritime services
-                </p>
-                <p class="content__descr content__descr_last">
-                    The interests of&nbsp;our clients are at&nbsp;the heart of&nbsp;everything we&nbsp;do
-                </p>
-                <form action="/" class="hero__form form-item form">
-                    <ul class="form__content-top content-top">
-                        <li class="content-top__item">
-                            <input class="content-top__input" type="text" name="name" value="" id="comment-name"
-                                placeholder=" " required>
-                            <label>Name</label>
-                        </li>
-                        <li class="content-top__item">
-                            <input class="content-top__input" type="number" name="phone" required placeholder=" ">
-                            <label>Phone number</label>
-                        </li>
-                        <li class="content-top__item content-top__item_email">
-                            <input class="content-top__input" type="text" name="email" value="" id="comment-name"
-                                placeholder=" " required>
-                            <label>Email</label>
-                        </li>
-                        <li class="content-top__item content-top__item_last">
-                            <textarea class="content-top__textarea" name="comment" placeholder=" "></textarea>
-                            <label>Message</label>
-                        </li>
-                    </ul>
-                    <div class="form__content-bottom content-bottom">
-                        <button aria-label="Send request" class="content-bottom__dtn button">
-                            Send request
+                        <button aria-label="Open the mobile menu" class="menu__toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </button>
-                        <p class="content-bottom__descr">
-                            By&nbsp;clicking the button, I&nbsp;consent to&nbsp;the processing of&nbsp;my&nbsp;personal
-                            data
-                        </p>
                     </div>
-                </form>
-            </div>
-        </div>
-        <img class="hero__img" src="/app/img/hero/bg-img.png" alt="Monadial">
-    </section>
-    <!-- services-main -->
-    <section class="services-main">
-        <!-- services -->
-        <article class="home-page__services services">
-            <div class="services__container container">
-                <span class="services__subtitle subtitle">
-                    What do&nbsp;we&nbsp;offer
-                </span>
-                <h2 class="services__title header_2">
-                    Services
-                </h2>
-                <ul class="services__list list">
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/services/img-1.jpg" alt="First service" class="list__img">
-                            <p class="list__descr">
-                                Ship management
-                            </p>
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/services/img-2.jpg" alt="Two service" class="list__img">
-                            <p class="list__descr">
-                                Tech Management
-                            </p>
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/services/img-3.jpg" alt="Three service" class="list__img">
-                            <p class="list__descr">
-                                Crew Management &amp;&nbsp;Training
-                            </p>
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/services/img-4.jpg" alt="Four service" class="list__img">
-                            <p class="list__descr">
-                                Commercial Service
-                            </p>
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/services/img-5.jpg" alt="Five service" class="list__img">
-                            <p class="list__descr">
-                                New Building
-                            </p>
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/services/img-6.jpg" alt="Six service" class="list__img">
-                            <p class="list__descr">
-                                Insurance &amp;&nbsp;Claim
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <!-- group-services -->
-        <article class="home-page__group-services group-services">
-            <div class="group-services__container container">
-                <span class="group-services__subtitle subtitle">
-                    And further
-                </span>
-                <h2 class="group-services__title header_2">
-                    Group services
-                </h2>
-                <ul class="group-services__list list">
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/group-services/img-1.jpg" alt="First service" class="list__img">
-                            <p class="list__descr">
-                                Ship Broking
-                            </p>
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/group-services/img-2.jpg" alt="Two service" class="list__img">
-                            <p class="list__descr">
-                                Energy Commodity trade
-                            </p>
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <a href="/" class="list__link">
-                            <img src="/app/img/group-services/img-3.jpg" alt="Three service" class="list__img">
-                            <p class="list__descr">
-                                Ocean Yacht Management
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </article>
-    </section>
-    <!-- about -->
-    <section class="home-page__about about">
-        <div class="about__container container">
-            <div class="about__content content">
-                <div class="content__left left">
-                    <span class="left__subtitle subtitle">
-                        Company
-                    </span>
-                    <h2 class="left__title header_2">
-                        About us
-                    </h2>
-                </div>
-                <div class="content__right right">
-                    <div class="right__content">
-                        <p class="right__descr">
-                            Mondial Enterprises LTD was founded by&nbsp;a&nbsp;group of&nbsp;like-minded people
-                            in&nbsp;2022.
-                        </p>
-                        <p class="right__descr right__descr_last">
-                            In&nbsp;the most difficult times associated with the pandemic, it&nbsp;became clear that the
-                            global marine industry lacks a&nbsp;fresh look and an&nbsp;innovative approach
-                            to&nbsp;management, adhering to&nbsp;an&nbsp;unequivocal commitment to&nbsp;quality,
-                            efficiency and continuous improvement of&nbsp;its services for the benefit of&nbsp;our
-                            customers and partners.
-                        </p>
-                    </div>
-                    <a href="/" class="right__btn btn button">
-                        <span class="btn__descr">
-                            More
-                        </span>
-                        <svg class="btn__icon">
-                            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                        </svg>
-                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- form-main -->
-    <section class="home-page__form-main form-main">
-        <div class="form-main__container container">
-            <div class="form-main__content content">
-                <h2 class="content__title header_2">
-                    Get an&nbsp;offer
-                </h2>
-                <p class="content__descr">
-                    Describe the type of&nbsp;work and any detailed information. The manager will contact you and advise
-                    you
-                </p>
-                <form action="/" class="content__form form-item form">
-                    <ul class="form__content-top content-top">
-                        <li class="content-top__item">
-                            <input class="content-top__input" type="text" name="name" id="comment-name" placeholder=" "
-                                required>
-                            <label>Name</label>
+            <!-- header bottom -->
+            <div class="header__bottom header-bottom">
+                <div class="header-bottom__container container">
+                    <nav class="header-bottom__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item active">
+                                <a class="menu__link" href="/">
+                                    <span class="menu__link-item"> Home </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./main.html">
+                                    <span class="menu__link-item"> About us </span>
+                                </a>
+                            </li>
+                            <li class="menu__item parent active">
+                                <a class="menu__link" href="./services.html">
+                                    <span class="menu__link-item"> Services </span>
+                                    <!-- <svg class="menu__icon">
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg> -->
+                                </a>
+                                <ul class="menu__list-inner list-inner">
+                                    <li class="menu__item active">
+                                        <a lass="list-inner__link-item" href="./main.html"> service one </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="list-inner__link" href="./main.html">
+                                            <span class="list-inner__link-item"> service two </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./services.html">
+                                    <span class="menu__link-item"> Group Services </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./main.html">
+                                    <span class="menu__link-item"> Our Fleet </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./main.html">
+                                    <span class="menu__link-item"> Careers </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./newsroom.html">
+                                    <span class="menu__link-item"> Newsroom </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html">
+                                    <span class="menu__link-item"> Contact Us </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="menu__link link button" href="tel:+357 99 956 068">
+                            <svg class="link__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#phone"></use>
+                            </svg>
+                            <span class="link__descr"> +357 99 956 068 </span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!-- burger menu -->
+            <div class="header__burger menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a href="./services.html" class="menu-link" target="_blank"> Home </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./services.html" class="menu-link" target="_blank"> About us </a>
+                            </li>
+                            <li class="menu-item parent active">
+                                <a onclick="return false;" href="./main.html" class="menu-link" target="_blank">
+                                    Services
+                                </a>
+                                <span class="arrow-list-mob">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </span>
+                                <ul class="menu-list__inner">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> service one </a>
+                                    </li>
+                                    <li class="menu-item parent active">
+                                        <a class="menu-link" href="#"> service two </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> service three </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#"> service four </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Group Services </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Our Fleet </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Careers </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Newsroom </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="./contacts.html" class="menu-link">
+                                    <span class="link-item"> Contact Us </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list-link">
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:Management@monadial-shipping.com">
+                                Management@monadial-shipping.com
+                            </a>
                         </li>
-                        <li class="content-top__item">
-                            <input class="content-top__input" type="tel" name="phone" required placeholder=" ">
-                            <label>Phone number</label>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="mailto:Chartering@monadial-shipping.com">
+                                Chartering@monadial-shipping.com
+                            </a>
                         </li>
-                        <li class="content-top__item">
-                            <input class="content-top__input" type="text" name="mail" id="mail" placeholder=" "
-                                required>
-                            <label>Email</label>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="tel:+35799956068"> +357 99 956 068 </a>
                         </li>
-                        <li class="content-top__item content-top__item_last">
-                            <textarea class="content-top__textarea" name="comment" placeholder=" "></textarea>
-                            <label>Message</label>
+                        <li class="list-link__item">
+                            <a class="list-link__link" href="/">
+                                Monadial Enterprises LTD, Zinonos Sozou&nbsp;3, Limassol 3105 Cyprus
+                            </a>
+                        </li>
+                        <li class="list-link__item item">
+                            <ul class="item__list list">
+                                <li class="list__item">
+                                    <a class="list__link" href="tel:+79181890077">
+                                        <svg class="list__svg svg-reset">
+                                            <use xlink:href="/app/img/icons/icons.svg#vb"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a class="list__link" href="mailto:info@morishotel.ru">
+                                        <svg class="list__svg svg-reset">
+                                            <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                    <div class="form__content-bottom content-bottom">
-                        <button aria-label="Send request" class="content-bottom__dtn button">
-                            Send request
-                        </button>
-                        <p class="content-bottom__descr">
-                            By&nbsp;clicking the button, I&nbsp;consent to&nbsp;the processing of&nbsp;my&nbsp;personal
-                            data
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-    <!-- map -->
-    <section class="home-page__map map">
-        <div class="map__container">
-            <article class="map__content content">
-                <span class="content__subtitle subtitle">
-                    Connect with&nbsp;us
-                </span>
-                <h2 class="content__title header_2">
-                    Contact us
-                </h2>
-                <ul class="content__list list">
-                    <li class="list__item">
-                        <p class="list__descr">
-                            Аdress
-                        </p>
-                        <a class="list__link" href="/" target="_blank">
-                            Monadial Enterprises LTD,Zinonos Sozou&nbsp;3, Limassol 3105 Cyprus
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <p class="list__descr">
-                            Phone
-                        </p>
-                        <a class="list__link" href="tel:+35799956068">
-                            +357 99 956 068
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <p class="list__descr">
-                            Mail
-                        </p>
-                        <a class="list__link" href="mailto:Management@monadial-shipping.com">
-                            Management@monadial-shipping.com
-                        </a>
-                        <a class="list__link" href="mailto:Chartering@monadial-shipping.com">
-                            Chartering@monadial-shipping.com
-                        </a>
-                    </li>
-                </ul>
-            </article>
-            <div class="map__item">
-                <script type="text/javascript" charset="utf-8" async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A03ad08e8d02b4e388b0289a0564e4dfb4972258a71658d0853e1d432debc5e24&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
-            </div>
-        </div>
-    </section>
-    <!-- copyright -->
-    <section class="home-page__copyright copyright">
-        <div class="copyright__container container">
-            <ul class="copyright__list">
-                <li class="copyright__item">
-                    &copy;&nbsp;2023 All rights reserved
-                </li>
-                <li class="copyright__item">
-                    <a class="copyright__link" href="https://web2.agency/">
-                        <svg class="copyright__svg">
-                            <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
-                        </svg>
-                        <span class="copyright__link-item">
-                            website development
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- overlay -->
-    <div class="home-page__overlay overlay">
-        <div class="overlay__wrapper">
-            <div class="overlay__bg"></div>
-            <div class="overlay__content">
-                <span aria-label="Close the feedback form" class="overlay__close"></span>
-                <!-- form-callback -->
-                <form action="/" method="post" class="form form-callback novalid">
-                    <input type="hidden" name="count" value="0">
-                    <h3 class="header_2">
-                        Get an offer
-                    </h3>
-                    <div class="form-item">
-                        <input type="text" name="name" placeholder=" ">
-                        <label class="label">Name</label>
-                    </div>
-                    <div class="form-item">
-                        <input type="tel" name="phone" placeholder=" ">
-                        <label class="label">Phone number</label>
-                    </div>
-                    <div class="form-item">
-                        <textarea id="form-callback__comment" name="comment" placeholder=" "></textarea>
-                        <label class="label">Message</label>
-                    </div>
-                    <button class="form-item__button button">
-                        Send request
+                    <button aria-label="Раскрыть окно обратной связи" class="button" data-open="form-callback">
+                        Feedback
                     </button>
-                    <label class="form-note">
-                        <input type="checkbox" checked>
-                        <div class="custom-checkbox"></div>
-                        <div class="form-note-text">
-                            By&nbsp;clicking the button, I&nbsp;consent to&nbsp;the processing of&nbsp;my&nbsp;personal
-                            data
+                </div>
+            </div>
+        </header>
+        <!-- hero -->
+        <section class="home-page__hero hero">
+            <div class="hero__container container">
+                <div class="hero__content content">
+                    <h1 class="content__title header_1">Monadial</h1>
+                    <p class="content__descr">Ship management and maritime services</p>
+                    <p class="content__descr content__descr_last">
+                        The interests of&nbsp;our clients are at&nbsp;the heart of&nbsp;everything we&nbsp;do
+                    </p>
+                    <form action="/" class="hero__form form-item form">
+                        <ul class="form__content-top content-top">
+                            <li class="content-top__item">
+                                <input
+                                    class="content-top__input"
+                                    type="text"
+                                    name="name"
+                                    value=""
+                                    id="comment-name"
+                                    placeholder=" "
+                                    required />
+                                <label>Name</label>
+                            </li>
+                            <li class="content-top__item">
+                                <input class="content-top__input" type="number" name="phone" required placeholder=" " />
+                                <label>Phone number</label>
+                            </li>
+                            <li class="content-top__item content-top__item_email">
+                                <input
+                                    class="content-top__input"
+                                    type="text"
+                                    name="email"
+                                    value=""
+                                    id="comment-name"
+                                    placeholder=" "
+                                    required />
+                                <label>Email</label>
+                            </li>
+                            <li class="content-top__item content-top__item_last">
+                                <textarea class="content-top__textarea" name="comment" placeholder=" "></textarea>
+                                <label>Message</label>
+                            </li>
+                        </ul>
+                        <div class="form__content-bottom content-bottom">
+                            <button aria-label="Send request" class="content-bottom__dtn button">Send request</button>
+                            <p class="content-bottom__descr">
+                                By&nbsp;clicking the button, I&nbsp;consent to&nbsp;the processing
+                                of&nbsp;my&nbsp;personal data
+                            </p>
                         </div>
-                    </label>
-                </form>
-                <!-- form-success -->
-                <div class="form-success">
-                    <p class="form-success__descr">Thanks!</p>
-                    <p class="form-success__descr last">Your data has been sent.</p>
+                    </form>
+                </div>
+            </div>
+            <img class="hero__img" src="/app/img/hero/bg-img.png" alt="Monadial" />
+        </section>
+        <!-- services-main -->
+        <section class="services-main">
+            <!-- services -->
+            <article class="home-page__services services">
+                <div class="services__container container">
+                    <span class="services__subtitle subtitle"> What do&nbsp;we&nbsp;offer </span>
+                    <h2 class="services__title header_2">Services</h2>
+                    <ul class="services__list list">
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/services/img-1.jpg" alt="First service" class="list__img" />
+                                <p class="list__descr">Ship management</p>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/services/img-2.jpg" alt="Two service" class="list__img" />
+                                <p class="list__descr">Tech Management</p>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/services/img-3.jpg" alt="Three service" class="list__img" />
+                                <p class="list__descr">Crew Management &amp;&nbsp;Training</p>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/services/img-4.jpg" alt="Four service" class="list__img" />
+                                <p class="list__descr">Commercial Service</p>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/services/img-5.jpg" alt="Five service" class="list__img" />
+                                <p class="list__descr">New Building</p>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/services/img-6.jpg" alt="Six service" class="list__img" />
+                                <p class="list__descr">Insurance &amp;&nbsp;Claim</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- group-services -->
+            <article class="home-page__group-services group-services">
+                <div class="group-services__container container">
+                    <span class="group-services__subtitle subtitle"> And further </span>
+                    <h2 class="group-services__title header_2">Group services</h2>
+                    <ul class="group-services__list list">
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/group-services/img-1.jpg" alt="First service" class="list__img" />
+                                <p class="list__descr">Ship Broking</p>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/group-services/img-2.jpg" alt="Two service" class="list__img" />
+                                <p class="list__descr">Energy Commodity trade</p>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="/" class="list__link">
+                                <img src="/app/img/group-services/img-3.jpg" alt="Three service" class="list__img" />
+                                <p class="list__descr">Ocean Yacht Management</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <!-- about -->
+        <section class="home-page__about about">
+            <div class="about__container container">
+                <div class="about__content content">
+                    <div class="content__left left">
+                        <span class="left__subtitle subtitle"> Company </span>
+                        <h2 class="left__title header_2">About us</h2>
+                    </div>
+                    <div class="content__right right">
+                        <div class="right__content">
+                            <p class="right__descr">
+                                Mondial Enterprises LTD was founded by&nbsp;a&nbsp;group of&nbsp;like-minded people
+                                in&nbsp;2022.
+                            </p>
+                            <p class="right__descr right__descr_last">
+                                In&nbsp;the most difficult times associated with the pandemic, it&nbsp;became clear that
+                                the global marine industry lacks a&nbsp;fresh look and an&nbsp;innovative approach
+                                to&nbsp;management, adhering to&nbsp;an&nbsp;unequivocal commitment to&nbsp;quality,
+                                efficiency and continuous improvement of&nbsp;its services for the benefit of&nbsp;our
+                                customers and partners.
+                            </p>
+                        </div>
+                        <a href="/" class="right__btn btn button">
+                            <span class="btn__descr"> More </span>
+                            <svg class="btn__icon">
+                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- form-main -->
+        <section class="home-page__form-main form-main">
+            <div class="form-main__container container">
+                <div class="form-main__content content">
+                    <h2 class="content__title header_2">Get an&nbsp;offer</h2>
+                    <p class="content__descr">
+                        Describe the type of&nbsp;work and any detailed information. The manager will contact you and
+                        advise you
+                    </p>
+                    <form action="/" class="content__form form-item form">
+                        <ul class="form__content-top content-top">
+                            <li class="content-top__item">
+                                <input
+                                    class="content-top__input"
+                                    type="text"
+                                    name="name"
+                                    id="comment-name"
+                                    placeholder=" "
+                                    required />
+                                <label>Name</label>
+                            </li>
+                            <li class="content-top__item">
+                                <input class="content-top__input" type="tel" name="phone" required placeholder=" " />
+                                <label>Phone number</label>
+                            </li>
+                            <li class="content-top__item">
+                                <input
+                                    class="content-top__input"
+                                    type="text"
+                                    name="mail"
+                                    id="mail"
+                                    placeholder=" "
+                                    required />
+                                <label>Email</label>
+                            </li>
+                            <li class="content-top__item content-top__item_last">
+                                <textarea class="content-top__textarea" name="comment" placeholder=" "></textarea>
+                                <label>Message</label>
+                            </li>
+                        </ul>
+                        <div class="form__content-bottom content-bottom">
+                            <button aria-label="Send request" class="content-bottom__dtn button">Send request</button>
+                            <p class="content-bottom__descr">
+                                By&nbsp;clicking the button, I&nbsp;consent to&nbsp;the processing
+                                of&nbsp;my&nbsp;personal data
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- map -->
+        <section class="home-page__map map">
+            <div class="map__container">
+                <article class="map__content content">
+                    <span class="content__subtitle subtitle"> Connect with&nbsp;us </span>
+                    <h2 class="content__title header_2">Contact us</h2>
+                    <ul class="content__list list">
+                        <li class="list__item">
+                            <p class="list__descr">Аdress</p>
+                            <a class="list__link" href="/" target="_blank">
+                                Monadial Enterprises LTD,Zinonos Sozou&nbsp;3, Limassol 3105 Cyprus
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <p class="list__descr">Phone</p>
+                            <a class="list__link" href="tel:+35799956068"> +357 99 956 068 </a>
+                        </li>
+                        <li class="list__item">
+                            <p class="list__descr">Mail</p>
+                            <a class="list__link" href="mailto:Management@monadial-shipping.com">
+                                Management@monadial-shipping.com
+                            </a>
+                            <a class="list__link" href="mailto:Chartering@monadial-shipping.com">
+                                Chartering@monadial-shipping.com
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+                <div style="position:relative;overflow:hidden;">
+                    <a
+                        href="https://yandex.ru/maps/970/novorossiysk/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;"
+                        >Novorossiysk</a
+                    ><a
+                        href="https://yandex.ru/maps/970/novorossiysk/house/myskhakskoye_shosse_47a/Z04YcQFnTkwPQFpufXtxc3lmYg==/?ll=37.767798%2C44.702556&utm_medium=mapframe&utm_source=maps&z=17"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;"
+                        >Myskhakskoye shosse, 47А, Novorossiysk — Yandex Maps</a
+                    ><iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=37.767798%2C44.702556&mode=whatshere&whatshere%5Bpoint%5D=37.767798%2C44.702556&whatshere%5Bzoom%5D=17&z=17"
+                        width="560"
+                        height="400"
+                        frameborder="1"
+                        allowfullscreen="true"
+                        style="position:relative;"></iframe>
+                </div>
+                <div class="map__map-wrapper">
+                    <a
+                        class="map__map-link"
+                        href="https://yandex.ru/maps/970/novorossiysk/?utm_medium=mapframe&utm_source=maps">
+                        Новороссийск
+                    </a>
+                    <a
+                        class="map__map-link map__map-link_two"
+                        href="https://yandex.ru/maps/970/novorossiysk/house/ulitsa_engelsa_7/Z04YcQFpS0YCQFpufXtweXVjZw==/?ll=37.769235%2C44.718903&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=17.11">
+                        Улица Энгельса, 7 — Яндекс Карты
+                    </a>
+                    <iframe
+                        class="map__map"
+                        src="https://yandex.ru/map-widget/v1/?ll=37.769235%2C44.718903&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzAzODc3MBJr0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7QtNCw0YDRgdC60LjQuSDQutGA0LDQuSwg0J3QvtCy0L7RgNC-0YHRgdC40LnRgdC6LCDRg9C70LjRhtCwINCt0L3Qs9C10LvRjNGB0LAsIDciCg2xExdCFSjgMkI%2C&source=serp_navig&z=17.11"
+                        allowfullscreen="true"></iframe>
+                </div>
+                <!-- <div class="map__item">
+                    <script
+                        type="text/javascript"
+                        charset="utf-8"
+                        async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A03ad08e8d02b4e388b0289a0564e4dfb4972258a71658d0853e1d432debc5e24&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                </div> -->
+            </div>
+        </section>
+        <!-- copyright -->
+        <section class="home-page__copyright copyright">
+            <div class="copyright__container container">
+                <ul class="copyright__list">
+                    <li class="copyright__item">&copy;&nbsp;2023 All rights reserved</li>
+                    <li class="copyright__item">
+                        <a class="copyright__link" href=""> Пользовательское соглашение </a>
+                    </li>
+                    <li class="copyright__item">
+                        <a class="copyright__link" href="https://web2.agency/">
+                            <svg class="copyright__svg">
+                                <use xlink:href="/app/img/icons/icons.svg#logo-web2"></use>
+                            </svg>
+                            <span class="copyright__link-item"> website development </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- overlay -->
+        <div class="home-page__overlay overlay">
+            <div class="overlay__wrapper">
+                <div class="overlay__bg"></div>
+                <div class="overlay__content">
+                    <span aria-label="Close the feedback form" class="overlay__close"></span>
+                    <!-- form-callback -->
+                    <form action="/" method="post" class="form form-callback novalid">
+                        <input type="hidden" name="count" value="0" />
+                        <h3 class="header_2">Get an offer</h3>
+                        <div class="form-item">
+                            <input type="text" name="name" placeholder=" " />
+                            <label class="label">Name</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="tel" name="phone" placeholder=" " />
+                            <label class="label">Phone number</label>
+                        </div>
+                        <div class="form-item">
+                            <textarea id="form-callback__comment" name="comment" placeholder=" "></textarea>
+                            <label class="label">Message</label>
+                        </div>
+                        <button class="form-item__button button">Send request</button>
+                        <label class="form-note">
+                            <input type="checkbox" checked />
+                            <div class="custom-checkbox"></div>
+                            <div class="form-note-text">
+                                By&nbsp;clicking the button, I&nbsp;consent to&nbsp;the processing
+                                of&nbsp;my&nbsp;personal data
+                            </div>
+                        </label>
+                    </form>
+                    <!-- form-success -->
+                    <div class="form-success">
+                        <p class="form-success__descr">Thanks!</p>
+                        <p class="form-success__descr last">Your data has been sent.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- scroll-top -->
-    <button class="scroll-top" aria-label="Top of the page">
-        <svg>
-            <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-        </svg>
-    </button>
-    <!-- scripts -->
-    <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/libs/lightgallery-all.min.js"></script>
-    <script src="/app/js/libs/functions.js"></script>
-    <script src="/app/js/main.min.js"></script>
-    <!-- <script src="/app/js/main.js"></script> -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector('body').classList.add('loading');
-        }); 
-    </script>
-</body>
-
+        <!-- scroll-top -->
+        <button class="scroll-top" aria-label="Top of the page">
+            <svg>
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- scripts -->
+        <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+        <script src="/app/js/libs/lightgallery-all.min.js"></script>
+        <script src="/app/js/libs/functions.js"></script>
+        <script src="/app/js/main.min.js"></script>
+        <!-- <script src="/app/js/main.js"></script> -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelector('body').classList.add('loading');
+            });
+        </script>
+    </body>
 </html>

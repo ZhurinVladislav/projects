@@ -178,17 +178,34 @@
 			transform: translateX(50%)
 
 	&__arrow
+		position: absolute
+		z-index: 2
 		display: flex
 		align-items: center
 		justify-content: center
 		flex-shrink: 0
 		width: 42px
 		height: 42px
+		background-color: rgba($clr_1, .7)
 		transition: opacity .2s linear
 
+		+sm
+			background-color: $clr_1
+
+		&.arrow_prev
+			left: 20px
+			margin-right: 0
+
+		&.arrow_next
+			right: 20px
+			margin-left: 0
+
+		.arrow__icon
+			width: 20px
+			height: 20px
+    
+
 		+ph
-			position: absolute
-			z-index: 2
 			padding: 10px
 			width: 40px
 			height: 40px

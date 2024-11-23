@@ -37,6 +37,7 @@ body
   background-size: cover
   font-feature-settings: 'pnum' on, 'lnum' on
   opacity: 0
+  transition: opacity .2s linear
 
   &.loading
     opacity: 1
@@ -218,7 +219,7 @@ input[type='number']
   display: inline-block
   text-align: center
   padding: 10px 20px
-  max-width: 192px
+  max-width: 204px
   min-height: 43px
   font-weight: 600
   font-size: 16px
@@ -240,7 +241,7 @@ input[type='number']
   display: inline-block
   text-align: center
   padding: 10px 20px
-  max-width: 107px
+  max-width: 118px
   min-height: 43px
   font-weight: 600
   font-size: 16px
@@ -533,9 +534,8 @@ input[type='number']
 
   ul
     margin-bottom: 20px
-    padding-left: 42px
-    list-style: none
-    list-style-image: url(/app/img/mark-list.svg)
+    padding-left: 24px
+    list-style: square
 
     li:not(:last-child)
       margin-bottom: 10px

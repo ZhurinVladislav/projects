@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener('scroll', toggleClassOverflow, { passive: true });
     }
   }
-
   overflowHTML();
 
   // УБИРАЕМ ФОКУС ПОСЛЕ НАЖАТИЯ НА КНОПКУ ИЛИ ССЫЛКУ
@@ -42,8 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   };
-
   removeFocus();
+
+  //ФИКСИРОВАННАЯ ШАПКА ПРИ СКРОЛЛЕ
+  const fixHeader = () => {
+    const main = document.getElementById('main').classList;
+
+    let header = document.getElementById('header').classList,
+      active_class = 'header_active',
+      active_class_main = 'main_active';
+
+    window.addEventListener('scroll', () => {
+      if (scrollY > 20) {
+        header.add(active_class);
+        main.add(active_class_main);
+      } else {
+        header.remove(active_class);
+        main.remove(active_class_main);
+      }
+    });
+  };
+  fixHeader();
 
   // ОТКРЫТИЕ МЕНЮ В HEADER
   const openMenu = () => {
@@ -54,15 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const windowWidth = window.innerWidth;
 
       if (windowWidth > 991) {
-        if (menu.style.maxWidth) {
-          menu.style.maxWidth = null;
+        if (menu.classList.contains('active')) {
           btn.classList.remove('menu-toggle_active');
           menu.classList.remove('active');
         } else {
-          menu.style.maxWidth = menu.scrollWidth + 'px';
           btn.classList.add('menu-toggle_active');
           menu.classList.add('active');
         }
+
         window.addEventListener('keydown', ev => {
           if (ev.key === 'Escape') {
             menu.style.maxWidth = null;
@@ -95,6 +112,57 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   openMenu();
 
+  // СКРОЛЛ В БЛОКЕ HERO
+  const scrollHero = () => {
+    const btn = document.getElementById('hero-btn');
+
+    if (!document.getElementById('hero-btn')) return;
+
+    btn.addEventListener('click', () => {
+      if (window.scrollY <= 100) window.scrollTo({ top: 100, behavior: 'smooth' });
+    });
+  };
+  scrollHero();
+
+  // УБИРАЕМ КНОПКУ ПРИ СКРОЛЛЕ В БЛОКЕ HERO
+  const scrollHiddenBtnHero = () => {
+    const wrapper = document.getElementById('hero-btn');
+    const heroHomePage = document.getElementById('home-hero');
+    let scrollY = window.scrollY;
+
+    if (!wrapper) return;
+
+    if (!heroHomePage) {
+      wrapper.classList.add('js-scroll-active');
+      return;
+    }
+
+    if (scrollY === 0) {
+      wrapper.classList.add('js-scroll-active');
+      wrapper.classList.remove('js-scroll-hidden');
+    } else {
+      wrapper.classList.remove('js-scroll-active');
+      wrapper.classList.add('js-scroll-hidden');
+    }
+
+    window.addEventListener(
+      'scroll',
+      () => {
+        scrollY = window.scrollY;
+
+        if (scrollY >= 10) {
+          wrapper.classList.remove('js-scroll-active');
+          wrapper.classList.add('js-scroll-hidden');
+        } else {
+          wrapper.classList.add('js-scroll-active');
+          wrapper.classList.remove('js-scroll-hidden');
+        }
+      },
+      { passive: true }
+    );
+  };
+  scrollHiddenBtnHero();
+
   // ТАБЫ НА СТРАНИЦЕ
   const tab = () => {
     const tab = document.querySelectorAll('.js-btn');
@@ -102,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabContent = document.querySelectorAll('.js-item-content');
 
     if (!tab || !tabWrapper) return;
-    // if (!tabWrapper) return;
 
     function hideTabContent(a) {
       for (let i = a; i < tabContent.length; i++) {
@@ -154,28 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   };
-
   tab();
-
-  //ФИКСИРОВАННАЯ ШАПКА ПРИ СКРОЛЛЕ
-  const fixHeader = () => {
-    const main = document.getElementById('main').classList;
-
-    let header = document.getElementById('header').classList,
-      active_class = 'header_active',
-      active_class_main = 'main_active';
-
-    window.addEventListener('scroll', () => {
-      if (scrollY > 20) {
-        header.add(active_class);
-        main.add(active_class_main);
-      } else {
-        header.remove(active_class);
-        main.remove(active_class_main);
-      }
-    });
-  };
-  fixHeader();
 
   // ДОБАВЛЕНИЕ ОТСТУПА СПРАВА ПРИ ОТКРЫТИЕ ГАЛЕРИИ
   const addIndent = () => {
@@ -216,37 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // СЛАЙДЕР В БЛОКЕ ВИДЕО НА ГЛАВНОЙ СТРАНИЦЕ
   const videoSlider = () => {
-    if (!document.querySelector('.video')) return;
-
-    const swiper = new Swiper('.video-slider', {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      loop: true,
-      onlyExternal: false,
-      speed: 500,
-      navigation: {
-        disabledClass: 'arrow_disable',
-        nextEl: '.arrow_next',
-        prevEl: '.arrow_prev',
-      },
-      breakpoints: {
-        50: {
-          slidesPerView: 1,
-        },
-
-        768: {
-          slidesPerView: 2,
-        },
-
-        1024: {
-          slidesPerView: 3,
-        },
-
-        1300: {
-          slidesPerView: 4,
-        },
-      },
-    });
+    if (!document.getElementById('video-slider')) return;
   };
   videoSlider();
 
@@ -282,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   videoPoster();
 
-  // function video() {
+  // const video = () => {
   //   const video = document.querySelectorAll('.js-video');
 
   //   video.forEach(el => {

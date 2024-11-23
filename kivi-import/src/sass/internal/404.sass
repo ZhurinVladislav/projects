@@ -1,0 +1,41 @@
+.not-found
+	margin-bottom: 100px
+
+	+ph
+		margin-bottom: 80px
+
+	.content
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+		transform: translateY(50%)
+
+		+sm
+			transform: translateY(0)
+
+		&__title
+			font-size: 50px
+			color: $clr_3
+
+			+ph
+				font-size: 30px
+
+		&__text
+			@include textReset
+			margin-bottom: 20px
+			font-size: 25px
+
+			+sm
+				margin-bottom: 15px
+				font-size: 20px
+
+			+ph
+				font-size: 18px
+
+			&_last
+				margin-bottom: 0
+
+		&__color
+			font-weight: 700

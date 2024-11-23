@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const html = document.querySelector('html');
+  const body = document.querySelector('body');
+
   // ДОБАВЛЕНИЕ КЛАССА ДЛЯ HTML
   if (document.getElementById('service')) {
     document.querySelector('html').classList.add('overflow');
@@ -6,14 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //ФИКСИРОВАННАЯ ШАПКА ПРИ СКРОЛЛЕ
-  (() => {
+  const fixedHeader = () => {
     const main = document.getElementById('main').classList;
+    const header = document.getElementById('header').classList;
 
-    let header = document.getElementById('header').classList,
-      active_class = 'header_active',
-      active_class_main = 'main_active';
+    const active_class = 'header_active';
+    const active_class_main = 'main_active';
+
+    let scrollY = 0;
 
     window.addEventListener('scroll', () => {
+      scrollY = window.scrollY;
+
       if (scrollY > 20) {
         header.add(active_class);
         main.add(active_class_main);
@@ -22,13 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
         main.remove(active_class_main);
       }
     });
-  })();
+  };
+  fixedHeader();
 
   // ДОБАВЛЕНИЕ ОТСТУПА СПРАВА ПРИ ОТКРЫТИЕ ГАЛЕРИИ
-  (() => {
-    let html = document.querySelector('html'),
-      body = document.querySelector('body');
-
+  const addIndentation = () => {
     html.addEventListener('click', () => {
       if (body.classList.contains('lg-on')) {
         html.classList.add('galleryActive');
@@ -41,71 +46,72 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('keydown', e => {
       if (e.key === 'Escape') html.classList.remove('galleryActive');
     });
-  })();
+  };
+  addIndentation();
 
   // HOVER НА КНОПКАХ
-  (() => {
+  const hoverBtn = () => {
     const btn = document.querySelectorAll('.js-hover-btn');
 
     btn.forEach(element => {
-      element.addEventListener('mouseenter', e => {
-        let $this = e.currentTarget,
-          relX = e.offsetX + 'px',
-          relY = e.offsetY + 'px';
+      element.addEventListener('mouseenter', ev => {
+        const $this = ev.currentTarget;
+        const relX = ev.offsetX + 'px';
+        const relY = ev.offsetY + 'px';
 
         $this.querySelector('.js-hover-btn__bg').style.cssText = `top: ${relY}; left: ${relX};`;
       });
 
-      element.addEventListener('mouseleave', e => {
-        let $this = e.currentTarget,
-          relX = e.offsetX + 'px',
-          relY = e.offsetY + 'px';
+      element.addEventListener('mouseleave', ev => {
+        const $this = ev.currentTarget;
+        const relX = ev.offsetX + 'px';
+        const relY = ev.offsetY + 'px';
 
         $this.querySelector('.js-hover-btn__bg').style.cssText = `top: ${relY};left: ${relX};`;
       });
     });
-  })();
+  };
+  hoverBtn();
 
   // МОБИЛЬНОЕ МЕНЮ
-  (() => {
-    const burgerBtn = document.getElementById('burger-toggle'),
-      burgerMenu = document.getElementById('burger-menu'),
-      html = document.querySelector('html'),
-      body = document.querySelector('body');
+  const mobMenu = () => {
+    const burgerBtn = document.getElementById('burger-toggle');
+    const burgerMenu = document.getElementById('burger-menu');
 
     // ОТКРЫТИЕ И ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ
     burgerBtn.addEventListener('click', () => {
-      burgerBtn.classList.toggle('menu-toggle_active');
-      burgerMenu.classList.toggle('active');
       body.classList.toggle('menu-open');
       html.classList.toggle('menu-open');
+      burgerBtn.classList.toggle('menu-toggle_active');
+      burgerMenu.classList.toggle('active');
     });
 
     // ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ КНОПКОЙ "ESC"
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        burgerBtn.classList.remove('menu-toggle_active');
-        burgerMenu.classList.remove('active');
+    window.addEventListener('keydown', ev => {
+      if (ev.key === 'Escape') {
         body.classList.remove('menu-open');
         html.classList.remove('menu-open');
+        burgerBtn.classList.remove('menu-toggle_active');
+        burgerMenu.classList.remove('active');
       }
     });
-  })();
+  };
+  mobMenu();
 
   // ОТКРЫТИЕ ВСПЛЫВАЮЩЕГО СПИСКА В МОБ. МЕНЮ
-  (() => {
-    const parentItem = document.querySelectorAll('.item__btn'),
-      listInner = document.querySelectorAll('.parent .list');
+  const mobList = () => {
+    const parentItem = document.querySelectorAll('.item__btn');
+    const listInner = document.querySelectorAll('.parent .list');
 
     let arrLength;
 
-    listInner.forEach(e => {
-      e.classList.add('overflow-hidden');
+    listInner.forEach(el => {
+      el.classList.add('overflow-hidden');
     });
 
     for (let i = 0; i < listInner.length; i++) {
-      const el = listInner[i],
-        elChild = el.children;
+      const el = listInner[i];
+      const elChild = el.children;
 
       for (let i = 0; i < elChild.length; i++) {
         let parent = elChild[i].parentNode;
@@ -114,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arrLength = elChild.length;
 
         if (elChild[i].classList.contains('active')) {
-          document.querySelectorAll('.list').forEach(e => (e.style.maxHeight = null));
+          document.querySelectorAll('.list').forEach(el => (el.style.maxHeight = null));
           parent.style.maxHeight = 'max-content';
 
           arrow.classList.add('active');
@@ -122,30 +128,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    parentItem.forEach(e => {
-      e.addEventListener('click', () => {
-        const acContent = e.nextElementSibling;
+    parentItem.forEach(el => {
+      el.addEventListener('click', () => {
+        const acContent = el.nextElementSibling;
 
         if (acContent.style.maxHeight) {
-          document.querySelectorAll('.menu__list .list').forEach(e => {
-            e.style.maxHeight = null;
+          document.querySelectorAll('.menu__list .list').forEach(el => {
+            el.style.maxHeight = null;
           });
-          e.classList.remove('active');
+          el.classList.remove('active');
         } else {
-          document.querySelectorAll('.menu__list .list').forEach(e => {
-            e.style.maxHeight = null;
-            console.log(e.previousElementSibling.classList);
-            e.previousElementSibling.classList.remove('active');
+          document.querySelectorAll('.menu__list .list').forEach(el => {
+            el.style.maxHeight = null;
+            el.previousElementSibling.classList.remove('active');
           });
           acContent.style.maxHeight = acContent.scrollHeight + 'px';
-          e.classList.add('active');
+          el.classList.add('active');
         }
       });
     });
-  })();
+  };
+  mobList();
 
   // СТРЕЛКА ПРОКРУТКИ НА ВВЕРХ
-  (() => {
+  const scrollTop = () => {
     const btn = document.getElementById('scroll-top');
     let scrollY = 0;
 
@@ -162,13 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  })();
+  };
+  scrollTop();
 
   // СЛАЙДЕР В HERO
-  function slideHero() {
+  const slideHero = () => {
     const swiper = new Swiper('#slider-hero', {
       speed: 600,
       parallax: true,
+      lazy: true,
       spaceBetween: 20,
       loop: true,
       navigation: {
@@ -183,20 +191,18 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       keyboard: true,
     });
-  }
+  };
 
-  if (document.querySelector('#slider-hero')) {
-    slideHero();
-  }
+  if (document.querySelector('#slider-hero')) slideHero();
 
   // СЛАЙДЕР В БЛОКЕ КЛИНИКА НА ГЛАВНОЙ СТРАНИЦЕ
-  function slideClinic() {
+  const slideClinic = () => {
     const swiper = new Swiper('#slider-clinic', {
       speed: 600,
       slidesPerView: 3,
       spaceBetween: 25,
+      lazy: true,
       loop: true,
-      // rewind: true,
       navigation: {
         nextEl: '.clinic__btn_next',
         prevEl: '.clinic__btn_prev',
@@ -220,19 +226,18 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       },
     });
-  }
+  };
 
-  if (document.querySelector('#slider-clinic')) {
-    slideClinic();
-  }
+  if (document.querySelector('#slider-clinic')) slideClinic();
 
   // СЛАЙДЕР В БЛОКЕ СПЕЦИАЛИСТЫ НА ГЛАВНОЙ СТРАНИЦЕ
-  function slideSpecialists() {
+  const slideSpecialists = () => {
     const swiper = new Swiper('#slider-specialists', {
       speed: 600,
       slidesPerView: 1,
       spaceBetween: 70,
       centeredSlides: true,
+      lazy: true,
       parallax: true,
       navigation: {
         disabledClass: 'slider-arrow__btn_disable',
@@ -241,20 +246,18 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       keyboard: true,
     });
-  }
+  };
 
-  if (document.querySelector('#slider-specialists')) {
-    slideSpecialists();
-  }
+  if (document.querySelector('#slider-specialists')) slideSpecialists();
 
   // СЛАЙДЕР В БЛОКЕ СПЕЦИАЛИСТЫ НА СТРАНИЦЕ УСЛУГИ
-  function slideSpecialistsService() {
+  const slideSpecialistsService = () => {
     const swiper = new Swiper('#slider-specialists-service', {
       speed: 600,
       slidesPerView: 1,
       spaceBetween: 20,
-      // loop: true,
       centeredSlides: true,
+      lazy: true,
       parallax: true,
       navigation: {
         disabledClass: 'slider-arrow__btn_disable',
@@ -263,11 +266,9 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       keyboard: true,
     });
-  }
+  };
 
-  if (document.querySelector('#slider-specialists-service')) {
-    slideSpecialistsService();
-  }
+  if (document.querySelector('#slider-specialists-service')) slideSpecialistsService();
 
   // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
   $('#slider-clinic').lightGallery({
@@ -292,9 +293,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // СКРЫТИЕ СПИСКА УСЛУГ НА ПЛАНШЕТАХ И МОБ. УСТРОЙСТВАХ
-  function hiddenList() {
-    const btn = document.getElementById('service-btn'),
-      list = document.getElementById('service-list');
+  const hiddenList = () => {
+    const btn = document.getElementById('service-btn');
+    const list = document.getElementById('service-list');
 
     list.classList.add('overflow-hidden');
 
@@ -309,49 +310,13 @@ document.addEventListener('DOMContentLoaded', () => {
         itemTarget.classList.add('active');
       }
     });
-  }
+  };
 
   if (document.getElementById('service-btn')) {
     window.addEventListener('resize', () => {
-      if (window.innerWidth <= 991) {
-        hiddenList();
-      }
+      if (window.innerWidth <= 991) hiddenList();
     });
 
-    if (window.innerWidth <= 991) {
-      hiddenList();
-    }
+    if (window.innerWidth <= 991) hiddenList();
   }
-
-  // АНИМАЦИЯ
-  // gsap.registerPlugin(ScrollTrigger, SmoothScroll)
-
-  // if (ScrollTrigger.isTouch !== 1) {
-  //   SmoothScroll({
-  //       // Время скролла 400 = 0.4 секунды
-  //       animationTime    : 800,
-  //       // Размер шага в пикселях
-  //       stepSize         : 50,
-
-  //       // Дополнительные настройки:
-  //       // Ускорение
-  //       accelerationDelta : 30,
-  //       // Максимальное ускорение
-  //       accelerationMax   : 2,
-
-  //       // Поддержка клавиатуры
-  //       keyboardSupport   : true,
-  //       // Шаг скролла стрелками на клавиатуре в пикселях
-  //       arrowScroll       : 50,
-
-  //       // Pulse (less tweakable)
-  //       // ratio of "tail" to "acceleration"
-  //       pulseAlgorithm   : true,
-  //       pulseScale       : 4,
-  //       pulseNormalize   : 1,
-
-  //       // Поддержка тачпада
-  //       touchpadSupport   : true,
-  //   })
-  // };
 });

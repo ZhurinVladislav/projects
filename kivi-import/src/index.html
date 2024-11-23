@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+        <!-- SEO -->
+        <title>Киви</title>
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./app/css/main.min.css" />
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/min/preloader.min.js"></script>
+        <script src="./app/js/libs/min/lazy-load.min.js"></script>
+        <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/sliders.min.js" defer></script>
+        <script src="./app/js/libs/min/webp.min.js" defer></script>
+        <script src="./app/js/libs/min/modal-window.min.js" defer></script>
+        <script src="./app/js/libs/min/number-animate.min.js" defer></script>
+        <script src="./app/js/main.min.js" defer></script>
+    </head>
+
+    <body class="home-page">
+        <!-- PRELOADER -->
+        <div id="preloader" class="home-page__preloader preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER -->
+        <header id="header" class="home-page__header header">
+            <div class="header__container container">
+                <div class="header__content-md">
+                    <a class="header__logo logo" href="/">
+                        <img class="logo__img" src="./app/img/logo.svg" alt="Логотип Киви" title="Киви" />
+                    </a>
+                    <div class="header__feedback header-feedback header-feedback_md">
+                        <div class="header-feedback__content-top">
+                            <div class="header-feedback__links-social">
+                                <a
+                                    class="header-feedback__link link-icon"
+                                    href="https://wa.me/+78002000600"
+                                    aria-label="Написать в WhatsApp">
+                                    <svg class="link-icon__item">
+                                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                    </svg>
+                                </a>
+                                <a
+                                    class="header-feedback__link link-icon"
+                                    href="https://t.me/+78002000600"
+                                    target="_blank"
+                                    aria-label="Написать в чат в Telegram">
+                                    <svg class="link-icon__item">
+                                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <a
+                                class="header-feedback__link link-text"
+                                href="tel:+78002000600"
+                                aria-label="Позвонить по номеру 8 800 2000 600">
+                                8 800 2000 600
+                            </a>
+                        </div>
+                        <address class="header-feedback__address">
+                            <a class="header-feedback__address-link link-text" href="./contacts.html">
+                                г. Новороссийск, ул. Энгельса, д. 7
+                            </a>
+                        </address>
+                    </div>
+                </div>
+                <nav class="header__menu header-menu">
+                    <ul class="header-menu__list">
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link link-text" href="./about.html"> О компании </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link link-text" href="./import.html"> Импорт </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link link-text" href="./export.html"> Экспорт в СНГ </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link link-text" href="./seasonality.html"> Сезонность </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a class="header-menu__list-link link-text" href="./contacts.html"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__feedback header-feedback header-feedback">
+                    <div class="header-feedback__content-top">
+                        <div class="header-feedback__links-social">
+                            <a
+                                class="header-feedback__link link-icon"
+                                href="https://wa.me/+78002000600"
+                                aria-label="Написать в WhatsApp">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                            </a>
+                            <a
+                                class="header-feedback__link link-icon"
+                                href="https://t.me/+78002000600"
+                                target="_blank"
+                                aria-label="Написать в чат в Telegram">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <a
+                            class="header-feedback__link link-text"
+                            href="tel:+78002000600"
+                            aria-label="Позвонить по номеру 8 800 2000 600">
+                            8 800 2000 600
+                        </a>
+                    </div>
+                    <address class="header-feedback__address">
+                        <a class="header-feedback__address-link link-text" href="./contacts.html">
+                            г. Новороссийск, ул. Энгельса, д. 7
+                        </a>
+                    </address>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main id="main" class="home-page__main main-section">
+            <!-- HERO -->
+            <section id="hero" class="main-section__hero hero section-reset">
+                <div class="hero__container container">
+                    <div class="hero__content">
+                        <div class="hero__bg-img" data-image="./app/img/hero/bg-img.png"></div>
+                        <p class="hero__subtitle">ООО &laquo;Киви&raquo;</p>
+                        <h1 class="hero__title h-1">Импорт фруктов и&nbsp;овощей со&nbsp;всего мира</h1>
+                        <button
+                            class="hero__btn btn js-open-modal"
+                            data-open="form-callback"
+                            aria-label="Стать клиентом">
+                            Стать клиентом
+                        </button>
+                    </div>
+                    <ul class="hero__list">
+                        <li class="hero__list-item" data-image="./app/img/hero/img-1.jpg"></li>
+                        <li class="hero__list-item" data-image="./app/img/hero/img-2.jpg"></li>
+                        <li class="hero__list-item" data-image="./app/img/hero/img-3.jpg"></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- ABOUT -->
+            <section class="main-section__about about section-reset js-number-wrapper">
+                <div class="about__container container">
+                    <h2 class="about__title h-2">О&nbsp;нашей компании</h2>
+                    <div class="about__content-wrapper">
+                        <div class="about__text text-default">
+                            <p class="text-default__p">
+                                Компания &laquo;Киви&raquo; уже более 10&nbsp;лет занимается импортом свежих фруктов
+                                из&nbsp;разных стран. Зарегистрирована компания была в&nbsp;2020 году
+                                в&nbsp;Новороссийске&nbsp;&mdash; крупнейшем порту России.
+                            </p>
+                            <p class="text-default__p">
+                                Мы&nbsp;работаем с&nbsp;Египтом, Турцией, Израилем и&nbsp;Ираном, а&nbsp;также другими
+                                странами. В&nbsp;нашем ассортименте: апельсины, мандарины, лимоны, грейпфруты, гранаты,
+                                виноград, манго, батат, клубника, перец, авокадо, редис, кабачки, яблоки, киви
+                                и&nbsp;другие фрукты.
+                            </p>
+                            <p class="text-default__p">
+                                Наша компания оказывает услуги по&nbsp;импорту фруктов, обеспечивая полный цикл поставок
+                                от&nbsp;производителей до&nbsp;прилавков магазинов. Мы&nbsp;стремимся к&nbsp;тому, чтобы
+                                на&nbsp;столах наших клиентов всегда были вкусные и&nbsp;полезные продукты.
+                            </p>
+                            <p class="text-default__p">
+                                Если вы&nbsp;хотите приобрести свежие фрукты оптом или заинтересованы
+                                в&nbsp;сотрудничестве, свяжитесь с&nbsp;нами. Мы&nbsp;готовы предложить вам выгодные
+                                условия и&nbsp;широкий ассортимент продукции.
+                            </p>
+                        </div>
+                        <div class="about__stat about-stat">
+                            <h3 class="about-stat__title h-3">Статистика за&nbsp;2023 год</h3>
+                            <ul class="about-stat__list">
+                                <li class="about-stat__list-item">
+                                    <h4 class="about-stat__list-item-title h-4">Контейнеров</h4>
+                                    <p class="about-stat__list-item-num js-number" data-target="2200">0</p>
+                                </li>
+                                <li class="about-stat__list-item">
+                                    <h4 class="about-stat__list-item-title h-4">Тоннаж</h4>
+                                    <p class="about-stat__list-item-num js-number" data-target="51700000">0</p>
+                                </li>
+                            </ul>
+                            <ul class="about-stat__list-links about-links">
+                                <li class="about-links__item">
+                                    <button
+                                        class="about-links__btn btn-in js-open-modal"
+                                        data-open="form-callback"
+                                        aria-label="Оставить заявку">
+                                        Оставить заявку
+                                    </button>
+                                </li>
+                                <li class="about-links__item">
+                                    <a class="about-links__link link" href="./about.html" aria-label="Подробнее о нас">
+                                        Подробнее
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="about-stat__bg-img" data-image="./app/img/about/bg-img.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ADVANTAGES -->
+            <section class="main-section__advantages advantages">
+                <div class="advantages__container container">
+                    <h2 class="advantages__title h-2">Наши преимущества</h2>
+                    <div id="advantages-swiper" class="advantages__swiper swiper advantages-swiper">
+                        <div class="swiper-wrapper advantages-swiper__wrapper">
+                            <div class="advantages-swiper__slide swiper-slide">
+                                <div
+                                    class="advantages-swiper__slide-img"
+                                    data-image="./app/img/advantages/icon-1.svg"></div>
+                                <p class="advantages-swiper__slide-descr">
+                                    Наша компания имеет удобное географическое положение
+                                </p>
+                            </div>
+                            <div class="advantages-swiper__slide swiper-slide">
+                                <div
+                                    class="advantages-swiper__slide-img"
+                                    data-image="./app/img/advantages/icon-2.svg"></div>
+                                <p class="advantages-swiper__slide-descr">
+                                    Мы&nbsp;предлагаем быструю логистику продукции
+                                </p>
+                            </div>
+                            <div class="advantages-swiper__slide swiper-slide">
+                                <div
+                                    class="advantages-swiper__slide-img"
+                                    data-image="./app/img/advantages/icon-3.svg"></div>
+                                <p class="advantages-swiper__slide-descr">
+                                    Осуществляем контроль качества на&nbsp;всех этапах
+                                </p>
+                            </div>
+                            <div class="advantages-swiper__slide swiper-slide">
+                                <div
+                                    class="advantages-swiper__slide-img"
+                                    data-image="./app/img/advantages/icon-4.svg"></div>
+                                <p class="advantages-swiper__slide-descr">Полный пакет документов для всех товаров</p>
+                            </div>
+                            <div class="advantages-swiper__slide swiper-slide">
+                                <div
+                                    class="advantages-swiper__slide-img"
+                                    data-image="./app/img/advantages/icon-5.svg"></div>
+                                <p class="advantages-swiper__slide-descr">
+                                    Собственные склады: Новороссийск, Краснодар, Москва
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="advantages-swiper-pagination" class="advantages__pagination swiper-pagination"></div>
+                </div>
+            </section>
+            <!-- CLIENTS -->
+            <section class="main-section__clients clients">
+                <div class="clients__container container">
+                    <h2 class="clients__title h-2">Наши клиенты</h2>
+                    <div id="clients-swiper" class="clients__swiper swiper clients-swiper">
+                        <div class="swiper-wrapper clients-swiper__wrapper">
+                            <div class="clients-swiper__slide swiper-slide">
+                                <img
+                                    class="clients-swiper__slide-img"
+                                    data-src="./app/img/clients/img-1.png"
+                                    alt="Логотип Магнита"
+                                    title="Магнит"
+                                    loading="lazy" />
+                                <div class="clients-swiper__preloader swiper-lazy-preloader"></div>
+                            </div>
+                            <div class="clients-swiper__slide swiper-slide">
+                                <img
+                                    class="clients-swiper__slide-img"
+                                    data-src="./app/img/clients/img-2.png"
+                                    alt="Логотип Пятёрочки"
+                                    title="Пятёрочка"
+                                    loading="lazy" />
+                                <div class="clients-swiper__preloader swiper-lazy-preloader"></div>
+                            </div>
+                            <div class="clients-swiper__slide swiper-slide">
+                                <img
+                                    class="clients-swiper__slide-img"
+                                    data-src="./app/img/clients/img-3.png"
+                                    alt="Логотип Командора"
+                                    title="Командор"
+                                    loading="lazy" />
+                                <div class="clients-swiper__preloader swiper-lazy-preloader"></div>
+                            </div>
+                            <div class="clients-swiper__slide swiper-slide">
+                                <img
+                                    class="clients-swiper__slide-img"
+                                    data-src="./app/img/clients/img-4.png"
+                                    alt="Логотип Победы"
+                                    title="Победа"
+                                    loading="lazy" />
+                                <div class="clients-swiper__preloader swiper-lazy-preloader"></div>
+                            </div>
+                            <div class="clients-swiper__slide swiper-slide">
+                                <img
+                                    class="clients-swiper__slide-img"
+                                    data-src="./app/img/clients/img-5.png"
+                                    alt="Логотип Монетки"
+                                    title="Монетка"
+                                    loading="lazy" />
+                                <div class="clients-swiper__preloader swiper-lazy-preloader"></div>
+                            </div>
+                            <div class="clients-swiper__slide swiper-slide">
+                                <img
+                                    class="clients-swiper__slide-img"
+                                    data-src="./app/img/clients/img-6.png"
+                                    alt="Логотип Чижика"
+                                    title="Чижик"
+                                    loading="lazy" />
+                                <div class="clients-swiper__preloader swiper-lazy-preloader"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="clients-swiper-pagination" class="advantages__pagination swiper-pagination"></div>
+                    <div class="clients__bg-img" data-image="./app/img/clients/bg-img.png"></div>
+                </div>
+            </section>
+            <!-- WORKS -->
+            <section class="main-section__works works section-reset">
+                <div class="works__container container">
+                    <h2 class="works__title h-2">Как мы&nbsp;работаем</h2>
+                    <ul class="works__list">
+                        <li class="works__list-item">
+                            <div class="works__list-item-img" data-image="./app/img/works/icon-1.svg"></div>
+                            <p class="works__list-item-descr">Поиск поставщиков</p>
+                        </li>
+                        <li class="works__list-item">
+                            <div class="works__list-item-img" data-image="./app/img/works/icon-2.svg"></div>
+                            <p class="works__list-item-descr">Заключение договоров</p>
+                        </li>
+                        <li class="works__list-item">
+                            <div class="works__list-item-img" data-image="./app/img/works/icon-3.svg"></div>
+                            <p class="works__list-item-descr">Контроль качества продукции</p>
+                        </li>
+                        <li class="works__list-item">
+                            <div class="works__list-item-img" data-image="./app/img/works/icon-4.svg"></div>
+                            <p class="works__list-item-descr">Организация доставки</p>
+                        </li>
+                        <li class="works__list-item">
+                            <div class="works__list-item-img" data-image="./app/img/works/icon-5.svg"></div>
+                            <p class="works__list-item-descr">Таможенное оформление</p>
+                        </li>
+                        <li class="works__list-item">
+                            <div class="works__list-item-img" data-image="./app/img/works/icon-6.svg"></div>
+                            <p class="works__list-item-descr">Распределение по торговым точкам</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- FEEDBACK -->
+            <section class="main-section__feedback feedback section-reset">
+                <div class="feedback__container container">
+                    <div class="feedback__content">
+                        <div class="feedback__img" data-image="./app/img/feedback/img-1.jpg"></div>
+                        <div class="feedback__links">
+                            <a
+                                class="feedback__link link-in"
+                                href="tel:+78002000600"
+                                aria-label="Позвонить по номеру 8 800 2000 600">
+                                <svg class="link-in__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-in__text">8 800 2000 600</span>
+                            </a>
+                            <a
+                                class="feedback__link link-in"
+                                href="mailto:123kivi@bk.ru"
+                                aria-label="Написать на почту 123kivi@bk.ru">
+                                <svg class="link-in__icon">
+                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                </svg>
+                                <span class="link-in__text">123kivi@bk.ru</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feedback__form-wrapper">
+                        <h2 class="feedback__title h-2">Связаться с&nbsp;нами</h2>
+                        <p class="feedback__descr">
+                            Заполните поля и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
+                        </p>
+                        <form class="feedback__form feedback-form">
+                            <ul class="feedback-form__list form-list">
+                                <li class="form-list__item">
+                                    <input
+                                        class="form-list__item-input input"
+                                        type="text"
+                                        name="name"
+                                        placeholder=" " />
+                                    <label class="form-list__item-label label">Имя</label>
+                                </li>
+                                <li class="form-list__item">
+                                    <input
+                                        class="form-list__item-input input"
+                                        type="number"
+                                        name="phone"
+                                        placeholder=" " />
+                                    <label class="form-list__item-label label">Телефон</label>
+                                </li>
+                                <li class="form-list__item">
+                                    <input
+                                        class="form-list__item-input input"
+                                        type="text"
+                                        name="email"
+                                        placeholder=" " />
+                                    <label class="form-list__item-label label">Email</label>
+                                </li>
+                                <li class="form-list__item">
+                                    <textarea
+                                        class="form-list__item-textarea textarea"
+                                        name="message"
+                                        cols="30"
+                                        rows="10"
+                                        placeholder=" "></textarea>
+                                    <label class="form-list__item-label label">Краткое описание задачи</label>
+                                </li>
+                            </ul>
+                            <label class="feedback-form__agreement form-note">
+                                <input class="form-note__input" type="checkbox" checked />
+                                <span class="form-note__checkbox"></span>
+                                <span class="form-note__text">
+                                    Я&nbsp;даю
+                                    <a class="form-note__text-link link-text" href="/" target="_blank">
+                                        согласие на&nbsp;обработку персональных данных
+                                    </a>
+                                </span>
+                            </label>
+                            <button class="feedback-form__btn btn">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- FORM-CALLBACK -->
+            <div id="form-callback" class="main-section__form-callback form-callback modal">
+                <div class="form-callback__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-callback__close-btn modal-close js-close-modal"></button>
+                    <p class="form-callback__title modal-title">Оставить заявку</p>
+
+                    <form class="form form-mod">
+                        <ul class="form-mod__list form-list">
+                            <li class="form-list__item">
+                                <input class="form-list__item-input input" type="text" name="name" placeholder=" " />
+                                <label class="form-list__item-label label">Имя</label>
+                            </li>
+                            <li class="form-list__item">
+                                <input class="form-list__item-input input" type="number" name="phone" placeholder=" " />
+                                <label class="form-list__item-label label">Телефон</label>
+                            </li>
+                            <li class="form-list__item">
+                                <input class="form-list__item-input input" type="text" name="email" placeholder=" " />
+                                <label class="form-list__item-label label">Email</label>
+                            </li>
+                            <li class="form-list__item">
+                                <textarea
+                                    class="form-list__item-textarea textarea"
+                                    name="message"
+                                    cols="30"
+                                    rows="10"
+                                    placeholder=" "></textarea>
+                                <label class="form-list__item-label label">Краткое описание задачи</label>
+                            </li>
+                        </ul>
+                        <label class="form-mod__agreement form-note">
+                            <input class="form-note__input" type="checkbox" checked />
+                            <span class="form-note__checkbox"></span>
+                            <span class="form-note__text">
+                                Я&nbsp;даю
+                                <a class="form-note__text-link link-text" href="/" target="_blank">
+                                    согласие на&nbsp;обработку персональных данных
+                                </a>
+                            </span>
+                        </label>
+                        <button class="form-mod__btn btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <!-- FORM-SUCCESS -->
+            <div id="form-success" class="main-section__form-success form-success modal">
+                <div class="form-success__box modal-box">
+                    <button
+                        aria-label="Закрыть окно обратной связи"
+                        class="form-success__close-btn modal-close js-close-modal"></button>
+                    <div class="form-success">
+                        <p class="form-success__descr">Спасибо!</p>
+                        <p class="form-success__descr form-success__descr_last">Ваши данные были отправлены.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="home-page__footer footer">
+            <div class="footer__container container">
+                <a class="footer__logo logo" href="/">
+                    <img class="logo__img" src="./app/img/logo.svg" alt="Логотип Киви" title="Киви" />
+                </a>
+                <nav class="footer__menu footer-menu">
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__list-item">
+                            <a class="footer-menu__list-link link-text" href="./about.html"> О компании </a>
+                        </li>
+                        <li class="footer-menu__list-item">
+                            <a class="footer-menu__list-link link-text" href="./import.html"> Импорт </a>
+                        </li>
+                        <li class="footer-menu__list-item">
+                            <a class="footer-menu__list-link link-text" href="./export.html"> Экспорт в СНГ </a>
+                        </li>
+                        <li class="footer-menu__list-item">
+                            <a class="footer-menu__list-link link-text" href="./seasonality.html"> Сезонность </a>
+                        </li>
+                        <li class="footer-menu__list-item">
+                            <a class="footer-menu__list-link link-text" href="./contacts.html"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__feedback footer-feedback footer-feedback">
+                    <div class="footer-feedback__content-top">
+                        <div class="footer-feedback__links-social">
+                            <a
+                                class="footer-feedback__link link-icon"
+                                href="https://wa.me/+78002000600"
+                                aria-label="Написать в WhatsApp">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                            </a>
+                            <a
+                                class="footer-feedback__link link-icon"
+                                href="https://t.me/+78002000600"
+                                target="_blank"
+                                aria-label="Написать в чат в Telegram">
+                                <svg class="link-icon__item">
+                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <a
+                            class="footer-feedback__link link-text"
+                            href="tel:+78002000600"
+                            aria-label="Позвонить по номеру 8 800 2000 600">
+                            8 800 2000 600
+                        </a>
+                    </div>
+                    <address class="footer-feedback__address">
+                        <a class="footer-feedback__address-link link-text" href="./contacts.html">
+                            г. Новороссийск, ул. Энгельса, д. 7
+                        </a>
+                    </address>
+                </div>
+            </div>
+            <a class="footer__link link-text" href="">Пользовательское соглашение</a>
+        </footer>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/min/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

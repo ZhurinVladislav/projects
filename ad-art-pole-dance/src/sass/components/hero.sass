@@ -1,96 +1,91 @@
 .hero
+	display: flex
+	flex-direction: column
+	align-items: center
+	min-height: 850px
+	padding-top: 304px
+	padding-bottom: 24px
 
-	&__container
-		padding-bottom: 104px
+	+sm
+		padding-top: 204px
+		min-height: 650px
 
-		+sm
-			padding-bottom: 87px
+	+ph
+		padding-top: 120px
+		min-height: 350px
 
-		+ph
-			padding-bottom: 58px
-
-	&__content-top
+	&__img-bg
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -2
 		display: flex
-		justify-content: space-between
-		margin-bottom: 62px
-
-		+ph
-			flex-direction: column
-			justify-content: center
-			margin-bottom: 40px
-
-	&__content-left
-		max-width: 504px
-		margin-bottom: 10px
-
-		+ph
-			display: none
-  
-	&__content-right
-		display: flex
-		flex-direction: column
-		align-items: flex-end
-		max-width: 813px
-		text-align: end
-
-		+ph
-			align-items: flex-start
-			text-align: left
-
-	&__title
-		margin-bottom: 10px
-
-	&__subtitle
-		font-size: 18px
-		line-height: 1.4
-		letter-spacing: .36px
-
-	&__images-wrapper
-		position: relative
+		max-width: 100%
 		width: 100%
 		height: 100%
-
-	&__img
-		position: absolute
-		bottom: -103px
-		left: 74px
-		z-index: -1
-		width: 830px
-		height: 1030px
-
-		+md
-			left: -22px
+		object-fit: cover
 
 		+sm
-			bottom: -89px
-			width: 723px
-			height: 891px
+			display: none
 
-		+ph
-			right: -199px
-			bottom: -64px
-			left: auto
-			max-width: inherit
-			width: 510px
-			height: 645px
+		&_sm
+			display: none
 
-	&__img-bottom
-		position: relative
-		z-index: -2
-		max-width: 100%
-		min-height: 414px
-		background-color: $clr_3
-		// background-image: url(../img/hero/img-2.jpg)
-		background-position: center
-		background-size: cover
-		background-repeat: no-repeat
+			+sm
+				display: flex
 
-		+lr
-			min-height: 300px
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		color: $clr_1
+
+	&__title
+		font-size: 128px
+		text-align: center
+		color: $clr_1
 
 		+sm
-			max-width: 100%
-			min-height: 280px
+			font-size: 80px
 
 		+ph
-			min-height: 140px
+			margin-bottom: 10px
+			font-size: 50px
+
+	&__text
+		max-width: 405px
+		font-weight: 350
+		line-height: 150%
+		font-size: 24px
+		letter-spacing: .05em
+		text-transform: uppercase
+
+		+sm
+			font-size: 22px
+
+		+ph
+			font-size: 18px
+
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0 auto
+		margin-top: auto
+		width: 24px
+		height: 24px
+
+		&.js-scroll-hidden
+			animation-fill-mode: forwards
+			animation-name: btnHidden
+			animation-duration: .4s
+			animation-timing-function: cubic-bezier(0, 0.1, 0.2, 1)
+
+		&.js-scroll-active
+			animation: movement 2s cubic-bezier(.4,0,.22,1) infinite
+
+	&__btn-icon
+		fill: $clr_1
+		transform: rotate(90deg)
+

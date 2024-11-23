@@ -2,41 +2,37 @@
   margin-top: auto
   
   &__container
-    padding-top: 12px
-    padding-bottom: 12px
-    
+    padding-top: 24px
+    padding-bottom: 24px
+
     +ph
-      padding-top: 24px
-      padding-bottom: 24px
+      padding-top: 20px
+      padding-bottom: 20px
     
   &__list
     display: flex
     align-items: center
+    gap: 12px
     justify-content: space-between
     font-size: 14px
-    line-height: 0.9
+    line-height: 90%
     text-align: center
-    text-transform: uppercase
 
     +sm
       flex-direction: column
 
     +ph
+      gap: 12px
       font-size: 12px
 
-  &__list-item
-
-    &:not(:last-child)
-      margin-right: 10px
-
-      +sm
-        margin-right: 0
-        margin-bottom: 12px
-
-  .link
+  .link-rev
     align-items: center
+    font-size: 14px
+
+    +ph
+      font-size: 12px
 
     &__icon
-      margin-right: 10px
+      margin-right: 16px
       width: 47px
       height: 20px
