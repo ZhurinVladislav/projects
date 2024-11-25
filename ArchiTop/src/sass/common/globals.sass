@@ -1,0 +1,984 @@
+// ОСНОВНЫЕ СТИЛИ
+html
+  &.pre-hidden
+    padding-right: 8px
+    overflow-y: hidden !important
+
+    +lr
+      padding-right: 0
+
+  &.galleryActive
+    overflow-y: hidden !important
+    padding-right: 8px
+    +lr
+      padding-right: 0
+
+html.mod-open
+  padding-right: 8px
+  overflow-y: hidden !important
+
+  +lr
+    padding-right: 0
+
+  .header_active
+    left: -8px
+
+    +lr
+      left: 0
+
+  .scroll-top
+    right: 38px
+
+    +ph
+      right: 28px
+
+body
+  font-family: $ff_1
+  font-weight: 400
+  line-height: 120%
+  font-size: 18px
+  color: $clr_3
+  background-color: $clr_1
+
+  &.overflow
+    overflow-x: visible
+
+  &::-webkit-scrollbar
+    width: 4px
+    background-color: $clr_1
+
+  &::-webkit-scrollbar-thumb
+    background-color: $clr_4
+
+html.menu-open,
+body.menu-open
+  +sm
+    overflow: hidden
+
+*::selection
+  background-color: rgba($clr_2, .8)
+  color: $clr_4
+
+.section-reset
+  position: relative
+  margin-bottom: 140px
+  +ph
+    margin-bottom: 80px
+
+.home-page
+  .main-section
+    margin-top: 0
+.main-section
+  margin-top: 164px
+  +ph
+    margin-top: 100px
+  &__search-services
+    margin-bottom: 26px
+  // +sm
+  //   margin-top: 65px
+  // +ph
+  //   margin-top: 56px
+
+.container
+  position: relative
+  z-index: 1
+  margin: 0 auto
+  padding-left: 25px
+  padding-right: 25px
+  max-width: $size_1
+  width: 100%
+  +ph
+    padding-left: 10px
+    padding-right: 10px
+
+.logo
+  position: relative
+  display: flex
+  font-size: 0
+  flex-shrink: 0
+  transition: opacity .2s linear
+  &_ph
+    display: none
+    +ph
+      display: flex
+
+  &__img
+    transition: opacity .2s linear
+    &_active
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
+
+  &:hover
+    +hover
+      opacity: .7
+
+  &__img
+    width: 100%
+    height: 100%
+    font-size: 0
+
+// СТИЛИ ДДЯ СЛАЙДЕРА
+.swiper-wrapper
+  box-sizing: border-box
+
+.swiper-slide
+  position: relative
+  display: flex
+  font-size: 0
+  background-color: $clr_3
+  user-select: none
+  box-sizing: border-box
+  &:hover
+    +hover
+      .swiper-img
+        transform: scale(1.1)
+
+      &::after
+        transform: translateX(0)
+        opacity: 1
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    width: 100%
+    height: 100%
+    background-color: rgba($clr_2, .3)
+    opacity: 0
+    transform: translateX(-30px)
+    transition: transform .2s linear, opacity .2s linear
+
+.swiper-img
+  display: flex
+  width: 100%
+  height: 100%
+  object-fit: cover
+  font-size: 0
+  transition: transform .2s linear
+
+.swiper-button-lock
+  display: none !important
+
+.swiper-navigation
+  position: absolute
+  z-index: 100
+  display: flex
+  gap: 16px
+
+.swiper-btn
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 104px
+  height: 104px
+  border-radius: 100%
+  border: 1px solid $clr_2
+  background-color: $clr_0
+  transition: opacity .2s linear, transform .2s linear
+  +sm
+    width: 80px
+    height: 80px
+
+  &:hover
+    +hover
+      opacity: .6
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    opacity: .6
+
+  &:active
+    transform: scale(.96)
+
+  &_prev
+    .swiper-btn__icon
+      transform: rotateY(-180deg)
+  &_next
+    right: 0
+
+  &_lock
+    display: none
+
+  &_disable
+    display: none
+
+  &__icon
+    height: 40px
+    fill: $clr_2
+
+// СТИЛИ ДЛЯ КНОПОК И ССЫЛОК
+.link
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 14px 8px
+  max-width: 198px
+  min-height: 58px
+  font-weight: 600
+  line-height: 100%
+  font-size: 16px
+  color: $clr_2
+  text-align: center
+  border: 1px solid $clr_4
+  background-color: $clr_4
+  transition: opacity .2s linear, transform .2s linear
+
+  +ph
+    padding: 8px 10px
+
+  &:hover
+    +hover
+      opacity: .5
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    opacity: .5
+
+  &:active
+    transform: scale(.98)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_1
+    &_ph
+      display: none
+      +ph
+        display: flex
+
+  &__text
+    +ph
+      display: none
+
+.link-inv
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 14px 8px
+  max-width: 198px
+  min-height: 58px
+  font-weight: 600
+  line-height: 100%
+  font-size: 16px
+  color: $clr_4
+  text-align: center
+  background-color: rgba($clr_4, .1)
+  transition: border-color .2s linear, background-color .2s linear, transform .2s linear
+
+  +ph
+    padding: 8px 10px
+
+  &:hover
+    +hover
+      background-color: rgba($clr_4, .5)
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    background-color: rgba($clr_4, .5)
+
+  &:active
+    transform: scale(.98)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_1
+    &_ph
+      display: none
+      +ph
+        display: flex
+
+  &__text
+    +ph
+      display: none
+
+.link-text
+  display: flex
+  align-items: center
+  max-width: max-content
+  line-height: 120%
+  color: $clr_4
+  border-bottom: 1px solid $clr_0
+  transition: transform .2s linear, border-color .2s linear
+
+  &:hover
+    +hover
+      border-color: $clr_4
+      .link-text__icon
+        fill: $clr_3
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    border-color: $clr_4
+
+  &:active
+    transform: scale(.98)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_1
+    transition: fill .2s linear
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 14px 24px
+  max-width: 198px
+  min-height: 58px
+  font-weight: 600
+  line-height: 100%
+  font-size: 18px
+  color: $clr_2
+  text-align: center
+  border: 1px solid $clr_4
+  background-color: $clr_4
+  transition: opacity .2s linear, transform .2s linear
+
+  +ph
+    padding: 8px 10px
+
+  &:hover
+    +hover
+      opacity: .5
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    opacity: .5
+
+  &:active
+    transform: scale(.98)
+
+  &:disabled
+    color: rgba($clr_3, .2)
+    border-color: rgba($clr_3, .1)
+    background-color: rgba($clr_3, .1)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_1
+    &_ph
+      display: none
+      +ph
+        display: flex
+
+  &__text
+    +ph
+      display: none
+
+.btn-text
+  display: flex
+  align-items: center
+  gap: 4px
+  font-weight: 600
+  color: $clr_4
+  transition: color .2s linear, opacity .2s linear, transform .2s linear
+  &:hover
+    +hover
+      color: $clr_3
+
+      .btn-text__icon
+        fill: $clr_3
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    opacity: .5
+
+  &:active
+    transform: scale(.98)
+
+  &.active
+    .btn-text__icon
+      transform: rotateX(180deg)
+  
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_4
+    transition: fill .2s linear, transform .2s linear
+
+// СТИЛИ ДЛЯ ЗАГОЛОВКОВ И ТЕКСТА
+.h-1
+  font-weight: 700
+  line-height: 120%
+  font-size: 38px
+  +ph
+    font-size: 34px
+
+.h-2
+  margin-bottom: 32px
+  font-weight: 700
+  line-height: 120%
+  font-size: 32px
+  +ph
+    font-size: 30px
+
+.h-3
+  margin-bottom: 16px
+  font-weight: 500
+  line-height: 110%
+  font-size: 32px
+  +ph
+    font-size: 28px
+
+.text-hidden
+  position: absolute
+  clip: rect(0,0,0,0)
+  margin: -1px
+  padding: 0
+  border: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+
+.text-color
+  color: $clr_4
+
+.breadcrumb-list
+  display: flex
+  align-items: center
+  margin-bottom: 80px
+  font-size: 14px
+  +sm
+    flex-wrap: wrap
+  +ph
+    margin-bottom: 40px
+
+  &__item
+    position: relative
+    &:not(:first-child)
+      padding-left: 18px
+
+    &:not(:last-child)
+      padding-right: 18px
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        right: -10px
+        width: 20px
+        height: 20px
+        background-image: url('../img/svgicons/arrow.svg')
+        transform: rotate(-90deg)
+        opacity: .5
+
+  &__item-link
+    display: flex
+    max-width: max-content
+    width: 100%
+    color: rgba($clr_3, .5)
+    transition: color .2s linear
+    &:hover
+      +hover
+        color: $clr_3
+  
+    &_nolink
+      &:hover
+        +hover
+          color: rgba($clr_3, .5)
+
+.stars-list
+  display: flex
+  align-items: center
+  gap: 2px
+
+  &__item
+    width: 20px
+    height: 20px
+    opacity: .2
+    &_active
+      opacity: 1
+
+  &__item-icon
+    fill: #FEA800
+
+.reviews-info
+  display: flex
+  flex-direction: column
+  gap: 8px
+
+  &__rating
+    display: flex
+    align-items: center
+    gap: 8px
+
+  &__counts-num
+    font-weight: 500
+   
+.links-list
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 20px 32px
+  width: 100%
+  +md
+    grid-template-columns: repeat(2, 1fr)
+  +sm
+    grid-template-columns: 1fr
+    gap: 12px
+
+  &__item
+    display: flex
+    width: 100%
+    height: 100%
+
+.link-list
+  display: flex
+  align-items: flex-end
+  gap: 4px
+  max-width: 100%
+  width: 100%
+
+  &:hover
+    +hover
+    .link-list__text
+      color: $clr_4
+    .link-list__line
+     border-color: $clr_4
+
+  &__text
+    white-space: nowrap
+    transition: color .2s linear
+    +ph
+      max-width: max-content
+      width: 300px
+      overflow: hidden
+      text-overflow: ellipsis
+      font-size: 14px
+
+  &__line
+    margin-bottom: 4px
+    width: 100%
+    height: 1px
+    border-bottom: 1px solid rgba($clr_3, .3)
+    transition: border-color .2s linear
+    // +ph
+    //   width: 30%
+
+  &__num
+    color: $clr_4
+
+.card-heading
+  display: flex
+  align-items: center
+  gap: 8px
+  margin-bottom: 4px
+  &__img-wrap
+    display: flex
+    flex-shrink: 0
+    width: 42px
+    height: 42px
+    border-radius: 100%
+  &__title
+    font-weight: 700
+    font-size: 18px
+    color: $clr_4
+
+// СТИЛИ ДЛЯ ФОРМ
+.search-form
+  display: flex
+  gap: 8px
+  max-width: 100%
+  width: 100%
+  +ph
+    margin-bottom: 40px
+
+  &__input-wrap
+    width: 100%
+
+.form-field
+  position: relative
+  display: flex
+
+  &__icon
+    position: absolute
+    top: 50%
+    left: 20px
+    width: 20px
+    height: 20px
+    fill: $clr_3
+    transform: translateY(-50%)
+    transition: fill .2s linear
+
+  &__input
+    padding: 18px 20px 18px 48px
+    width: 100%
+    height: 58px
+    border: 1px solid $clr_2
+    background-color: $clr_2
+    transition: border-color .2s linear
+
+    &:hover
+      +hover
+        + .form-field__icon
+            fill: $clr_4
+
+    &:focus-visible:not(:active),
+    &:focus:not(:active)
+      border-color: $clr_4
+      + .form-field__icon
+          fill: $clr_4
+
+      &::placeholder
+        opacity: 0
+
+    &::placeholder
+      transition: opacity .2s linear
+
+.custom-checkbox
+  user-select: none
+  cursor: pointer
+  &__input
+    position: absolute
+    appearance: none
+
+    &:checked + .custom-checkbox__text
+      &::after
+        opacity: 1
+
+    &:focus + .custom-checkbox__text
+      color: $clr_4
+
+    &:checked + .custom-checkbox__list
+      &::after
+        opacity: 1
+
+  &__text, &__list
+    position: relative
+    padding-left: 28px
+    font-weight: 500
+    font-size: 16px
+    transition: color .2s linear
+    +ph
+      font-size: 16px
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 20px
+      height: 20px
+      border: 1px solid $clr_4
+
+    &::after
+      content: ''
+      position: absolute
+      top: 3px
+      left: 3px
+      width: 14px
+      height: 14px
+      background-color: $clr_4
+      opacity: 0
+      transition: opacity .2s linear
+
+.custom-radio
+  user-select: none
+  cursor: pointer
+
+  &__input
+    position: absolute
+    appearance: none
+
+    &:checked + .custom-radio__text
+      &::after
+        opacity: 1
+
+    &:focus + .custom-radio__text
+      color: $clr_4
+
+  &__text
+    position: relative
+    padding-left: 38px
+    font-weight: 500
+    font-size: 18px
+    transition: color .2s linear
+    +ph
+      font-size: 16px
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      width: 18px
+      height: 18px
+      border-radius: 100%
+      border: 1px solid $clr_4
+      transform: translateY(-50%)
+
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 3px
+      width: 12px
+      height: 12px
+      border-radius: 100%
+      background-color: $clr_4
+      opacity: 0
+      transform: translateY(-50%)
+      transition: opacity .2s linear
+
+
+// СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ
+.text-default
+  h1
+    margin-bottom: 20px
+    font-style: italic
+    font-weight: 500
+    line-height: 110%
+    font-size: 84px
+    +md
+      font-size: 60px
+    +sm
+      font-size: 50px
+    +ph
+      font-size: 40px
+
+  h2
+    margin-bottom: 15px
+    font-weight: 700
+    line-height: 120%
+    font-size: 32px
+    +ph
+      font-size: 30px
+
+  h3
+    margin-bottom: 16px
+    margin-bottom: 16px
+    font-weight: 500
+    line-height: 110%
+    font-size: 32px
+    +ph
+      font-size: 28px
+
+  p
+
+    &:not(:last-child)
+      margin-bottom: 15px
+
+  a
+    font-weight: 600
+    color: $clr_3
+    border-bottom: 2px solid $clr_3
+    transition: border-color .2s linear
+
+    &:hover
+      +hover
+        border-color: $clr_0
+
+  img
+    +ph
+      margin: 0!important
+      margin-bottom: 15px!important
+      width: 100%
+
+  ul
+    margin-bottom: 20px
+    padding-left: 35px
+    list-style: square
+    +ph
+      padding-left: 20px
+
+    li
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  ol
+    margin-bottom: 20px
+    padding-left: 35px
+
+    +ph
+      padding-left: 20px
+
+    li
+      &::marker
+        font-weight: 500
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  blockquote
+    margin: 0
+    margin-bottom: 20px
+    padding: 20px 10px 20px 20px
+    border-radius: 8px
+    background-color: $clr_4
+
+    ul
+      margin-bottom: 0
+
+    p
+      @include textReset
+
+  table
+    margin-bottom: 30px
+    max-width: 100%
+    width: 100%
+    border-collapse: collapse
+    border-radius: 8px
+    overflow: hidden
+    table-layout: fixed
+    +ph
+      display: block
+      max-width: 100%
+      font-size: 14px
+      width: fit-content
+      overflow-x: auto
+
+    p
+      @include textReset
+
+    tr
+      background-color: $clr_1
+      color: $clr_2
+      
+      &:nth-child(1)
+        font-weight: 600
+        font-size: 18px
+        color: $clr_3
+        background-color: $clr_1
+        text-align: center
+        +ph
+          font-size: 16px
+
+        td
+          border: none
+
+      &:nth-child(2n)
+        color: $clr_1
+        background-color: rgba($clr_3, .8)
+
+    th, td
+      padding: 14px
+      text-align: center
+
+// НАВЕРХ СТРАНИЦЫ
+.scroll-top
+  position: fixed
+  z-index: 30
+  right: 30px
+  bottom: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 45px
+  height: 45px
+  // border: 1px solid $clr_4
+  border: 2px solid transparent
+  background-color: $clr_4
+  opacity: 0
+  visibility: hidden
+  // opacity: 0
+  // transform: translateX(200px)
+  transition: opacity .2s linear, visibility .2s linear, transform .3s linear
+  // transition: opacity .2s linear, transform .5s linear
+  +ph
+    right: 10px
+    bottom: 20px
+
+  &.visible
+    opacity: 1
+    visibility: visible
+    // display: none
+  // &_active
+  //   opacity: 1
+  //   transform: translateY(0px)
+
+  &:hover
+    +hover
+      opacity: .5
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    opacity: .5
+
+  &:active
+    transform: scale(.94)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_1
+    transform: rotateX(180deg)
+
+// PRELOADER
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 100000
+  width: 100%
+  height: 100%
+  opacity: 1
+  background-color: $clr_1
+  transition: opacity .3s linear
+
+  &__wrapper
+    width: 40px
+    height: 40px
+    opacity: 0.75
+    animation: clockwise 500ms linear infinite
+
+  &.hidden
+    animation: fadeOut 1s
+    animation-fill-mode: forwards
+
+  &__item-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    width: 20px
+    height: 40px
+    overflow: hidden
+
+  &__item
+    position: absolute
+    top: 0
+    left: 0
+    box-sizing: border-box
+    width: 40px
+    height: 40px
+    border: 4px solid $clr_2
+    border-radius: 50%
+    border-left-color: transparent
+    border-bottom-color: transparent
+    animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite
+
+// АНИМАЦИЯ
+@keyframes clockwise
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+@keyframes donut-rotate
+  0%
+    transform: rotate(0)
+  
+  50%
+    transform: rotate(-140deg)
+    
+  100%
+    transform: rotate(0)
+
+@keyframes fadeOut
+  100%
+    opacity: 0
+    visibility: hidden
+
+@keyframes opacity
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1

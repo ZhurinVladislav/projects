@@ -37,3 +37,42 @@
 	top: 120px
 	+ph
 		position: static
+
+
+.form-list
+	&__item-input-wrap
+		position: relative
+		display: flex
+		width: 100%
+		// display: inline-block
+		margin-bottom: 20px
+
+	&__item-input
+		&_file
+			display: none
+
+	&__item-btn
+		cursor: pointer
+		width: 100%
+		+ph
+			max-width: 100%
+			width: 100%
+
+
+.photo-preview
+	display: flex
+	// justify-content: center
+	flex-wrap: wrap
+	gap: 15px
+
+	&__img
+		width: 100px
+		height: 100px
+		object-fit: cover
+		border-radius: 5px
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+		transition: transform .2s linear
+
+		&:hover
+			+hover
+				transform: scale(1.1)
