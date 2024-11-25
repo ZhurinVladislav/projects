@@ -1,0 +1,70 @@
+.hero
+	position: relative
+	padding: 277px 0px 40px 0px
+	min-height: 712px
+	background-color: rgba($clr_2, .4)
+	transition: opacity .5s linear
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	+ph
+		padding: 180px 0px 40px 0px
+
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__title
+		margin-bottom: 16px
+		text-align: center
+
+	&__text
+		max-width: 758px
+		margin-bottom: 40px
+		line-height: 140%
+		font-size: 22px
+		text-align: center
+
+	&__advantages
+		display: flex
+		gap: 15px
+		max-width: 1020px
+		width: 100%
+		+sm
+			flex-direction: column
+			// flex-wrap: wrap
+
+	.search-form
+		margin-bottom: 80px
+		max-width: 716px
+		+ph
+			margin-bottom: 40px
+
+		&__input-wrap
+			max-width: 600px
+
+.advantages-item
+	display: flex
+	align-items: center
+	gap: 16px
+	padding: 12px 24px
+	backdrop-filter: blur(22px)
+	background-color: rgba($clr_2, .5)
+	+sm
+		flex-direction: column
+		align-items: flex-start
+	+ph
+		align-items: center
+		padding: 12px
+		max-width: 100%
+		width: 100%
+		text-align: center
+
+	&__num
+		font-weight: 700
+		font-size: 54px
+		+sm
+			font-size: 40px
+		+ph
+			font-size: 34px

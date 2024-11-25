@@ -1,9 +1,4 @@
 .catalog
-	// &__container
-		// +ph
-		// 	display: flex
-		// 	flex-direction: column
-		// 	align-items: center
 	&__btn
 		max-width: 100%
 		width: 100%
@@ -412,3 +407,16 @@
 
 			&__descr
 				margin-right: 4px
+
+.card-price
+	position: relative
+	display: flex
+	gap: 8px
+	&__old
+		font-size: 14px
+		text-decoration: line-through
+		opacity: .4
+		+md
+			font-size: 13px
+	&__new
+		font-weight: 700

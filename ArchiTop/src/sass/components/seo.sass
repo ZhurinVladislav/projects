@@ -1,0 +1,28 @@
+.seo
+	margin-bottom: 70px
+	&__content
+		margin-bottom: 16px
+		&_more
+			animation: openTextMore .2s linear
+			&.overflow-hidden
+				animation: closeTextMore .2s linear
+
+@keyframes openTextMore
+	from
+		opacity: 0
+		transform: translateX(-10px)
+
+	to
+		opacity: 1
+		transform: translateX(0)
+
+@keyframes closeTextMore
+	from
+		display: block
+		opacity: 1
+		transform: translateX(0)
+
+	to
+		display: none
+		opacity: 0
+		transform: translateX(-10px)

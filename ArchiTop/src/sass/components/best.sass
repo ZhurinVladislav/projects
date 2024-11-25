@@ -1,0 +1,48 @@
+.best
+	&__content-wrap
+		position: relative
+		padding: 40px
+		color: $clr_2
+		background-color: $clr_3
+		overflow: hidden
+		+ph
+			padding: 20px 10px
+
+	&__content
+		position: relative
+		z-index: 1
+
+	&__title
+		max-width: 734px
+
+	&__img
+		position: absolute
+		right: 0
+		bottom: 0
+		z-index: 0
+		max-width: 918px
+		width: 100%
+		height: 386px
+		background-repeat: no-repeat
+		background-position: center
+		background-position: center
+		+sm
+			opacity: .3
+		+ph
+			max-width: 537px
+
+.best-list
+	display: flex
+	flex-direction: column
+	gap: 16px
+	max-width: 524px
+	+ph
+		max-width: 100%
+
+	&__item
+		padding-left: 12px
+		border-left: 2px solid $clr_4
+		+ph
+			padding: 0 10px
+			background-color: rgba($clr_1, .1)
+			backdrop-filter: blur(10px)

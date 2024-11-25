@@ -1,0 +1,45 @@
+.rating
+	&__container
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+	&__content-wrap
+		position: relative
+		display: flex
+		flex-direction: column
+		padding: 44px 58px
+		max-width: 1066px
+		width: 100%
+		+sm
+			padding: 44px
+		+ph
+			padding: 44px 0
+
+	&__icon
+		position: absolute
+		width: 56px
+		height: 44px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		+ph
+			width: 44px
+			height: 32px
+		&_left
+			top: 0
+			left: 0
+		&_right
+			bottom: 0
+			right: 0
+
+	&__text
+		font-weight: 700
+		line-height: 120%
+		font-size: 32px
+		text-align: center
+		+sm
+			font-size: 30px
+		+ph
+			font-size: 28px

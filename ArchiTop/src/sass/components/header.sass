@@ -1,0 +1,286 @@
+.home-page
+  .header
+    color: $clr_3
+    background-color: $clr_0
+
+    &__container
+      padding-top: 18px
+      padding-bottom: 18px
+
+    .logo
+      &__img
+        opacity: 1
+        &_active
+          opacity: 0
+
+  .header-top
+    margin-bottom: 40px
+    backdrop-filter: blur(22px)
+    background-color: rgba($clr_2, .5)
+
+    &__btn
+      padding: 14px 24px
+      min-height: 58px
+      +sm
+        display: none
+
+  .site-wrapper
+    &__btn
+      color: $clr_3
+
+      &:hover
+        color: $clr_4
+        +hover
+          .site-wrapper__icon
+            fill: $clr_4
+
+    &__icon
+      fill: $clr_3
+
+    &__icon-arrow
+      fill: $clr_3
+
+  .menu-toggle
+    &__item
+      background-color: $clr_3
+
+  .header-menu
+    &__list-link
+      &:hover
+        +hover
+          border-color: rgba($clr_4, .5)
+
+.header
+  position: fixed
+  z-index: 500
+  transition: background-color .2s linear
+  color: $clr_1
+  background-color: $clr_3
+
+  &.header_active
+    color: $clr_1
+    background-color: $clr_3
+
+    .header-top
+      margin-bottom: 0
+      background-color: $clr_0
+      backdrop-filter: none
+
+    .site-wrapper
+      &__btn
+        color: $clr_2
+        &:hover
+          +hover
+            color: $clr_4
+      &__icon
+        fill: $clr_2
+
+      &__icon-arrow
+        fill: $clr_2
+
+    .logo
+      &__img
+        opacity: 0
+        &_active
+          opacity: 1
+    &:hover
+      +hover
+        max-height: 100%
+        .header-menu
+          max-height: 56px
+          opacity: 1
+          transform: translateY(0)
+
+    .menu-toggle
+      &__item
+        background-color: $clr_1
+
+    .header-menu
+      max-height: 0
+      opacity: 0
+      transform: translateY(-20px)
+      +ph
+        max-height: max-content
+        opacity: 1
+        transform: translateY(0)
+      
+      &__list-link
+        &:hover
+          +hover
+            border-color: $clr_1
+
+.header-top
+  transition: margin-bottom .2s linear
+  +ph
+    margin-bottom: 0
+
+  &__container
+    position: static
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 20px
+    padding-top: 28px
+    padding-bottom: 28px
+
+  &__logo
+    max-width: 272px
+    height: 30px
+    +sm
+      max-width: 200px
+    +ph
+      max-width: 150px
+
+  .logo
+    &__img
+      opacity: 0
+      &_active
+        opacity: 1
+
+  &__btn
+    padding: 12px 24px
+    min-height: 46px
+    +ph
+      display: none
+
+.site-wrapper
+  position: relative
+
+  &__btn
+    display: flex
+    align-items: center
+    gap: 8px
+    color: $clr_1
+    transition: color .2s linear
+    +ph
+      font-size: 14px
+
+    &:hover
+      color: $clr_4
+      +hover
+        .site-wrapper__icon
+          fill: $clr_4
+
+    &.active
+      .site-wrapper__icon-arrow
+        transform: rotateX(180deg)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_1
+    transition: fill .2s linear
+    +ph
+      width: 16px
+      height: 16px
+
+  &__icon-arrow
+    width: 20px
+    height: 20px
+    fill: $clr_1
+    transition: transform .2s linear
+
+  &__list
+    position: absolute
+    top: 30px
+    z-index: 100
+    display: flex
+    flex-direction: column
+    width: 200px
+    background-color: $clr_1
+
+    &.hidden
+      max-height: 0
+      overflow: hidden
+      transition: max-height .2s linear
+
+  &__list-link
+    display: flex
+    padding: 10px 20px
+    color: $clr_3
+    transition: background-color .2s linear, color .2s linear
+
+    &:hover
+      +hover
+        color: $clr_4
+        background-color: $clr_1
+
+// КНОПКА ОТКРЫТИЯ МОБИЛЬНОГО МЕНЮ
+.menu-toggle
+  display: none
+  width: 30px
+  height: 25px
+  +sm
+    position: relative
+    z-index: 30000
+    display: block
+  +ph
+    width: 25px
+    height: 20px
+
+  &__item
+    position: absolute
+    display: block
+    width: 100%
+    height: 2px
+    background-color: $clr_1
+    transform: rotate(0) translate(0, 0)
+    transition: all .3s linear
+
+    &:nth-child(1)
+      top: 0
+      left: 0
+
+    &:nth-child(2)
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      opacity: 1
+
+    &:nth-child(3)
+      bottom: 0
+      left: 0
+
+  &.menu-toggle_active
+    .menu-toggle__item
+      &:nth-child(1)
+        top: 50%
+        left: 50%
+        transform: rotate(45deg) translate(-50%, -50%)
+        transform-origin: top left
+        
+      &:nth-child(2)
+        left: 100%
+        transform: translateY(0)
+        opacity: 0
+
+      &:nth-child(3)
+        bottom: 50%
+        left: 50%
+        transform: rotate(-45deg) translate(-50%, 50%)
+        transform-origin: bottom left
+
+.header-menu
+  display: flex
+  justify-content: center
+  transition: transform .2s linear, opacity .2s linear, max-height .2s linear
+  &__list
+    display: flex
+    +ph
+      display: none
+
+  &__list-link
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 12px 20px
+    min-height: 54px
+    border-bottom: 2px solid rgba($clr_3, .1)
+    transition: border-color .2s linear
+    +ph
+      display: inline-block
+      width: max-content
+
+    &:hover
+      +hover
+        border-color: $clr_1

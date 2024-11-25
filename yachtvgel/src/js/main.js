@@ -195,4 +195,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
   accordion();
+
+  const inputImg = () => {
+    const photoInput = document.getElementById('photoInput');
+    const photoPreview = document.getElementById('photoPreview');
+
+    if (!photoInput || !photoPreview) return;
+
+    photoInput.addEventListener('change', event => {
+      const files = Array.from(event.target.files);
+
+      files.forEach(file => {
+        if (file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = e => {
+            const img = document.createElement('img');
+            img.classList.add('photo-preview__img');
+            img.src = e.target.result;
+            photoPreview.appendChild(img);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    });
+  };
+
+  inputImg();
 });
