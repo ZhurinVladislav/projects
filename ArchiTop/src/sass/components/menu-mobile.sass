@@ -4,12 +4,12 @@
   top: 0
   right: 0
   display: none
-  width: 40%
-  height: 100vh
-  padding: 72px 20px 72px 40px
+  width: 100%
+  // padding: 72px 20px 72px 40px
+  padding: 50px 20px 40px 20px
   color: $clr_1
   background-color: $clr_3
-  transform: translateX(100%)
+  transform: translateY(-100%)
   transition: transform .3s linear, opacity .3s linear
   will-change: transform
   opacity: 0
@@ -22,15 +22,30 @@
       opacity: 1
 
   +ph
-    padding: 72px 20px
-    width: 80%
-    font-size: 14px
+    padding: 20px
+    font-size: 16px
+
+  +max(464px)
+    padding: 20px
+
+  .site-wrapper
+    display: none
+    margin-bottom: 30px
+    +max(464px)
+      display: flex
+    &__icon
+      fill: $clr_2
+    &__btn
+      color: $clr_2
+    &__icon-arrow
+      fill: $clr_2
+    +max(464px)
+      display: flex
 
 .menu-mobile-list
   display: flex
   flex-direction: column
   gap: 14px
-  margin-bottom: 32px
   +ph
     gap: 20px
 
@@ -40,33 +55,6 @@
     &:active
       transform: scale(.94)
     
-  &__item
-    &.menu-parent
-      position: relative
-    &.menu-active
-      color: $clr_3
-
-  &__btn
-    position: absolute
-    top: 10px
-    display: inline
-    width: 30px
-    height: 30px
-    transform: translateY(-50%)
+  &__link
     &.active
-      .menu-mobile-list__btn-icon
-        transform: rotateX(180deg)
-
-  &__btn-icon
-    display: inline-flex
-    width: 16px
-    height: 16px
-    transition: transform .2s linear
-
-.menu-mobile-links
-  display: flex
-  flex-direction: column
-  gap: 14px
-
-  .link-text__icon
-    fill: $clr_1
+      color: $clr_4

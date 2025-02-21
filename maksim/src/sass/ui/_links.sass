@@ -1,0 +1,133 @@
+.link-text
+	display: flex
+	align-items: center
+	gap: 16px
+	max-width: max-content
+	font-weight: 400
+	font-size: 18px
+	line-height: 100%
+	text-align: center
+	color: var(--accent-color)
+	text-align: center
+	border-bottom: 2px solid var(--none-color)
+	transition: color .2s linear, border-color .2s linear, transform .2s linear, opacity .2s linear
+	+ph
+		gap: 12px
+	+hover
+		color: var(--active-color)
+		.link-text__icon
+			transform: rotate(-12deg) scale(1.1)
+	+focus
+		color: var(--active-color)
+	&:active
+		transform: scale(.98)
+
+	&__icon-wrap
+		display: flex
+		padding: 6px
+		width: 30px
+		height: 30px
+		border-radius: 100%
+		background-color: var(--accent-color)
+		&_wh
+			background: linear-gradient(0deg, #20b038 0%, #60d66a 100%)
+
+		&_tg
+			padding: 8px
+			background: linear-gradient(180deg, #2aabee 0%, #229ed9 100%)
+
+		&_vk
+			background-color: #0277ff
+
+	&__icon
+		flex-shrink: 0
+		fill: var(--page-color)
+		transition: fill .2s linear, transform .2s linear
+
+.link-more
+	display: flex
+	align-items: center
+	gap: 4px
+	max-width: max-content
+	font-weight: 400
+	font-size: 18px
+	line-height: 100%
+	text-align: center
+	color: var(--page-color)
+	text-align: center
+	border-bottom: 2px solid var(--none-color)
+	transition: border-color .2s linear, transform .2s linear, opacity .2s linear
+	+ph
+		font-size: 16px
+	+hover
+		.link-more__icon
+			transform: translateX(2px) rotate(-90deg) scale(1.1)
+	+focus
+		.link-more__icon
+			transform: translateX(2px) rotate(-90deg) scale(1.1)
+	&:active
+		transform: scale(.98)
+
+	&__icon
+		width: 20px
+		height: 20px
+		flex-shrink: 0
+		fill: var(--page-color)
+		transform: rotate(-90deg)
+		transition: fill .2s linear, transform .2s linear
+
+.link
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 16px 24px
+	max-width: 200px
+	width: 100%
+	min-height: 54px
+	font-weight: 600
+	font-size: 16px
+	line-height: 112%
+	text-transform: uppercase
+	color: var(--page-color)
+	text-align: center
+	border: 1px solid var(--accent-color)
+	border-radius: 40px
+	background-color: var(--accent-color)
+	transition: border-color .2s linear, transform .2s linear, opacity .2s linear
+	+ph
+		padding: 10px
+		min-height: 44px
+	+hover
+		opacity: .5
+	+focus
+		opacity: .5
+	&:active
+		transform: scale(.98)
+
+.link-inv
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 16px 24px
+	max-width: 200px
+	width: 100%
+	min-height: 54px
+	font-weight: 600
+	font-size: 16px
+	line-height: 112%
+	text-transform: uppercase
+	color: var(--accent-color)
+	text-align: center
+	border: 1px solid var(--page-color)
+	border-radius: 40px
+	background-color: var(--page-color)
+	transition: border-color .2s linear, transform .2s linear, opacity .2s linear
+	+ph
+		padding: 10px
+		min-height: 44px
+	+hover
+		opacity: .5
+	+focus
+		opacity: .5
+	&:active
+		transform: scale(.98)

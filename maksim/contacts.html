@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO -->
+        <title>Сбор средств</title>
+        <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+        <!-- styles -->
+        <link rel="stylesheet" href="./app/css/style.min.css" />
+        <link rel="preconnect" href="/" />
+        <link rel="dns-prefetch" href="/" />
+        <!-- scripts -->
+        <script src="./app/js/libs/preloader.min.js"></script>
+        <script src="./app/js/libs/lazy-load.min.js"></script>
+        <script src="./app/js/libs/swiper.min.js" defer></script>
+        <script src="./app/js/index.min.js" defer></script>
+    </head>
+
+    <body class="inner">
+        <!-- preloader -->
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__row">
+                    <nav class="header__nav header-nav">
+                        <ul class="header-nav__list">
+                            <li class="header-nav__item">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="/"
+                                    aria-label="Направится к главному экрану">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Направится к истории">
+                                    История
+                                </a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Направится к блоку о Синдроме Ретта">
+                                    Синдром Ретта
+                                </a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="./reports.html"
+                                    aria-label="Направится к отчётам">
+                                    Отчёты
+                                </a>
+                            </li>
+                            <li class="header-nav__item active">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="./contacts.html"
+                                    aria-label="Направится к блоку сбора средств">
+                                    Сбор средств
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a
+                        class="header__link-feedback link"
+                        href="#"
+                        aria-label="Связаться с нами">
+                        Связаться с нами
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <!-- contacts -->
+            <section class="contacts">
+                <div class="contacts__container container">
+                    <h2 class="contacts__title title-2">Мои контакты</h2>
+                    <p class="contacts__subtitle">
+                        Стульников Игорь Александрович
+                    </p>
+                    <ul class="contacts__feedback-list">
+                        <li
+                            class="contacts__feedback-list-item feedback-list-item">
+                            <a
+                                class="feedback-list-item__link link-text"
+                                href="tel:+79184444444"
+                                aria-label="Позвонить по номеру 8 918 444 44 44">
+                                <div class="link-text__icon-wrap">
+                                    <svg class="link-text__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#ph"></use>
+                                    </svg>
+                                </div>
+                                <span class="link-text__descr">
+                                    8 918 444 44 44
+                                </span>
+                            </a>
+                        </li>
+                        <li
+                            class="contacts__feedback-list-item feedback-list-item">
+                            <a
+                                class="feedback-list-item__link link-text"
+                                href="https://wa.me/+79184444444"
+                                aria-label="Написать в WhatsApp">
+                                <div
+                                    class="link-text__icon-wrap link-text__icon-wrap_wh">
+                                    <svg class="link-text__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#wa"></use>
+                                    </svg>
+                                </div>
+                                <span class="link-text__descr">
+                                    8 918 444 44 44
+                                </span>
+                            </a>
+                        </li>
+                        <li
+                            class="contacts__feedback-list-item feedback-list-item">
+                            <a
+                                class="feedback-list-item__link link-text"
+                                href="mailto:mail@info.ru"
+                                aria-label="Написать на почту mail@info.ru">
+                                <div class="link-text__icon-wrap">
+                                    <svg class="link-text__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#email"></use>
+                                    </svg>
+                                </div>
+                                <span class="link-text__descr">
+                                    mail@info.ru
+                                </span>
+                            </a>
+                        </li>
+                        <li
+                            class="contacts__feedback-list-item feedback-list-item">
+                            <a
+                                class="feedback-list-item__link link-text"
+                                href="https://www.instagram.com/myinstagram"
+                                aria-label="Написать в Instagram"
+                                target="_blank">
+                                <div class="link-text__icon-wrap">
+                                    <svg class="link-text__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#inst"></use>
+                                    </svg>
+                                </div>
+                                <span class="link-text__descr">
+                                    @myinstagram
+                                </span>
+                            </a>
+                        </li>
+                        <li
+                            class="contacts__feedback-list-item feedback-list-item">
+                            <a
+                                class="feedback-list-item__link link-text"
+                                href="https://t.me/+79184444444"
+                                aria-label="Написать в Telegram"
+                                target="_blank">
+                                <div
+                                    class="link-text__icon-wrap link-text__icon-wrap_tg">
+                                    <svg class="link-text__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#tg"></use>
+                                    </svg>
+                                </div>
+                                <span class="link-text__descr">
+                                    8 918 444 44 44
+                                </span>
+                            </a>
+                        </li>
+                        <li
+                            class="contacts__feedback-list-item feedback-list-item">
+                            <a
+                                class="feedback-list-item__link link-text"
+                                href="https://vk.com/"
+                                aria-label="Перейти на страницу в Вконтакте"
+                                target="_blank">
+                                <div
+                                    class="link-text__icon-wrap link-text__icon-wrap_vk">
+                                    <svg class="link-text__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#vk"></use>
+                                    </svg>
+                                </div>
+                                <span class="link-text__descr">
+                                    @myvkontakte
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <h2 class="contacts__title title-2">Реквизиты</h2>
+                    <ul class="contacts__requisites-list">
+                        <li
+                            class="contacts__requisites-list-item requisites-list-item">
+                            <h3 class="requisites-list-item__title">
+                                Сбербанк
+                            </h3>
+                            <p class="requisites-list-item__text">
+                                Карта: 40802810200003404192
+                            </p>
+                            <p class="requisites-list-item__text">
+                                Получатель: Игорь Александрович (папа Максима)
+                            </p>
+                        </li>
+                        <li
+                            class="contacts__requisites-list-item requisites-list-item">
+                            <h3 class="requisites-list-item__title">
+                                Сбербанк
+                            </h3>
+                            <p class="requisites-list-item__text">
+                                Карта: 40802810200003404192
+                            </p>
+                            <p class="requisites-list-item__text">
+                                Получатель: Игорь Александрович (папа Максима)
+                            </p>
+                        </li>
+                        <li
+                            class="contacts__requisites-list-item requisites-list-item">
+                            <h3 class="requisites-list-item__title">
+                                Для юридичеких лиц
+                            </h3>
+                            <p class="requisites-list-item__text">
+                                Банк: АО «Тинькофф Банк»
+                            </p>
+                            <p class="requisites-list-item__text">
+                                БИК банка: 044525974
+                            </p>
+                            <p class="requisites-list-item__text">
+                                ИНН банка: 7710140679
+                            </p>
+                            <p class="requisites-list-item__text">
+                                Корреспондентский счет банка:
+                                30101810145250000974
+                            </p>
+                            <p class="requisites-list-item__text">
+                                Юридический адрес банка: 127287, г. Москва, ул.
+                                Хуторская 2-я, д. 38А, стр. 2
+                            </p>
+                        </li>
+                        <li
+                            class="contacts__requisites-list-item requisites-list-item">
+                            <h3 class="requisites-list-item__title">
+                                Для юридичеких лиц
+                            </h3>
+                            <p class="requisites-list-item__text">
+                                Банк: АО «Тинькофф Банк»
+                            </p>
+                            <p class="requisites-list-item__text">
+                                БИК банка: 044525974
+                            </p>
+                            <p class="requisites-list-item__text">
+                                ИНН банка: 7710140679
+                            </p>
+                            <p class="requisites-list-item__text">
+                                Корреспондентский счет банка:
+                                30101810145250000974
+                            </p>
+                            <p class="requisites-list-item__text">
+                                Юридический адрес банка: 127287, г. Москва, ул.
+                                Хуторская 2-я, д. 38А, стр. 2
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer__top footer-top">
+                <div class="footer-top__container container">
+                    <nav class="footer-top__nav footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="/"
+                                    aria-label="Направится к главному экрану">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Направится к истории">
+                                    История
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Направится к блоку о Синдроме Ретта">
+                                    Синдром Ретта
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./reports.html"
+                                    aria-label="Направится к отчётам">
+                                    Отчёты
+                                </a>
+                            </li>
+                            <li class="footer-nav__item active">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./contacts.html"
+                                    aria-label="Направится к блоку сбора средств">
+                                    Сбор средств
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="footer__copyright copyright">
+                <div class="copyright__container container">
+                    <ul class="copyright__list">
+                        <li class="copyright__list-item">
+                            © 2025 Все права защищены
+                        </li>
+                        <li class="copyright__list-item">
+                            <a
+                                class="copyright__list-link copyright-link"
+                                href="./page.html"
+                                target="_blank"
+                                aria-label="Открыть пользовательское соглашение">
+                                Пользовательское соглашение
+                            </a>
+                        </li>
+                        <li class="copyright__list-item">
+                            <a
+                                class="copyright__list-link copyright-link"
+                                href="https://web2.agency/"
+                                target="_blank"
+                                aria-label="Открыть сайт по разработке WEB2 Новороссийск">
+                                <svg class="copyright-link__icon">
+                                    <use
+                                        href="./app/img/icons/icons.svg#web2"></use>
+                                </svg>
+                                <span class="copyright-link__text">
+                                    создание сайтов
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- scroll-top -->
+        <button
+            id="scroll-top"
+            class="home-page__scroll-top scroll-top"
+            aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="./app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+    </body>
+</html>

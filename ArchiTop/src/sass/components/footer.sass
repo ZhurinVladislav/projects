@@ -14,6 +14,8 @@
 	padding: 20px 0
 	+sm
 		flex-wrap: wrap
+		padding: 0
+		padding-top: 20px
 
 	&__logo-wrap
 		max-width: 272px
@@ -38,11 +40,6 @@
 		flex-wrap: wrap
 		gap: 12px
 
-	&__item
-		&.menu-active
-			.footer-menu-list__item-link
-				border-color: $clr_4
-
 	&__item-link
 		display: flex
 		align-items: center
@@ -58,6 +55,9 @@
 		&:hover
 			+hover
 				border-color: rgba($clr_4, .5)
+
+		&.active
+			border-color: $clr_4
 
 .footer-bottom
 	display: flex
@@ -94,3 +94,57 @@
 		&:hover
 			+hover
 				color: $clr_4	
+
+.footer-bottom
+	display: flex
+	justify-content: space-between
+	gap: 32px
+	+ph
+		gap: 10px
+		// flex-wrap: wrap
+		flex-direction: column
+		// justify-content: center
+		// align-items: center
+		font-size: 14px
+
+	// &__text
+	// 	+ph
+	// 		max-width: max-content
+	// 		width: 100%
+
+	// &__link
+	// 	+ph
+	// 		max-width: max-content
+	// 		width: 100%
+
+	// 	&.link-web2
+	// 		+ph
+	// 			max-width: 100%
+	// 			width: 100%
+	// 			text-align: center
+
+	.link-text
+		color: $clr_2
+		transition: color .2s linear, transform .2s linear
+		&__icon
+			fill: $clr_2
+
+		&:hover
+			+hover
+				color: $clr_4
+				border-color: $clr_0
+
+				.link-text__icon
+					fill: $clr_4
+
+.link-web2
+	gap: 10px
+	+ph
+		gap: 4px
+
+	&__icon
+		width: 47px
+		height: 20px
+
+		+ph
+			width: 40px

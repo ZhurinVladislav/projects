@@ -22,7 +22,7 @@
 		background-position: center
 		background-size: cover
 		+md
-			opacity: .6
+			opacity: .4
 		+ph
 			max-width: 1200px
 			min-height: 60%
@@ -33,16 +33,74 @@
 	&__text
 		margin-bottom: 32px
 
-	&__form-wrap
+	&__right
 		position: relative
 		z-index: 1
 		margin-left: auto
-		display: flex
-		flex-direction: column
 		max-width: 670px
 		width: 100%
 		+ph
 			margin-left: 0
+
+	&__form-wrap
+		display: flex
+		flex-direction: column
+		&.hidden
+			display: none
+
+	&__result-list
+		display: flex
+		flex-direction: column
+		gap: 16px
+
+.feedback-result-item
+	display: flex
+	justify-content: space-between
+	gap: 12px
+
+	&__left
+		display: flex
+		flex-direction: column
+		gap: 12px
+		max-width: 80%
+		width: 100%
+
+	&__title
+		font-weight: 500
+		font-size: 18px
+		+ph
+			font-size: 16px
+
+	&__line-wrap
+		position: relative
+		display: flex
+		max-width: 100%
+		width: 100%
+		height: 3px
+	
+	&__line
+		position: absolute
+		background-color: $clr_4
+		height: 100%
+
+	&__stats
+		display: flex
+		align-items: center
+		gap: 4px
+		max-width: 20%
+		width: 100%
+		// margin-left: auto
+		+ph
+			// flex-direction: column
+			// align-items: flex-start
+			max-width: 24%
+			// margin-left: auto
+			font-size: 14px
+
+	&__stats-icon
+		width: 16px
+		height: 16px
+		fill: $clr_4
 
 .feedback-form
 	&__list

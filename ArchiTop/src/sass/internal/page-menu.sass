@@ -2,6 +2,17 @@
 	margin-bottom: 20px
 	&__list
 		display: flex
+		+sm
+			overflow-x: auto
+			overflow-y: hidden
+			scroll-snap-type: x mandatory
+
+		&::-webkit-scrollbar
+			height: 2px
+			background-color: $clr_1
+
+		&::-webkit-scrollbar-thumb
+			background-color: $clr_4
 
 	&__list-link
 		display: flex
@@ -10,6 +21,8 @@
 		padding: 16px 20px
 		border-bottom: 2px solid rgba($clr_3, .1)
 		transition: border-color .2s linear
+		+sm
+			white-space: nowrap
 
 		&:hover
 			+hover

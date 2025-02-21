@@ -3,13 +3,29 @@
 		margin-bottom: 80px
 		+ph
 			margin-bottom: 40px
-	
+
 	.links-list
 		grid-template-columns: repeat(2, 1fr)
 		max-width: 1195px
+		list-style: square
+		padding-left: 35px
+		color: $clr_3
 		+sm
 			grid-template-columns: 1fr
 			gap: 12px
+			padding-left: 20px
+
+		&__item
+			display: list-item
+			&::marker
+				color: $clr_4
+
+	.link-list
+		text-align: left
+		&__text
+			white-space: normal
+			+ph
+				width: 100%
 
 .section-filter
 	&__main-wrap
@@ -34,13 +50,20 @@
 			margin-top: 0
 			max-width: 100%
 
+		+ph
+			padding: 0 12px
+
 .filter
 	&:first-child
 		.filter-list
 			padding-bottom: 20px
+			+ph
+				padding-bottom: 14px
 	&:not(:first-child)
 		.filter-list
 			padding-bottom: 20px
+			+ph
+				padding-bottom: 14px
 	&:not(:last-child)
 		border-bottom: .50px solid rgba($clr_3, .2)
 
@@ -52,6 +75,9 @@
 		padding-bottom: 16px
 		max-width: 100%
 		width: 100%
+		+ph
+			padding-top: 14px
+			padding-bottom: 14px
 		&:hover
 			+hover
 				.filter__btn-text
@@ -96,13 +122,14 @@
 .filter-results
 	display: flex
 	flex-direction: column
-	margin-bottom: 80px
 	width: 100%
-	+ph
-		margin-bottom: 40px
+
 	&__text-wrap
+		margin: 80px 0
 		padding-left: 20px
 		border-left: 2px solid $clr_4
+		+ph
+			margin: 40px 0
 
 .filters-list
 	display: flex
@@ -159,110 +186,16 @@
 	display: flex
 	flex-direction: column
 	gap: 12px
-	margin-bottom: 20px
-
-.result
-	display: flex
-	gap: 20px
-	padding: 12px 20px 12px 12px
-	background-color: $clr_2
-	+md
-		flex-direction: column
-	+sm
-		flex-direction: row
-	+ph
-		flex-direction: column
-
-	&__img-wrap
-		display: flex
-		max-width: 330px
-		width: 100%
-		height: 100%
-		+sm
-			max-width: 200px
-		+ph
-			max-width: 350px
-
-	&__img
-		display: flex
-		width: 100%
-		object-fit: cover
-
-	&__feedback
-		display: flex
-		flex-direction: column
-		gap: 12px
-		max-width: 172px
-		width: 100%
-		+ph
-			max-width: 100%
-
-	&__feedback-links
-		display: flex
-		flex-direction: column
-		gap: 6px
-		margin-top: auto
-
-	&__feedback-link
-		width: 100%
-		+ph
-			max-width: 100%
-
-.result-info
-	display: flex
-	flex-direction: column
-	gap: 8px
-	padding-right: 20px
-	max-width: 500px
-	width: 100%
-	border-right: 0.5px solid rgba($clr_3, .2)
-	+ph
-		padding-right: 0
-		padding-bottom: 20px
-		border-right: none
-		border-bottom: 0.5px solid rgba($clr_3, .2)
-
-
-	&__content
-		display: flex
-		gap: 38px
-		+md
-			gap: 20px
-		+ph
-			flex-direction: column
-
-	&__title-wrap
-		display: flex
-		align-items: center
-		gap: 8px
-		margin-bottom: 4px
-
-	&__title-img
-		display: flex
-		flex-shrink: 0
-		width: 42px
-		height: 42px
-		border-radius: 100%
-
-	&__title
-		font-weight: 700
-		font-size: 18px
-		color: $clr_4
-
-.result-info-text
-	&:last-child
-		margin-bottom: 4px
-
-	&__title
-		font-weight: 600
+	// margin-bottom: 20px
 
 .pagination
 	display: flex
 	gap: 4px
 	margin: 0 auto
-	margin-bottom: 80px
-	+ph
-		margin-bottom: 40px
+	padding-top: 20px
+	// margin-bottom: 80px
+	// +ph
+	// 	margin-bottom: 40px
 
 .pagination-btn
 	display: flex

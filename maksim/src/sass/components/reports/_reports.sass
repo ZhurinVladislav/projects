@@ -1,0 +1,43 @@
+.reports
+	&__list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 20px
+		+ph
+			grid-template-columns: 1fr
+			gap: 10px
+
+	&__list-item
+		display: flex
+
+	&__list-link
+		display: flex
+		flex-direction: column
+		padding: 20px
+		max-width: 100%
+		width: 100%
+		color: var(--page-color)
+		border-radius: 20px
+		background-color: var(--accent-color)
+		transition: opacity .2s linear, transform .2s linear
+		+ph
+			padding: 10px
+		+hover
+			opacity: .8
+			.link-more
+				&__icon
+					transform: translateX(2px) rotate(-90deg) scale(1.1)
+		+focus
+			opacity: .8
+			.link-more
+				&__icon
+					transform: translateX(2px) rotate(-90deg) scale(1.1)
+		&:active
+			transform: scale(.99)
+
+	&__list-title
+		color: var(--page-color)
+
+	&__list-text
+		margin-bottom: 20px
+		

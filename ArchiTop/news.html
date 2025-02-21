@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+        <!-- SEO -->
+        <title>Новости</title>
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./app/css/style.min.css" />
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/preloader.min.js"></script>
+        <script src="./app/js/libs/lazy-load.min.js"></script>
+        <script src="./app/js/libs/webp.min.js" defer></script>
+        <script src="./app/js/libs/modal-window.min.js" defer></script>
+        <script src="./app/js/index.min.js" defer></script>
+    </head>
+    <body>
+        <!-- PRELOADER -->
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER -->
+        <header id="header" class="header">
+            <div class="header__content-top header-top">
+                <div class="header-top__container container">
+                    <div
+                        class="header-top__site-wrapper site-wrapper js-site-wrapper"
+                        tabindex="0"
+                        aria-label="Раскрыть список городов">
+                        <button class="site-wrapper__btn js-btn-site-toggle">
+                            <svg class="site-wrapper__icon">
+                                <use
+                                    xlink:href="./app/img/icons/icons.svg#mark"></use>
+                            </svg>
+                            <span class="site-wrapper__text">Краснодар</span>
+                            <svg class="site-wrapper__icon-arrow">
+                                <use
+                                    xlink:href="./app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+                        <ul class="site-wrapper__list hidden js-list-site">
+                            <li class="site-wrapper__list-item">
+                                <a
+                                    href="/"
+                                    class="site-wrapper__list-link"
+                                    aria-label="Перейти на сайт Новороссийск"
+                                    >Новороссийск</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <a
+                        class="header-top__logo logo"
+                        href="/"
+                        aria-label="Перейти на главную страницу ArchiTop">
+                        <img
+                            class="logo__img"
+                            data-src="./app/img/logo.svg"
+                            alt="Логотип ArchiTop"
+                            title="ArchiTop" />
+                        <img
+                            class="logo__img logo__img_active"
+                            data-src="./app/img/logo-inv.svg"
+                            alt="Логотип ArchiTop"
+                            title="ArchiTop" />
+                    </a>
+                    <button
+                        class="header-top__btn btn"
+                        aria-label="Открыть форму обратной связи">
+                        <!-- <svg class="btn__icon btn__icon_ph">
+                            <use
+                                xlink:href="./app/img/icons/icons.svg#feedback"></use>
+                        </svg> -->
+                        <span class="btn__text btn__text_ph">
+                            Связаться с&nbsp;нами
+                        </span>
+                    </button>
+
+                    <button
+                        id="burger-toggle"
+                        class="header-top__menu-toggle menu-toggle"
+                        aria-label="Открыть мобильное меню">
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header__menu-container container">
+                <nav class="header__menu header-menu">
+                    <ul class="header-menu__list">
+                        <li class="header-menu__list-item menu-active">
+                            <a
+                                class="header-menu__list-link"
+                                href="./rating.html"
+                                aria-label="Перейти в раздел Рейтинг">
+                                Рейтинг
+                            </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a
+                                class="header-menu__list-link"
+                                href="#"
+                                aria-label="Перейти в раздел О проекте">
+                                О проекте
+                            </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a
+                                class="header-menu__list-link active"
+                                href="#"
+                                aria-label="Перейти в раздел Новости">
+                                Новости
+                            </a>
+                        </li>
+                        <li class="header-menu__list-item">
+                            <a
+                                class="header-menu__list-link"
+                                href="#"
+                                aria-label="Перейти в раздел Методика">
+                                Методика
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- MENU-MOBILE -->
+            <div id="menu-mobile" class="header__menu-mobile menu-mobile">
+                <div class="menu-mobile__wrap">
+                    <nav class="menu-mobile__menu">
+                        <ul class="menu-mobile__menu-list menu-mobile-list">
+                            <li class="menu-mobile-list__item">
+                                <a class="menu-mobile-list__link" href="#about">
+                                    О доме
+                                </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a
+                                    class="menu-mobile-list__link"
+                                    href="#layout">
+                                    Планировка
+                                </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a
+                                    class="menu-mobile-list__link"
+                                    href="#location">
+                                    Расположение
+                                </a>
+                            </li>
+                            <li class="menu-mobile-list__item">
+                                <a
+                                    class="menu-mobile-list__link"
+                                    href="#contacts">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="menu-mobile__links menu-mobile-links">
+                        <li class="menu-mobile-links__item">
+                            <a
+                                class="menu-mobile-links__item-link link-text"
+                                href="/"
+                                aria-label="Перейти в Яндекс Карты"
+                                target="_blank">
+                                <svg class="link-text__icon">
+                                    <use
+                                        xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                </svg>
+                                <address class="link-text__descr">
+                                    Абрау-Дюрсо, ул. Морская&nbsp;8
+                                </address>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a
+                                class="menu-mobile-links__link link-text"
+                                href="tel:+79883402992"
+                                aria-label="Позвонить по номеру +7 (988) 340-29-92">
+                                <svg class="link-text__icon">
+                                    <use
+                                        xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                <span class="link-text__descr">
+                                    +7 (988) 340-29-92
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a
+                                class="menu-mobile-links__link link-text"
+                                href="#"
+                                aria-label="Перейти в Авито"
+                                target="_blank">
+                                <svg class="link-text__icon">
+                                    <use
+                                        xlink:href="./app/img/icons/icons.svg#avito"></use>
+                                </svg>
+                                <span class="link-text__descr">Avito</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a
+                                class="menu-mobile-links__link link-text"
+                                href="https://wa.me/+79883402992"
+                                aria-label="Написать нам в WhatsApp"
+                                target="_blank">
+                                <svg class="link-text__icon">
+                                    <use
+                                        xlink:href="./app/img/icons/icons.svg#wa"></use>
+                                </svg>
+                                <span class="link-text__descr">WhatsApp</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile-links__item">
+                            <a
+                                class="menu-mobile-links__link link-text"
+                                href="https://t.me/+79883402992"
+                                aria-label="Написать в чат в Telegram"
+                                target="_blank">
+                                <svg class="link-text__icon">
+                                    <use
+                                        xlink:href="./app/img/icons/ыicons.svg#tg"></use>
+                                </svg>
+                                <span class="link-text__descr">Telegram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main id="main-block" class="main-section">
+            <!-- SEARCH-SERVICES -->
+            <div class="main-section__search-services search-services">
+                <div class="search-services__container container">
+                    <form class="search-services__form search-form">
+                        <label
+                            for="input-search"
+                            class="search-form__input-wrap form-field">
+                            <input
+                                id="input-search"
+                                class="form-field__input"
+                                type="text"
+                                placeholder="Поиск услуг" />
+                            <svg class="form-field__icon">
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#search"></use>
+                            </svg>
+                        </label>
+                        <button class="search-form__btn btn">Найти</button>
+                    </form>
+                </div>
+            </div>
+            <!-- BREADCRUMB -->
+            <div class="main-section__breadcrumb breadcrumb">
+                <div class="breadcrumb__container container">
+                    <ul class="breadcrumb__list breadcrumb-list">
+                        <li class="breadcrumb-list__item">
+                            <a class="breadcrumb-list__item-link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumb-list__item">
+                            <a class="breadcrumb-list__item-link" href="#">
+                                Рейтинг
+                            </a>
+                        </li>
+                        <li class="breadcrumb-list__item">
+                            <span
+                                class="breadcrumb-list__item-link breadcrumb-list__item-link_nolink"
+                                href="#">
+                                ArtWind
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- NEWS -->
+            <section class="main-section__news news section-inner">
+                <h1 class="news__title-hidden text-hidden"></h1>
+                <div class="news__container container">
+                    <h2 class="news__title h-2">Новости</h2>
+                    <ul class="news__list">
+                        <li class="news__list-item">
+                            <a
+                                class="news__list-item-link news-link"
+                                href="./news-inner.html"
+                                aria-label="Перейти на новости про что-то там">
+                                <span class="news-link__date"
+                                    >28 ноября 2024</span
+                                >
+                                <div class="news-link__img-wrap">
+                                    <img
+                                        class="news-link__img"
+                                        src="./app/img/projects/img-1.jpg"
+                                        alt="Тестовое изображение" />
+                                </div>
+                                <h3 class="news-link__title">
+                                    Тестовый заголовок
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="news__list-item">
+                            <a
+                                class="news__list-item-link news-link"
+                                href="./news-inner.html"
+                                aria-label="Перейти на новости про что-то там">
+                                <span class="news-link__date"
+                                    >28 ноября 2024</span
+                                >
+                                <div class="news-link__img-wrap">
+                                    <img
+                                        class="news-link__img"
+                                        src="./app/img/projects/img-1.jpg"
+                                        alt="Тестовое изображение" />
+                                </div>
+                                <h3 class="news-link__title">
+                                    Тестовый заголовок Тестовый заголовок
+                                    Тестовый заголовок Тестовый заголовок
+                                    Тестовый заголовок
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="news__list-item">
+                            <a
+                                class="news__list-item-link news-link"
+                                href="./news-inner.html"
+                                aria-label="Перейти на новости про что-то там">
+                                <span class="news-link__date"
+                                    >28 ноября 2024</span
+                                >
+                                <div class="news-link__img-wrap">
+                                    <img
+                                        class="news-link__img"
+                                        src="./app/img/projects/img-1.jpg"
+                                        alt="Тестовое изображение" />
+                                </div>
+                                <h3 class="news-link__title">
+                                    Тестовый заголовок
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="news__list-item">
+                            <a
+                                class="news__list-item-link news-link"
+                                href="./news-inner.html"
+                                aria-label="Перейти на новости про что-то там">
+                                <span class="news-link__date"
+                                    >28 ноября 2024</span
+                                >
+                                <div class="news-link__img-wrap">
+                                    <img
+                                        class="news-link__img"
+                                        src="./app/img/projects/img-1.jpg"
+                                        alt="Тестовое изображение" />
+                                </div>
+                                <h3 class="news-link__title">
+                                    Тестовый заголовок
+                                </h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__content-top footer-top">
+                    <div class="footer-top__logo-wrap">
+                        <a
+                            class="footer-top__logo logo"
+                            href="/"
+                            aria-label="Перейти на главную страницу ArchiTop">
+                            <img
+                                class="logo__img"
+                                data-src="./app/img/logo-inv.svg"
+                                alt="Логотип ArchiTop"
+                                title="ArchiTop" />
+                        </a>
+                    </div>
+                    <nav class="footer-top__menu">
+                        <ul class="footer-top__menu-list footer-menu-list">
+                            <li class="footer-menu-list__item">
+                                <a
+                                    class="footer-menu-list__item-link"
+                                    href="#"
+                                    aria-label="Перейти на страницу Рейтинг">
+                                    Рейтинг
+                                </a>
+                            </li>
+                            <li class="footer-menu-list__item">
+                                <a
+                                    class="footer-menu-list__item-link"
+                                    href="#"
+                                    aria-label="Перейти на страницу О проекте">
+                                    О проекте
+                                </a>
+                            </li>
+                            <li class="footer-menu-list__item">
+                                <a
+                                    class="footer-menu-list__item-link active"
+                                    href="#"
+                                    aria-label="Перейти на страницу Новости">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="footer-menu-list__item">
+                                <a
+                                    class="footer-menu-list__item-link"
+                                    href="#"
+                                    aria-label="Перейти на страницу Методика">
+                                    Методика
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__cooperation">
+                        <p class="footer__cooperation-desr">
+                            Реклама и&nbsp;сотрудничество
+                        </p>
+                        <a
+                            class="footer__cooperation-link link-text"
+                            href="mailto:sales@sitename.ru"
+                            aria-label="Написать на почту sales@sitename.ru"
+                            target="_blank">
+                            sales@sitename.ru
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__content-bottom footer-bottom">
+                    <ul class="footer-bottom__list">
+                        <li class="footer-bottom__list-item">
+                            <a
+                                class="footer-bottom__list-item-link"
+                                href="#"
+                                aria-label="Перейти на страницу Пользовательское соглашение">
+                                Пользовательское соглашение
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a
+                                class="footer-bottom__list-item-link"
+                                href="#"
+                                aria-label="Перейти на страницу Обработка персональных данных">
+                                Обработка персональных данных
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a
+                                class="footer-bottom__list-item-link"
+                                href="#"
+                                aria-label="Перейти на страницу Политика конфиденциальности">
+                                Политика конфиденциальности
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a
+                                class="footer-bottom__list-item-link"
+                                href="#"
+                                aria-label="Перейти на страницу Карта сайта">
+                                Карта сайта
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- SCROLL-TOP -->
+        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <!-- SCRIPTS -->
+        <script src="./app/js/libs/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

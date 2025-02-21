@@ -10,6 +10,7 @@
 	&__list
 		display: flex
 		flex-direction: column
+		gap: 4px
 		max-width: 1138px
 
 	&__list-item
@@ -41,21 +42,21 @@
 		position: relative
 		display: flex
 		align-items: center
-		padding: 24px 40px
-		min-height: 100px
+		padding: 20px 40px
+		min-height: 40px
 		font-weight: 600
 		line-height: 115%
 		font-size: 20px
-		border: 1px solid $clr_1
+		border: 1px solid $clr_0
 		border-radius: 8px
-		background-color: $clr_1
+		background-color: rgba($clr_4, .4)
 		cursor: pointer
 		transition: background-color .2s linear, color .2s linear, z-index .2s linear, transform .2s linear
 		+sm
 			font-size: 18px
 		+ph
 			padding: 8px 10px
-			min-height: 80px
+			min-height: 60px
 			font-size: 16px
 
 		&:hover:not(.ac-active)
@@ -65,21 +66,15 @@
 		&:focus:not(:active)
 			background-color: $clr_4
 
-		&:active
-			transform: scale(.99)
-
 		&.ac-active
 			color: $clr_3
 			z-index: 2
-			// box-shadow: 0 10px 23px 0 rgba(13, 50, 99, 0.06), 0 42px 42px 0 rgba(13, 50, 99, 0.05), 0 94px 57px 0 rgba(13, 50, 99, 0.03), 0 167px 67px 0 rgba(13, 50, 99, 0.01), 0 262px 73px 0 rgba(13, 50, 99, 0)
+			background-color: $clr_1
 
 			&:hover
 				+hover
 					.faq__btn-text
 						opacity: .7
-
-					// .faq__btn-icon
-					// 	transform: translateX(-3px)
 
 			.faq__btn-icon
 				transform: rotateX(180deg)
@@ -89,9 +84,6 @@
 		text-align: left
 		transition: opacity .2s linear
 
-		// +ph
-		// 	font-size: 16px
-    
 	&__btn-wrapper-icon
 		display: flex
 		align-items: center
@@ -104,21 +96,12 @@
 		background-color: $clr_4
 		transition: background-color .2s linear
 
-		// +ph
-		// 	width: 30px
-		// 	height: 30px
-    
 	&__btn-icon
 		width: 16px
 		height: 16px
 		fill: $clr_3
-		// transform: rotate(90deg)
 		transition: transform .2s linear
 
-		// +ph
-		// 	width: 10px
-		// 	height: 15px
-    
 	&__text
 		border-radius: 0 0 8px 8px
 		background-color: $clr_1

@@ -263,6 +263,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // СЛАЙДЕР В БЛОКЕ ВИДЕО НА ГЛАВНОЙ СТРАНИЦЕ
   const videoSlider = () => {
     if (!document.getElementById('video-slider')) return;
+
+    const swiper = new Swiper('#video-slider', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      loop: true,
+      onlyExternal: false,
+      speed: 500,
+      navigation: {
+        disabledClass: 'arrow_disable',
+        nextEl: '.arrow_next',
+        prevEl: '.arrow_prev',
+      },
+      breakpoints: {
+        50: {
+          slidesPerView: 1,
+        },
+
+        768: {
+          slidesPerView: 2,
+        },
+
+        1024: {
+          slidesPerView: 3,
+        },
+
+        1300: {
+          slidesPerView: 4,
+        },
+      },
+    });
   };
   videoSlider();
 
@@ -344,6 +374,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
   $('#gallery').lightGallery({
+    thumbnail: false,
+    share: false,
+    selector: '.gallery__link',
+    getCaptionFromTitleOrAlt: false,
+  });
+
+  $('#gallery-one').lightGallery({
+    thumbnail: false,
+    share: false,
+    selector: '.gallery__link',
+    getCaptionFromTitleOrAlt: false,
+  });
+
+  $('#gallery-two').lightGallery({
     thumbnail: false,
     share: false,
     selector: '.gallery__link',

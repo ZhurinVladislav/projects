@@ -39,9 +39,6 @@
       opacity: 0
       transform: translateY(-20px)
 
-    .menu-inner
-      box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
-
 .header-top
   display: flex
   align-items: center
@@ -137,6 +134,7 @@
       display: none
 
   &__list-item
+    position: relative
     display: flex
     &:hover
       +hover
@@ -178,33 +176,26 @@
 
 .menu-inner
   position: absolute
-  top: 100%
-  bottom: -100%
-  left: 50%
+  top: 40px
+  left: 0
   z-index: 100
   display: flex
   flex-direction: column
-  width: 1920px
-  height: 256px
+  gap: 16px
+  padding: 20px
+  width: 300px
   background-color: $clr_1
-  font-size: 14px
+  font-size: 16px
   color: $clr_2
+  border-radius: 16px
   opacity: 0
   visibility: hidden
-  transform: translateX(-50%)
+  box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
   transition: visibility .2s linear, opacity .3s linear, transform .2s linear
 
   &__container
     padding-top: 40px
     padding-bottom: 40px
-
-  &__list
-    display: flex
-    flex-direction: column
-    flex-wrap: wrap
-    gap: 16px 60px
-    max-width: max-content
-    max-height: 176px
 
   &__list-item
     display: flex
@@ -215,8 +206,48 @@
     transition: font-weight .2s linear, color .2s linear
     &:hover
       +hover
-        // font-weight: 700
         color: $clr_3
+
+// .menu-inner
+//   position: absolute
+//   top: 100%
+//   bottom: -100%
+//   left: 50%
+//   z-index: 100
+//   display: flex
+//   flex-direction: column
+//   width: 1920px
+//   height: 256px
+//   background-color: $clr_1
+//   font-size: 14px
+//   color: $clr_2
+//   opacity: 0
+//   visibility: hidden
+//   transform: translateX(-50%)
+//   transition: visibility .2s linear, opacity .3s linear, transform .2s linear
+
+//   &__container
+//     padding-top: 40px
+//     padding-bottom: 40px
+
+//   &__list
+//     display: flex
+//     flex-direction: column
+//     flex-wrap: wrap
+//     gap: 16px 60px
+//     max-width: max-content
+//     max-height: 176px
+
+//   &__list-item
+//     display: flex
+//     max-width: max-content
+
+//   &__list-link
+//     line-height: 100%
+//     transition: font-weight .2s linear, color .2s linear
+//     &:hover
+//       +hover
+//         color: $clr_3
 
 // КНОПКА ОТКРЫТИЯ МОБИЛЬНОГО МЕНЮ
 .menu-toggle

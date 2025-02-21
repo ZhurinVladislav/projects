@@ -17,6 +17,7 @@
         <script src="./app/js/libs/min/webp.min.js" defer></script>
         <script src="./app/js/libs/min/modal-window.min.js" defer></script>
         <script src="./app/js/libs/min/sliders.min.js" defer></script>
+        <script src="./app/js/libs/min/select.min.js" defer></script>
         <script src="./app/js/main.min.js" defer></script>
     </head>
 
@@ -145,6 +146,34 @@
                                         xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                 </svg>
                             </a>
+                            <ul class="header-menu__inner menu-inner">
+                                <li class="menu-inner__list-item menu-active">
+                                    <a class="menu-inner__list-link" href="#">
+                                        Фотосессия
+                                    </a>
+                                </li>
+                                <li class="menu-inner__list-item">
+                                    <a class="menu-inner__list-link" href="#">
+                                        Кейтеринг
+                                    </a>
+                                </li>
+                                <li class="menu-inner__list-item">
+                                    <a class="menu-inner__list-link" href="#">
+                                        День рождения на яхте
+                                    </a>
+                                </li>
+                                <li class="menu-inner__list-item">
+                                    <a class="menu-inner__list-link" href="#">
+                                        Свадьба на яхте
+                                    </a>
+                                </li>
+                                <li class="menu-inner__list-item">
+                                    <a class="menu-inner__list-link" href="#">
+                                        Круизы на яхте
+                                    </a>
+                                </li>
+                            </ul>
+                            <!--
                             <div class="header-menu__inner-wrapper menu-inner">
                                 <div class="menu-inner__container container">
                                     <ul
@@ -272,6 +301,7 @@
                                     </ul>
                                 </div>
                             </div>
+                            -->
                         </li>
                         <li class="header-menu__list-item menu-parent">
                             <a
@@ -285,6 +315,7 @@
                                         xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                 </svg>
                             </a>
+                            <!--
                             <div class="header-menu__inner-wrapper menu-inner">
                                 <div class="menu-inner__container container">
                                     <ul
@@ -327,6 +358,7 @@
                                     </ul>
                                 </div>
                             </div>
+                            -->
                         </li>
                         <li class="header-menu__list-item">
                             <a
@@ -733,204 +765,574 @@
                 </div>
             </section>
             <!-- CATALOG -->
-            <section class="main-section__catalog catalog section-reset">
-                <div class="catalog__container container">
+            <section
+                id="pdopage"
+                class="main-section__catalog catalog section-reset">
+                <div id="mse2_mfilter" class="catalog__container container">
                     <h2 class="catalog__title h-2">Каталог яхт Геленджика</h2>
-                    <ul class="catalog__list catalog-list">
-                        <li class="catalog-list__item">
-                            <ul class="catalog-list__stickers stickers">
-                                <li class="stickers__item stickers__item_new">
-                                    Новинка
-                                </li>
-                            </ul>
-                            <div class="catalog-list__img-wrapper">
-                                <img
-                                    class="catalog-list__img"
-                                    data-src="./app/img/catalog/img-1.jpg"
-                                    alt="Яхта" />
-                            </div>
-                            <div class="catalog-list__content">
-                                <div class="catalog-list__content-top">
-                                    <p class="catalog-list__subtitle">Яхта</p>
-                                    <h3 class="catalog-list__title h-3">
-                                        Pershing 50 Александра
-                                    </h3>
-                                    <ul class="catalog-list__specific">
-                                        <li
-                                            class="catalog-list__specific-item ">
-                                            <div
-                                                class="catalog-list__specific-img catalog-list__specific-img_price"></div>
-                                            <div class="card-price">
-                                                <span
-                                                    class="catalog-list__specific-descr card-price__old">
-                                                    <strong
-                                                        class="catalog-list__specific-strong">
-                                                        20 000 ₽ </strong
-                                                    >/час
-                                                </span>
-                                                <span
-                                                    class="catalog-list__specific-descr card-price__new">
-                                                    <strong
-                                                        class="catalog-list__specific-strong">
-                                                        20 000 ₽ </strong
-                                                    >/час
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li class="catalog-list__specific-item">
-                                            <div
-                                                class="catalog-list__specific-img catalog-list__specific-img_people"></div>
-                                            <span
-                                                class="catalog-list__specific-descr">
-                                                <strong
-                                                    class="catalog-list__specific-strong"
-                                                    >12</strong
-                                                >
-                                                человек
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="catalog-list__content-more">
-                                    <p class="catalog-list__subtitle">Яхта</p>
-                                    <h3 class="catalog-list__title h-3">
-                                        Pershing 50 Александра
-                                    </h3>
-                                    <ul class="catalog-list__specific">
-                                        <li
-                                            class="catalog-list__specific-item card-price">
-                                            <div
-                                                class="catalog-list__specific-img catalog-list__specific-img_price"></div>
-                                            <div class="card-price">
-                                                <span
-                                                    class="catalog-list__specific-descr card-price__old">
-                                                    <strong
-                                                        class="catalog-list__specific-strong">
-                                                        20 000 ₽ </strong
-                                                    >/час
-                                                </span>
-                                                <span
-                                                    class="catalog-list__specific-descr card-price__new">
-                                                    <strong
-                                                        class="catalog-list__specific-strong">
-                                                        20 000 ₽ </strong
-                                                    >/час
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li class="catalog-list__specific-item">
-                                            <div
-                                                class="catalog-list__specific-img catalog-list__specific-img_people"></div>
-                                            <span
-                                                class="catalog-list__specific-descr">
-                                                <strong
-                                                    class="catalog-list__specific-strong"
-                                                    >12</strong
-                                                >
-                                                человек
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <div class="catalog-list__features">
+
+                    <div class="catalog__content-wrap">
+                        <div class="catalog__filter catalog-filter">
+                            <div class="catalog-filter__form-wrap">
+                                <h3
+                                    class="catalog-filter__form-title filter-title h-3">
+                                    Фильтровать&nbsp;по:
+                                </h3>
+                                <form
+                                    class="catalog-filter__form filters-form"
+                                    method="post"
+                                    id="mse2_filters">
+                                    <fieldset
+                                        class="filter-block filter-spoiler js-spoiler-wrap filter-block__sport"
+                                        id="mse2_msoption|sport">
                                         <div
-                                            class="catalog-list__features-img"></div>
-                                        <span
-                                            class="catalog-list__features-descr">
-                                            Приятный экипаж, комфорт, удобные
-                                            спальные места
-                                        </span>
-                                    </div>
-                                    <div class="catalog-list__events">
-                                        <div class="catalog-list__events-top">
-                                            <div
-                                                class="catalog-list__events-img"></div>
-                                            <span
-                                                class="catalog-list__events-descr"
-                                                >Мероприятия</span
-                                            >
+                                            class="filter-spoiler__text-wrap js-spoiler-btn">
+                                            <span class="filter-spoiler__text">
+                                                Тип яхты
+                                            </span>
+                                            <svg class="filter-spoiler__arrow">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
                                         </div>
-                                        <ul class="catalog-list__events-list">
+                                        <div
+                                            class="filter-spoiler__content js-spoiler-content">
+                                            <label
+                                                class="filters-form__list-item-label filter-spoiler__label form-note"
+                                                for="mse2_ms|new_1"
+                                                data-css-value="0">
+                                                <input
+                                                    id="mse2_ms|new_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|new" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Парусные яхты
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="filters-form__list-item-label filter-spoiler__label form-note"
+                                                for="mse2_ms|new_1"
+                                                data-css-value="0">
+                                                <input
+                                                    id="mse2_ms|new_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|new" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Моторные яхты
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="filters-form__list-item-label filter-spoiler__label form-note"
+                                                for="mse2_ms|new_1"
+                                                data-css-value="0">
+                                                <input
+                                                    id="mse2_ms|new_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|new" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Прогулочные катера
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="filters-form__list-item-label filter-spoiler__label form-note"
+                                                for="mse2_ms|new_1"
+                                                data-css-value="0">
+                                                <input
+                                                    id="mse2_ms|new_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|new" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Гидроциклы
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="filters-form__list-item-label filter-spoiler__label form-note"
+                                                for="mse2_ms|new_1"
+                                                data-css-value="0">
+                                                <input
+                                                    id="mse2_ms|new_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|new" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Катамараны
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="filters-form__list-item-label filter-spoiler__label form-note"
+                                                for="mse2_ms|new_1"
+                                                data-css-value="0">
+                                                <input
+                                                    id="mse2_ms|new_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|new" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    VIP яхты
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+                                    <!-- <fieldset
+                                    class="filter-block filter-block__price"
+                                    id="mse2_ms|price">
+                                    <div class="mse2_number_inputs">
+                                        <div class="form-group col-md-6">
+                                            <label for="mse2_ms|price_0">
+                                                <input
+                                                    readonly="readonly"
+                                                    type="text"
+                                                    name="ms|price"
+                                                    id="mse2_ms|price_0"
+                                                    value="0"
+                                                    class="form-control input-sm"
+                                                    data-original-value="0"
+                                                    data-decimal="0" />
+                                            </label>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="mse2_ms|price_1">
+                                                <input
+                                                    readonly="readonly"
+                                                    type="text"
+                                                    name="ms|price"
+                                                    id="mse2_ms|price_1"
+                                                    value="28500"
+                                                    class="form-control input-sm"
+                                                    data-original-value="28500"
+                                                    data-decimal="0" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                        <div
+                                            class="ui-slider-range ui-corner-all ui-widget-header"
+                                            style="left: 0%; width: 100%;"></div>
+                                        <span
+                                            tabindex="0"
+                                            class="ui-slider-handle ui-corner-all ui-state-default"
+                                            style="left: 0%;"></span
+                                        ><span
+                                            tabindex="0"
+                                            class="ui-slider-handle ui-corner-all ui-state-default"
+                                            style="left: 100%;"></span>
+                                    </div>
+                                </fieldset> -->
+
+                                    <fieldset
+                                        class="filter-block filter-block__new"
+                                        id="mse2_ms|new">
+                                        <label
+                                            class="filters-form__list-item-label form-note"
+                                            for="mse2_ms|new_0"
+                                            data-css-value="1">
+                                            <input
+                                                id="mse2_ms|new_0"
+                                                class="form-note__input"
+                                                type="checkbox"
+                                                name="ms|new" />
+                                            <span
+                                                class="form-note__checkbox"></span>
+                                            <span class="form-note__text">
+                                                Акция
+                                            </span>
+                                        </label>
+                                        <label
+                                            class="filters-form__list-item-label form-note"
+                                            for="mse2_ms|new_1"
+                                            data-css-value="0">
+                                            <input
+                                                id="mse2_ms|new_1"
+                                                class="form-note__input"
+                                                type="checkbox"
+                                                name="ms|new" />
+                                            <span
+                                                class="form-note__checkbox"></span>
+                                            <span class="form-note__text">
+                                                Акция
+                                            </span>
+                                        </label>
+                                    </fieldset>
+
+                                    <!-- <ul class="filters-form__list">
+                                    <li class="filters-form__list-item">
+                                        <h3
+                                            class="filters-form__list-item-title h-3">
+                                            Фильтровать по:
+                                        </h3>
+                                    </li>
+                                    <li class="filters-form__list-item">
+                                        <fieldset
+                                            class="filter-block filter-block__new"
+                                            id="mse2_ms|new">
+                                            <label
+                                                class="filters-form__list-item-label form-note "
+                                                for="mse2_ms|new_0"
+                                                data-css-value="1">
+                                                <input
+                                                    id="mse2_ms|new_0"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|new" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Новинка
+                                                </span> </label
+                                            ><label
+                                                class="filters-form__list-item-label form-note "
+                                                for="mse2_ms|new_1"
+                                                data-css-value="0">
+                                                <input
+                                                    id="mse2_ms|new_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|new" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Новинка
+                                                </span>
+                                            </label>
+                                        </fieldset>
+                                    </li>
+                                    <li class="filters-form__list-item">
+                                        <fieldset
+                                            class="filter-block filter-block__avaible"
+                                            id="mse2_ms|avaible">
+                                            <label
+                                                class="filters-form__list-item-label form-note "
+                                                for="mse2_ms|avaible_0"
+                                                data-css-value="1">
+                                                <input
+                                                    id="mse2_ms|avaible_0"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|avaible" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Акция
+                                                </span> </label
+                                            ><label
+                                                class="filters-form__list-item-label form-note "
+                                                for="mse2_ms|avaible_1"
+                                                data-css-value="0">
+                                                <input
+                                                    id="mse2_ms|avaible_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="ms|avaible" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text">
+                                                    Акция
+                                                </span>
+                                            </label>
+                                        </fieldset>
+                                    </li>
+                                    <li class="filters-form__list-item">
+                                        <h3
+                                            class="catalog-filter__list-title h-3">
+                                            Типы яхт:
+                                        </h3>
+                                        <fieldset
+                                            class="filter-block filter-block__type-ship"
+                                            id="mse2_msoption|type-ship">
+                                            <label
+                                                class="filters-form__list-item-label form-note "
+                                                for="mse2_msoption|type-ship_0">
+                                                <input
+                                                    id="mse2_msoption|type-ship_0"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="msoption|type-ship"
+                                                    value="Моторные яхты" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text"
+                                                    >Моторные яхты</span
+                                                > </label
+                                            ><label
+                                                class="filters-form__list-item-label form-note "
+                                                for="mse2_msoption|type-ship_1">
+                                                <input
+                                                    id="mse2_msoption|type-ship_1"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="msoption|type-ship"
+                                                    value="Парусные яхты" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text"
+                                                    >Парусные яхты</span
+                                                ></label
+                                            ><label
+                                                class="filters-form__list-item-label form-note "
+                                                for="mse2_msoption|type-ship_2">
+                                                <input
+                                                    id="mse2_msoption|type-ship_2"
+                                                    class="form-note__input"
+                                                    type="checkbox"
+                                                    name="msoption|type-ship"
+                                                    value="Прогулочные катера" />
+                                                <span
+                                                    class="form-note__checkbox"></span>
+                                                <span class="form-note__text"
+                                                    >Прогулочные катера</span
+                                                >
+                                            </label>
+                                        </fieldset>
+                                    </li>
+                                </ul> -->
+
+                                    <button
+                                        id="reset"
+                                        class="filters-form__btn btn-in hidden"
+                                        type="reset">
+                                        Сбросить
+                                    </button>
+                                </form>
+                            </div>
+
+                            <div class="catalog__sort sort-wrap">
+                                <h3 class="sort-wrap__title filter-title h-3">
+                                    Сортировать&nbsp;по:
+                                </h3>
+                                <ul
+                                    id="mse2_sort"
+                                    class="sort-wrap__list sort-list">
+                                    <li class="sort-list__item">
+                                        <a
+                                            href="#"
+                                            class="sort sort-list__item-link"
+                                            data-sort="ms|price"
+                                            data-dir="[[+mse2_sort:is=`ms|price:desc`:then=`desc`]]"
+                                            data-default="desc">
+                                            по&nbsp;цене
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                    <li class="sort-list__item">
+                                        <a
+                                            href="#"
+                                            class="sort sort-list__item-link"
+                                            data-sort="ms|new"
+                                            data-dir="[[+mse2_sort:is=`ms|new:desc`:then=`desc`]]"
+                                            data-default="desc">
+                                            новинки
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                    <li class="sort-list__item">
+                                        <a
+                                            href="#"
+                                            class="sort sort-list__item-link"
+                                            data-sort="ms|popular"
+                                            data-dir="[[+mse2_sort:is=`ms|populat:desc`:then=`desc`]]"
+                                            data-default="desc">
+                                            по&nbsp;популярности
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul
+                            id="mse2_results"
+                            class="catalog__list catalog-list rows">
+                            <li class="catalog-list__item">
+                                <ul class="catalog-list__stickers stickers">
+                                    <li
+                                        class="stickers__item stickers__item_new">
+                                        Новинка
+                                    </li>
+                                </ul>
+                                <div class="catalog-list__img-wrapper">
+                                    <img
+                                        class="catalog-list__img"
+                                        data-src="./app/img/catalog/img-1.jpg"
+                                        alt="Яхта" />
+                                </div>
+                                <div class="catalog-list__content">
+                                    <div class="catalog-list__content-top">
+                                        <p class="catalog-list__subtitle">
+                                            Яхта
+                                        </p>
+                                        <h3 class="catalog-list__title h-3">
+                                            Pershing 50 Александра
+                                        </h3>
+                                        <ul class="catalog-list__specific">
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские прогулки
+                                                class="catalog-list__specific-item ">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_price"></div>
+                                                <div class="card-price">
+                                                    <span
+                                                        class="catalog-list__specific-descr card-price__old">
+                                                        <strong
+                                                            class="catalog-list__specific-strong">
+                                                            20 000 ₽ </strong
+                                                        >/час
+                                                    </span>
+                                                    <span
+                                                        class="catalog-list__specific-descr card-price__new">
+                                                        <strong
+                                                            class="catalog-list__specific-strong">
+                                                            20 000 ₽ </strong
+                                                        >/час
+                                                    </span>
+                                                </div>
                                             </li>
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские экскурсии
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Морская рыбалка
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Встреча с дельфинами
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_people"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong"
+                                                        >12</strong
+                                                    >
+                                                    человек
+                                                </span>
                                             </li>
                                         </ul>
                                     </div>
-                                    <a
-                                        class="catalog-list__link-ph link-text"
-                                        href="tel:+7 (928) 440-00-14"
-                                        aria-label="Позвонить по номеру +7 (928) 440-00-14">
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                        </svg>
-                                        <span class="link-text__descr"
-                                            >+7 (928) 440-00-14</span
-                                        >
-                                    </a>
-                                    <a
-                                        class="catalog-list__link link-text"
-                                        href="./yacht.html">
-                                        <span class="link-text__descr">
-                                            Подробнее
-                                        </span>
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-list__item">
-                            <ul class="catalog-list__stickers"></ul>
-                            <img
-                                class="catalog-list__img"
-                                data-src="./app/img/catalog/img-2.jpg"
-                                alt="Яхта" />
-                            <div class="catalog-list__content">
-                                <p class="catalog-list__subtitle">Яхта</p>
-                                <h3 class="catalog-list__title h-3">
-                                    PR Marine 62 Valentina
-                                </h3>
-                                <ul class="catalog-list__specific">
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_price"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong">
-                                                30 000 ₽ </strong
-                                            >/час
-                                        </span>
-                                    </li>
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_people"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong"
-                                                >6</strong
+                                    <div class="catalog-list__content-more">
+                                        <p class="catalog-list__subtitle">
+                                            Яхта
+                                        </p>
+                                        <h3 class="catalog-list__title h-3">
+                                            Pershing 50 Александра
+                                        </h3>
+                                        <ul class="catalog-list__specific">
+                                            <li
+                                                class="catalog-list__specific-item card-price">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_price"></div>
+                                                <div class="card-price">
+                                                    <span
+                                                        class="catalog-list__specific-descr card-price__old">
+                                                        <strong
+                                                            class="catalog-list__specific-strong">
+                                                            20 000 ₽ </strong
+                                                        >/час
+                                                    </span>
+                                                    <span
+                                                        class="catalog-list__specific-descr card-price__new">
+                                                        <strong
+                                                            class="catalog-list__specific-strong">
+                                                            20 000 ₽ </strong
+                                                        >/час
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_people"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong"
+                                                        >12</strong
+                                                    >
+                                                    человек
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="catalog-list__features">
+                                            <div
+                                                class="catalog-list__features-img"></div>
+                                            <span
+                                                class="catalog-list__features-descr">
+                                                Приятный экипаж, комфорт,
+                                                удобные спальные места
+                                            </span>
+                                        </div>
+                                        <div class="catalog-list__events">
+                                            <div
+                                                class="catalog-list__events-top">
+                                                <div
+                                                    class="catalog-list__events-img"></div>
+                                                <span
+                                                    class="catalog-list__events-descr"
+                                                    >Мероприятия</span
+                                                >
+                                            </div>
+                                            <ul
+                                                class="catalog-list__events-list">
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские прогулки
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские экскурсии
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морская рыбалка
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Встреча с дельфинами
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a
+                                            class="catalog-list__link-ph link-text"
+                                            href="tel:+7 (928) 440-00-14"
+                                            aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                            </svg>
+                                            <span class="link-text__descr"
+                                                >+7 (928) 440-00-14</span
                                             >
-                                            человек
-                                        </span>
-                                    </li>
-                                </ul>
-                                <div class="catalog-list__content-more">
+                                        </a>
+                                        <a
+                                            class="catalog-list__link link-text"
+                                            href="./yacht.html">
+                                            <span class="link-text__descr">
+                                                Подробнее
+                                            </span>
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-list__item">
+                                <ul class="catalog-list__stickers"></ul>
+                                <img
+                                    class="catalog-list__img"
+                                    data-src="./app/img/catalog/img-2.jpg"
+                                    alt="Яхта" />
+                                <div class="catalog-list__content">
                                     <p class="catalog-list__subtitle">Яхта</p>
                                     <h3 class="catalog-list__title h-3">
                                         PR Marine 62 Valentina
@@ -960,108 +1362,112 @@
                                             </span>
                                         </li>
                                     </ul>
-                                    <div class="catalog-list__features">
-                                        <div
-                                            class="catalog-list__features-img"></div>
-                                        <span
-                                            class="catalog-list__features-descr">
-                                            Приятный экипаж, комфорт, удобные
-                                            спальные места
-                                        </span>
-                                    </div>
-                                    <div class="catalog-list__events">
-                                        <div class="catalog-list__events-top">
-                                            <div
-                                                class="catalog-list__events-img"></div>
-                                            <span
-                                                class="catalog-list__events-descr"
-                                                >Мероприятия</span
-                                            >
-                                        </div>
-                                        <ul class="catalog-list__events-list">
+                                    <div class="catalog-list__content-more">
+                                        <p class="catalog-list__subtitle">
+                                            Яхта
+                                        </p>
+                                        <h3 class="catalog-list__title h-3">
+                                            PR Marine 62 Valentina
+                                        </h3>
+                                        <ul class="catalog-list__specific">
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские прогулки
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_price"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong">
+                                                        30 000 ₽ </strong
+                                                    >/час
+                                                </span>
                                             </li>
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские экскурсии
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Морская рыбалка
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Встреча с дельфинами
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_people"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong"
+                                                        >6</strong
+                                                    >
+                                                    человек
+                                                </span>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <a
-                                        class="catalog-list__link-ph link-text"
-                                        href="tel:+7 (928) 440-00-14"
-                                        aria-label="Позвонить по номеру +7 (928) 440-00-14">
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                        </svg>
-                                        <span class="link-text__descr"
-                                            >+7 (928) 440-00-14</span
-                                        >
-                                    </a>
-                                    <a
-                                        class="catalog-list__link link-text"
-                                        href="./yacht.html">
-                                        <span class="link-text__descr">
-                                            Подробнее
-                                        </span>
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-list__item">
-                            <ul class="catalog-list__stickers"></ul>
-                            <img
-                                class="catalog-list__img"
-                                data-src="./app/img/catalog/img-3.jpg"
-                                alt="Яхта" />
-                            <div class="catalog-list__content">
-                                <p class="catalog-list__subtitle">
-                                    Моторно-парусная яхта
-                                </p>
-                                <h3 class="catalog-list__title h-3">
-                                    Дольче Вита
-                                </h3>
-                                <ul class="catalog-list__specific">
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_price"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong">
-                                                6 000 ₽ </strong
-                                            >/час
-                                        </span>
-                                    </li>
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_people"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong"
-                                                >12</strong
+                                        <div class="catalog-list__features">
+                                            <div
+                                                class="catalog-list__features-img"></div>
+                                            <span
+                                                class="catalog-list__features-descr">
+                                                Приятный экипаж, комфорт,
+                                                удобные спальные места
+                                            </span>
+                                        </div>
+                                        <div class="catalog-list__events">
+                                            <div
+                                                class="catalog-list__events-top">
+                                                <div
+                                                    class="catalog-list__events-img"></div>
+                                                <span
+                                                    class="catalog-list__events-descr"
+                                                    >Мероприятия</span
+                                                >
+                                            </div>
+                                            <ul
+                                                class="catalog-list__events-list">
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские прогулки
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские экскурсии
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морская рыбалка
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Встреча с дельфинами
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a
+                                            class="catalog-list__link-ph link-text"
+                                            href="tel:+7 (928) 440-00-14"
+                                            aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                            </svg>
+                                            <span class="link-text__descr"
+                                                >+7 (928) 440-00-14</span
                                             >
-                                            человек
-                                        </span>
-                                    </li>
-                                </ul>
-                                <div class="catalog-list__content-more">
+                                        </a>
+                                        <a
+                                            class="catalog-list__link link-text"
+                                            href="./yacht.html">
+                                            <span class="link-text__descr">
+                                                Подробнее
+                                            </span>
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-list__item">
+                                <ul class="catalog-list__stickers"></ul>
+                                <img
+                                    class="catalog-list__img"
+                                    data-src="./app/img/catalog/img-3.jpg"
+                                    alt="Яхта" />
+                                <div class="catalog-list__content">
                                     <p class="catalog-list__subtitle">
                                         Моторно-парусная яхта
                                     </p>
@@ -1093,106 +1499,112 @@
                                             </span>
                                         </li>
                                     </ul>
-                                    <div class="catalog-list__features">
-                                        <div
-                                            class="catalog-list__features-img"></div>
-                                        <span
-                                            class="catalog-list__features-descr">
-                                            Приятный экипаж, комфорт, удобные
-                                            спальные места
-                                        </span>
-                                    </div>
-                                    <div class="catalog-list__events">
-                                        <div class="catalog-list__events-top">
-                                            <div
-                                                class="catalog-list__events-img"></div>
-                                            <span
-                                                class="catalog-list__events-descr"
-                                                >Мероприятия</span
-                                            >
-                                        </div>
-                                        <ul class="catalog-list__events-list">
+                                    <div class="catalog-list__content-more">
+                                        <p class="catalog-list__subtitle">
+                                            Моторно-парусная яхта
+                                        </p>
+                                        <h3 class="catalog-list__title h-3">
+                                            Дольче Вита
+                                        </h3>
+                                        <ul class="catalog-list__specific">
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские прогулки
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_price"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong">
+                                                        6 000 ₽ </strong
+                                                    >/час
+                                                </span>
                                             </li>
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские экскурсии
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Морская рыбалка
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Встреча с дельфинами
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_people"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong"
+                                                        >12</strong
+                                                    >
+                                                    человек
+                                                </span>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <a
-                                        class="catalog-list__link-ph link-text"
-                                        href="tel:+7 (928) 440-00-14"
-                                        aria-label="Позвонить по номеру +7 (928) 440-00-14">
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                        </svg>
-                                        <span class="link-text__descr"
-                                            >+7 (928) 440-00-14</span
-                                        >
-                                    </a>
-                                    <a
-                                        class="catalog-list__link link-text"
-                                        href="./yacht.html">
-                                        <span class="link-text__descr">
-                                            Подробнее
-                                        </span>
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-list__item">
-                            <ul class="catalog-list__stickers"></ul>
-                            <img
-                                class="catalog-list__img"
-                                data-src="./app/img/catalog/img-4.jpg"
-                                alt="Яхта" />
-                            <div class="catalog-list__content">
-                                <p class="catalog-list__subtitle">
-                                    Моторно-парусная яхта
-                                </p>
-                                <h3 class="catalog-list__title h-3">Нирвана</h3>
-                                <ul class="catalog-list__specific">
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_price"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong">
-                                                6 000 ₽ </strong
-                                            >/час
-                                        </span>
-                                    </li>
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_people"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong"
-                                                >12</strong
+                                        <div class="catalog-list__features">
+                                            <div
+                                                class="catalog-list__features-img"></div>
+                                            <span
+                                                class="catalog-list__features-descr">
+                                                Приятный экипаж, комфорт,
+                                                удобные спальные места
+                                            </span>
+                                        </div>
+                                        <div class="catalog-list__events">
+                                            <div
+                                                class="catalog-list__events-top">
+                                                <div
+                                                    class="catalog-list__events-img"></div>
+                                                <span
+                                                    class="catalog-list__events-descr"
+                                                    >Мероприятия</span
+                                                >
+                                            </div>
+                                            <ul
+                                                class="catalog-list__events-list">
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские прогулки
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские экскурсии
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морская рыбалка
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Встреча с дельфинами
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a
+                                            class="catalog-list__link-ph link-text"
+                                            href="tel:+7 (928) 440-00-14"
+                                            aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                            </svg>
+                                            <span class="link-text__descr"
+                                                >+7 (928) 440-00-14</span
                                             >
-                                            человек
-                                        </span>
-                                    </li>
-                                </ul>
-                                <div class="catalog-list__content-more">
+                                        </a>
+                                        <a
+                                            class="catalog-list__link link-text"
+                                            href="./yacht.html">
+                                            <span class="link-text__descr">
+                                                Подробнее
+                                            </span>
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-list__item">
+                                <ul class="catalog-list__stickers"></ul>
+                                <img
+                                    class="catalog-list__img"
+                                    data-src="./app/img/catalog/img-4.jpg"
+                                    alt="Яхта" />
+                                <div class="catalog-list__content">
                                     <p class="catalog-list__subtitle">
                                         Моторно-парусная яхта
                                     </p>
@@ -1224,106 +1636,112 @@
                                             </span>
                                         </li>
                                     </ul>
-                                    <div class="catalog-list__features">
-                                        <div
-                                            class="catalog-list__features-img"></div>
-                                        <span
-                                            class="catalog-list__features-descr">
-                                            Приятный экипаж, комфорт, удобные
-                                            спальные места
-                                        </span>
-                                    </div>
-                                    <div class="catalog-list__events">
-                                        <div class="catalog-list__events-top">
-                                            <div
-                                                class="catalog-list__events-img"></div>
-                                            <span
-                                                class="catalog-list__events-descr"
-                                                >Мероприятия</span
-                                            >
-                                        </div>
-                                        <ul class="catalog-list__events-list">
+                                    <div class="catalog-list__content-more">
+                                        <p class="catalog-list__subtitle">
+                                            Моторно-парусная яхта
+                                        </p>
+                                        <h3 class="catalog-list__title h-3">
+                                            Нирвана
+                                        </h3>
+                                        <ul class="catalog-list__specific">
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские прогулки
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_price"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong">
+                                                        6 000 ₽ </strong
+                                                    >/час
+                                                </span>
                                             </li>
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские экскурсии
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Морская рыбалка
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Встреча с дельфинами
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_people"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong"
+                                                        >12</strong
+                                                    >
+                                                    человек
+                                                </span>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <a
-                                        class="catalog-list__link-ph link-text"
-                                        href="tel:+7 (928) 440-00-14"
-                                        aria-label="Позвонить по номеру +7 (928) 440-00-14">
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                        </svg>
-                                        <span class="link-text__descr"
-                                            >+7 (928) 440-00-14</span
-                                        >
-                                    </a>
-                                    <a
-                                        class="catalog-list__link link-text"
-                                        href="./yacht.html">
-                                        <span class="link-text__descr">
-                                            Подробнее
-                                        </span>
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-list__item">
-                            <ul class="catalog-list__stickers"></ul>
-                            <img
-                                class="catalog-list__img"
-                                data-src="./app/img/catalog/img-5.jpg"
-                                alt="Яхта" />
-                            <div class="catalog-list__content">
-                                <p class="catalog-list__subtitle">
-                                    Моторный катамаран
-                                </p>
-                                <h3 class="catalog-list__title h-3">Мохито</h3>
-                                <ul class="catalog-list__specific">
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_price"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong">
-                                                6 000 ₽ </strong
-                                            >/час
-                                        </span>
-                                    </li>
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_people"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong"
-                                                >10</strong
+                                        <div class="catalog-list__features">
+                                            <div
+                                                class="catalog-list__features-img"></div>
+                                            <span
+                                                class="catalog-list__features-descr">
+                                                Приятный экипаж, комфорт,
+                                                удобные спальные места
+                                            </span>
+                                        </div>
+                                        <div class="catalog-list__events">
+                                            <div
+                                                class="catalog-list__events-top">
+                                                <div
+                                                    class="catalog-list__events-img"></div>
+                                                <span
+                                                    class="catalog-list__events-descr"
+                                                    >Мероприятия</span
+                                                >
+                                            </div>
+                                            <ul
+                                                class="catalog-list__events-list">
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские прогулки
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские экскурсии
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морская рыбалка
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Встреча с дельфинами
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a
+                                            class="catalog-list__link-ph link-text"
+                                            href="tel:+7 (928) 440-00-14"
+                                            aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                            </svg>
+                                            <span class="link-text__descr"
+                                                >+7 (928) 440-00-14</span
                                             >
-                                            человек
-                                        </span>
-                                    </li>
-                                </ul>
-                                <div class="catalog-list__content-more">
+                                        </a>
+                                        <a
+                                            class="catalog-list__link link-text"
+                                            href="./yacht.html">
+                                            <span class="link-text__descr">
+                                                Подробнее
+                                            </span>
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-list__item">
+                                <ul class="catalog-list__stickers"></ul>
+                                <img
+                                    class="catalog-list__img"
+                                    data-src="./app/img/catalog/img-5.jpg"
+                                    alt="Яхта" />
+                                <div class="catalog-list__content">
                                     <p class="catalog-list__subtitle">
                                         Моторный катамаран
                                     </p>
@@ -1355,104 +1773,112 @@
                                             </span>
                                         </li>
                                     </ul>
-                                    <div class="catalog-list__features">
-                                        <div
-                                            class="catalog-list__features-img"></div>
-                                        <span
-                                            class="catalog-list__features-descr">
-                                            Приятный экипаж, комфорт, удобные
-                                            спальные места
-                                        </span>
-                                    </div>
-                                    <div class="catalog-list__events">
-                                        <div class="catalog-list__events-top">
-                                            <div
-                                                class="catalog-list__events-img"></div>
-                                            <span
-                                                class="catalog-list__events-descr"
-                                                >Мероприятия</span
-                                            >
-                                        </div>
-                                        <ul class="catalog-list__events-list">
+                                    <div class="catalog-list__content-more">
+                                        <p class="catalog-list__subtitle">
+                                            Моторный катамаран
+                                        </p>
+                                        <h3 class="catalog-list__title h-3">
+                                            Мохито
+                                        </h3>
+                                        <ul class="catalog-list__specific">
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские прогулки
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_price"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong">
+                                                        6 000 ₽ </strong
+                                                    >/час
+                                                </span>
                                             </li>
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские экскурсии
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Морская рыбалка
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Встреча с дельфинами
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_people"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong"
+                                                        >10</strong
+                                                    >
+                                                    человек
+                                                </span>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <a
-                                        class="catalog-list__link-ph link-text"
-                                        href="tel:+7 (928) 440-00-14"
-                                        aria-label="Позвонить по номеру +7 (928) 440-00-14">
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                        </svg>
-                                        <span class="link-text__descr"
-                                            >+7 (928) 440-00-14</span
-                                        >
-                                    </a>
-                                    <a
-                                        class="catalog-list__link link-text"
-                                        href="./yacht.html">
-                                        <span class="link-text__descr">
-                                            Подробнее
-                                        </span>
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-list__item">
-                            <ul class="catalog-list__stickers"></ul>
-                            <img
-                                class="catalog-list__img"
-                                data-src="./app/img/catalog/img-6.jpg"
-                                alt="Яхта" />
-                            <div class="catalog-list__content">
-                                <p class="catalog-list__subtitle">Яхта</p>
-                                <h3 class="catalog-list__title h-3">Аврора</h3>
-                                <ul class="catalog-list__specific">
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_price"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong">
-                                                8 000 ₽ </strong
-                                            >/час
-                                        </span>
-                                    </li>
-                                    <li class="catalog-list__specific-item">
-                                        <div
-                                            class="catalog-list__specific-img catalog-list__specific-img_people"></div>
-                                        <span
-                                            class="catalog-list__specific-descr">
-                                            <strong
-                                                class="catalog-list__specific-strong"
-                                                >10</strong
+                                        <div class="catalog-list__features">
+                                            <div
+                                                class="catalog-list__features-img"></div>
+                                            <span
+                                                class="catalog-list__features-descr">
+                                                Приятный экипаж, комфорт,
+                                                удобные спальные места
+                                            </span>
+                                        </div>
+                                        <div class="catalog-list__events">
+                                            <div
+                                                class="catalog-list__events-top">
+                                                <div
+                                                    class="catalog-list__events-img"></div>
+                                                <span
+                                                    class="catalog-list__events-descr"
+                                                    >Мероприятия</span
+                                                >
+                                            </div>
+                                            <ul
+                                                class="catalog-list__events-list">
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские прогулки
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские экскурсии
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морская рыбалка
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Встреча с дельфинами
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a
+                                            class="catalog-list__link-ph link-text"
+                                            href="tel:+7 (928) 440-00-14"
+                                            aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                            </svg>
+                                            <span class="link-text__descr"
+                                                >+7 (928) 440-00-14</span
                                             >
-                                            человек
-                                        </span>
-                                    </li>
-                                </ul>
-                                <div class="catalog-list__content-more">
+                                        </a>
+                                        <a
+                                            class="catalog-list__link link-text"
+                                            href="./yacht.html">
+                                            <span class="link-text__descr">
+                                                Подробнее
+                                            </span>
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-list__item">
+                                <ul class="catalog-list__stickers"></ul>
+                                <img
+                                    class="catalog-list__img"
+                                    data-src="./app/img/catalog/img-6.jpg"
+                                    alt="Яхта" />
+                                <div class="catalog-list__content">
                                     <p class="catalog-list__subtitle">Яхта</p>
                                     <h3 class="catalog-list__title h-3">
                                         Аврора
@@ -1482,71 +1908,114 @@
                                             </span>
                                         </li>
                                     </ul>
-                                    <div class="catalog-list__features">
-                                        <div
-                                            class="catalog-list__features-img"></div>
-                                        <span
-                                            class="catalog-list__features-descr">
-                                            Приятный экипаж, комфорт, удобные
-                                            спальные места
-                                        </span>
-                                    </div>
-                                    <div class="catalog-list__events">
-                                        <div class="catalog-list__events-top">
-                                            <div
-                                                class="catalog-list__events-img"></div>
-                                            <span
-                                                class="catalog-list__events-descr"
-                                                >Мероприятия</span
-                                            >
-                                        </div>
-                                        <ul class="catalog-list__events-list">
+                                    <div class="catalog-list__content-more">
+                                        <p class="catalog-list__subtitle">
+                                            Яхта
+                                        </p>
+                                        <h3 class="catalog-list__title h-3">
+                                            Аврора
+                                        </h3>
+                                        <ul class="catalog-list__specific">
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские прогулки
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_price"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong">
+                                                        8 000 ₽ </strong
+                                                    >/час
+                                                </span>
                                             </li>
                                             <li
-                                                class="catalog-list__events-list-item">
-                                                Морские экскурсии
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Морская рыбалка
-                                            </li>
-                                            <li
-                                                class="catalog-list__events-list-item">
-                                                Встреча с дельфинами
+                                                class="catalog-list__specific-item">
+                                                <div
+                                                    class="catalog-list__specific-img catalog-list__specific-img_people"></div>
+                                                <span
+                                                    class="catalog-list__specific-descr">
+                                                    <strong
+                                                        class="catalog-list__specific-strong"
+                                                        >10</strong
+                                                    >
+                                                    человек
+                                                </span>
                                             </li>
                                         </ul>
+                                        <div class="catalog-list__features">
+                                            <div
+                                                class="catalog-list__features-img"></div>
+                                            <span
+                                                class="catalog-list__features-descr">
+                                                Приятный экипаж, комфорт,
+                                                удобные спальные места
+                                            </span>
+                                        </div>
+                                        <div class="catalog-list__events">
+                                            <div
+                                                class="catalog-list__events-top">
+                                                <div
+                                                    class="catalog-list__events-img"></div>
+                                                <span
+                                                    class="catalog-list__events-descr"
+                                                    >Мероприятия</span
+                                                >
+                                            </div>
+                                            <ul
+                                                class="catalog-list__events-list">
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские прогулки
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морские экскурсии
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Морская рыбалка
+                                                </li>
+                                                <li
+                                                    class="catalog-list__events-list-item">
+                                                    Встреча с дельфинами
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a
+                                            class="catalog-list__link-ph link-text"
+                                            href="tel:+7 (928) 440-00-14"
+                                            aria-label="Позвонить по номеру +7 (928) 440-00-14">
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                            </svg>
+                                            <span class="link-text__descr"
+                                                >+7 (928) 440-00-14</span
+                                            >
+                                        </a>
+                                        <a
+                                            class="catalog-list__link link-text"
+                                            href="./yacht.html">
+                                            <span class="link-text__descr">
+                                                Подробнее
+                                            </span>
+                                            <svg class="link-text__icon">
+                                                <use
+                                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                            </svg>
+                                        </a>
                                     </div>
-                                    <a
-                                        class="catalog-list__link-ph link-text"
-                                        href="tel:+7 (928) 440-00-14"
-                                        aria-label="Позвонить по номеру +7 (928) 440-00-14">
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                        </svg>
-                                        <span class="link-text__descr"
-                                            >+7 (928) 440-00-14</span
-                                        >
-                                    </a>
-                                    <a
-                                        class="catalog-list__link link-text"
-                                        href="./yacht.html">
-                                        <span class="link-text__descr">
-                                            Подробнее
-                                        </span>
-                                        <svg class="link-text__icon">
-                                            <use
-                                                xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                        </svg>
-                                    </a>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="catalog__btn btn-in">Показать ещё</button>
+                            </li>
+                        </ul>
+                        <div
+                            id="mse2_pagination"
+                            class="catalog__pagination pagination">
+                            <button class="catalog__btn btn-in">
+                                Показать ещё
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- EVENTS -->
@@ -2198,31 +2667,65 @@
                         </p>
                     </div>
                     <div class="articles__content-bottom">
-                        <a
-                            class="articles__list-popular article-popular"
-                            data-image="./app/img/articles/img-1.jpg"
-                            href="/">
-                            <ul class="article-popular__stickers stickers">
-                                <li class="stickers__item stickers__item_sale">
-                                    Актуально сейчас
-                                </li>
-                            </ul>
-                            <div class="article-popular__info article-info">
-                                <div class="article-info__item">
-                                    <svg class="article-info__icon">
-                                        <use
-                                            xlink:href="/app/img/icons/icons.svg#clock"></use>
-                                    </svg>
-                                    <span class="article-info__text"
-                                        >3 минуты чтения</span
+                        <div class="articles__popular-wrap">
+                            <a
+                                class="articles__list-popular article-popular"
+                                data-image="./app/img/articles/img-1.jpg"
+                                href="/">
+                                <ul class="article-popular__stickers stickers">
+                                    <li
+                                        class="stickers__item stickers__item_sale">
+                                        Актуально сейчас
+                                    </li>
+                                </ul>
+                                <div class="article-popular__info article-info">
+                                    <div class="article-info__item">
+                                        <svg class="article-info__icon">
+                                            <use
+                                                xlink:href="/app/img/icons/icons.svg#clock"></use>
+                                        </svg>
+                                        <span class="article-info__text"
+                                            >3 минуты чтения</span
+                                        >
+                                    </div>
+                                    <span class="article-info__item"
+                                        >#досуг</span
                                     >
                                 </div>
-                                <span class="article-info__item">#досуг</span>
-                            </div>
-                            <h3 class="article-popular__title h-3">
-                                Круизы в&nbsp;Геленджике
-                            </h3>
-                        </a>
+                                <h3 class="article-popular__title h-3">
+                                    Круизы в&nbsp;Геленджике
+                                </h3>
+                            </a>
+                            <a
+                                class="articles__list-popular article-popular"
+                                data-image="./app/img/articles/img-1.jpg"
+                                href="/">
+                                <ul class="article-popular__stickers stickers">
+                                    <li
+                                        class="stickers__item stickers__item_sale">
+                                        Актуально сейчас
+                                    </li>
+                                </ul>
+                                <div class="article-popular__info article-info">
+                                    <div class="article-info__item">
+                                        <svg class="article-info__icon">
+                                            <use
+                                                xlink:href="/app/img/icons/icons.svg#clock"></use>
+                                        </svg>
+                                        <span class="article-info__text"
+                                            >3 минуты чтения</span
+                                        >
+                                    </div>
+                                    <span class="article-info__item"
+                                        >#досуг</span
+                                    >
+                                </div>
+                                <h3 class="article-popular__title h-3">
+                                    Круизы в&nbsp;Геленджике
+                                </h3>
+                            </a>
+                        </div>
+
                         <div class="articles__list-wrapper">
                             <ul class="articles__list articles-list">
                                 <li class="articles-list__item">
@@ -2479,6 +2982,22 @@
                 </div>
             </div>
         </footer>
+        <!-- cookie -->
+        <div id="cookie" class="home-page__cookie cookie">
+            <div class="cookie__wrap">
+                <p class="cookie__text">
+                    Мы&nbsp;используем cookie-файлы. Продолжая пользоваться
+                    сайтом, Вы&nbsp;даёте согласие на&nbsp;использование
+                    cookie-файлов
+                </p>
+                <button
+                    id="cookie-btn"
+                    class="cookie__btn btn-in"
+                    aria-label="Закрыть окно с куками">
+                    Хорошо
+                </button>
+            </div>
+        </div>
         <!-- SCROLL-TOP -->
         <button
             id="scroll-top"

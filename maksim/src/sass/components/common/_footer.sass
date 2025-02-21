@@ -1,0 +1,103 @@
+.footer
+	margin-top: auto
+
+.footer-top
+	padding: 20px 0
+	border-top: 1px solid rgba(30, 40, 95, .5)
+	border-bottom: 1px solid rgba(30, 40, 95, .5)
+	+ph
+		padding: 0
+
+.footer-nav
+	display: flex
+	justify-content: center
+	+ph
+		justify-content: flex-start
+		max-width: 100%
+		width: 100%
+		min-height: 60px
+		overflow-x: auto
+
+		&::-webkit-scrollbar
+			height: 4px
+			background-color: var(--page-color)
+
+		&::-webkit-scrollbar-thumb
+			border-radius: 8px
+			background-color: var(--accent-color)
+	&__list
+		display: flex
+		align-items: center
+
+	&__item
+		position: relative
+		&.active
+			.footer-nav__link
+				border-color: var(--accent-color)
+		&:not(:first-child)
+			padding-left: 33px
+			+ph
+				padding-left: 20px
+		&:not(:last-child)
+			padding-right: 33px
+			+ph
+				padding-left: 20px
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				right: 0
+				width: 2px
+				height: 16px
+				background-color: var(--accent-color)
+				transform: translateY(-50%)
+
+	&__link
+		+ph
+			display: inline-block
+			width: max-content
+
+.copyright
+	padding: 20px 0
+	font-size: 16px
+	line-height: 130%
+	text-align: center
+	color: var(--accent-color)
+
+	&__list
+		display: flex
+		gap: 20px
+		justify-content: space-between
+		align-items: center
+		+ph
+			flex-direction: column
+			gap: 10px
+
+	&__list-link-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+
+.copyright-link
+	display: flex
+	gap: 10px
+	transition: color .2s linear, transform .2s linear
+
+	+hover
+		color: var(--active-color)
+		.copyright-link__icon
+			fill: var(--active-color)
+
+	+focus
+		color: var(--active-color)
+		.copyright-link__icon
+			fill: var(--active-color)
+
+	&:active
+		transform: scale(.98)
+
+	&__icon
+		width: 46px
+		height: 21px
+		fill: var(--accent-color)
+		transition: fill .2s linear

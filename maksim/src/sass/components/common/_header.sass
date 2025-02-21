@@ -1,0 +1,166 @@
+.inner
+	.header
+		margin-bottom: 40px
+	
+.header
+	position: relative
+	margin-bottom: 64px
+	padding: 28px 0
+	+sm
+		margin-bottom: 10px
+		padding: 20px 0
+	+ph
+		margin-bottom: 10px
+		padding: 12px 0
+
+	&__container
+		position: static
+		max-width: 1327px
+
+	&__row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 10px
+
+	&__link-feedback
+		max-width: 226px
+		+sm
+			display: none
+
+// навигационное меню
+.header-nav
+	+sm
+		display: none
+
+	&__list
+		display: flex
+		align-items: center
+		gap: 33px
+
+	&__item
+		position: relative
+		&.parent
+			margin-bottom: -5px
+			padding-bottom: 5px
+
+		&.active
+			.header-nav__link
+				border-color: var(--accent-color)
+		
+		+hover
+			> .dropdown
+					opacity: 1
+					visibility: visible
+					transform: translateY(0)
+					transition: opacity 0.3s ease, transform 0.3s ease
+
+			.link-text__icon
+				transform: rotateX(180deg)
+
+		&:focus-within
+			> .dropdown
+					opacity: 1
+					visibility: visible
+					transform: translateY(0)
+					transition: opacity 0.3s ease, transform 0.3s ease
+
+	.link-text
+		gap: 4px
+		&__icon
+			width: 20px
+			height: 20px
+			fill: var(--accent-color)
+
+// Выпадающий список
+.dropdown
+	position: absolute
+	top: 25px
+	left: 0
+	z-index: 10
+	display: flex
+	flex-direction: column
+	width: 320px
+	line-height: 100%
+	color: var(--accent-color)
+	border-radius: 14px
+	background-color: var(--page-color)
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+	opacity: 0
+	visibility: hidden
+	overflow: hidden
+	transform: translateY(10px)
+	transition: opacity 0.3s linear, transform 0.3s linear, visibility 0s 0.3s
+
+	&__item
+		&.active
+			.dropdown__link
+				color: var(--page-color)
+				background-color: var(--accent-color)
+
+	&__link
+		display: flex
+		padding: 10px 20px
+		transition: color .2s linear, background-color .2s linear
+		+hover
+			color: var(--page-color)
+			background-color: var(--accent-color)
+		+focus
+			color: var(--page-color)
+			background-color: var(--accent-color)
+
+// Кнопка мобильного меню
+.menu-toggle
+	display: none
+	margin-right: auto
+	width: 30px
+	height: 25px
+	+sm
+		position: relative
+		z-index: 30000
+		display: block
+	+ph
+		width: 25px
+		height: 20px
+
+	&__item
+		position: absolute
+		display: block
+		width: 100%
+		height: 2px
+		background-color: var(--accent-color)
+		transform: rotate(0) translate(0, 0)
+		transition: all .3s linear
+
+		&:nth-child(1)
+			top: 0
+			left: 0
+
+		&:nth-child(2)
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			opacity: 1
+
+		&:nth-child(3)
+			bottom: 0
+			left: 0
+
+	&.active
+		.menu-toggle__item
+			&:nth-child(1)
+				top: 50%
+				left: 50%
+				transform: rotate(45deg) translate(-50%, -50%)
+				transform-origin: top left
+
+			&:nth-child(2)
+				left: 100%
+				transform: translateY(0)
+				opacity: 0
+
+			&:nth-child(3)
+				bottom: 50%
+				left: 50%
+				transform: rotate(-45deg) translate(-50%, 50%)
+				transform-origin: bottom left

@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO -->
+        <title>Сбор денежных средств для Стульникова Максима Игоревича</title>
+        <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+        <!-- styles -->
+        <link rel="stylesheet" href="./app/css/style.min.css" />
+        <link rel="preconnect" href="/" />
+        <link rel="dns-prefetch" href="/" />
+        <!-- scripts -->
+        <script src="./app/js/libs/preloader.min.js"></script>
+        <script src="./app/js/libs/lazy-load.min.js"></script>
+        <script src="./app/js/libs/fancybox.min.js" defer></script>
+        <script src="./app/js/libs/swiper.min.js" defer></script>
+        <script src="./app/js/index.min.js" defer></script>
+    </head>
+
+    <body>
+        <!-- preloader -->
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__row">
+                    <nav class="header__nav header-nav">
+                        <ul class="header-nav__list">
+                            <li class="header-nav__item active">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="/"
+                                    aria-label="Направится к главному экрану">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Направится к истории">
+                                    История
+                                </a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Направится к блоку о Синдроме Ретта">
+                                    Синдром Ретта
+                                </a>
+                            </li>
+                            <li class="header-nav__item parent">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="./reports.html"
+                                    aria-label="Направится к отчётам"
+                                    tabindex="0"
+                                    aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <span class="link-text__descr">
+                                        Отчёты
+                                    </span>
+                                    <svg class="link-text__icon">
+                                        <use
+                                            xlink:href="./app/img/icons/icons.svg#arrow-list"></use>
+                                    </svg>
+                                </a>
+                                <ul
+                                    class="header-nav__dropdown dropdown"
+                                    role="menu">
+                                    <li class="dropdown__item active">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Текст
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Длинные текст для проверки переноса
+                                            строки
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header-nav__item">
+                                <a
+                                    class="header-nav__link link-text"
+                                    href="./contacts.html"
+                                    aria-label="Направится к блоку сбора средств">
+                                    Сбор средств
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <a
+                        class="header__link-feedback link"
+                        href="#"
+                        aria-label="Связаться с нами">
+                        Связаться с нами
+                    </a>
+
+                    <button
+                        id="menu-toggle"
+                        class="header__menu-toggle menu-toggle"
+                        aria-label="Открыть мобильное меню">
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- menu-mobile -->
+            <div id="menu-mobile" class="header__menu-mobile menu-mobile">
+                <nav class="menu-mobile__menu">
+                    <ul class="menu-mobile__menu-list menu-list">
+                        <li class="menu-list__item active">
+                            <a
+                                class="menu-list__link link-text active"
+                                href="/"
+                                aria-label="Направится к главному экрану">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a
+                                class="menu-list__link link-text"
+                                href="./page.html"
+                                aria-label="Направится к истории">
+                                История
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a
+                                class="menu-list__link link-text"
+                                href="./page.html"
+                                aria-label="Направится к блоку о Синдроме Ретта">
+                                Синдром Ретта
+                            </a>
+                        </li>
+                        <li class="menu-list__item parent">
+                            <a
+                                class="menu-list__link link-text"
+                                href="./reports.html"
+                                aria-label="Направится к отчётам"
+                                tabindex="0"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                Отчёты
+                            </a>
+                            <button class="menu-list__btn js-mobile-list-btn">
+                                <svg class="menu-list__btn-icon">
+                                    <use
+                                        xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                </svg>
+                            </button>
+                            <ul
+                                class="menu-list__dropdown dropdown-mob js-mobile-list"
+                                role="menu">
+                                <li class="dropdown-mob__item active">
+                                    <a
+                                        class="dropdown-mob__link link-text"
+                                        href="#"
+                                        tabindex="0">
+                                        Текст
+                                    </a>
+                                </li>
+                                <li class="dropdown-mob__item">
+                                    <a
+                                        class="dropdown-mob__link link-text"
+                                        href="#"
+                                        tabindex="0">
+                                        Длинные текст для проверки переноса
+                                        строки
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-list__item">
+                            <a
+                                class="menu-list__link link-text"
+                                href="./contacts.html"
+                                aria-label="Направится к блоку сбора средств">
+                                Сбор средств
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a
+                    class="menu-mobile__link-feedback link"
+                    href="#"
+                    aria-label="Связаться с нами">
+                    Связаться с нами
+                </a>
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <!-- hero -->
+            <section class="hero section">
+                <h1 class="hero__title-hidden visually-hidden">
+                    Сбор денежных средств для Стульникова Максима Игоревича
+                </h1>
+                <div class="hero__container container">
+                    <div class="hero__content">
+                        <h2 class="hero__title title-1">
+                            Стульников Максим Игоревич
+                        </h2>
+                        <h3 class="hero__list-title title-3">Сбор средств</h3>
+                        <ul class="hero__list">
+                            <li class="hero__list-item">
+                                Диагноз - повреждение гена, FOXG1 (Синдром
+                                Ретта)
+                            </li>
+                            <li class="hero__list-item">
+                                Цель - поддерживающая терапия
+                            </li>
+                        </ul>
+                        <div class="hero__info">
+                            <p class="hero__info-p">
+                                На этом сайте мы хотим рассказать нашу историю,
+                                рассказать о болезни и на каком этапе мы сейчас
+                                находимся.
+                            </p>
+                            <p class="hero__info-p">
+                                Также здесь будем публиковать важные новости и
+                                информацию и ходе сбора
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hero__img-wrap border-radius">
+                        <img
+                            class="hero__img"
+                            data-src="./app/img/hero/img-1.jpg"
+                            alt="Стульников Максим Игоревич" />
+                    </div>
+                </div>
+            </section>
+            <!-- about -->
+            <section class="about section">
+                <h2 class="about__title-hidden visually-hidden">
+                    История Стульникова Максима Игоревича
+                </h2>
+                <div class="about__container container">
+                    <div class="about__img-wrap border-radius">
+                        <img
+                            class="about__img"
+                            data-src="./app/img/about/img-1.jpg"
+                            alt="Семья Стульникова Максима Игоревича" />
+                    </div>
+                    <div class="about__text-wrap">
+                        <h2 class="about__title title-3">
+                            Наша история, кратко:
+                        </h2>
+                        <div class="about__content content">
+                            <p class="content__p">
+                                Меня зовут Юля, я мама Максима, родившегося
+                                27.04.2023. Беременность проходила без серьезных
+                                осложнений, но после рождения у малыша выявили
+                                агенезию мозолистого тела, затем микроцефалию и
+                                эпиактивность.
+                            </p>
+                            <p class="content__p">
+                                С 2 месяцев мы постоянно занимаемся
+                                реабилитацией — массаж, бассейн, ЛФК,
+                                Войта-терапия, Бобат и другие методики. Это уже
+                                помогло Максиму стать более активным, развивать
+                                реакцию и эмоции, но для достижения результата
+                                требуется непрерывная работа. Все занятия
+                                оплачиваем сами, так как бесплатной помощи в
+                                нашем городе практически нет.
+                            </p>
+                            <p class="content__p">
+                                Сбор средств мы открыли, чтобы продолжать
+                                эффективные реабилитации
+                            </p>
+                            <p class="content__p">
+                                Мы верим, что ранняя реабилитация поможет
+                                Максиму развиваться, и
+                                <a href="#">узнать больше</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- docs -->
+            <section class="docs section-border">
+                <div class="docs__container container">
+                    <h2 class="docs__title title-2">Документы</h2>
+                    <div class="docs__slider-wrap">
+                        <button
+                            id="docs-slider-prev"
+                            class="docs__slider-btn slider__btn slider__btn_prev"
+                            aria-label="Перейти на предыдущий слайд">
+                            <svg class="slider__btn-icon">
+                                <use
+                                    href="./app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+
+                        <div
+                            id="docs-slider"
+                            class="docs__slider slider swiper">
+                            <div class="slider__wrap swiper-wrapper">
+                                <div class="slider__slide slide swiper-slide">
+                                    <a
+                                        class="slide__link"
+                                        href="./app/img/docs/img-1.jpg"
+                                        target="_blank"
+                                        aria-label="Открыть документ в новом окне">
+                                        <div class="slide__img-wrap">
+                                            <img
+                                                class="slide__img"
+                                                data-src="./app/img/docs/img-1.jpg"
+                                                loading="lazy"
+                                                alt="Документ" />
+                                        </div>
+                                        <p class="slide__text">
+                                            Заключение. Институт Детской и
+                                            Взрослой Неврологии и Эпилепсии
+                                            имени Святителя Луки
+                                        </p>
+                                        <div
+                                            class="slide__preloader swiper-lazy-preloader"></div>
+                                    </a>
+                                </div>
+                                <div class="slider__slide slide swiper-slide">
+                                    <a
+                                        class="slide__link"
+                                        href="./app/img/docs/img-2.jpg"
+                                        target="_blank"
+                                        aria-label="Открыть документ в новом окне">
+                                        <div class="slide__img-wrap">
+                                            <img
+                                                class="slide__img"
+                                                data-src="./app/img/docs/img-2.jpg"
+                                                loading="lazy"
+                                                alt="Документ" />
+                                        </div>
+                                        <p class="slide__text">
+                                            Консультативное заключение
+                                            врача-невролога
+                                        </p>
+                                        <div
+                                            class="slide__preloader swiper-lazy-preloader"></div>
+                                    </a>
+                                </div>
+                                <div class="slider__slide slide swiper-slide">
+                                    <a
+                                        class="slide__link"
+                                        href="./app/img/docs/img-3.jpg"
+                                        target="_blank"
+                                        aria-label="Открыть документ в новом окне">
+                                        <div class="slide__img-wrap">
+                                            <img
+                                                class="slide__img"
+                                                data-src="./app/img/docs/img-3.jpg"
+                                                loading="lazy"
+                                                alt="Документ" />
+                                        </div>
+                                        <p class="slide__text">
+                                            Консультация невролога
+                                        </p>
+                                        <div
+                                            class="slide__preloader swiper-lazy-preloader"></div>
+                                    </a>
+                                </div>
+                                <div class="slider__slide slide swiper-slide">
+                                    <a
+                                        class="slide__link"
+                                        href="./app/img/docs/img-4.jpg"
+                                        target="_blank"
+                                        aria-label="Открыть документ в новом окне">
+                                        <div class="slide__img-wrap">
+                                            <img
+                                                class="slide__img"
+                                                data-src="./app/img/docs/img-4.jpg"
+                                                loading="lazy"
+                                                alt="Документ" />
+                                        </div>
+                                        <p class="slide__text">
+                                            Справка об инвалидности
+                                        </p>
+                                        <div
+                                            class="slide__preloader swiper-lazy-preloader"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            id="docs-slider-next"
+                            class="docs__slider-btn slider__btn slider__btn_next"
+                            aria-label="Перейти на следующий слайд">
+                            <svg class="slider__btn-icon">
+                                <use
+                                    href="./app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- retta -->
+            <section class="retta section">
+                <div class="retta__container container">
+                    <div class="retta__content-wrap">
+                        <h2 class="retta__title title-2">Синдром Ретта</h2>
+                        <div class="retta__content content">
+                            <p class="content__p">
+                                <strong class="content__strong">
+                                    Болезнь:
+                                </strong>
+                                повреждение гена, FOXG1 (синдром ретта)
+                            </p>
+                            <p class="content__p">
+                                <strong class="content__strong">Решения</strong>
+                                на данный момент нет, в США разрабатывается
+                                препарат который координально решает ситуацию.
+                                Та же компания которая разработала «Золген cma»
+                            </p>
+                            <p class="content__p">
+                                <strong class="content__strong">
+                                    Препарат
+                                </strong>
+                                успешно протестирован на животных, испытания
+                                показали превосходный результат, препарат
+                                исправляет поврежденный ген!
+                            </p>
+                            <p class="content__p">
+                                <strong class="content__strong">
+                                    Мы на связи
+                                </strong>
+                                списались с американскими разработчиками
+                                препарата, ждём этап проведения тестирования на
+                                людях и когда препарат допустят к производству.
+                                Ориентировочно к 2026г.
+                            </p>
+                            <p class="content__p">
+                                <strong class="content__strong">
+                                    Наша задача:
+                                </strong>
+                                поддерживающая терапия. Простимулировать
+                                развитие головного...
+                                <a class="content__a" href="#">читать дальше</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- purpose -->
+            <section class="purpose section">
+                <h2 class="purpose__title-hidden visually-hidden">
+                    Сбор денежных средств для Стульникова Максима Игоревича
+                </h2>
+                <div class="purpose__container container">
+                    <div class="purpose__content-wrap border-radius">
+                        <img
+                            class="purpose__img"
+                            data-src="./app/img/purpose/img-1.jpg"
+                            alt="Стульникова Максима Игоревича" />
+
+                        <div class="purpose__content border-radius">
+                            <div class="purpose__subtitle-wrap">
+                                <span class="purpose__subtitle">
+                                    Сбор средств
+                                </span>
+                            </div>
+                            <h2 class="purpose__title title-2">
+                                Цель: Поддерживающая терапия (18000 ₽<span
+                                    class="purpose__title-span"
+                                    >/в месяц</span
+                                >)
+                            </h2>
+                            <p class="purpose__text">
+                                Все собранные средства будут направлены на
+                                лечение и реабилитацию нашего сына (Стульникова
+                                М.И.)
+                            </p>
+                            <ul class="purpose__list">
+                                <li class="purpose__list-item purpose-item">
+                                    <div class="purpose-item__icon-wrap">
+                                        <svg class="purpose-item__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#check"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="purpose-item__text">
+                                        Остеопат 3 раза в год, 3000 ₽/занятие,
+                                        30 сеансов (90000₽)
+                                    </p>
+                                </li>
+                                <li class="purpose__list-item purpose-item">
+                                    <div class="purpose-item__icon-wrap">
+                                        <svg class="purpose-item__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#check"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="purpose-item__text">
+                                        Бобат терапия 4 раза в год, 3000
+                                        ₽/занятие (120000₽)
+                                    </p>
+                                </li>
+                                <li class="purpose__list-item purpose-item">
+                                    <div class="purpose-item__icon-wrap">
+                                        <svg class="purpose-item__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#check"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="purpose-item__text">
+                                        Бобат терапия 4 раза в год, 3000
+                                        ₽/занятие (120000₽)
+                                    </p>
+                                </li>
+                                <li class="purpose__list-item purpose-item">
+                                    <div class="purpose-item__icon-wrap">
+                                        <svg class="purpose-item__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#check"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="purpose-item__text">
+                                        Сме 4 раза в год 3000 ₽/занятие 40
+                                        сеансов (120000₽)
+                                    </p>
+                                </li>
+                                <li class="purpose__list-item purpose-item">
+                                    <div class="purpose-item__icon-wrap">
+                                        <svg class="purpose-item__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#check"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="purpose-item__text">
+                                        Чайлд спейс 4 раза в год 3800 ₽/занятие
+                                        - 40 занятий (152000₽)
+                                    </p>
+                                </li>
+                                <li class="purpose__list-item purpose-item">
+                                    <div class="purpose-item__icon-wrap">
+                                        <svg class="purpose-item__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#check"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="purpose-item__text">
+                                        Нейропсихолог 4 раза в год 2200
+                                        ₽/занятие - 40 занятий(80000₽)
+                                    </p>
+                                </li>
+                                <li class="purpose__list-item purpose-item">
+                                    <div class="purpose-item__icon-wrap">
+                                        <svg class="purpose-item__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#check"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="purpose-item__text">
+                                        Бассейн 600 руб занятие 8 занятий в
+                                        месяц 4800 ₽ (57 600₽)
+                                    </p>
+                                </li>
+                                <li class="purpose__list-item purpose-item">
+                                    <div class="purpose-item__icon-wrap">
+                                        <svg class="purpose-item__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#check"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="purpose-item__text">
+                                        Массаж 3 раза в год 3000 ₽/занятие - 30
+                                        занятий (90 000₽)
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="purpose__progress progress">
+                                <div class="progress__bar-wrap">
+                                    <div
+                                        id="bar-line"
+                                        class="progress__line-wrap">
+                                        <div class="progress__line"></div>
+                                        <div class="progress__percent-wrap">
+                                            <span
+                                                id="bar-percent"
+                                                class="progress__percent">
+                                                0%
+                                            </span>
+                                            <svg class="progress__percent-icon">
+                                                <use
+                                                    href="./app/img/icons/icons.svg#triangle"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress__sum-wrap">
+                                    <div class="progress__sum">
+                                        <small class="progress__sum-title">
+                                            Уже собрано:
+                                        </small>
+                                        <p class="progress__sum-text">
+                                            <span
+                                                id="bar-current"
+                                                data-bar-current="25658"
+                                                class="progress__sum-number">
+                                                0
+                                            </span>
+                                            ₽
+                                        </p>
+                                    </div>
+                                    <div class="progress__sum">
+                                        <small class="progress__sum-title">
+                                            Цель:
+                                        </small>
+                                        <p class="progress__sum-text">
+                                            <span
+                                                id="bar-target"
+                                                data-bar-target="297000"
+                                                class="progress__sum-number">
+                                                0
+                                            </span>
+                                            ₽
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="purpose__links">
+                                <li
+                                    class="purpose__links-item purpose__links-item_first">
+                                    <a
+                                        class="purpose__link link-inv"
+                                        href="#"
+                                        aria-label="Перейти на страницу отчеты">
+                                        Отчеты
+                                    </a>
+                                </li>
+                                <li
+                                    class="purpose__links-item purpose__links-item_last">
+                                    <a
+                                        class="purpose__link link"
+                                        href="#"
+                                        aria-label="Перейти на страницу контакты">
+                                        Реквизиты, контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- info -->
+            <section class="info section-border">
+                <h2 class="info__title-hidden visually-hidden">
+                    Актуальная информация
+                </h2>
+                <div class="info__container container">
+                    <div class="info__img-wrap border-radius">
+                        <img
+                            class="info__img"
+                            data-src="./app/img/info/img-1.jpg"
+                            alt="Стульников Максим Игоревич" />
+                    </div>
+                    <div class="info__text-wrap">
+                        <h2 class="info__title title-2">
+                            Актуальная информация (ноябрь 2024)
+                        </h2>
+                        <div class="info__content content">
+                            <p class="content__p">
+                                Установили диагноз: повреждение гена, FOXG1
+                                (Синдром Ретта).
+                            </p>
+                            <p class="content__p">Назначили курс лечения:</p>
+                            <ul class="content__ul">
+                                <li class="content__li">Войт терапия</li>
+                                <li class="content__li">ЛФК</li>
+                                <li class="content__li">Бобат терапия</li>
+                                <li class="content__li">АБМ</li>
+                            </ul>
+                            <p class="content__p">
+                                Результаты: Максим стал лучше реагировать,
+                                смеется, пытается держать себя, но пока плохо
+                                получается, у нас гипотонус он и не  дает нам
+                                многое делать. Все идет, но очень медленно
+                                занятия нам в этом помогают. Нужно продолжать.
+                            </p>
+                        </div>
+                        <a
+                            class="info__link link"
+                            href="#"
+                            aria-label="Перейти на страницу истории">
+                            История
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- contacts -->
+            <section class="contacts section">
+                <div class="contacts__container container">
+                    <div class="contacts__wrap-content border-radius">
+                        <h2 class="contacts__title title-2">Мои контакты</h2>
+                        <p class="contacts__subtitle">
+                            Стульников Игорь Александрович
+                        </p>
+                        <ul class="contacts__feedback-list">
+                            <li
+                                class="contacts__feedback-list-item feedback-list-item">
+                                <a
+                                    class="feedback-list-item__link link-text"
+                                    href="tel:+79184444444"
+                                    aria-label="Позвонить по номеру 8 918 444 44 44">
+                                    <div class="link-text__icon-wrap">
+                                        <svg class="link-text__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#ph"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="link-text__descr">
+                                        8 918 444 44 44
+                                    </span>
+                                </a>
+                            </li>
+                            <li
+                                class="contacts__feedback-list-item feedback-list-item">
+                                <a
+                                    class="feedback-list-item__link link-text"
+                                    href="https://wa.me/+79184444444"
+                                    aria-label="Написать в WhatsApp">
+                                    <div
+                                        class="link-text__icon-wrap link-text__icon-wrap_wh">
+                                        <svg class="link-text__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#wa"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="link-text__descr">
+                                        8 918 444 44 44
+                                    </span>
+                                </a>
+                            </li>
+                            <li
+                                class="contacts__feedback-list-item feedback-list-item">
+                                <a
+                                    class="feedback-list-item__link link-text"
+                                    href="mailto:mail@info.ru"
+                                    aria-label="Написать на почту mail@info.ru">
+                                    <div class="link-text__icon-wrap">
+                                        <svg class="link-text__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#email"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="link-text__descr">
+                                        mail@info.ru
+                                    </span>
+                                </a>
+                            </li>
+                            <li
+                                class="contacts__feedback-list-item feedback-list-item">
+                                <a
+                                    class="feedback-list-item__link link-text"
+                                    href="https://www.instagram.com/myinstagram"
+                                    aria-label="Написать в Instagram"
+                                    target="_blank">
+                                    <div class="link-text__icon-wrap">
+                                        <svg class="link-text__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#inst"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="link-text__descr">
+                                        @myinstagram
+                                    </span>
+                                </a>
+                            </li>
+                            <li
+                                class="contacts__feedback-list-item feedback-list-item">
+                                <a
+                                    class="feedback-list-item__link link-text"
+                                    href="https://t.me/+79184444444"
+                                    aria-label="Написать в Telegram"
+                                    target="_blank">
+                                    <div
+                                        class="link-text__icon-wrap link-text__icon-wrap_tg">
+                                        <svg class="link-text__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#tg"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="link-text__descr">
+                                        8 918 444 44 44
+                                    </span>
+                                </a>
+                            </li>
+                            <li
+                                class="contacts__feedback-list-item feedback-list-item">
+                                <a
+                                    class="feedback-list-item__link link-text"
+                                    href="https://vk.com/"
+                                    aria-label="Перейти на страницу в Вконтакте"
+                                    target="_blank">
+                                    <div
+                                        class="link-text__icon-wrap link-text__icon-wrap_vk">
+                                        <svg class="link-text__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#vk"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="link-text__descr">
+                                        @myvkontakte
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contacts__wrap-content border-radius">
+                        <h2 class="contacts__title title-2">Реквизиты</h2>
+                        <ul class="contacts__requisites-list">
+                            <li
+                                class="contacts__requisites-list-item requisites-list-item">
+                                <div class="requisites-list-item__wrap">
+                                    <h3 class="requisites-list-item__title">
+                                        Сбербанк
+                                    </h3>
+                                    <p class="requisites-list-item__text">
+                                        Карта: 40802810200003404192
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        Получатель: Игорь Александрович (папа
+                                        Максима)
+                                    </p>
+                                </div>
+                                <div class="requisites-list-item__wrap">
+                                    <h3 class="requisites-list-item__title">
+                                        Сбербанк
+                                    </h3>
+                                    <p class="requisites-list-item__text">
+                                        Карта: 40802810200003404192
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        Получатель: Игорь Александрович (папа
+                                        Максима)
+                                    </p>
+                                </div>
+                            </li>
+                            <li
+                                class="contacts__requisites-list-item requisites-list-item">
+                                <div class="requisites-list-item__wrap">
+                                    <h3 class="requisites-list-item__title">
+                                        Для юридичеких лиц
+                                    </h3>
+                                    <p class="requisites-list-item__text">
+                                        Банк: АО «Тинькофф Банк»
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        БИК банка: 044525974
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        ИНН банка: 7710140679
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        Корреспондентский счет банка:
+                                        30101810145250000974
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        Юридический адрес банка: 127287, г.
+                                        Москва, ул. Хуторская 2-я, д. 38А, стр.
+                                        2
+                                    </p>
+                                </div>
+                                <div class="requisites-list-item__wrap">
+                                    <h3 class="requisites-list-item__title">
+                                        Для юридичеких лиц
+                                    </h3>
+                                    <p class="requisites-list-item__text">
+                                        Банк: АО «Тинькофф Банк»
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        БИК банка: 044525974
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        ИНН банка: 7710140679
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        Корреспондентский счет банка:
+                                        30101810145250000974
+                                    </p>
+                                    <p class="requisites-list-item__text">
+                                        Юридический адрес банка: 127287, г.
+                                        Москва, ул. Хуторская 2-я, д. 38А, стр.
+                                        2
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer__top footer-top">
+                <div class="footer-top__container container">
+                    <nav class="footer-top__nav footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item active">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="/"
+                                    aria-label="Направится к главному экрану">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Направится к истории">
+                                    История
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Направится к блоку о Синдроме Ретта">
+                                    Синдром Ретта
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./reports.html"
+                                    aria-label="Направится к отчётам">
+                                    Отчёты
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./contacts.html"
+                                    aria-label="Направится к блоку сбора средств">
+                                    Сбор средств
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="footer__copyright copyright">
+                <div class="copyright__container container">
+                    <ul class="copyright__list">
+                        <li class="copyright__list-item">
+                            © 2025 Все права защищены
+                        </li>
+                        <li class="copyright__list-item">
+                            <div class="copyright__list-link-wrap">
+                                <a
+                                    class="copyright__list-link copyright-link"
+                                    href="./page.html"
+                                    target="_blank"
+                                    aria-label="Открыть пользовательское соглашение">
+                                    Политика конфиденциальности
+                                </a>
+                                <a
+                                    class="copyright__list-link copyright-link"
+                                    href="./page.html"
+                                    target="_blank"
+                                    aria-label="Открыть пользовательское соглашение">
+                                    Договор оферты
+                                </a>
+                            </div>
+                        </li>
+                        <li class="copyright__list-item">
+                            <a
+                                class="copyright__list-link copyright-link"
+                                href="https://web2.agency/"
+                                target="_blank"
+                                aria-label="Открыть сайт по разработке WEB2 Новороссийск">
+                                <svg class="copyright-link__icon">
+                                    <use
+                                        href="./app/img/icons/icons.svg#web2"></use>
+                                </svg>
+                                <span class="copyright-link__text">
+                                    создание сайтов
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- scroll-links -->
+        <ul class="scroll-links">
+            <li class="scroll-links__item">
+                <a
+                    class="scroll-links__link"
+                    href="tel:+79184444444"
+                    aria-label="Позвонить по номеру 8 918 444 44 44">
+                    <svg class="scroll-links__link-icon">
+                        <use href="./app/img/icons/icons.svg#ph"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="scroll-links__item">
+                <a
+                    class="scroll-links__link scroll-links__link_wh"
+                    href="https://wa.me/+79184444444"
+                    aria-label="Связаться в WhatsApp">
+                    <svg class="scroll-links__link-icon">
+                        <use href="./app/img/icons/icons.svg#wa"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="scroll-links__item">
+                <a
+                    class="scroll-links__link"
+                    href="mailto:mail@info.ru"
+                    aria-label="Написать на электронную почту mail@info.ru">
+                    <svg class="scroll-links__link-icon">
+                        <use href="./app/img/icons/icons.svg#email"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="scroll-links__item">
+                <a
+                    class="scroll-links__link"
+                    href="https://www.instagram.com/myinstagram"
+                    aria-label="Связаться в Instagram">
+                    <svg class="scroll-links__link-icon">
+                        <use href="./app/img/icons/icons.svg#inst"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="scroll-links__item">
+                <a
+                    class="scroll-links__link scroll-links__link_tg"
+                    href="https://t.me/+79184444444"
+                    aria-label="Связаться в Telegram">
+                    <svg class="scroll-links__link-icon">
+                        <use href="./app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="scroll-links__item">
+                <a
+                    class="scroll-links__link scroll-links__link_vk"
+                    href="https://vk.com/"
+                    aria-label="Связаться в Вконтакте">
+                    <svg class="scroll-links__link-icon">
+                        <use href="./app/img/icons/icons.svg#vk"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- scroll-top -->
+        <button
+            id="scroll-top"
+            class="home-page__scroll-top scroll-top"
+            aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="./app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+    </body>
+</html>

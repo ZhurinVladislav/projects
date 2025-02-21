@@ -18,7 +18,7 @@
         <script src="./app/js/index.min.js" defer></script>
     </head>
 
-    <body class="home-page">
+    <body class="main">
         <!-- PRELOADER -->
         <div id="preloader" class="home-page__preloader preloader">
             <div class="preloader__wrapper">
@@ -72,18 +72,37 @@
                             alt="Логотип ArchiTop"
                             title="ArchiTop" />
                     </a>
-                    <button
-                        class="header-top__btn btn"
-                        aria-label="Открыть форму обратной связи">
-                        <!-- <svg class="btn__icon btn__icon_ph">
-                            <use
-                                xlink:href="./app/img/icons/icons.svg#feedback"></use>
-                        </svg> -->
-                        <span class="btn__text btn__text_ph">
-                            Связаться с&nbsp;нами
-                        </span>
-                    </button>
-
+                    <!-- class="js-popup-open" data-open-popup="popup-feedback" -->
+                    <div class="header-top__feedback-wrap">
+                        <button
+                            id="feedback-btn"
+                            class="header-top__btn btn"
+                            aria-label="Открыть блок для связи с нами">
+                            <span class="btn__text btn__text_ph">
+                                Связаться с&nbsp;нами
+                            </span>
+                        </button>
+                        <ul
+                            id="feedback-list"
+                            class="header-top__feedback-list header-feedback">
+                            <li class="header-feedback__item">
+                                <a
+                                    class="header-feedback__item-link"
+                                    href="mailto:sales@sitename.ru"
+                                    aria-label="Написать нам на почту sales@sitename.ru">
+                                    sales@sitename.ru
+                                </a>
+                            </li>
+                            <li class="header-feedback__item">
+                                <a
+                                    class="header-feedback__item-link"
+                                    href="tel:+79997778866"
+                                    aria-label="Позвонить нам +7 (999) 777-88-66">
+                                    +7 (999) 777-88-66
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <button
                         id="burger-toggle"
                         class="header-top__menu-toggle menu-toggle"
@@ -116,7 +135,7 @@
                         <li class="header-menu__list-item">
                             <a
                                 class="header-menu__list-link"
-                                href="#"
+                                href="./news.html"
                                 aria-label="Перейти в раздел Новости">
                                 Новости
                             </a>
@@ -134,6 +153,64 @@
             </div>
             <!-- MENU-MOBILE -->
             <div id="menu-mobile" class="header__menu-mobile menu-mobile">
+                <div
+                    class="menu-mobile__site-wrapper site-wrapper js-site-wrapper"
+                    tabindex="0"
+                    aria-label="Раскрыть список городов">
+                    <button class="site-wrapper__btn js-btn-site-toggle">
+                        <svg class="site-wrapper__icon">
+                            <use
+                                xlink:href="./app/img/icons/icons.svg#mark"></use>
+                        </svg>
+                        <span class="site-wrapper__text">Краснодар</span>
+                        <svg class="site-wrapper__icon-arrow">
+                            <use
+                                xlink:href="./app/img/icons/icons.svg#arrow"></use>
+                        </svg>
+                    </button>
+                    <ul class="site-wrapper__list hidden js-list-site">
+                        <li class="site-wrapper__list-item">
+                            <a
+                                href="/"
+                                class="site-wrapper__list-link"
+                                aria-label="Перейти на сайт Новороссийск"
+                                >Новороссийск</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <!--
+                <div class="menu-mobile__feedback-wrap">
+                    <button
+                        id="feedback-btn"
+                        class="menu-mobile__btn btn"
+                        aria-label="Открыть блок для связи с нами">
+                        <span class="btn__text btn__text_ph">
+                            Связаться с&nbsp;нами
+                        </span>
+                    </button>
+                    <ul
+                        id="feedback-list"
+                        class="header-top__feedback-list header-feedback">
+                        <li class="header-feedback__item">
+                            <a
+                                class="header-feedback__item-link"
+                                href="mailto:sales@sitename.ru"
+                                aria-label="Написать нам на почту sales@sitename.ru">
+                                sales@sitename.ru
+                            </a>
+                        </li>
+                        <li class="header-feedback__item">
+                            <a
+                                class="header-feedback__item-link"
+                                href="tel:+79997778866"
+                                aria-label="Позвонить нам +7 (999) 777-88-66">
+                                +7 (999) 777-88-66
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                -->
                 <div class="menu-mobile__wrap">
                     <nav class="menu-mobile__menu">
                         <ul class="menu-mobile__menu-list menu-mobile-list">
@@ -165,110 +242,78 @@
                             </li>
                         </ul>
                     </nav>
-                    <ul class="menu-mobile__links menu-mobile-links">
-                        <li class="menu-mobile-links__item">
-                            <a
-                                class="menu-mobile-links__item-link link-text"
-                                href="/"
-                                aria-label="Перейти в Яндекс Карты"
-                                target="_blank">
-                                <svg class="link-text__icon">
-                                    <use
-                                        xlink:href="/app/img/icons/icons.svg#mark"></use>
-                                </svg>
-                                <address class="link-text__descr">
-                                    Абрау-Дюрсо, ул. Морская&nbsp;8
-                                </address>
-                            </a>
-                        </li>
-                        <li class="menu-mobile-links__item">
-                            <a
-                                class="menu-mobile-links__link link-text"
-                                href="tel:+79883402992"
-                                aria-label="Позвонить по номеру +7 (988) 340-29-92">
-                                <svg class="link-text__icon">
-                                    <use
-                                        xlink:href="/app/img/icons/icons.svg#ph"></use>
-                                </svg>
-                                <span class="link-text__descr">
-                                    +7 (988) 340-29-92
-                                </span>
-                            </a>
-                        </li>
-                        <li class="menu-mobile-links__item">
-                            <a
-                                class="menu-mobile-links__link link-text"
-                                href="#"
-                                aria-label="Перейти в Авито"
-                                target="_blank">
-                                <svg class="link-text__icon">
-                                    <use
-                                        xlink:href="/app/img/icons/icons.svg#avito"></use>
-                                </svg>
-                                <span class="link-text__descr">Avito</span>
-                            </a>
-                        </li>
-                        <li class="menu-mobile-links__item">
-                            <a
-                                class="menu-mobile-links__link link-text"
-                                href="https://wa.me/+79883402992"
-                                aria-label="Написать нам в WhatsApp"
-                                target="_blank">
-                                <svg class="link-text__icon">
-                                    <use
-                                        xlink:href="/app/img/icons/icons.svg#wa"></use>
-                                </svg>
-                                <span class="link-text__descr">WhatsApp</span>
-                            </a>
-                        </li>
-                        <li class="menu-mobile-links__item">
-                            <a
-                                class="menu-mobile-links__link link-text"
-                                href="https://t.me/+79883402992"
-                                aria-label="Написать в чат в Telegram"
-                                target="_blank">
-                                <svg class="link-text__icon">
-                                    <use
-                                        xlink:href="/app/img/icons/ыicons.svg#tg"></use>
-                                </svg>
-                                <span class="link-text__descr">Telegram</span>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </header>
         <!-- MAIN -->
-        <main id="main" class="home-page__main main-section">
+        <main id="main-block" class="home-page__main main">
             <!-- HERO -->
-            <section
-                class="main-section__hero hero section-reset"
-                data-image="./app/img/hero/bg-img.jpg">
+            <section class="main-section__hero hero section-reset">
+                <div
+                    class="hero__bg-img"
+                    data-image="./app/img/hero/bg-img.jpg"></div>
                 <div class="hero__container container">
-                    <h1 class="hero__title h-1">
-                        Архитектурные бюро Краснодарского края
-                    </h1>
-                    <p class="hero__text">
-                        Рейтинг лучших, проверенных архитектурных компаний
-                        и&nbsp;проектных организаций с&nbsp;высокой экспертизой
-                        в&nbsp;отрасли
-                    </p>
-                    <form class="hero__form search-form">
-                        <label
-                            for="input-search"
-                            class="search-form__input-wrap form-field">
-                            <input
-                                id="input-search"
-                                class="form-field__input"
-                                type="text"
-                                placeholder="Поиск услуг" />
-                            <svg class="form-field__icon">
-                                <use
-                                    xlink:href="/app/img/icons/icons.svg#search"></use>
-                            </svg>
-                        </label>
-                        <button class="search-form__btn btn">Найти</button>
-                    </form>
+                    <div class="hero__content-top">
+                        <div
+                            class="hero__bg-img hero__bg-img_ph"
+                            data-image="./app/img/hero/bg-img.jpg"></div>
+                        <h1 class="hero__title h-1">
+                            Архитектурные бюро Краснодарского края
+                        </h1>
+                        <p class="hero__text">
+                            Рейтинг лучших, проверенных архитектурных компаний
+                            и&nbsp;проектных организаций с&nbsp;высокой
+                            экспертизой в&nbsp;отрасли
+                        </p>
+                        <div class="hero__form-wrap search">
+                            <form class="search__form search-form">
+                                <label
+                                    for="input-search"
+                                    class="search-form__input-wrap form-field">
+                                    <input
+                                        id="input-search"
+                                        class="form-field__input"
+                                        type="text"
+                                        placeholder="Поиск услуг" />
+                                    <svg class="form-field__icon">
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#search"></use>
+                                    </svg>
+                                </label>
+                                <button class="search-form__btn btn">
+                                    Найти
+                                </button>
+                            </form>
+                            <ul
+                                id="search-results"
+                                class="search__list search-result">
+                                <li class="search-result__item">
+                                    <a
+                                        class="search-result__item-link"
+                                        href="#">
+                                        Подготовка проектной документации
+                                    </a>
+                                </li>
+                                <li class="search-result__item">
+                                    <a
+                                        class="search-result__item-link"
+                                        href="#">
+                                        Проведение экспертизы проектной
+                                        документации
+                                    </a>
+                                </li>
+                                <li class="search-result__item">
+                                    <a
+                                        class="search-result__item-link"
+                                        href="#">
+                                        Подготовка и подача необходимых
+                                        документов
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <ul class="hero__advantages">
                         <li class="hero__advantages-item advantages-item">
                             <span class="advantages-item__num">28</span>
@@ -623,117 +668,353 @@
                         <div
                             class="feedback__img"
                             data-image="./app/img/feedback/img-1.png"></div>
-                        <div class="feedback__form-wrap">
-                            <h3 class="feedback__title h-2">
-                                На&nbsp;что вы&nbsp;обращаете внимание при
-                                выборе архитектурного бюро?
-                            </h3>
-                            <p class="feedback__text">
-                                Отметьте один пункт, который на&nbsp;ваш взгляд
-                                самый важный
-                            </p>
-                            <form class="feedback__form feedback-form">
-                                <ul class="feedback-form__list">
-                                    <li class="feedback-form__list-item">
-                                        <label
-                                            class="feedback-form__label custom-radio">
-                                            <input
-                                                type="radio"
-                                                class="custom-radio__input"
-                                                name="choice" />
-                                            <span class="custom-radio__text">
-                                                Портфолио и&nbsp;опыт
-                                            </span>
-                                        </label>
+                        <div class="feedback__right">
+                            <div class="feedback__result">
+                                <h3 class="feedback__title h-2">
+                                    На&nbsp;что больше всего обращают внимание
+                                    при выборе архитектурного бюро.
+                                </h3>
+                                <p class="feedback__text">
+                                    Спасибо за&nbsp;ваше мнение!
+                                </p>
+                                <ul class="feedback__result-list">
+                                    <li
+                                        class="feedback__result-list-item feedback-result-item">
+                                        <div class="feedback-result-item__left">
+                                            <h4
+                                                class="feedback-result-item__title">
+                                                Портфолио и опыт
+                                            </h4>
+                                            <div
+                                                class="feedback-result-item__line-wrap">
+                                                <div
+                                                    class="feedback-result-item__line"
+                                                    style="width: 43%;"></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="feedback-result-item__stats">
+                                            <svg
+                                                class="feedback-result-item__stats-icon">
+                                                <use
+                                                    xlink:href="./app/img/icons/icons.svg#men"></use>
+                                            </svg>
+                                            <p
+                                                class="feedback-result-item__stats-text">
+                                                13 (43%)
+                                            </p>
+                                        </div>
                                     </li>
-                                    <li class="feedback-form__list-item">
-                                        <label
-                                            class="feedback-form__label custom-radio">
-                                            <input
-                                                type="radio"
-                                                class="custom-radio__input"
-                                                name="choice"
-                                                checked />
-                                            <span class="custom-radio__text">
-                                                Профессионализм
-                                                и&nbsp;экспертиза
-                                            </span>
-                                        </label>
+                                    <li
+                                        class="feedback__result-list-item feedback-result-item">
+                                        <div class="feedback-result-item__left">
+                                            <h4
+                                                class="feedback-result-item__title">
+                                                Профессионализм и экспертиза
+                                            </h4>
+                                            <div
+                                                class="feedback-result-item__line-wrap">
+                                                <div
+                                                    class="feedback-result-item__line"
+                                                    style="width: 23%;"></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="feedback-result-item__stats">
+                                            <svg
+                                                class="feedback-result-item__stats-icon">
+                                                <use
+                                                    xlink:href="./app/img/icons/icons.svg#men"></use>
+                                            </svg>
+                                            <p
+                                                class="feedback-result-item__stats-text">
+                                                7 (23%)
+                                            </p>
+                                        </div>
                                     </li>
-                                    <li class="feedback-form__list-item">
-                                        <label
-                                            class="feedback-form__label custom-radio">
-                                            <input
-                                                type="radio"
-                                                class="custom-radio__input"
-                                                name="choice" />
-                                            <span class="custom-radio__text">
+                                    <li
+                                        class="feedback__result-list-item feedback-result-item">
+                                        <div class="feedback-result-item__left">
+                                            <h4
+                                                class="feedback-result-item__title">
                                                 Способность предлагать
                                                 уникальные, креативные решения
-                                            </span>
-                                        </label>
+                                            </h4>
+                                            <div
+                                                class="feedback-result-item__line-wrap">
+                                                <div
+                                                    class="feedback-result-item__line"
+                                                    style="width: 7%;"></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="feedback-result-item__stats">
+                                            <svg
+                                                class="feedback-result-item__stats-icon">
+                                                <use
+                                                    xlink:href="./app/img/icons/icons.svg#men"></use>
+                                            </svg>
+                                            <p
+                                                class="feedback-result-item__stats-text">
+                                                2 (7%)
+                                            </p>
+                                        </div>
                                     </li>
-                                    <li class="feedback-form__list-item">
-                                        <label
-                                            class="feedback-form__label custom-radio">
-                                            <input
-                                                type="radio"
-                                                class="custom-radio__input"
-                                                name="choice" />
-                                            <span class="custom-radio__text">
-                                                Эффективное управление проектом
-                                                и&nbsp;соблюдение сроков
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li class="feedback-form__list-item">
-                                        <label
-                                            class="feedback-form__label custom-radio">
-                                            <input
-                                                type="radio"
-                                                class="custom-radio__input"
-                                                name="choice" />
-                                            <span class="custom-radio__text">
+                                    <li
+                                        class="feedback__result-list-item feedback-result-item">
+                                        <div class="feedback-result-item__left">
+                                            <h4
+                                                class="feedback-result-item__title">
                                                 Готовность адаптировать проект
                                                 под меняющиеся требования
-                                            </span>
-                                        </label>
+                                            </h4>
+                                            <div
+                                                class="feedback-result-item__line-wrap">
+                                                <div
+                                                    class="feedback-result-item__line"
+                                                    style="width: 7%;"></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="feedback-result-item__stats">
+                                            <svg
+                                                class="feedback-result-item__stats-icon">
+                                                <use
+                                                    xlink:href="./app/img/icons/icons.svg#men"></use>
+                                            </svg>
+                                            <p
+                                                class="feedback-result-item__stats-text">
+                                                2 (7%)
+                                            </p>
+                                        </div>
                                     </li>
-                                    <li class="feedback-form__list-item">
-                                        <label
-                                            class="feedback-form__label custom-radio">
-                                            <input
-                                                type="radio"
-                                                class="custom-radio__input"
-                                                name="choice" />
-                                            <span class="custom-radio__text">
-                                                Положительный имидж
-                                                и&nbsp;авторитет бюро в
-                                                профессиональном сообществе
-                                            </span>
-                                        </label>
+                                    <li
+                                        class="feedback__result-list-item feedback-result-item">
+                                        <div class="feedback-result-item__left">
+                                            <h4
+                                                class="feedback-result-item__title">
+                                                Положительный имидж и авторитет
+                                                бюро в профессиональном
+                                                сообществе
+                                            </h4>
+                                            <div
+                                                class="feedback-result-item__line-wrap">
+                                                <div
+                                                    class="feedback-result-item__line"
+                                                    style="width: 10%;"></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="feedback-result-item__stats">
+                                            <svg
+                                                class="feedback-result-item__stats-icon">
+                                                <use
+                                                    xlink:href="./app/img/icons/icons.svg#men"></use>
+                                            </svg>
+                                            <p
+                                                class="feedback-result-item__stats-text">
+                                                3 (10%)
+                                            </p>
+                                        </div>
                                     </li>
-                                    <li class="feedback-form__list-item">
-                                        <label
-                                            class="feedback-form__label custom-radio">
-                                            <input
-                                                type="radio"
-                                                class="custom-radio__input"
-                                                name="choice" />
-                                            <span class="custom-radio__text">
-                                                Наличие наград, премий
-                                                и&nbsp;других профессиональных
-                                                достижений
-                                            </span>
-                                        </label>
+                                    <li
+                                        class="feedback__result-list-item feedback-result-item">
+                                        <div class="feedback-result-item__left">
+                                            <h4
+                                                class="feedback-result-item__title">
+                                                Положительный имидж и авторитет
+                                                бюро в профессиональном
+                                                сообществе
+                                            </h4>
+                                            <div
+                                                class="feedback-result-item__line-wrap">
+                                                <div
+                                                    class="feedback-result-item__line"
+                                                    style="width: 10%;"></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="feedback-result-item__stats">
+                                            <svg
+                                                class="feedback-result-item__stats-icon">
+                                                <use
+                                                    xlink:href="./app/img/icons/icons.svg#men"></use>
+                                            </svg>
+                                            <p
+                                                class="feedback-result-item__stats-text">
+                                                3 (10%)
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="feedback__result-list-item feedback-result-item">
+                                        <div class="feedback-result-item__left">
+                                            <h4
+                                                class="feedback-result-item__title">
+                                                Наличие наград, премий и других
+                                                профессиональных достижений
+                                            </h4>
+                                            <div
+                                                class="feedback-result-item__line-wrap">
+                                                <div
+                                                    class="feedback-result-item__line"
+                                                    style="width: 3%;"></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="feedback-result-item__stats">
+                                            <svg
+                                                class="feedback-result-item__stats-icon">
+                                                <use
+                                                    xlink:href="./app/img/icons/icons.svg#men"></use>
+                                            </svg>
+                                            <p
+                                                class="feedback-result-item__stats-text">
+                                                1 (3%)
+                                            </p>
+                                        </div>
                                     </li>
                                 </ul>
-                                <button
-                                    class="feedback-form__btn btn"
-                                    aria-label="Отправить заявку">
-                                    Отравить
-                                </button>
-                            </form>
+                            </div>
+                            <div class="feedback__form-wrap hidden">
+                                <h3 class="feedback__title h-2">
+                                    На&nbsp;что вы&nbsp;обращаете внимание при
+                                    выборе архитектурного бюро?
+                                </h3>
+                                <p class="feedback__text">
+                                    Отметьте один пункт, который на&nbsp;ваш
+                                    взгляд самый важный
+                                </p>
+                                <form
+                                    id="feedback-form"
+                                    class="feedback__form feedback-form">
+                                    <ul class="feedback-form__list">
+                                        <li class="feedback-form__list-item">
+                                            <label
+                                                class="feedback-form__label custom-radio">
+                                                <input
+                                                    type="radio"
+                                                    class="custom-radio__input"
+                                                    value="Портфолио и опыт"
+                                                    name="choice" />
+                                                <span
+                                                    class="custom-radio__text">
+                                                    Портфолио и&nbsp;опыт
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="feedback-form__list-item">
+                                            <label
+                                                class="feedback-form__label custom-radio">
+                                                <input
+                                                    type="radio"
+                                                    class="custom-radio__input"
+                                                    name="choice"
+                                                    value="Профессионализм
+                                                и экспертиза"
+                                                    checked />
+                                                <span
+                                                    class="custom-radio__text">
+                                                    Профессионализм
+                                                    и&nbsp;экспертиза
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="feedback-form__list-item">
+                                            <label
+                                                class="feedback-form__label custom-radio">
+                                                <input
+                                                    type="radio"
+                                                    class="custom-radio__input"
+                                                    name="choice"
+                                                    value="Способность предлагать
+                                                уникальные, креативные решения" />
+                                                <span
+                                                    class="custom-radio__text">
+                                                    Способность предлагать
+                                                    уникальные, креативные
+                                                    решения
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="feedback-form__list-item">
+                                            <label
+                                                class="feedback-form__label custom-radio">
+                                                <input
+                                                    type="radio"
+                                                    class="custom-radio__input"
+                                                    name="choice"
+                                                    value="Эффективное управление проектом
+                                                и соблюдение сроков" />
+                                                <span
+                                                    class="custom-radio__text">
+                                                    Эффективное управление
+                                                    проектом и&nbsp;соблюдение
+                                                    сроков
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="feedback-form__list-item">
+                                            <label
+                                                class="feedback-form__label custom-radio">
+                                                <input
+                                                    type="radio"
+                                                    class="custom-radio__input"
+                                                    name="choice"
+                                                    value="Готовность адаптировать проект
+                                                под меняющиеся требования" />
+                                                <span
+                                                    class="custom-radio__text">
+                                                    Готовность адаптировать
+                                                    проект под меняющиеся
+                                                    требования
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="feedback-form__list-item">
+                                            <label
+                                                class="feedback-form__label custom-radio">
+                                                <input
+                                                    type="radio"
+                                                    class="custom-radio__input"
+                                                    name="choice"
+                                                    value="Положительный имидж
+                                                и авторитет бюро в
+                                                профессиональном сообществе" />
+                                                <span
+                                                    class="custom-radio__text">
+                                                    Положительный имидж
+                                                    и&nbsp;авторитет бюро в
+                                                    профессиональном сообществе
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="feedback-form__list-item">
+                                            <label
+                                                class="feedback-form__label custom-radio">
+                                                <input
+                                                    type="radio"
+                                                    class="custom-radio__input"
+                                                    name="choice"
+                                                    value="Наличие наград, премий
+                                                и других профессиональных
+                                                достижений" />
+                                                <span
+                                                    class="custom-radio__text">
+                                                    Наличие наград, премий
+                                                    и&nbsp;других
+                                                    профессиональных достижений
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <button
+                                        class="feedback-form__btn btn"
+                                        aria-label="Отправить заявку">
+                                        Отравить
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -745,8 +1026,8 @@
                         Профессиональные архитекторы в&nbsp;городе Краснодар,
                         Краснодарский край на&nbsp;architectop
                     </h2>
-                    <div class="seo__content-wrap">
-                        <div class="seo__content text-default">
+                    <div class="seo__content-wrap text-more js-more-wrap">
+                        <div class="text-more__content text-default">
                             <p class="text-default__p">
                                 На&nbsp;этой странице мы&nbsp;собрали для вас
                                 лучших проверенных архитекторов
@@ -781,8 +1062,7 @@
                             </p>
                         </div>
                         <div
-                            id="more-text"
-                            class="seo__content seo__content_more text-default js-content-more">
+                            class="text-more__content text-more__content_more text-default js-more-text">
                             <h2 class="text-default__h2">
                                 Где искать архитектурное бюро для проекта?
                             </h2>
@@ -895,10 +1175,8 @@
                                 с&nbsp;Houzz PRO.
                             </p>
                         </div>
-                        <button
-                            id="more-btn"
-                            class="seo__btn btn-text js-btn-more">
-                            <span class="btn-text__text js-btn-text">
+                        <button class="text-more__btn btn-text js-more-btn">
+                            <span class="btn-text__text js-more-btn-text">
                                 Читать полностью
                             </span>
                             <svg class="btn-text__icon">
@@ -910,13 +1188,55 @@
                 </div>
             </section>
             <!-- POPUP -->
-            <div id="popup-about" class="main-section__popup popup">
+            <div id="popup-feedback" class="main-section__popup popup">
                 <div class="popup__box js-popup-box">
                     <button
                         aria-label="Закрыть всплывающие окно"
                         class="popup__btn-close js-popup-close"></button>
-                    <h3 class="popup__title"></h3>
-                    <div class="popup__content text-default"></div>
+                    <h3 class="popup__title">Связаться с нами</h3>
+                    <form class="popup__form">
+                        <label
+                            for="e-mail"
+                            class="popup__form-label form-field form-field_inv">
+                            <input
+                                id="e-mail"
+                                class="form-field__input"
+                                type="email"
+                                placeholder="E-mail"
+                                required />
+                            <svg class="form-field__icon">
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#email"></use>
+                            </svg>
+                        </label>
+                        <label
+                            for="phone"
+                            class="popup__form-label form-field form-field_inv">
+                            <input
+                                id="phone"
+                                class="form-field__input"
+                                type="text"
+                                placeholder="Телефон"
+                                required />
+                            <svg class="form-field__icon">
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#phone"></use>
+                            </svg>
+                        </label>
+                        <button class="popup__form-btn btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <!-- POPUP-SUCCESS -->
+            <div id="popup-success" class="main-section__popup popup">
+                <div class="popup__box js-popup-box">
+                    <button
+                        aria-label="Закрыть всплывающие окно"
+                        class="popup__btn-close js-popup-close"></button>
+                    <h3 class="popup__title js-popup-title">Успешно!</h3>
+                    <p class="popup__text js-popup-text">
+                        Ошибка при отправке сообщения. Попробуйте еще раз.
+                    </p>
                 </div>
             </div>
         </main>
@@ -985,6 +1305,30 @@
                         </a>
                     </div>
                 </div>
+                <div class="footer__bottom footer-bottom">
+                    <p class="footer-bottom__text">
+                        Все права защищены &copy;&nbsp;2024
+                    </p>
+                    <a
+                        class="footer-bottom__link link-text"
+                        href="/"
+                        target="_blank">
+                        <span class="link-text__descr">
+                            Пользовательское соглашение
+                        </span>
+                    </a>
+                    <a
+                        class="footer-bottom__link link-text link-web2"
+                        href="/"
+                        target="_blank">
+                        <svg class="link-text__icon link-web2__icon">
+                            <use
+                                xlink:href="/app/img/icons/icons.svg#logo-dev"></use>
+                        </svg>
+                        <span class="link-text__descr"> Создание сайтов </span>
+                    </a>
+                </div>
+                <!--
                 <div class="footer__content-bottom footer-bottom">
                     <ul class="footer-bottom__list">
                         <li class="footer-bottom__list-item">
@@ -1021,6 +1365,7 @@
                         </li>
                     </ul>
                 </div>
+                -->
             </div>
         </footer>
         <!-- SCROLL-TOP -->

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobMenuWrap = document.getElementById('menu-mobile');
   const mobMenuBtn = document.getElementById('burger-toggle');
 
-  function overflowHTML() {
+  const overflowHTML = () => {
     let scrollY = 0;
 
     const toggleClassOverflow = () => {
@@ -20,8 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('yacht') || document.getElementById('creating-an-ad')) {
       window.addEventListener('scroll', toggleClassOverflow, { passive: true });
     }
-  }
+  };
   overflowHTML();
+
+  // Нормализуем ссылки на номер телефона.
+  const normalizePhoneLink = () => {
+    const arrLinks = Array.from(document.querySelectorAll('a[href^="tel:"]'));
+
+    if (arrLinks.length === 0) return;
+
+    arrLinks.forEach(el => {
+      const normalizeHref = el.href.replace(/[^+\d]/g, '');
+      el.href = `tel:${normalizeHref}`;
+    });
+  };
+
+  normalizePhoneLink();
 
   // УБИРАЕМ ФОКУС ПОСЛЕ НАЖАТИЯ НА КНОПКУ ИЛИ ССЫЛКУ
   const removeFocus = () => {
@@ -196,6 +210,42 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   accordion();
 
+  // спойлер в фильтрах в блоке каталога
+  const spoiler = () => {
+    const wrapsArr = Array.from(document.querySelectorAll('.js-spoiler-wrap'));
+
+    if (wrapsArr.length === 0 || !wrapsArr || wrapsArr === null) return;
+
+    wrapsArr.forEach(el => {
+      const btn = el.querySelector('.js-spoiler-btn');
+      const list = el.querySelector('.js-spoiler-content');
+
+      if (!btn || btn === null) return;
+      if (!list || list === null) return;
+
+      list.classList.add('filter-spoiler__content_hidden');
+
+      btn.addEventListener('click', () => {
+        if (list.style.maxHeight) {
+          list.style.maxHeight = null;
+          btn.classList.remove('active');
+        } else {
+          list.style.maxHeight = list.scrollHeight + 'px';
+          btn.classList.add('active');
+        }
+      });
+
+      window.addEventListener('keydown', ev => {
+        if (ev.key === 'Escape' && list.style.maxHeight) {
+          list.style.maxHeight = null;
+          btn.classList.remove('active');
+        }
+      });
+    });
+  };
+
+  spoiler();
+
   const inputImg = () => {
     const photoInput = document.getElementById('photoInput');
     const photoPreview = document.getElementById('photoPreview');
@@ -221,4 +271,28 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   inputImg();
+
+  // cookie
+  const cookie = () => {
+    const wrap = document.getElementById('cookie');
+    const btn = document.getElementById('cookie-btn');
+    let isClose = window.sessionStorage.getItem('close');
+
+    if (!wrap || wrap === null) return;
+    if (!btn || btn === null) return;
+
+    const hidden = () => {
+      wrap.classList.add('hidden');
+      wrap.style.display = 'none';
+    };
+
+    if (isClose) hidden();
+
+    btn.addEventListener('click', () => {
+      hidden();
+      window.sessionStorage.setItem('close', true);
+    });
+  };
+
+  cookie();
 });

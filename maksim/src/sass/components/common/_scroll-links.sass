@@ -1,0 +1,46 @@
+.scroll-links
+	position: fixed
+	z-index: 30
+	right: 30px
+	bottom: 100px
+	display: flex
+	flex-direction: column
+	align-items: center
+	gap: 5px
+	+ph
+		right: 10px
+		bottom: 80px
+
+	&__link
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 10px
+		width: 45px
+		height: 45px
+		border-radius: 100%
+		background-color: var(--accent-color)
+		+ph
+			width: 40px
+			height: 40px
+		&_wh
+			background: linear-gradient(0deg, #20b038 0%, #60d66a 100%)
+		&_tg
+			padding: 10px
+			background: linear-gradient(180deg, #2aabee 0%, #229ed9 100%)
+		&_vk
+			background-color: #0277ff
+		+hover
+			.scroll-links__link-icon
+				transform: rotate(-12deg) scale(1.1)
+		+focus
+			.scroll-links__link-icon
+				transform: rotate(-12deg) scale(1.1)
+		&:active
+			transform: scale(.98)
+
+	&__link-icon
+		width: 100%
+		height: 100%
+		fill: var(--page-color)
+		transition: transform .2s linear

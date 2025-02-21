@@ -1,0 +1,66 @@
+.gallery
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-auto-rows: 350px
+	gap: 10px
+	@include textReset
+	font-size: 0
+	line-height: 0
+
+	li
+		&:not(:last-child)
+			margin-bottom: 0
+
+	+sm
+		grid-template-columns: repeat(2, 1fr)
+
+	+ph
+		grid-auto-rows: 40vh
+		grid-template-columns: 1fr
+
+	&__item
+		position: relative
+		border-radius: 20px
+		overflow: hidden
+
+	&__link
+		position: relative
+		display: flex
+		width: 100%
+		height: 100%
+		font-size: 0
+		line-height: 0
+		overflow: hidden
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 100
+			width: 100%
+			height: 100%
+			border-radius: 20px
+			background-color: rgba(82, 137, 248, .4)
+			opacity: 0
+			transform: translate(-100px, 100px)
+			transition: opacity .2s linear, transform .2s linear
+			+ph
+				border-radius: 20px
+
+		&:hover
+			+hover
+				&::before
+					opacity: 1
+					transform: translate(0)
+
+				.gallery__img
+					transform: scale(1.1)
+
+	&__img
+		position: relative
+		max-width: 100%
+		width: 100%
+		min-height: 100%
+		object-fit: cover
+		transition: transform .2s linear

@@ -32,16 +32,6 @@
 		table
 			margin-bottom: 0
 
-		&.hide
-			display: none
-
-		&.show
-			display: block
-			animation-fill-mode: forwards
-			animation-name: tabAnimate
-			animation-duration: .6s
-			animation-timing-function: cubic-bezier(0, 0.1, 0.2, 1)
-
 .btns-list
 	display: flex
 	margin-bottom: 24px
@@ -50,10 +40,16 @@
 	width: 100%
 	border: 1px solid $clr_5
 	box-shadow: 1px 8px 17px 0 rgba(0, 0, 0, 0.05), 3px 31px 31px 0 rgba(0, 0, 0, 0.04), 8px 70px 42px 0 rgba(0, 0, 0, 0.02), 13px 124px 50px 0 rgba(0, 0, 0, 0.01), 21px 194px 55px 0 rgba(0, 0, 0, 0)
+	+ph
+		overflow-x: auto
 
 	&__item
 		max-width: 50%
 		width: 100%
+		+ph
+			display: inline-block
+			max-width: max-content
+			// width: max-content
 
 	&__btn
 		padding: 26px 40px

@@ -39,6 +39,8 @@ body
   font-size: 18px
   color: $clr_3
   background-color: $clr_1
+  +ph
+    font-size: 16px
 
   &.overflow
     overflow-x: visible
@@ -59,25 +61,34 @@ body.menu-open
   background-color: rgba($clr_2, .8)
   color: $clr_4
 
+.page-transition
+  opacity: 0
+  transition: opacity .3s linear
+
+.page-visible
+  opacity: 1
+
 .section-reset
   position: relative
   margin-bottom: 140px
   +ph
     margin-bottom: 80px
 
-.home-page
+.section-inner
+  position: relative
+  margin-bottom: 80px
+
+.main
   .main-section
     margin-top: 0
 .main-section
-  margin-top: 164px
+  margin-top: 180px
   +ph
-    margin-top: 100px
+    margin-top: 80px
   &__search-services
     margin-bottom: 26px
-  // +sm
-  //   margin-top: 65px
-  // +ph
-  //   margin-top: 56px
+    +ph
+      margin-bottom: 20px
 
 .container
   position: relative
@@ -308,8 +319,6 @@ body.menu-open
   &:hover
     +hover
       border-color: $clr_4
-      .link-text__icon
-        fill: $clr_3
 
   &:focus-visible:not(:active),
   &:focus:not(:active)
@@ -321,8 +330,16 @@ body.menu-open
   &__icon
     width: 24px
     height: 24px
-    fill: $clr_1
+    fill: $clr_4
     transition: fill .2s linear
+
+  &_back
+    .link-text__icon
+      transform: rotate(90deg)
+    .link-text__text
+      margin-bottom: 4px
+      +sm
+        margin-bottom: 0
 
 .btn
   display: flex
@@ -369,9 +386,54 @@ body.menu-open
         display: flex
 
   &__text
-    +ph
-      display: none
+    &_ph
+      +ph
+        display: none
 
+.btn-inv
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 8px
+  padding: 12px
+  max-width: 198px
+  min-height: 48px
+  font-weight: 600
+  line-height: 100%
+  font-size: 16px
+  color: $clr_4
+  text-align: center
+  background-color: rgba($clr_4, .1)
+  transition: border-color .2s linear, background-color .2s linear, transform .2s linear
+
+  +ph
+    padding: 8px 10px
+
+  &:hover
+    +hover
+      background-color: rgba($clr_4, .5)
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    background-color: rgba($clr_4, .5)
+
+  &:active
+    transform: scale(.98)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_4
+    &_ph
+      display: none
+      +ph
+        display: flex
+
+  &__text
+    &_ph
+      +ph
+        display: none
+  
 .btn-text
   display: flex
   align-items: center
@@ -403,6 +465,15 @@ body.menu-open
     fill: $clr_4
     transition: fill .2s linear, transform .2s linear
 
+.btn-list
+  display: flex
+  flex-direction: column
+  gap: 8px
+
+  &__item-btn
+    max-width: 100%
+    width: 100%
+
 // СТИЛИ ДЛЯ ЗАГОЛОВКОВ И ТЕКСТА
 .h-1
   font-weight: 700
@@ -420,13 +491,74 @@ body.menu-open
     font-size: 30px
 
 .h-3
-  margin-bottom: 16px
-  font-weight: 500
-  line-height: 110%
-  font-size: 32px
-  +ph
-    font-size: 28px
+  font-weight: 600
+  font-size: 18px
 
+.text-link
+  display: flex
+  align-items: center
+  gap: 8px
+  max-width: max-content
+  border-bottom: 1px solid $clr_0
+  transition: color .2s linear, border-color .2s linear, transform .2s linear
+  &:hover
+    +hover
+      color: $clr_4
+
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    border-color: $clr_4
+
+  &:active
+    transform: scale(.94)
+
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_4
+
+.text-list
+  display: flex
+  flex-direction: column
+  gap: 8px
+
+.text-info
+  display: flex
+  align-items: center
+  gap: 8px
+  max-width: max-content
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $clr_4
+
+  &__title
+    font-weight: 600
+
+  &__more-title
+    font-weight: 600
+
+  &__more-link
+    font-weight: 600
+    font-size: 14px
+    color: $clr_4
+    border-bottom: 1px solid $clr_4
+    transition: border-color .2s linear, transform .2s linear
+    &:hover
+      +hover
+        border-color: $clr_0
+
+    &:active
+      transform: scale(.93)
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  &_list
+    align-items: flex-start
+  
 .text-hidden
   position: absolute
   clip: rect(0,0,0,0)
@@ -445,28 +577,39 @@ body.menu-open
   align-items: center
   margin-bottom: 80px
   font-size: 14px
+  gap: 4px 36px
   +sm
     flex-wrap: wrap
   +ph
     margin-bottom: 40px
+    font-size: 12px
+    gap: 2px 20px
 
   &__item
     position: relative
-    &:not(:first-child)
-      padding-left: 18px
+    // &:not(:first-child)
+    //   padding-left: 18px
+    //   +ph
+    //     padding-left: 10px
 
     &:not(:last-child)
-      padding-right: 18px
+      // padding-right: 18px
+      // +ph
+      //   padding-right: 10px
       &::after
         content: ''
         position: absolute
         top: 0
-        right: -10px
+        // right: -10px
+        // right: -10px
+        right: -26px
         width: 20px
         height: 20px
         background-image: url('../img/svgicons/arrow.svg')
         transform: rotate(-90deg)
         opacity: .5
+        +ph
+          right: -20px
 
   &__item-link
     display: flex
@@ -567,7 +710,7 @@ body.menu-open
   display: flex
   align-items: center
   gap: 8px
-  margin-bottom: 4px
+  margin-bottom: 12px
 
   &__img
     display: flex
@@ -579,27 +722,177 @@ body.menu-open
 
   &__title
     font-weight: 700
+    line-height: 120%
     font-size: 18px
     color: $clr_4
 
   &_inner
+    margin-bottom: 24px
     .card-heading__img
       width: 72px
       height: 72px
+      +ph
+        width: 42px
+        height: 42px
 
     .card-heading__title
       font-size: 32px
+      +sm
+        font-size: 30px
+      +ph
+        font-size: 24px
 
 // СТИЛИ ДЛЯ ФОРМ
+.search-services
+  .container
+    z-index: 2
+
+.search
+  position: relative
+  display: flex
+  flex-direction: column
+
+
 .search-form
   display: flex
+  justify-content: space-between
   gap: 8px
   max-width: 100%
   width: 100%
   +ph
-    margin-bottom: 40px
+    margin-bottom: 10px
 
   &__input-wrap
+    width: 100%
+
+  &__btn
+    min-height: 50px
+
+.search-result
+  position: absolute
+  top: 70px
+  z-index: 100
+  left: 0
+  display: flex
+  flex-direction: column
+  list-style: square
+  gap: 12px
+  padding: 10px 10px 10px 32px
+  width: 100%
+  height: max-content
+  background-color: $clr_2
+
+  &__item
+    &::marker
+      color: $clr_4
+
+  &__item-link
+    transition: color .2s linear
+
+    &:hover
+      +hover
+        color: $clr_4
+
+.select
+  position: relative
+  // border-radius: 8px
+  font-size: 16px
+  background-color: $clr_2
+
+  &:hover
+    border-color: $clr_4
+  
+  &__btn
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 2px 10px 12px
+    width: 100%
+    height: 40px
+    color: $clr_3
+    border: 1px solid $clr_4
+    background-color: $clr_2
+    cursor: pointer
+    transition: border-color .2s linear
+
+    +ph
+      width: 100%
+      font-size: 14px
+
+    &:hover
+      +hover
+        border-color: $clr_3
+
+    &:focus:not(:active)
+      border-color: $clr_3
+
+    &.active
+      .select__btn-icon
+        transform: rotateX(180deg)
+
+      + .select__list
+          border-color: $clr_4
+
+  &__btn-icon
+    width: 24px
+    height: 24px
+    fill: $clr_3
+    transition: transform .2s linear
+
+  &__list
+    position: absolute
+    margin-top: 4px
+    z-index: 2
+    width: 100%
+    height: max-content
+    border: 1px solid $clr_0
+    background-color: $clr_2
+    transition: border-color .2s linear
+    
+    &.overflow-hidden
+      max-height: 0
+      overflow: hidden
+      transition: max-height .3s linear, border-color .2s linear
+
+  &__list-item
+    padding-left: 10px
+    padding-right: 10px
+    font-size: 14px
+    cursor: pointer
+    transition: color .2s linear
+
+    &:hover
+      +hover
+        color: $clr_4
+
+    &:first-child
+      padding-top: 5px
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+    &:last-child
+      padding-bottom: 10px
+
+.form-field-wrap
+  display: flex
+  justify-content: space-between
+  gap: 12px
+  max-width: 100%
+  width: 100%
+  +ph
+    flex-direction: column
+    gap: 10px
+
+  .form-field-inv
+    max-width: 50%
+    width: 100%
+    +ph
+      max-width: 100%
+
+  .form-field-inv__input
+    max-width: 100%
     width: 100%
 
 .form-field
@@ -623,6 +916,8 @@ body.menu-open
     border: 1px solid $clr_2
     background-color: $clr_2
     transition: border-color .2s linear
+    +ph
+      height: 50px
 
     &:hover
       +hover
@@ -640,6 +935,127 @@ body.menu-open
 
     &::placeholder
       transition: opacity .2s linear
+
+  &_inv
+    .form-field__input
+      height: 40px
+      border: 1px solid $clr_4
+
+.form-field-inv
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+  &__text
+    font-weight: 500
+    font-size: 18px
+    +ph
+      font-size: 16px
+    
+  &__input
+    padding: 18px
+    width: 100%
+    height: 48px
+    border: 1px solid $clr_4
+    background-color: $clr_2
+    transition: border-color .2s linear, opacity .2s linear
+
+    &:hover
+      +hover
+        opacity: 0.4
+
+    &:focus-visible:not(:active),
+    &:focus:not(:active)
+      border-color: $clr_4
+
+      &::placeholder
+        opacity: 0
+
+    &::placeholder
+      transition: opacity .2s linear
+
+  &__textarea
+    padding: 16px
+    width: 100%
+    height: 48px
+    resize: none
+    height: 137px
+    border: 1px solid $clr_4
+    background-color: $clr_2
+    transition: border-color .2s linear, opacity .2s linear
+    &::-webkit-scrollbar
+      width: 6px
+      background-color: $clr_1
+
+    &::-webkit-scrollbar-thumb
+      background-color: $clr_4
+
+    &:hover
+      +hover
+        opacity: 0.4
+
+    &:focus-visible:not(:active),
+    &:focus:not(:active)
+      border-color: $clr_4
+
+      &::placeholder
+        opacity: 0
+
+    &::placeholder
+      transition: opacity .2s linear
+
+.form-rating
+  display: flex
+  align-items: center
+  gap: 10px
+  margin-bottom: 10px
+  +ph
+    margin-bottom: 5px
+
+  &__img-wrap
+    display: flex
+    flex-shrink: 0
+    width: 60px
+    height: 60px
+    border: 1px solid rgba($clr_3, .2)
+    border-radius: 100%
+    overflow: hidden
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &__list-wrap
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+  &__title
+    font-weight: 700
+    font-size: 20px
+    +ph
+      font-size: 18px
+
+  &__list
+    direction: rtl
+    display: inline-flex
+    justify-content: flex-end
+
+  &__list-item
+    font-size: 26px
+    cursor: pointer
+    color: $clr_5
+    opacity: .2
+    transition: opacity .2s linear
+
+    &:hover,
+    &:hover ~ .form-rating__list-item
+      +hover
+        opacity: 1
+
+  .selected
+    opacity: 1
 
 .custom-checkbox
   user-select: none
@@ -722,6 +1138,9 @@ body.menu-open
       border-radius: 100%
       border: 1px solid $clr_4
       transform: translateY(-50%)
+      +ph
+        top: 4px
+        transform: none
 
     &::after
       content: ''
@@ -735,16 +1154,19 @@ body.menu-open
       opacity: 0
       transform: translateY(-50%)
       transition: opacity .2s linear
+      +ph
+        top: 7px
+        transform: none
 
 
 // СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ
 .text-default
   h1
     margin-bottom: 20px
-    font-style: italic
-    font-weight: 500
-    line-height: 110%
+    font-weight: 700
+    line-height: 120%
     font-size: 84px
+    // color: $clr_4
     +md
       font-size: 60px
     +sm
@@ -753,31 +1175,31 @@ body.menu-open
       font-size: 40px
 
   h2
-    margin-bottom: 15px
+    margin-bottom: 16px
     font-weight: 700
     line-height: 120%
     font-size: 32px
+    // color: $clr_4
     +ph
       font-size: 30px
 
   h3
     margin-bottom: 16px
-    margin-bottom: 16px
-    font-weight: 500
-    line-height: 110%
-    font-size: 32px
+    font-weight: 600
+    line-height: 120%
+    font-size: 24px
+    // color: $clr_4
     +ph
-      font-size: 28px
+      font-size: 20px
 
   p
-
     &:not(:last-child)
       margin-bottom: 15px
 
   a
     font-weight: 600
-    color: $clr_3
-    border-bottom: 2px solid $clr_3
+    color: $clr_4
+    border-bottom: 1px solid $clr_4
     transition: border-color .2s linear
 
     &:hover
@@ -798,6 +1220,8 @@ body.menu-open
       padding-left: 20px
 
     li
+      &::marker
+        color: $clr_4
       &:not(:last-child)
         margin-bottom: 10px
 
@@ -811,15 +1235,16 @@ body.menu-open
     li
       &::marker
         font-weight: 500
+        color: $clr_4
       &:not(:last-child)
         margin-bottom: 10px
 
   blockquote
     margin: 0
     margin-bottom: 20px
-    padding: 20px 10px 20px 20px
-    border-radius: 8px
-    background-color: $clr_4
+    padding: 16px 24px
+    border-left: 2px solid $clr_4
+    background-color: rgba($clr_4, .1)
 
     ul
       margin-bottom: 0
@@ -832,7 +1257,6 @@ body.menu-open
     max-width: 100%
     width: 100%
     border-collapse: collapse
-    border-radius: 8px
     overflow: hidden
     table-layout: fixed
     +ph
@@ -846,14 +1270,14 @@ body.menu-open
       @include textReset
 
     tr
-      background-color: $clr_1
-      color: $clr_2
+      background-color: $clr_2
+      color: $clr_3
       
       &:nth-child(1)
         font-weight: 600
         font-size: 18px
         color: $clr_3
-        background-color: $clr_1
+        background-color: $clr_2
         text-align: center
         +ph
           font-size: 16px
@@ -863,7 +1287,7 @@ body.menu-open
 
       &:nth-child(2n)
         color: $clr_1
-        background-color: rgba($clr_3, .8)
+        background-color: $clr_4
 
     th, td
       padding: 14px
@@ -958,7 +1382,7 @@ body.menu-open
     box-sizing: border-box
     width: 40px
     height: 40px
-    border: 4px solid $clr_2
+    border: 4px solid $clr_3
     border-radius: 50%
     border-left-color: transparent
     border-bottom-color: transparent

@@ -1,0 +1,67 @@
+.contacts
+	&__wrap-content
+		background-color: var(--block-color)
+		padding: 40px
+		+sm
+			padding: 20px
+		+ph
+			padding: 15px 10px
+
+		&:not(:last-child)
+			margin-bottom: 64px
+			+ph
+				margin-bottom: 40px
+			
+	&__title
+		margin-bottom: 12px
+
+	&__subtitle
+		margin-bottom: 64px
+		font-weight: 600
+		font-size: 18px
+		line-height: 100%
+		+sm
+			margin-bottom: 40px
+
+	&__feedback-list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 20px
+		+xs
+			grid-template-columns: 1fr
+			gap: 12px
+
+	.link-text
+		font-size: 24px
+		color: var(--text-color)
+		+sm
+			font-size: 20px
+		+ph
+			font-size: 18px
+		+hover
+			color: var(--active-color)
+
+	&__requisites-list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 18px
+		+ph
+			grid-template-columns: 1fr
+
+.requisites-list-item
+	display: flex
+	flex-direction: column
+	gap: 20px
+	font-size: 18px
+
+	&__wrap
+		display: flex
+		flex-direction: column
+
+	&__title
+		margin-bottom: 10px
+		font-weight: 600
+		line-height: 100%
+		
+	&__text
+		max-width: 478px

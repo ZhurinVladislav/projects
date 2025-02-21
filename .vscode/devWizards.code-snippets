@@ -1,0 +1,361 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  //   "scope": "javascript,typescript",
+  //   "prefix": "log",
+  //   "body": ["console.log('$1');", "$2"],
+  //   "description": "Log output to console"
+  // },
+
+  /* Media Laptop */
+	// "mediaLaptop": {
+	//   "scope": "css,sass",
+	//   "prefix": "laptop",
+	//   "body": ["@include laptop ", "    ${1}", ""],
+	//   "description": "laptop"
+	// },
+	/* Media */
+	"mediaLarge": {
+    "scope": "css,sass",
+    "prefix": "lr",
+    "body": ["+lr", "  ${1}"],
+    "description": "large"
+  },
+
+	"mediaMedium": {
+    "scope": "css,sass",
+    "prefix": "md",
+    "body": ["+md", "  ${1}"],
+    "description": "medium"
+  },
+	
+	"mediaSmall": {
+    "scope": "css,sass",
+    "prefix": "sm",
+    "body": ["+sm", "  ${1}"],
+    "description": "small"
+  },
+
+	"mediaPhone": {
+    "scope": "css,sass",
+    "prefix": "ph",
+    "body": ["+ph", "  ${1}"],
+    "description": "phone"
+  },
+
+	"mediaXs": {
+    "scope": "css,sass",
+    "prefix": "xs",
+    "body": ["+xs", "  ${1}"],
+    "description": "xs"
+  },
+
+  "mediaHover": {
+    "scope": "css,sass",
+    "prefix": "hover",
+    "body": ["+hover", "  ${1}"],
+    "description": "hover"
+  },
+
+  "focus": {
+    "scope": "css,sass",
+    "prefix": "focus",
+    "body": ["+focus", "  ${1}"],
+    "description": "focus"
+  },
+
+  /* Media Tablet */
+  // "mediaTablet": {
+  //   "scope": "css,sass",
+  //   "prefix": "tablet",
+  //   "body": ["@include tablet ", "    ${1}", ""],
+  //   "description": "tablet"
+  // },
+
+  /* Media Mobile */
+  // "mediaMobile": {
+  //   "scope": "css,sass",
+  //   "prefix": "mobile",
+  //   "body": ["@include mobile", "    ${1}"],
+  //   "description": "mobile"
+  // },
+
+  /* Media Hover */
+  // "mediaHover": {
+  //   "scope": "css,sass",
+  //   "prefix": "hover",
+  //   "body": ["@include hover", "    ${1}"],
+  //   "description": "hover"
+  // },
+
+  /* CSS, SCSS snippets */
+  "bgimg: Background image": {
+    "scope": "css,sass",
+    "prefix": "bgimg",
+    "body": [
+      "background-color: var(--text-color)",
+      "background-image: url('./..${1:/}')",
+      "background-position: center center",
+      "background-size: cover",
+      "background-repeat: no-repeat",
+      "$2"
+    ],
+    "description": "bgimg: Background image"
+  },
+  "bgicon: Background icon": {
+    "scope": "css,sass",
+    "prefix": "bgicon",
+    "body": [
+      "background-image: url('./..${1:/}')",
+      "background-position: 20px 10px /* x y */",
+      "background-size: auto",
+      "background-repeat: no-repeat",
+      "$2"
+    ],
+    "description": "bgicon: Background icon"
+  },
+
+  "abscent: Absolute center position": {
+    "scope": "css,sass",
+    "prefix": "abscent",
+    "body": [
+      "position: absolute",
+      "left: 50%",
+      "top: 50%",
+      "transform: translate(-50%, -50%)",
+      "$1"
+    ],
+    "description": "abscent: Absolute center position"
+  },
+
+  "absov: Absolute Overlay": {
+    "scope": "css,sass",
+    "prefix": "absov",
+    "body": [
+      "position: absolute;",
+      "left: 0;",
+      "top: 0;",
+      "width: 100%;",
+      "height: 100%;",
+      "background-color:rgba(86, 86, 86, 0.5);",
+      "$1"
+    ],
+    "description": "absov: Absolute Overlay"
+  },
+
+  "::absicon Pseudo absolute bg icon": {
+    "scope": "css,sass",
+    "prefix": "::absicon",
+    "body": [
+      "content: \"\";",
+      "",
+      "position: absolute;",
+      "left: 0",
+      "top: 0",
+      "width: 10px",
+      "height: 10px",
+      "",
+      "background-image: url('./..${1:/}')",
+      "background-repeat: no-repeat",
+      "$2"
+    ],
+    "description": "::absicon Pseudo absolute bg icon"
+  },
+
+  "wh: Widht: 100%, Heigh: 100% ": {
+    "scope": "css,sass",
+    "prefix": "wh",
+    "body": ["width: 100%", "height: 100%", "$1"],
+    "description": "wh: Widht: 100%, Heigh: 100% "
+  },
+
+  "trans: Transition": {
+    "scope": "css,sass",
+    "prefix": "trans",
+    "body": ["transition: all .2s linear"],
+    "description": "trans: Transition"
+  },
+
+  "transl: Transform Translate": {
+    "scope": "css,sass",
+    "prefix": "transl",
+    "body": ["transform: translate(-50%, -50%)", "$1"],
+    "description": "transl: Transform Translate"
+  },
+
+  "imp: Import CSS / SCSS": {
+    "scope": "css,sass",
+    "prefix": "imp",
+    "body": ["@import '.${1:/}'", "$2"],
+    "description": "imp: Import CSS / SCSS"
+  },
+
+  "media: CSS, SCSS media": {
+    "scope": "css,sass",
+    "prefix": "media",
+    "body": ["@media only screen and (max-width: ${1:992px})", "    $2"],
+    "description": "media: CSS, SCSS media"
+  },
+
+  "cssvars: Hint for CSS variables": {
+    "scope": "css,sass",
+    "prefix": "cssvars",
+    "body": [
+      ":root",
+      "    --none-color: transparent",
+      "    --page-color: #fff",
+      "    --text-color: #000",
+      "    --accent-color: #1050da",
+      "    --error-color: #E01934",
+      "",
+      "body",
+      "    color: var(--textColor)"
+    ],
+    "description": ": Hint for CSS variables"
+  },
+
+  "btn: CSS Button class": {
+    "scope": "css,sass",
+    "prefix": "btn",
+    "body": [
+      ".button",
+      "    display: flex",
+      "    justify-content: center",
+      "    align-items: center",
+      "    column-gap: 10px",
+      "",
+      "    padding: 10px 15px",
+      "    height: 30px",
+      "",
+      "    border-radius: 12px",
+      "    background: #333333",
+      "",
+      "    font-size: 16px",
+      "    color: #fff",
+      "",
+      "    transition: background-color 0.2s ease-in, color 0.2s ease-in",
+      "",
+      ".button:hover, .button:focus",
+      "    background-color: #404040",
+      "",
+      ".button:active",
+      "    background-color: #222222"
+    ],
+    "description": "btn: CSS Button class"
+  },
+  "HTML section": {
+    "prefix": "sect",
+    "body": [
+			"<!-- ${1:example} -->"
+      "<section class=\"${1:example} section\">",
+      "	<h2 class=\"${1:example}__title-hidden visually-hidden\">${2:title}</h2>",
+      "	<div class=\"${1:example}__container container\">",
+      "		<h2 class=\"${1:example}__title title-2\">${3:title}</h2>",
+      "		<div class=\"${1:example}__${4:content-wrap}\">",
+      "			${5:Content}",
+      "		</div>",
+      "	</div>",
+      "</section>"
+    ],
+    "description": "HTML section"
+  },
+	"HTML button": {
+    "prefix": "btn",
+    "body": [
+      "<button class=\"${1:example}__btn btn\" aria-label=\"${2:text}\">",
+			"	${3:text}",
+      "</button>"
+    ],
+    "description": "HTML button"
+  },
+	"HTML button icon": {
+    "prefix": "btnIcon",
+    "body": [
+      "<button class=\"${1:example}__btn btn\" aria-label=\"${2:text}\">",
+			"	<span class=\"btn__text\">",
+			"		${3:text}",
+			"	</span>",
+			"	<svg class=\"btn__icon\">",
+      "		<use href=\"./app/img/icons/icons.svg#${4:example}\"></use>",
+      "	</svg>"
+      "</button>"
+    ],
+    "description": "HTML button icon"
+  },
+	"HTML link": {
+    "prefix": "link",
+    "body": [
+      "<a class=\"${1:example}__link link\" href=\"${2:#}\" aria-label=\"${3:text}\">",
+			"	${4:text}",
+      "</a>"
+    ],
+    "description": "HTML link"
+  },
+	"HTML link icon": {
+    "prefix": "linkIcon",
+    "body": [
+      "<a class=\"${1:example}__link link\" href=\"${2:#}\" aria-label=\"${3:text}\">",
+			"	<svg class=\"link__icon\">",
+      "		<use href=\"./app/img/icons/icons.svg#${5:example}\"></use>",
+      "	</svg>"
+			"	<span class=\"link__text\">",
+			"		${4:text}",
+			"	</span>",
+      "</a>"
+    ],
+    "description": "HTML link icon"
+  },
+  "CSS BG retina": {
+    "prefix": "mediaBg",
+    "body": [
+      "@include mediaBg()",
+      "	background-image: url('./../img/${1:example}@2x.${2:jpg}')"
+    ],
+    "description": "CSS BG retina"
+  },
+  "CSS img set": {
+    "prefix": "imgSet",
+    "body": [
+      "background-image: image-set(url('./../img/${1:example}') 1x, url('./../img/${1:example}') 2x)"
+    ],
+    "description": "CSS img set"
+  },
+  "SVG icon sprite": {
+    "prefix": "svgIcon",
+    "body": [
+      "<svg class=\"icon icon--${1:example}\">",
+      "		<use href=\"./app/img/icons/icons.svg#${1:example}\"></use>",
+      "</svg>"
+    ],
+    "description": "SVG icon sprite"
+  },
+  "Image srcset": {
+    "prefix": "imgr",
+    "body": [
+      "<img src=\"./../img${1:/}\" srcset=\"./../img${1:/}\" alt=\"${2:Alt}\">"
+    ],
+    "description": "Image srcset"
+  },
+
+  "Image Data HTML": {
+    "prefix": "imgData",
+    "body": [
+      "<img class=\"${1}\" data-src=\"./app/img${2:/}\" alt=\"${3:Alt}\">"
+    ],
+    "description": "Image data HTML"
+  },
+
+  "Image Data Backgraund": {
+    "prefix": "imgDataBg",
+    "body": [
+      "<div class=\"${1}\" data-image=\"./app/img${2:/}\"></div>"
+    ],
+    "description": "Image data backgraund"
+  }
+}
