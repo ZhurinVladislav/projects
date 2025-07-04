@@ -1,0 +1,379 @@
+.button-big
+	position: relative
+	display: block
+	padding: 4px 20px 24px
+	background-color: transparent
+	border: none
+	appearance: none
+	outline: none
+	cursor: pointer
+	transition: all .15s
+
+	.bg
+		position: absolute
+		top: 16px
+		right: 0
+		bottom: 12px
+		left: 0
+		background-color: $color__9
+		border-left: 4px solid $color__8
+		border-right: 4px solid $color__8
+
+		&::before,
+		&::after
+			position: absolute
+			top: -4px
+			width: 8px
+			height: 4px
+			background-color: $color__8
+			content: ''
+
+		&::before
+			left: 0
+
+		&::after
+			right: 0
+
+	.bd-bot
+		position: absolute
+		right: 12px
+		bottom: 0
+		left: 12px
+		height: 12px
+		background-color: $color__7
+		border-top: 4px solid $color__10
+		border-bottom: 4px solid $color__8
+
+		span
+			position: absolute
+			bottom: 0
+			width: 4px
+			height: 12px
+			background-color: $color__7
+			border-top: 4px solid $color__10
+			border-bottom: 4px solid $color__8
+
+			&::before
+				box-sizing: border-box
+				position: absolute
+				bottom: 0
+				width: 4px
+				height: 12px
+				background-color: $color__7
+				border-top: 4px solid $color__10
+				border-bottom: 4px solid $color__8
+				content: ''
+
+			&:first-child
+				left: -4px
+				&::before
+					left: -4px
+			&:last-child
+				right: -4px
+				&::before
+					right: -4px
+
+	.caption
+		position: relative
+		display: block
+		padding: 4px 16px 12px
+		color: $color__2
+		font-size: 16px
+		font-family: $pixeloid
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 20px
+		border-top: 2px solid $color__8
+		transition: all .15s
+
+		&::before,
+		&::after
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 4px
+			border-top: 2px solid $color__8
+			transition: all .15s
+			content: ''
+
+		&::before
+			left: -4px
+
+		&::after
+			right: -4px
+
+	.bd-black
+		position: absolute
+		top: 0
+		right: 20px
+		bottom: 16px
+		left: 20px
+		border-top: 4px solid $color__8
+		border-bottom: 4px solid $color__8
+
+		span
+			position: absolute
+			top: 4px
+			bottom: 4px
+			width: 4px
+			background-color: $color__8
+
+			&::before,
+			&::after
+				position: absolute
+				width: 4px
+				height: 4px
+				background-color: $color__8
+				content: ''
+
+			&::before
+				top: -4px
+
+			&::after
+				bottom: -4px
+
+			&:first-child
+				left: -8px
+				&::before,
+				&::after
+					left: 4px
+
+			&:last-child
+				right: -8px
+				&::before,
+				&::after
+					right: 4px
+
+	.bd-hover
+		box-sizing: border-box
+		position: absolute
+		right: 20px
+		bottom: 20px
+		left: 20px
+		height: 12px
+		border-top-style: solid
+		border-top-width: 4px
+		transition: all .15s
+
+		&::before,
+		&::after
+			box-sizing: border-box
+			position: absolute
+			bottom: 4px
+			width: 4px
+			height: 12px
+			border-top-style: solid
+			border-top-width: 4px
+			transition: all .15s
+			content: ''
+
+		&::before
+			left: -4px
+
+		&::after
+			right: -4px
+
+	&:hover,
+	&:focus,
+	&.active
+		.bd-hover
+			height: 4px
+			&::before,
+			&::after
+				height: 4px
+
+		.caption
+			padding-top: 8px
+			padding-bottom: 8px
+
+	&.blue
+		.bd-hover
+			background-color: $color__17
+			border-top-color: $color__19
+			&::before,
+			&::after
+				background-color: $color__17
+				border-top-color: $color__19
+
+		.caption
+			text-shadow: -2px 2px $color__17
+			background-color: $color__6
+			border-top-color: $color__19
+
+			&::before,
+			&::after
+				background-color: $color__6
+				border-top-color: $color__19
+
+		&:hover,
+		&:focus,
+		&.active
+			.caption
+				background-color: $color__18
+
+				&::before,
+				&::after
+					background-color: $color__18
+
+	&.pink
+		.bd-hover
+			background-color: $color__26
+			border-top-color: $color__25
+			&::before,
+			&::after
+				background-color: $color__26
+				border-top-color: $color__25
+
+		.caption
+			text-shadow: -2px 2px $color__26
+			background-color: $color__4
+			border-top-color: $color__25
+
+			&::before,
+			&::after
+				background-color: $color__4
+				border-top-color: $color__25
+
+		&:hover,
+		&:focus,
+		&.active
+			.caption
+				background-color: $color__27
+
+				&::before,
+				&::after
+					background-color: $color__27
+
+	&.dark
+		.bg
+			background-color: $color__11
+		.bd-bot
+			background-color: $color__13
+			border-top-color: $color__12
+
+			span
+				background-color: $color__13
+				border-top-color: $color__12
+
+				&::before
+					background-color: $color__13
+					border-top-color: $color__12
+
+	+small
+		padding: 2px 8px 10px
+
+		.bg
+			top: 10px
+			bottom: 6px
+			border-right-width: 2px
+			border-left-width: 2px
+
+			&::before,
+			&::after
+				top: -2px
+				width: 2px
+				height: 2px
+
+		.bd-bot
+			right: 6px
+			left: 6px
+			height: 6px
+			border-top-width: 2px
+			border-bottom-width: 2px
+
+			span
+				width: 2px
+				height: 6px
+				border-top-width: 2px
+				border-bottom-width: 2px
+
+				&::before
+					width: 2px
+					height: 6px
+					border-top-width: 2px
+					border-bottom-width: 2px
+
+				&:first-child
+					left: -2px
+					&::before
+						left: -2px
+
+				&:last-child
+					right: -2px
+					&::before
+						right: -2px
+
+		.caption
+			font-size: 12px
+			border-top-width: 2px
+			
+			&::before,
+			&::after
+				width: 2px
+				border-top-width: 2px
+
+			&::before
+				left: -2px
+
+			&::after
+				right: -2px
+
+		.bd-black
+			right: 8px
+			bottom: 8px
+			left: 8px
+			border-top-width: 2px
+			border-bottom-width: 2px
+
+			span
+				top: 2px
+				bottom: 2px
+				width: 2px
+
+				&::before,
+				&::after
+					width: 2px
+					height: 2px
+
+				&::before
+					top: -2px
+
+				&::after
+					bottom: -2px
+
+				&:first-child
+					left: -4px
+
+					&::before,
+					&::after
+						left: 2px
+
+				&:last-child
+					right: -4px
+
+					&::before,
+					&::after
+						right: 2px
+		.bd-hover
+			right: 8px
+			bottom: 10px
+			left: 8px
+			height: 6px
+			border-top-width: 2px
+
+			&::before,
+			&::after
+				bottom: 2px
+				width: 2px
+				height: 6px
+				border-top-width: 2px
+
+			&::before
+				left: -2px
+
+			&::after
+				right: -2px
+
+a.button-big
+	text-decoration: none
+	cursor: pointer

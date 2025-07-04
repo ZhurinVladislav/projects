@@ -50,19 +50,39 @@ class Company
      * @param int $id id категории
      * @return array|null массив компаний с алиасами
      */
-    public function getListByCategoryId(int $id): ?array
+    // public function getListByCategoryId(int $id): ?array
+    // {
+    //     $sql = "SELECT c.*, pr.alias 
+    //     FROM companies c
+    //     JOIN page_routes pr ON c.page_id = pr.id
+    //     WHERE c.category_id = :category_id
+    // ";
+
+    //     $stmt = $this->pdo->prepare($sql);
+    //     $stmt->execute(['category_id' => $id]);
+
+    //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // }
+    /**
+     * Метод получения компаний по id категории с алиасами
+     *
+     * @param int $categoryId id категории
+     * @return array|null массив компаний с алиасами
+     */
+    public function getListByCategoryId(int $categoryId): ?array
     {
         $sql = "SELECT c.*, pr.alias 
-        FROM companies c
-        JOIN page_routes pr ON c.page_id = pr.id
-        WHERE c.category_id = :category_id
-    ";
+            FROM companies c
+            JOIN company_categories cc ON c.id = cc.company_id
+            JOIN page_routes pr ON c.page_id = pr.id
+            WHERE cc.category_id = :category_id";
 
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute(['category_id' => $id]);
+        $stmt->execute(['category_id' => $categoryId]);
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     /** 
      * Метод получения телефонов по id компании
@@ -115,7 +135,7 @@ class Company
     }
 
     /** 
-     * Метод получениЯ компании по id страницы
+     * Метод получения компании по id страницы
      * 
      * @param int id страницы
      * @return array|null компания
@@ -161,15 +181,30 @@ class Company
      * @param int $id id компании
      * @return array|null массив услуг
      */
-    public function getServices(int $id): ?array
+    // public function getServices(int $id): ?array
+    // {
+    //     $sql = 'SELECT * FROM company_services WHERE id_company = :id';
+
+    //     $stmt = $this->pdo->prepare($sql);
+    //     $stmt->execute(['id' => $id]);
+
+    //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // }
+    public function getServices(int $id): array
     {
-        $sql = 'SELECT * FROM company_services WHERE id_company = :id';
+        $sql = 'SELECT s.* 
+            FROM services s
+            JOIN company_categories cc ON s.category_id = cc.category_id
+            LEFT JOIN company_service_exclusions cse 
+                ON s.id = cse.service_id AND cse.company_id = cc.company_id
+            WHERE cc.company_id = :id AND cse.service_id IS NULL';
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute(['id' => $id]);
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     /**
      * Метод получения портфолио компании по id

@@ -1,0 +1,108 @@
+.news
+	&__list
+		grid-template-columns: repeat(4, 1fr)
+		grid-auto-columns: minmax(318px, max-content)
+		gap: 30px 20px
+		margin-bottom: 30px
+		+sm
+			grid-template-columns: repeat(3, 1fr)
+		+ph
+			grid-template-columns: repeat(2, 1fr)
+			gap: 20px
+		+iph
+			grid-template-columns: 1fr
+
+	&__tabs-list
+		margin-bottom: 30px
+
+	&__link-wrap
+		display: flex
+		align-items: center
+		gap: 12px
+		max-width: 100%
+		width: 100%
+
+		&::after,
+		&::before
+			content: ''
+			width: 100%
+			height: 1px
+			background-color: var(--bg-color)
+
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		padding: 4px
+		border: 1px solid var(--bg-color)
+		border-radius: 20px
+		font-size: 10px
+		text-transform: uppercase
+		color: var(--text-second-color)
+		max-width: 145px
+		width: 100%
+		min-height: 30px
+		transition: color .2s linear, border-color .2s linear
+		+hover
+			border-color: var(--accent-color)
+			color: var(--accent-color)
+		+focus
+			border-color: var(--accent-color)
+			color: var(--accent-color)
+		&:active
+			border-color: var(--active-color)
+			color: var(--active-color)
+
+.news-link
+	display: flex
+	flex-direction: column
+	border-radius: 15px
+	background-color: var(--white-color)
+	box-shadow: 0 10px 25px 0 rgba(43, 63, 90, 0.07)
+	overflow: hidden
+	transition: box-shadow .2s linear
+	+hover
+		box-shadow: none
+	+focus
+		box-shadow: none
+
+	&__img-wrap
+		display: flex
+		max-width: 100%
+		width: 100%
+		max-height: 154px
+		height: 100%
+		overflow: hidden
+	
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		gap: 12px
+		padding: 17px 14px 14px 14px
+
+	&__title
+		font-size: 15px
+		line-height: 113%
+		letter-spacing: -0.02em
+	
+	&__text
+		display: -webkit-box
+		-webkit-line-clamp: 3
+		-webkit-box-orient: vertical
+		font-weight: 500
+		font-size: 14px
+		line-height: 140%
+		letter-spacing: -0.02em
+		color: var(--text-second-color)
+		text-overflow: ellipsis
+		overflow: hidden
+
+	&__date
+		font-size: 12px
+		color: var(--text-second-color)

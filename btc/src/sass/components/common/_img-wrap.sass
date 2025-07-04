@@ -1,0 +1,112 @@
+.img-wrap
+	position: relative
+	display: block
+	padding: 8px 8px 16px
+
+	&__bd
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			background-color: $color__9
+
+		&::before
+			top: 0
+			right: 12px
+			bottom: 0
+			left: 12px
+			border-top: 4px solid $color__8
+			border-bottom: 4px solid $color__8
+
+		&::after
+			top: 12px
+			right: 0
+			bottom: 12px
+			left: 0
+			border-right: 4px solid $color__8
+			border-left: 4px solid $color__8
+
+	&__bd-bottom
+		position: absolute
+		bottom: 4px
+		right: 12px
+		left: 12px
+		border-bottom: 4px solid $color__7
+		height: 8px
+		background-color: $color__10
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			border-top: 4px solid $color__9
+			border-bottom: 4px solid $color__7
+			width: 4px
+			height: 4px
+			background-color: $color__10
+
+		&::before
+			left: -4px
+
+		&::after
+			right: -4px
+
+	&__bd-bottom-add
+		position: absolute
+		bottom: 4px
+		right: 8px
+		left: 8px
+		border-right: 4px solid $color__8
+		border-left: 4px solid $color__8
+		height: 4px
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			bottom: 4px
+			border-top: 4px solid $color__10
+			border-bottom: 4px solid $color__8
+			width: 4px
+			height: 4px
+			background-color: $color__9
+
+		&::before
+			left: -8px
+
+		&::after
+			right: -8px
+
+	&__img
+		position: relative
+		display: flex
+		width: 100%
+		height: 101%
+		object-fit: cover
+
+	&__bd-top-left,
+	&__bd-top-right
+		position: absolute
+		top: 4px
+		border-top: 4px solid $color__8
+		width: 4px
+		height: 8px
+		background-color: $color__9
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			width: 4px
+			height: 4px
+			background-color: $color__8
+
+	&__bd-top-left
+		left: 8px
+		&::before
+			left: -4px
+
+	&__bd-top-right
+		right: 8px
+		&::before
+			right: -4px

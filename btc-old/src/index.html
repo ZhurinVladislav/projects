@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <title>BTC</title>
+    <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./app/css/style.min.css" />
+    <!-- <link rel="preconnect" href="/" /> -->
+    <!-- <link rel="dns-prefetch" href="/" /> -->
+    <!-- scripts -->
+    <script src="./app/js/libs/preloader.min.js"></script>
+    <script src="./app/js/libs/lazy-load.min.js"></script>
+    <script src="./app/js/libs/popup.min.js" defer></script>
+    <script src="./app/js/libs/swiper.min.js" defer></script>
+    <script src="./app/js/index.min.js" defer></script>
+  </head>
+
+  <body data-image="./app/img/base/pattern.svg">
+    <!-- preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader__wrapper">
+        <div class="preloader__item-wrapper">
+          <div class="preloader__item"></div>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__content-wrap">
+          <a
+            class="header__logo logo"
+            href="/"
+            aria-label="Перейти на стартовую страницу">
+            <img class="logo__img" src="./app/img/logo.svg" alt="Логотип BTC" />
+          </a>
+          <div class="header__btns-wrap">
+            <a
+              class="header__link header__link_reg link link_green"
+              href="#"
+              aria-label="Перейти к регистрации">
+              <span class="link__text"> Регистрация </span>
+            </a>
+            <a
+              class="header__link header__link_login link link_pink"
+              href="#"
+              aria-label="Войти на платформу BTC">
+              <span class="link__text">Вход</span>
+            </a>
+            <button
+              id="menu-btn-open"
+              class="header__menu-toggle header__btn_menu btn btn_blue menu-toggle"
+              aria-label="Открыть мобильное меню">
+              <span class="menu-toggle__item"></span>
+              <span class="menu-toggle__item"></span>
+              <span class="menu-toggle__item"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- menu-mobile -->
+      <div id="menu-mobile" class="header__menu-mobile menu-mobile">
+        <div class="menu-mobile__bg js-menu-overlay"></div>
+        <div class="menu-mobile__content-wrap">
+          <button
+            id="menu-btn-close"
+            class="menu-mobile__btn btn btn_blue menu-toggle menu-toggle_close"
+            aria-label="Закрыть мобильное меню">
+            <span class="menu-toggle__item"></span>
+            <span class="menu-toggle__item"></span>
+            <span class="menu-toggle__item"></span>
+          </button>
+          <nav class="menu-mobile__menu">
+            <ul class="menu-mobile__menu-list menu-list">
+              <li class="menu-list__item active">
+                <a
+                  class="menu-list__link link-text active"
+                  href="/"
+                  aria-label="Перейти на главную страницу">
+                  Главная
+                </a>
+              </li>
+              <li class="menu-list__item">
+                <a
+                  class="menu-list__link link-text"
+                  href="./page.html"
+                  aria-label="Перейти на страницу горящие туры">
+                  Горящие туры
+                </a>
+              </li>
+              <li class="menu-list__item">
+                <a
+                  class="menu-list__link link-text"
+                  href="./page.html"
+                  aria-label="Перейти на страницу групповые туры минимальные цены">
+                  Минимальные цены
+                </a>
+              </li>
+              <li class="menu-list__item parent">
+                <a
+                  class="menu-list__link link-text"
+                  href="./reports.html"
+                  aria-label="Перейти на страницу групповые туры"
+                  tabindex="0"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                  Групповые туры
+                </a>
+                <button class="menu-list__btn js-mobile-list-btn">
+                  <svg class="menu-list__btn-icon">
+                    <use xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                  </svg>
+                </button>
+                <ul
+                  class="menu-list__dropdown dropdown-mob js-mobile-list"
+                  role="menu">
+                  <li class="dropdown-mob__item active">
+                    <a
+                      class="dropdown-mob__link link-text"
+                      href="#"
+                      tabindex="0">
+                      Текст
+                    </a>
+                  </li>
+                  <li class="dropdown-mob__item active">
+                    <a
+                      class="dropdown-mob__link link-text"
+                      href="#"
+                      tabindex="0">
+                      Текст по&#160;больше
+                    </a>
+                  </li>
+                  <li class="dropdown-mob__item">
+                    <a
+                      class="dropdown-mob__link link-text"
+                      href="#"
+                      tabindex="0">
+                      Длинные текст для проверки переноса строки
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-list__item">
+                <a
+                  class="menu-list__link link-text"
+                  href="./contacts.html"
+                  aria-label="Перейти на страницу страны и отели">
+                  Страны и&#160;отели
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- home-hero -->
+      <section
+        class="home-hero section"
+        data-image="./app/img/home/hero/bg-img.jpg">
+        <div class="home-hero__container container">
+          <div class="home-hero__content-wrap">
+            <h1 class="home-hero__title-hidden visually-hidden">
+              Уникальная онлайн-игра в стиле PixelArt с возможностью заработка!
+            </h1>
+            <h2 class="home-hero__title title-1">
+              Первая онлайн игра которая платит биткоины за лень
+            </h2>
+            <a
+              class="home-hero__link link-panel link-panel_green"
+              href="#"
+              aria-label="Перейти к игре">
+              <div class="link-panel-wrap__link link-panel__content">
+                <span class="link-panel__text"> Играть! </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- home-info -->
+      <section class="home-info section">
+        <h2 class="home-info__title-hidden visually-hidden">
+          Информация о игре
+        </h2>
+        <div class="home-info__container container">
+          <div class="home-info__content-wrap">
+            <div class="home-info__img-wrap img-wrap">
+              <img
+                class="home-info__img img-wrap__img"
+                data-src="./app/img/home/info/img-1.svg"
+                alt="Ленивец" />
+            </div>
+            <div class="home-info__content">
+              <h2 class="home-info__title title-2">Что это за игра?</h2>
+              <div class="home-info__text-wrap content">
+                <p class="content__p">
+                  Уникальная онлайн-игра в стиле PixelArt с возможностью
+                  заработка!
+                </p>
+                <p class="content__p">
+                  Ваша задача — заботиться о ленивце, улучшать его комнату и
+                  увеличивать доход. Чем ленивее Ваш ленивец - тем выше прибыль.
+                </p>
+                <p class="content__p">
+                  Без вложений, без сложностей — только увлекательный процесс и
+                  <a class="content__a" href="#"> реальные возможности. </a>
+                </p>
+              </div>
+              <a
+                class="home-hero__link link-panel link-panel_blue"
+                href="#"
+                aria-label="Перейти к игре">
+                <div class="link-panel-wrap__link link-panel__content">
+                  <span class="link-panel__text"> Начать сейчас </span>
+                </div>
+              </a>
+              <div
+                class="home-info__content-bg-img"
+                data-image="./app/img/home/info/bg-img.svg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- home-statistics -->
+      <section class="home-statistics section">
+        <h2 class="home-statistics__title-hidden visually-hidden">
+          Статистика сайта
+        </h2>
+        <div class="home-statistics__container container">
+          <div class="home-statistics__content-wrap">
+            <h2 class="home-statistics__title title-2">
+              Игровой проект в цифрах
+            </h2>
+            <p class="home-statistics__subtitle">
+              Текущие показатели, обновляемые в реальном времени
+            </p>
+            <ul class="home-statistics__list">
+              <li class="home-statistics__list-item home-statistics-item">
+                <div class="home-statistics-item__img-wrap">
+                  <img
+                    class="home-statistics-item__img"
+                    data-src="./app/img/home/statistics/img-1.svg"
+                    alt="Геймпад" />
+                </div>
+                <h3 class="home-statistics-item__title">Игроки</h3>
+                <p class="home-statistics-item__text">120 334</p>
+              </li>
+              <li class="home-statistics__list-item home-statistics-item">
+                <div class="home-statistics-item__img-wrap">
+                  <img
+                    class="home-statistics-item__img"
+                    data-src="./app/img/home/statistics/img-2.svg"
+                    alt="Ленивец" />
+                </div>
+                <h3 class="home-statistics-item__title">Новых за сутки</h3>
+                <p class="home-statistics-item__text">+1230</p>
+              </li>
+              <li class="home-statistics__list-item home-statistics-item">
+                <div class="home-statistics-item__img-wrap">
+                  <img
+                    class="home-statistics-item__img"
+                    data-src="./app/img/home/statistics/img-3.svg"
+                    alt="Ленивец за ноутбуком" />
+                </div>
+                <h3 class="home-statistics-item__title">Сейчас онлайн</h3>
+                <p class="home-statistics-item__text">350_</p>
+              </li>
+              <li class="home-statistics__list-item home-statistics-item">
+                <div class="home-statistics-item__img-wrap">
+                  <img
+                    class="home-statistics-item__img"
+                    data-src="./app/img/home/statistics/img-4.svg"
+                    alt="Валюта" />
+                </div>
+                <h3 class="home-statistics-item__title">Всего заработано</h3>
+                <p class="home-statistics-item__text">876.445 BEDTC</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- home-interest -->
+      <section class="home-interest section">
+        <div class="home-interest__container container">
+          <div class="home-interest__content-wrap info-block">
+            <div class="info-block__wrap">
+              <div class="info-block__content">
+                <h2 class="info-block__title title-2">Почему это интересно?</h2>
+                <div class="info-block__text-wrap content">
+                  <p class="content__p">
+                    Погрузитесь в ленивый мир pixel-art, вдохновлённый
+                    легендарными ретро-играми!
+                  </p>
+                  <p class="content__p">
+                    Зарабатывайте мемкоины во время игры и выводите их после
+                    листинга.
+                  </p>
+                  <p class="content__p">
+                    Ранние участники получают
+                    <a class="content__a" href="#"> эксклюзивные бонусы</a>, а
+                    начать можно бесплатно —
+                    <a class="content__a" href="#"> регистрация</a>
+                    займёт всего лишь минуту, и никаких вложений!
+                  </p>
+                </div>
+              </div>
+              <div class="info-block__img-wrap img-wrap">
+                <img
+                  class="info-block__img img-wrap__img"
+                  data-src="./app/img/home/interest/img-1.svg"
+                  alt="Ленивец" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- home-bring-friends -->
+      <section class="home-bring-friends section">
+        <div class="home-bring-friends__container container">
+          <div class="home-bring-friends__content-wrap bring-friends-block">
+            <div
+              class="bring-friends-block__icon bring-friends-block__icon_left"
+              data-image="./app/img/base/diamond.svg"></div>
+            <div
+              class="bring-friends-block__icon bring-friends-block__icon_right"
+              data-image="./app/img/base/diamond.svg"></div>
+            <div
+              class="bring-friends-block__icon bring-friends-block__icon_bottom"
+              data-image="./app/img/base/diamond.svg"></div>
+            <div class="bring-friends-block__content-wrap">
+              <h2 class="bring-friends-block__title title-2">
+                Приводи друзей — умножай доход!
+              </h2>
+              <div class="bring-friends-block__content content">
+                <p class="content__p">
+                  Стань лидером реферальной гонки: приглашай друзей, следи за
+                  своим прогрессом в реальном времени и получай
+                  <a class="content__a" href="#"> дополнительные бонусы </a>
+                  — за их активность и свой статус в топе.
+                </p>
+              </div>
+              <a
+                class="bring-friends-block__link link-panel link-panel_blue"
+                href="#"
+                aria-label="Перейти на страницу подробнее">
+                <div class="link-panel-wrap__link link-panel__content">
+                  <span class="link-panel__text"> Подробнее </span>
+                </div>
+              </a>
+            </div>
+            <div
+              class="bring-friends-block__bg"
+              data-image="./app/img/home/bring-friends/bg-img.svg"></div>
+            <div
+              class="bring-friends-block__img"
+              data-image="./app/img/home/bring-friends/img-1.svg"></div>
+          </div>
+        </div>
+      </section>
+      <!-- home-development -->
+      <section class="home-development section">
+        <div class="home-development__container container">
+          <div class="home-development__content-wrap info-block">
+            <div class="info-block__wrap">
+              <div class="info-block__content">
+                <h2 class="info-block__title title-2">
+                  Проект развивается — будь в центре событий!
+                </h2>
+                <div class="info-block__text-wrap content">
+                  <p class="content__p">
+                    Мы работаем над созданием мобильного приложения и
+                    интеграцией в Telegram, чтобы ваша игра стала ещё удобнее.
+                    Следите за обновлениями, чтобы узнать обо всех новинках.
+                  </p>
+                </div>
+                <a
+                  class="info-block__link link-text"
+                  href="#"
+                  aria-label="Переход на новости проекта">
+                  <span class="link-text__decr">
+                    Смотреть новости проекта >
+                  </span>
+                </a>
+              </div>
+              <div class="info-block__img-wrap">
+                <img
+                  class="info-block__img"
+                  alt="Команда ленивцев"
+                  src="./app/img/home/development/img-1.svg"
+                  loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- home-support -->
+      <section class="home-support section">
+        <div class="home-support__container container">
+          <div class="home-support__content-wrap info-block">
+            <div class="info-block__wrap">
+              <div class="info-block__img-wrap">
+                <img
+                  class="info-block__img"
+                  alt="Команда ленивцев"
+                  src="./app/img/home/support/img-1.svg"
+                  loading="lazy" />
+              </div>
+              <div class="info-block__content">
+                <h2 class="info-block__title title-2">
+                  Стань частью<br />чего-то большего!
+                </h2>
+                <div class="info-block__text-wrap content">
+                  <p class="content__p">
+                    Присоединяйтесь к краудфандингу и получите
+                    <a href="">особые бонусы</a>. Помогите проекту развиваться,
+                    а взамен получите уникальные привилегии и шанс заработать
+                    больше мемкоинов на старте.
+                  </p>
+                </div>
+                <a
+                  class="info-block__link link-panel link-panel_green"
+                  href="#"
+                  aria-label="Поддержать">
+                  <div class="link-panel-wrap__link link-panel__content">
+                    <span class="link-panel__text">Поддержать</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- home-start-game -->
+      <section class="home-start-game section">
+        <div class="home-start-game__container container">
+          <div class="home-start-game__content-wrap">
+            <h2 class="home-start-game__title title-2">Как начать?</h2>
+            <p class="home-start-game__subtitle">
+              Три шага к вашему ленивому миру:
+            </p>
+            <ul class="home-start-game__list">
+              <li class="home-start-game__list-item home-start-game-item">
+                <div class="home-start-game-item__img-wrap">
+                  <img
+                    class="home-start-game-item__img"
+                    src="./app/img/home/start-game/img-1.svg"
+                    alt="Ленивец создаёт аккаунт" />
+                </div>
+                <div class="home-start-game-item__content">
+                  <p class="home-start-game-item__descr">
+                    Создайте аккаунт — это займёт 30 секунд
+                  </p>
+                </div>
+              </li>
+              <li class="home-start-game__list-item home-start-game-item">
+                <div class="home-start-game-item__img-wrap">
+                  <img
+                    class="home-start-game-item__img"
+                    src="./app/img/home/start-game/img-2.svg"
+                    alt="Ленивец отдыхает" />
+                </div>
+                <div class="home-start-game-item__content">
+                  <p class="home-start-game-item__descr">
+                    Создайте аккаунт — это займёт 30 секунд
+                  </p>
+                </div>
+              </li>
+              <li class="home-start-game__list-item home-start-game-item">
+                <div class="home-start-game-item__img-wrap">
+                  <img
+                    class="home-start-game-item__img"
+                    src="./app/img/home/start-game/img-3.svg"
+                    alt="Level up" />
+                </div>
+                <div class="home-start-game-item__content">
+                  <p class="home-start-game-item__descr">
+                    Создайте аккаунт — это займёт 30 секунд
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <a
+              class="home-start-game__link link-panel link-panel_green"
+              href="#"
+              aria-label="Начать играть">
+              <div class="link-panel-wrap__link link-panel__content">
+                <span class="link-panel__text"> Играть </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__content-wrap-main">
+          <div class="footer__content-wrap">
+            <div class="footer__content-left">
+              <a
+                class="footer__logo logo"
+                href="/"
+                aria-label="Перейти на стартовую страницу">
+                <img
+                  class="logo__img"
+                  src="./app/img/logo.svg"
+                  alt="Логотип BTC" />
+              </a>
+              <p class="footer__copyright footer-text">
+                Copyright © 2025 все права защищены. Входя на сайт, вы
+                принимаете Пользовательское соглашение.
+              </p>
+              <p class="footer__dev footer-text">
+                Экономический симулятор -
+                <a
+                  class="footer-text__link"
+                  href="#"
+                  target="_blank"
+                  aria-label="Перейти на сайт sitaname">
+                  sitaname
+                </a>
+              </p>
+            </div>
+
+            <nav class="footer__menu">
+              <ul class="footer__menu-list footer-menu-list">
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Главная">
+                    Главная
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Реферальная программа">
+                    Реферальная программа
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Тех. поддержка">
+                    Тех. поддержка
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Статистика">
+                    Статистика
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Краудфандинг">
+                    Краудфандинг
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Гарантии">
+                    Гарантии
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Обучение">
+                    Обучение
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу faq">
+                    faq
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Отзывы">
+                    Отзывы
+                  </a>
+                </li>
+                <li class="footer-menu-list__item">
+                  <a
+                    class="footer-menu-list__link"
+                    href="#"
+                    aria-label="Перейти на страницу Новости">
+                    Новости
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="footer__content-right footer-content-right">
+              <ul class="footer-content-right__social-list social-list">
+                <li class="social-list__item">
+                  <a
+                    class="social-list__link link-icon link-icon_green"
+                    href="#"
+                    target="_blank"
+                    aria-label="Перейти на страницу">
+                    <svg class="link-icon__img">
+                      <use href="./app/img/icons/icons.svg#tg"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a
+                    class="social-list__link link-icon link-icon_green"
+                    href="#"
+                    target="_blank"
+                    aria-label="Перейти на страницу">
+                    <svg class="link-icon__img">
+                      <use href="./app/img/icons/icons.svg#inst"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a
+                    class="social-list__link link-icon link-icon_green"
+                    href="#"
+                    target="_blank"
+                    aria-label="Перейти на страницу">
+                    <svg class="link-icon__img">
+                      <use href="./app/img/icons/icons.svg#yt"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a
+                    class="social-list__link link-icon link-icon_green"
+                    href="#"
+                    target="_blank"
+                    aria-label="Перейти на страницу">
+                    <svg class="link-icon__img">
+                      <use href="./app/img/icons/icons.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a
+                    class="social-list__link link-icon link-icon_green"
+                    href="#"
+                    target="_blank"
+                    aria-label="Перейти на страницу">
+                    <svg class="link-icon__img">
+                      <use href="./app/img/icons/icons.svg#fb"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <h3 class="footer-content-right__title">Зеркало проекта</h3>
+              <ul class="footer-content-right__links footer-links">
+                <li class="footer-links__item">
+                  <a
+                    class="footer-links__link"
+                    href="#"
+                    aria-label="Перейти на зеркало sitename1.com">
+                    sitename1.com
+                  </a>
+                </li>
+                <li class="footer-links__item">
+                  <a
+                    class="footer-links__link"
+                    href="#"
+                    aria-label="Перейти на зеркало sitename1.com">
+                    sitename1.com
+                  </a>
+                </li>
+                <li class="footer-links__item">
+                  <a
+                    class="footer-links__link"
+                    href="#"
+                    aria-label="Перейти на зеркало sitename1.com">
+                    sitename1.com
+                  </a>
+                </li>
+                <li class="footer-links__item">
+                  <a
+                    class="footer-links__link"
+                    href="#"
+                    aria-label="Перейти на зеркало sitename1.com">
+                    sitename1.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="footer__img-duck"
+            data-image="./app/img/footer/duck.svg"></div>
+          <div
+            class="footer__bg-img"
+            data-image="./app/img/footer/bg-img.jpg"></div>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="bg-img bg-img_left"
+      data-image="./app/img/home/start-game/bg-img.svg"></div>
+    <div
+      class="bg-img bg-img_right"
+      data-image="./app/img/home/start-game/bg-img.svg"></div>
+    <!-- scroll-top -->
+    <button
+      id="scroll-top"
+      class="scroll-top"
+      aria-label="Перейти наверх страницы"
+      data-image="./app/img/base/btns/scroll-top.svg"></button>
+    <script src="./app/js/libs/jquery-3.7.1.min.js"></script>
+  </body>
+</html>

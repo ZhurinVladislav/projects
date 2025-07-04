@@ -1,0 +1,500 @@
+.footer
+	padding: 40px 24px
+	background-color: var(--bg-second-color)
+
+	.wrapper
+		position: relative
+
+		> .bg
+			position: absolute
+			top: 0
+			right: -24px
+			bottom: 0
+			left: -24px
+
+			.bg-color
+				position: absolute
+				top: 12px
+				right: 12px
+				bottom: 12px
+				left: 12px
+				background-color: $color__11
+
+			.shadow
+				position: absolute
+				top: 0
+				right: 0
+				left: 0
+				bottom: 0
+
+				.bottom,
+				.left,
+				.corner
+					position: absolute
+					background-color: $color__14
+
+					&::before
+						position: absolute
+						background-color: $color__14
+						content: ''
+
+				.bottom
+					right: 16px
+					bottom: -4px
+					left: 0
+					height: 4px
+
+					&::before
+						bottom: -4px
+						left: 4px
+						right: 4px
+						height: 4px
+
+				.left
+					top: 16px
+					left: -4px
+					bottom: 0
+					width: 4px
+
+					&::before
+						top: 4px
+						bottom: 4px
+						left: -4px
+						width: 4px
+
+				.corner
+					bottom: 0
+					left: 0
+					width: 12px
+					height: 12px
+					background-color: $color__14
+
+			.border-top
+				position: absolute
+				top: 0
+				right: 12px
+				left: 12px
+				height: 12px
+				background-color: $color__11
+				border-top: 4px solid $color__8
+
+			.border-bottom
+				position: absolute
+				right: 12px
+				bottom: 0
+				left: 12px
+				height: 12px
+				background-color: $color__11
+				border-bottom: 4px solid $color__8
+
+			.border-right
+				position: absolute
+				top: 12px
+				right: 0
+				bottom: 12px
+				width: 12px
+				background-color: $color__29
+				border-right: 4px solid $color__8
+
+			.border-left
+				position: absolute
+				top: 12px
+				bottom: 12px
+				left: 0
+				width: 12px
+				background-color: $color__11
+				border-left: 4px solid $color__8
+
+			.side,
+			.side-responsive
+				position: absolute
+				top: 4px
+				right: 8px
+				bottom: 12px
+				left: 50%
+				background-image: url(../img/bg/footer-side.svg)
+				background-position: top left
+				background-repeat: no-repeat
+
+			.side-responsive
+				display: none
+
+			.fissure-big
+				position: absolute
+				top: 4px
+				right: 0
+				bottom: 12px
+				left: 4px
+				background-image: url(../img/bg/footer-fissure-big.svg)
+				background-position: bottom left
+				background-repeat: no-repeat
+
+			.fissure-small
+				position: absolute
+				top: 4px
+				right: 4px
+				bottom: 12px
+				width: 432px
+				background-image: url(../img/bg/footer-fissure-small.svg)
+				background-position: bottom right
+				background-repeat: no-repeat
+
+			.corner-top-left,
+			.corner-top-right,
+			.corner-bottom-right,
+			.corner-bottom-left
+				position: absolute
+				width: 4px
+				height: 4px
+
+				&::before,
+				&::after
+					position: absolute
+					width: 4px
+					height: 4px
+					background-color: $color__8
+					content: ''
+
+			.corner-top-left
+				top: 8px
+				left: 8px
+				background-color: $color__11
+
+				&::before
+					top: -4px
+					left: 0
+				&::after
+					top: 0
+					left: -4px
+
+			.corner-top-right
+				top: 8px
+				right: 8px
+				background-color: $color__29
+				
+				&::before
+					top: -4px
+					right: 0
+				&::after
+					top: 0
+					right: -4px
+
+			.corner-bottom-right
+				bottom: 8px
+				right: 8px
+				background-color: $color__11
+
+				&::before
+					top: 4px
+					right: 0
+				&::after
+					top: 0
+					right: -4px
+
+			.corner-bottom-left
+				bottom: 8px
+				left: 8px
+				background-color: $color__11
+
+				&::before
+					top: 4px
+					left: 0
+				&::after
+					top: 0
+					left: -4px
+
+			.glow
+				position: absolute
+				right: 12px
+				bottom: 4px
+				left: 12px
+
+				.top,
+				.bottom
+					position: absolute
+					right: 0
+					left: 0
+					height: 4px
+
+					.left,
+					.right
+						position: absolute
+						width: 4px
+						height: 4px
+
+						&::before
+							position: absolute
+							width: 4px
+							height: 4px
+							content: ''
+
+					.left
+						top: -4px
+						left: -4px
+						&::before
+							top: -4px
+							left: -4px
+
+					.right
+						top: -4px
+						right: -4px
+						&::before
+							top: -4px
+							right: -4px
+
+				.top
+					bottom: 4px
+					background-color: $color__12
+
+					.left,
+					.right
+						background-color: $color__12
+						&::before
+							background-color: $color__12
+
+				.bottom
+					bottom: 0
+					background-color: $color__13
+
+					.left,
+					.right
+						background-color: $color__13
+						&::before
+							background-color: $color__13
+
+	.content
+		position: relative
+		padding-top: 20px
+		padding-bottom: 24px
+
+	.footer-top
+		display: flex
+		justify-content: space-between
+		margin-bottom: 20px
+
+		.menu
+			display: flex
+
+			.left,
+			.center,
+			.right
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+
+			.left,
+			.center
+				margin-right: 35px
+
+			a
+				margin-bottom: 8px
+				color: $color__2
+				font-size: 14px
+				text-decoration: none
+				text-transform: uppercase
+				transition: all .15s
+
+				&:hover,
+				&:focus
+					color: $color__4
+
+		.social
+			> .caption
+				margin-bottom: 8px
+				color: $color__2
+				font-size: 14px
+				text-transform: uppercase
+
+			.list
+				display: flex
+
+				.item
+					&:not(:last-child)
+						margin-right: 8px
+
+					.caption
+						min-width: 36px
+						padding: 2px 2px
+
+						img
+							display: block
+
+	.footer-bottom
+		display: flex
+		justify-content: space-between
+
+		.copyright
+			width: 350px
+			max-width: 100%
+			color: $color__2
+			font-size: 14px
+
+			a
+				color: $color__6
+				font-weight: 700
+				text-transform: uppercase
+				text-decoration: none
+				transition: all .15s
+
+				&:hover,
+				&:focus
+					color: $color__4
+
+		.mirrors
+			width: 352px
+
+			.caption
+				margin-bottom: 8px
+				color: $color__2
+				font-size: 14px
+				text-transform: uppercase
+
+			.list
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+
+				a
+					color: $color__6
+					font-size: 14px
+					font-weight: 700
+					text-transform: uppercase
+					text-decoration: none
+					transition: all .15s
+
+					&:hover,
+					&:focus
+						color: $color__4
+
+					&:not(:last-child)
+						margin-bottom: 8px
+
+	+md
+		.wrapper
+			> .bg
+				.side
+					bottom: auto
+					left: auto
+					width: 450px
+					height: 254px
+
+				.side-responsive
+					top: 258px
+					left: auto
+					display: block
+					width: 195px
+
+				.fissure-big
+					right: 4px
+
+		.footer-top
+			flex-wrap: wrap
+
+			.social
+				margin: 24px 0 24px auto
+
+	+sm
+		.footer-top
+			.logo
+				margin-bottom: 20px
+
+			.menu
+				width: 100%
+
+			.social
+				margin-left: 0
+
+				.list
+					.item
+						.caption
+							min-width: 28px
+							padding: 0 0 0 0
+
+	+ph
+		padding-bottom: 0
+
+		.wrapper
+			> .bg
+				.bg-color
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+
+				.shadow
+					display: none
+
+				.border-top
+					right: 0
+					left: 0
+					border-top-width: 2px
+
+				.border-bottom,
+				.border-right,
+				.border-left,
+				.corner-top-left,
+				.corner-top-right,
+				.corner-bottom-right,
+				.corner-bottom-left,
+				.glow
+					display: none
+
+				.side
+					top: 2px
+					right: 0
+					width: 181px
+					height: 180px
+
+				.side-responsive
+					display: none
+
+		.footer-top
+			.logo
+				width: 160px
+				height: 56px
+
+				img
+					width: 100%
+					height: 100%
+
+			.menu
+				flex-wrap: wrap
+
+				.left,
+				.center,
+				.right
+					width: 50%
+
+				.left,
+				.center
+					margin-right: 0
+
+				a
+					font-size: 12px
+
+			.social
+				margin-top: 20px
+				margin-bottom: 0
+
+				> .caption
+					font-size: 12px
+					font-weight: 700
+
+		.footer-bottom
+			flex-direction: column
+
+			.copyright
+				order: 2
+				font-size: 12px
+
+			.mirrors
+				margin-bottom: 20px
+
+				.caption
+					font-size: 12px
+					font-weight: 700
+
+				.list
+					a
+						font-size: 12px
+						font-weight: 400

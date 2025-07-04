@@ -1,0 +1,13 @@
+@mixin textReset
+  margin: 0
+  padding: 0
+
+=pixel-border($bg, $color, $size: 2px)
+  box-shadow: 0 (-$size * 3) 0 (-$size) $bg, 0 ($size * 3) 0 (-$size) $bg, 0 (-$size * 6) 0 (-$size * 2) $bg, 0 ($size * 6) 0 (-$size * 2) $bg, 0 (-$size * 9) 0 (-$size * 4) $bg, 0 ($size * 9) 0 (-$size * 4) $bg, 0 (-$size * 12) 0 (-$size * 6) $bg, 0 ($size * 12) 0 (-$size * 6) $bg, (-$size) 0 0 0 $color, ($size) 0 0 0 $color, 0 (-$size * 2) 0 0 $color, 0 ($size * 2) 0 0 $color, 0 (-$size * 5) 0 (-$size) $color, 0 ($size * 5) 0 (-$size) $color, 0 (-$size * 7) 0 (-$size * 2) $color, 0 ($size * 7) 0 (-$size * 2) $color, 0 (-$size * 10) 0 (-$size * 4) $color, 0 ($size * 10) 0 (-$size * 4) $color, 0 (-$size * 13) 0 (-$size * 6) $color, 0 ($size * 13) 0 (-$size * 6) $color
+
+// +pixel-border(#f834ec, var(--text-color), 3px)
+
+=focus
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    @content

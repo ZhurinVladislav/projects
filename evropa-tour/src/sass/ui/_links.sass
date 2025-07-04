@@ -1,0 +1,158 @@
+.link-text
+	display: flex
+	align-items: center
+	gap: 16px
+	max-width: max-content
+	font-weight: 400
+	font-size: 16px
+	line-height: 100%
+	color: var(--text-color)
+	text-align: center
+	border-bottom: 1px solid var(--none-color)
+	transition: color .2s linear, border-color .2s linear, transform .2s linear, opacity .2s linear
+	+hover
+		color: var(--active-color)
+		.link-text__icon
+			fill: var(--active-color)
+	+focus
+		border-color: var(--active-color)
+	&:active
+		transform: scale(.98)
+
+	&__icon
+		width: 20px
+		height: 20px
+		fill: var(--text-color)
+		transition: fill .2s linear, transform .2s linear
+
+.link-icon
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 6px
+	width: 30px
+	height: 30px
+	border-radius: 100%
+	+hover
+		.link-icon__item
+			transform: rotate(-12deg) scale(1.1)
+	+focus
+		.link-icon__item
+			transform: rotate(-12deg) scale(1.1)
+	&:active
+		transform: scale(.98)
+
+	&__item
+		fill: var(--white-color)
+		transition: transform .2s linear
+
+.links
+	display: flex
+	align-items: center
+	gap: 8px
+
+	&__item
+		display: flex
+		width: 30px
+		height: 30px
+
+	&__item-link
+		background-color: #0277ff
+		&_vk
+			background-color: #0277ff
+		&_tg
+			padding: 7px
+			background-color: #24A1DD
+		&_ok
+			background-color: #f37a11
+
+.link-more
+	display: flex
+	align-items: center
+	gap: 4px
+	max-width: max-content
+	font-weight: 400
+	font-size: 18px
+	line-height: 100%
+	text-align: center
+	color: var(--page-color)
+	text-align: center
+	border-bottom: 2px solid var(--none-color)
+	transition: border-color .2s linear, transform .2s linear, opacity .2s linear
+	+ph
+		font-size: 16px
+	+hover
+		.link-more__icon
+			transform: translateX(2px) rotate(-90deg) scale(1.1)
+	+focus
+		.link-more__icon
+			transform: translateX(2px) rotate(-90deg) scale(1.1)
+	&:active
+		transform: scale(.98)
+
+	&__icon
+		width: 20px
+		height: 20px
+		flex-shrink: 0
+		fill: var(--page-color)
+		transform: rotate(-90deg)
+		transition: fill .2s linear, transform .2s linear
+
+.link
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 12px
+	max-width: 262px
+	min-height: 52px
+	font-weight: 700
+	font-size: 15px
+	text-align: center
+	border: 1px solid var(--white-color)
+	border-radius: 7px
+	background-color: var(--white-color)
+	transition: border-color .2s linear, background-color .2s linear
+	+hover
+		border-color: var(--btn-hover-color)
+		background-color: var(--btn-hover-color)
+	+focus
+		border-color: var(--accent-color)
+	&:active
+		border-color: var(--btn-active-color)
+		background-color: var(--btn-active-color)
+	
+.link-inv
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 12px
+	max-width: 262px
+	min-height: 52px
+	font-weight: 700
+	font-size: 15px
+	text-align: center
+	border: 1px solid var(--white-color)
+	border-radius: 7px
+	background-color: var(--white-color)
+	transition: border-color .2s linear, background-color .2s linear
+	+hover
+		border-color: var(--btn-hover-color)
+		background-color: var(--btn-hover-color)
+	+focus
+		border-color: var(--accent-color)
+	&:active
+		border-color: var(--btn-active-color)
+		background-color: var(--btn-active-color)
+	
+	&_wa
+		color: var(--white-color)
+		border-color: var(--green-color)
+		background-color: var(--green-color)
+		+hover
+			border-color: var(--green-hover-color)
+			background-color: var(--green-hover-color)
+		+focus
+			border-color: var(--accent-color)
+		&:active
+			border-color: var(--green-active-color)
+			background-color: var(--green-active-color)

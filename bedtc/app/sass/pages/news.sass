@@ -1,0 +1,155 @@
+.news
+	
+.news-item
+	position: relative
+	margin-bottom: 60px
+	padding-right: 32px
+	padding-left: 32px
+
+	.panel-fixed-top
+		.panel-simple
+			&:first-child
+				.caption
+					min-width: 430px
+
+			&:last-child
+				.caption
+					min-width: 202px
+
+	.content
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+		.left
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			width: 755px
+			padding-top: 24px
+
+			.text
+				margin-bottom: 20px
+				color: $color__2
+				font-size: 16px
+				font-weight: 700
+				line-height: 20px
+
+			.button-big
+				.caption
+					min-width: 190px
+					text-align: center
+
+		.right
+			.image
+				position: relative
+				padding: 8px 8px 16px
+
+				.bd
+					&::before,
+					&::after
+						position: absolute
+						background-color: $color__9
+						content: ''
+
+					&::before
+						top: 0
+						right: 12px
+						bottom: 0
+						left: 12px
+						border-top: 4px solid $color__8
+						border-bottom: 4px solid $color__8
+
+					&::after
+						top: 12px
+						right: 0
+						bottom: 12px
+						left: 0
+						border-right: 4px solid $color__8
+						border-left: 4px solid $color__8
+
+				.bd-bottom
+					position: absolute
+					bottom: 4px
+					right: 12px
+					left: 12px
+					height: 8px
+					background-color: $color__10
+					border-bottom: 4px solid $color__7
+
+					&::before,
+					&::after
+						position: absolute
+						bottom: 0
+						width: 4px
+						height: 4px
+						background-color: $color__10
+						border-top: 4px solid $color__9
+						border-bottom: 4px solid $color__7
+						content: ''
+
+					&::before
+						left: -4px
+
+					&::after
+						right: -4px
+
+				.bd-bottom-add
+					position: absolute
+					bottom: 4px
+					right: 8px
+					left: 8px
+					height: 4px
+					border-right: 4px solid $color__8
+					border-left: 4px solid $color__8
+
+					&::before,
+					&::after
+						position: absolute
+						bottom: 4px
+						width: 4px
+						height: 4px
+						background-color: $color__9
+						border-top: 4px solid $color__10
+						border-bottom: 4px solid $color__8
+						content: ''
+
+					&::before
+						left: -8px
+
+					&::after
+						right: -8px
+
+				img
+					position: relative
+					display: block
+					width: 348px
+					height: 348px
+					object-fit: cover
+
+				.bd-top-left,
+				.bd-top-right
+					position: absolute
+					top: 4px
+					width: 4px
+					height: 8px
+					background-color: $color__9
+					border-top: 4px solid $color__8
+
+					&::before
+						position: absolute
+						top: 0
+						width: 4px
+						height: 4px
+						background-color: $color__8
+						content: ''
+
+				.bd-top-left
+					left: 8px
+					&::before
+						left: -4px
+
+				.bd-top-right
+					right: 8px
+					&::before
+						right: -4px

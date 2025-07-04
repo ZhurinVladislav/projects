@@ -25,10 +25,10 @@ $category = $companyObj->getCompanyCategoryById($id);
 $ipUser = getUserIP();
 $isReview = isUserReview($ipUser, $id);
 
-?>
+require_once 'parts/head.php';
+require_once 'parts/header.php';
 
-<?php require_once 'parts/head.php'; ?>
-<?php require_once 'parts/header.php'; ?>
+?>
 
 <main id="main-block" class="main-section">
     <div class="main-section__search-services search-services">
@@ -55,7 +55,7 @@ $isReview = isUserReview($ipUser, $id);
                 </li>
                 <li class="breadcrumb-list__item">
                     <a class="breadcrumb-list__item-link" href="./rating">
-                        Рейтинг услуг в Краснодарском крае
+                        Рейтинг компаний в Краснодарском крае
                     </a>
                 </li>
                 <li class="breadcrumb-list__item">
@@ -125,7 +125,7 @@ $isReview = isUserReview($ipUser, $id);
         id="about"
         class="main-section__project-info project-info section-inner">
         <h1 class="project-info__title-hidden text-hidden">
-            Архитектурное бюро «<?= htmlspecialchars($company['name']) ?>» | ArchiTop
+            Компания <?= htmlspecialchars($company['name']) ?> | ArchiTop
         </h1>
         <div class="project-info__container container">
             <div class="project-info__card card-inner">
@@ -133,7 +133,7 @@ $isReview = isUserReview($ipUser, $id);
                     <div class="card-inner__img-wrap">
                         <img
                             class="card-inner__img"
-                            data-src="./app/img/projects/<?= htmlspecialchars($company['img']) ?>"
+                            data-src="./images/companies/<?= htmlspecialchars($id) ?>/<?= htmlspecialchars($company['img']) ?>"
                             alt="Фото проекта <?= htmlspecialchars($company['name']) ?>" />
                     </div>
 
@@ -144,12 +144,8 @@ $isReview = isUserReview($ipUser, $id);
                             </span>
                             <ul
                                 class="reviews-info__rating-stars stars-list">
-                                <?php
-                                for ($i = 0; $i < 5; $i++) {
-                                ?>
-                                    <?php
-                                    if ($i < ($rating - 1)) {
-                                    ?>
+                                <?php for ($i = 0; $i < 5; $i++): ?>
+                                    <?php if ($i < ($rating - 1)): ?>
                                         <li
                                             class="stars-list__item stars-list__item_active">
                                             <svg class="stars-list__item-icon">
@@ -157,9 +153,7 @@ $isReview = isUserReview($ipUser, $id);
                                                     xlink:href="./app/img/icons/icons.svg#star"></use>
                                             </svg>
                                         </li>
-                                    <?php
-                                    } else {
-                                    ?>
+                                    <?php else: ?>
                                         <li
                                             class="stars-list__item">
                                             <svg class="stars-list__item-icon">
@@ -167,12 +161,8 @@ $isReview = isUserReview($ipUser, $id);
                                                     xlink:href="./app/img/icons/icons.svg#star"></use>
                                             </svg>
                                         </li>
-                                    <?php
-                                    }
-                                    ?>
-                                <?php
-                                }
-                                ?>
+                                    <?php endif ?>
+                                <?php endfor ?>
                             </ul>
                         </div>
                         <div class="reviews-info__counts">
@@ -234,7 +224,7 @@ $isReview = isUserReview($ipUser, $id);
                         class="card-inner__title-wrap card-heading card-heading_inner">
                         <img
                             class="card-heading__img"
-                            data-src="./app/img/projects/<?= htmlspecialchars($company['logo']) ?>"
+                            data-src="./images/companies/<?= htmlspecialchars($id) ?>/logo/<?= htmlspecialchars($company['logo']) ?>"
                             alt="Фотография профиля" />
                         <h2 class="card-heading__title">
                             Архитектурное бюро «<?= htmlspecialchars($company['name']) ?>»
@@ -276,7 +266,7 @@ $isReview = isUserReview($ipUser, $id);
                         class="card-inner__descr text-more js-more-wrap">
 
                         <?php echo $company['description']; ?>
-                        <button class="text-more__btn btn-text js-more-btn">
+                        <!-- <button class="text-more__btn btn-text js-more-btn">
                             <span class="btn-text__text js-more-btn-text">
                                 Читать полностью
                             </span>
@@ -284,7 +274,7 @@ $isReview = isUserReview($ipUser, $id);
                                 <use
                                     xlink:href="./app/img/icons/icons.svg#arrow"></use>
                             </svg>
-                        </button>
+                        </button> -->
                     </div>
 
                 </div>
@@ -310,7 +300,7 @@ $isReview = isUserReview($ipUser, $id);
                                 Компания:
                             </span>
                             <span class="text-info__descr">
-                                ООО «<?= htmlspecialchars($company['name']) ?>»
+                                <?= htmlspecialchars($company['name']) ?>
                             </span>
                         </li>
                         <li class="text-list__item text-info">
@@ -526,19 +516,19 @@ $isReview = isUserReview($ipUser, $id);
             <div class="project-portfolio__container container">
                 <h2 class="project-portfolio__title h-2">Портфолио</h2>
                 <ul id="gallery-list" class="project-portfolio__list">
-                    <?php foreach ($portfolios as $portfolio): ?>
+                    <?php foreach ($portfolios as $key => $portfolio): ?>
                         <li class="project-portfolio__list-item js-gallery-item">
                             <a
-                                href="./app/<?= htmlspecialchars($portfolio['img']) ?>"
+                                href="./images/companies/<?= htmlspecialchars($id) ?>/portfolio/<?= htmlspecialchars($key) ?>/<?= htmlspecialchars($portfolio['img']) ?>"
                                 class="project-portfolio__list-link">
                                 <div class="project-portfolio__list-img-wrap">
                                     <img
                                         class="project-portfolio__list-img-bg"
-                                        data-src="./app/<?= htmlspecialchars($portfolio['img']) ?>"
+                                        data-src="./images/companies/<?= htmlspecialchars($id) ?>/portfolio/<?= htmlspecialchars($key) ?>/<?= htmlspecialchars($portfolio['img']) ?>"
                                         alt="<?= htmlspecialchars($portfolio['name']) ?>">
                                     <img
                                         class="project-portfolio__list-img"
-                                        data-src="./app/<?= htmlspecialchars($portfolio['img']) ?>"
+                                        data-src="./images/companies/<?= htmlspecialchars($id) ?>/portfolio/<?= htmlspecialchars($key) ?>/<?= htmlspecialchars($portfolio['img']) ?>"
                                         alt="<?= htmlspecialchars($portfolio['name']) ?>">
                                 </div>
                                 <h3 class="project-portfolio__list-title h-3">
@@ -785,9 +775,7 @@ $isReview = isUserReview($ipUser, $id);
                 id="popup-reviews-close"
                 aria-label="Закрыть всплывающие окно"
                 class="popup__btn-close js-popup-close"></button>
-            <?php
-            if (!$isReview) {
-            ?>
+            <?php if (!$isReview): ?>
                 <div id="popup-reviews-content" class="popup__content">
 
                     <h3 class="popup__title">
@@ -812,12 +800,12 @@ $isReview = isUserReview($ipUser, $id);
                                 <img
                                     class="form-rating__img"
                                     alt="Фотография профиля"
-                                    data-src="./app/img/projects/img-profile-big-1.jpg" />
+                                    data-src="./images/companies/<?= htmlspecialchars($id) ?>/logo/<?= htmlspecialchars($company['logo']) ?>" />
                             </div>
 
                             <div class="form-rating__list-wrap">
                                 <h4 class="form-rating__title">
-                                    Архитектурное бюро «ArtWind»
+                                    <?= htmlspecialchars($company['name']) ?>
                                 </h4>
                                 <ul
                                     id="rating-review"
@@ -913,9 +901,7 @@ $isReview = isUserReview($ipUser, $id);
                         </button>
                     </form>
                 </div>
-            <?php
-            } else {
-            ?>
+            <?php else: ?>
                 <div id="popup-reviews-content" class="popup__content">
                     <h3 class="popup__title">
                         <span class="popup__title-color text-color">Спасибо </span>за отзыв!
@@ -924,9 +910,7 @@ $isReview = isUserReview($ipUser, $id);
                         <span class="popup__title-color text-color">Вы уже оставили отзыв.</span> Если он не отображается, значит, он находится на стадии модерации.
                     </p>
                 </div>
-            <?php
-            }
-            ?>
+            <?php endif ?>
         </div>
     </article>
 </main>

@@ -1,0 +1,17 @@
+.partners
+	&__list
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		+md
+			grid-template-columns: repeat(4, 1fr)
+		+sm
+			grid-template-columns: repeat(3, 1fr)
+		+ph
+			grid-template-columns: repeat(2, 1fr)
+
+	&__list-item
+		display: flex
+
+	&__list-item-img
+		width: 100%
+		object-fit: cover

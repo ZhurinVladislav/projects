@@ -1,0 +1,1169 @@
+.header
+	position: fixed
+	top: 12px
+	z-index: 2
+	padding: 0 24px
+
+	.wrapper
+		position: relative
+
+		> .bg
+			position: absolute
+			top: 0
+			right: -24px
+			bottom: 0
+			left: -24px
+
+			.bg-color
+				position: absolute
+				top: 12px
+				right: 12px
+				bottom: 12px
+				left: 12px
+				background-color: $color__11
+
+			.shadow
+				position: absolute
+				top: 0
+				right: 0
+				left: 0
+				bottom: 0
+
+				.bottom,
+				.left,
+				.corner
+					position: absolute
+					background-color: $color__14
+
+					&::before
+						position: absolute
+						background-color: $color__14
+						content: ''
+
+				.bottom
+					right: 16px
+					bottom: -4px
+					left: 0
+					height: 4px
+
+					&::before
+						bottom: -4px
+						left: 4px
+						right: 4px
+						height: 4px
+
+				.left
+					top: 16px
+					left: -4px
+					bottom: 0
+					width: 4px
+
+					&::before
+						top: 4px
+						bottom: 4px
+						left: -4px
+						width: 4px
+
+				.corner
+					bottom: 0
+					left: 0
+					width: 12px
+					height: 12px
+					background-color: $color__14
+
+			.border-top
+				position: absolute
+				top: 0
+				right: 12px
+				left: 12px
+				height: 12px
+				background-color: $color__11
+				border-top: 4px solid $color__8
+
+			.border-bottom
+				position: absolute
+				right: 12px
+				bottom: 0
+				left: 12px
+				height: 12px
+				background-color: $color__11
+				border-bottom: 4px solid $color__8
+
+			.border-right
+				position: absolute
+				top: 12px
+				right: 0
+				bottom: 12px
+				width: 12px
+				background-color: $color__29
+				border-right: 4px solid $color__8
+
+			.border-left
+				position: absolute
+				top: 12px
+				bottom: 12px
+				left: 0
+				width: 12px
+				background-color: $color__11
+				border-left: 4px solid $color__8
+
+			.side
+				position: absolute
+				top: 4px
+				right: 4px
+				bottom: 12px
+				left: 50%
+				background-image: url(../img/bg/footer-side.svg)
+				background-position: top right
+				background-repeat: no-repeat
+
+			.fissure-big
+				position: absolute
+				top: 4px
+				right: 0
+				bottom: 12px
+				left: 4px
+				background-image: url(../img/bg/header-fissure-left.svg)
+				background-position: bottom left
+				background-repeat: no-repeat
+
+			.fissure-small
+				position: absolute
+				top: 4px
+				right: 4px
+				bottom: 12px
+				width: 432px
+				background-image: url(../img/bg/header-fissure-right.svg)
+				background-position: bottom right
+				background-repeat: no-repeat
+
+			.corner-top-left,
+			.corner-top-right,
+			.corner-bottom-right,
+			.corner-bottom-left
+				position: absolute
+				width: 4px
+				height: 4px
+
+				&::before,
+				&::after
+					position: absolute
+					width: 4px
+					height: 4px
+					background-color: $color__8
+					content: ''
+
+			.corner-top-left
+				top: 8px
+				left: 8px
+				background-color: $color__11
+
+				&::before
+					top: -4px
+					left: 0
+				&::after
+					top: 0
+					left: -4px
+
+			.corner-top-right
+				top: 8px
+				right: 8px
+				background-color: $color__29
+				
+				&::before
+					top: -4px
+					right: 0
+				&::after
+					top: 0
+					right: -4px
+
+			.corner-bottom-right
+				bottom: 8px
+				right: 8px
+				background-color: $color__11
+
+				&::before
+					top: 4px
+					right: 0
+				&::after
+					top: 0
+					right: -4px
+
+			.corner-bottom-left
+				bottom: 8px
+				left: 8px
+				background-color: $color__11
+
+				&::before
+					top: 4px
+					left: 0
+				&::after
+					top: 0
+					left: -4px
+
+			.glow
+				position: absolute
+				right: 12px
+				bottom: 4px
+				left: 12px
+
+				.top,
+				.bottom
+					position: absolute
+					right: 0
+					left: 0
+					height: 4px
+
+					.left,
+					.right
+						position: absolute
+						top: -4px
+						width: 4px
+						height: 4px
+
+						&::before
+							position: absolute
+							top: -4px
+							width: 4px
+							height: 4px
+							content: ''
+
+					.left
+						left: -4px
+						&::before
+							left: -4px
+
+					.right
+						right: -4px
+						&::before
+							right: -4px
+
+				.top
+					bottom: 4px
+					background-color: $color__12
+
+					.left,
+					.right
+						background-color: $color__12
+						&::before
+							background-color: $color__12
+
+				.bottom
+					bottom: 0
+					background-color: $color__13
+
+					.left,
+					.right
+						background-color: $color__13
+						&::before
+							background-color: $color__13
+
+			+sm
+				.bg-color
+					top: 4px
+					right: 2px
+					bottom: 4px
+					left: 2px
+
+				.shadow
+					.bottom
+						right: 8px
+						bottom: -2px
+						height: 2px
+
+						&::before
+							bottom: -2px
+							right: 2px
+							left: 2px
+							height: 2px
+
+					.left
+						top: 8px
+						left: -2px
+						width: 2px
+
+						&::before
+							top: 2px
+							bottom: 2px
+							left: -2px
+							width: 2px
+					.corner
+						width: 6px
+						height: 6px
+
+				.border-top
+					right: 6px
+					left: 6px
+					height: 4px
+					border-top-width: 2px
+
+				.border-bottom
+					right: 6px
+					left: 6px
+					height: 4px
+					border-bottom-width: 2px
+
+				.border-right
+					top: 6px
+					bottom: 6px
+					width: 6px
+					border-right-width: 2px
+
+				.border-left
+					top: 6px
+					bottom: 6px
+					width: 6px
+					border-left-width: 2px
+
+				.side
+					top: 2px
+					right: 4px
+					bottom: 6px
+
+				.corner-top-left,
+				.corner-top-right,
+				.corner-bottom-right,
+				.corner-bottom-left
+					width: 2px
+					height: 2px
+
+					&::before,
+					&::after
+						width: 2px
+						height: 2px
+
+				.corner-top-left
+					top: 4px
+					left: 4px
+					&::before
+						top: -2px
+					&::after
+						left: -2px
+
+				.corner-top-right
+					top: 4px
+					right: 4px
+					&::before
+						top: -2px
+					&::after
+						right: -2px
+
+				.corner-bottom-right
+					bottom: 4px
+					right: 4px
+					&::before
+						top: 2px
+					&::after
+						right: -2px
+
+				.corner-bottom-left
+					bottom: 4px
+					left: 4px
+					&::before
+						top: 2px
+					&::after
+						left: -2px
+
+				.glow
+					right: 6px
+					bottom: 2px
+					left: 6px
+
+					.top,
+					.bottom
+						height: 2px
+
+						&::before
+							top: -2px
+							width: 2px
+							height: 2px
+
+						.right,
+						.left
+							top: -2px
+							width: 2px
+							height: 2px
+
+							&::before
+								top: -2px
+								width: 2px
+								height: 2px
+
+						.right
+							right: -2px
+							&::before
+								right: -2px
+
+						.left
+							left: -2px
+							&::before
+								left: -2px
+
+	.content
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 16px
+		padding-bottom: 24px
+
+	.logo
+		display: block
+		width: 246px
+		height: 84px
+
+	.panel
+		display: flex
+		align-items: center
+
+		img
+			display: block
+
+		.user-icon
+			position: relative
+			z-index: 1
+
+			&::before
+				position: absolute
+				right: 0
+				bottom: 12px
+				display: block
+				width: 4px
+				height: 4px
+				background-color: $color__7
+				content: ''
+
+			.caption
+				min-width: 36px
+				border: none
+				padding: 0 0 0 0
+
+				&::before
+					z-index: 2
+					top: 0
+					right: 0
+					left: 0
+
+				&::after
+					z-index: 2
+					right: 0
+					bottom: 0
+					left: 0
+
+				img
+					position: relative
+					z-index: 1
+
+		.user-name
+			position: relative
+			z-index: 0
+			padding: 16px 12px 23px
+			text-decoration: none
+
+			.background
+				position: absolute
+				top: 4px
+				right: -8px
+				bottom: 4px
+				left: -8px
+				background-color: $color__9
+				border-top: 4px solid $color__8
+				border-bottom: 4px solid $color__8
+
+				&::before,
+				&::after
+					position: absolute
+					display: block
+					content: ''
+
+				&::before
+					bottom: 0px
+					left: 0
+					width: 100%
+					height: 0
+					border-top: 4px solid $color__10
+					border-bottom: 4px solid $color__7
+
+				&::after
+					bottom: 8px
+					left: 8px
+					width: 4px
+					height: 4px
+					background-color: $color__10
+
+			.caption
+				position: relative
+				display: block
+				min-width: 200px
+				padding: 0 12px
+				color: $color__2
+				font-size: 14px
+				font-weight: 700
+				line-height: 17px
+				text-align: center
+				background-color: $color__6
+				border-top: 4px solid $color__8
+				border-bottom: 4px solid $color__8
+				transition: background-color .15s
+
+				.decor-left,
+				.decor-right
+					position: absolute
+					top: 4px
+					bottom: 4px
+					width: 4px
+					background-color: $color__8
+
+					&::before,
+					&::after
+						position: absolute
+						width: 4px
+						height: 4px
+						background-color: $color__8
+						transition: all .15s
+						content: ''
+
+					&::before
+						top: -4px
+
+					&::after
+						bottom: -4px
+
+				.decor-left
+					left: 0
+
+					&::before,
+					&::after
+						left: -4px
+
+				.decor-right
+					right: 0
+
+					&::before,
+					&::after
+						right: -4px
+
+			&:hover,
+			&:focus
+				.caption
+					background-color: $color__18
+
+		.settings
+			position: relative
+			z-index: 1
+			margin-right: 4px
+
+			.caption
+				min-width: 36px
+				padding-right: 4px
+				padding-left: 4px
+
+				img
+					filter: drop-shadow(-2px 2px $color__26)
+
+		.logout
+			margin-right: 8px
+
+			.caption
+				min-width: 36px
+				padding-right: 4px
+				padding-left: 4px
+
+				img
+					filter: drop-shadow(-2px 2px $color__26)
+
+		.menu
+			.button-small
+				.caption
+					position: relative
+					min-width: 36px
+					height: 36px
+
+				.line
+					position: absolute
+					width: 22px
+					height: 3px
+					left: 3px
+					background-color: $color__2
+					filter: drop-shadow(-2px 2px $color__17)
+
+					&:nth-child(1)
+						top: 6px
+					&:nth-child(2)
+						top: 13px
+					&:nth-child(3)
+						top: 20px
+
+				+sm
+					.caption
+						min-width: 26px
+						height: 26px
+
+					.line
+						width: 16px
+						height: 2px
+						filter: drop-shadow(-1px 1px $color__17)
+
+						&:nth-child(1)
+							top: 5px
+						&:nth-child(2)
+							top: 10px
+						&:nth-child(3)
+							top: 15px
+
+		.button-small
+			&.registration
+				margin-right: 4px
+			&.login
+				margin-right: 8px
+
+				img
+					display: none
+
+	+md
+		padding-top: 8px
+
+		.content
+			padding-top: 10px
+			padding-bottom: 14px
+
+		.logo
+			width: 139px
+			height: 48px
+
+			img
+				width: 100%
+				height: 100%
+
+	+sm
+		.panel
+			.user-name,
+			.settings,
+			.logout
+				display: none
+
+			.user-icon
+				margin-right: 4px
+
+	+ph
+		.panel
+			.button-small
+				&.login
+					.caption
+						min-width: 26px
+						height: 26px
+						padding: 3px
+
+						span
+							display: none
+						img
+							display: block
+
+				&.registration
+					display: none
+
+.top-menu-overlay
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 1000
+	display: none
+	background-color: $color__1
+	opacity: 0.8
+
+	&.active
+		display: block
+
+.top-menu
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 12px
+	z-index: 1001
+	display: none
+	background-color: $color__11
+	border-left: 4px solid $color__8
+
+	&.active
+		display: block
+
+	>.bd-bottom
+		position: absolute
+		right: 8px
+		bottom: -12px
+		left: 8px
+		height: 12px
+		background-color: $color__13
+		border-top: 4px solid $color__12
+		border-bottom: 4px solid $color__8
+
+		.left,
+		.right
+			position: absolute
+			top: -8px
+			width: 4px
+			height: 12px
+			background-color: $color__13
+			border-top: 4px solid $color__12
+			border-bottom: 4px solid $color__8
+
+			&::before
+				position: absolute
+				top: -8px
+				width: 4px
+				height: 4px
+				background-color: $color__13
+				border-top: 4px solid $color__12
+				border-bottom: 4px solid $color__8
+				content: ''
+
+		.left
+			left: -4px
+			&::before
+				left: -4px
+
+		.right
+			right: -4px
+			&::before
+				right: -4px
+
+	.close
+		margin: 38px 0 24px auto
+
+		.caption
+			position: relative
+			min-width: 36px
+			height: 36px
+
+		.line-wrap
+			position: absolute
+			top: 12px
+			left: 3px
+			filter: drop-shadow(-2px 2px $color__17)
+
+		.line
+			position: absolute
+			width: 22px
+			height: 3px
+			top: 0
+			left: 0
+			background-color: $color__2
+
+			&:nth-child(1)
+				transform: rotate(45deg)
+
+			&:nth-child(2)
+				transform: rotate(-45deg)
+
+		+sm
+			.caption
+				min-width: 26px
+				height: 26px
+
+			.line-wrap
+				top: 10px
+				filter: drop-shadow(-1px 1px $color__17)
+
+			.line
+				width: 16px
+				height: 2px
+
+				// &:nth-child(1)
+				// 	top: 5px
+				// &:nth-child(2)
+				// 	top: 10px
+				// &:nth-child(3)
+				// 	top: 15px
+
+.top-menu-wrapper
+	height: 100%
+	padding: 0 20px 8px 8px
+	overflow-y: auto
+
+	-webkit-overflow-scrolling: touch
+	scrollbar-face-color: $color__3
+	scrollbar-track-color: $color__1
+
+	&::-webkit-scrollbar
+		width: 10px
+		border-left: 4px solid var(--text-color)
+		background-color: var(--scroll-color)
+
+	&::-webkit-scrollbar-thumb
+		border: 10px solid var(--none-color)
+		border-image-slice: 10
+		border-image-repeat: stretch
+		border-image-source: url(../img/base/scroll.svg)
+
+	.list
+		.link
+			position: relative
+			display: block
+			width: 335px
+			padding: 4px 8px
+			text-decoration: none
+
+			.caption
+				position: relative
+				display: block
+				padding: 4px 6px 16px
+				color: $color__2
+				font-size: 16px
+				font-family: $pixeloid
+				font-weight: 700
+				text-transform: uppercase
+				text-shadow: -2px 2px $color__11
+				line-height: 20px
+				background-color: $color__7
+				border-top: 4px solid $color__16
+				transition: all .15s
+
+				&::before,
+				&::after
+					position: absolute
+					top: 0
+					bottom: 4px
+					width: 4px
+					transition: all .15s
+					background-color: $color__7
+					border-top: 4px solid $color__16
+					content: ''
+
+				&::before
+					left: -4px
+
+				&::after
+					right: -4px
+
+			.bd-black
+				position: absolute
+				top: 0
+				right: 8px
+				bottom: 0
+				left: 8px
+				border-top: 4px solid $color__8
+				border-bottom: 4px solid $color__8
+
+				span
+					position: absolute
+					top: 4px
+					bottom: 4px
+					width: 4px
+					background-color: $color__8
+
+					&::before,
+					&::after
+						position: absolute
+						width: 4px
+						height: 4px
+						background-color: $color__8
+						content: ''
+
+					&::before
+						top: -4px
+
+					&::after
+						bottom: -4px
+
+					&:first-child
+						left: -8px
+						&::before,
+						&::after
+							left: 4px
+
+					&:last-child
+						right: -8px
+						&::before,
+						&::after
+							right: 4px
+
+			.bd-hover
+				box-sizing: border-box
+				position: absolute
+				right: 8px
+				bottom: 4px
+				left: 8px
+				height: 12px
+				background-color: $color__11
+				border-top-color: $color__16
+				border-top-style: solid
+				border-top-width: 4px
+				transition: all .15s
+
+				&::before,
+				&::after
+					box-sizing: border-box
+					position: absolute
+					bottom: 4px
+					width: 4px
+					height: 12px
+					background-color: $color__11
+					border-top-color: $color__16
+					border-top-style: solid
+					border-top-width: 4px
+					transition: all .15s
+					content: ''
+
+				&::before
+					left: -4px
+
+				&::after
+					right: -4px
+
+			&:hover,
+			&:focus
+				.bd-hover
+					height: 4px
+					&::before,
+					&::after
+						height: 4px
+
+				.caption
+					padding-top: 8px
+					padding-bottom: 12px
+					background-color: $color__20
+					&::before,
+					&::after
+						background-color: $color__20
+
+			&:not(:last-child)
+				margin-bottom: 4px
+
+	.dropdown
+		position: relative
+		display: block
+		padding: 4px 8px
+		text-decoration: none
+
+		&::before,
+		&::after
+			position: absolute
+			top: 8px
+			bottom: 20px
+			width: 4px
+			transition: all .15s
+			background-color: $color__7
+			border-top: 4px solid $color__16
+			content: ''
+
+		&::before
+			left: 4px
+
+		&::after
+			right: 4px
+
+		&:not(:last-child)
+				margin-bottom: 4px
+
+		.caption
+			position: relative
+			display: block
+			padding: 4px 6px 16px
+			color: $color__2
+			font-size: 16px
+			font-family: $pixeloid
+			font-weight: 700
+			text-transform: uppercase
+			text-shadow: -2px 2px $color__11
+			line-height: 20px
+			background-color: $color__7
+			border-top: 4px solid $color__16
+			transition: all .15s
+			cursor: pointer
+			user-select: none
+
+			.arrow
+				position: absolute
+				top: 4px
+				right: 6px
+				bottom: 16px
+				width: 16px
+				transition: all .15s
+				filter: drop-shadow(-2px 2px $color__11)
+
+				&::before
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					background-image: url(../img/arrow-white.svg)
+					background-position: center
+					background-size: contain
+					background-repeat: no-repeat
+					transition: all .15s
+					content: ''
+
+		.bd-black
+			position: absolute
+			top: 0
+			right: 8px
+			bottom: 0
+			left: 8px
+			border-top: 4px solid $color__8
+			border-bottom: 4px solid $color__8
+
+			span
+				position: absolute
+				top: 4px
+				bottom: 4px
+				width: 4px
+				background-color: $color__8
+
+				&::before,
+				&::after
+					position: absolute
+					width: 4px
+					height: 4px
+					background-color: $color__8
+					content: ''
+
+				&::before
+					top: -4px
+
+				&::after
+					bottom: -4px
+
+				&:first-child
+					left: -8px
+					&::before,
+					&::after
+						left: 4px
+
+				&:last-child
+					right: -8px
+					&::before,
+					&::after
+						right: 4px
+
+		.bd-hover
+			box-sizing: border-box
+			position: absolute
+			right: 8px
+			bottom: 4px
+			left: 8px
+			height: 12px
+			background-color: $color__11
+			border-top-color: $color__16
+			border-top-style: solid
+			border-top-width: 4px
+			transition: all .15s
+
+			&::before,
+			&::after
+				box-sizing: border-box
+				position: absolute
+				bottom: 4px
+				width: 4px
+				height: 12px
+				background-color: $color__11
+				border-top-color: $color__16
+				border-top-style: solid
+				border-top-width: 4px
+				transition: all .15s
+				content: ''
+
+			&::before
+				left: -4px
+
+			&::after
+				right: -4px
+
+		&:hover:not(.active),
+		&:focus:not(.active)
+			&::before,
+			&::after
+				bottom: 12px
+				background-color: $color__20
+
+			.bd-hover
+				height: 4px
+				
+				&::before,
+				&::after
+					height: 4px
+
+			.caption
+				padding-top: 8px
+				padding-bottom: 12px
+				background-color: $color__20
+
+				.arrow
+					top: 8px
+					bottom: 12px
+
+		.dropdown-list
+			position: relative
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			max-height: 0px
+			padding: 0 6px
+			background-color: $color__20
+			transition: background-color .5s cubic-bezier(0, 1, 0, 1), padding-bottom 0.5s cubic-bezier(0, 1, 0, 1), max-height 0.5s cubic-bezier(0, 1, 0, 1)
+			overflow: hidden
+
+			&::before,
+			&::after
+				position: absolute
+				top: 0
+				bottom: 4px
+				width: 4px
+				background-color: $color__20
+				content: ''
+
+			&::before
+				left: -4px
+
+			&::after
+				right: -4px
+
+			.item
+				margin-bottom: 8px
+				color: transparent
+				font-size: 14px
+				font-family: $pixeloid
+				font-weight: 700
+				text-shadow: -2px 2px transparent
+				text-decoration: none
+				line-height: 18px
+				transition: all .15s
+
+		&.active
+			.caption
+				padding-top: 8px
+				padding-bottom: 12px
+
+				.arrow
+					top: 8px
+					bottom: 12px
+
+					&::before
+						transform: rotate(180deg)
+
+			.dropdown-list
+				max-height: 400px
+				padding-bottom: 10px
+				background-color: $color__7
+				transition: background-color .15s ease-in-out, padding-bottom 0.5s ease-in-out, max-height .5s ease-in-out
+
+				&::before,
+				&::after
+					background-color: $color__7
+
+				.item
+					color: $color__2
+					text-shadow: -2px 2px $color__11
+
+					&:hover,
+					&:focus
+						color: $color__4
+
+	.separator
+		display: block
+		width: 160px
+		height: 4px
+		margin: 26px auto
+		background-color: $color__13

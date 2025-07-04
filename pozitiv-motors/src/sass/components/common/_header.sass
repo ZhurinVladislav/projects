@@ -1,0 +1,131 @@
+// стили для внутренних страниц
+.inner
+	.header
+		margin-bottom: 20px
+
+// header
+.header
+	z-index: 2
+// верхнее меню
+.header-top
+	color: var(--white-color)
+	background-color: var(--bg-color)
+
+	&__container
+		display: flex
+		align-items: center
+		gap: 20px
+		padding-top: 6px
+		padding-bottom: 6px
+		+ph
+			flex-direction: column
+			gap: 10px
+
+	&__text
+		font-family: var(--font-second)
+		font-weight: 300
+		font-size: 18px
+		text-transform: uppercase
+		+sm
+			font-size: 16px
+		+ph
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+
+	&__logo-link
+		margin: 0 auto
+		max-width: 262px
+		+sm
+			max-width: 200px
+		+ph
+			margin: 0
+
+	&__btn
+		margin-left: auto
+		+ph
+			margin: 0
+
+	&__link
+		color: var(--accent-color)
+
+// нижнее меню
+.header-bottom
+	background-color: var(--bg-second-color)
+	+sm
+		background-color: var(--bg-third-color)
+
+	&__container
+		position: relative
+		display: flex
+		align-items: center
+		+sm
+			padding-top: 10px
+			padding-bottom: 10px
+
+	&__link
+		color: var(--white-color)
+
+// навигационное меню
+.header-bottom-nav
+	&__list
+		display: flex
+		+sm
+			display: none
+
+	&__item
+		position: relative
+		&.parent
+			margin-bottom: -5px
+			padding-bottom: 5px
+		&.active
+			.header-bottom-nav__link
+				border-color: var(--text-color)
+
+		+hover
+			> .dropdown
+					opacity: 1
+					visibility: visible
+					transform: translateY(0)
+					transition: opacity 0.3s ease, transform 0.3s ease
+
+			.btn-text__icon
+				transform: rotateX(180deg)
+
+		&:focus-within
+			> .dropdown
+					opacity: 1
+					visibility: visible
+					transform: translateY(0)
+					transition: opacity 0.3s ease, transform 0.3s ease
+
+	&__link,
+	&__btn
+		padding: 16px 14px
+
+// Кнопка мобильного меню
+.menu-toggle
+	display: none
+	flex-direction: column
+	gap: 4px
+	justify-content: center
+	align-items: center
+	margin-left: auto
+	padding: 9px 10px
+	width: 44px
+	height: 34px
+	border: 1px solid rgba(255, 255, 255, 0.1)
+	border-radius: 4px
+	+sm
+		position: relative
+		z-index: 30000
+		display: flex
+
+	&__item
+		display: flex
+		width: 100%
+		height: 2px
+		background-color: var(--white-color)
+		transform: rotate(0) translate(0, 0)
+		transition: all .3s linear

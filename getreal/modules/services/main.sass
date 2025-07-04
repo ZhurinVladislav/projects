@@ -1,0 +1,104 @@
+.services
+    margin-bottom: 140px
+
+    .header_2
+        text-align: center
+        margin-bottom: 8px
+
+    .subtitle
+        font-size: 28px
+        text-align: center
+        margin-bottom: 40px
+
+
+    .list
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        margin: -12px
+
+    .item
+        padding: 12px
+        width: 33.33%
+
+        &.item-first
+            .item-title
+                color: #fff
+        
+
+    .link
+        position: relative
+        z-index: 1
+        display: flex
+        flex-direction: column
+        // justify-content: space-between
+        background: rgba($color__2, 0.1)
+        border-radius: 20px
+        padding: 20px
+        min-height: 320px
+        overflow: hidden
+        transition: all 0.3s
+
+        &:hover
+            background: rgba($color__2, 0.6)
+
+    .item-title
+        font-family: $font-family__2
+        font-weight: 700
+        font-size: 28px
+        letter-spacing: 0.03em
+        margin-bottom: 12px
+
+    .item-subtitle
+        font-size: 18px
+        
+
+    .item-image
+        position: absolute
+        z-index: -1
+        bottom: 0
+        right: 0
+        max-width: 100%
+
+    +medium
+        margin-bottom: 100px
+
+        .subtitle
+            font-size: 26px
+
+        .list
+            margin: -6px
+
+        .item
+            padding: 6px
+
+        .link
+            padding: 16px
+            min-height: 290px
+
+        .item-title
+            font-size: 24px
+            margin-bottom: 8px
+
+        .item-subtitle
+            font-size: 16px
+        
+
+    +small
+        .header_2
+            margin-bottom: 4px
+
+        .subtitle
+            font-size: 22px
+
+        .item
+            width: 50%
+
+    +phone
+        .subtitle
+            font-size: 18px
+
+        .item
+            width: 100%
+
+    

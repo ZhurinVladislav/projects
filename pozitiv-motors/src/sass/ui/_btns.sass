@@ -1,0 +1,81 @@
+.btn
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 4px
+	max-width: 207px
+	width: 100%
+	min-height: 22px
+	font-weight: 400
+	font-size: 14px
+	line-height: 143%
+	text-transform: uppercase
+	color: var(--white-color)
+	text-align: center
+	text-transform: uppercase
+	background-image: url(../img/btn/bg-img.jpg)
+	background-position: center
+	background-repeat: repeat
+	background-size: cover
+	background-color: var(--bg-btn-color)
+	transition: color .2s linear, transform .2s linear
+	+hover
+		color: var(--text-color)
+	+focus
+		color: var(--text-color)
+	&:active
+		transform: scale(.98)
+
+.btn-text
+	display: flex
+	align-items: center
+	gap: 6px
+	max-width: max-content
+	font-weight: 400
+	font-weight: 400
+	font-size: 15px
+	line-height: 131%
+	text-align: center
+	border-bottom: 1px solid var(--none-color)
+	transition: color .2s linear, border-color .2s linear, transform .2s linear, opacity .2s linear
+	+hover
+		color: var(--white-color)
+		.btn-text__icon
+			fill: var(--white-color)
+	+focus
+		border-color: var(--accent-text-color)
+	&:active
+		transform: scale(.98)
+
+	&__icon
+		width: 8px
+		height: 4px
+		fill: var(--text-color)
+		transition: fill .2s linear, transform .2s linear
+
+.btn-inv
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 4px
+	max-width: 207px
+	width: 100%
+	min-height: 22px
+	font-weight: 400
+	font-size: 14px
+	line-height: 143%
+	text-transform: uppercase
+	color: var(--white-color)
+	text-align: center
+	text-transform: uppercase
+	border: 1px solid var(--accent-color)
+	background-color: var(--accent-color)
+	transition: border-color .2s linear, background-color .2s linear, transform .2s linear
+	+hover
+		border-color: var(--bg-btn-hover-color)
+		background-color: var(--bg-btn-hover-color)
+	+focus
+		border-color: var(--bg-btn-hover-color)
+		background-color: var(--bg-btn-hover-color)
+	&:active
+		transform: scale(.98)

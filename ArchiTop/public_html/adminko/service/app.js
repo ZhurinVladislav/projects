@@ -155,10 +155,24 @@ $(function () {
 
     let items = {};
 
+    // $(this)
+    //   .find('select, input:not([disabled]):not([type=file]), textarea:not([disabled])')
+    //   .each(function () {
+    //     items[this.name] = $(this).val();
+    //   });
+
     $(this)
-      .find('select, input:not([disabled]):not([type=file]), textarea:not([disabled])')
+      .find('input:not([disabled]):not([type=file]), textarea:not([disabled]), select:not([disabled])')
       .each(function () {
-        items[this.name] = $(this).val();
+        let type = $(this).attr('type');
+
+        if (type == 'radio' && $(this).prop('checked') == true) {
+          items[this.name] = $(this).val();
+        } else if (type == 'checkbox' && $(this).prop('checked') == true) {
+          items[this.name] = $(this).val();
+        } else if (type != 'radio' && type != 'checkbox') {
+          items[this.name] = $(this).val();
+        }
       });
 
     $(this)
@@ -239,6 +253,9 @@ $(function () {
             });
           };
 
+          // Вызываем функцию для обработки файлов
+          // processFiles();
+
           alert('Успешное обновление компании!');
           $.ajax({
             url: '/adminko/',
@@ -253,12 +270,6 @@ $(function () {
               update_timer();
             },
           });
-          // Вызываем функцию для обработки файлов
-          // processFiles();
-
-          // document.querySelectorAll('.btn_edit').forEach(btn => {
-          //   btn.style.display = 'inline-block' ? 'none' : 'inline-block';
-          // });
         } else {
           alert('При обновление компании произошла ошибка!');
         }
@@ -273,10 +284,24 @@ $(function () {
 
     let items = {};
 
+    // $(this)
+    //   .find('select, input:not([disabled]):not([type=file]), textarea:not([disabled])')
+    //   .each(function () {
+    //     items[this.name] = $(this).val();
+    //   });
+
     $(this)
-      .find('select, input:not([disabled]):not([type=file]), textarea:not([disabled])')
+      .find('input:not([disabled]):not([type=file]), textarea:not([disabled]), select:not([disabled])')
       .each(function () {
-        items[this.name] = $(this).val();
+        let type = $(this).attr('type');
+
+        if (type == 'radio' && $(this).prop('checked') == true) {
+          items[this.name] = $(this).val();
+        } else if (type == 'checkbox' && $(this).prop('checked') == true) {
+          items[this.name] = $(this).val();
+        } else if (type != 'radio' && type != 'checkbox') {
+          items[this.name] = $(this).val();
+        }
       });
 
     $(this)

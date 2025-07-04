@@ -1,0 +1,58 @@
+.home-start-game
+	margin: 0
+	padding-bottom: 120px
+	padding-top: 95px
+	background-color: var(--bg-second-color)
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+
+	&__title
+		margin-bottom: 25px
+
+	&__subtitle
+		margin-bottom: 35px
+		font-weight: 700
+		font-size: 24px
+		letter-spacing: 0.05em
+
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 44px
+		margin-bottom: 72px
+
+.home-start-game-item
+	display: flex
+
+	&__img-wrap
+		position: relative
+		z-index: 1
+		max-width: 217px
+		width: 100%
+		max-height: 190px
+		height: 100%
+
+	&__img
+		width: 100%
+
+	&__content
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 22px solid var(--none-color)
+		border-radius: 28px
+		border-image-slice: 22
+		border-image-repeat: stretch
+		border-image-source: url(../img/home/start-game/border.svg)
+		margin-top: auto
+		margin-left: -90px
+		padding: 12px 12px 12px 83px
+		min-height: 104px
+		height: max-content
+		background-color: var(--bg-third-color)
+		overflow: hidden

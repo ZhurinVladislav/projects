@@ -1,0 +1,41 @@
+=lr
+	@media (max-width: 1360px)
+		@content
+
+=md
+	@media (max-width: 1199px)
+		@content
+
+=sm
+	@media (max-width: 991px)
+		@content
+
+=ph
+	@media (max-width: 767px)
+		@content
+
+=xs
+	@media (max-width: 399px)
+		@content
+
+=iph
+	@media (max-width: 374px)
+		@content
+
+=max($max-width)
+	@media (max-width: $max-width)
+		@content
+
+=min($min-width)
+	@media (min-width: $min-width)
+		@content
+
+=between($min-width, $max-width)
+	@media (min-width: $min-width) and (max-width: $max-width)
+		@content
+
+=hover
+	&:hover
+		@media (hover: hover)
+			@content
+	

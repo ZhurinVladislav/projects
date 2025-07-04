@@ -1,0 +1,356 @@
+*
+	// transition: all .2s
+	box-sizing: border-box
+	touch-action: auto
+
+html,
+body
+	min-height: 100vh
+
+	&.menu-open,
+	&.menu-open
+		overflow: hidden
+		padding-right: 17px
+	
+body
+	margin: 0
+	padding: 0
+	font-family: $pixeloid
+	background-color: $color__1
+	background-image: url(/app/images/bg/home.png)
+	background-size: 100% auto
+	background-position: center 0
+	background-repeat: no-repeat
+
+	-webkit-overflow-scrolling: touch
+	scrollbar-face-color: $color__3
+	scrollbar-track-color: $color__1
+
+	&::-webkit-scrollbar
+		width: 17px
+	&::-webkit-scrollbar-thumb
+		background: $color__3
+		&:hover
+			background: $color__2
+	&::-webkit-scrollbar-track
+		background: $color__1
+
+img
+	user-select: none
+	flex-shrink: 0
+
+.container
+	width: 1500px
+	margin-right: auto
+	margin-left: auto
+	padding: 0 15px
+
+	+large
+		max-width: 1280px
+	+medium
+		max-width: 960px
+	+small
+		max-width: 750px
+	+phone
+		width: 100vw
+		max-width: 100%
+
+.main-wrapper-aside
+	position: relative
+	z-index: 1
+
+	.container > .content
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+	.main-content
+		width: 1220px
+
+	.money-panel
+		display: flex
+		justify-content: flex-end
+
+		.wrapper
+			position: relative
+			margin-top: 4px
+			padding: 8px 12px 12px
+
+			&::before
+				position: absolute
+				top: 8px
+				right: 0
+				bottom: 8px
+				left: 0
+				background-color: $color__11
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+				content: ''
+
+			.bd-top
+				position: absolute
+				top: 0
+				right: 8px
+				left: 8px
+				height: 8px
+				background-color: $color__11
+				border-top: 4px solid $color__8
+
+				&::before,
+				&::after
+					position: absolute
+					top: 0
+					width: 4px
+					height: 4px
+					background-color: $color__8
+					content: ''
+				
+				&::before
+					left: -4px
+
+				&::after
+					right: -4px
+
+			.bd-bottom
+				position: absolute
+				right: 8px
+				bottom: 0
+				left: 8px
+				height: 12px
+				background-color: $color__13
+				border-top: 4px solid $color__12
+				border-bottom: 4px solid $color__8
+
+				&::before,
+				&::after
+					position: absolute
+					top: -8px
+					width: 4px
+					height: 4px
+					background-color: $color__13
+					border-top: 4px solid $color__12
+					border-bottom: 4px solid $color__8
+					content: ''
+
+				&::before
+					left: -4px
+
+				&::after
+					right: -4px
+
+			.content
+				display: flex
+				justify-content: flex-end
+				background-color: $color__11
+
+				.link
+					position: relative
+					display: flex
+					justify-content: space-between
+					padding: 4px
+					margin-bottom: 4px
+					text-decoration: none
+
+					&:first-child
+						margin-right: 4px
+
+					.bg
+						position: absolute
+						top: 0
+						right: 8px
+						bottom: 0
+						left: 8px
+						background-color: $color__3
+						border-top: 4px solid $color__8
+						border-bottom: 4px solid $color__8
+
+						&::before,
+						&::after
+							position: absolute
+							right: -4px
+							height: 4px
+							left: -4px
+							border-right: 4px solid $color__8
+							border-left: 4px solid $color__8
+							content: ''
+
+						&::before
+							top: 0
+							background-color: $color__22
+
+						&::after
+							bottom: 0
+							background-color: $color__21
+
+						span
+							position: absolute
+							top: 4px
+							bottom: 4px
+							left: -8px
+							width: 8px
+							background-color: $color__21
+							border-left: 4px solid $color__8
+
+
+					.caption
+						position: relative
+						min-width: 195px
+						padding: 8px 10px 10px
+						color: $color__2
+						font-size: 14px
+						font-family: $pixeloid
+						font-weight: 700
+						line-height: 16px
+						text-align: center
+
+						+medium
+							min-width: 160px
+
+					.counter
+						position: relative
+						min-width: 60px
+						padding: 4px 10px 10px
+						text-align: center
+						transition: all .15s
+
+						&::after
+							position: absolute
+							top: 4px
+							right: 0
+							left: 0
+							height: 4px
+							border-left: 4px solid $color__23
+							border-right: 4px solid $color__23
+							content: ''
+
+						.bd
+							position: absolute
+							top: 4px
+							right: -4px
+							bottom: 4px
+							left: -4px
+							background-color: $color__5
+							border-right: 4px solid $color__8
+							border-left: 4px solid $color__8
+
+							&::before
+								box-sizing: border-box
+								position: absolute
+								top: -4px
+								right: 4px
+								left: 0
+								height: 4px
+								background-color: $color__23
+								border-left: 4px solid $color__8
+								content: ''
+
+							&::after
+								position: absolute
+								bottom: -4px
+								left: 0
+								width: 4px
+								height: 4px
+								background-color: $color__8
+								content: ''
+
+						.bd-hover
+							position: absolute
+							right: 4px
+							bottom: 0
+							left: 4px
+							height: 8px
+							background-color: $color__23
+							border-bottom: 4px solid $color__24
+							transition: all .15s
+
+							&::before,
+							&::after
+								box-sizing: border-box
+								position: absolute
+								top: -4px
+								width: 4px
+								height: 8px
+								background-color: $color__23
+								border-bottom: 4px solid $color__24
+								transition: all .15s
+								content: ''
+
+							&::before
+								left: -4px
+
+							&::after
+								right: -4px
+
+						.number
+							position: relative
+							color: $color__2
+							font-size: 14px
+							font-family: $pixeloid
+							font-weight: 700
+							line-height: 16px
+							text-shadow: -2px 2px $color__11
+
+							+medium
+								font-size: 13px
+
+					&:hover,
+					&:focus
+						.counter
+							padding-top: 6px
+							padding-bottom: 8px
+
+							.bd-hover,
+							.bd-hover::before,
+							.bd-hover::after
+								height: 4px
+								border-bottom-width: 0px
+
+.main-external
+	padding-top: 60px
+
+.header_1
+	margin-top: 0
+	margin-bottom: 16px
+	color: $color__6
+	font-size: 32px
+	font-weight: 700
+	line-height: 40px
+	text-align: center
+	text-shadow: -2px 2px $color__13
+	text-transform: uppercase
+
+	&.white
+		color: $color__2
+
+.header_2
+	margin-top: 0
+	margin-bottom: 16px
+	color: $color__2
+	font-size: 24px
+	font-weight: 700
+	line-height: 30px
+	text-align: center
+	text-shadow: -2px 2px $color__15
+
+.subheader
+	margin-bottom: 40px
+	color: $color__2
+	font-size: 24px
+	font-weight: 700
+	text-align: center
+	line-height: 30px
+
+.link
+	color: $color__6
+	font-size: 16px
+	font-weight: 700
+	text-decoration: underline
+	transition: all .15s
+
+	&:hover,
+	&:focus
+		color: $color__4
+		text-decoration: none
+
+.tab-content:not(.active)
+	display: none

@@ -1,0 +1,8 @@
+@mixin textReset
+  margin: 0
+  padding: 0
+
+=focus
+  &:focus-visible:not(:active),
+  &:focus:not(:active)
+    @content

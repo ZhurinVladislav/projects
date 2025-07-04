@@ -1,0 +1,104 @@
+.link-text
+	display: flex
+	align-items: center
+	gap: 6px
+	max-width: max-content
+	font-weight: 400
+	font-size: 15px
+	line-height: 131%
+	text-align: center
+	border-bottom: 1px solid var(--none-color)
+	transition: color .2s linear, border-color .2s linear, transform .2s linear, opacity .2s linear
+	+hover
+		color: var(--white-color)
+		.link-text__icon
+			fill: var(--active-color)
+	+focus
+		border-color: var(--active-color)
+	&:active
+		transform: scale(.98)
+
+	&_sm
+		display: none
+		+sm
+			display: flex
+	&_ph
+		display: none
+		+ph
+			display: flex
+
+	&__icon
+		width: 20px
+		height: 20px
+		fill: var(--text-color)
+		transition: fill .2s linear, transform .2s linear
+
+.link-text-inv
+	display: flex
+	align-items: center
+	gap: 6px
+	max-width: max-content
+	line-height: 131%
+	text-align: center
+	transition: color .2s linear, transform .2s linear, opacity .2s linear
+	+hover
+		.link-text-inv__descr
+			border-color: var(--accent-color)
+	+focus
+		.link-text-inv__descr
+			border-color: var(--accent-color)
+	&:active
+		transform: scale(.98)
+
+	&__descr
+		font-weight: 400
+		font-size: 16px
+		color: var(--accent-color)
+		border-bottom: 1px solid var(--none-color)
+		text-transform: uppercase
+		transition: border-color .2s linear
+
+	&__icon
+		width: 20px
+		height: 20px
+		fill: var(--text-color)
+		transition: fill .2s linear, transform .2s linear
+
+.link-icon
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 6px
+	width: 22px
+	height: 22px
+	border-radius: 4px
+	background-color: var(--accent-color)
+	+hover
+		.link-icon__img
+			transform: rotate(-12deg) scale(1.1)
+	+focus
+		.link-icon__img
+			transform: rotate(-12deg) scale(1.1)
+	&:active
+		transform: scale(.98)
+
+	&__img
+		fill: var(--white-color)
+		transition: transform .2s linear
+
+.links-list
+	display: flex
+	align-items: center
+	gap: 6px
+
+	&__item
+		display: flex
+		width: 22px
+		height: 22px
+
+	&__item-link
+		&_vk
+			background-color: #0277ff
+		&_fb
+			// padding: 7px
+			background-color: #1976d2

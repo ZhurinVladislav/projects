@@ -1,0 +1,67 @@
+.buttons-row
+	position: relative
+	display: flex
+
+	.bg
+		position: absolute
+		top: 16px
+		right: 0
+		bottom: 12px
+		left: 0
+		background-color: $color__9
+		border-left: 4px solid $color__8
+		border-right: 4px solid $color__8
+
+		&::before,
+		&::after
+			position: absolute
+			top: -4px
+			width: 8px
+			height: 4px
+			background-color: $color__8
+			content: ''
+
+		&::before
+			left: 0
+
+		&::after
+			right: 0
+
+	.bd-bot
+		position: absolute
+		right: 12px
+		bottom: 0
+		left: 12px
+		height: 12px
+		background-color: $color__7
+		border-top: 4px solid $color__10
+		border-bottom: 4px solid $color__8
+
+		span
+			position: absolute
+			bottom: 0
+			width: 4px
+			height: 12px
+			background-color: $color__7
+			border-top: 4px solid $color__10
+			border-bottom: 4px solid $color__8
+
+			&::before
+				box-sizing: border-box
+				position: absolute
+				bottom: 0
+				width: 4px
+				height: 12px
+				background-color: $color__7
+				border-top: 4px solid $color__10
+				border-bottom: 4px solid $color__8
+				content: ''
+
+			&:first-child
+				left: -4px
+				&::before
+					left: -4px
+			&:last-child
+				right: -4px
+				&::before
+					right: -4px

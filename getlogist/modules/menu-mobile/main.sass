@@ -1,0 +1,151 @@
+.menu-mobile
+
+    display: none
+
+
+    +medium
+        position: fixed
+        left: 0
+        right: 0
+        top: 0
+        height: 100vh
+        overflow-x: hidden
+        overflow-y: auto
+        z-index: 28
+        padding: 72px 10px 0
+        background: #f6f6f6
+        transform: translate3d(10%,0%,0)
+        transition: transform .4s,opacity .3s
+        will-change: transform
+        opacity: 0
+        
+        &.display
+            display: block
+
+        &.active
+            transform: translate3d(0,0,0)
+            opacity: 1
+
+        .wrap
+            
+        .block-text
+            
+        .menu-list
+            margin-bottom: 40px
+            margin-right: 34px
+
+        .menu-item
+            margin-bottom: 10px
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            &:last-child
+                margin-bottom: 0
+
+            &.active
+                > a
+                    color: $color__3
+
+                ul
+                    //display: block
+
+                .arrow
+                    //transform: rotate(0)
+
+            &.open
+                .arrow
+                    transform: rotate(0)
+
+
+            a
+                font-weight: 700
+                font-size: 18px
+                // color: #fff
+
+
+
+            ul
+                display: none
+                padding: 15px 0 15px
+                width: 100%
+                > li
+                    margin-bottom: 10px
+                    &:last-child
+                        margin-bottom: 0
+
+                    > a
+                        display: block
+                        padding: 0 10px
+                        font-size: 14px
+                        font-weight: 400
+                        text-transform: uppercase
+                        transition: all 0.3s
+                        &:hover
+                            color: $color__2
+
+                    &.active
+                        > a
+                            color: $color__3
+
+
+
+        .arrow
+            display: inline-flex
+            width: 10px
+            height: 10px
+            background: transparent
+            margin-left: 14px
+            transform: rotate(180deg)
+            transition: all 0.3s
+            svg
+                fill: #fff
+
+        .phone
+            display: flex
+            align-items: center
+            margin-bottom: 10px
+            
+        .phone-icon
+            display: inline-flex
+            width: 26px
+            height: 26px
+            margin-right: 14px
+            border: 1px solid #fff
+            border-radius: 50%
+
+            svg
+                fill: #fff
+
+        .phone-link
+            display: block
+            font-size: 20px
+            font-weight: 700
+            color: #fff
+            transition: all 0.2s
+            &:hover
+                color: $color__2
+
+        .email
+            display: flex
+            align-items: center
+            margin-bottom: 40px
+            
+        .email-icon
+            display: inline-flex
+            width: 26px
+            height: 26px
+            margin-right: 14px
+            border: 1px solid #fff
+            border-radius: 50%
+
+            svg
+                fill: #fff
+
+        .email-link
+            display: block
+            font-size: 20px
+            font-weight: 400
+            color: #fff
+            transition: all 0.2s
+            &:hover
+                color: $color__2

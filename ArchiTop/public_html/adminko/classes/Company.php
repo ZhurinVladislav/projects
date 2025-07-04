@@ -32,6 +32,7 @@ class Company
     {
         $stmt = $this->pdo->prepare("SELECT * FROM companies");
         $stmt->execute();
+
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -45,6 +46,7 @@ class Company
     {
         $stmt = $this->pdo->prepare("SELECT * FROM companies WHERE id = :id");
         $stmt->execute([':id' => $id]);
+
         return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
     }
 
@@ -57,6 +59,7 @@ class Company
     {
         $stmt = $this->pdo->query("SHOW TABLE STATUS LIKE 'companies'");
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
         return (int) ($result['Auto_increment'] ?? 1);
     }
 
@@ -88,19 +91,35 @@ class Company
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+
+
     /**
      * Метод получения услуг компании
      * 
      * @param int $id идентификатор компании
      * @return array|null массив услуг, либо пустое значение
      */
-    public function getServices(int $id): ?array
-    {
-        $stmt = $this->pdo->prepare('SELECT * FROM company_services WHERE id_company = :id');
-        $stmt->execute(['id' => $id]);
+    // public function getCategories(int $id): ?array
+    // {
+    //     $stmt = $this->pdo->prepare('SELECT * FROM company_services WHERE id_company = :id');
+    //     $stmt->execute(['id' => $id]);
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
+    //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // }
+
+    /**
+     * Метод получения услуг компании
+     * 
+     * @param int $id идентификатор компании
+     * @return array|null массив услуг, либо пустое значение
+     */
+    // public function getServices(int $id): ?array
+    // {
+    //     $stmt = $this->pdo->prepare('SELECT * FROM company_services WHERE id_company = :id');
+    //     $stmt->execute(['id' => $id]);
+
+    //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // }
 
     /**
      * Метод получения проектов компании
@@ -117,6 +136,120 @@ class Company
     }
 
     /**
+     * Метод получения всех категорий компании с привязанными услугами, за исключением исключённых
+     *
+     * @param int $companyId ID компании
+     * @return array|null массив категорий с услугами, либо null если ничего не найдено
+     */
+    // public function getCompanyCategoryServiceList(int $companyId): ?array
+    // {
+    //     $sql = '
+    //         SELECT 
+    //             c.id AS category_id, 
+    //             c.name AS category_name,
+    //             s.id AS service_id, 
+    //             s.name AS service_name
+    //         FROM company_categories cc
+    //         INNER JOIN categories c ON cc.category_id = c.id
+    //         LEFT JOIN services s ON s.category_id = c.id
+    //         LEFT JOIN company_service_exclusions cse 
+    //             ON cse.service_id = s.id AND cse.company_id = :companyId2
+    //         WHERE cc.company_id = :companyId
+    //     ';
+
+
+    //     $stmt = $this->pdo->prepare($sql);
+    //     $stmt->execute([
+    //         ':companyId' => $companyId,
+    //         ':companyId2' => $companyId
+    //     ]);
+
+    //     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    //     if (!$results) {
+    //         return null;
+    //     }
+
+    //     $categories = [];
+    //     foreach ($results as $row) {
+    //         $categoryId = $row['category_id'];
+    //         if (!isset($categories[$categoryId])) {
+    //             $categories[$categoryId] = [
+    //                 'id' => $categoryId,
+    //                 'name' => $row['category_name'],
+    //                 'services' => []
+    //             ];
+    //         }
+    //         if ($row['service_id']) {
+    //             $categories[$categoryId]['services'][] = [
+    //                 'id' => $row['service_id'],
+    //                 'name' => $row['service_name']
+    //             ];
+    //         }
+    //     }
+
+    //     return array_values($categories);
+    // }
+    /**
+     * Метод получения всех категорий компании с привязанными услугами, которые есть в исключениях
+     *
+     * @param int $companyId ID компании
+     * @return array|null массив категорий с услугами, либо null если ничего не найдено
+     */
+    public function getCompanyCategoryExcludedServices(int $companyId): ?array
+    {
+        $sql = "
+            SELECT 
+                c.id AS category_id,
+                c.name AS category_name,
+                s.id AS service_id,
+                s.name AS service_name,
+                cse.service_id AS excluded_service_id
+            FROM company_categories cc
+            INNER JOIN categories c ON cc.category_id = c.id
+            LEFT JOIN services s ON s.category_id = c.id
+            LEFT JOIN company_service_exclusions cse 
+                ON cse.service_id = s.id AND cse.company_id = :companyId
+            WHERE cc.company_id = :companyId2
+        ";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':companyId' => $companyId,
+            ':companyId2' => $companyId,
+        ]);
+
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if (!$results) {
+            return null;
+        }
+
+        $categories = [];
+        foreach ($results as $row) {
+            $categoryId = $row['category_id'];
+
+            if (!isset($categories[$categoryId])) {
+                $categories[$categoryId] = [
+                    'id' => $categoryId,
+                    'name' => $row['category_name'],
+                    'services' => []
+                ];
+            }
+
+            // Добавляем только исключённые услуги
+            if ($row['excluded_service_id']) {
+                $categories[$categoryId]['services'][] = [
+                    'id' => $row['service_id'],
+                    'name' => $row['service_name']
+                ];
+            }
+        }
+
+        return array_values($categories);
+    }
+
+    /**
      * Метод создания новой компании
      * 
      * @param array $data суперглобальная переменная POST
@@ -127,7 +260,7 @@ class Company
         try {
             $this->pdo->beginTransaction();
 
-            $requiredFields = ['name', 'alias', 'categories', 'city', 'address', 'phone', 'site_url', 'logo', 'img'];
+            $requiredFields = ['name', 'alias', 'city', 'address', 'phone', 'site_url', 'logo', 'img'];
             foreach ($requiredFields as $field) {
                 if (empty($data[$field])) {
                     echo "Ошибка: поле '$field' обязательно для заполнения.";
@@ -137,13 +270,13 @@ class Company
 
             // Вставляем компанию без page_id (он обновится позже)
             $stmt = $this->pdo->prepare("
-            INSERT INTO companies (user_id, name, category_id, city, address, email, phone, site_url, experience, intro_text, description, link_map, logo, img, page_id) 
-            VALUES (:user_id, :name, :category_id, :city, :address, :email, :phone, :site_url, :experience, :intro_text, :description, :link_map, :logo, :img, :page_id)
-        ");
+            INSERT INTO companies (user_id, name, city, address, email, phone, site_url, experience, intro_text, description, link_map, logo, img, page_id) 
+            VALUES (:user_id, :name, :city, :address, :email, :phone, :site_url, :experience, :intro_text, :description, :link_map, :logo, :img, :page_id)
+            ");
+
             $stmt->execute([
                 ':user_id' => 1,
                 ':name' => $data['name'],
-                ':category_id' => $data['categories'],
                 ':city' => $data['city'],
                 ':address' => $data['address'],
                 ':link_map' => $data['link_map'] ?? null,
@@ -165,8 +298,8 @@ class Company
                 return false;
             }
 
-            $category = $this->ratingObj->get((int) $data['categories']);
-            $page = $category ? $this->pageObj->get((int) $category['page_id']) : null;
+            // $category = $this->ratingObj->get((int) $data['categories']);
+            // $page = $category ? $this->pageObj->get((int) $category['page_id']) : null;
 
             // Вставляем запись в page_routes
             $stmt = $this->pdo->prepare("
@@ -174,7 +307,8 @@ class Company
             VALUES (:alias, :type, :title, :description, :content, :template)
         ");
             $stmt->execute([
-                ':alias' => $page['alias'] . '/' .  $data['alias'],
+                // ':alias' => $page['alias'] . '/' .  $data['alias'],
+                ':alias' => $data['alias'],
                 ':type' => 'company',
                 ':title' => $data['name'],
                 ':description' => $data['name'],
@@ -237,16 +371,30 @@ class Company
             }
 
             // Обработка услуг
-            $services = [];
+            $servicesExclusions = [];
             foreach ($data as $key => $value) {
                 if (preg_match('/^service_(\d+)$/', $key) && !empty($value)) {
-                    $services[] = ['id_company' => $companyId, 'name' => $value];
+                    $servicesExclusions[] = ['company_id' => $companyId, 'service_id' => $value];
                 }
             }
-            if (!empty($services)) {
-                $stmt = $this->pdo->prepare("INSERT INTO company_services (id_company, name) VALUES (:id_company, :name)");
-                foreach ($services as $service) {
+            if (!empty($servicesExclusions)) {
+                $stmt = $this->pdo->prepare("INSERT INTO company_service_exclusions (company_id, service_id) VALUES (:company_id, :service_id)");
+                foreach ($servicesExclusions as $service) {
                     $stmt->execute($service);
+                }
+            }
+
+            // Обработка категорий
+            $categories = [];
+            foreach ($data as $key => $value) {
+                if (preg_match('/^category_(\d+)$/', $key) && !empty($value)) {
+                    $categories[] = ['company_id' => $companyId, 'category_id' => $value];
+                }
+            }
+            if (!empty($categories)) {
+                $stmt = $this->pdo->prepare("INSERT INTO company_categories (company_id, category_id) VALUES (:company_id, :category_id)");
+                foreach ($categories as $category) {
+                    $stmt->execute($category);
                 }
             }
 
@@ -291,12 +439,17 @@ class Company
      */
     public function update(array $data): bool
     {
+
+        // var_dump($data);
+        // return false;
         try {
             $this->pdo->beginTransaction();
 
             $id = $data['id'] ?? null;
+
             if (!$id) {
-                throw new Exception("Не передан id компании");
+                echo "Ошибка: не передан id компании";
+                return false;
             }
 
             // Проверка существования компании
@@ -305,7 +458,8 @@ class Company
 
             $company = $stmt->fetch();
             if (!$company) {
-                throw new Exception("Компания не найдена.");
+                echo "Ошибка: компания не найдена";
+                return false;
             }
 
             // Получение информации о маршруте страницы
@@ -320,8 +474,40 @@ class Company
                 $stmt->execute([
                     ':id' => (int) $company['page_id'],
                     ':alias' => $trimmedPath . $data['alias'],
+                    // ':alias' => 'rating/' . $data['alias'],
                 ]);
             }
+
+            // Обновление alias, если переданы categories
+            // if (!empty($data['category_id'])) {
+            //     $stmt = $this->pdo->prepare("SELECT * FROM categories WHERE id = :id");
+            //     $stmt->execute([':id' => (int) $data['category_id']]);
+            //     $category = $stmt->fetch();
+
+            //     if (!$category) {
+            //         echo 'Не удалось получить категорию';
+            //         return false;
+            //     }
+
+            //     $stmt = $this->pdo->prepare("SELECT * FROM page_routes WHERE id = :id");
+            //     $stmt->execute([':id' => $category['page_id']]);
+            //     $getPage = $stmt->fetch();
+
+            //     if (!$getPage) {
+            //         echo 'Не удалось получить страницу';
+            //         return false;
+            //     }
+
+            //     $oldUrl = $page['alias'];
+            //     $partsOldUrl = explode("/", $oldUrl);
+            //     $lastPart = '/' . end($partsOldUrl);
+
+            //     $stmt = $this->pdo->prepare("UPDATE page_routes SET alias = :alias WHERE id = :id");
+            //     $stmt->execute([
+            //         ':id' => (int) $company['page_id'],
+            //         ':alias' => $getPage['alias'] . $lastPart,
+            //     ]);
+            // }
 
             // Формирование массива полей для обновления
             $updateFields = [];
@@ -332,6 +518,7 @@ class Company
                 'city',
                 'address',
                 'link_map',
+                // 'category_id',
                 'email',
                 'phone',
                 'site_url',
@@ -362,6 +549,7 @@ class Company
                 $existingPhones[] = $phone['id'];
             }
 
+            // Обновление номера или создание нового номера
             $submittedPhones = [];
             foreach ($data as $key => $value) {
                 if (strpos($key, 'phone_') === 0) {
@@ -388,126 +576,334 @@ class Company
                 }
             }
 
+            // Получаем список существующих ссылок у компании
+            $existingLinks = [];
+            $stmt = $this->pdo->prepare("SELECT id FROM company_links WHERE id_company = :id_company");
+            $stmt->execute([':id_company' => (int) $id]);
+
+            foreach ($stmt->fetchAll() as $link) {
+                $existingLinks[] = $link['id'];
+            }
+
+            // Обновление ссылок или создание новых
+            $submittedLinks = [];
+            foreach ($data as $key => $value) {
+                if (preg_match('/^link(?:-text)?_(\d+)$/', $key, $matches)) {
+                    $linkId = (int) $matches[1]; // ID ссылки
+                    $submittedLinks[$linkId][$key] = $value; // Сохраняем данные по ID
+                } elseif (preg_match('/^links_(\d+)$/', $key, $matches)) {
+                    $linkId = (int) $matches[1];
+                    $submittedLinks[$linkId][$key] = $value;
+                }
+            }
+
+            foreach ($submittedLinks as $linkId => $fields) {
+                if (in_array($linkId, $existingLinks)) {
+                    // Обновляем только переданные поля
+                    $updates = [];
+                    $params = [':id' => $linkId, ':id_company' => (int) $id];
+
+                    if (isset($fields["link_$linkId"])) {
+                        $updates[] = "link = :link";
+                        $params[':link'] = $fields["link_$linkId"];
+                    }
+                    if (isset($fields["link-text_$linkId"])) {
+                        $updates[] = "text = :text";
+                        $params[':text'] = $fields["link-text_$linkId"];
+                    }
+                    if (isset($fields["links_$linkId"])) {
+                        $updates[] = "type = :type";
+                        $params[':type'] = $fields["links_$linkId"];
+                    }
+
+                    if (!empty($updates)) {
+                        $stmt = $this->pdo->prepare("UPDATE company_links SET " . implode(', ', $updates) . " WHERE id = :id AND id_company = :id_company");
+                        $stmt->execute($params);
+                    }
+                } else {
+                    // Создание новой записи
+                    $stmt = $this->pdo->prepare("INSERT INTO company_links (id_company, link, text, type) VALUES (:id_company, :link, :text, :type)");
+                    $stmt->execute([
+                        ':id_company' => (int) $id,
+                        ':link' => $fields["link_$linkId"] ?? '',
+                        ':text' => $fields["link-text_$linkId"] ?? '',
+                        ':type' => $fields["links_$linkId"] ?? ''
+                    ]);
+                }
+            }
+
+            // === Обработка company_categories ===
+            // Обработка категорий из данных вида category_1 => 4
+            $submittedCategoryIds = [];
+            foreach ($data as $key => $value) {
+                if (preg_match('/^category_\d+$/', $key) && is_numeric($value)) {
+                    $submittedCategoryIds[] = (int)$value;
+                }
+            }
+
+            if (!empty($submittedCategoryIds)) {
+                // Получаем текущие связи
+                $stmt = $this->pdo->prepare("SELECT category_id FROM company_categories WHERE company_id = :id");
+                $stmt->execute([':id' => (int)$id]);
+                $existingCategoryIds = array_column($stmt->fetchAll(PDO::FETCH_ASSOC), 'category_id');
+
+                // Добавляем недостающие
+                $toAdd = array_diff($submittedCategoryIds, $existingCategoryIds);
+                foreach ($toAdd as $categoryId) {
+                    $stmt = $this->pdo->prepare("INSERT INTO company_categories (company_id, category_id) VALUES (:company_id, :category_id)");
+                    $stmt->execute([
+                        ':company_id' => (int)$id,
+                        ':category_id' => (int)$categoryId
+                    ]);
+                }
+
+                // Удаляем лишние
+                $toDelete = array_diff($existingCategoryIds, $submittedCategoryIds);
+                foreach ($toDelete as $categoryId) {
+                    $stmt = $this->pdo->prepare("DELETE FROM company_categories WHERE company_id = :company_id AND category_id = :category_id");
+                    $stmt->execute([
+                        ':company_id' => (int)$id,
+                        ':category_id' => (int)$categoryId
+                    ]);
+                }
+            }
+
+
+            // === Обработка company_service_exclusions ===
+            // Обработка исключений услуг из данных вида service_1 => 3
+            $submittedServiceExclusions = [];
+            foreach ($data as $key => $value) {
+                if (preg_match('/^service_\d+$/', $key) && is_numeric($value) && (int)$value > 0) {
+                    $submittedServiceExclusions[] = (int)$value;
+                }
+            }
+            $submittedServiceExclusions = array_unique($submittedServiceExclusions);
+
+            $stmt = $this->pdo->prepare("SELECT service_id FROM company_service_exclusions WHERE company_id = :id");
+            $stmt->execute([':id' => (int)$id]);
+            $existingServiceExclusions = array_column($stmt->fetchAll(PDO::FETCH_ASSOC), 'service_id');
+
+            if (empty($submittedServiceExclusions)) {
+                // Если ничего не передано — удалить все связанные исключения
+                $stmt = $this->pdo->prepare("DELETE FROM company_service_exclusions WHERE company_id = :id");
+                $stmt->execute([':id' => (int)$id]);
+            } else {
+                // Добавить новые
+                foreach (array_diff($submittedServiceExclusions, $existingServiceExclusions) as $serviceId) {
+                    $stmt = $this->pdo->prepare("INSERT INTO company_service_exclusions (company_id, service_id) VALUES (:company_id, :service_id)");
+                    $stmt->execute([
+                        ':company_id' => (int)$id,
+                        ':service_id' => (int)$serviceId
+                    ]);
+                }
+
+                // Удалить лишние
+                foreach (array_diff($existingServiceExclusions, $submittedServiceExclusions) as $serviceId) {
+                    $stmt = $this->pdo->prepare("DELETE FROM company_service_exclusions WHERE company_id = :company_id AND service_id = :service_id");
+                    $stmt->execute([
+                        ':company_id' => (int)$id,
+                        ':service_id' => (int)$serviceId
+                    ]);
+                }
+            }
+
+            // $submittedServiceExclusions = [];
+            // foreach ($data as $key => $value) {
+            //     if (preg_match('/^service_\d+$/', $key) && is_numeric($value)) {
+            //         $submittedServiceExclusions[] = (int)$value;
+            //     }
+            // }
+
+            // if (!empty($submittedServiceExclusions)) {
+            //     // Получаем текущие связи
+            //     $stmt = $this->pdo->prepare("SELECT service_id FROM company_service_exclusions WHERE company_id = :id");
+            //     $stmt->execute([':id' => (int)$id]);
+            //     $existingExclusions = array_column($stmt->fetchAll(PDO::FETCH_ASSOC), 'service_id');
+
+            //     // Добавляем недостающие
+            //     $toAdd = array_diff($submittedServiceExclusions, $existingExclusions);
+            //     foreach ($toAdd as $serviceId) {
+            //         $stmt = $this->pdo->prepare("INSERT INTO company_service_exclusions (company_id, service_id) VALUES (:company_id, :service_id)");
+            //         $stmt->execute([
+            //             ':company_id' => (int)$id,
+            //             ':service_id' => (int)$serviceId
+            //         ]);
+            //     }
+
+            //     // Удаляем лишние
+            //     $toDelete = array_diff($existingExclusions, $submittedServiceExclusions);
+            //     foreach ($toDelete as $serviceId) {
+            //         $stmt = $this->pdo->prepare("DELETE FROM company_service_exclusions WHERE company_id = :company_id AND service_id = :service_id");
+            //         $stmt->execute([
+            //             ':company_id' => (int)$id,
+            //             ':service_id' => (int)$serviceId
+            //         ]);
+            //     }
+            // }
+
+            // Получаем список существующих услуг компании
+            // $existingServices = [];
+            // $stmt = $this->pdo->prepare("SELECT id FROM company_services WHERE id_company = :id_company");
+            // $stmt->execute([':id_company' => (int) $id]);
+
+            // foreach ($stmt->fetchAll() as $service) {
+            //     $existingServices[] = $service['id'];
+            // }
+
+            // Обновление услуги или создание новой
+            // $submittedServices = [];
+            // foreach ($data as $key => $value) {
+            //     if (strpos($key, 'service_') === 0) {
+            //         $serviceId = str_replace('service_', '', $key);
+            //         $submittedServices[] = $serviceId;
+
+            //         // Проверяем, есть ли этот ID в базе
+            //         if (in_array($serviceId, $existingServices)) {
+            //             // Обновление существующего номера
+            //             $stmt = $this->pdo->prepare("UPDATE company_services SET name = :name WHERE id = :id AND id_company = :id_company");
+            //             $stmt->execute([
+            //                 ':name' => $value,
+            //                 ':id' => (int) $serviceId,
+            //                 ':id_company' => (int) $id,
+            //             ]);
+            //         } else {
+            //             // Если ID не найден в базе, добавляем новый номер
+            //             $stmt = $this->pdo->prepare("INSERT INTO company_services (id_company, name) VALUES (:id_company, :name)");
+            //             $stmt->execute([
+            //                 ':id_company' => (int) $id,
+            //                 ':name' => $value,
+            //             ]);
+            //         }
+            //     }
+            // }
 
             $this->pdo->commit();
             return true;
         } catch (Exception $e) {
             $this->pdo->rollBack();
-            error_log("Ошибка при обновлении компании: " . $e->getMessage());
+            echo 'Ошибка при обновлении компании: ' . $e->getMessage();
             return false;
         }
 
+        // return true;
         // try {
         //     $this->pdo->beginTransaction();
 
-        //     $id = $data['id'];
-        //     if (!$id) {
-        //         echo "Не передан id компании";
-        //         return false;
-        //     };
-
+        //     // Проверка существования компании
         //     $stmt = $this->pdo->prepare("SELECT * FROM companies WHERE id = :id");
-        //     $stmt->execute([':id' => (int) $id]);
-
-        //     $company = $stmt->fetch();
-        //     if (!$company) {
-        //         echo "Компания не найдена.";
+        //     $stmt->execute([':id' => $companyId]);
+        //     if (!$stmt->fetch()) {
+        //         echo "Ошибка: компания не найдена.";
         //         return false;
         //     }
 
-        //     $stmt = $this->pdo->prepare("SELECT * FROM page_routes WHERE id = :id");
+        //     // Обновление основных данных компании
+        //     $stmt = $this->pdo->prepare("
+        //     UPDATE companies 
+        //     SET name = :name, category_id = :category_id, city = :city, address = :address, email = :email, 
+        //         phone = :phone, site_url = :site_url, experience = :experience, intro_text = :intro_text, 
+        //         description = :description, link_map = :link_map, logo = :logo, img = :img
+        //     WHERE id = :company_id
+        // ");
+        //     $stmt->execute([
+        //         ':company_id' => $companyId,
+        //         ':name' => $data['name'],
+        //         ':category_id' => $data['categories'],
+        //         ':city' => $data['city'],
+        //         ':address' => $data['address'],
+        //         ':email' => $data['email'] ?? null,
+        //         ':phone' => $data['phone'],
+        //         ':site_url' => $data['site_url'],
+        //         ':experience' => $data['experience'] ?? null,
+        //         ':intro_text' => $data['intro_text'] ?? null,
+        //         ':description' => $data['description'] ?? null,
+        //         ':link_map' => $data['link_map'] ?? null,
+        //         ':logo' => $data['logo'],
+        //         ':img' => $data['img']
+        //     ]);
 
-        //     $stmt->execute([':id' => (int) $company['page_id']]);
-        //     $page = $stmt->fetch();
+        //     // Обновление телефонов (очищаем старые и добавляем новые)
+        //     $this->pdo->prepare("DELETE FROM company_phones WHERE id_company = :company_id")
+        //         ->execute([':company_id' => $companyId]);
 
-        //     if (!empty($data['name']) && !empty($data['alias'])) {
-        //         $trimmedPath = dirname($page['alias']) . '/';
+        //     $phones = [];
+        //     foreach ($data as $key => $value) {
+        //         if (preg_match('/^phone_(\d+)$/', $key) && !empty($value)) {
+        //             $phones[] = ['id_company' => $companyId, 'phone_number' => $value];
+        //         }
+        //     }
+        //     if (!empty($phones)) {
+        //         $stmt = $this->pdo->prepare("INSERT INTO company_phones (id_company, phone_number) VALUES (:id_company, :phone_number)");
+        //         foreach ($phones as $phone) {
+        //             $stmt->execute($phone);
+        //         }
+        //     }
 
-        //         $stmt = $this->pdo->prepare("UPDATE page_routes SET alias = :alias WHERE id = :id");
+        //     // Обновление ссылок
+        //     $this->pdo->prepare("DELETE FROM company_links WHERE id_company = :company_id")
+        //         ->execute([':company_id' => $companyId]);
 
-        //         $stmt->execute([
-        //             ':id' => (int) $company['page_id'],
-        //             ':alias' => $trimmedPath . $data['alias'],
-        //         ]);
+        //     $links = [];
+        //     foreach ($data as $key => $value) {
+        //         if (preg_match('/^link_(\d+)$/', $key, $matches) && !empty($value)) {
+        //             $index = $matches[1];
+        //             if (!empty($data["link-text_{$index}"]) && !empty($data["links_{$index}"])) {
+        //                 $links[] = [
+        //                     'id_company' => $companyId,
+        //                     'link' => $value,
+        //                     'text' => $data["link-text_{$index}"],
+        //                     'type' => $data["links_{$index}"]
+        //                 ];
+        //             }
+        //         }
+        //     }
+        //     if (!empty($links)) {
+        //         $stmt = $this->pdo->prepare("INSERT INTO company_links (id_company, link, text, type) VALUES (:id_company, :link, :text, :type)");
+        //         foreach ($links as $link) {
+        //             $stmt->execute($link);
+        //         }
+        //     }
 
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET name = :name WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':name' => $data['name'],
-        //         ]);
-        //     };
+        //     // Обновление услуг
+        //     $this->pdo->prepare("DELETE FROM company_services WHERE id_company = :company_id")
+        //         ->execute([':company_id' => $companyId]);
 
-        //     if (!empty($data['city'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET city = :city WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':city' => $data['city'],
-        //         ]);
-        //     };
+        //     $services = [];
+        //     foreach ($data as $key => $value) {
+        //         if (preg_match('/^service_(\d+)$/', $key) && !empty($value)) {
+        //             $services[] = ['id_company' => $companyId, 'name' => $value];
+        //         }
+        //     }
+        //     if (!empty($services)) {
+        //         $stmt = $this->pdo->prepare("INSERT INTO company_services (id_company, name) VALUES (:id_company, :name)");
+        //         foreach ($services as $service) {
+        //             $stmt->execute($service);
+        //         }
+        //     }
 
-        //     if (!empty($data['address'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET address = :address WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':address' => $data['address'],
-        //         ]);
-        //     };
+        //     // Обновление портфолио
+        //     $this->pdo->prepare("DELETE FROM company_portfolios WHERE id_company = :company_id")
+        //         ->execute([':company_id' => $companyId]);
 
-        //     if (!empty($data['link_map'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET link_map = :link_map WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':link_map' => $data['link_map'],
-        //         ]);
-        //     };
-
-        //     if (!empty($data['email'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET email = :email WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':email' => $data['email'],
-        //         ]);
-        //     };
-
-        //     if (!empty($data['phone'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET phone = :phone WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':phone' => $data['phone'],
-        //         ]);
-        //     };
-
-        //     if (!empty($data['site_url'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET site_url = :site_url WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':site_url' => $data['site_url'],
-        //         ]);
-        //     };
-
-        //     if (!empty($data['experience'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET experience = :experience WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':experience' => $data['experience'],
-        //         ]);
-        //     };
-
-        //     if (!empty($data['intro_text'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET intro_text = :intro_text WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':intro_text' => $data['intro_text'],
-        //         ]);
-        //     };
-
-        //     if (!empty($data['description'])) {
-        //         $stmt = $this->pdo->prepare("UPDATE companies SET description = :description WHERE id = :id");
-        //         $stmt->execute([
-        //             ':id' => (int) $id,
-        //             ':description' => $data['description'],
-        //         ]);
-        //     };
+        //     $portfolios = [];
+        //     foreach ($data as $key => $value) {
+        //         if (preg_match('/^project_(\d+)$/', $key, $matches) && !empty($value)) {
+        //             $index = $matches[1];
+        //             if (!empty($data["project_img_{$index}"])) {
+        //                 $portfolios[] = [
+        //                     'id_company' => $companyId,
+        //                     'name' => $value,
+        //                     'img' => $data["project_img_{$index}"]
+        //                 ];
+        //             }
+        //         }
+        //     }
+        //     if (!empty($portfolios)) {
+        //         $stmt = $this->pdo->prepare("INSERT INTO company_portfolios (id_company, name, img) VALUES (:id_company, :name, :img)");
+        //         foreach ($portfolios as $portfolio) {
+        //             $stmt->execute($portfolio);
+        //         }
+        //     }
 
         //     $this->pdo->commit();
         //     return true;
@@ -516,141 +912,6 @@ class Company
         //     error_log("Ошибка при обновлении компании: " . $e->getMessage());
         //     return false;
         // }
-
-
-
-
-
-
-
-
-        return true;
-        try {
-            $this->pdo->beginTransaction();
-
-            // Проверка существования компании
-            $stmt = $this->pdo->prepare("SELECT * FROM companies WHERE id = :id");
-            $stmt->execute([':id' => $companyId]);
-            if (!$stmt->fetch()) {
-                echo "Ошибка: компания не найдена.";
-                return false;
-            }
-
-            // Обновление основных данных компании
-            $stmt = $this->pdo->prepare("
-            UPDATE companies 
-            SET name = :name, category_id = :category_id, city = :city, address = :address, email = :email, 
-                phone = :phone, site_url = :site_url, experience = :experience, intro_text = :intro_text, 
-                description = :description, link_map = :link_map, logo = :logo, img = :img
-            WHERE id = :company_id
-        ");
-            $stmt->execute([
-                ':company_id' => $companyId,
-                ':name' => $data['name'],
-                ':category_id' => $data['categories'],
-                ':city' => $data['city'],
-                ':address' => $data['address'],
-                ':email' => $data['email'] ?? null,
-                ':phone' => $data['phone'],
-                ':site_url' => $data['site_url'],
-                ':experience' => $data['experience'] ?? null,
-                ':intro_text' => $data['intro_text'] ?? null,
-                ':description' => $data['description'] ?? null,
-                ':link_map' => $data['link_map'] ?? null,
-                ':logo' => $data['logo'],
-                ':img' => $data['img']
-            ]);
-
-            // Обновление телефонов (очищаем старые и добавляем новые)
-            $this->pdo->prepare("DELETE FROM company_phones WHERE id_company = :company_id")
-                ->execute([':company_id' => $companyId]);
-
-            $phones = [];
-            foreach ($data as $key => $value) {
-                if (preg_match('/^phone_(\d+)$/', $key) && !empty($value)) {
-                    $phones[] = ['id_company' => $companyId, 'phone_number' => $value];
-                }
-            }
-            if (!empty($phones)) {
-                $stmt = $this->pdo->prepare("INSERT INTO company_phones (id_company, phone_number) VALUES (:id_company, :phone_number)");
-                foreach ($phones as $phone) {
-                    $stmt->execute($phone);
-                }
-            }
-
-            // Обновление ссылок
-            $this->pdo->prepare("DELETE FROM company_links WHERE id_company = :company_id")
-                ->execute([':company_id' => $companyId]);
-
-            $links = [];
-            foreach ($data as $key => $value) {
-                if (preg_match('/^link_(\d+)$/', $key, $matches) && !empty($value)) {
-                    $index = $matches[1];
-                    if (!empty($data["link-text_{$index}"]) && !empty($data["links_{$index}"])) {
-                        $links[] = [
-                            'id_company' => $companyId,
-                            'link' => $value,
-                            'text' => $data["link-text_{$index}"],
-                            'type' => $data["links_{$index}"]
-                        ];
-                    }
-                }
-            }
-            if (!empty($links)) {
-                $stmt = $this->pdo->prepare("INSERT INTO company_links (id_company, link, text, type) VALUES (:id_company, :link, :text, :type)");
-                foreach ($links as $link) {
-                    $stmt->execute($link);
-                }
-            }
-
-            // Обновление услуг
-            $this->pdo->prepare("DELETE FROM company_services WHERE id_company = :company_id")
-                ->execute([':company_id' => $companyId]);
-
-            $services = [];
-            foreach ($data as $key => $value) {
-                if (preg_match('/^service_(\d+)$/', $key) && !empty($value)) {
-                    $services[] = ['id_company' => $companyId, 'name' => $value];
-                }
-            }
-            if (!empty($services)) {
-                $stmt = $this->pdo->prepare("INSERT INTO company_services (id_company, name) VALUES (:id_company, :name)");
-                foreach ($services as $service) {
-                    $stmt->execute($service);
-                }
-            }
-
-            // Обновление портфолио
-            $this->pdo->prepare("DELETE FROM company_portfolios WHERE id_company = :company_id")
-                ->execute([':company_id' => $companyId]);
-
-            $portfolios = [];
-            foreach ($data as $key => $value) {
-                if (preg_match('/^project_(\d+)$/', $key, $matches) && !empty($value)) {
-                    $index = $matches[1];
-                    if (!empty($data["project_img_{$index}"])) {
-                        $portfolios[] = [
-                            'id_company' => $companyId,
-                            'name' => $value,
-                            'img' => $data["project_img_{$index}"]
-                        ];
-                    }
-                }
-            }
-            if (!empty($portfolios)) {
-                $stmt = $this->pdo->prepare("INSERT INTO company_portfolios (id_company, name, img) VALUES (:id_company, :name, :img)");
-                foreach ($portfolios as $portfolio) {
-                    $stmt->execute($portfolio);
-                }
-            }
-
-            $this->pdo->commit();
-            return true;
-        } catch (Exception $e) {
-            $this->pdo->rollBack();
-            error_log("Ошибка при обновлении компании: " . $e->getMessage());
-            return false;
-        }
     }
 
     /**
@@ -680,6 +941,26 @@ class Company
                         ':id' => (int) $data['phone_id']
                     ]);
                     break;
+                case 'service':
+                    if (empty($data['service_id'])) {
+                        echo 'Ошибка: передайте id услуги';
+                        return false;
+                    }
+                    $stmt = $this->pdo->prepare("DELETE FROM company_services WHERE id = :id");
+                    $stmt->execute([
+                        ':id' => (int) $data['service_id']
+                    ]);
+                    break;
+                case 'link':
+                    if (empty($data['link_id'])) {
+                        echo 'Ошибка: передайте id ссылки';
+                        return false;
+                    }
+                    $stmt = $this->pdo->prepare("DELETE FROM company_links WHERE id = :id");
+                    $stmt->execute([
+                        ':id' => (int) $data['link_id']
+                    ]);
+                    break;
                 default:
                     break;
             }
@@ -692,7 +973,6 @@ class Company
             return false;
         }
     }
-
 
     /**
      * Метод удаления компании
@@ -736,8 +1016,8 @@ class Company
             $stmt->execute([':id' => $id]);
 
             // Удаляем связанные записи в company_services
-            $stmt = $this->pdo->prepare("DELETE FROM company_services WHERE id_company = :id");
-            $stmt->execute([':id' => $id]);
+            // $stmt = $this->pdo->prepare("DELETE FROM company_services WHERE id_company = :id");
+            // $stmt->execute([':id' => $id]);
 
             // Удаляем связанную запись в page_routes, если есть
             if ($pageId) {

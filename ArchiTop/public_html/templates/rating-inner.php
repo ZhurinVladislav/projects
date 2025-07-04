@@ -17,6 +17,72 @@
 // $servicesList = $ratingObj->getServicesListById($category['id']);
 // $companiesList = $companyObj->getListByCategoryId($category['id']);
 
+// global $pdo;
+
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Company.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/functions/normalizeStringCount.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Rating.php';
+
+// $WORDS_REVIEWS = ['отзыв', 'отзыва', 'отзывов'];
+// $page_title = $page_title ?? 'Рейтинг архитектурных компаний в Краснодаре ArchiTop';
+// $page_description = $page_description ?? 'Рейтинг архитектурных компаний в Краснодаре ArchiTop';
+
+// $ratingObj = new Rating($pdo);
+// $companyObj = new Company($pdo);
+
+// // $page_id = $_GET['page_id'] ?? $_COOKIE['page_id'] ?? null;
+// $category = $ratingObj->getCategoryByPageId($page_id);
+// $servicesList = $ratingObj->getServicesListById($category['id']);
+// $companiesList = $companyObj->getListByCategoryId($category['id']);
+
+// try {
+//     // Получаем GET параметры
+//     $type = isset($_GET['type']) ? urldecode(trim($_GET['type'])) : '';
+//     $rating = isset($_GET['rating']) ? (float)$_GET['rating'] : 0;
+
+//     // Базовый SQL-запрос с JOIN для получения alias
+//     $sql = "SELECT DISTINCT c.*, pr.alias 
+//             FROM companies c
+//             LEFT JOIN page_routes pr ON c.page_id = pr.id";
+
+//     $conditions = [];
+//     $params = [];
+
+//     // Если указан параметр type (услуга), добавляем нужные JOIN и WHERE
+//     if (!empty($type)) {
+//         $sql .= " INNER JOIN company_service_main csm ON c.id = csm.company_id
+//                   INNER JOIN services s ON csm.service_id = s.id";
+//         $conditions[] = "s.name = :type";
+//         $params[':type'] = $type;
+//     }
+
+//     // Если указан параметр rating (рейтинг), добавляем фильтр
+//     if ($rating > 0) {
+//         $conditions[] = "c.rating >= :rating";
+//         $params[':rating'] = $rating;
+//     }
+
+//     // Если нет фильтров, то выводим только компании нужной категории
+//     if (empty($type) && $rating == 0 && !empty($category)) {
+//         $conditions[] = "c.category_id = :category_id";
+//         $params[':category_id'] = $category['id'];
+//     }
+
+//     // Добавляем условия WHERE, если они есть
+//     if (!empty($conditions)) {
+//         $sql .= " WHERE " . implode(" AND ", $conditions);
+//     }
+
+//     // Подготовка и выполнение запроса
+//     $stmt = $pdo->prepare($sql);
+//     $stmt->execute($params);
+
+//     // Получаем результат
+//     $companiesList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// } catch (PDOException $e) {
+//     die("Ошибка подключения: " . $e->getMessage());
+// }
+
 global $pdo;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Company.php';
@@ -30,58 +96,55 @@ $page_description = $page_description ?? 'Рейтинг архитектурн�
 $ratingObj = new Rating($pdo);
 $companyObj = new Company($pdo);
 
-// $page_id = $_GET['page_id'] ?? $_COOKIE['page_id'] ?? null;
+// Получаем категорию по page_id
 $category = $ratingObj->getCategoryByPageId($page_id);
 $servicesList = $ratingObj->getServicesListById($category['id']);
 $companiesList = $companyObj->getListByCategoryId($category['id']);
 
 try {
     // Получаем GET параметры
-    $type = isset($_GET['type']) ? urldecode(trim($_GET['type'])) : '';
+    $type = !empty($_GET['type']) ? urldecode(trim($_GET['type'])) : null;
     $rating = isset($_GET['rating']) ? (float)$_GET['rating'] : 0;
 
-    // Базовый SQL-запрос с JOIN для получения alias
+    // Базовый SQL-запрос для выборки компаний с alias
     $sql = "SELECT DISTINCT c.*, pr.alias 
             FROM companies c
-            LEFT JOIN page_routes pr ON c.page_id = pr.id";
+            JOIN company_categories cc ON c.id = cc.company_id
+            JOIN page_routes pr ON c.page_id = pr.id";
 
-    $conditions = [];
-    $params = [];
+    $conditions = ["cc.category_id = :category_id"];
+    $params = [':category_id' => $category['id']];
 
-    // Если указан параметр type (услуга), добавляем нужные JOIN и WHERE
-    if (!empty($type)) {
-        $sql .= " INNER JOIN company_service_main csm ON c.id = csm.company_id
-                  INNER JOIN services s ON csm.service_id = s.id";
-        $conditions[] = "s.name = :type";
+    // Фильтр по услуге (type)
+    if ($type) {
+        $sql .= " JOIN services s ON cc.category_id = s.category_id
+                  LEFT JOIN company_service_exclusions cse 
+                  ON s.id = cse.service_id AND cse.company_id = c.id";
+        $conditions[] = "s.name = :type AND cse.service_id IS NULL";
         $params[':type'] = $type;
     }
 
-    // Если указан параметр rating (рейтинг), добавляем фильтр
+    // Фильтр по рейтингу
     if ($rating > 0) {
         $conditions[] = "c.rating >= :rating";
         $params[':rating'] = $rating;
     }
 
-    // Если нет фильтров, то выводим только компании нужной категории
-    if (empty($type) && $rating == 0 && !empty($category)) {
-        $conditions[] = "c.category_id = :category_id";
-        $params[':category_id'] = $category['id'];
-    }
-
-    // Добавляем условия WHERE, если они есть
+    // Добавляем WHERE-условия
     if (!empty($conditions)) {
         $sql .= " WHERE " . implode(" AND ", $conditions);
     }
 
-    // Подготовка и выполнение запроса
+    // Выполняем запрос
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
 
-    // Получаем результат
+    // Получаем список компаний
     $companiesList = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     die("Ошибка подключения: " . $e->getMessage());
 }
+
 
 ?>
 
@@ -104,7 +167,7 @@ try {
                 </li>
                 <li class="breadcrumb-list__item">
                     <a class="breadcrumb-list__item-link" href="/rating">
-                        Рейтинг услуг в Краснодарском крае
+                        Рейтинг компаний в Краснодарском крае
                     </a>
                 </li>
                 <li class="breadcrumb-list__item">
@@ -369,7 +432,7 @@ try {
                                     <div class="card__img-wrap">
                                         <img
                                             class="card__img"
-                                            data-src="./app/img/projects/<?= htmlspecialchars($company['img']) ?>"
+                                            data-src="./images/companies/<?= htmlspecialchars($company['id']) ?>/<?= htmlspecialchars($company['img']) ?>"
                                             alt="<?= htmlspecialchars($company['name']); ?>">
                                     </div>
                                     <div class="card__content">
@@ -378,7 +441,7 @@ try {
                                                 class="card-info__title-wrap card-heading">
                                                 <img
                                                     class="card-heading__img"
-                                                    data-src="./app/img/projects/<?= htmlspecialchars($company['logo']) ?>"
+                                                    data-src="./images/companies/<?= htmlspecialchars($company['id']) ?>/logo/<?= htmlspecialchars($company['logo']) ?>"
                                                     alt="Логотип <?= htmlspecialchars($company['name']) ?>" />
                                                 <h3 class="card-heading__title">
                                                     Архитектурное бюро «<?= htmlspecialchars($company['name']) ?>»
@@ -396,6 +459,7 @@ try {
                                                     <a
                                                         class="text-info__link text-link"
                                                         href="http://<?= htmlspecialchars($company['site_url']) ?>"
+                                                        target="_blank"
                                                         aria-label="Перейти на сайт архитекторов <?= htmlspecialchars($company['name']) ?>">
                                                         <?= htmlspecialchars($company['site_url']) ?>
                                                     </a>

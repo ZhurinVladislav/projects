@@ -33,7 +33,7 @@ $ratingList = $ratingObj->getList();
                 <li class="breadcrumb-list__item">
                     <span
                         class="breadcrumb-list__item-link breadcrumb-list__item-link_nolink">
-                        Рейтинг услуг в Краснодарском крае
+                        Рейтинг компаний в Краснодарском крае
                     </span>
                 </li>
             </ul>
@@ -43,7 +43,7 @@ $ratingList = $ratingObj->getList();
     <section class="main-section__categories categories section-reset">
         <div class="categories__container container">
             <h2 class="categories__title h-2">
-                Рейтинг услуг в
+                Рейтинг компаний в
                 <span class="categories__title-color text-color">
                     Краснодарском крае
                 </span>

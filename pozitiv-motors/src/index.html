@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO -->
+        <title>Мотошкола в Краснодаре</title>
+        <link
+            rel="shortcut icon"
+            href="./app/img/favicon.ico"
+            type="image/x-icon" />
+        <!-- styles -->
+        <link rel="stylesheet" href="./app/css/style.min.css" />
+        <!-- scripts -->
+        <script src="./app/js/libs/preloader.min.js"></script>
+        <script src="./app/js/libs/lazy-load.min.js"></script>
+        <script src="./app/js/libs/popup.min.js" defer></script>
+        <script src="./app/js/libs/swiper.min.js" defer></script>
+        <script src="./app/js/index.min.js" type="module"></script>
+    </head>
+
+    <body>
+        <!-- preloader -->
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <header class="header">
+            <!-- header-top -->
+            <div class="header__top header-top">
+                <div class="header-top__container container">
+                    <p class="header-top__text">
+                        Мотошкола
+                        <span class="header-top__text-color text-color">
+                            Ваша безопасность - наша цель
+                        </span>
+                    </p>
+                    <a
+                        class="header-top__logo-link logo"
+                        href="/"
+                        aria-label="Перейти на главную страницу туристическое агенство">
+                        <img
+                            class="logo__img"
+                            src="./app/img/pozitv_logo.png"
+                            alt="Логотип Европа-Тур" />
+                    </a>
+                    <button
+                        class="header-top__btn btn js-popup-open"
+                        data-open-popup="popup-feedback"
+                        aria-label="Открыть формы обратной связи">
+                        Заполнить заявку
+                    </button>
+                    <a
+                        class="header-top__link link-text link-text_ph"
+                        href="tel:88002008348"
+                        aria-label="Позвонить по номеру 8-800-200-83-48">
+                        8-800-200-83-48
+                    </a>
+                </div>
+            </div>
+            <!-- header-bottom -->
+            <div class="header__bottom header-bottom">
+                <div class="header-bottom__container container">
+                    <a
+                        class="header-bottom__link link-text link-text_sm"
+                        href="/"
+                        aria-label="Перейти на главную страницу сайта">
+                        Pozitiv-motors.ru
+                    </a>
+                    <nav class="header-bottom__nav header-bottom-nav">
+                        <ul class="header-bottom-nav__list">
+                            <li class="header-bottom-nav__item active">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="/"
+                                    aria-label="Перейти на главную страницу">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./service.html"
+                                    aria-label="Перейти на страницу Базовый курс">
+                                    Базовый курс
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./service.html"
+                                    aria-label="Перейти на страницу Категория А">
+                                    Категория "А"
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./reviews.html"
+                                    aria-label="Перейти на страницу отзывы">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./galleries.html"
+                                    aria-label="Перейти на страницу галерей">
+                                    Галерея
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./contacts.html"
+                                    aria-label="Перейти на страницу контактов">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item parent">
+                                <button
+                                    class="header-bottom-nav__btn btn-text"
+                                    aria-label="Открыть выпадающее меню"
+                                    tabindex="0"
+                                    aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <span class="link-text__descr">
+                                        Групповые туры
+                                    </span>
+                                    <svg class="btn-text__icon">
+                                        <use
+                                            xlink:href="./app/img/icons/icons.svg#arrow-list"></use>
+                                    </svg>
+                                </button>
+                                <ul
+                                    class="header-bottom-nav__dropdown dropdown"
+                                    role="menu">
+                                    <li class="dropdown__item active">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Базовый курс
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Женский курс
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            PRO-курс
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Категория А
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотошкола зимой на юге
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотошкола для детей
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотошкола Краснодар
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Обучение категории А
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотосервис
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотоэвакуатор
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Страховка на мотоцикл
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мототрек
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотоджимхана
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Чемпионат по джимхане 2018 - 1 Этап
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Чемпионат по джимхане 2017 - 1 Этап
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Чемпионат по джимхане 2017 - 2 Этап
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Подарочный Сертификат
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Магазины Партнёры
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Прохождение поворотов
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button
+                        id="menu-toggle"
+                        class="header-bottom__menu-toggle menu-toggle"
+                        aria-label="Открыть мобильное меню">
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                    <!-- menu-mobile -->
+                    <div
+                        id="menu-mobile"
+                        class="header-bottom__menu-mobile menu-mobile">
+                        <nav class="menu-mobile__menu">
+                            <ul class="menu-mobile__menu-list menu-list">
+                                <li class="menu-list__item active">
+                                    <a
+                                        class="menu-list__link link-text active"
+                                        href="/"
+                                        aria-label="Перейти на главную страницу">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./service.html"
+                                        aria-label="Перейти на страницу горящие туры">
+                                        Базовый курс
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./service.html"
+                                        aria-label="Перейти на страницу Категория А">
+                                        Категория "А"
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./reviews.html"
+                                        aria-label="Перейти на страницу отзывы">
+                                        Отзывы
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./galleries.html"
+                                        aria-label="Перейти на страницу галерей">
+                                        Галерея
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./contacts.html"
+                                        aria-label="Перейти на страницу контактов">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="menu-list__item parent">
+                                    <button
+                                        class="menu-list__btn-text btn-text"
+                                        href="./reports.html"
+                                        aria-label="Перейти на страницу групповые туры"
+                                        tabindex="0"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Групповые туры
+                                    </button>
+                                    <button
+                                        class="menu-list__btn js-mobile-list-btn">
+                                        <svg class="menu-list__btn-icon">
+                                            <use
+                                                xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                        </svg>
+                                    </button>
+                                    <ul
+                                        class="menu-list__dropdown dropdown-mob js-mobile-list"
+                                        role="menu">
+                                        <li class="dropdown-mob__item active">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Базовый курс
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item active">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                PRO-курс
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Категория А
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотошкола зимой на юге
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотошкола для детей
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотошкола Краснодар
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Обучение категории А
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотосервис
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотоэвакуатор
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Страховка на мотоцикл
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мототрек
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотоджимхана
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Чемпионат по джимхане 2018 - 1
+                                                Этап
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Чемпионат по джимхане 2017 - 1
+                                                Этап
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Чемпионат по джимхане 2017 - 2
+                                                Этап
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Подарочный Сертификат
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Магазины Партнёры
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Прохождение поворотов
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <!-- hero -->
+            <section class="hero">
+                <h1 class="hero__title-hidden visually-hidden"></h1>
+                <div class="hero__container container">
+                    <div id="hero-slider" class="hero__slider slider swiper">
+                        <button
+                            id="hero-slider-prev"
+                            class="hero__slider-btn slider__btn slider__btn_prev"
+                            aria-label="Перейти на предыдущий слайд">
+                            <svg class="slider__btn-icon">
+                                <use
+                                    href="./app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="slider__wrap swiper-wrapper">
+                            <div class="slider__slide slide swiper-slide">
+                                <div
+                                    class="slide__img-bg"
+                                    data-image="./app/img/hero/img-1.jpg"></div>
+                                <div class="slide__img-wrap">
+                                    <img
+                                        class="slide__img"
+                                        data-src="./app/img/hero/img-1.jpg"
+                                        alt="Тестовое изображение" />
+                                </div>
+                            </div>
+                            <div class="slider__slide slide swiper-slide">
+                                <div
+                                    class="slide__img-bg"
+                                    data-image="./app/img/hero/img-2.jpg"></div>
+                                <div class="slide__img-wrap">
+                                    <img
+                                        class="slide__img"
+                                        data-src="./app/img/hero/img-2.jpg"
+                                        alt="Тестовое изображение" />
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            id="hero-slider-next"
+                            class="hero__slider-btn slider__btn slider__btn_next"
+                            aria-label="Перейти на следующий слайд">
+                            <svg class="slider__btn-icon">
+                                <use
+                                    href="./app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- services -->
+            <section class="services section-p">
+                <h2 class="services__title-hidden visually-hidden">
+                    Мототуры в Краснодаре
+                </h2>
+                <div class="services__container container">
+                    <ul class="services__list">
+                        <li class="services__list-item">
+                            <a
+                                class="services__list-item-link services-link"
+                                href="#"
+                                aria-label="Перейти на страницу тура">
+                                <img
+                                    class="services-link__img"
+                                    data-src="./app/img/services/img-1.jpg"
+                                    alt="Прохождение поворотов" />
+                                <p class="services-link__text">
+                                    Прохождение поворотов
+                                </p>
+                            </a>
+                        </li>
+                        <li class="services__list-item">
+                            <a
+                                class="services__list-item-link services-link"
+                                href="#"
+                                aria-label="Перейти на страницу тура">
+                                <img
+                                    class="services-link__img"
+                                    data-src="./app/img/services/img-2.jpg"
+                                    alt="Инструкторы" />
+                                <p class="services-link__text">Инструкторы</p>
+                            </a>
+                        </li>
+                        <li class="services__list-item">
+                            <a
+                                class="services__list-item-link services-link"
+                                href="#"
+                                aria-label="Перейти на страницу тура">
+                                <img
+                                    class="services-link__img"
+                                    data-src="./app/img/services/img-3.jpg"
+                                    alt="Мотошкола зимой на Юге" />
+                                <p class="services-link__text">
+                                    Мотошкола зимой на Юге
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- reviews -->
+            <section class="reviews section">
+                <h2 class="reviews__title-hidden visually-hidden">
+                    Отзывы на мототуры в Краснодаре
+                </h2>
+                <div class="reviews__container container">
+                    <div class="reviews__content-top">
+                        <h2 class="reviews__title title-2">Последние отзывы</h2>
+                        <a
+                            class="reviews__link link-text-inv"
+                            href="./reviews.html"
+                            aria-label="Перейти на всё отзывы">
+                            <svg class="link-text-inv__icon">
+                                <use
+                                    href="./app/img/icons/icons.svg#review"></use>
+                            </svg>
+                            <span class="link-text-inv__descr">Все отзывы</span>
+                        </a>
+                    </div>
+                    <ul class="reviews__list">
+                        <li class="reviews__list-item review">
+                            <p class="review__fio">Михаил Боярский</p>
+                            <div class="review__date date">
+                                <p class="date__day">04.10.2021</p>
+                                <p class="date__time">19:33</p>
+                            </div>
+                            <div class="review__content content">
+                                <p class="content__p">
+                                    Начну из далека - более 20 лет я "бредил"
+                                    мотоциклом, ещё по студенчеству в Питере
+                                    увидел райдера на чоппере в "живую" (до
+                                    этого конечно много раз видел в фильмах,
+                                    один только "Терминатор 2" вгонял меня в
+                                    экстаз когда Арни в начале фильма, весь в
+                                    "коже" выходил из бара и садился на
+                                    HD"FatBoy") и решил, что когда-нибудь у меня
+                                    тоже будет такой мот. С годами желание
+                                    крепло, нравились именно круизеры и чопперы,
+                                    но вот возможности осуществить мечту не
+                                    было, несколько раз я мог купить себе
+                                    желанный мотоцикл но... всё время нужно было
+                                    выбирать между нуждами семьи и мечтой, и
+                                    конечно мечта отодвигалась в сторону. Так
+                                    было до сентября этого года, а в сентябре
+                                    мой шеф сказал, что халява кончилась (я
+                                    работал прям рядом с домом, две минут не
+                                    спешным шагом) и теперь нужно ездить на
+                                    работу к чёрту на кулички, машина у нас в
+                                    семье одна и жене она нужна больше чем мне,
+                                    да ещё и работаем теперь в диаметрально
+                                    противоположных сторонах друг от друга.
+                                    Проехав со мной пару раз на работу, чтоб
+                                    забрать машину жена сказала - "нафиг надо"
+                                    потеря времени на дорогу составляла от 2,5
+                                    часов, к тому же вставать приходилось рано.
+                                    Был созван семейный совет на котором
+                                    постановили, что нормальную машину мы сейчас
+                                    не сможем взять, а потому лучше взять мне
+                                    мотоцикл. Интересующий меня мот продавался
+                                    ещё с весны и я его чуть ли не каждый день
+                                    "пас" на Авито. Как только совет вынес
+                                    решение созвонился с владельцем, съездил,
+                                    посмотрел, оставил залог... и вот тут
+                                    включился мозг - ездить по сути я не умею,
+                                    ещё мальчишкой конечно гонял с пацанами на
+                                    ИЖах, но гоняли-то в гаражах и немного в
+                                    деревне у деда по просёлку, в более зрелом
+                                    возрасте катал на скутерах но скутер это не
+                                    байк в 250кг весом... Поэтому решил -
+                                    сначала надо научится, а уж потом садится на
+                                    мечту всей своей сознательной жизни, благо
+                                    до покупки мотоцикла было ещё время (деньги
+                                    лежали на депозите и снять их можно было
+                                    только через две недели). Полез в просторы
+                                    интернета и к своему удивлению обнаружил,
+                                    что МОТОшкола в Краснодаре по сути одна -
+                                    нет, конечно на категорию "А" можно
+                                    обучиться не в одной автошколе, но там как и
+                                    на категории "В" натаскивают на сдачу
+                                    экзамена, а мне нужны практические навыки
+                                    владения мотоциклом. После прочтения отзывов
+                                    о всех и вся выбор был очевиден - Pozitiv
+                                    Motors. Оставил заявку на сайте и ушел в
+                                    работу с головой, даже уже забыл о ней и тут
+                                    звонок - звонил Иван, пообщались, он спросил
+                                    какой уровень моего владения мотоциклом на,
+                                    что я честно признался, что уровень моего
+                                    мотоциклетного "Кунг-Фу" - нулевой, он
+                                    предложил пройти базовый курс, договорились
+                                    о графике занятий. Честно говоря стоимость
+                                    курса меня, мягко говоря, не обрадовала, но
+                                    после первого же занятия я понял - каждая
+                                    копейка стоит своих вложений. ОГРОМНОЕ
+                                    спасибо Pozitiv Motors и лично Ивану за то
+                                    что вы делаете - меняете мир (как минимум
+                                    мотомир) к лучшему. С уверенностью могу
+                                    сказать - навыки полученные мною уже на
+                                    базовом курсе помогли мне спокойно перегнать
+                                    купленный мотоцикл из Горячего Ключа в
+                                    Краснодар и ездить ежедневно на
+                                    работу-домой, наслаждаясь каждой поездкой.
+                                    Можно долго петь дифирамбы ребятам из
+                                    Pozitiv Motors но лучше один раз увидеть чем
+                                    миллион раз услышать, по мимо того, что к
+                                    тебе чутко относятся на занятиях и
+                                    выстраивают учебный процесс исходя из твоих
+                                    успехов и неудач так ещё и после окончания
+                                    обучения тебя не бросают и всячески помогают
+                                    практическими советами, наставлениями. Своим
+                                    друзьям однозначно буду советовать проходить
+                                    обучение только в Pozitiv Motors!!!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="reviews__list-item review">
+                            <p class="review__fio">Владимир М.</p>
+                            <div class="review__date date">
+                                <p class="date__day">01.09.2021</p>
+                                <p class="date__time">10:13</p>
+                            </div>
+                            <div class="review__content content">
+                                <p>
+                                    Шли года.. В жизни стало стало мало приятных
+                                    ощущений и РАДОСТИ.. Решил немного поменять
+                                    стиль жизни и транспорт для передвижения...
+                                    Решил попробовать двухколесного друга... Так
+                                    как я являюсь отцом двух прекрасных сыновей
+                                    и достаточно импульсивным человеком, было
+                                    принято решение в первую очередь получить
+                                    очень полезные навыки и знания, экипировку,
+                                    а уже потом обзавестись транспортным
+                                    средством. Простейшим способом (по рейтингу
+                                    в интернете) для получения навыков была
+                                    выбрана Мото школа "Позитив". Прошёл курс
+                                    подготовки, из которого понял, что раньше
+                                    ничего не понимал😳, экипировка помогает
+                                    даже на скорости 2 км/ч. В результате
+                                    посещения Мото школы я обрёл нормальную
+                                    экипировку ( по совету сэнсейа и благодаря
+                                    его хорошей скидки в магазинах экипа) и
+                                    очень много очень полезных навыков. Дальше
+                                    буду приобретать железного коня и по
+                                    возможности посещать занятия для закрепления
+                                    навыков ( немного реже, но с тем же
+                                    удовольствием). Огромное спасибо Ивану за
+                                    отношение и опыт. Советую всем просто
+                                    попробовать, там сами решите - нужнен ли
+                                    этот навык Вам.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- feedback -->
+            <section class="feedback section-p-sm">
+                <h2 class="feedback__title-hidden visually-hidden">
+                    Оставить заявку
+                </h2>
+                <div class="feedback__container container">
+                    <div
+                        class="feedback__content-wrap"
+                        data-image="./app/img/feedback/bg-img.png">
+                        <form class="feedback__form form">
+                            <div class="form__field field">
+                                <label class="field__label label" for="name">
+                                    Имя
+                                </label>
+                                <input
+                                    id="name"
+                                    class="field__input input"
+                                    type="text"
+                                    name="name" />
+                            </div>
+                            <div class="form__field field">
+                                <label class="field__label label" for="e-mail">
+                                    E-mail
+                                </label>
+                                <input
+                                    id="e-mail"
+                                    class="field__input input"
+                                    type="email"
+                                    name="e-mail" />
+                            </div>
+                            <div class="form__field field field_btn-wrap">
+                                <label class="field__label label" for="phone">
+                                    Телефон
+                                </label>
+                                <input
+                                    id="phone"
+                                    class="field__input input"
+                                    type="phone"
+                                    name="phone" />
+                                <button
+                                    class="field__btn btn"
+                                    aria-label="Оставить заявку на мототур в Краснодаре">
+                                    Оставить заявку
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- services-info -->
+            <section class="services-info section-p-sm">
+                <h2 class="services-info__title-hidden visually-hidden">
+                    Информация о мотокурсах в Краснодаре
+                </h2>
+                <div class="services-info__container container">
+                    <h2 class="services-info__title title-2">Базовый курс</h2>
+                    <div class="services-info__content-wrap">
+                        <div class="services-info__text-wrap">
+                            <p class="services-info__text">
+                                Варианты курсов обучения вождению на мотоцикле
+                            </p>
+                        </div>
+                        <ul class="services-info__list">
+                            <li
+                                class="services-info__list-item services-info-item">
+                                <div class="services-info-item__content-left">
+                                    <div
+                                        class="services-info-item__title-wrap text-bg">
+                                        <h3 class="text-bg__text title-3">
+                                            Курс "Start"
+                                        </h3>
+                                    </div>
+                                    <ul class="services-info-item__list">
+                                        <li
+                                            class="services-info-item__list-item">
+                                            В стоимость входит:
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            4 часа индивидуальных тренировок с
+                                            инструктором
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Полная экипировка
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Аренда 1 мотоцикла
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Тренировки в только в буднии дни!
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="services-info-item__content-right">
+                                    <p class="services-info-item__text">
+                                        Это индивидуальный или групповой курс
+                                        обучения вождению мотоцикла.
+                                        Закладываются базовые навыки: посадка,
+                                        работа рулем, "чувство единого движения"
+                                        с мотоциклом и понимания принципов
+                                        управления.Данный курс может пойти в
+                                        зачет курсов Opening или Classic.
+                                    </p>
+                                </div>
+                            </li>
+                            <li
+                                class="services-info__list-item services-info-item">
+                                <div class="services-info-item__content-left">
+                                    <div
+                                        class="services-info-item__title-wrap text-bg">
+                                        <h3 class="text-bg__text title-3">
+                                            Базовый курс "Opening"
+                                        </h3>
+                                    </div>
+                                    <ul class="services-info-item__list">
+                                        <li
+                                            class="services-info-item__list-item">
+                                            В стоимость входит:
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            10 часов индивидуальных тренировок с
+                                            инструктором
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Полная экипировка
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Аренда 2х мотоциклов
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Тренировки по расписанию (удобное
+                                            для Вас !)
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="services-info-item__content-right">
+                                    <p class="services-info-item__text">
+                                        Перед началом обучения вождению
+                                        мотоциклом на базовом уровне, в ходе
+                                        индивидуальных тренировок с
+                                        инструкторами Вы ознакомитесь с самыми
+                                        основными техническими деталями
+                                        (механизмы и узлы) которые положат
+                                        начало плодотворному обучению. После
+                                        прохождения курса, в который входит
+                                        предоставление аренды мотоцикла и полной
+                                        экипировки, Вы сможете узнать обо всех
+                                        принципах работы мотоцикла.
+                                    </p>
+                                </div>
+                            </li>
+                            <li
+                                class="services-info__list-item services-info-item">
+                                <div class="services-info-item__content-left">
+                                    <div
+                                        class="services-info-item__title-wrap text-bg">
+                                        <h3 class="text-bg__text title-3">
+                                            Курс "Classic"
+                                        </h3>
+                                    </div>
+                                    <ul class="services-info-item__list">
+                                        <li
+                                            class="services-info-item__list-item">
+                                            В стоимость входит:
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            16 часов индивидуальных тренировок с
+                                            инструктором
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Полная экипировка
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Аренда 3-4х мотоциклов
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Гибкое расписание (удобное для Вас
+                                            !)
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="services-info-item__content-right">
+                                    <p class="services-info-item__text">
+                                        Профессиональный и индивидуальный подход
+                                        наших инструкторов позволит Вам покорить
+                                        мотоцикл и овладеть его управлением в
+                                        совершенстве. Цель данного курса –
+                                        научить Вас безопасно и уверенно
+                                        управлять мотоциклом, а так же освоить
+                                        множество технических деталей и
+                                        элементов. Особенностью курса является
+                                        тот момент, что расписание занятий
+                                        составляется по индивидуальному,
+                                        удобному для Вас графику.
+                                    </p>
+                                </div>
+                            </li>
+                            <li
+                                class="services-info__list-item services-info-item">
+                                <div class="services-info-item__content-left">
+                                    <div
+                                        class="services-info-item__title-wrap text-bg">
+                                        <h3 class="text-bg__text title-3">
+                                            Курс "Advanced"
+                                        </h3>
+                                    </div>
+                                    <ul class="services-info-item__list">
+                                        <li
+                                            class="services-info-item__list-item">
+                                            В стоимость входит:
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            2 авторские практические программы
+                                            подготовки
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            30 часов индивидуальных тренировок с
+                                            Тренером
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Полная экипировка
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Аренда 4-5 мотоциклов
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Гибкое расписание (удобное для Вас
+                                            !)
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            сопровождение при покупке Мотоцикла
+                                            и Экипировки
+                                        </li>
+                                        <li
+                                            class="services-info-item__list-item">
+                                            Бонус
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="services-info-item__content-right">
+                                    <p class="services-info-item__text">
+                                        Благодаря 30 часам индивидуальных
+                                        занятий на современных площадках Вы
+                                        сможете освоить и довести до автоматизма
+                                        навыки управления мотоциклом. Курс
+                                        включает в себя две авторские
+                                        практические программы подготовки,
+                                        которые поспособствуют ещё более
+                                        качественному обучению и усваиванию
+                                        знаний. Индивидуальный инструктаж и
+                                        огромный опыт наших преподавателей
+                                        помогут Вам вывести навыки управления
+                                        мотоциклом на инстинктивный уровень.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__dev-wrap">
+                    <p class="footer__dev-text">Разработано в студии</p>
+                    <a
+                        class="footer__dev-link link-text-inv"
+                        href="#"
+                        target="_blank"
+                        aria-label="Перейти на сайт Офэп"
+                        rel="noopener noreferrer noindex">
+                        <span class="link-text-inv__descr"> Офэп </span>
+                    </a>
+                </div>
+                <p class="footer__copyright">
+                    <span class="footer__copyright-color text-color">
+                        Copyright 2016
+                    </span>
+                    Мотошкола Pozitiv Motors
+                </p>
+                <div class="footer__links">
+                    <a
+                        class="footer__link link-text-inv"
+                        href="tel:88002008348"
+                        aria-label="Позвонить по номеру 8-800-200-83-48">
+                        <span class="link-text-inv__descr">
+                            8-800-200-83-48
+                        </span>
+                    </a>
+                    <ul class="footer__links-list links-list">
+                        <li class="links-list__item">
+                            <a
+                                class="links-list__item-link links-list__item-link_vk link-icon"
+                                href="https://vk.com/pozitivmotors"
+                                target="_blank"
+                                aria-label="Перейти на страницу ВКонтакте"
+                                rel="noopener noreferrer">
+                                <svg class="link-icon__img">
+                                    <use
+                                        href="./app/img/icons/icons.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="links-list__item">
+                            <a
+                                class="links-list__item-link  links-list__item-link_fb link-icon"
+                                href="https://www.facebook.com/PozitivMotors"
+                                target="_blank"
+                                aria-label="Перейти на страницу Facebook"
+                                rel="noopener noreferrer">
+                                <svg class="link-icon__img">
+                                    <use
+                                        href="./app/img/icons/icons.svg#fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- popup-feedback -->
+        <div
+            id="popup-feedback"
+            class="main-section__popup popup popup_feedback">
+            <div class="popup__box js-popup-box">
+                <button
+                    id="popup-feedback-close"
+                    aria-label="Закрыть всплывающие окно"
+                    class="popup__btn-close js-popup-close"></button>
+
+                <div id="popup-feedback-content" class="popup__content">
+                    <p class="popup__title">Оставить заявку</p>
+                    <form class="popup__form form">
+                        <div class="form__field field">
+                            <label for="popup-name" class="field__label lable">
+                                Имя
+                            </label>
+                            <input
+                                id="popup-name"
+                                class="field__input input-inv"
+                                type="text"
+                                name="name" />
+                        </div>
+                        <div class="form__field field">
+                            <label
+                                for="popup-e-mail"
+                                class="field__label lable">
+                                E-mail
+                            </label>
+                            <input
+                                id="popup-e-mail"
+                                class="field__input input-inv"
+                                type="email"
+                                name="e-mail" />
+                        </div>
+                        <div class="form__field field">
+                            <label for="popup-phone" class="field__label lable">
+                                Телефон
+                            </label>
+                            <input
+                                id="popup-phone"
+                                class="field__input input-inv"
+                                type="phone"
+                                name="phone" />
+                        </div>
+
+                        <button class="form__btn btn">Оставить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- popup-success -->
+        <div id="popup-success" class="main-section__popup popup popup_success">
+            <div class="popup__box js-popup-box">
+                <button
+                    id="popup-success-close"
+                    aria-label="Закрыть всплывающие окно"
+                    class="popup__btn-close js-popup-close"></button>
+
+                <div id="popup-success-content" class="popup__content">
+                    <p class="popup__title">Спасибо!</p>
+                    <p class="popup__text">Ваши данные были отправлены.</p>
+                </div>
+            </div>
+        </div>
+        <!-- scroll-top -->
+        <button
+            id="scroll-top"
+            class="home-page__scroll-top scroll-top"
+            aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="./app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+    </body>
+</html>

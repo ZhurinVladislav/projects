@@ -19,14 +19,88 @@ class Category
     /**
      * Метод получения массива категорий
      * 
+     * @param array $exception массив исключаемых id категорий
      * @return array массив категорий
      */
-    public function list(): array
+    public function list(array $exception = []): array
     {
-        $stmt = $this->pdo->prepare("SELECT id, name FROM categories");
-        $stmt->execute();
+        $sql = "SELECT id, name FROM categories";
+
+        if (!empty($exception)) {
+            $placeholders = implode(',', array_fill(0, count($exception), '?'));
+            $sql .= " WHERE id NOT IN ($placeholders)";
+        }
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($exception);
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Метод получения услуг категории
+     * 
+     * @param int $categoryId id категории
+     * @return array|null массив с услугами, либо null, если услуг нет или id некорректный
+     */
+    public function listServicesByCategory(int $categoryId): ?array
+    {
+        // Проверяем, что переданный categoryId больше 0
+        if ($categoryId <= 0) {
+            return null;
+        }
+
+        $stmt = $this->pdo->prepare('SELECT * FROM services WHERE category_id = :categoryId');
+
+        // Выполняем запрос, явно приводя categoryId к int
+        $stmt->execute(['categoryId' => (int) $categoryId]);
+
+        $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Если массив пустой, возвращаем null
+        return !empty($services) ? $services : null;
+    }
+
+    /**
+     * Метод получения всех категорий с привязанными услугами
+     * 
+     * @return array|null массив категорий с услугами, либо пустое значение
+     */
+    public function getFullList(): ?array
+    {
+        $sql = '
+                SELECT c.id as category_id, c.name as category_name, 
+                s.id as service_id, s.name as service_name 
+                FROM categories c 
+                LEFT JOIN services s ON c.id = s.category_id';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if (!$results) {
+            return null;
+        }
+
+        $categories = [];
+        foreach ($results as $row) {
+            $categoryId = $row['category_id'];
+            if (!isset($categories[$categoryId])) {
+                $categories[$categoryId] = [
+                    'id' => $categoryId,
+                    'name' => $row['category_name'],
+                    'services' => []
+                ];
+            }
+            if ($row['service_id']) {
+                $categories[$categoryId]['services'][] = [
+                    'id' => $row['service_id'],
+                    'name' => $row['service_name']
+                ];
+            }
+        }
+
+        return array_values($categories);
     }
 
     /**

@@ -1,0 +1,224 @@
+/*
+	font-family: 'Press Start 2P', cursive;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-family: 'Bai Jamjuree', sans-serif;
+*/
+
+
+* {
+	box-sizing: border-box;
+	transition: all .2s;
+	font-family: 'Press Start 2P', cursive;
+}
+
+body {
+	margin: 0;
+	background-color: #1F1451;
+	padding: 100px;
+}
+
+.container {
+	position: relative;
+	width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px 20px;
+	background-color: #1F1451;
+}
+
+.game {
+	position: relative;
+	padding: 0 40px;
+	overflow: hidden;
+	background-color: #2D186C;
+}
+
+.game-header {
+	height: 70px;
+}
+
+.game-header .timer {
+	display: flex;
+	align-items: center;
+	height: 70px;
+}
+
+.game-header .timer img {
+	width: 37px;
+	height: 51px;
+	margin-right: 10px;
+}
+
+.game-header .timer .counter {
+	display: flex;
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 0.2em;
+}
+
+.game-table {
+	width: 100%;
+}
+.game-row {
+	display: flex;
+}
+.game-col {
+	flex-grow: 1;
+	padding: 10px;
+}
+.tile {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 100%;
+	background-color: #888;
+	color: #fff;
+}
+.tile::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	color: #ff5722;
+	font-size: 100px;
+	background-color: #aee;
+	transition: all .25s;
+	background-image: url(/pages/tiles/images/hidden.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	content: '';
+}
+.tile.hidden::after {
+	display: flex;
+}
+.game-table:not(.disabled) .tile {
+	cursor: pointer;
+}
+.game-table:not(.disabled) .tile:hover::after {
+	background-color: #aae;
+}
+.tile > div {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.tile img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	user-select: none;
+}
+.tile.pre-hidden {
+	transform: scaleX(0);
+}
+.tile.hidden {
+	transform: scaleX(1);
+}
+.tile.post-hidden {
+	transform: scaleX(0);
+}
+
+.game-overlay {
+	position: absolute;
+	right: 0;
+	left: 0;
+	display: flex;
+	transition: all .8s ease-in-out;
+}
+.game-overlay.top {
+	top: -100%;
+	bottom: 100%;
+	/*background-image: linear-gradient(#aaa, #777);*/
+	background-color: #2D186C;
+}
+.game-overlay.bottom {
+	top: 100%;
+	bottom: -100%;
+	justify-content: center;
+	/*background-image: linear-gradient(#777, #444);*/
+	background-color: #2D186C;
+}
+.game-overlay.top.active {
+	top: -50%;
+	bottom: 50%;
+}
+.game-overlay.bottom.active {
+	top: 50%;
+	bottom: -50%;
+}
+
+.game-overlay-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .8s ease-in-out;
+}
+.game-overlay.active .game-overlay-content {
+	top: -50%;
+	bottom: 50%;
+}
+
+.game-overlay .button {
+	width: 210px;
+	height: 80px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 50px;
+	text-transform: uppercase;
+	border: none;
+	appearance: none;
+}
+.game-overlay .button:hover {
+	cursor: pointer;
+}
+.game-overlay .button.hidden {
+	display: none;
+}
+.game-overlay .button.game-start {
+	background-color: transparent;
+	background-image: url(/pages/tiles/images/button-green.png);
+	background-size: 100%;
+}
+.game-overlay .button.game-again {
+	margin-top: 30px;
+	background-color: transparent;
+	background-image: url(/pages/tiles/images/button-red.png);
+	background-size: 100%;
+}
+
+.game-overlay .success-text {
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	letter-spacing: 0.2em;
+}
+.game-overlay .success-text.hidden {
+	display: none;
+}
+.game-overlay .fail-text {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	letter-spacing: 0.2em;
+}
+.game-overlay .fail-text.hidden {
+	display: none;
+}

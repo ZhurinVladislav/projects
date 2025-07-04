@@ -1,0 +1,12 @@
+.link-text
+	border-bottom: 2px solid var(--none-color)
+	font-weight: 700
+	color: var(--link-color)
+	text-shadow: -2px 2px 0 0 var(--bg-color)
+	transition: border-color .2s linear, color .2s linear
+	+hover
+		color: var(--white-color)
+	+focus
+		border-color: var(--bg-color)
+	&:active
+		color: var(--scroll-color)

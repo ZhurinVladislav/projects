@@ -18,6 +18,7 @@ $current_page = $_GET['q'] ?? 'main'; // Определяем текущую с�
     <link rel="stylesheet" href="./app/css/style.min.css?_v=20250127155512" />
 
     <script src="./app/js/libs/preloader.min.js?_v=20250127155512"></script>
+    <script src="./app/js/libs/lightgallery-all.min.js" defer></script>
     <script src="./app/js/libs/lazy-load.min.js?_v=20250127155512"></script>
     <script src="./app/js/libs/webp.min.js?_v=20250127155512" defer></script>
     <script src="./app/js/libs/modal-window.min.js?_v=20250127155512" defer></script>

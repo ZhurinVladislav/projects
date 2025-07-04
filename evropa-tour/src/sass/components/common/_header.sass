@@ -1,0 +1,222 @@
+.inner
+	.header
+		position: static
+		margin-bottom: 40px
+
+	.header-bottom
+		background-color: #696767
+
+.header
+	position: absolute
+	top: 0
+	z-index: 100
+
+.header-top
+	background-color: var(--page-color)
+
+	&__nav
+		+sm
+			display: none
+
+	&__container
+		position: static
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 20px
+		padding-top: 6px
+		padding-bottom: 6px
+
+	&__logo-link
+		max-width: 169px
+
+	&__links
+		+sm
+			margin: 0 auto
+		+xs
+			display: none
+
+// Навигационное меню
+.header-nav-list
+	display: flex
+	align-items: center
+	gap: 22px
+
+	&__item
+		position: relative
+		&.parent
+			margin-bottom: -5px
+			padding-bottom: 5px
+
+		&.active
+			.header-nav-list__link
+				color: var(--accent-color)
+				border-color: var(--accent-color)
+		
+		+hover
+			> .dropdown
+					opacity: 1
+					visibility: visible
+					transform: translateY(0)
+					transition: opacity 0.3s ease, transform 0.3s ease
+
+			.link-text__icon
+				transform: rotateX(180deg)
+
+		&:focus-within
+			> .dropdown
+					opacity: 1
+					visibility: visible
+					transform: translateY(0)
+					transition: opacity 0.3s ease, transform 0.3s ease
+
+	&__link
+		gap: 6px
+		font-size: 13px
+		line-height: 162%
+
+	.link-text
+		&__icon
+			width: 10px
+			height: 7px
+			fill: var(--text-color)
+
+.header-bottom
+	background-color: rgba(0, 0, 0, 0.08)
+	backdrop-filter: blur(40px)
+	+sm
+		display: none
+
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 20px
+		padding-top: 20px
+		padding-bottom: 20px
+
+	.header-nav-list
+		&__item
+			&.active
+				.header-nav-list__link
+					border-color: var(--white-color)
+					color: var(--white-color)
+
+		&__link
+			color: var(--white-color)
+			+hover
+				color: var(--accent-color)
+
+		.link-text__icon
+			fill: var(--white-color)
+
+	&__link-list
+		display: flex
+		align-items: center
+		gap: 8px
+
+	&__link-list-link
+		gap: 6px
+		font-size: 13px
+		line-height: 162%
+		color: var(--white-color)
+
+		.link-text__icon
+			fill: var(--white-color)
+
+	&__link
+		color: var(--white-color)
+
+		.link-text__icon
+			fill: var(--white-color)
+
+// Выпадающий список
+.dropdown
+	position: absolute
+	top: 25px
+	left: 0
+	z-index: 10
+	display: flex
+	flex-direction: column
+	width: 142px
+	font-size: 14px
+	line-height: 140%
+	color: var(--text-color)
+	border-radius: 12px
+	background-color: var(--page-color)
+	box-shadow: 1px 1px 4px 0 rgba(24, 13, 57, 0.08)
+	opacity: 0
+	visibility: hidden
+	overflow: hidden
+	transform: translateY(10px)
+	transition: opacity 0.3s linear, transform 0.3s linear, visibility 0s 0.3s
+
+	&__item
+		&.active
+			.dropdown__link
+				color: var(--accent-color)
+
+	&__link
+		display: flex
+		padding: 6px 12px
+		transition: color .2s linear
+		+hover
+			color: var(--accent-color)
+		+focus
+			color: var(--accent-color)
+
+// Кнопка мобильного меню
+.menu-toggle
+	display: none
+	margin-left: auto
+	width: 30px
+	height: 25px
+	+sm
+		position: relative
+		z-index: 30000
+		display: block
+	+ph
+		width: 25px
+		height: 20px
+
+	&__item
+		position: absolute
+		display: block
+		width: 100%
+		height: 2px
+		background-color: var(--accent-color)
+		transform: rotate(0) translate(0, 0)
+		transition: all .3s linear
+
+		&:nth-child(1)
+			top: 0
+			left: 0
+
+		&:nth-child(2)
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			opacity: 1
+
+		&:nth-child(3)
+			bottom: 0
+			left: 0
+
+	&.active
+		.menu-toggle__item
+			&:nth-child(1)
+				top: 50%
+				left: 50%
+				transform: rotate(45deg) translate(-50%, -50%)
+				transform-origin: top left
+
+			&:nth-child(2)
+				left: 100%
+				transform: translateY(0)
+				opacity: 0
+
+			&:nth-child(3)
+				bottom: 50%
+				left: 50%
+				transform: rotate(-45deg) translate(-50%, 50%)
+				transform-origin: bottom left

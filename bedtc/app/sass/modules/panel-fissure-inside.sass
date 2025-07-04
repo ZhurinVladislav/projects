@@ -1,0 +1,66 @@
+.panel-fissure-inside
+	padding-right: 30px
+	padding-left: 30px
+
+	.wrapper
+		position: relative
+		padding: 34px
+
+		&::before,
+		&::after
+			position: absolute
+			top: 8px
+			bottom: 8px
+			width: 4px
+			background-color: $color__8
+			content: ''
+
+		&::before
+			left: 0
+
+		&::after
+			right: 0
+
+	.bd-top,
+	.bd-bottom
+		position: absolute
+		right: -8px
+		left: -8px
+		height: 4px
+		background-color: $color__11
+		border-right: 4px solid $color__8
+		border-left: 4px solid $color__8
+
+		&::before
+			position: absolute
+			right: 0
+			left: 0
+			height: 4px
+			background-color: $color__11
+			border-right: 4px solid $color__8
+			border-left: 4px solid $color__8
+			content: ''
+
+	.bd-top
+		top: 0
+		&::before
+			top: 4px
+
+	.bd-bottom
+		bottom: 0
+		&::before
+			bottom: 4px
+
+	.bg
+		position: absolute
+		top: 0
+		right: 4px
+		bottom: 0
+		left: 4px
+		background-color: $color__11
+		background-image: url(/app/images/bg/panel-fissure-inside.svg)
+		background-position: center
+		background-repeat: no-repeat
+
+	.content
+		position: relative

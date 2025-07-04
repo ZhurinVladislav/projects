@@ -1,0 +1,74 @@
+.accordion
+	position: relative
+	display: flex
+	flex-direction: column
+	border-radius: 20px
+	box-shadow: 0 10px 25px 0 rgba(43, 63, 90, 0.07)
+
+	&__btn
+		position: relative
+		display: flex
+		align-items: center
+		padding: 12px 14px
+		font-weight: 600
+		font-size: 20px
+		line-height: 100%
+		min-height: 40px
+		transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear
+		+hover
+			color: var(--accent-color)
+		+focus
+			color: var(--accent-color)
+		&:active
+			color: var(--active-color)
+
+		+ph
+			font-size: 18px
+
+		&.active
+			.accordion__btn-icon
+				transform: rotateX(180deg)
+
+	&__btn-text
+		margin-right: 20px
+		text-align: left
+		transition: opacity 0.2s linear
+
+	&__btn-wrapper-icon
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		margin-left: auto
+		width: 40px
+		height: 40px
+		transition: background-color 0.2s linear
+
+	&__btn-icon
+		width: 40px
+		height: 20px
+		transition: transform 0.2s linear
+
+	&__text
+		padding: 12px 14px
+		border-top: 1px solid var(--logo-devider-gray-new)
+		overflow-x: hidden
+
+		p:not(:last-child)
+			margin-bottom: 20px
+
+		ul
+			display: flex
+			flex-direction: column
+			padding-left: .9rem
+			list-style-type: disc
+
+	&__btn-content
+		margin-top: 24px
+		max-width: 247px
+		font-size: 24px
+
+.accordion-hidden
+	max-height: 0
+	overflow: hidden
+	transition: max-height 0.3s linear

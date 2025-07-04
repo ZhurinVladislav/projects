@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>BitcoinFree</title>
+		<link rel="stylesheet" href="/app/css/style.css" id="general-style" />
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				document.querySelector('body').classList.add('loading');
+				document.querySelectorAll('[data-animations]').forEach(element => {
+					element.classList.add('animations');
+				});
+			});
+		</script>
+	</head>
+	<body class="home-page">
+		<div class="background-wrapper">
+			<header class="header" data-animations>
+				<div class="container">
+					<div class="content">
+						<a href="/" class="logo">
+							<img src="/app/images/logo.svg" alt="" />
+						</a>
+
+						<nav class="menu">
+							<ul class="menu-list">
+								<li class="menu-item active">
+									<a href="#" class="menu-link"> Главная </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> Отзывы </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> FAQ </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> Новости </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> Реферальная программа </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> Статистика </a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="language">
+							<button class="language__button">
+								<span class="icon"
+									><svg>
+										<use
+											xlink:href="/app/images/svg_sprite.svg#planet"
+										></use></svg
+								></span>
+								<span class="text">RU</span>
+								<span class="arrow"
+									><svg>
+										<use
+											xlink:href="/app/images/svg_sprite.svg#lang"
+										></use></svg
+								></span>
+							</button>
+							<div class="spoller">
+								<ul>
+									<li><a href="#">RU</a></li>
+									<li><a href="#">EN</a></li>
+									<li><a href="#">DE</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="buttons">
+							<a href="#" class="button">Регистрация</a>
+							<a href="#" class="button-invert">Войти</a>
+						</div>
+
+						<button class="menu__toggle">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</header>
+
+			<nav class="menu-mobie logout">
+				<div class="language">
+					<button class="language__button">
+						<span class="icon"
+							><svg>
+								<use xlink:href="/app/images/svg_sprite.svg#planet"></use></svg
+						></span>
+						<span class="text">RU</span>
+						<span class="arrow"
+							><svg>
+								<use xlink:href="/app/images/svg_sprite.svg#lang"></use></svg
+						></span>
+					</button>
+					<div class="spoller">
+						<ul>
+							<li><a href="#">RU</a></li>
+							<li><a href="#">EN</a></li>
+							<li><a href="#">DE</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="buttons">
+					<a href="#" class="button">Регистрация</a>
+					<a href="#" class="button-invert">Войти</a>
+				</div>
+				<nav class="menu">
+					<div class="menu-title">Меню</div>
+					<ul class="menu-list">
+						<li class="menu-item active">
+							<a href="#" class="menu-link"> Главная </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> Отзывы </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> FAQ </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> Новости </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> Реферальная программа </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> Статистика </a>
+						</li>
+					</ul>
+				</nav>
+			</nav>
+
+			<nav class="menu-mobie login disabled">
+				<div class="person">
+					<div class="person-avatar">
+						<img src="/app/images/avatar-empty.png" alt="avatar" />
+					</div>
+					<div class="person-name">
+						<span>Привет</span>
+						<span class="username" id="username">Иван Иванович</span>
+					</div>
+				</div>
+				<div class="language center">
+					<button class="language__button">
+						<span class="icon"
+							><svg>
+								<use xlink:href="/app/images/svg_sprite.svg#planet"></use></svg
+						></span>
+						<span class="text">RU</span>
+						<span class="arrow"
+							><svg>
+								<use xlink:href="/app/images/svg_sprite.svg#lang"></use></svg
+						></span>
+					</button>
+					<div class="spoller">
+						<ul>
+							<li><a href="#">RU</a></li>
+							<li><a href="#">EN</a></li>
+							<li><a href="#">DE</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="buttons">
+					<a href="#" class="button-invert">Личный кабинет</a>
+				</div>
+				<nav class="menu">
+					<div class="menu-title">Меню</div>
+					<ul class="menu-list">
+						<li class="menu-item active">
+							<a href="#" class="menu-link"> Главная </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> Отзывы </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> FAQ </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> Новости </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> Реферальная программа </a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link"> Статистика </a>
+						</li>
+					</ul>
+				</nav>
+			</nav>
+
+			<section class="heroimage" data-animations>
+				<div class="container">
+					<div class="content">
+						<h1 class="header_0">
+							Крипто-биржа рекламы <span class="color">BitcoinFree</span>
+						</h1>
+						<div class="text-default">
+							Размещайте баннера, повышайте активность на сайте или
+							зарабатывайте <br />на просмотре рекламы
+						</div>
+						<ul class="list-anchor">
+							<li class="item-anchor">
+								<a href="" class="link-anchor">
+									<span class="link-anchor__text"
+										>Заработать <br />на просмотре</span
+									>
+									<span class="link-anchor__image">
+										<img src="/app/images/anchor1.png" alt="anchor1" />
+									</span>
+								</a>
+							</li>
+							<li class="item-anchor">
+								<a href="" class="link-anchor">
+									<span class="link-anchor__text">Разместить <br />баннер</span>
+									<span class="link-anchor__image">
+										<img src="/app/images/anchor2.png" alt="anchor2" />
+									</span>
+								</a>
+							</li>
+							<li class="item-anchor">
+								<a href="" class="link-anchor">
+									<span class="link-anchor__text"
+										>Разместить <br />площадку</span
+									>
+									<span class="link-anchor__image">
+										<img src="/app/images/anchor3.png" alt="anchor3" />
+									</span>
+								</a>
+							</li>
+							<li class="item-anchor">
+								<a href="" class="link-anchor">
+									<span class="link-anchor__text"
+										>Разместить <br />задание</span
+									>
+									<span class="link-anchor__image">
+										<img src="/app/images/anchor4.png" alt="anchor4" />
+									</span>
+								</a>
+							</li>
+						</ul>
+						<div class="list-result-wrap">
+							<ul class="list-result">
+								<li class="item-result">
+									<span class="item-result__icon">
+										<img src="/app/images/result1.svg" alt="result" />
+									</span>
+									<span class="text-wrap">
+										<span class="item-result__title">5 487</span>
+										<span class="item-result__text">Рекламодателей</span>
+									</span>
+								</li>
+								<li class="item-result">
+									<span class="item-result__icon">
+										<img src="/app/images/result2.svg" alt="result" />
+									</span>
+									<span class="text-wrap">
+										<span class="item-result__title">12 237</span>
+										<span class="item-result__text">Исполнителей</span>
+									</span>
+								</li>
+								<li class="item-result">
+									<span class="item-result__icon">
+										<img src="/app/images/result3.svg" alt="result" />
+									</span>
+									<span class="text-wrap">
+										<span class="item-result__title">2 000 487</span>
+										<span class="item-result__text">Выполненных заданий</span>
+									</span>
+								</li>
+								<li class="item-result">
+									<span class="item-result__icon">
+										<img src="/app/images/result4.svg" alt="result" />
+									</span>
+									<span class="text-wrap">
+										<span class="item-result__title">1 607</span>
+										<span class="item-result__text">Онлайн</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<div class="container">
+					<div class="content">
+						<h2 class="header_1">
+							<span class="color">Зарабатывайте деньги</span>
+							в интернете абсолютно без вложений, выполняя простые задания
+						</h2>
+						<div class="content-text text-default">
+							Попробуйте и заработайте первые деньги уже сегодня! <br />
+							Вывод средств доступен уже от
+							<span class="color">0,0005000 btc.</span>
+						</div>
+						<div class="row">
+							<div class="col-left">
+								<ul class="list">
+									<li class="item">
+										<div class="item-icon">
+											<img
+												src="/app/images/services-icon1.svg"
+												alt="services"
+											/>
+										</div>
+										<div class="item-text text-default">
+											Простой заработок на просмотре рекламы;
+										</div>
+									</li>
+									<li class="item">
+										<div class="item-icon">
+											<img
+												src="/app/images/services-icon2.svg"
+												alt="services"
+											/>
+										</div>
+										<div class="item-text text-default">
+											Моментальный вывод от
+											<span class="colr">0,0005000 btc</span>;
+										</div>
+									</li>
+									<li class="item">
+										<div class="item-icon">
+											<img
+												src="/app/images/services-icon3.svg"
+												alt="services"
+											/>
+										</div>
+										<div class="item-text text-default">
+											10% от стоимости ссылок просмотренных вашими
+											<br />рефералами;
+										</div>
+									</li>
+									<li class="item">
+										<div class="item-icon">
+											<img
+												src="/app/images/services-icon4.svg"
+												alt="services"
+											/>
+										</div>
+										<div class="item-text text-default">
+											5% от суммы, потраченной рефералами на рекламу!
+										</div>
+									</li>
+								</ul>
+								<div class="note">
+									Умножаем Ваш заработок в 2 раза в течении 3х дней <br />после
+									регистрации!
+								</div>
+								<a href="#" class="button">Начать зарабатывать</a>
+							</div>
+							<div class="col-right">
+								<div class="image-wrapper">
+									<img src="/app/images/services1.png" alt="services" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<section class="services even">
+			<div class="container">
+				<div class="content">
+					<h2 class="header_1">
+						Рекламируйтесь через нашу баннерную сеть от
+						<span class="color">0,000001 btc</span> за 1000 показов
+					</h2>
+					<div class="content-text text-default">
+						Раскрутите свой проект, увеличьте число живых<br />
+						пользователей, сделайте так, чтобы о вас узнали тысячи!
+					</div>
+					<div class="row">
+						<div class="col-left">
+							<ul class="list">
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon5.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Огромное количество заинтересованных пользователей;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon6.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Запустить рекламную кампанию можно за 5 минут;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon7.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Цена за посещение от
+										<span class="color">0,00000020 btc</span>;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon8.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Скидки за большие объемы показов!
+									</div>
+								</li>
+							</ul>
+							<div class="note">
+								+10 % к первому пополнению рекламного счета.
+							</div>
+							<a href="#" class="button">Разместить баннер</a>
+						</div>
+						<div class="col-right">
+							<div class="image-wrapper">
+								<img src="/app/images/services2.png" alt="services" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services">
+			<div class="container">
+				<div class="content">
+					<h2 class="header_1">
+						Монетизируйте трафик на вашем сайте, подключившись к баннерной сети
+						<span class="color">BitcoinFree</span>
+					</h2>
+					<div class="content-text text-default">
+						Попробуйте и заработайте первые деньги уже сегодня! <br />
+						Вывод средств доступен уже от
+						<span class="color">0,0005000 btc.</span>
+					</div>
+					<div class="row">
+						<div class="col-left">
+							<ul class="list">
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon9.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Размер дохода неограничен и зависит от посещаемости
+										<br />вашего сайта;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon10.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Минимум <span class="color">0,00000500 btc</span> за 1000
+										показов;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon11.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Минимум <span class="color">0,00004000 btc</span> за 100
+										кликов;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon12.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Если для Вас неприемлемо содержание объявления, Вы можете
+										его обжаловать в техподдержке;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon13.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Никакой «агрессивной» рекламы! Она может быть анимированной,
+										но без мигания и других раздражающих элементов.
+									</div>
+								</li>
+							</ul>
+							<div class="buttons">
+								<a href="#" class="button">Стать партнером</a>
+								<a href="#" class="button-invert">Узнать больше</a>
+							</div>
+						</div>
+						<div class="col-right">
+							<div class="image-wrapper">
+								<img src="/app/images/services3.png" alt="services" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services even">
+			<div class="container">
+				<div class="content">
+					<h2 class="header_1">
+						Улучшить поведенческий фактор и узнаваемость Вашего проекта
+						<span class="color">органическим трафиком</span>
+					</h2>
+					<div class="content-text text-default">
+						Приведите на свой сайт живой трафик. Вы платите только <br />за
+						выполненные задания.
+					</div>
+					<div class="row">
+						<div class="col-left">
+							<ul class="list">
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon14.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">Защита от ботов;</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon15.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Только живые пользователи;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon16.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Вы платите только за полностью выполненные задание;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon17.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Гибкая настройка параметров выполнения;
+									</div>
+								</li>
+								<li class="item">
+									<div class="item-icon">
+										<img src="/app/images/services-icon18.svg" alt="services" />
+									</div>
+									<div class="item-text text-default">
+										Минимальная стоимость вознаграждения
+										<span class="color">0,00000009 btc.</span>
+									</div>
+								</li>
+							</ul>
+							<div class="note">
+								+10 % к первому пополнению рекламного счета!
+							</div>
+							<a href="#" class="button">Разместить задание</a>
+						</div>
+						<div class="col-right">
+							<div class="image-wrapper">
+								<img src="/app/images/services4.png" alt="services" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="payments">
+			<div class="container">
+				<div class="content">
+					<h2 class="header_1">
+						<span class="color">Работаем</span> с платежными системами
+					</h2>
+					<ul class="list">
+						<li class="item">
+							<img src="/app/images/payment1.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment2.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment3.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment4.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment5.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment6.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment7.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment8.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment9.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment10.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment11.svg" alt="payment" />
+						</li>
+						<li class="item">
+							<img src="/app/images/payment12.svg" alt="payment" />
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content">
+					<div class="block-left">
+						<a href="/" class="logo">
+							<img src="/app/images/logo.svg" alt="" />
+						</a>
+						<div class="user-agreement">
+							Входя на сайт, вы принимаете
+							<a href="#">пользовательское соглашение.</a>
+						</div>
+					</div>
+
+					<div class="block-center">
+						<div class="title">Меню</div>
+						<nav class="menu">
+							<ul class="menu-list">
+								<li class="menu-item active">
+									<a href="#" class="menu-link"> Главная </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> Отзывы </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> FAQ </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> Новости </a>
+								</li>
+							</ul>
+							<ul class="menu-list">
+								<li class="menu-item">
+									<a href="#" class="menu-link"> Реферальная программа </a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link"> Статистика </a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="block-right">
+						<div class="title">Мы в соцсетях</div>
+						<div class="contacts">
+							<a href="#" class="contact">
+								<span class="contact-icon">
+									<img src="/app/images/svg/insta.svg" alt="insta" />
+								</span>
+							</a>
+							<a href="#" class="contact">
+								<span class="contact-icon">
+									<img src="/app/images/svg/telegram.svg" alt="telegram" />
+								</span>
+							</a>
+							<a href="#" class="contact">
+								<span class="contact-icon">
+									<img src="/app/images/svg/vk.svg" alt="vk" />
+								</span>
+							</a>
+							<a href="#" class="contact">
+								<span class="contact-icon">
+									<img src="/app/images/svg/youtube.svg" alt="youtube" />
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="copyright">
+			<div class="container">
+				<div class="content">
+					<div class="row">
+						<div class="col-left">
+							<span class="text">copyright © 2022 все права защищены.</span>
+						</div>
+						<div class="col-right">
+							<span class="text"
+								>Крипто-биржа рекламы -
+								<span>BitcoinFr<span class="color">ee</span></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="overlay">
+			<div class="overlay__wrapper">
+				<div class="overlay__bg"></div>
+				<div class="overlay__content">
+					<a class="overlay__close"></a>
+
+					<form action="/" method="post" class="form form-callback novalid">
+						<input type="hidden" name="count" value="0" />
+						<h3 class="header_3">Заказать звонок</h3>
+
+						<div class="form-item">
+							<input type="text" name="name" placeholder="имя" />
+						</div>
+						<div class="form-item">
+							<input type="tel" name="phone" placeholder="телефон" />
+						</div>
+						<button class="button">Отправить</button>
+						<div class="form-note">
+							*Нажимаю кнопку, даю согласие на обработку своих персональных
+							данных
+						</div>
+					</form>
+
+					<div class="form-success">
+						<div class="header_4">Спасибо! <br />Ваши данные отправлены.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--
+    <button class="scroll-top">
+        <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+    </button>
+    -->
+
+		<script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+		<script src="/app/js/libs/slick.min.js"></script>
+		<script src="/app/js/libs/lightgallery-all.min.js"></script>
+		<script src="/app/js/libs/maskedinput-v.1.4.1.js"></script>
+
+		<script src="/app/js/main.js"></script>
+	</body>
+</html>

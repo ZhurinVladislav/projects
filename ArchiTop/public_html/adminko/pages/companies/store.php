@@ -12,7 +12,8 @@ $company = new Company($pdo);
 $category = new Category($pdo);
 
 $companyNewId = $company->getNewId();
-$categories = $category->list();
+$categoriesFullList = $category->getFullList();
+$jsonList = json_encode($categoriesFullList, JSON_UNESCAPED_UNICODE);
 
 if ($companyNewId === null || !is_numeric($companyNewId)) {
     throw new Exception("Ошибка: companyNewId имеет недопустимое значение. Ожидалось число, получено: " . var_export($companyNewId, true));
@@ -21,6 +22,7 @@ if ($companyNewId === null || !is_numeric($companyNewId)) {
 if ($_POST['action'] === 'add') {
     $company->store($_POST['data']);
 }
+
 ?>
 
 <?php if ($_POST['action'] == 'get_page'): ?>
@@ -32,6 +34,7 @@ if ($_POST['action'] === 'add') {
         <h3 class="form__title">
             Создание компании
         </h3>
+
         <div class="form__items-wrap">
             <div class="form__item">
                 <label for="name" class="form__label">Название компании:</label>
@@ -50,14 +53,14 @@ if ($_POST['action'] === 'add') {
             </div>
 
             <div class="form__item">
-                <label class="form__label" for="categories">Категория:</label>
-                <select id="categories" class="form__select" name="categories">
-                    <?php foreach ($categories as $category): ?>
-                        <option value="<?= htmlspecialchars($category['id']) ?>">
-                            <?= htmlspecialchars($category['name']) ?>
-                        </option>
-                    <?php endforeach ?>
-                </select>
+                <label class="form__label" for="categories">Категории:</label>
+                <div id="category-wrap" class="input-group-wrap"></div>
+                <button
+                    id="category-btn"
+                    class="btn btn_success"
+                    type="button">
+                    Добавить категорию
+                </button>
             </div>
 
             <div class="form__item">
@@ -156,7 +159,7 @@ if ($_POST['action'] === 'add') {
                 </button>
             </div>
 
-            <div class="form__item">
+            <!-- <div class="form__item">
                 <h3>Добавить услуги</h3>
                 <div id="service-container" class="input-group-wrap"></div>
                 <button
@@ -165,7 +168,7 @@ if ($_POST['action'] === 'add') {
                     onclick="handlerCreateItem('service')">
                     Добавить услугу
                 </button>
-            </div>
+            </div> -->
 
             <div class="form__item">
                 <label for="url" class="form__label">Ссылка на сайт:</label>
@@ -290,7 +293,7 @@ if ($_POST['action'] === 'add') {
 
             inputImg.type = 'file';
             inputImg.name = `project_img_${index}`;
-            inputImg.setAttribute('data-save-path', `images/companies/<?= htmlspecialchars($companyNewId) ?>portfolio/${index}`);
+            inputImg.setAttribute('data-save-path', `images/companies/<?= htmlspecialchars($companyNewId) ?>/portfolio/${index}`);
             inputImg.required = true;
 
             btn.classList.add('remove-btn');
@@ -358,9 +361,6 @@ if ($_POST['action'] === 'add') {
                 case 'phone':
                     createItem_<?= $time ?>('phone-container', name, name, 'телефон');
                     break;
-                case 'service':
-                    createItem_<?= $time ?>('service-container', 'text', name, 'услугу');
-                    break;
                 case 'links':
                     createItemLinks_<?= $time ?>();
                     break;
@@ -376,9 +376,10 @@ if ($_POST['action'] === 'add') {
             el.parentNode.remove();
         }
 
-        // let formData = new FormData();
-
-        const transliterate_<?= $time ?> = (str) => {
+        /**
+         * Транслит для поля с алиасам
+         */
+        const transliterate_<?= $time ?> = str => {
             const map = {
                 'а': 'a',
                 'б': 'b',
@@ -421,6 +422,9 @@ if ($_POST['action'] === 'add') {
                 .join('');
         }
 
+        /**
+         * Генерация алиаса для страницы проекта
+         */
         function generateAlias() {
             const name = document.getElementById('name').value;
             const alias = transliterate_<?= $time ?>(name)
@@ -431,5 +435,231 @@ if ($_POST['action'] === 'add') {
 
             document.getElementById('alias').value = alias;
         }
+
+        /**
+         * Функция удаления списка с услугами
+         */
+        const removeServicesList_<?= $time ?> = wrap => {
+            if (!wrap) {
+                console.error('Не передан wrap');
+                return;
+            }
+
+            const servicesList = wrap.querySelector('.js-services-list');
+
+            if (!servicesList) {
+                console.error('Не удалось найти js-services-list');
+                return;
+            };
+
+            servicesList.remove();
+        }
+
+        /** 
+         * Событие для select категорий
+         */
+        const handleCategory_<?= $time ?> = (categoryId, data, wrap) => {
+            if (!categoryId) {
+                console.error('Не передан id категории');
+                return;
+            } else if (!data || data.length === 0) {
+                console.error('Массив с данными пуст');
+                return;
+            } else if (!wrap) {
+                console.error('Не передан родитель элементов');
+                return;
+            }
+
+            data.forEach(el => {
+                if (el.id === parseInt(categoryId)) {
+                    removeServicesList_<?= $time ?>(wrap);
+                    const services = el.services;
+
+                    createServiceList_<?= $time ?>(wrap, services);
+                }
+            })
+        }
+
+        /**
+         * Функция создания списка с услугами
+         */
+        const createServiceList_<?= $time ?> = (wrap, data) => {
+            if (!data || data.length === 0) {
+                console.error('Массив с данным пуст.');
+                return;
+            } else if (!wrap) {
+                console.error('Не существует блока, необходимого для отрисовки.');
+                return;
+            }
+            const list = document.createElement('ul');
+            list.classList.add('form__item-checkbox-list', 'js-services-list');
+
+            data.forEach(el => {
+                const item = document.createElement('li');
+                const input = document.createElement('input');
+                const label = document.createElement('label');
+
+                item.classList.add('form__item-checkbox-list-item');
+
+                input.id = `service-${el.id}`;
+                input.type = 'checkbox';
+                input.name = `service_${el.id}`;
+                // input.checked = true;
+                input.value = el.id;
+
+                label.setAttribute('for', `service-${el.id}`);
+                label.textContent = el.name.trim();
+
+                item.append(input);
+                item.append(label);
+                list.append(item);
+                wrap.append(list);
+            });
+        }
+
+        /**
+         * Функция удаления категории
+         */
+        const deleteItemCategory_<?= $time ?> = el => {
+            if (!el) {
+                console.error('Не передан элемент для удаления');
+                return;
+            } else {
+                el.remove();
+            }
+        }
+
+        /**
+         * Функция создания списка категорий
+         */
+        const createItemCategory_<?= $time ?> = (wrap, data, services = null, index = 1) => {
+            if (!data || data.length === 0) {
+                console.error('Массив с данными пуст.');
+                return;
+            } else if (!wrap) {
+                console.error('Не существует блока, необходимого для отрисовки.');
+                return;
+            }
+
+            // Создание элементов
+            const item = document.createElement('div');
+            const selectWrap = document.createElement('div');
+            const select = document.createElement('select');
+            const btnDelete = document.createElement('button');
+            const wrapServiceList = document.createElement('div');
+            const serviceListTitle = document.createElement('p');
+            const serviceListWrap = document.createElement('div');
+
+            // Добавление необходимых классов и атрибутов
+            item.classList.add('input-group', 'input-group_clm', 'js-category-item');
+            selectWrap.classList.add('form__select-wrap');
+            select.id = `categories-${index}`;
+            select.classList.add('form__select', 'js-select-category');
+            select.name = `category_${index}`;
+            btnDelete.classList.add('remove-btn');
+            btnDelete.innerHTML = '❌';
+            wrapServiceList.classList.add('form__item-inner');
+            serviceListTitle.classList.add('form__item-title');
+            serviceListTitle.textContent = 'Выберите услуги, которые нужно исключить:';
+            serviceListWrap.classList.add('form__item-list-wrap', 'js-services-list-wrap');
+
+            // Добавление элементов в разметку
+            selectWrap.append(select);
+            selectWrap.append(btnDelete);
+            item.append(selectWrap);
+            item.append(wrapServiceList);
+            wrapServiceList.append(serviceListTitle);
+            wrapServiceList.append(serviceListWrap);
+
+            // Заполнение select
+            data.forEach(el => {
+                const option = document.createElement('option');
+                option.value = el.id;
+                option.textContent = el.name.trim();
+                select.append(option);
+            });
+
+            // Заполнение списка с услугами
+            if (services === null) {
+                services = data[0].services;
+            }
+
+            // Создание элементов в списке услуг
+            if (services && services.length > 0) {
+                createServiceList_<?= $time ?>(serviceListWrap, services);
+            }
+
+            wrap.append(item);
+
+            // Событие для select
+            select.addEventListener('change', () => {
+                handleCategory_<?= $time ?>(select.value, data, serviceListWrap);
+            });
+
+            // Событие для удаления из DOM категории
+            btnDelete.addEventListener('click', ev => {
+                ev.preventDefault();
+
+                if (confirm('Вы уверены в том, что хотите удалить данную категорию?')) {
+                    deleteItemCategory_<?= $time ?>(item);
+                }
+            });
+        }
+
+        /**
+         * Событие на создание новой категории
+         */
+        const handleAddNewCategory_<?= $time ?> = (wrap, data) => {
+            const btn = document.getElementById('category-btn');
+
+            if (!data || data.length === 0) {
+                console.error('Массив с данным пуст.');
+                return;
+            } else if (!wrap) {
+                console.error('Не существует блока, необходимого для отрисовки.');
+                return;
+            } else if (!btn) {
+                console.error('Не удалось обнаружить кнопку');
+                return;
+            }
+
+            btn.addEventListener('click', () => {
+                const selects = wrap.querySelectorAll('.js-select-category');
+                const categoriesIds = [];
+
+                if (selects.length !== 0) {
+                    selects.forEach(el => categoriesIds.push(parseInt(el.value)));
+
+                    const newData = data.filter(el => !categoriesIds.includes(el.id));
+
+                    if (newData.length !== 0) {
+                        createItemCategory_<?= $time ?>(wrap, newData, null, ++selects.length);
+                    }
+                } else {
+                    createItemCategory_<?= $time ?>(wrap, data);
+                }
+            })
+        }
+
+        /**
+         * Инициализация функций для отрисовки и событий категорий
+         */
+        const initCategory_<?= $time ?> = () => {
+            const wrap = document.getElementById('category-wrap');
+            const data = <?= $jsonList ?>;
+
+            if (!data || data.length === 0) {
+                console.error('Массив с данным пуст.');
+                return;
+            } else if (!wrap) {
+                console.error('Не существует блока, необходимого для отрисовки.');
+                return;
+            }
+
+            createItemCategory_<?= $time ?>(wrap, data);
+            handleAddNewCategory_<?= $time ?>(wrap, data);
+        }
+
+        initCategory_<?= $time ?>();
     </script>
 <?php endif ?>

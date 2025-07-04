@@ -1,0 +1,92 @@
+.panel-purple
+	padding: 0 10px
+
+	.wrapper
+		position: relative
+		padding: 0 12px
+
+	.decor-left,
+	.decor-right
+		position: absolute
+		top: 12px
+		bottom: 12px
+		width: 12px
+		background-color: $color__7
+
+		&::before,
+		&::after
+			position: absolute
+			width: 4px
+			height: 4px
+			background-color: $color__11
+			border-top: 4px solid $color__16
+			border-bottom: 4px solid $color__8
+			content: ''
+
+		&::before
+			bottom: -4px
+
+		&::after
+			bottom: -8px
+
+		span
+			position: absolute
+			top: -8px
+			width: 4px
+			height: 8px
+			background-color: $color__7
+			border-top: 4px solid $color__8
+
+			&::before
+				position: absolute
+				top: 0
+				width: 4px
+				height: 4px
+				background-color: $color__8
+				content: ''
+
+	.decor-left
+		left: 0
+		border-left: 4px solid $color__8
+		
+		&::before
+			left: 0
+		
+		&::after
+			left: 4px
+
+		span
+			left: 4px
+			&::before
+				left: -4px
+
+	.decor-right
+		right: 0
+		border-right: 4px solid $color__8
+		
+		&::before
+			right: 0
+		
+		&::after
+			right: 4px
+
+		span
+			right: 4px
+			&::before
+				right: -4px
+
+	.content
+		position: relative
+		padding: 10px 12px 18px
+		background-color: $color__7
+		border-top: 4px solid $color__8
+		border-bottom: 4px solid $color__8
+
+		&::before
+			position: absolute
+			right: 0
+			bottom: 0
+			left: 0
+			border-top: 4px solid $color__16
+			border-bottom: 4px solid $color__11
+			content: ''

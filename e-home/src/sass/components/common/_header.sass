@@ -1,0 +1,263 @@
+.header
+	position: relative
+	z-index: 6
+	&__banner
+		padding: 1.2rem 0
+		background-color: var(--color-dark-blue)
+
+	&__banner-item a,
+	&__banner-item p
+		font-size: 1.8rem
+		line-height: 2.08rem
+		color: var(--color-white)
+
+	&__banner-item a
+		display: flex
+		align-items: center
+		gap: 1rem
+	
+	&__banner-item
+		a
+			img
+				width: 1.818rem
+				height: 1.818rem
+				flex-shrink: 0
+
+		&:nth-child(2)
+				gap: 0.6rem
+		&:nth-child(2) p
+				display: flex
+		&:nth-child(2) p:not(:last-child)::after
+			content: "|"
+			position: relative
+			display: block
+			margin-left: 0.6rem
+			color: var(--color-frosty-sky)
+
+	&__center
+		padding: 2rem 0
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+		backdrop-filter: blur(15px)
+		background: rgba(255, 255, 255, 0.02)
+
+	&__logo
+		display: inline-block
+		width: 17.835rem
+		flex-shrink: 0
+	&__nav
+		max-width: 67.7rem
+		width: 100%
+
+.nav-item
+	position: relative
+	&:hover
+		.nav-hidden
+			visibility: visible
+			opacity: 1
+			pointer-events: all
+			user-select: all
+
+.nav-link,
+.nav-sublist
+	li
+		a
+			position: relative
+			font-weight: 600
+			font-size: 1.6rem
+			line-height: 150%
+			color: var(--color-white)
+			transition: all 0.2s ease-in-out
+
+.nav-link::after,
+.nav-sublist
+	li
+		a::after
+			content: ""
+			position: absolute
+			display: block
+			bottom: -0.5rem
+			left: 0
+			width: 0%
+			height: 0.15rem
+			transition: all 0.2s ease-in-out
+			background-color: var(--color-frosty-sky)
+			border-radius: 0.02rem
+
+.nav-link:hover,
+.nav-sublist
+		li
+			a:hover
+				color: var(--color-frosty-sky)
+
+.nav-link:hover::after,
+.nav-sublist li a:hover::after 
+	width: 100%
+
+.nav-hidden
+	position: absolute
+	top: 100%
+	padding-top: 2rem
+	min-width: 30rem
+	z-index: 5
+	visibility: hidden
+	opacity: 0
+	pointer-events: none
+	user-select: none
+
+.nav-sublist
+	padding: 1rem
+	-webkit-backdrop-filter: blur(1.5rem)
+	backdrop-filter: blur(1.5rem)
+	background: var(--color-medium-blue)
+	border: 1px solid rgba(255, 255, 255, 0.1)
+
+	li
+		&:not(:last-child)
+			margin-bottom: 1rem
+
+.header__actions
+	display: flex
+	align-items: center
+	gap: 1rem
+
+.header__actions
+	a
+		display: flex
+		align-items: center
+		justify-content: center
+		gap: 1rem
+		padding: 2.05rem 4.35rem
+		max-width: 19.4rem
+		width: 100%
+		font-weight: 700
+		font-size: 2rem
+		line-height: 0.8
+		color: var(--color-white)
+		background-color: var(--color-medium-blue)
+		transition: all 0.2s ease-in-out
+		border-radius: 1.4rem
+
+.header__actions
+		a:hover
+			background-color: var(--color-white)
+			color: var(--color-medium-blue)
+
+.header__actions
+	a
+		&.header__tel
+			display: none
+			padding: 0
+			max-width: 100%
+			width: auto
+			background-color: transparent
+
+.header__btn
+	padding: 1rem 1.6rem
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 1.4rem
+	background-color: var(--color-white)
+	flex-shrink: 0
+
+.header__btn
+	img
+		width: 2.4rem
+		height: 3.5rem
+
+.header__toggle
+	display: none
+	flex-shrink: 0
+
+.header__toggle
+	svg
+		width: 4rem
+		height: 4rem
+	
+.header
+	position: relative
+	z-index: 6
+
+	&__banner
+		padding: 1.2rem 0
+		background-color: var(--color-dark-blue)
+
+	&__banner-item
+		&:nth-child(2)
+			gap: 0.6rem
+		
+		a
+			img
+				flex-shrink: 0
+				width: 1.818rem
+				height: 1.818rem
+
+	&__banner-item a,
+	&__banner-item p
+		font-size: 1.8rem
+		line-height: 2.08rem
+		color: var(--color-white)
+
+	&__center
+		padding: 2rem 0
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+		backdrop-filter: blur(15px)
+		background: rgba(255, 255, 255, 0.02)
+
+	&__logo
+		display: inline-block
+		flex-shrink: 0
+		width: 17.835rem
+
+	&__nav
+		max-width: 67.7rem
+		width: 100%
+
+.nav-item
+	position: relative
+
+.nav-link,
+.nav-sublist li a
+	position: relative
+	font-weight: 600
+	font-size: 1.6rem
+	line-height: 150%
+	color: var(--color-white)
+	transition: all 0.2s ease-in-out
+
+.nav-link::after,
+.nav-sublist
+		li
+			a
+				&::after
+					content: ""
+					position: absolute
+					display: block
+					bottom: -0.5rem
+					left: 0
+					width: 0%
+					height: 0.15rem
+					transition: all 0.2s ease-in-out
+					background-color: var(--color-frosty-sky)
+					border-radius: 0.02rem
+
+.nav-hidden
+	position: absolute
+	top: 100%
+	padding-top: 2rem
+	min-width: 30rem
+	z-index: 5
+	visibility: hidden
+	opacity: 0
+	pointer-events: none
+	user-select: none
+
+.nav-sublist
+	border: 1px solid rgba(255, 255, 255, 0.1)
+	padding: 1rem
+	backdrop-filter: blur(1.5rem)
+	background: var(--color-medium-blue)
+
+	li
+		&:not(:last-child)
+			margin-bottom: 1rem

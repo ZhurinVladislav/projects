@@ -1,0 +1,75 @@
+.table
+	.head
+		display: flex
+		padding: 12px 26px
+
+		div
+			color: $color__2
+			font-size: 16px
+			font-weight: 700
+			line-height: 20px
+			text-align: center
+
+			&:first-child
+				padding-left: 20px
+				text-align: left
+
+			&:last-child
+				text-align: right
+
+	.items
+		.table-item
+			&:not(:last-child)
+				margin-bottom: 8px
+
+			&:nth-child(odd)
+				.caption
+					background-color: $color__45
+
+			&:nth-child(even)
+				.caption
+					background-color: $color__49
+
+			.caption
+				display: flex
+				font-size: 16px
+				text-transform: none
+
+				div
+					&:first-child
+						padding-left: 28px
+						text-align: left
+
+					&:last-child
+						text-align: right
+
+		&.coins
+			.table-item
+				.caption
+					div:first-child
+						position: relative
+
+						&::before
+							position: absolute
+							top: 2px
+							left: -4px
+							width: 24px
+							height: 24px
+							background-size: contain
+							content: ''
+
+				&:nth-child(1)
+					.caption
+						div:first-child
+							&::before
+								background-image: url(/app/images/icons/coin-gold.svg)
+				&:nth-child(2)
+					.caption
+						div:first-child
+							&::before
+								background-image: url(/app/images/icons/coin-silver.svg)
+				&:nth-child(3)
+					.caption
+						div:first-child
+							&::before
+								background-image: url(/app/images/icons/coin-bronze.svg)

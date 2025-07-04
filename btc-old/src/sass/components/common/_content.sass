@@ -1,0 +1,128 @@
+.content
+  h1
+    margin-bottom: 20px
+    font-weight: 700
+    line-height: 120%
+    font-size: 84px
+    +md
+      font-size: 60px
+    +sm
+      font-size: 50px
+    +ph
+      font-size: 40px
+
+  h2
+    margin-bottom: 16px
+    font-weight: 700
+    line-height: 120%
+    font-size: 32px
+    +ph
+      font-size: 30px
+
+  h3
+    margin-bottom: 16px
+    font-weight: 600
+    line-height: 120%
+    font-size: 24px
+    +ph
+      font-size: 20px
+
+  p
+    &:not(:last-child)
+      margin-bottom: 20px
+
+  a
+    border-bottom: 2px solid var(--white-color)
+    transition: border-color .2s linear
+    +hover
+      border-color: var(--none-color)
+    +focus
+      border-color: var(--none-color)
+    &:active
+      transform: scale(.98)
+
+  img
+    // border-radius: 20px
+    +ph
+      margin: 0!important
+      margin-bottom: 15px!important
+      width: 100%
+
+  ul
+    margin-bottom: 20px
+    padding-left: 24px
+    list-style-type: disc
+    +ph
+      padding-left: 20px
+
+    li
+      &:not(:last-child)
+        margin-bottom: 10px
+      &::marker
+        color: var(--accent-color)
+
+  ol
+    margin-bottom: 20px
+    padding-left: 24px
+    +ph
+      padding-left: 20px
+
+    li
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  blockquote
+    margin: 0
+    margin-bottom: 20px
+    padding: 16px 24px
+    border: 1px solid var(--accent-color)
+    border-radius: 16px
+    color: var(--accent-color)
+
+    ul
+      margin-bottom: 0
+
+    p
+      @include textReset
+
+  table
+    margin-bottom: 30px
+    max-width: 100%
+    width: 100%
+    border-collapse: collapse
+    overflow: hidden
+    table-layout: fixed
+    border-radius: 16px
+    +ph
+      display: block
+      max-width: 100%
+      font-size: 14px
+      width: fit-content
+      overflow-x: auto
+
+    p
+      @include textReset
+
+    tr
+      background-color: var(--accent-color)
+      color: var(--page-color)
+      
+      &:nth-child(1)
+        font-weight: 600
+        font-size: 18px
+        color: var(--page-color)
+        background-color: var(--accent-color)
+        text-align: center
+        +ph
+          font-size: 16px
+
+        td
+          border: none
+
+      &:nth-child(2n)
+        color: var(--text-color)
+        background-color: var(--block-color)
+
+    th, td
+      padding: 14px
+      text-align: center

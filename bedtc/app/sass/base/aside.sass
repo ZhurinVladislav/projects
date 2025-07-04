@@ -1,0 +1,629 @@
+.aside
+	position: relative
+	width: 230px
+	margin-right: 20px
+
+.aside-menu
+	position: relative
+	margin-bottom: 28px
+	padding: 16px 8px 4px
+	background-color: $color__11
+	border-left: 4px solid $color__8
+	border-right: 4px solid $color__8
+
+	.border-bottom
+		position: absolute
+		right: 8px
+		bottom: -12px
+		left: 8px
+		height: 12px
+		background-color: $color__13
+		border-top: 4px solid $color__12
+		border-bottom: 4px solid $color__8
+		
+		.left,
+		.right
+			position: absolute
+			top: -8px
+			width: 4px
+			height: 12px
+			background-color: $color__13
+			border-top: 4px solid $color__12
+			border-bottom: 4px solid $color__8
+
+			&::before
+				position: absolute
+				top: -8px
+				box-sizing: border-box
+				width: 4px
+				height: 12px
+				background-color: $color__13
+				border-top: 4px solid $color__12
+				border-bottom: 4px solid $color__8
+				content: ''
+
+		.left
+			left: -4px
+			&::before
+				left: -4px
+
+		.right
+			right: -4px
+			&::before
+				right: -4px
+
+	.list
+		.link
+			position: relative
+			display: block
+			padding: 4px 8px
+			text-decoration: none
+
+			.caption
+				position: relative
+				display: block
+				padding: 4px 6px 16px
+				color: $color__2
+				font-size: 16px
+				font-family: $pixeloid
+				font-weight: 700
+				text-transform: uppercase
+				text-shadow: -2px 2px $color__11
+				line-height: 20px
+				background-color: $color__7
+				border-top: 4px solid $color__16
+				transition: all .15s
+
+				&::before,
+				&::after
+					position: absolute
+					top: 0
+					bottom: 4px
+					width: 4px
+					transition: all .15s
+					background-color: $color__7
+					border-top: 4px solid $color__16
+					content: ''
+
+				&::before
+					left: -4px
+
+				&::after
+					right: -4px
+
+			.bd-black
+				position: absolute
+				top: 0
+				right: 8px
+				bottom: 0
+				left: 8px
+				border-top: 4px solid $color__8
+				border-bottom: 4px solid $color__8
+
+				span
+					position: absolute
+					top: 4px
+					bottom: 4px
+					width: 4px
+					background-color: $color__8
+
+					&::before,
+					&::after
+						position: absolute
+						width: 4px
+						height: 4px
+						background-color: $color__8
+						content: ''
+
+					&::before
+						top: -4px
+
+					&::after
+						bottom: -4px
+
+					&:first-child
+						left: -8px
+						&::before,
+						&::after
+							left: 4px
+
+					&:last-child
+						right: -8px
+						&::before,
+						&::after
+							right: 4px
+
+			.bd-hover
+				box-sizing: border-box
+				position: absolute
+				right: 8px
+				bottom: 4px
+				left: 8px
+				height: 12px
+				background-color: $color__11
+				border-top-color: $color__16
+				border-top-style: solid
+				border-top-width: 4px
+				transition: all .15s
+
+				&::before,
+				&::after
+					box-sizing: border-box
+					position: absolute
+					bottom: 4px
+					width: 4px
+					height: 12px
+					background-color: $color__11
+					border-top-color: $color__16
+					border-top-style: solid
+					border-top-width: 4px
+					transition: all .15s
+					content: ''
+
+				&::before
+					left: -4px
+
+				&::after
+					right: -4px
+
+			&:hover,
+			&:focus
+				.bd-hover
+					height: 4px
+					&::before,
+					&::after
+						height: 4px
+
+				.caption
+					padding-top: 8px
+					padding-bottom: 12px
+					background-color: $color__20
+					&::before,
+					&::after
+						background-color: $color__20
+
+			&:not(:last-child)
+				margin-bottom: 4px
+
+	.dropdown
+		position: relative
+		display: block
+		padding: 4px 8px
+		text-decoration: none
+
+		&::before,
+		&::after
+			position: absolute
+			top: 8px
+			bottom: 20px
+			width: 4px
+			transition: all .15s
+			background-color: $color__7
+			border-top: 4px solid $color__16
+			content: ''
+
+		&::before
+			left: 4px
+
+		&::after
+			right: 4px
+
+		&:not(:last-child)
+				margin-bottom: 4px
+
+		.caption
+			position: relative
+			display: block
+			padding: 4px 6px 16px
+			color: $color__2
+			font-size: 16px
+			font-family: $pixeloid
+			font-weight: 700
+			text-transform: uppercase
+			text-shadow: -2px 2px $color__11
+			line-height: 20px
+			background-color: $color__7
+			border-top: 4px solid $color__16
+			transition: all .15s
+			cursor: pointer
+			user-select: none
+
+			.arrow
+				position: absolute
+				top: 4px
+				right: 6px
+				bottom: 16px
+				width: 16px
+				transition: all .15s
+				filter: drop-shadow(-2px 2px $color__11)
+
+				&::before
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					background-image: url(/app/images/arrow-white.svg)
+					background-position: center
+					background-size: contain
+					background-repeat: no-repeat
+					transition: all .15s
+					content: ''
+
+		.bd-black
+			position: absolute
+			top: 0
+			right: 8px
+			bottom: 0
+			left: 8px
+			border-top: 4px solid $color__8
+			border-bottom: 4px solid $color__8
+
+			span
+				position: absolute
+				top: 4px
+				bottom: 4px
+				width: 4px
+				background-color: $color__8
+
+				&::before,
+				&::after
+					position: absolute
+					width: 4px
+					height: 4px
+					background-color: $color__8
+					content: ''
+
+				&::before
+					top: -4px
+
+				&::after
+					bottom: -4px
+
+				&:first-child
+					left: -8px
+					&::before,
+					&::after
+						left: 4px
+
+				&:last-child
+					right: -8px
+					&::before,
+					&::after
+						right: 4px
+
+		.bd-hover
+			box-sizing: border-box
+			position: absolute
+			right: 8px
+			bottom: 4px
+			left: 8px
+			height: 12px
+			background-color: $color__11
+			border-top-color: $color__16
+			border-top-style: solid
+			border-top-width: 4px
+			transition: all .15s
+
+			&::before,
+			&::after
+				box-sizing: border-box
+				position: absolute
+				bottom: 4px
+				width: 4px
+				height: 12px
+				background-color: $color__11
+				border-top-color: $color__16
+				border-top-style: solid
+				border-top-width: 4px
+				transition: all .15s
+				content: ''
+
+			&::before
+				left: -4px
+
+			&::after
+				right: -4px
+
+		&:hover:not(.active),
+		&:focus:not(.active)
+			&::before,
+			&::after
+				bottom: 12px
+				background-color: $color__20
+
+			.bd-hover
+				height: 4px
+				
+				&::before,
+				&::after
+					height: 4px
+
+			.caption
+				padding-top: 8px
+				padding-bottom: 12px
+				background-color: $color__20
+
+				.arrow
+					top: 8px
+					bottom: 12px
+
+
+		.dropdown-list
+			position: relative
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			max-height: 0px
+			padding: 0 6px
+			background-color: $color__20
+			transition: background-color .5s cubic-bezier(0, 1, 0, 1), padding-bottom 0.5s cubic-bezier(0, 1, 0, 1), max-height 0.5s cubic-bezier(0, 1, 0, 1)
+			overflow: hidden
+
+			&::before,
+			&::after
+				position: absolute
+				top: 0
+				bottom: 4px
+				width: 4px
+				background-color: $color__20
+				content: ''
+
+			&::before
+				left: -4px
+
+			&::after
+				right: -4px
+
+			.item
+				margin-bottom: 8px
+				color: transparent
+				font-size: 14px
+				font-family: $pixeloid
+				font-weight: 700
+				text-shadow: -2px 2px transparent
+				text-decoration: none
+				line-height: 18px
+				transition: all .15s
+
+		&.active
+			.caption
+				padding-top: 8px
+				padding-bottom: 12px
+
+				.arrow
+					top: 8px
+					bottom: 12px
+
+					&::before
+						transform: rotate(180deg)
+
+			.dropdown-list
+				max-height: 400px
+				padding-bottom: 10px
+				background-color: $color__7
+				transition: background-color .15s ease-in-out, padding-bottom 0.5s ease-in-out, max-height .5s ease-in-out
+
+				&::before,
+				&::after
+					background-color: $color__7
+
+				.item
+					color: $color__2
+					text-shadow: -2px 2px $color__11
+
+					&:hover,
+					&:focus
+						color: $color__4
+
+.aside-tutorial
+	width: 100%
+	margin-bottom: 8px
+
+	.button-big
+		width: 100%
+		text-align: left
+
+		.bg
+			background-color: $color__11
+
+		.bd-bot,
+		.bd-bot span,
+		.bd-bot span::before
+			background-color: $color__13
+			border-top-color: $color__12
+
+		.caption
+			padding-right: 6px
+			padding-left: 6px
+
+
+.aside-buttons
+	.item
+		position: relative
+		display: flex
+		justify-content: space-between
+		padding: 4px
+		margin-bottom: 4px
+		text-decoration: none
+
+		.bg
+			position: absolute
+			top: 0
+			right: 8px
+			bottom: 0
+			left: 8px
+			background-color: $color__3
+			border-top: 4px solid $color__8
+			border-bottom: 4px solid $color__8
+
+			&::before,
+			&::after
+				position: absolute
+				right: -4px
+				height: 4px
+				left: -4px
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+				content: ''
+
+			&::before
+				top: 0
+				background-color: $color__22
+
+			&::after
+				bottom: 0
+				background-color: $color__21
+
+			span
+				position: absolute
+				top: 4px
+				bottom: 4px
+				left: -8px
+				width: 8px
+				background-color: $color__21
+				border-left: 4px solid $color__8
+
+
+		.caption
+			position: relative
+			padding: 8px 10px 10px
+			color: $color__2
+			font-size: 14px
+			font-family: $pixeloid
+			font-weight: 700
+			line-height: 16px
+
+		.counter
+			position: relative
+			min-width: 60px
+			padding: 4px 8px 10px
+			text-align: center
+			transition: all .15s
+
+			&::after
+				position: absolute
+				top: 4px
+				right: 0
+				left: 0
+				height: 4px
+				border-left: 4px solid $color__23
+				border-right: 4px solid $color__23
+				content: ''
+
+			.bd
+				position: absolute
+				top: 4px
+				right: -4px
+				bottom: 4px
+				left: -4px
+				background-color: $color__5
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+
+				&::before
+					box-sizing: border-box
+					position: absolute
+					top: -4px
+					right: 4px
+					left: 0
+					height: 4px
+					background-color: $color__23
+					border-left: 4px solid $color__8
+					content: ''
+
+				&::after
+					position: absolute
+					bottom: -4px
+					left: 0
+					width: 4px
+					height: 4px
+					background-color: $color__8
+					content: ''
+
+			.bd-hover
+				position: absolute
+				right: 4px
+				bottom: 0
+				left: 4px
+				height: 8px
+				background-color: $color__23
+				border-bottom: 4px solid $color__24
+				transition: all .15s
+
+				&::before,
+				&::after
+					box-sizing: border-box
+					position: absolute
+					top: -4px
+					width: 4px
+					height: 8px
+					background-color: $color__23
+					border-bottom: 4px solid $color__24
+					transition: all .15s
+					content: ''
+
+				&::before
+					left: -4px
+
+				&::after
+					right: -4px
+
+			.number
+				position: relative
+				color: $color__2
+				font-size: 14px
+				font-family: $pixeloid
+				font-weight: 700
+				line-height: 16px
+				text-shadow: -2px 2px $color__11
+
+		&.disabled
+			cursor: default
+
+			.bg
+				background-color: $color__7
+
+				&::before
+					background-color: $color__16
+
+				&::after
+					background-color: $color__11
+
+				span
+					background-color: $color__11
+
+			.counter
+				&::after
+					border-left-color: $color__16
+					border-right-color: $color__16
+
+				.bd
+					background-color: $color__20
+
+					&::before
+						background-color: $color__16
+
+				.bd-hover
+					background-color: $color__16
+					border-bottom-color: $color__11
+
+					&::before,
+					&::after
+						background-color: $color__16
+						border-bottom-color: $color__11
+
+		&:hover:not(.disabled),
+		&:focus:not(.disabled)
+			.counter
+				padding-top: 6px
+				padding-bottom: 8px
+
+				.bd-hover,
+				.bd-hover::before,
+				.bd-hover::after
+					height: 4px
+					border-bottom-width: 0px
+
+
+.aside-banners

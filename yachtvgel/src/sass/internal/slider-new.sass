@@ -1,0 +1,140 @@
+.slider-new
+	border-radius: 16px
+	&__slide
+		position: relative
+		display: flex
+		flex-direction: column
+		border-radius: 16px
+		background-color: $clr_1
+		overflow: hidden
+		&:hover
+			+hover
+				.card-content__title
+					color: $clr_3 
+
+				.slider-new__slide-img
+					transform: scale(1.1)
+
+	&__slide-link-main
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		width: 100%
+		height: 100%
+
+	&__slide-img-wrap
+		display: flex
+		max-width: 100%
+		width: 100%
+		height: 250px
+		overflow: hidden
+
+	&__slide-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		transition: transform .2s linear
+
+.slider-btn
+	position: absolute
+	top: 50%
+	z-index: 2
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 40px
+	height: 40px
+	border-radius: 100%
+	background-color: $clr_4
+	transform: translateY(-50%)
+	transition: background-color .2s linear
+
+	&:hover
+		+hover
+			background-color: $clr_3
+			.slider-btn__icon
+				fill: $clr_1
+
+	&_prev
+		left: 10px
+		.slider-btn__icon
+			transform: rotate(90deg)
+
+	&_next
+		right: 10px
+		.slider-btn__icon
+			transform: rotate(-90deg)
+
+	&__icon
+		width: 16px
+		height: 16px
+		transition: fill .2s linear, transform .3s linear
+
+.card-content
+	display: flex
+	flex-direction: column
+	gap: 10px
+	padding: 10px
+	font-size: 16px
+	background-color: $clr_1
+
+	&__subtitle
+		margin-bottom: -10px
+		font-size: 14px
+
+	&__title
+		margin-bottom: 5px
+		font-weight: 600
+		font-size: 20px
+		transition: color .2s linear
+
+	&__link
+		z-index: 2
+		font-size: 14px
+		font-weight: 600
+
+		&:active
+			transform: none
+
+		.link-text
+			&__icon
+				fill: $clr_3
+
+		&_more
+			.link-text
+				&__icon
+					fill: $clr_2
+					transform: rotate(-90deg)
+
+.card-info
+	display: flex
+	flex-direction: column
+	gap: 10px
+
+	&__item
+		display: flex
+		align-items: center
+		gap: 4px
+
+	&__item-img
+		flex-shrink: 0
+		width: 16px
+		height: 16px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+
+	&__item-text
+		font-size: 14px
+
+.card-price
+	font-size: 14px
+
+	&__text
+		&_old
+			text-decoration: line-through
+			opacity: .4
+		&_new
+			font-weight: 700
+
