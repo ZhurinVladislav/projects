@@ -1,0 +1,70 @@
+.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+
+	.pagination-list
+		list-style-type: none
+		display: flex
+		justify-content: center
+		align-items: center
+		padding-left: 0
+
+	.pagination-item
+		&:not(:last-child)
+			margin-right: 4px
+
+	.pagination-arrow
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 45px
+		height: 45px
+		margin: 0 4px
+		transition: transform .15s
+
+		&.right
+			img
+				transform: rotate(180deg)
+
+		&.left
+			&:hover,
+			&:focus
+				transform: translateX(-3px)
+
+		&.right
+			&:hover,
+			&:focus
+				transform: translateX(3px)
+
+	a
+		cursor: pointer
+
+	.button-small
+		display: block
+
+		.caption
+			min-width: 45px
+			height: 45px
+			padding: 4px 8px 4px 12px
+			font-size: 20px
+			line-height: 29px
+			background-color: $color__7
+			border-top-color: $color__16
+			border-right-color: $color__16
+			border-bottom-color: $color__11
+			border-left-color: $color__11
+
+		svg
+			width: 24px
+			height: 24px
+
+		&:hover,
+		&:focus,
+		&.active
+			.caption
+				background-color: $color__5
+				border-top-color: $color__23
+				border-right-color: $color__23
+				border-bottom-color: $color__24
+				border-left-color: $color__24

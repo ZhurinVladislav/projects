@@ -1,0 +1,35 @@
+.hero
+	min-height: 826px
+	color: var(--white-color)
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+	+sm
+		min-height: 400px
+		background-attachment: unset
+
+	&__container
+		padding-top: 202px
+		padding-bottom: 136px
+		+sm
+			padding-top: 100px
+			padding-bottom: 50px
+
+	&__title
+		margin-bottom: 28px
+		max-width: 725px
+		color: var(--white-color)
+		+ph
+			margin-bottom: 20px
+
+	&__subtitle
+		margin-bottom: 100px
+		font-weight: 500
+		font-size: 28px
+		line-height: 86%
+		+sm
+			font-size: 24px
+		+ph
+			margin-bottom: 40px
+			font-size: 22px

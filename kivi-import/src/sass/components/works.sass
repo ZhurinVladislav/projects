@@ -1,0 +1,55 @@
+.works
+	&__list
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+		gap: 4px
+		+ph
+			grid-template-columns: 1fr
+
+	&__list-item
+		display: flex
+		align-items: center
+		gap: 16px
+		padding: 30px
+		border-radius: 20px
+		+sm
+			padding: 20px
+		+ph
+			padding: 10px
+			border-radius: 10px
+		&:nth-child(1)
+			background-color: $clr_5
+		&:nth-child(2)
+			background-color: $clr_6
+		&:nth-child(3)
+			background-color: $clr_7
+		&:nth-child(4)
+			background-color: $clr_8
+		&:nth-child(5)
+			background-color: $clr_9
+		&:nth-child(6)
+			background-color: $clr_10
+
+	&__list-item-img
+		width: 100px
+		height: 100px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		+sm
+			width: 80px
+			height: 80px
+		+ph
+			width: 60px
+			height: 60px
+			background-size: cover
+
+	&__list-item-descr
+		max-width: 230px
+		font-weight: 600
+		font-size: 24px
+		line-height: 150%
+		+sm
+			font-size: 20px
+		+ph
+			font-size: 18px

@@ -1,0 +1,57 @@
+.project-services
+	&__list
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(345px, 1fr))
+		gap: 20px
+		margin-bottom: 32px
+		+ph
+			gap: 14px
+			grid-template-columns: 1fr
+
+	&__list-item
+		display: flex
+		width: 100%
+		font-weight: 600
+		padding: 16px 24px
+		border-left: 2px solid $clr_4
+		background-color: rgba($clr_4, .1)
+		animation: openListMore .2s linear
+
+		&.hidden
+			display: none
+			animation: closeListMore .2s linear
+
+	&__btn
+		max-width: 100%
+		width: 100%
+		min-height: 50px
+
+		.btn-inv__icon
+			transition: transform .2s linear
+
+		&.active
+			.btn-inv__icon
+				transform: rotateX(180deg)
+
+		&.hidden
+			display: none
+
+@keyframes openListMore
+	from
+		opacity: 0
+		transform: translateY(-10px)
+
+	to
+		opacity: 1
+		transform: translateY(0)
+
+@keyframes closeListMore
+	from
+		display: block
+		opacity: 1
+		transform: translateY(0)
+
+	to
+		display: none
+		opacity: 0
+		transform: translateY(-10px)

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BitcoinFree</title>
+    <link rel="stylesheet" href="/app/css/main.css" id="general-style">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelector('body').classList.add('loading');
+            document.querySelectorAll('[data-animations]').forEach(element => {
+                element.classList.add('animations')
+            });;
+        }); 
+    </script>
+</head>
+<body>
+
+    <aside class="aside">
+        <div class="aside-top">
+            <a href="/" class="logo">
+                <img src="/app/images/logo.svg" alt="">
+            </a>
+            <div class="language">
+                <button class="language__button">
+                    <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#planet"></use></svg></span>
+                    <span class="text">RU</span>
+                    <span class="arrow"><svg><use xlink:href="/app/images/svg_sprite.svg#lang"></use></svg></span>
+                </button>
+                <div class="spoller">
+                    <ul>
+                        <li><a href="#">RU</a></li>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">DE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="aside-center">
+            <nav class="aside-menu">
+                <ul class="aside-menu__list">
+                    <li class="aside-menu__item">
+                        <a href="#" class="aside-menu__link active">
+                            <span class="aside-menu__icon">
+                                <svg><use xlink:href="/app/images/svg_sprite.svg#aside1"></use></svg>
+                            </span>
+                            <span class="aside-menu__text">Стартовая страница</span>
+                        </a>
+                    </li>
+                    <li class="aside-menu__item">
+                        <a href="#" class="aside-menu__link">
+                            <span class="aside-menu__icon">
+                                <svg><use xlink:href="/app/images/svg_sprite.svg#aside2"></use></svg>
+                            </span>
+                            <span class="aside-menu__text">Биржа</span>
+                        </a>
+                        <button class="aside-menu__arrow">
+                            <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                        </button>
+                        <ul>
+                            <li><a href="#">Пункт1</a></li>
+                            <li><a href="#">Пункт2</a></li>
+                            <li><a href="#">Пункт3</a></li>
+                        </ul>
+                    </li>
+                    <li class="aside-menu__item">
+                        <a href="#" class="aside-menu__link">
+                            <span class="aside-menu__icon">
+                                <svg><use xlink:href="/app/images/svg_sprite.svg#aside3"></use></svg>
+                            </span>
+                            <span class="aside-menu__text">Кошелек</span>
+                        </a>
+                    </li>
+                    <li class="aside-menu__item">
+                        <a href="#" class="aside-menu__link">
+                            <span class="aside-menu__icon">
+                                <svg><use xlink:href="/app/images/svg_sprite.svg#aside4"></use></svg>
+                            </span>
+                            <span class="aside-menu__text">История баланса</span>
+                        </a>
+                    </li>
+                    <li class="aside-menu__item">
+                        <a href="#" class="aside-menu__link">
+                            <span class="aside-menu__icon">
+                                <svg><use xlink:href="/app/images/svg_sprite.svg#aside5"></use></svg>
+                            </span>
+                            <span class="aside-menu__text">Бонусная программа</span>
+                        </a>
+                    </li>
+                    <li class="aside-menu__item">
+                        <a href="#" class="aside-menu__link">
+                            <span class="aside-menu__icon">
+                                <svg><use xlink:href="/app/images/svg_sprite.svg#aside6"></use></svg>
+                            </span>
+                            <span class="aside-menu__text">Настройка</span>
+                        </a>
+                    </li>
+                    <li class="aside-menu__item">
+                        <a href="#" class="aside-menu__link">
+                            <span class="aside-menu__icon">
+                                <svg><use xlink:href="/app/images/svg_sprite.svg#aside7"></use></svg>
+                            </span>
+                            <span class="aside-menu__text">Техподдержка</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="aside-bottom">
+            <a href="#" class="logout">
+                <span class="logout__icon">
+                    <svg><use xlink:href="/app/images/svg_sprite.svg#logout"></use></svg>
+                </span>
+                <span class="logout__text">Выход</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="account">
+
+        <div class="background-wrapper">
+
+            <header class="account-header" >
+                <div class="container">
+                    <div class="content">
+                        <div class="col-left">
+                            <a href="/" class="logo">
+                                <img src="/app/images/logo.svg" alt="">
+                            </a>
+
+                            <div class="balance green">
+                                <div class="text-wrapper">
+                                    <div class="title">Рекламный баланс</div>
+                                    <div class="cost">
+                                        <span class="cost-text">0.0005000 coin</span>
+                                        <span class="hint">?</span>
+                                    </div>
+                                </div>
+                                <div class="button-wrapper">
+                                    <button class="btnsmall green">
+                                        <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#plus"></use></svg></span>
+                                    </button>
+                                    <button class="btnsmall-invert">
+                                        <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#refrech"></use></svg></span>
+                                    </button>
+                                </div>
+                            </div>
+    
+                            <div class="balance orange">
+                                <div class="text-wrapper">
+                                    <div class="title">Баланс</div>
+                                    <div class="cost">
+                                        <span class="cost-text">0.00084566 coin</span>
+                                        <span class="hint">?</span>
+                                    </div>
+                                </div>
+                                <div class="button-wrapper">
+                                    <button class="btnsmall orange">
+                                        <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#balance"></use></svg></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <button class="btnsmall-invert">
+                                <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#message"></use></svg></span>
+                            </button>
+                            <button class="btnsmall-invert">
+                                <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#ring"></use></svg></span>
+                            </button>
+                            <div class="person">
+                                <div class="person-avatar">
+                                    <img src="/app/images/avatar-empty.png" alt="avatar">
+                                </div>
+                                <div class="person-name">
+                                    <span>Привет</span>
+                                    <span class="username" id="username">Иван Иванович</span>
+                                </div>
+                            </div>
+
+                            <button class="menu__toggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="menu-mobie">
+                <div class="menu-header">
+                    <div class="language">
+                        <button class="language__button">
+                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#planet"></use></svg></span>
+                            <span class="text">RU</span>
+                            <span class="arrow"><svg><use xlink:href="/app/images/svg_sprite.svg#lang"></use></svg></span>
+                        </button>
+                        <div class="spoller">
+                            <ul>
+                                <li><a href="#">RU</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">DE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btnsmall-wrap">
+                        <button class="btnsmall-invert">
+                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#message"></use></svg></span>
+                        </button>
+                        <button class="btnsmall-invert">
+                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#ring"></use></svg></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="balance orange">
+                    <div class="text-wrapper">
+                        <div class="title">Баланс</div>
+                        <div class="cost">
+                            <span class="cost-text">0.00084566 coin</span>
+                        </div>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btnsmall orange">
+                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#balance"></use></svg></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="balance green">
+                    <div class="text-wrapper">
+                        <div class="title">Рекламный баланс</div>
+                        <div class="cost">
+                            <span class="cost-text">0.0005000 coin</span>
+                        </div>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btnsmall green">
+                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#plus"></use></svg></span>
+                        </button>
+                        <button class="btnsmall-invert">
+                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#refrech"></use></svg></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="balance-label">1 COIN = USDT</div>
+
+                <nav class="menu2">
+                    <ul class="menu2-list">
+                        <li class="menu2-item">
+                            <a href="#" class="menu2-link active">
+                                <span class="menu2-icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#aside1"></use></svg>
+                                </span>
+                                <span class="menu2-text">Стартовая страница</span>
+                            </a>
+                        </li>
+                        <li class="menu2-item">
+                            <a href="#" class="menu2-link">
+                                <span class="menu2-icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#aside2"></use></svg>
+                                </span>
+                                <span class="menu2-text">Биржа</span>
+                            </a>
+                            <button class="menu2-arrow">
+                                <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                            </button>
+                            <ul>
+                                <li><a href="#">Пункт1</a></li>
+                                <li><a href="#">Пункт2</a></li>
+                                <li><a href="#">Пункт3</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu2-item">
+                            <a href="#" class="menu2-link">
+                                <span class="menu2-icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#aside3"></use></svg>
+                                </span>
+                                <span class="menu2-text">Кошелек</span>
+                            </a>
+                        </li>
+                        <li class="menu2-item">
+                            <a href="#" class="menu2-link">
+                                <span class="menu2-icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#aside4"></use></svg>
+                                </span>
+                                <span class="menu2-text">История баланса</span>
+                            </a>
+                        </li>
+                        <li class="menu2-item">
+                            <a href="#" class="menu2-link">
+                                <span class="menu2-icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#aside5"></use></svg>
+                                </span>
+                                <span class="menu2-text">Бонусная программа</span>
+                            </a>
+                        </li>
+                        <li class="menu2-item">
+                            <a href="#" class="menu2-link">
+                                <span class="menu2-icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#aside6"></use></svg>
+                                </span>
+                                <span class="menu2-text">Настройка</span>
+                            </a>
+                        </li>
+                        <li class="menu2-item">
+                            <a href="#" class="menu2-link">
+                                <span class="menu2-icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#aside7"></use></svg>
+                                </span>
+                                <span class="menu2-text">Техподдержка</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <section class="account-start disabled">
+                <div class="container">
+                    <div class="content">
+
+                        <div class="balances">
+                            <div class="balances-title">
+                                <span class="balances-title__icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#cards"></use></svg>
+                                </span>
+                                <span class="balances-title__text">Счет пользователя</span>
+                            </div>
+                            <div class="balances-wrap">
+                                <div class="balance orange">
+                                    <div class="text-wrapper">
+                                        <div class="balance-title">Баланс</div>
+                                        <div class="balance-cost">0.00084566 coin</div>
+                                        <div class="balance-info">1 coin=1 USDT</div>
+                                    </div>
+                                    <div class="button-wrapper">
+                                        <button class="button orange">
+                                            <span class="button-text">Вывести</span>
+                                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#balance"></use></svg></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="balance green">
+                                    <div class="text-wrapper">
+                                        <div class="balance-title">Рекламный баланс</div>
+                                        <div class="balance-cost">0.0005000 coin</div>
+                                        <div class="balance-info">1 coin=1 USDT</div>
+                                    </div>
+                                    <div class="button-wrapper">
+                                        <button class="button green">
+                                            <span class="button-text">Пополнить</span>
+                                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#plus"></use></svg></span>
+                                        </button>
+                                        <button class="btnsmall-invert refrech">
+                                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#refrech"></use></svg></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="list-anchor">
+                            <li class="item-anchor">
+                                <span class="link-anchor__title">Заработать на просмотре</span>
+                                <span class="link-anchor__text">Попробуйте и заработайте первые деньги <br>уже сегодня! </span>
+                                <a href="#" class="button-invert">Начать зарабатывать</a>
+                                <span class="link-anchor__image">
+                                    <img src="/app/images/anchor1.png" alt="anchor1">
+                                </span>
+                            </li>
+                            <li class="item-anchor">
+                                <span class="link-anchor__title">Разместить баннер</span>
+                                <span class="link-anchor__text">Раскрутите свой проект, увеличьте число <br>живых пользователей.</span>
+                                <a href="#" class="button-invert">Разместить баннер</a>
+                                <span class="link-anchor__image">
+                                    <img src="/app/images/anchor2.png" alt="anchor2">
+                                </span>
+                            </li>
+                            <li class="item-anchor">
+                                <span class="link-anchor__title">Разместить площадку</span>
+                                <span class="link-anchor__text">Попробуйте и заработайте первые деньги <br>уже сегодня!</span>
+                                <a href="#" class="button-invert">Стать партнером</a>
+                                <span class="link-anchor__image">
+                                    <img src="/app/images/anchor3.png" alt="anchor3">
+                                </span>
+                            </li>
+                            <li class="item-anchor">
+                                <span class="link-anchor__title">Разместить задание</span>
+                                <span class="link-anchor__text">Приведите на свой сайт живой трафик. <br>Платите только за выполенные задания.</span>
+                                <a href="#" class="button-invert">Разместить задание</a>
+                                <span class="link-anchor__image">
+                                    <img src="/app/images/anchor4.png" alt="anchor4">
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="account-viewing disabled">
+                <div class="container">
+                    <div class="content">
+                        <div class="viewing">
+                            <div class="viewing-title">
+                                <span class="viewing-title__icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#viewing"></use></svg>
+                                </span>
+                                <span class="viewing-title__text">Заработать на просмотре</span>
+                            </div>
+                            <div class="viewing-wrap">
+                                <div class="rightnow">
+                                    <div class="rightnow-title">Начните зарабатывать прямо сейчас!</div>
+                                    <a href="#" class="button button-mobile">Заработать</a>
+
+                                    <div class="spoller">
+
+                                        <div class="rightnow-text">
+                                            Вам будут показаны сайты в течении 15-60 секунд, после просмотра необходимо будет пройти капчу, для получения вознаграждения. 
+                                        </div>
+                                        <div class="rightnow-note">За просмотр каждого сайта вы будете получать вознаграждение:</div>
+                                    
+                                        <div class="rightnow-table">
+                                            <div class="rightnow-thead">
+                                                <div class="rightnow-tr">
+                                                    <div class="rightnow-th">время</div>
+                                                    <div class="rightnow-th">bitcoin</div>
+                                                </div>
+                                            </div>
+                                            <div class="rightnow-tbody">
+                                                <div class="rightnow-tr">
+                                                    <div class="rightnow-td">
+                                                        <span class="rightnow-td__icon">
+                                                            <svg><use xlink:href="/app/images/svg_sprite.svg#time"></use></svg>
+                                                        </span>
+                                                        <span class="rightnow-td__text">15 секунд</span>
+                                                    </div>
+                                                    <div class="rightnow-td">0,00000050</div>
+                                                </div>
+                                                <div class="rightnow-tr">
+                                                    <div class="rightnow-td">
+                                                        <span class="rightnow-td__icon">
+                                                            <svg><use xlink:href="/app/images/svg_sprite.svg#time"></use></svg>
+                                                        </span>
+                                                        <span class="rightnow-td__text">30 секунд</span>
+                                                    </div>
+                                                    <div class="rightnow-td">0,00000100</div>
+                                                </div>
+                                                <div class="rightnow-tr">
+                                                    <div class="rightnow-td">
+                                                        <span class="rightnow-td__icon">
+                                                            <svg><use xlink:href="/app/images/svg_sprite.svg#time"></use></svg>
+                                                        </span>
+                                                        <span class="rightnow-td__text">45 секунд</span>
+                                                    </div>
+                                                    <div class="rightnow-td">0,000000150</div>
+                                                </div>
+                                                <div class="rightnow-tr">
+                                                    <div class="rightnow-td">
+                                                        <span class="rightnow-td__icon">
+                                                            <svg><use xlink:href="/app/images/svg_sprite.svg#time"></use></svg>
+                                                        </span>
+                                                        <span class="rightnow-td__text">60 секунд</span>
+                                                    </div>
+                                                    <div class="rightnow-td">0,00000260</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rightnow-list">
+                                            <div class="rightnow-item">
+                                                <span class="rightnow-item__icon">
+                                                    <svg><use xlink:href="/app/images/svg_sprite.svg#rightnow1"></use></svg>
+                                                </span>
+                                                <span class="rightnow-item__text">
+                                                    После прохождения капчи, вознаграждение за просмотр будет автоматически зачислено на Ваш баланс.
+                                                </span>
+                                            </div>
+                                            <div class="rightnow-item">
+                                                <span class="rightnow-item__icon">
+                                                    <svg><use xlink:href="/app/images/svg_sprite.svg#rightnow2"></use></svg>
+                                                </span>
+                                                <span class="rightnow-item__text">
+                                                    Если Вы считаете рекламируемый контент неприемлемым. 
+                                                    Вы можете отправить жалобу на рекламодателя. Модератор рассмотрит Вашу заявку
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <button class="rightnow-link-more">
+                                        <span class="rightnow-link-more__text">Подробней</span>
+                                        <span class="rightnow-link-more__icon">
+                                            <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="earn">
+                                    <div class="image-wrapper">
+                                        <img src="/app/images/earn.png" alt="">
+                                    </div>
+                                    <a href="#" class="button">Заработать</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="earnings">
+                            <div class="earnings-title">
+                                <span class="earnings-title__icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#earnings"></use></svg>
+                                </span>
+                                <span class="earnings-title__text">Заработать на просмотре</span>
+                            </div>
+                            <ul class="earnings-list">
+                                <li class="earnings-item">
+                                    <span class="earnings-item__day">Сегодня</span>
+                                    <span class="earnings-item__btc">0,00000050 btc;</span>
+                                </li>
+                                <li class="earnings-item">
+                                    <span class="earnings-item__day">За неделю</span>
+                                    <span class="earnings-item__btc">0,00000150 btc;</span>
+                                </li>
+                                <li class="earnings-item">
+                                    <span class="earnings-item__day">За месяц</span>
+                                    <span class="earnings-item__btc">0,00002350 btc;</span>
+                                </li>
+                                <li class="earnings-item">
+                                    <span class="earnings-item__day">За все время</span>
+                                    <span class="earnings-item__btc">0,00066750 btc;</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="howearnings">
+                            <div class="howearnings-title">
+                                <span class="howearnings-title__icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#howearnings"></use></svg>
+                                </span>
+                                <span class="howearnings-title__text">Как зарабатывать больше</span>
+                            </div>
+
+                            <div class="referral">
+                                <div class="referral-title">На нашей бирже работает реферальная программа</div>
+                                <div class="referral-item">
+                                    <span class="referral-item__icon">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#referral"></use></svg>
+                                    </span>
+                                    <span class="referral-item__text">
+                                        Приглашайте других людей зарабатывать или <br>рекламировать в SITENAME и получай за это деньги.
+                                    </span>
+                                </div>
+                                <div class="referral-text">
+                                    Для удобства и прозрачности предоставляем <br>статистику по каждому приглашенному рефералу
+                                </div>
+                                <a href="#" class="button-invert">Реферальная программа</a>
+                                <div class="referral-image image-wrapper">
+                                    <img src="/app/images/referral-image.png" alt="referral">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="account-surfing ">
+                <div class="container">
+                    <div class="content">
+                        <div class="surfing">
+                            <div class="surfing-title">
+                                <span class="surfing-title__icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#surfing"></use></svg>
+                                </span>
+                                <span class="surfing-title__text">Серфинг сайтов</span>
+                            </div>
+                            
+                            <div class="control">
+                                <div class="control-title">
+                                    Биржа рекламы <strong>sitname</strong> Пассивный доход для всех
+                                </div>
+                                <div class="control-panel">
+                                    <div class="control-panel__left">
+                                        <div class="control-panel__text">Выберите число <strong>9</strong></div>
+                                        <div class="control-panel__buttons">
+                                            <button class="btnsmall-invert">478</button>
+                                            <button class="btnsmall-invert">78</button>
+                                            <button class="btnsmall-invert">4</button>
+                                            <button class="btnsmall-invert">9</button>
+                                        </div>
+                                    </div>
+                                    <div class="control-panel__right">
+                                        <button class="button">Перейти на сайт</button>
+                                        <div class="control-panel__right-wrap">
+                                            <button class="button-invert">Пропустить сайт</button>
+                                            <button class="btnsmall-invert">
+                                                <span class="icon">
+                                                    <svg><use xlink:href="/app/images/svg_sprite.svg#ignore"></use></svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="iframe-wrap image-wrapper">
+                            <img src="/app/images/iframe.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="account-support">
+                <div class="container">
+                    <div class="content">
+                        <div class="support">
+                            <div class="support-title">
+                                <span class="support-title__icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#support"></use></svg>
+                                </span>
+                                <span class="support-title__text">Техническая поддержка</span>
+                            </div>
+                            <div class="support-content">
+                                <div class="row">
+                                    <div class="col-left">
+                                        <div class="text-default">
+                                            <p>
+                                                Если у вас возникли сложности или вопросы и вы не нашли ответ на них
+                                                <a href="#">в разделе FAQ,</a> можете отправить своё обращение в этом разделе.
+                                            </p>
+                                            <p>
+                                                <span class="note">
+                                                    <span class="note__icon">
+                                                        <svg><use xlink:href="/app/images/svg_sprite.svg#time"></use></svg>
+                                                    </span>
+                                                    <span class="note__text">Время ответа от отдела техподдержки может достигать 72 часов.</span>
+                                                </span>
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    Проверьте нет ли ответа на ваш вопрос 
+                                                    <a href="#">в разделе FAQ</a>. Как показывает опыт, в 80% случаев 
+                                                    решение проблемы или ответ на ваш вопрос уже есть, и вы можете сэкономить своё собственное время.
+                                                </li>
+                                                <li>
+                                                    Если ответа на свой вопрос вы все-таки не нашли, то можете отправить обращение в отдел технической поддержки.
+                                                </li>
+                                                <li>Выберете тему обращения и сформулируйте вопрос. Возможно для его решения потребуется дополнительная информация, будьте готовы предоставить все необходимые данные.</li>
+                                            </ul>
+                                        </div>
+                                        <button class="button-invert" id="account-support__show">Отправить обращение</button>
+                                    </div>
+                                    <div class="col-right image-wrapper">
+                                        <img src="/app/images/support.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="support-spoller">
+
+                            <div class="support-form">
+                                <div class="support-title">
+                                    <span class="support-title__icon">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#sms"></use></svg>
+                                    </span>
+                                    <span class="support-title__text">Новое обращение</span>
+                                </div>
+
+                                <div class="support-form-content">
+                                    <div class="form-wrap">
+                                        <form action="/" class="form">
+                                            <div class="form-item">
+                                                <div class="label-wrap">
+                                                    <label for="support-category">Выберите категорию вашего обращение</label>
+                                                </div>
+                                                <div class="input-wrap">
+                                                    <input type="text" name="category" id="support-category" placeholder="Общие вопросы" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-item">
+                                                <div class="label-wrap">
+                                                    <label for="support-subject">Тема обращения</label>
+                                                </div>
+                                                <div class="input-wrap">
+                                                    <input type="text" name="subject" id="support-subject" placeholder="Кратко опишите причину обращения" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-item">
+                                                <div class="label-wrap">
+                                                    <label for="support-question">Вопрос</label>
+                                                </div>
+                                                <div class="input-wrap">
+                                                    <textarea 
+                                                        name="question" 
+                                                        id="support-question" 
+                                                        placeholder="Распишите подробно Ваш вопрос, также можете  приложить ссылки на скриншоты 
+                                                        на которых видно Вашу проблему (это поможет быстрее решить вопрос)" 
+                                                        required
+                                                    >
+                                                    </textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="button-wrapper">
+                                                <button class="button">Отправить</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="success">
+                                <span class="success__icon">
+                                    <svg><use xlink:href="/app/images/svg_sprite.svg#check"></use></svg>
+                                </span>
+                                <span class="success__text">Спасибо, Ваше обращение принято</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="table">
+                            <div class="table-header">
+                                <div class="table-header__td">ID</div>
+                                <div class="table-header__td">Тема</div>
+                                <div class="table-header__td">Создано</div>
+                                <div class="table-header__td">Статус</div>
+                                <div class="table-header__td"></div>
+                            </div>
+                            <div class="table-body">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-title">ID</div>
+                                        <div class="td-value">8578</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title">Тема</div>
+                                        <div class="td-value">Проблемы с размещением</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title">Создано</div>
+                                        <div class="td-value">23.03.22 06:21</div>
+                                    </div>
+                                    <div class="td new">
+                                        <div class="td-title">Статус</div>
+                                        <div class="td-value">Новое</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title"></div>
+                                        <div class="td-value">
+                                            <a href="#" class="open">
+                                                <span class="open__text">Открыть</span>
+                                                <span class="open__icon">
+                                                    <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-title">ID</div>
+                                        <div class="td-value">8502</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title">Тема</div>
+                                        <div class="td-value">Проблемы с выводом</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title">Создано</div>
+                                        <div class="td-value">23.03.22 06:23</div>
+                                    </div>
+                                    <div class="td pending">
+                                        <div class="td-title">Статус</div>
+                                        <div class="td-value">На рассмотрении</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title"></div>
+                                        <div class="td-value">
+                                            <a href="#" class="open">
+                                                <span class="open__text">Открыть</span>
+                                                <span class="open__icon">
+                                                    <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-title">ID</div>
+                                        <div class="td-value">8484</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title">Тема</div>
+                                        <div class="td-value">Не могу сменить пароль</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title">Создано</div>
+                                        <div class="td-value">23.03.22 06:21</div>
+                                    </div>
+                                    <div class="td close">
+                                        <div class="td-title">Статус</div>
+                                        <div class="td-value">Закрыто</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-title"></div>
+                                        <div class="td-value">
+                                            <a href="#" class="open">
+                                                <span class="open__text">Открыть</span>
+                                                <span class="open__icon">
+                                                    <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="content">
+
+                    <div class="block-left">
+                        <a href="/" class="logo">
+                            <img src="/app/images/logo.svg" alt="">
+                        </a>
+                        <div class="user-agreement">
+                            Входя на сайт, вы принимаете 
+                            <a href="#">пользовательское соглашение.</a>
+                        </div>
+                    </div>
+
+                    <div class="block-center">
+                        <div class="title">Меню</div>
+                        <nav class="menu">
+                            <ul class="menu-list">
+                                <li class="menu-item active">
+                                    <a href="#" class="menu-link">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        Отзывы
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        Новости
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu-list">
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        Реферальная программа
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        Статистика
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="block-right">
+                        <div class="title">Мы в соцсетях</div>
+                        <div class="contacts">
+                            <a href="#" class="contact">
+                                <span class="contact-icon">
+                                    <img src="/app/images/svg/insta.svg" alt="insta">
+                                </span>
+                            </a>
+                            <a href="#" class="contact">
+                                <span class="contact-icon">
+                                    <img src="/app/images/svg/telegram.svg" alt="telegram">
+                                </span>
+                            </a>
+                            <a href="#" class="contact">
+                                <span class="contact-icon">
+                                    <img src="/app/images/svg/vk.svg" alt="vk">
+                                </span>
+                            </a>
+                            <a href="#" class="contact">
+                                <span class="contact-icon">
+                                    <img src="/app/images/svg/youtube.svg" alt="youtube">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+
+        <div class="copyright">
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-left">
+                            <span class="text">copyright © 2022 все права защищены.</span>
+                        </div>
+                        <div class="col-right">
+                            <span class="text">Крипто-биржа рекламы - <span>BitcoinFr<span class="color">ee</span></span> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/app/js/libs/slick.min.js"></script>
+    <script src="/app/js/libs/lightgallery-all.min.js"></script>
+    <script src="/app/js/libs/maskedinput-v.1.4.1.js"></script>
+    
+    <script src="/app/js/main.js"></script>
+</body>
+</html>

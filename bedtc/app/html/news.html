@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BitcoinFree</title>
+    <link rel="stylesheet" href="/app/css/main.css" id="general-style">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelector('body').classList.add('loading');
+            document.querySelectorAll('[data-animations]').forEach(element => {
+                element.classList.add('animations')
+            });;
+        }); 
+    </script>
+</head>
+<body>
+
+    <div class="background-wrapper">
+
+        <header class="header">
+            <div class="container">
+                <div class="content">
+
+                    <a href="/" class="logo">
+                        <img src="/app/images/logo.svg" alt="">
+                    </a>
+
+                    <nav class="menu">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a href="#" class="menu-link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Реферальная программа
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Статистика
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="language">
+                        <button class="language__button">
+                            <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#planet"></use></svg></span>
+                            <span class="text">RU</span>
+                            <span class="arrow"><svg><use xlink:href="/app/images/svg_sprite.svg#lang"></use></svg></span>
+                        </button>
+                        <div class="spoller">
+                            <ul>
+                                <li><a href="#">RU</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">DE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="#" class="button">Регистрация</a>
+                        <a href="#" class="button-invert">Войти</a>
+                    </div>
+
+                    <button class="menu__toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                </div>
+            </div>
+        </header>
+
+        <nav class="menu-mobie logout ">
+            <div class="language">
+                <button class="language__button">
+                    <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#planet"></use></svg></span>
+                    <span class="text">RU</span>
+                    <span class="arrow"><svg><use xlink:href="/app/images/svg_sprite.svg#lang"></use></svg></span>
+                </button>
+                <div class="spoller">
+                    <ul>
+                        <li><a href="#">RU</a></li>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">DE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#" class="button">Регистрация</a>
+                <a href="#" class="button-invert">Войти</a>
+            </div>
+            <nav class="menu">
+                <div class="menu-title">Меню</div>
+                <ul class="menu-list">
+                    <li class="menu-item active">
+                        <a href="#" class="menu-link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Новости
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Реферальная программа
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Статистика
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+
+        <nav class="menu-mobie login disabled">
+            <div class="person">
+                <div class="person-avatar">
+                    <img src="/app/images/avatar-empty.png" alt="avatar">
+                </div>
+                <div class="person-name">
+                    <span>Привет</span>
+                    <span class="username" id="username">Иван Иванович</span>
+                </div>
+            </div>
+            <div class="language center">
+                <button class="language__button">
+                    <span class="icon"><svg><use xlink:href="/app/images/svg_sprite.svg#planet"></use></svg></span>
+                    <span class="text">RU</span>
+                    <span class="arrow"><svg><use xlink:href="/app/images/svg_sprite.svg#lang"></use></svg></span>
+                </button>
+                <div class="spoller">
+                    <ul>
+                        <li><a href="#">RU</a></li>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">DE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#" class="button-invert">Личный кабинет</a>
+            </div>
+            <nav class="menu">
+                <div class="menu-title">Меню</div>
+                <ul class="menu-list">
+                    <li class="menu-item active">
+                        <a href="#" class="menu-link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Новости
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Реферальная программа
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Статистика
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+
+        
+        <section class="news">
+            <div class="container">
+                <div class="content">
+                    <h1 class="header_0">Новости</h1>
+                    <div class="text">
+                        Последние события, новый функционал, <br>
+                        специальные предложения. Будьте в курсе!
+                    </div>
+
+                    <ul class="list">
+                        <li class="item">
+                            <div class="item-title">
+                                <div class="item-title__left">
+                                    <span class="title-name-wrap">
+                                        <span class="title-name">Запуск проекта BitcoinFree.ee</span>
+                                    </span>
+                                </div>
+                                <div class="item-title__right">
+                                    <span class="title-icon">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#time"></use></svg>
+                                    </span>
+                                    <span class="title-date">05.04.2022 17:54</span>
+                                </div>
+                            </div>
+                            <div class="item-block">
+                                <div class="item-text">
+                                    <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, 
+                                    mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor 
+                                    sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec 
+                                    mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. 
+                                    </p>
+                                    <p>
+                                    Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. 
+                                    Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit 
+                                    amet orci ullamcorper at ultricies metus viverra. 
+                                    </p>
+                                    <p>
+                                    Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                                    </p>
+                                </div>
+                                <div class="item-image">
+                                    <img src="/app/images/test2.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-title">
+                                <div class="item-title__left">
+                                    <span class="title-name-wrap">
+                                        <span class="title-name">Stinehe</span>
+                                        <span class="title-post">Исполнитель</span>
+                                    </span>
+                                </div>
+                                <div class="item-title__right">
+                                    <span class="title-icon">
+                                        <svg><use xlink:href="/app/images/svg_sprite.svg#time"></use></svg>
+                                    </span>
+                                    <span class="title-date">05.04.2022 17:54</span>
+                                </div>
+                            </div>
+                            <div class="item-block">
+                                <div class="item-text">
+                                    <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, 
+                                    mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor 
+                                    sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec 
+                                    mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. 
+                                    </p>
+                                    <p>
+                                    Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                                    </p>
+                                </div>
+                                <div class="item-image">
+                                    <img src="/app/images/test2.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="paginations">
+                        <a href="#" class="paginations-arrow left">
+                            <svg><use xlink:href="/app/images/svg_sprite.svg#doublearrow"></use></svg>
+                        </a>
+                        <ul class="paginations-list">
+                            <li class="paginations-item active">
+                                <a href="#" class="btnsmall-invert">1</a>
+                            </li>
+                            <li class="paginations-item">
+                                <a href="#" class="btnsmall-invert">2</a>
+                            </li>
+                            <li class="paginations-item">
+                                <a href="#" class="btnsmall-invert">3</a>
+                            </li>
+                            <li class="paginations-item">
+                                <a href="#" class="btnsmall-invert">4</a>
+                            </li>
+                            <li class="paginations-item">
+                                ...
+                            </li>
+                            <li class="paginations-item">
+                                <a href="#" class="btnsmall-invert">91</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="paginations-arrow right">
+                            <svg><use xlink:href="/app/images/svg_sprite.svg#doublearrow"></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content">
+
+                <div class="block-left">
+                    <a href="/" class="logo">
+                        <img src="/app/images/logo.svg" alt="">
+                    </a>
+                    <div class="user-agreement">
+                        Входя на сайт, вы принимаете 
+                        <a href="#">пользовательское соглашение.</a>
+                    </div>
+                </div>
+
+                <div class="block-center">
+                    <div class="title">Меню</div>
+                    <nav class="menu">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a href="#" class="menu-link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Новости
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Реферальная программа
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Статистика
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="block-right">
+                    <div class="title">Мы в соцсетях</div>
+                    <div class="contacts">
+                        <a href="#" class="contact">
+                            <span class="contact-icon">
+                                <img src="/app/images/svg/insta.svg" alt="insta">
+                            </span>
+                        </a>
+                        <a href="#" class="contact">
+                            <span class="contact-icon">
+                                <img src="/app/images/svg/telegram.svg" alt="telegram">
+                            </span>
+                        </a>
+                        <a href="#" class="contact">
+                            <span class="contact-icon">
+                                <img src="/app/images/svg/vk.svg" alt="vk">
+                            </span>
+                        </a>
+                        <a href="#" class="contact">
+                            <span class="contact-icon">
+                                <img src="/app/images/svg/youtube.svg" alt="youtube">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-left">
+                        <span class="text">copyright © 2022 все права защищены.</span>
+                    </div>
+                    <div class="col-right">
+                        <span class="text">Крипто-биржа рекламы - <span>BitcoinFr<span class="color">ee</span></span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" >
+        <div class="overlay__wrapper">
+            <div class="overlay__bg"></div>
+            <div class="overlay__content">
+                <a class="overlay__close"></a>
+
+                <form action="/" method="post" class="form form-callback novalid">
+                    <input type="hidden" name="count" value="0">
+                    <h3 class="header_3">Заказать звонок</h3>
+
+                    <div class="form-item">
+                        <input type="text" name="name" placeholder="имя" >
+                    </div>
+                    <div class="form-item">
+                        <input type="tel" name="phone" placeholder="телефон" >
+                    </div>
+                    <button class="button">Отправить</button>
+                    <div class="form-note">*Нажимаю кнопку, даю согласие на обработку своих персональных данных</div>
+                </form>
+
+                <div class="form-success">
+                    <div class="header_4">Спасибо! <br>Ваши данные отправлены.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <button class="scroll-top">
+        <svg><use xlink:href="/app/images/svg_sprite.svg#arrow"></use></svg>
+    </button>
+    -->
+
+    <script src="/app/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/app/js/libs/slick.min.js"></script>
+    <script src="/app/js/libs/lightgallery-all.min.js"></script>
+    <script src="/app/js/libs/maskedinput-v.1.4.1.js"></script>
+    
+    <script src="/app/js/main.js"></script>
+</body>
+</html>

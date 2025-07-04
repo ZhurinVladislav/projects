@@ -1,0 +1,40 @@
+.advantages-list
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	gap: 16px
+
+	&__item
+		display: flex
+		flex-direction: column
+		padding: 32px
+		+sm
+			padding: 20px
+
+		+ph
+			padding: 10px
+	
+	&__item-img
+		margin-bottom: 24px
+		width: 60px
+		height: 60px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+
+		+ph
+			margin-bottom: 12px
+			width: 50px
+			height: 50px
+
+	&__item-title
+		&_one
+			color: #9054ea
+		&_two
+			color: #ff9d0c
+		&_three
+			color: #00984e
+
+	&__item-descr
+		font-weight: 400
+		font-size: 16px
+		line-height: 140%

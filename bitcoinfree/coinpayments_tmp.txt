@@ -1,0 +1,22 @@
+GET: 
+Array
+(
+)
+
+POST: 
+Array
+(
+    [address] => 1F8vEDpH5zZ35WkddjkBusH9N8uMJ4zFc9
+    [amount] => 0.01590837
+    [amounti] => 1590837
+    [currency] => BTC
+    [id] => CWDG0UUIUZ7TKVCFKBQT9GGKLY
+    [ipn_id] => 9c09971596a678114354714fa0a3c26b
+    [ipn_mode] => hmac
+    [ipn_type] => withdrawal
+    [ipn_version] => 1.0
+    [merchant] => 0d0e419076c86b2e798c8122a2904171
+    [status] => 2
+    [status_text] => Complete
+    [txn_id] => d4b7ba6b0c7a79143d3b9511ae2a11d08a5cd302468578a5b6dc573150bc52df
+)

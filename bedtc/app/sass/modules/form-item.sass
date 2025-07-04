@@ -1,0 +1,310 @@
+.form-item
+	margin-bottom: 16px
+
+	.label-wrap
+		padding: 4px 20px
+		color: $color__2
+		font-size: 16px
+		font-weight: 700
+		line-height: 20px
+		text-transform: uppercase
+
+	.input-wrapper
+		position: relative
+		padding: 12px 14px 16px
+		text-decoration: none
+
+		.bg
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+
+			&::before,
+			&::after
+				position: absolute
+				background-color: $color__3
+				content: ''
+
+			&::before
+				top: 0
+				right: 16px
+				bottom: 0
+				left: 16px
+				border-top: 4px solid $color__8
+				border-bottom: 4px solid $color__8
+
+			&::after
+				top: 16px
+				right: 0
+				bottom: 16px
+				left: 0
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+
+		.bd-top
+			position: absolute
+			top: 4px
+			right: 12px
+			left: 12px
+			height: 4px
+			border-right: 4px solid $color__8
+			border-left: 4px solid $color__8
+
+			&::before,
+			&::after
+				position: absolute
+				height: 4px
+				content: ''
+
+			&::before
+				top: 4px
+				right: -8px
+				left: -8px
+				background-color: $color__3
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+
+			&::after
+				top: 4px
+				right: 2px
+				left: 2px
+				background-color: $color__8
+
+		.bd-left,
+		.bd-right
+			position: absolute
+			top: 16px
+			bottom: 20px
+			width: 10px
+			background-color: $color__3
+
+			&::before,
+			&::after
+				position: absolute
+				height: 4px
+				content: ''
+
+			&::before
+				width: 6px
+				top: -4px
+				background-color: $color__3
+
+			&::after
+				bottom: -8px
+				width: 4px
+
+		.bd-left
+			left: 4px
+			border-right: 4px solid $color__8
+
+			&::before
+				left: 0
+				border-left: 4px solid $color__8
+
+			&::after
+				left: 0
+				border-right: 6px solid $color__3
+				border-left: 4px solid $color__8
+				background-color: $color__22
+
+		.bd-right
+			right: 4px
+			border-left: 4px solid $color__8
+
+			&::before
+				right: 0
+				border-right: 4px solid $color__8
+
+			&::after
+				right: 0
+				background-color: $color__22
+				border-right: 4px solid $color__8
+				border-left: 6px solid $color__3
+
+		.bd-bottom
+			position: absolute
+			right: 8px
+			bottom: 8px
+			left: 8px
+			height: 4px
+			background-color: $color__21
+			border-right: 4px solid $color__8
+			border-left: 4px solid $color__8
+
+			&::before,
+			&::after
+				position: absolute
+				content: ''
+				height: 4px
+
+			&::before
+				top: 4px
+				right: 0
+				left: 0
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+
+			&::after
+				top: -4px
+				right: 4px
+				left: 4px
+				background-color: $color__22
+				border-top: 4px solid $color__8
+				border-bottom: 4px solid $color__21
+
+		input
+			position: relative
+			display: block
+			min-width: 220px
+			padding: 0 16px
+			color: $color__2
+			font-size: 16px
+			font-weight: 700
+			line-height: 44px
+			text-shadow: -2px 2px $color__11
+			background-color: $color__45
+			border-top: 4px solid $color__16
+			border-right: 4px solid $color__16
+			border-bottom: 4px solid $color__11
+			border-left: 4px solid $color__11
+			outline: none
+			transition: all .15s
+
+			&:focus
+				border-bottom-color: $color__16
+				border-left-color: $color__16
+
+			&::placeholder
+				color: $color__46
+
+			&:autofill
+				-webkit-text-fill-color: $color__2 !important
+				transition: background-color 5000s ease-in-out 0s
+
+		textarea
+			position: relative
+			display: block
+			min-width: 220px
+			max-width: 100%
+			padding: 0 16px
+			color: $color__2
+			font-size: 16px
+			font-weight: 700
+			line-height: 44px
+			text-shadow: -2px 2px $color__11
+			background-color: $color__45
+			border-top: 4px solid $color__16
+			border-right: 4px solid $color__16
+			border-bottom: 4px solid $color__11
+			border-left: 4px solid $color__11
+			outline: none
+			transition: all .15s
+
+			&:focus
+				border-bottom-color: $color__16
+				border-left-color: $color__16
+
+			&::placeholder
+				color: $color__46
+
+			&:autofill
+				-webkit-text-fill-color: $color__2 !important
+				transition: background-color 5000s ease-in-out 0s
+
+		.bd-corner
+			&::before,
+			&::after
+				position: absolute
+				content: ''
+
+			&::before
+				top: 12px
+				right: 14px
+				left: 14px
+				height: 4px
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+
+			&::after
+				right: 14px
+				bottom: 16px
+				left: 14px
+				height: 4px
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+
+		.eye
+			position: absolute
+			top: 22px
+			right: 20px
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 30px
+			height: 30px
+			background-image: url(/app/images/icons/eye.svg)
+			background-position: center
+			background-repeat: no-repeat
+			cursor: pointer
+
+			&.cross
+				background-image: url(/app/images/icons/eye-cross.svg)
+
+	.error-message
+		margin-bottom: -8px
+		padding: 6px 18px 0
+		color: $color__47
+		font-size: 16px
+		line-height: 20px
+		text-shadow: -2px 2px $color__48
+
+.form-item-checkbox
+	display: flex
+	align-items: flex-start
+	margin-bottom: 16px
+
+	.input-wrapper
+		position: relative
+		margin-right: 4px
+		padding: 2px 0
+
+		&::before
+			position: absolute
+			top: 0
+			right: 2px
+			bottom: 0
+			left: 2px
+			border-top: 2px solid $color__8
+			border-bottom: 2px solid $color__8
+			content: ''
+
+		input
+			box-sizing: border-box
+			position: relative
+			display: block
+			width: 19px
+			height: 15px
+			margin: 0
+			background-color: $color__45
+			background-position: center
+			background-repeat: no-repeat
+			border-top: none
+			border-right: 2px solid $color__8
+			border-bottom: none
+			border-left: 2px solid $color__8
+			cursor: pointer
+			outline: none
+			appearance: none
+			transition: all .15s
+
+			&:checked
+				background-color: $color__5
+				background-image: url(/app/images/icons/check.svg)
+
+	.caption
+		color: $color__2
+		font-size: 14px
+		font-weight: 700
+		line-height: 18px

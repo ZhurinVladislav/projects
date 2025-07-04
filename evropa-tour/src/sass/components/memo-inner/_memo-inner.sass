@@ -1,0 +1,29 @@
+.memo-inner-nav
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 30px
+		max-width: max-content
+		border-radius: 20px
+		box-shadow: 0 10px 25px 0 rgba(43, 63, 90, 0.07)
+
+	&__list-item
+		display: flex
+		&.active
+			.memo-inner-nav__list-item-link
+				color: var(--accent-color)
+
+	&__list-item-link
+		padding: 10px 20px
+		font-weight: 700
+		line-height: 100%
+		font-size: 20px
+		transition: color .2s linear
+		+ph
+			font-size: 18px
+		+hover
+			color: var(--accent-color)
+		+focus
+			color: var(--accent-color)
+		&:active
+			color: var(--active-color)

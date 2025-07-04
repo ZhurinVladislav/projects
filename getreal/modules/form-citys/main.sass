@@ -1,0 +1,36 @@
+.form-citys
+    margin:  0
+    overflow-y: auto
+    max-width: 100%
+    width: 320px
+    padding: 40px 30px
+    background: $color__4
+    border-radius: 12px
+    display: none
+
+    &.active
+        display: block
+
+    .header_2
+        margin-bottom: 25px
+
+    .form-citys__item
+        margin-bottom: 10px
+
+        &:last-child
+            margin-bottom: 0
+
+    .form-citys__link
+        font-size: 18px
+        transition: all 0.3s
+        // font-weight: 700
+
+        &:hover
+            color: $color__2
+
+
+    +small
+        padding: 30px 20px
+
+        .header_2
+            margin-bottom: 18px

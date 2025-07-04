@@ -1,0 +1,26 @@
+.scroll-top
+  position: fixed
+  z-index: 30
+  right: 30px
+  bottom: 30px
+  width: 44px
+  height: 44px
+  background-position: center
+  background-repeat: no-repeat
+  opacity: 0
+  transform: translateX(100px)
+  visibility: hidden
+  transition: opacity .2s linear, visibility .2s linear, transform .3s linear
+  &.visible
+    opacity: 1
+    transform: translateX(0)
+    visibility: visible
+  +ph
+    right: 10px
+    bottom: 20px
+  +hover
+    transform: translateY(-6px) 
+  +focus
+    opacity: .6
+  &:active
+    transform: scale(.94)

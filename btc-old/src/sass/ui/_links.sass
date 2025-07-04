@@ -1,0 +1,192 @@
+.link
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	max-width: 254px
+	min-height: 64px
+	border: 18px solid var(--none-color)
+	border-image-slice: 16
+	border-image-repeat: stretch
+	overflow: hidden
+	transition: border-image-source .2s linear
+	&::after
+		content: ''
+		position: absolute
+		z-index: 0
+		top: 50%
+		left: 50%
+		width: calc(100% + 33px)
+		height: calc(100% + 33px)
+		transform: translate(-50%, -50%)
+		transition: background-color .2s linear
+
+	&_green
+		border-image-source: url(../img/base/btns/border.svg)
+		&::after
+			background-color: var(--green-color)
+		+hover
+			border-image-source: url(../img/base/btns/border-hover.svg)
+			&::after
+				background-color: var(--green-hover-color)
+
+	&_pink
+		border-image-source: url(../img/base/btns/border-inv.svg)
+		&::after
+			background-color: var(--pink-color)
+		+hover
+			border-image-source: url(../img/base/btns/border-inv-hover.svg)
+			&::after
+				background-color: var(--pink-hover-color)
+
+	&__text
+		z-index: 1
+		font-weight: 700
+		font-size: 16px
+		color: var(--white-color)
+		text-transform: uppercase
+		text-align: center
+
+.link-panel
+	position: relative
+	z-index: 1
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	max-width: 308px
+	width: 100%
+	min-height: 100px
+	padding: 0 11px 23px 11px
+	&::after
+		content: ''
+		position: absolute
+		z-index: -1
+		top: 0
+		left: 50%
+		width: 87% 
+		height: 61%
+		transform: translateX(-50%)
+		transition: background-color .2s linear
+
+	&::before
+		content: ''
+		position: absolute
+		z-index: -1
+		bottom: 0
+		left: 0
+		width: 100%
+		height: calc(100% - 20px)
+		border-radius: 40px
+		border: 22px solid var(--none-color)
+		border-image-slice: 22
+		border-image-repeat: stretch
+		background-color: var(--accent-color)
+		border-image-source: url(../img/base/btns/border-panel.svg)
+		overflow: hidden
+
+	+hover
+		.link-panel__text
+			transform: translateY(0)
+
+	&_green
+		&::after
+			background-color: var(--green-color)
+
+		.link-panel__content
+			border-image-source: url(../img/base/btns/border-panel-green.svg)
+
+		+hover
+			&::after
+				background-color: var(--green-hover-color)
+			.link-panel__content
+				border-image-source: url(../img/base/btns/border-panel-hover-green.svg)
+	
+	&_blue
+		&::after
+			background-color: var(--blue-color)
+
+		.link-panel__content
+			border-image-source: url(../img/base/btns/border-panel-blue.svg)
+
+		+hover
+			&::after
+				background-color: var(--blue-hover-color)
+			.link-panel__content
+				border-image-source: url(../img/base/btns/border-panel-hover-blue.svg)
+
+	&__content
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		min-height: 77px
+		border: 22px solid var(--none-color)
+		border-image-slice: 22
+		border-image-repeat: stretch
+		overflow: hidden
+		transition: border-image-source .2s linear
+
+	&__text
+		z-index: 1
+		font-weight: 700
+		font-size: 22px
+		line-height: 123%
+		letter-spacing: 0.07em
+		color: var(--white-color)
+		text-transform: uppercase
+		text-align: center
+		text-shadow: 4px 2px var(--bg-color)
+		transform: translateY(-5px)
+		transition: transform .2s linear
+
+.link-icon
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 65px
+	height: 64px
+	border: 18px solid var(--none-color)
+	border-image-slice: 16
+	border-image-repeat: stretch
+	overflow: hidden
+	transition: border-image-source .2s linear
+	&::after
+		content: ''
+		position: absolute
+		z-index: 0
+		top: 50%
+		left: 50%
+		width: 100%
+		height: 100%
+		transform: translate(-50%, -50%)
+		transition: background-color .2s linear
+
+	&_green
+		border-image-source: url(../img/base/links/border-icon.svg)
+		&::after
+			background-color: var(--green-color)
+		// +hover
+		// 	border-image-source: url(../img/base/links/border-icon-hover.svg)
+		// 	&::after
+		// 		background-color: var(--green-hover-color)
+
+	&__img
+		z-index: 1
+		width: 24px
+		// height: 24px
+
+.link-text
+	border-bottom: 2px solid var(--none-color)
+	font-weight: 700
+	color: var(--link-color)
+	text-shadow: -2px 2px 0 0 var(--bg-color)
+	transition: border-color .2s linear, color .2s linear
+	+hover
+		color: var(--white-color)
+	+focus
+		border-color: var(--bg-color)
+	&:active
+		color: var(--scroll-color)

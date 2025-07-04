@@ -1,0 +1,87 @@
+.feedback
+	&__container
+		display: flex
+		justify-content: space-between
+		gap: 4px
+		+ph
+			flex-direction: column
+
+	&__content
+		display: flex
+		flex-direction: column
+		gap: 4px
+		max-width: 58%
+		width: 100%
+		+sm
+			max-width: 50%
+		+ph
+			max-width: 100%
+	
+	&__img
+		max-width: 100%
+		width: 100%
+		min-height: 545px
+		height: 100%
+		border-radius: 20px
+		background-color: $clr_3
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		+ph
+			min-height: 350px
+			border-radius: 10px
+
+	&__links
+		display: flex
+		gap: 4px
+		+xs
+			flex-direction: column
+
+	&__link
+		max-width: 50%
+		width: 100%
+		+xs
+			max-width: 100%
+
+	&__form-wrapper
+		display: flex
+		flex-direction: column
+		padding: 40px
+		max-width: 42%
+		width: 100%
+		color: $clr_1
+		border-radius: 20px
+		background-color: $clr_3
+		+sm
+			padding: 30px
+			max-width: 50%
+		+ph
+			padding: 20px 15px
+			max-width: 100%
+			border-radius: 10px
+
+	&__title
+		margin-bottom: 12px
+		color: $clr_1
+
+	&__descr
+		margin-bottom: 24px
+		font-weight: 400
+		font-size: 18px
+		line-height: 160%
+		+ph
+			font-size: 16px
+
+.feedback-form
+	display: flex
+	flex-direction: column
+
+	&__list
+		margin-bottom: 12px
+	
+	&__agreement
+		margin-bottom: 24px
+
+	&__btn
+		max-width: 100%
+		width: 100%

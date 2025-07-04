@@ -1,0 +1,28 @@
+<?php
+
+$_txt['balance-title1'] = 'ยอดคงเหลือ';
+$_txt['balance-title2'] = 'ยอดโปรโมชัน';
+$_txt['balance-hint1'] = 'สามารถถอนเงินไปยังกระเป๋าสตางค์ของคุณได้';
+$_txt['balance-hint2'] = 'เครื่องมือสำหรับการเปิดตัวแคมเปญโฆษณาและการซื้อในบริการ';
+
+
+
+$_txt['link_main'] = 'หน้าเริ่มต้น';
+$_txt['link_market'] = 'ตลาดหลักทรัพย์';
+$_txt['link_wallet'] = 'กระเป๋าสตางค์';
+$_txt['link_replenishment'] = 'การเติมเงิน';
+$_txt['link_withdrawal'] = 'บทสรุป';
+$_txt['link_exchange'] = 'แลกเปลี่ยน';
+$_txt['link_history'] = 'ประวัติความสมดุล';
+$_txt['link_bonus'] = 'โปรแกรมโบนัส';
+$_txt['link_general'] = 'ทั่วไป';
+$_txt['link_promobanners'] = 'แบนเนอร์โปรโมชั่น';
+$_txt['link_referrals'] = 'การอ้างอิงของฉัน';
+
+$_txt['link_setting'] = 'การปรับแต่ง';
+$_txt['support'] = 'การสนับสนุนด้านเทคนิค';
+
+$_txt['link_viewing'] = 'ได้รับในการดู';
+$_txt['link_banner'] = 'วางแบนเนอร์';
+$_txt['link_task'] = 'โพสต์งาน';
+$_txt['link_platform'] = 'วางแพลตฟอร์ม';

@@ -1,0 +1,226 @@
+.panel-fissure-vertical
+	position: relative
+	padding: 56px 64px 70px
+
+	&::before
+		position: absolute
+		top: 12px
+		right: 0
+		bottom: 12px
+		left: 0
+		background-color: $color__11
+		border-right: 4px solid $color__8
+		border-left: 4px solid $color__8
+		content: ''
+
+	> .shadow-left
+		position: absolute
+		top: 16px
+		left: -4px
+		bottom: 0
+		width: 4px
+		background-color: $color__14
+
+		&::before
+			position: absolute
+			top: 4px
+			bottom: 4px
+			left: -4px
+			width: 4px
+			background-color: $color__14
+			content: ''
+
+		&::after
+			position: absolute
+			bottom: 0
+			left: 4px
+			width: 12px
+			height: 12px
+			background-color: $color__14
+			content: ''
+
+	> .shadow-bottom
+		position: absolute
+		right: 16px
+		bottom: -4px
+		left: 0
+		height: 4px
+		background-color: $color__14
+
+		&::before
+			position: absolute
+			top: 4px
+			right: 4px
+			left: 4px
+			height: 4px
+			background-color: $color__14
+			content: ''
+
+	> .bd-top
+		position: absolute
+		top: 0
+		right: 12px
+		left: 12px
+		height: 4px
+		background-color: $color__8
+
+		&::before,
+		&::after
+			position: absolute
+			height: 4px
+			border-right: 4px solid $color__8
+			border-left: 4px solid $color__8
+			content: ''
+
+		&::before
+			top: 4px
+			right: -4px
+			left: -4px
+			background-color: $color__7
+
+		&::after
+			top: 8px
+			right: -8px
+			left: -8px
+			background-color: $color__11
+
+	> .bd-bottom
+		position: absolute
+		right: 12px
+		bottom: 0
+		left: 12px
+		height: 12px
+		background-color: $color__13
+		border-top: 4px solid $color__12
+		border-bottom: 4px solid $color__8
+
+		.left,
+		.right
+			position: absolute
+			bottom: 0
+			width: 4px
+			height: 12px
+			background-color: $color__13
+			border-top: 4px solid $color__12
+			border-bottom: 4px solid $color__8
+
+			&::before
+				position: absolute
+				bottom: 0
+				width: 4px
+				height: 4px
+				background-color: $color__13
+				border-top: 4px solid $color__12
+				border-bottom: 4px solid $color__8
+				content: ''
+
+		.left
+			left: -4px
+			&::before
+				left: -4px
+
+		.right
+			right: -4px
+			&::before
+				right: -4px
+
+	> .fissure
+		position: absolute
+		top: 8px
+		right: 12px
+		bottom: 12px
+		left: 18px
+		background-image: url(/app/images/bg/panel-fissure-vertical.svg)
+		background-repeat: no-repeat
+		background-position: bottom left
+
+	> .content
+		position: relative
+
+	+small
+		padding-right: 6px
+		padding-left: 6px
+
+		&::before
+			top: 6px
+			bottom: 6px
+			border-right-width: 2px
+			border-left-width: 2px
+
+		> .shadow-left
+			top: 8px
+			left: -2px
+			width: 2px
+
+			&::before
+				top: 2px
+				bottom: 2px
+				left: -2px
+				width: 2px
+
+			&::after
+				left: 2px
+				width: 6px
+				height: 6px
+
+		> .shadow-bottom
+			right: 8px
+			bottom: -2px
+			height: 2px
+
+			&::before
+				top: 2px
+				right: 2px
+				left: 2px
+				height: 2px
+
+		> .bd-top
+			right: 6px
+			left: 6px
+			height: 2px
+
+			&::before,
+			&::after
+				height: 2px
+				border-right-width: 2px
+				border-left-width: 2px
+
+			&::before
+				top: 2px
+				right: -2px
+				left: -2px
+
+			&::after
+				top: 4px
+				right: -4px
+				left: -4px
+
+		> .bd-bottom
+			right: 6px
+			left: 6px
+			height: 6px
+			border-top-width: 2px
+			border-bottom-width: 2px
+
+			.left,
+			.right
+				width: 2px
+				height: 6px
+				border-top-width: 2px
+				border-bottom-width: 2px
+
+				&::before
+					width: 2px
+					height: 2px
+					border-top-width: 2px
+					border-bottom-width: 2px
+
+			.left
+				left: -2px
+				&::before
+					left: -2px
+
+			.right
+				right: -2px
+				&::before
+					right: -2px

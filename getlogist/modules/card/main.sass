@@ -1,0 +1,666 @@
+
+.page-card
+    background: #f6f6f6
+    
+.card
+    margin-bottom: 50px
+
+    .tabs
+        display: flex
+        margin-bottom: 20px
+
+    .tab
+        white-space: nowrap
+        padding: 16px 20px
+        border-bottom: 2px solid rgba($color__1, 0.1)
+        transition: all 0.3s
+
+        &.active,
+        &:hover
+            border-bottom: 2px solid $color__1
+
+
+    .result
+        border-radius: 24px
+        padding: 20px
+        box-shadow: 4px 4px 4px 0 rgba(208, 206, 214, 0.2)
+        background: rgba(#fff,0.7)
+        margin-bottom: 20px
+
+    .result-row
+        display: flex
+        margin-bottom: 24px
+
+    .result-left
+        flex-shrink: 0
+        width: 420px
+        padding-right: 20px
+        margin-right: 20px
+        border-right: 1px solid rgba($color__1, 0.2)
+
+    .result-image
+        width: 100%
+        height: 316px
+        border: 1px solid rgba($color__1, 0.2)
+        border-radius: 24px
+        padding: 20px
+        margin-bottom: 12px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            
+
+    .result-reviews
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border: 1px solid rgba($color__1, 0.2)
+        border-radius: 14px
+        padding: 20px
+        margin-bottom: 14px
+
+    .result-reviews__titles
+        flex-shrink: 0
+        width: 198px
+
+
+    .result-reviews__title
+        display: inline-block
+        font-weight: 700
+        font-size: 18px
+        margin-bottom: 4px
+
+    .result-reviews__subtitle
+        font-weight: 500
+        font-size: 14px
+    
+
+    .result-tabs
+        display: flex
+        flex-wrap: wrap
+        // margin: -6px
+
+    .result-tab
+        // height: 28px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        // padding: 0px 12px
+        // border-radius: 12px
+        // box-shadow: 1px 1px 4px 0 rgba(24, 13, 57, 0.08)
+        margin-right: 4px
+        font-size: 16px
+        text-transform: capitalize
+        background: #fff
+        white-space: nowrap
+        transition: all 0.3s
+
+        &:last-child
+            margin-right: 0
+
+    a.result-tab
+        &:hover
+            // box-shadow: 1px 1px 4px 0 rgba($color__2, 0.4)
+
+    .result-tab__image-l
+        display: inline-flex
+
+    .result-tab__number
+        margin-left: 4px
+
+    .result-tab__image-r
+        display: inline-flex
+        margin-left: 4px
+
+    .result-button
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 14px
+        padding: 14px 20px
+        background: rgba(28, 34, 49, 0.1)
+        margin-bottom: 8px
+
+        &:last-child
+            margin-bottom: 0
+
+    .result-button__icon
+        display: inline-flex
+        width: 14px
+        height: 14px
+        margin-right: 10px
+
+    .result-button__text
+        font-weight: 600px
+
+    
+    .result-header
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+
+    .result-header__numer
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid rgba($color__1,0.4)
+        border-radius: 12px
+        width: 36px
+        height: 36px
+        // line-height: 36px
+        font-weight: 700
+        font-size: 18px
+        margin-right: 14px
+
+    .result-list
+        margin-top: 20px
+
+    .result-item
+        margin-bottom: 4px
+        font-size: 18px
+
+        &:last-child
+            margin-bottom: 0
+
+        a
+            position: relative
+            z-index: 2
+            transition: all 0.3s
+            &:hover
+                color: $color__2
+
+
+    
+
+
+
+    .feedback
+        border-radius: 24px
+        padding: 40px
+        box-shadow: 4px 4px 4px 0 rgba(208, 206, 214, 0.2)
+        background: #fff
+        margin-bottom: 20px
+
+    .feedback-title
+        margin-bottom: 30px
+
+    .feedback-row
+        display: flex
+
+    .feedback-col
+        width: 30%
+        padding-right: 25px
+
+        &:first-child
+            width: 40%
+
+            .feedback-list
+                border-left: 1px solid transparent
+                padding-left: 0
+
+    .feedback-list
+        border-left: 1px solid rgba(28, 34, 49, 0.3)
+        padding-left: 40px
+
+    .feedback-item
+        position: relative
+        padding-left: 40px
+        margin-bottom: 20px
+        
+
+        &:last-child
+            margin-bottom: 0
+
+    .feedback-item__icon
+        position: absolute
+        top: 0
+        left: 0
+
+    .feedback-item__title
+        font-weight: 500
+        font-size: 18px
+        margin-bottom: 4px
+
+    .feedback-item__text
+        font-size: 18px
+        margin-bottom: 4px
+
+        a
+            color: $color__2
+            text-decoration: underline
+
+            &:hover
+                text-decoration: none
+
+        &:last-child
+            margin-bottom: 0
+
+    .feedback-item__text-week
+        display: inline-flex
+        width: 140px
+
+
+
+
+    .serv
+        border-radius: 24px
+        padding: 40px
+        box-shadow: 4px 4px 4px 0 rgba(208, 206, 214, 0.2)
+        background: #fff
+        margin-bottom: 20px
+
+    .serv-title
+        margin-bottom: 30px
+
+    .serv-list-title
+        font-size: 18px
+        margin-bottom: 16px
+        color: rgba($color__1, 0.6)
+
+    .serv-list
+        display: flex
+        // align-items: center
+        flex-wrap: wrap
+        margin-bottom: 28px
+
+    .serv-list.last
+        margin-bottom: 0
+
+    .serv-item
+        position: relative
+        width: 33.33%
+        margin: 5px 0
+        padding: 0 24px
+        font-size: 18px
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 9px
+            left: 10px
+            width: 4px
+            height: 4px
+            background: $color__1
+            border-radius: 50%
+
+
+
+    
+    .doc
+        border-radius: 24px
+        padding: 40px
+        box-shadow: 4px 4px 4px 0 rgba(208, 206, 214, 0.2)
+        background: #fff
+        margin-bottom: 20px
+
+    .doc-title
+        margin-bottom: 30px
+
+    .slider
+        padding: 0 60px
+        
+
+    .owl-prev
+        position: absolute
+        z-index: 3
+        top: 50%
+        left: 0px
+        transform: translateY(-50%)
+
+    .owl-next
+        position: absolute
+        z-index: 3
+        top: 50%
+        right: 0px
+        transform: translateY(-50%)
+
+
+
+
+    .geo
+        border-radius: 24px
+        padding: 40px
+        box-shadow: 4px 4px 4px 0 rgba(208, 206, 214, 0.2)
+        background: #fff
+        margin-bottom: 20px
+
+    .geo-title
+        margin-bottom: 30px
+
+    .geo-list
+        display: flex
+        flex-wrap: wrap
+        margin: -8px
+
+    .geo-item
+        display: inline-flex
+        align-items: center
+        width: 20%
+        padding: 8px
+        font-size: 28px
+        font-weight: 500
+
+    .geo-item__text
+        margin-left: 6px
+
+
+    .revie
+        border-radius: 28px
+        padding: 40px
+        box-shadow: 4px 4px 4px 0 rgba(208, 206, 214, 0.2)
+        background: rgba(#fff,0.7)
+        margin-bottom: 24px
+
+    .revie-title-wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 24px
+
+    .header-sort-wrap
+        display: flex
+        justify-content: flex-end
+        margin-bottom: 28px
+
+    .header-sort
+        position: relative
+
+    .header-sort-button
+        height: 28px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0px 12px
+        border-radius: 12px
+        box-shadow: 1px 1px 4px 0 rgba(24, 13, 57, 0.08)
+        background: #fff
+        white-space: nowrap
+        cursor: pointer
+        transition: all 1s
+
+        &.active
+            transition: all 0.3s
+            border-radius: 12px 12px 0 0
+
+    .header-sort-button__text
+        font-size: 14px
+        margin-right: 30px
+
+    .header-sort-button__icon
+        display: inline-flex
+        width: 18px
+        height: 18px
+
+    .header-sort-spoller
+        display: none
+        width: 100%
+        position: absolute
+        top: 100%
+
+    .header-sort-list
+        // position: absolute
+        // top: 100%
+        padding: 12px
+        background: #fff
+        border-radius: 0 0 12px 12px
+
+    .header-sort-item
+        font-size: 14px
+        margin-bottom: 6px
+        &:last-child
+            margin-bottom: 0
+
+    .revie-item
+        margin-bottom: 24px
+        padding-bottom: 24px
+        border-bottom: 1px solid rgba($color__1,0.2)
+
+        &:last-child
+            margin-bottom: 0
+            padding-bottom: 0
+            border-bottom: 0
+
+    .revie-header
+        position: relative
+        margin-bottom: 16px
+        padding-left: 76px
+
+    .revie-avatar
+        position: absolute
+        top: 0
+        left: 0
+
+    .revie-name
+        font-family: $font-family__2 
+        font-weight: 700
+        font-size: 28px
+        letter-spacing: 0.03em
+        margin-bottom: 8px
+
+    .revie-text
+        margin-bottom: 16px
+
+    .revie-bottom
+        display: flex
+
+    .revie-like
+        display: flex
+        opacity: 0.6
+        margin-right: 16px
+        padding-right: 16px
+        border-right: 1px solid $color__1
+
+    .revie-like__icon
+        display: inline-flex
+        width: 24px
+        height: 24px
+
+    .revie-date
+        opacity: 0.6
+
+    .revie-more
+        margin-top: 16px
+        text-align: center
+
+    
+    +large
+        .feedback-col
+            width: 32%
+            padding-right: 20px
+
+            &:first-child
+                width: 36%
+
+        .feedback-list
+            padding-left: 30px
+
+        .feedback-item__title
+            font-size: 16px
+
+        .feedback-item__text
+            font-size: 16px
+
+        .revie-name
+            font-size: 24px
+
+        .geo-item
+            font-size: 24px
+    
+
+
+    +medium
+
+        .result-left
+            width: 380px
+            padding-right: 14px
+            margin-right: 14px
+
+        .result-image
+            height: 270px
+
+        .result-item
+            font-size: 16px
+
+        .result-reviews
+            padding: 16px
+
+        .result-reviews__title
+            font-size: 16px
+
+        .result-tab__number
+            font-size: 14px
+
+        .serv-list-title
+            font-size: 24px
+            margin-bottom: 14px
+
+        .serv-item
+            width: 50%
+            font-size: 16px
+
+        .feedback-row
+            flex-wrap: wrap
+
+        .feedback-col
+            width: 50%
+            padding-right: 10px
+
+            &:first-child
+                width: 50%
+
+            &:last-child
+                margin-left: auto
+
+        .feedback-item__text
+            font-size: 16px
+
+        .geo-item
+            font-size: 20px
+
+    +small
+
+        .result-row
+            flex-wrap: wrap
+
+        .result-left
+            width: 100%
+            padding-right: 0
+            margin-right: 0
+            border-right: 0
+            margin-bottom: 40px
+
+        .serv
+            padding: 24px 16px
+
+        .serv-item
+            margin: 3px 0
+
+        .serv-list-title
+            font-size: 20px
+
+        .feedback
+            padding: 24px 16px
+
+        .feedback-item__title
+            font-size: 16px
+
+        .feedback-item__text
+            font-size: 16px
+
+        .revie-title-wrap
+            flex-wrap: wrap
+            margin-bottom: 40px
+
+        .revie-title
+            margin-bottom: 20px
+
+        .geo
+            padding: 24px 16px
+
+        .geo-item
+            width: 25%
+            font-size: 18px
+
+
+    +phone
+
+        .tabs-wrap
+            overflow-y: auto
+
+
+        .result-row
+            flex-wrap: wrap
+
+        .result-left
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 10px
+
+        .result
+            padding: 20px 14px
+
+        .result-tabs
+            margin: -3px
+
+        .result-tab
+            margin: 3px
+
+        .result-header__numer
+            margin-right: 10px
+
+        .result-buttons
+            flex-wrap: wrap
+    
+
+
+        .feedback
+            padding: 20px 14px
+
+        .feedback-row
+            flex-wrap: wrap
+
+        .feedback-col
+            width: 100%
+            padding-right: 0
+            margin-bottom: 20px
+
+            &:first-child
+                width: 100%
+
+            &:last-child
+                margin-bottom: 0
+
+        .feedback-list
+            padding-left: 0
+            border-left: 0
+
+
+        .serv
+            padding: 20px 14px
+
+        .serv-item
+            width: 50%
+            margin: 4px 0
+            padding: 0 12px
+            // font-size: 16px
+
+            &:before
+                left: 0
+
+
+        .doc
+            padding: 20px 14px
+
+
+    
+        .revie
+            padding: 20px 14px
+
+        .revie-name
+            font-size: 22px
+
+        .geo-item
+            width: 50%
+        

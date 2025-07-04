@@ -1,0 +1,71 @@
+.home-page
+    .form-search
+        margin: 0
+        
+        .form-item
+            width: 33vw
+
+        .form-search__button
+            width: 270px
+
+        +phone
+            .form-item
+                width: 100%
+
+            .form-search__button
+                width: 100%
+    
+    
+.form-search
+    position: relative
+    display: flex
+    margin: 60px 0 24px
+
+    .form-item
+        position: relative
+        
+
+        input
+            padding-left: 56px
+
+    .form-search__icon
+        fill: #fff
+        position: absolute
+        top: 18px
+        left: 20px
+        width: 26px
+        height: 26px
+
+    .form-search__button
+        // width: 270px
+        margin-left: 14px
+
+    +medium
+
+        .form-search__button
+            width: auto
+            margin-left: 8px
+
+        .form-search__icon
+            top: 16px
+            left: 14px
+            width: 22px
+            height: 22px
+
+        .form-item 
+            input
+                padding-left: 45px
+
+    +phone
+        width: 100%
+        margin: 30px 0
+        flex-wrap: wrap
+
+        .form-search__button
+            width: 100%
+            margin-left: 0
+            margin-top: 10px
+
+        .form-item
+            width: 100%
+    

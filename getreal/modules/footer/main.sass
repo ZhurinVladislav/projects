@@ -1,0 +1,74 @@
+.footer
+    position: relative
+    
+
+    .content
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        border-radius: 20px
+        padding: 54px 40px
+        background: $color__3
+
+    .menu-list
+        display: flex
+
+    .menu-item
+        margin-right: 20px
+
+        &:last-child
+            margin-right: 0
+
+        a
+            font-size: 14px
+            color: #fff
+            transition: all 0.3s
+
+            &.active,
+            &:hover
+                color: $color__2
+
+    .block-title
+        color: #fff
+
+    .block-link
+        color: $color__2
+        transition: all 0.3s
+
+        &:hover
+            color: $color__4
+    
+    +medium
+        .content
+            padding: 40px 30px
+
+        .menu-item
+            margin-right: 12px
+
+        .block-title
+            font-size: 14px
+
+        .block-link
+            font-size: 14px
+
+    +small
+        .content
+            flex-direction: column
+            align-items: center
+            padding: 26px 16px
+
+        .logo
+            margin-bottom: 20px
+
+        .menu-list
+            flex-direction: column
+            margin-bottom: 16px
+
+        .menu-item
+            text-align: center
+            margin-right: 0
+            margin-bottom: 4px
+
+        .block
+            text-align: center
+

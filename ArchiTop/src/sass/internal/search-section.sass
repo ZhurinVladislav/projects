@@ -1,0 +1,18 @@
+.search-section
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 12px
+		padding-left: 35px
+		list-style: square
+
+	&__list-item
+		&::marker
+			color: $clr_4
+
+	&__list-link
+		transition: color .2s linear
+
+		&:hover
+			+hover
+				color: $clr_4

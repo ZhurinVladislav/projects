@@ -1,0 +1,35 @@
+.copyright
+    padding: 18px 0
+
+    .content
+        display: flex
+        justify-content: space-between
+
+    .text
+        display: flex
+        align-items: center
+        font-size: 14px
+        text-transform: uppercase
+        color: rgba($color__3, 0.8)
+        transition: all 0.3s
+
+        svg
+            display: inline-flex
+            margin-right: 10px
+            fill: rgba($color__3, 0.8)
+            transition: all 0.3s
+
+    a.text:hover
+        color: $color__2
+
+        svg
+            fill: $color__2
+
+    +small
+
+        .content
+            flex-direction: column
+            align-items: center
+
+        .text
+            margin-bottom: 6px

@@ -1,0 +1,64 @@
+.contacts
+	background-color: $clr_2
+	opacity: 0
+	transition: opacity .5s linear
+	&.element-show
+		opacity: 1
+
+	&__container
+		padding-top: 28px
+		padding-bottom: 28px
+
+	&__content-wrap
+		display: flex
+		+ph
+			flex-direction: column
+			align-items: center
+			gap: 20px
+			text-align: center
+
+	&__logo
+		max-width: 250px
+
+	&__map-wrapper
+		position: relative
+		max-width: 100%
+		width: 100%
+		height: 700px
+		overflow: hidden
+		filter: grayscale(1)
+		+ph
+			max-width: 100%
+			height: 350px
+			
+	&__map-link
+		position: absolute
+		top: 0px
+		color: #eee
+		font-size: 12px
+		&_two
+			top: 14px
+
+	&__map
+		position: relative
+		border: none
+		width: 100%
+		height: 100%
+	
+.contacts-feedback
+	margin-right: 250px
+	margin-left: auto
+	+md
+		margin-right: 100px
+	+sm
+		margin-right: 40px
+	+ph
+		margin-right: 0
+		margin-left: 0
+
+.contacts-list
+	display: flex
+	flex-direction: column
+	gap: 12px
+	+ph
+		align-items: center

@@ -1,0 +1,54 @@
+.advantages
+	display: flex
+	flex-direction: column
+	margin-bottom: 45px
+	+ph
+		margin-bottom: 0px
+
+.advantages-swiper
+	&__slide
+		display: flex
+		flex-direction: column
+		gap: 24px
+		padding: 30px
+		color: $clr_1
+		border-radius: 20px
+		+ph
+			min-height: 180px
+			border-radius: 10px
+			padding: 10px
+
+		&:nth-child(1)
+			background-color: #007e40
+		&:nth-child(2)
+			background-color: $clr_3
+		&:nth-child(3)
+			background-color: #a7c338
+		&:nth-child(4)
+			background-color: #f6cb08
+		&:nth-child(5)
+			background-color: #eea842
+
+	&__slide-img
+		width: 100px
+		height: 100px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		+sm
+			width: 80px
+			height: 80px
+		+ph
+			width: 60px
+			height: 60px
+	
+	&__slide-descr
+		max-width: 417px
+		font-weight: 600
+		font-size: 24px
+		line-height: 150%
+		+sm
+			font-size: 20px
+		+ph
+			font-size: 18px
+			max-width: 300px

@@ -1,0 +1,199 @@
+.form
+	display: flex
+	flex-direction: column
+	gap: 8px
+
+.field
+	display: flex
+	flex-direction: column
+	gap: 12px
+
+.checkbox-list
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	gap: 12px
+	+ph
+		grid-template-columns: 1fr
+		gap: 10px
+
+.custom-checkbox
+	user-select: none
+	cursor: pointer
+	&__input
+		position: absolute
+		appearance: none
+
+		&:checked + .custom-checkbox__text
+			&::after
+				opacity: 1
+
+		&:focus + .custom-checkbox__text
+			color: var(--accent-color)
+
+		&:checked + .custom-checkbox__list
+			&::after
+				opacity: 1
+
+	&__text, &__list
+		position: relative
+		padding-left: 28px
+		font-weight: 500
+		font-size: 16px
+		transition: color .2s linear
+		+ph
+			font-size: 16px
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 20px
+			height: 20px
+			border: 1px solid var(--btn-hover-color)
+
+		&::after
+			content: ''
+			position: absolute
+			top: 3px
+			left: 3px
+			width: 14px
+			height: 14px
+			background-color: var(--accent-color)
+			opacity: 0
+			transition: opacity .2s linear
+
+.label
+	max-width: max-content
+	width: 100%
+	font-weight: 700
+	font-size: 15px
+	line-height: 100%
+	letter-spacing: -0.02em
+	color: var(--text-second-color)
+	cursor: pointer
+
+
+.input-count
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: 20px
+
+	.btn-icon-inv
+		border-radius: 2px
+		width: 22px
+		min-height: 22px
+
+		&__icon
+			width: 12px
+			height: 12px
+
+	&__input
+		width: 19px
+		height: 15px
+		font-weight: 500
+		font-size: 16px
+		line-height: 94%
+		letter-spacing: -0.02em
+		color: var(--text-second-color)
+
+.input
+	padding: 10px
+	max-width: 203px
+	border: 1px solid var(--bg-color)
+	border-radius: 4px
+	width: 100%
+	height: 40px
+	font-weight: 400
+	font-size: 13px
+	line-height: 138%
+	color: var(--text-second-color)
+	transition: border-color .2s linear
+	+hover
+		border-color: var(--hover-color)
+	+focus
+		border-color: var(--hover-color)
+		&::placeholder
+			opacity: 0
+
+	&::placeholder
+		font-weight: 400
+		font-size: 13px
+		line-height: 138%
+		color: var(--text-second-color)
+		transition: opacity .2s linear
+
+	&.error
+		border-color: var(--error-color)
+
+.textarea
+	padding: 16px
+	border: 1px solid var(--bg-color)
+	width: 100%
+	height: 74px
+	font-weight: 400
+	font-size: 13px
+	line-height: 138%
+	color: var(--text-second-color)
+	resize: none
+	transition: border-color .2s linear
+	&::-webkit-scrollbar
+		width: 4px
+		background-color: var(--white-color)
+
+	&::-webkit-scrollbar-thumb
+		background-color: var(--hover-color)
+
+	+hover
+		border-color: var(--hover-color)
+	+focus
+		border-color: var(--hover-color)
+		&::placeholder
+			opacity: 0
+
+	&::placeholder
+		font-weight: 400
+		font-size: 13px
+		line-height: 138%
+		color: var(--text-second-color)
+		transition: opacity .2s linear
+
+	&.error
+		border-color: var(--error-color)
+
+.field-stars
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 9px 10px
+	border: 1px solid var(--bg-color)
+	border-radius: 4px
+	width: 100%
+
+	&__text-wrap
+		font-size: 13px
+		line-height: 100%
+		color: var(--text-second-color)
+
+	&__list
+		direction: rtl
+		display: inline-flex
+		justify-content: flex-end
+
+	&__list-item
+		font-size: 24px
+		cursor: pointer
+		color: var(--text-second-color)
+		transition: color .2s linear
+
+		&:hover,
+		&:hover ~ .field-stars__list-item
+			color: var(--accent-color)
+
+		&.selected
+			color: var(--accent-color)
+
+			// &:hover,
+			// &:hover ~ .field-stars__list-item
+			// 	color: var(--text-second-color)

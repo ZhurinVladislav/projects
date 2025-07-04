@@ -1,0 +1,281 @@
+.btn-big
+	position: relative
+	display: block
+	padding: 4px 20px 24px
+	+hover
+		.btn-big__bd-hover
+			height: 4px
+			&::before,
+			&::after
+				height: 4px
+		
+		.btn-big__caption
+			padding-top: 8px
+			padding-bottom: 8px
+
+	+focus
+		.btn-big__bd-hover
+			height: 4px
+			&::before,
+			&::after
+				height: 4px
+		
+		.btn-big__caption
+			padding-top: 8px
+			padding-bottom: 8px
+
+	&.active
+		.btn-big__bd-hover
+			height: 4px
+			&::before,
+			&::after
+				height: 4px
+		
+		.btn-big__caption
+			padding-top: 8px
+			padding-bottom: 8px
+
+	&_blue
+		.btn-big__bd-hover
+			background-color: $color__17
+			border-top-color: $color__19
+			&::before,
+			&::after
+				background-color: $color__17
+				border-top-color: $color__19
+
+		.btn-big__caption
+			text-shadow: -2px 2px $color__19
+			background-color: $color__6
+			border-top-color: $color__19
+
+			&::before,
+			&::after
+				background-color: $color__6
+				border-top-color: $color__19
+
+		+hover
+			.btn-big__caption
+				background-color: $color__18
+				&::before,
+				&::after
+					background-color: $color__18
+
+		+focus
+			.btn-big__caption
+				background-color: $color__18
+				&::before,
+				&::after
+					background-color: $color__18
+
+		.active
+			.btn-big__caption
+				background-color: $color__18
+				&::before,
+				&::after
+					background-color: $color__18
+		
+	&_green
+		.btn-big__bd-hover
+			background-color: $color__24
+			border-top-color: $color__23
+			&::before,
+			&::after
+				background-color: $color__5
+				border-top-color: $color__23
+
+		.btn-big__caption
+			text-shadow: -2px 2px $color__17
+			background-color: $color__5
+			border-top-color: $color__23
+
+			&::before,
+			&::after
+				background-color: $color__5
+				border-top-color: $color__23
+
+		+hover
+			.btn-big__caption
+				background-color: $color__51
+				&::before,
+				&::after
+					background-color: $color__51
+
+		+focus
+			.btn-big__caption
+				background-color: $color__51
+				&::before,
+				&::after
+					background-color: $color__51
+
+		.active
+			.btn-big__caption
+				background-color: $color__51
+				&::before,
+				&::after
+					background-color: $color__51
+				
+	&__bg
+		position: absolute
+		top: 16px
+		right: 0
+		bottom: 12px
+		border-left: 4px solid $color__8
+		border-right: 4px solid $color__8
+		left: 0
+		background-color: $color__9
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: -4px
+			width: 8px
+			height: 4px
+			background-color: $color__8
+
+		&::before
+			left: 0
+
+		&::after
+			right: 0
+
+	&__bd-bot
+		position: absolute
+		right: 12px
+		bottom: 0
+		left: 12px
+		border-top: 4px solid $color__10
+		border-bottom: 4px solid $color__8
+		height: 12px
+		background-color: $color__7
+
+		span
+			position: absolute
+			bottom: 0
+			width: 4px
+			height: 12px
+			background-color: $color__7
+			border-top: 4px solid $color__10
+			border-bottom: 4px solid $color__8
+
+			&::before
+				content: ''
+				position: absolute
+				bottom: 0
+				border-top: 4px solid $color__10
+				border-bottom: 4px solid $color__8
+				width: 4px
+				height: 12px
+				background-color: $color__7
+
+			&:first-child
+				left: -4px
+				&::before
+					left: -4px
+			&:last-child
+				right: -4px
+				&::before
+					right: -4px
+
+	&__caption
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		border-top: 2px solid $color__8
+		padding: 4px 16px 12px
+		font-weight: 700
+		line-height: 20px
+		font-size: 16px
+		color: $color__2
+		text-transform: uppercase
+		text-align: center
+		transition: padding .15s, background-color .15s linear
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			border-top: 2px solid $color__8
+			width: 4px
+			transition: border-color .15s linear, height .15s linear, background-color .15s linear
+
+		&::before
+			left: -4px
+
+		&::after
+			right: -4px
+
+	&__bd-black
+		position: absolute
+		top: 0
+		right: 20px
+		left: 20px
+		bottom: 16px
+		border-top: 4px solid $color__8
+		border-bottom: 4px solid $color__8
+
+		span
+			position: absolute
+			top: 4px
+			bottom: 4px
+			width: 4px
+			background-color: $color__8
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				width: 4px
+				height: 4px
+				background-color: $color__8
+
+			&::before
+				top: -4px
+
+			&::after
+				bottom: -4px
+
+			&:first-child
+				left: -8px
+				&::before,
+				&::after
+					left: 4px
+
+			&:last-child
+				right: -8px
+				&::before,
+				&::after
+					right: 4px
+
+	&__bd-hover
+		box-sizing: border-box
+		position: absolute
+		right: 20px
+		bottom: 20px
+		left: 20px
+		height: 12px
+		border-top-style: solid
+		border-top-width: 4px
+		transition: border-color .15s linear, height .15s linear, background-color .15s linear
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			bottom: 4px
+			border-top-style: solid
+			border-top-width: 4px
+			width: 4px
+			height: 12px
+			transition: border-color .15s linear, height .15s linear, background-color .15s linear
+
+		&::before
+			left: -4px
+
+		&::after
+			right: -4px
+					

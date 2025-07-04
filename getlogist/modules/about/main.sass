@@ -1,0 +1,54 @@
+.about
+    margin-bottom: 110px
+
+    .row
+        display: flex
+
+    .image-wrapper
+        flex-shrink: 0
+        width: 600px
+        margin-right: 100px
+
+        img
+            width: 100%
+
+    .header_2
+        margin-bottom: 30px
+
+    .block.last
+        margin-top: 36px
+
+    .title
+        font-size: 24px
+        font-weight: 700
+        margin-bottom: 10px
+
+
+    +medium
+
+        .title
+            font-size: 22px
+
+        .image-wrapper
+            width: 530px
+            margin-right: 60px
+
+    +small
+        margin-bottom: 80px
+
+        .title
+            font-size: 20px
+
+        .image-wrapper
+            width: 400px
+            margin-right: 40px
+
+    +phone
+        .row
+            flex-wrap: wrap
+
+        .image-wrapper
+            width: 100%
+            margin-right: 0px
+            margin-bottom: 40px
+    

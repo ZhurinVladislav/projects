@@ -1,0 +1,122 @@
+.header
+  position: relative
+  background-color: $clr_1
+
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 20px
+    padding-top: 24px
+    padding-bottom: 24px
+    +md
+      flex-direction: column
+    +ph
+      padding-top: 20px
+      padding-bottom: 20px
+
+  &__content-md
+    display: flex
+    align-items: center
+    gap: 20px
+    justify-content: space-between
+    +md
+      max-width: 100%
+      width: 100%
+    +ph
+      align-items: flex-start
+
+  &__logo
+    max-width: 150px
+    max-height: 62px
+    +ph
+      max-width: 100px
+      max-height: 42px
+
+  &.header_active
+    position: fixed
+    z-index: 500
+    animation-name: fadeInUp
+    box-shadow: 0 3px 7px 0 rgba(25, 60, 99, 0.1), 0 13px 13px 0 rgba(25, 60, 99, 0.09), 0 29px 17px 0 rgba(25, 60, 99, 0.05), 0 51px 21px 0 rgba(25, 60, 99, 0.01), 0 80px 22px 0 rgba(25, 60, 99, 0)
+    animation-duration: 1s
+
+    .header__container
+      padding-top: 12px
+      padding-bottom: 12px
+      +md
+        gap: 10px
+
+.header-menu
+  +sm
+    max-width: 100%
+    width: 100%
+    min-height: 40px
+    overflow-x: auto
+
+  &::-webkit-scrollbar
+    height: 4px
+    background-color: $clr_4
+
+  &::-webkit-scrollbar-thumb
+    background-color: $clr_3
+
+
+  &__list
+    display: flex
+    align-items: center
+    gap: 40px
+    +sm
+      gap: 20px
+
+  &__list-item
+    &.menu-active
+      .header-menu__list-link
+        color: $clr_3
+  
+  &__list-link
+    font-size: 16px
+    +sm
+      display: inline-block
+      width: max-content
+
+.header-feedback
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  gap: 4px
+  +md
+    display: none
+
+  &_md
+    display: none
+    +md
+      display: flex
+
+  &__content-top
+    display: flex
+    align-items: center
+    gap: 16px
+    +ph
+      flex-direction: column
+      align-items: flex-end
+      gap: 8px
+  
+  &__links-social
+    display: flex
+    align-items: center
+    gap: 8px
+
+  &__address
+    font-size: 14px
+    line-height: 100%
+    text-align: end
+    +ph
+      font-size: 12px
+
+  &__address-link
+    font-weight: 400
+    font-size: 14px
+    line-height: 100%
+    text-align: end
+    +ph
+      font-size: 12px

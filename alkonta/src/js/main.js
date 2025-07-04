@@ -354,26 +354,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!document.getElementById('services')) return;
 
     new Swiper('#services-slider', {
-      cssMode: true,
+      // cssMode: true,
       spaceBetween: 10,
+      // effect: 'flip',
+      // mousewheel: true,
       scrollbar: {
         el: '.swiper-scrollbar',
+        // hide: true,
       },
       breakpoints: {
         60: {
           slidesPerView: 1,
+          cssMode: true,
           grid: {
             rows: 1,
           },
         },
         521: {
           slidesPerView: 2,
+          cssMode: true,
           grid: {
             rows: 1,
           },
         },
         767: {
           slidesPerView: 3,
+          cssMode: true,
           grid: {
             rows: 1,
           },
@@ -381,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
         992: {
           slidesPerView: 4,
           grid: {
-            rows: 2,
+            rows: 3,
           },
         },
       },

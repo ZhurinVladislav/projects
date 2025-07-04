@@ -1,0 +1,59 @@
+.cookie
+	position: fixed
+	z-index: 10000
+	right: 0
+	bottom: 15px
+	display: flex
+	justify-content: flex-end
+	padding: 0px 25px
+	max-width: max-content
+	animation: active .2s linear
+	&.hidden
+		animation: hidden .2s linear
+	+ph
+		padding: 0px 10px
+
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		gap: 20px
+		padding: 20px
+		max-width: 680px
+		width: 100%
+		font-size: 16px
+		color: $clr_1
+		border-radius: 8px
+		background-color: rgba($clr_3, .8)
+		backdrop-filter: blur(10px)
+
+		+ph
+			flex-direction: column
+			align-items: flex-start
+			gap: 10px
+			padding: 10px
+			font-size: 14px
+
+	&__btn
+		min-height: 44px
+		+ph
+			max-width: 160px
+			min-height: 30px
+			width: 100%
+			font-size: 14px
+
+@keyframes active
+	from
+		opacity: 0
+
+	to
+		opacity: 1
+
+@keyframes hidden
+	from
+		display: block
+		opacity: 1
+
+	to
+		display: none
+		opacity: 0

@@ -1,0 +1,64 @@
+.review
+	&__fio
+		margin-bottom: 10px
+		font-family: var(--font-second)
+		font-weight: 300
+		font-size: 18px
+
+	&__date
+		margin-bottom: 20px
+
+	&__content
+		&.content
+			font-family: var(--font-second)
+			font-size: 14px
+			line-height: 143%
+			p
+				font-weight: 700
+				text-transform: uppercase
+
+.reviews-inner
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 20px
+
+.review-inner
+	display: flex
+	justify-content: space-between
+	gap: 20px
+	font-family: var(--font-family)
+	+xs
+		flex-direction: column
+
+	&__img-wrap
+		flex-shrink: 0
+		width: 87px
+		height: 87px
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		padding-bottom: 14px
+		max-width: 925px
+		width: 100%
+		border-bottom: 1px solid var(--bg-second-color)
+
+	&__content-top
+		display: flex
+		align-items: center
+		gap: 4px
+		margin-bottom: 8px
+
+	&__fio
+		font-weight: 700
+		font-size: 18px
+
+	&__content
+		padding: 10px
+		border-left: 5px solid #eee

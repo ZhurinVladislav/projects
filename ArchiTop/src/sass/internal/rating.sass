@@ -1,0 +1,233 @@
+.services-inner
+	&__list
+		margin-bottom: 80px
+		+ph
+			margin-bottom: 40px
+
+	.links-list
+		grid-template-columns: repeat(2, 1fr)
+		max-width: 1195px
+		list-style: square
+		padding-left: 35px
+		color: $clr_3
+		+sm
+			grid-template-columns: 1fr
+			gap: 12px
+			padding-left: 20px
+
+		&__item
+			display: list-item
+			&::marker
+				color: $clr_4
+
+	.link-list
+		text-align: left
+		&__text
+			white-space: normal
+			+ph
+				width: 100%
+
+.section-filter
+	&__main-wrap
+		display: flex
+		justify-content: space-between
+		gap: 32px
+		+md
+			gap: 20px
+		+sm
+			flex-direction: column
+
+	&__filters
+		display: flex
+		flex-direction: column
+		margin-top: 50px
+		padding: 0 24px
+		max-width: 336px
+		width: 100%
+		height: max-content
+		background-color: $clr_2
+		+sm
+			margin-top: 0
+			max-width: 100%
+
+		+ph
+			padding: 0 12px
+
+.filter
+	&:first-child
+		.filter-list
+			padding-bottom: 20px
+			+ph
+				padding-bottom: 14px
+	&:not(:first-child)
+		.filter-list
+			padding-bottom: 20px
+			+ph
+				padding-bottom: 14px
+	&:not(:last-child)
+		border-bottom: .50px solid rgba($clr_3, .2)
+
+	&__btn
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 20px
+		padding-bottom: 16px
+		max-width: 100%
+		width: 100%
+		+ph
+			padding-top: 14px
+			padding-bottom: 14px
+		&:hover
+			+hover
+				.filter__btn-text
+					color: $clr_3
+
+				.filter__btn-icon
+					fill: $clr_3
+
+	&__btn-text
+		font-weight: 600
+		font-size: 18px
+		color: $clr_4
+		transition: color .2s linear
+
+	&__btn-icon
+		width: 32px
+		height: 32px
+		fill: $clr_4
+		transition: transform .2s linear, fill .2s linear
+
+	&__btn-more
+		margin-bottom: 20px
+		font-size: 14px
+
+.filter-list
+	display: flex
+	flex-direction: column
+	gap: 12px 0
+	padding-bottom: 20px
+
+.js-filter-btn
+	&.active
+		.filter__btn-icon
+			transform: rotateX(180deg)
+
+.js-filter-content
+	&.hidden
+		max-height: 0
+		overflow: hidden
+		transition: max-height .3s linear
+
+.filter-results
+	display: flex
+	flex-direction: column
+	width: 100%
+
+	&__text-wrap
+		margin: 80px 0
+		padding-left: 20px
+		border-left: 2px solid $clr_4
+		+ph
+			margin: 40px 0
+
+.filters-list
+	display: flex
+	gap: 8px
+	flex-wrap: wrap
+	margin-bottom: 20px
+
+	&__item
+		display: flex
+		align-items: center
+		gap: 8px
+		padding: 6px 6px 6px 16px
+		font-size: 16px
+		color: $clr_2
+		border-radius: 30px
+		background-color: $clr_4
+		+ph
+			font-size: 14px
+			border-radius: 20px
+
+	&__item-text-wrap
+		display: flex
+		align-items: center
+		gap: 4px
+
+	&__item-text-icon
+		width: 16px
+		height: 16px
+		fill: $clr_1
+
+	&__item-btn
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		width: 20px
+		height: 20px
+		border-radius: 100%
+		background-color: $clr_2
+		transition: opacity .2s linear, transform .3s linear
+		&:hover
+			+hover
+				opacity: .5
+
+		&:active
+			transform: scale(.95)
+
+	&__item-btn-icon
+		width: 8px
+		height: 8px
+		fill: $clr_4
+
+.results-list
+	display: flex
+	flex-direction: column
+	gap: 12px
+	// margin-bottom: 20px
+
+.pagination
+	display: flex
+	gap: 4px
+	margin: 0 auto
+	padding-top: 20px
+	// margin-bottom: 80px
+	// +ph
+	// 	margin-bottom: 40px
+
+.pagination-btn
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-shrink: 0
+	width: 36px
+	height: 36px
+	font-size: 16px
+	color: $clr_4
+	border: 1px solid $clr_2
+	background-color: $clr_2
+	transition: opacity .2s linear
+	&_active
+		color: $clr_2
+		background-color: $clr_4
+	&_prev
+		.pagination-btn__icon
+			transform: rotate(90deg)
+	&_next
+		.pagination-btn__icon
+			transform: rotate(-90deg)
+	
+	&:hover
+		+hover
+			opacity: .5
+
+	&__icon
+		width: 24px
+		height: 24px
+		fill: $clr_4
+
+.pagination-numbers
+	display: flex
+	gap: 4px

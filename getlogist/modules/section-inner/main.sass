@@ -1,0 +1,100 @@
+.section-inner
+    margin-top: 40px
+    margin-bottom: 120px
+    min-height: 32vh
+
+    &.gallery
+        .content
+            width: 100%
+
+    .content
+        // width: 86%
+        //margin: 0 auto
+
+
+    .header_1,
+    .header_2
+        margin-bottom: 40px
+
+
+
+    .custom-gallery
+        img 
+            width: 100%
+            height: auto!important
+
+        &:hover
+            img
+                transform: scale(1)!important
+
+
+    .text-default
+        p
+            margin-top: 16px
+            margin-bottom: 16px
+
+
+    .gallery-item
+        position: relative
+        z-index: 10
+        float: none
+        padding: 0px
+        border: 0px 
+        padding: 6px 4px
+        opacity: 1
+        width: calc(33% - 8px)
+        display: inline-block
+        vertical-align: top
+        font-size: 0
+        line-height: 0
+    
+        a
+            text-decoration: none
+            display: inline-block
+            width: 100%
+            font-size: 0
+            line-height: 0
+            overflow: hidden
+            
+        img 
+            width: 100%
+            height: 300px
+            object-fit: cover
+            transition: 2s
+
+        &:hover
+            img
+                transform: scale(1.1)
+
+    +medium
+        .content
+            width: 94%
+
+
+    +small
+        margin-bottom: 80px
+
+        .content
+            width: 100%
+
+
+        .gallery-item
+            width: calc(50% - 8px)
+            img 
+                height: 300px
+
+
+    +phone
+
+
+        .text-default
+
+            img
+                width: 100%!important
+                margin: 20px 0!important
+
+        .gallery-item
+            img 
+                height: 36vw
+                margin: 0!important
+            

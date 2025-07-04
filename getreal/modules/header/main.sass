@@ -1,0 +1,357 @@
+body.main
+    .header
+        // background: $color__4
+    
+.header
+    position: fixed
+    z-index: 22
+    top: 0
+    left: 0
+    width: 100%
+    // background: #dcdbe2
+    background: #e7e6eb
+    transition: all 0.4s
+
+    &[data-animations]
+        transform: translateX(60px)
+        opacity: 0
+        // transition: all 1.2s 0s
+
+    &.animations
+        opacity: 1
+        transform: translateY(0)
+
+
+    &.scroll
+        top: -45px
+        .header-top
+            padding: 6px 0 12px
+
+
+
+    .header-city
+
+        .cf-city
+            position: relative
+
+        .cf-city-link
+            display: flex
+            align-items: center
+            padding: 12px 0
+            border-bottom: 1px solid #D0CED6
+
+            &:hover
+                .cf-city-link__icon
+                    fill: $color__2
+
+                .cf-city-link__text
+                    color: $color__2
+                
+
+        .cf-city-link__icon
+            margin-right: 6px
+            fill: $color__3
+            transition: all 0.3s
+
+        .cf-city-link__text
+            color: $color__3
+            transition: all 0.3s
+
+        .cf-city-spoller
+            position: absolute
+            z-index: 4
+            top: 100%
+            left: 0
+            width: 280px
+            background: #fff
+            border-radius: 12px
+            display: none
+
+        .cf-city-spoller__list
+            padding: 10px 0
+
+        .cf-city-spoller__item
+            display: block
+            padding: 6px 10px
+            transition: all 0.3s
+            
+            &:hover
+                color: $color__2
+
+
+
+    
+    .header-top
+        width: 100%
+        padding: 12px 0 24px
+        // transition: all 0.2s
+
+        .content
+            display: flex
+            align-items: flex-end
+
+        .logo
+            flex-shrink: 0
+            display: inline-flex
+            // width: 148px
+            img
+                // width: 100%
+
+        .menu-list
+            display: flex
+            align-items: center
+            margin-left: 50px
+            margin-right: auto
+            // margin: 0 auto
+            
+
+        .menu-list > .menu-item
+            position: relative
+            flex-grow: 1
+            margin-right: 40px
+
+            &:last-child
+                margin-right: 0
+
+            &:hover
+                // > a
+                //     color: $color__2
+
+                ul
+                    display: block
+
+            &.active
+                > a
+                    // color: $color__2
+                    
+            > a
+                position: relative
+                z-index: 1
+                display: flex
+                align-items: center
+                justify-content: center
+                text-align: center
+                font-family: $font-family__1
+                font-weight: 400
+                font-size: 18px
+                color: $color__1
+                transition: all 0.3s
+
+                .arrow
+                    display: inline-flex
+                    width: 8px
+                    height: 8px
+                    transform: rotate(180deg)
+                    background: transparent
+                    margin-left: 6px
+                    transition: all 0.3s
+                    svg
+                        fill: $color__1
+                        transition: all 0.3s
+
+                &:hover,
+                &.active
+                    color: $color__2
+
+
+                
+        .menu-list__inner
+            display: none
+            position: absolute
+            z-index: 12
+            top: calc(100% + 20px)
+            left: -1px
+            width: 320px
+            background: #fff
+            padding: 20px 15px
+            border: 1px solid $color__2
+            border-radius: 10px
+
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                bottom: 100%
+                left: 0
+                background: transparent
+                width: 100%
+                height: 20px
+
+            > .menu-item
+                margin-bottom: 10px
+                &:last-child
+                    margin-bottom: 0
+
+                > a
+                    display: inline-block
+                    font-size: 16px
+                    font-weight: 600
+                    border-bottom: 1px solid transparent
+                    transition: all 0.3s
+                    &:hover
+                        color: $color__2
+                        //border-bottom: 1px solid $color__2
+
+                &.active
+                    a
+                        color: $color__2
+                        //border-bottom: 1px solid $color__2
+
+        .socials
+            display: flex
+            margin-right: 30px
+
+        .social
+            display: inline-flex
+            width: 32px
+            height: 32px
+            border-radius: 50px
+            padding: 8px
+            background: $color__2
+            margin-right: 8px
+            transition: all 0.3s
+            &:last-child
+                margin-right: 0
+
+            svg
+                fill: #fff
+                transition: all 0.3s
+
+            &:hover
+                background: $color__1
+                svg
+                    //fill: $color__2
+
+        
+        .header-feedback
+            position: relative
+
+            &.active
+                .header-feedback__button
+                    transition: all 0.1s 
+                    border-radius: 20px 20px 0 0
+
+        .header-feedback__button
+            transition: all 0.3s 0.4s
+            &:hover
+                background: $color__2
+                color: #fff
+                // opacity: 0.8
+
+        .header-feedback__spoller
+            position: absolute
+            left: 0
+            top: 100%
+            width: 100%
+            background: #fff
+            border: 2px solid $color__2
+            border-radius: 0 0 20px 20px
+            display: none
+
+        .header-feedback__list
+            padding: 10px 20px
+            
+
+        .header-feedback__item
+            display: block
+            margin-bottom: 6px
+            &:last-child
+                margin-bottom: 0
+
+        .menu__toggle
+            display: none
+
+
+    +medium
+
+        .header-top
+
+            .logo
+                // width: 180px
+
+            .menu-list
+                margin-left: 30px
+
+            .menu-list > .menu-item
+                margin-right: 24px
+
+                > a
+                    font-size: 14px
+                
+            .socials
+                margin-right: 14px
+
+            
+            
+            
+
+    +small
+
+        .header-top
+            padding: 14px 0
+
+            .button
+                display: none
+
+            .menu-list
+                display: none
+
+            .socials
+                margin-left: auto
+                margin-right: 20px
+
+
+            .menu__toggle
+                position: relative
+                z-index: 30
+                display: block
+                width: 26px
+                height: 16px
+                margin-left: auto
+                cursor: pointer
+
+                span
+                    display: block
+                    width: 100%
+                    height: 2px
+                    border-radius: 1px
+                    background: $color__1
+                    position: absolute
+                    transition: all 0.6s
+                    transform: rotate(0) translate(0, 0)
+
+                    &:nth-child(1)
+                        top: 0
+                        left: 0
+                    &:nth-child(2)
+                        top: 50%
+                        left: 0
+                        transform: translateY(-50%)
+                        opacity: 1
+
+                    &:nth-child(3)
+                        bottom: 0
+                        left: 0
+
+                &.active
+                    
+                    span
+                        background: $color__2
+
+                        &:nth-child(1)
+                            transform: rotate(45deg) translate(-50%, -50%)
+                            transform-origin: top left
+                            left: 50%
+                            top: 50%
+
+                        &:nth-child(2)
+                            left: 150%
+                            transform: translateY(0) rotate(-360deg)
+                            opacity: 0
+
+                        &:nth-child(3)
+                            transform: rotate(-45deg) translate(-50%, 50%)
+                            transform-origin: bottom left
+                            left: 50%
+                            bottom: 50%
+

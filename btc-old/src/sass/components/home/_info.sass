@@ -1,0 +1,57 @@
+.home-info
+	&__content-wrap
+		position: relative
+		display: flex
+		justify-content: space-between
+		gap: 40px
+		padding: 30px
+		overflow: hidden
+		border: 8px solid var(--none-color)
+		border-image-slice: 8
+		border-image-repeat: stretch
+		border-image-source: url(../img/base/blocks/border.svg)
+		+sm
+			flex-direction: column
+		+ph
+			gap: 20px
+			padding: 20px
+		&::after
+			content: ''
+			position: absolute
+			z-index: 0
+			top: 50%
+			left: 50%
+			width: calc(100% + 33px)
+			height: calc(100% + 33px)
+			background-color: var(--accent-color)
+			transform: translate(-50%, -50%)
+			transition: background-color .2s linear
+
+	&__img-wrap
+		z-index: 1
+		display: flex
+		max-width: 468px
+		width: 100%
+		max-height: 476px
+		height: 100%
+
+	&__img
+		width: 100%
+		object-fit: cover
+
+	&__content
+		z-index: 1
+		max-width: 910px
+		width: 100%
+
+	&__text-wrap
+		margin-bottom: 47px
+
+	&__content-bg-img
+		position: absolute
+		z-index: -2
+		max-width: 963px
+		width: 100%
+		min-height: 336px
+		right: 22px
+		bottom: 54px

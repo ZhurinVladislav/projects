@@ -1,0 +1,210 @@
+.yacht
+	&__content-wrapper
+		display: flex
+		gap: 12px
+		+ph
+			flex-direction: column
+		
+	&__content-right
+		position: sticky
+		top: 120px
+		display: flex
+		flex-direction: column
+		max-width: 50%
+		width: 100%
+		height: 100%
+		overflow: inherit
+		+sm
+			max-width: 40%
+		+ph
+			max-width: 100%
+
+	&__descr
+		padding: 14px
+		border-radius: 16px
+		background-color: $clr_4
+		+ph
+			border-radius: 14px
+
+.yacht-main-info
+	display: flex
+	flex-direction: column
+	// gap: 20px
+	max-width: 50%
+	width: 100%
+	+sm
+		max-width: 60%
+	+ph
+		max-width: 100%
+
+	&__title-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 14px
+		width: 100%
+		border-radius: 16px 16px 0 0
+		background-color: $clr_4
+		+ph
+			border-radius: 14px 14px 0 0
+
+	&__title
+		margin-bottom: 0
+		font-size: 45px
+		+sm
+			font-size: 40px
+		+ph
+			font-size: 30px
+
+	&__btn
+		+ph
+			padding: 10px
+			min-height: 42px
+
+.yacht-slider
+	display: flex
+	flex-direction: column
+	margin-bottom: 20px
+	gap: 12px
+	width: 100%
+	height: 500px
+	box-sizing: border-box
+	+ph
+		height: 400px
+
+	.slider-top
+		width: 100%
+		height: 78%
+		border-radius: 0 0 16px 16px
+		overflow: hidden
+		+ph
+			border-radius: 0 0 14px 14px
+
+		&__slide
+			
+			&:hover
+				+hover
+					.slider-top__img
+						transform: scale(1.1)
+
+		&__img
+			transition: transform .3s linear
+
+		&__btn
+			position: absolute
+			top: 50%
+			z-index: 2
+			
+			&_prev
+				left: 20px
+				+ph
+					left: 10px
+
+			&_next
+				right: 20px
+				+ph
+					right: 10px
+
+	.slider-bottom
+		width: 100%
+		height: 22%
+		border-radius: 16px
+		overflow: hidden
+		+ph
+			border-radius: 14px
+
+		&__slide
+			border-radius: 16px
+			opacity: .6
+			cursor: pointer
+			overflow: hidden
+			transition: opacity .3s linear
+			+ph
+				border-radius: 14px
+
+			&:hover
+				+hover
+					opacity: 1
+
+			&.swiper-slide-thumb-active
+				opacity: 1
+
+.yacht-specific
+	padding: 14px
+	border-radius: 16px
+	background-color: $clr_4
+	+ph
+		border-radius: 14px
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 20px
+		+ph
+			grid-template-columns: 1fr
+
+	h4
+		font-size: 16px
+
+	p
+		font-size: 15px
+
+.yacht-price
+	// position: sticky
+	// top: 120px
+	display: flex
+	flex-direction: column
+	gap: 10px
+	margin-bottom: 20px
+	padding: 14px
+	border-radius: 16px
+	background-color: $clr_4
+	+ph
+		border-radius: 14px
+		display: none
+
+	&_ph
+		display: none
+		+ph
+			display: flex
+
+	&__title
+		margin-bottom: 0
+
+	&__weekday
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 6px 12px
+		max-width: max-content
+		font-weight: 600
+		line-height: 140%
+		font-size: 14px
+		border-radius: 5px
+		color: $clr_er
+		background-color: $clr_5
+
+	&__item-wrapper
+		padding: 6px 12px
+		max-width: max-content
+		background-color: $clr_1
+		border-radius: 5px
+
+.yacht-book
+	display: flex
+	flex-direction: column
+
+	&__title
+		margin-bottom: 10px
+
+	&__links
+		display: flex
+		flex-wrap: wrap
+		gap: 10px
+		font-weight: 600
+
+	&__link
+		color: $clr_3
+		&:hover
+			+hover
+				color: $clr_2

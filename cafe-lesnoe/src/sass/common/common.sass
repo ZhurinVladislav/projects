@@ -819,7 +819,7 @@ input[type='number']
   h2
     font-family: $ff_2
     margin-bottom: 26px
-    font-weight: 500
+    font-weight: 300
     line-height: 120%
     font-size: 60px
 
@@ -940,47 +940,39 @@ input[type='number']
     width: 100%
     border-collapse: collapse
     overflow: hidden
-    text-transform: uppercase
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 14px 14px 0 rgba(0, 0, 0, 0.09), 0 31px 19px 0 rgba(0, 0, 0, 0.05), 0 56px 22px 0 rgba(0, 0, 0, 0.01), 0 87px 24px 0 rgba(0, 0, 0, 0)
+    font-weight: 400
+    color: $clr_1
 
     +lr
       font-size: 16px
 
     +ph
       display: block
-      margin: auto
-      font-size: 14px
       width: fit-content
+      font-size: 14px
       overflow-x: auto
 
     p
       @include textReset
 
     tr
-      background-color: $clr_1
-      background-image: url(../img/common/pattern.svg)
-      
-
+      background-color: $clr_2
       &:nth-child(2n)
-        color: $clr_1
-        background-color: rgba($clr_2, .5)
-        background-image: none
-        
-        
+        background-color: rgba($clr_2, .9)
       &:nth-child(1)
-        color: $clr_1
-        background-color: $clr_2
-        background-image: url(../img/common/pattern-invert.svg)
-        text-align: center
+        background-color: $clr_3
+        text-transform: uppercase
 
         td
           border: none
+          text-align: center
 
     th, td
       padding: 20px
+      border: 1px solid $clr_3
 
       +ph
-        padding: 14px
+        padding: 8px
 
     td
 
@@ -1281,8 +1273,9 @@ input[type='number']
   background-color: $clr_1
   transition: opacity .3s linear
 
-  &.loading
-    opacity: 0
+  &.hidden
+    animation: fadeOut 1s
+    animation-fill-mode: forwards
 
   &__list-item
     position: absolute
@@ -1332,6 +1325,11 @@ input[type='number']
 
   100%
     opacity: 1
+
+@keyframes fadeOut
+  100%
+    opacity: 0
+    visibility: hidden
 
 
 @keyframes opacityBtn

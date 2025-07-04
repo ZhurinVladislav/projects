@@ -1,0 +1,93 @@
+.bring-friends-block
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 20px
+	min-height: 478px
+	border-radius: 20px
+
+	&__icon
+		position: absolute
+		z-index: 0
+		width: 65px
+		height: 65px
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		+ph
+			width: 40px
+			height: 40px
+
+		&_left
+			top: -15px
+			left: 30px
+			+ph
+				top: -20px
+				left: 20px
+
+		&_right
+			top: -38px
+			right: 17px
+			width: 94px
+			height: 94px
+			transform: rotate(-90deg)
+			+sm
+				width: 80px
+				height: 80px
+			+ph
+				top: -20px
+				width: 40px
+				height: 40px
+
+		&_bottom
+			top: auto
+			right: 23px
+			bottom: -18px
+			+ph
+				right: 20px
+				bottom: -20px
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+		z-index: 1
+
+	&__content
+		margin-bottom: 47px
+		max-width: 934px
+
+	&__link
+		margin: 0 auto
+
+	&__bg
+		position: absolute
+		z-index: -1
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-position: center
+		background-repeat: no-repeat
+
+	&__img
+		position: absolute
+		z-index: 0
+		bottom: 0
+		left: 10px
+		width: 306px
+		height: 196px
+		background-position: center
+		background-size: contain
+		background-repeat: no-repeat
+		+sm
+			width: 178px
+			height: 114px
+
+	.btn-big
+		&__caption
+			min-width: 229px
+			min-height: 50px

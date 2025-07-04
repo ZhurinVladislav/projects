@@ -1,0 +1,45 @@
+.layout
+	&__content-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 40px
+		+sm
+			flex-direction: column
+
+	&__content
+		display: flex
+		flex-direction: column
+		max-width: 700px
+		opacity: 0
+		transform: translateX(-60px)
+		transition: opacity .3s linear, transform .8s linear
+		+md
+			max-width: 50%
+		+sm
+			max-width: 100%
+
+		&.element-show
+			opacity: 1
+			transform: translateX(0)
+
+	&__slider-wrap
+		position: relative
+		max-width: 579px
+		width: 100%
+		opacity: 0
+		transform: translateX(60px)
+		transition: opacity .3s linear, transform .8s linear
+		+md
+			max-width: 50%
+		+sm
+			max-width: 500px
+
+		&.element-show
+			opacity: 1
+			transform: translateX(0)
+
+.layout-slider
+	&__navigation
+		right: 0
+		bottom: -50px

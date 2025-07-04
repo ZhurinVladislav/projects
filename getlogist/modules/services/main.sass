@@ -1,0 +1,141 @@
+.services
+    overflow: hidden
+    margin-bottom: 150px
+
+    .header_2
+        text-align: center
+        margin-bottom: 24px
+
+    .subtitle
+        font-size: 24px
+        font-weight: 500
+        text-align: center
+        margin-bottom: 54px
+
+    .list
+        display: flex
+        flex-wrap: wrap
+        margin: -15px -18px
+
+    .item
+        padding: 15px 18px
+        width: 33.33%
+        
+
+    .link
+        position: relative
+        z-index: 1
+        display: flex
+        align-items: flex-end
+        
+
+        &:hover
+            .item-title
+                color: $color__3
+
+            .item-line
+                background: $color__3
+
+            .item-number
+                color: $color__3
+
+    .item-title
+        white-space: nowrap
+        font-weight: 500
+        font-size: 18px
+        line-height: 1
+        margin-right: 4px
+        transition: all 0.3s
+
+    .item-line
+        width: 100%
+        height: 1px
+        background: rgba(0,0,0,0.2)
+        transition: all 0.3s
+
+    .item-number
+        margin-left: 4px
+        font-weight: 500
+        font-size: 18px
+        line-height: 1
+        transition: all 0.3s
+
+    .slider
+        position: relative
+        margin-top: 150px
+
+    .slide
+        width: 210px
+        height: 250px
+        margin-right: 10px
+        padding: 3px
+        border-radius: 16px
+        border: 2px solid $color__3
+
+    .slide-link
+        position: relative
+
+    .slide-image
+        width: 100%
+        height: 100%
+        border-radius: 12px
+        object-fit: cover
+
+    .slide-text
+        position: absolute
+        z-index: 2
+        left: 0
+        bottom: 0
+        color: #fff
+        font-weight: 700
+        font-size: 18px
+        line-height: 1.2
+        padding: 16px 12px
+
+    .slider-arrow
+        position: absolute
+        top: 50%
+        transform: translateY(-50%) 
+        &.left
+            left: 20px
+
+        &.right
+            right: 20px
+
+    +large
+
+        .subtitle
+            font-size: 22px
+
+        .item-title
+            font-size: 16px
+
+        .item-number
+            font-size: 16px
+
+    +medium
+        margin-bottom: 90px
+
+        .header_2 
+            margin-bottom: 16px
+
+        .subtitle
+            font-size: 20px
+            margin-bottom: 44px
+
+        .slider
+            margin-top: 90px
+
+        .item
+            width: 50%
+
+    +phone
+
+        .subtitle
+            font-size: 16px
+
+        .item
+            width: 100%
+
+        .slide-text
+            font-size: 16px

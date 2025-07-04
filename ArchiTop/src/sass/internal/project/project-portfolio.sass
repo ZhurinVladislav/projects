@@ -1,0 +1,65 @@
+.project-portfolio
+	&__list
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(345px, 1fr))
+		gap: 20px
+		margin-bottom: 32px
+
+		+ph
+			gap: 14px
+			grid-template-columns: 1fr
+
+	&__list-item
+		animation: openListMore .2s linear
+
+		&.hidden
+			display: none
+			animation: closeListMore .2s linear
+
+	&__list-link
+		display: flex
+		flex-direction: column
+		gap: 16px
+		width: 100%
+
+		&:hover
+			+hover
+				.project-portfolio__list-title
+					color: $clr_4
+	
+	&__list-img-wrap
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		max-width: 100%
+		height: 260px
+		overflow: hidden
+		background-color: $clr_2
+
+	&__list-img-bg
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		filter: blur(140px)
+
+	&__list-img
+		z-index: 1
+		height: 100%
+		object-fit: contain
+
+	&__list-title
+		font-weight: 600
+		transition: color .2s linear
+
+	&__btn
+		max-width: 100%
+		width: 100%
+		min-height: 50px
+		
+		&.hidden
+			display: none

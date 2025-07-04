@@ -1,0 +1,131 @@
+.footer
+	margin-top: auto
+
+.footer-top
+	padding: 50px 0
+	+ph
+		padding: 20px 0
+
+	&__container
+		display: flex
+		justify-content: space-between
+		gap: 20px
+		+sm
+			flex-direction: column
+
+	&__logo-link
+		max-width: 332px
+		height: 90px
+		+ph
+			max-width: 240px
+			height: 70px
+
+	&__feedback
+		display: flex
+		flex-direction: column
+		gap: 22px
+
+	&__feedback-link
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 4px
+		border: 1px solid #278B2F
+		border-radius: 7px
+		max-width: 116px
+		min-height: 33px
+		font-weight: 700
+		line-height: 100%
+		font-size: 16px
+		color: var(--white-color)
+		background-color: #278B2F
+		transition: border-color .2s linear, background-color .2s linear
+
+		+hover
+			border-color: #207327
+			background-color: #207327
+
+		+focus
+			border-color: var(--accent-color)
+
+		&:active
+			border-color: #1b5e20
+			background-color: #1b5e20
+
+.footer-nav
+	max-width: 414px
+	width: 100%
+	&__list
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		gap: 8px
+		width: 100%
+		max-height: 168px
+		+ph
+			flex-direction: column
+			flex-wrap: nowrap
+			max-height: max-content
+
+	&__item
+		position: relative
+
+		&.active
+			.footer-nav__link
+				border-color: var(--accent-color)
+
+	&__link
+		font-weight: 400
+		font-size: 16px
+		line-height: 156%
+		color: var(--text-second-color)
+
+.copyright
+	padding: 20px 0
+	font-size: 16px
+	line-height: 130%
+	text-align: center
+	color: var(--white-color)
+	background-color: var(--accent-color)
+
+	&__container
+		max-width: 1490px
+
+	&__list
+		display: flex
+		gap: 20px
+		justify-content: space-between
+		align-items: center
+		+ph
+			flex-direction: column
+			gap: 10px
+
+	&__list-link-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+
+.copyright-link
+	display: flex
+	font-size: 16px
+	gap: 10px
+	transition: color .2s linear, transform .2s linear
+
+	+hover
+		color: var(--text-color)
+		.copyright-link__icon
+			fill: var(--text-color)
+
+	+focus
+		color: var(--text-color)
+		.copyright-link__icon
+			fill: var(--text-color)
+
+	&:active
+		transform: scale(.98)
+
+	&__icon
+		width: 46px
+		height: 21px
+		fill: var(--white-color)
+		transition: fill .2s linear

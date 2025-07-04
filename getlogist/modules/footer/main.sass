@@ -1,0 +1,81 @@
+.footer
+    position: relative
+    background: $color__2
+
+    .content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 30px 0 36px
+
+    .logo
+        flex-shrink: 0
+        display: inline-flex
+
+        .path
+            fill: #f6f6f6
+
+        .path-color
+            fill: $color__4
+
+    .menu-list
+        display: flex
+
+    .menu-item
+        margin-right: 40px
+
+        &:last-child
+            margin-right: 0
+
+        a
+            font-size: 16px
+            color: #f6f6f6
+            transition: all 0.3s
+
+            &.active,
+            &:hover
+                color: $color__4
+
+    .block-title
+        color: #f6f6f6
+
+    .block-link
+        color: $color__4
+        transition: all 0.3s
+
+        &:hover
+            color: $color__3
+    
+    +medium
+
+        .menu-item
+            margin-right: 12px
+
+        .block-title
+            font-size: 14px
+
+        .block-link
+            font-size: 14px
+
+    +small
+        .content
+            flex-direction: column
+            align-items: center
+            padding: 26px 16px
+
+        .logo
+            margin-bottom: 20px
+
+        .menu-list
+            flex-direction: column
+            margin-bottom: 16px
+
+        .menu-item
+            text-align: center
+            margin-right: 0
+            margin-bottom: 6px
+
+
+        .block
+            text-align: center
+

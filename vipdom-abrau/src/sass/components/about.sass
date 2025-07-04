@@ -1,0 +1,61 @@
+.about
+	opacity: 0
+	transition: opacity .5s linear
+
+	&.element-show
+		opacity: 1
+		
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		gap: 168px
+		padding-top: 40px
+		padding-bottom: 40px
+		+sm
+			gap: 100px
+		+ph
+			gap: 40px
+
+	&__content-top
+		max-width: 450px
+		opacity: 0
+		transform: translateX(-40px)
+		transition: opacity .4s linear, transform .5s linear
+		&.element-show
+			opacity: 1
+			transform: translateX(0)
+
+	&__content-bottom
+		align-items: flex-end
+		margin-left: auto
+		max-width: 895px
+		text-align: end
+		opacity: 0
+		transform: translateX(40px)
+		transition: opacity .4s linear, transform .5s linear
+		&.element-show
+			opacity: 1
+			transform: translateX(0)
+
+		.about-content__text
+			max-width: 566px
+
+.about-content
+	display: flex
+	flex-direction: column
+	width: 100%
+	color: $clr_1
+
+	&__title
+		+ph
+			font-size: 36px
+
+	&__text
+		p
+			&:not(:last-child)
+				margin-bottom: 15px
+
+	&__btn
+		margin-top: 24px
+		color: $clr_1
+		border-color: $clr_1

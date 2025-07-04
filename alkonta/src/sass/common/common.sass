@@ -8,6 +8,13 @@ html
   &.overflow
     overflow-x: auto
 
+  &.pre-hidden
+    padding-right: 16px
+    overflow-y: hidden !important
+
+    +lr
+      padding-right: 0
+
 html.galleryActive
   overflow-y: hidden !important
   padding-right: 16px
@@ -64,7 +71,6 @@ body
   line-height: 130%
   color: $clr_2
   background-color: $clr_1
-  opacity: 0
 
   +ph
     font-size: 16px
@@ -1099,6 +1105,7 @@ input[type='number']
   height: 100%
   margin-left: auto
   margin-right: auto
+  box-sizing: border-box
 
 .swiper-slide
   position: relative
@@ -1206,8 +1213,75 @@ input[type='number']
       h1
         margin-bottom: 20px
 
+// PRELOADER
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 100000
+  width: 100%
+  height: 100%
+  opacity: 1
+  background-color: $clr_1
+  transition: opacity .3s linear
+
+  &__wrapper
+    width: 40px
+    height: 40px
+    opacity: 0.75
+    animation: clockwise 500ms linear infinite
+
+  &.hidden
+    animation: fadeOut 1s
+    animation-fill-mode: forwards
+
+  &__item-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    width: 20px
+    height: 40px
+    overflow: hidden
+
+  &__item
+    position: absolute
+    top: 0
+    left: 0
+    box-sizing: border-box
+    width: 40px
+    height: 40px
+    border: 4px solid $clr_3
+    border-radius: 50%
+    border-left-color: transparent
+    border-bottom-color: transparent
+    animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite
+
 // АНИМАЦИЯ
 @keyframes hoverBtn
   to
     background-color: $clr_0
     
+@keyframes clockwise
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+@keyframes donut-rotate
+  0%
+    transform: rotate(0)
+  
+  50%
+    transform: rotate(-140deg)
+    
+  100%
+    transform: rotate(0)
+
+@keyframes fadeOut
+  100%
+    opacity: 0
+    visibility: hidden

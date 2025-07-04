@@ -1,0 +1,84 @@
+.courses-list
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	gap: 30px
+	+ph
+		grid-template-columns: 1fr
+
+.course-item
+	display: flex
+	flex-direction: column
+	gap: 20px
+	padding: 20px
+	font-family: var(--font-family)
+	border-radius: 4px
+	background-color: var(--bg-second-color)
+	box-shadow: 5px 6px 54px -33px rgba(0, 0, 0, 0.75)
+	+ph
+		padding: 14px
+
+	&__img-wrap
+		max-width: 100%
+		width: 100%
+		height: 338px
+		+ph
+			height: 250px
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__title
+		line-height: 100%
+		font-weight: 500
+		font-size: 26px
+		text-align: center
+
+	&__text
+		font-weight: 300
+		font-size: 18px
+
+	&__info
+		display: flex
+		gap: 20px
+		margin-top: auto
+		+ph
+			flex-direction: column
+			gap: 10px
+
+	&__info-text-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 4px
+		max-width: 50%
+		width: 100%
+		min-height: 69px
+		font-weight: 500
+		font-size: 20px
+		color: var(--white-color)
+		background-color: #a6d29c
+		+ph
+			max-width: 100%
+			min-height: 52px
+
+	&__info-text
+		text-align: center
+
+	&__info-text-link
+		font-weight: 500
+		font-size: 20px
+
+	&__info-btn
+		max-width: 50%
+		width: 100%
+		min-height: 69px
+		font-size: 18px
+		+ph
+			max-width: 100%
+			min-height: 52px
+
+	&__info-text-link
+		+hover
+			color: var(--text-color)

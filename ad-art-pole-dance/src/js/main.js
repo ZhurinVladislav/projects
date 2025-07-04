@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   videoPoster();
 
-  // function video() {
+  // const video = () => {
   //   const video = document.querySelectorAll('.js-video');
 
   //   video.forEach(el => {
@@ -374,6 +374,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ПОДКЛЮЧЕНИЕ ВСПЛЫВАЮЩЕЙ ГАЛЕРЕИ
   $('#gallery').lightGallery({
+    thumbnail: false,
+    share: false,
+    selector: '.gallery__link',
+    getCaptionFromTitleOrAlt: false,
+  });
+
+  $('#gallery-one').lightGallery({
+    thumbnail: false,
+    share: false,
+    selector: '.gallery__link',
+    getCaptionFromTitleOrAlt: false,
+  });
+
+  $('#gallery-two').lightGallery({
     thumbnail: false,
     share: false,
     selector: '.gallery__link',

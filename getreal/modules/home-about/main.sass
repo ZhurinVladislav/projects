@@ -1,0 +1,65 @@
+.home-about
+    margin-bottom: 140px
+
+    .header_2
+        margin-bottom: 40px
+
+    .row
+        display: flex
+        justify-content: space-between
+
+    .col-left,
+    .col-right
+        width: 49%
+
+    .image
+        width: 100%
+        border-radius: 12px
+
+    .text-left
+        margin-bottom: 34px
+
+    .text-right
+        margin-top: 20px
+        max-height: 190px
+        overflow: hidden
+        transition: all 0.3s
+
+    .text-spoller
+        padding-top: 10px
+        overflow: hidden
+        display: none
+
+    .link-more
+        display: block
+        font-size: 18px
+        color: $color__2
+        margin-top: 8px
+        transition: all 0.3s
+        &:hover
+            color: $color__3
+
+
+    +medium
+        .link-more
+            font-size: 16px
+
+    +small
+        .row
+            flex-wrap: wrap
+
+        .col-left,
+        .col-right
+            width: 100%
+
+        .col-left
+            margin-bottom: 30px
+
+        .text-right
+            max-height: 150px
+
+        .link-more
+            &:hover
+                color: $color__2
+            
+

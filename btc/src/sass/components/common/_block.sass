@@ -1,0 +1,219 @@
+.block
+	position: relative
+	padding: 30px
+	+ph
+		padding: 20px 15px
+	
+	&::before
+		content: ''
+		position: absolute
+		top: 12px
+		right: 0
+		bottom: 12px
+		left: 0
+		border-right: 4px solid $color__8
+		border-left: 4px solid $color__8
+		background-color: $color__11
+
+	&_crack
+		.block__bg-img
+			background-image: url(../img/bg/panel-fissure-top.svg), url(../img/bg/panel-fissure-bottom.svg)
+			background-repeat: no-repeat, no-repeat
+			background-position: top left, bottom right
+
+	&_purple
+		&::before 
+			background-color: var(--bg-third-color)
+
+		.block__bd-top
+			&::before,
+			&::after
+				background-color: var(--bg-third-color)
+
+	&_dark
+		&::before 
+			background-color: var(--bg-second-color)
+
+		.block__bd-top
+			&::before,
+			&::after
+				background-color: var(--bg-second-color)
+
+	&_dark-second
+		&::before 
+			background-color: var(--bg-second-color)
+
+		.block__bd-top
+			&::before,
+			&::after
+				background-color: var(--bg-second-color)
+
+		.block__bd-bottom
+			background-color: var(--bg-fifth-color)
+			border-top-color: var(--bg-fourth-color)
+
+		.block__bd-bottom-left,
+		.block__bd-bottom-right,
+		.block__bd-bottom-left::before,
+		.block__bd-bottom-right::before
+			background-color: var(--bg-fifth-color)
+			border-top-color: var(--bg-fourth-color)
+
+	&__shadow-left
+		position: absolute
+		top: 16px
+		left: -4px
+		bottom: 0
+		width: 4px
+		background-color: $color__14
+
+		&::before
+			content: ''
+			position: absolute
+			top: 4px
+			bottom: 4px
+			left: -4px
+			width: 4px
+			background-color: $color__14
+
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 4px
+			width: 12px
+			height: 12px
+			background-color: $color__14
+
+	&__shadow-bottom
+		position: absolute
+		right: 16px
+		bottom: -4px
+		left: 0
+		height: 4px
+		background-color: $color__14
+		&::before
+			content: ''
+			position: absolute
+			top: 4px
+			right: 4px
+			left: 4px
+			height: 4px
+			background-color: $color__14
+
+	&__bd-top
+		position: absolute
+		top: 0
+		right: 12px
+		left: 12px
+		height: 4px
+		background-color: $color__8
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			height: 4px
+			border-right: 4px solid $color__8
+			border-left: 4px solid $color__8
+
+		&::before
+			top: 4px
+			right: -4px
+			left: -4px
+			background-color: $color__7
+
+		&::after
+			top: 8px
+			right: -8px
+			left: -8px
+			background-color: $color__11
+
+	&__bd-bottom
+		position: absolute
+		right: 12px
+		bottom: 0
+		left: 12px
+		height: 12px
+		background-color: $color__13
+		border-top: 4px solid $color__12
+		border-bottom: 4px solid $color__8
+
+	&__bd-bottom-left,
+	&__bd-bottom-right
+		position: absolute
+		bottom: 0
+		width: 4px
+		height: 12px
+		background-color: $color__13
+		border-top: 4px solid $color__12
+		border-bottom: 4px solid $color__8
+
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			width: 4px
+			height: 4px
+			background-color: $color__13
+			border-top: 4px solid $color__12
+			border-bottom: 4px solid $color__8
+
+	&__bg-img
+		position: absolute
+		top: 8px
+		right: 4px
+		bottom: 12px
+		left: 4px
+		background-repeat: no-repeat
+		background-position: center
+
+	&__content-wrap
+		position: relative
+		z-index: 1
+		display: flex
+		justify-content: space-between
+		gap: 40px
+		+ph
+			flex-direction: column
+			gap: 24px
+
+	&__img-wrap:not(.img-wrap)
+		display: flex
+		min-height: 468px
+		+ph
+			min-height: 250px
+
+		.block__img
+			max-width: 100%
+			width: 100%
+			height: auto
+			max-height: initial
+			+ph
+				max-height: 100%
+
+	&__img
+		max-width: 468px
+		width: 100%
+		max-height: 468px
+		+ph
+			max-height: 250px
+
+	&__text-wrap
+		max-width: 910px
+		width: 100%
+
+	&__text
+		margin-bottom: 48px
+
+	&__link
+		max-width: 229px
+
+	&__bd-bottom-left
+		left: -4px
+		&::before
+			left: -4px
+
+	&__bd-bottom-right
+		right: -4px
+		&::before
+			right: -4px

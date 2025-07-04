@@ -1,0 +1,31 @@
+.reviews
+	&__content-top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 20px
+		margin-bottom: 30px
+		+ph
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+
+	&__title
+		margin-bottom: 0
+
+	&__link
+		.link-text-inv
+			&__icon
+				opacity: .3
+			&__descr
+				font-weight: 500
+				font-size: 18px
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 20px 44px
+
+		+ph
+			grid-template-columns: 1fr
+			gap: 20px

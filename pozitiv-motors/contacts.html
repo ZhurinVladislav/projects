@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO -->
+        <title>Контакты</title>
+        <link
+            rel="shortcut icon"
+            href="./app/img/favicon.ico"
+            type="image/x-icon" />
+        <!-- styles -->
+        <link rel="stylesheet" href="./app/css/style.min.css" />
+        <!-- scripts -->
+        <script src="/app/js/libs/preloader.min.js"></script>
+        <script src="/app/js/libs/lazy-load.min.js"></script>
+        <script src="/app/js/libs/fancybox.min.js" defer></script>
+        <script src="/app/js/libs/popup.min.js" defer></script>
+        <script src="/app/js/index.min.js" defer></script>
+    </head>
+
+    <body class="inner">
+        <!-- preloader -->
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__item-wrapper">
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <header class="header">
+            <!-- header-top -->
+            <div class="header__top header-top">
+                <div class="header-top__container container">
+                    <p class="header-top__text">
+                        Мотошкола
+                        <span class="header-top__text-color text-color">
+                            Ваша безопасность - наша цель
+                        </span>
+                    </p>
+                    <a
+                        class="header-top__logo-link logo"
+                        href="/"
+                        aria-label="Перейти на главную страницу туристическое агенство">
+                        <img
+                            class="logo__img"
+                            src="./app/img/pozitv_logo.png"
+                            alt="Логотип Европа-Тур" />
+                    </a>
+                    <button
+                        class="header-top__btn btn js-popup-open"
+                        data-open-popup="popup-feedback"
+                        aria-label="Открыть формы обратной связи">
+                        Заполнить заявку
+                    </button>
+                    <a
+                        class="header-top__link link-text link-text_ph"
+                        href="tel:88002008348"
+                        aria-label="Позвонить по номеру 8-800-200-83-48">
+                        8-800-200-83-48
+                    </a>
+                </div>
+            </div>
+            <!-- header-bottom -->
+            <div class="header__bottom header-bottom">
+                <div class="header-bottom__container container">
+                    <a
+                        class="header-bottom__link link-text link-text_sm"
+                        href="/"
+                        aria-label="Перейти на главную страницу сайта">
+                        Pozitiv-motors.ru
+                    </a>
+                    <nav class="header-bottom__nav header-bottom-nav">
+                        <ul class="header-bottom-nav__list">
+                            <li class="header-bottom-nav__item active">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="/"
+                                    aria-label="Перейти на главную страницу">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./service.html"
+                                    aria-label="Перейти на страницу Базовый курс">
+                                    Базовый курс
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./service.html"
+                                    aria-label="Перейти на страницу Категория А">
+                                    Категория "А"
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./reviews.html"
+                                    aria-label="Перейти на страницу отзывы">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./galleries.html"
+                                    aria-label="Перейти на страницу галерей">
+                                    Галерея
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item">
+                                <a
+                                    class="header-bottom-nav__link link-text"
+                                    href="./contacts.html"
+                                    aria-label="Перейти на страницу контактов">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="header-bottom-nav__item parent">
+                                <button
+                                    class="header-bottom-nav__btn btn-text"
+                                    aria-label="Открыть выпадающее меню"
+                                    tabindex="0"
+                                    aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <span class="link-text__descr">
+                                        Групповые туры
+                                    </span>
+                                    <svg class="btn-text__icon">
+                                        <use
+                                            xlink:href="./app/img/icons/icons.svg#arrow-list"></use>
+                                    </svg>
+                                </button>
+                                <ul
+                                    class="header-bottom-nav__dropdown dropdown"
+                                    role="menu">
+                                    <li class="dropdown__item active">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Базовый курс
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Женский курс
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            PRO-курс
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Категория А
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотошкола зимой на юге
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотошкола для детей
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотошкола Краснодар
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Обучение категории А
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотосервис
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотоэвакуатор
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Страховка на мотоцикл
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мототрек
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Мотоджимхана
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Чемпионат по джимхане 2018 - 1 Этап
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Чемпионат по джимхане 2017 - 1 Этап
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Чемпионат по джимхане 2017 - 2 Этап
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Подарочный Сертификат
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="dropdown__item-line list-line"
+                                        role="separator"></li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Магазины Партнёры
+                                        </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a
+                                            class="dropdown__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Прохождение поворотов
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button
+                        id="menu-toggle"
+                        class="header-bottom__menu-toggle menu-toggle"
+                        aria-label="Открыть мобильное меню">
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                        <span class="menu-toggle__item"></span>
+                    </button>
+                    <!-- menu-mobile -->
+                    <div
+                        id="menu-mobile"
+                        class="header-bottom__menu-mobile menu-mobile">
+                        <nav class="menu-mobile__menu">
+                            <ul class="menu-mobile__menu-list menu-list">
+                                <li class="menu-list__item active">
+                                    <a
+                                        class="menu-list__link link-text active"
+                                        href="/"
+                                        aria-label="Перейти на главную страницу">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./service.html"
+                                        aria-label="Перейти на страницу горящие туры">
+                                        Базовый курс
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./service.html"
+                                        aria-label="Перейти на страницу Категория А">
+                                        Категория "А"
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./reviews.html"
+                                        aria-label="Перейти на страницу отзывы">
+                                        Отзывы
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./galleries.html"
+                                        aria-label="Перейти на страницу галерей">
+                                        Галерея
+                                    </a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a
+                                        class="menu-list__link link-text"
+                                        href="./contacts.html"
+                                        aria-label="Перейти на страницу контактов">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="menu-list__item parent">
+                                    <button
+                                        class="menu-list__btn-text btn-text"
+                                        href="./reports.html"
+                                        aria-label="Перейти на страницу групповые туры"
+                                        tabindex="0"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Групповые туры
+                                    </button>
+                                    <button
+                                        class="menu-list__btn js-mobile-list-btn">
+                                        <svg class="menu-list__btn-icon">
+                                            <use
+                                                xlink:href="/app/img/icons/icons.svg#arrow-list"></use>
+                                        </svg>
+                                    </button>
+                                    <ul
+                                        class="menu-list__dropdown dropdown-mob js-mobile-list"
+                                        role="menu">
+                                        <li class="dropdown-mob__item active">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Базовый курс
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item active">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                PRO-курс
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Категория А
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотошкола зимой на юге
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотошкола для детей
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотошкола Краснодар
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Обучение категории А
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотосервис
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотоэвакуатор
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Страховка на мотоцикл
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мототрек
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Мотоджимхана
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Чемпионат по джимхане 2018 - 1
+                                                Этап
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Чемпионат по джимхане 2017 - 1
+                                                Этап
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Чемпионат по джимхане 2017 - 2
+                                                Этап
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Подарочный Сертификат
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="dropdown-mob__item-line list-line"
+                                            role="separator"></li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Магазины Партнёры
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-mob__item">
+                                            <a
+                                                class="dropdown-mob__link link-text"
+                                                href="#"
+                                                tabindex="0">
+                                                Прохождение поворотов
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <!-- contacts -->
+            <section class="contacts section">
+                <h1 class="contacts__title-hidden visually-hidden">Контакты</h1>
+                <div class="contacts__container container">
+                    <h2 class="contacts__title title-1">Контакты</h2>
+                    <div class="contacts__content content">
+                        <h2 class="content__h2">Где нас найти...</h2>
+                        <p class="content__p">
+                            г. Краснодар, ул. Трамвайная 17. (р-он ТЭЦ)
+                        </p>
+                        <p class="content__p">
+                            <span class="content__span strong">Телефоны:</span>
+                            <a class="content__a" href="#">+7-989-83-03-028</a>
+                            или
+                            <a class="content__a" href="#">8-800-200-83-48</a>
+                            или
+                            <a class="content__a" href="#">+7-918-35-38-028</a>
+                        </p>
+                        <p class="content__p">
+                            <span class="content__span strong">
+                                Наш e-mail:
+                            </span>
+                            <a class="content__a" href="#">
+                                info@pozitiv-motors.ru
+                            </a>
+                        </p>
+                        <p class="content__p">
+                            <span class="content__span strong">
+                                Время работы:
+                            </span>
+                            Ежедневно с 8:00 до 20:00.
+                        </p>
+                        <div class="contacts__map-wrapper">
+                            <a
+                                class="contacts__map-link"
+                                href="https://yandex.ru/maps/org/pozitiv_motors/1557307986/?utm_medium=mapframe&utm_source=maps">
+                                Pozitiv Motors
+                            </a>
+                            <a
+                                class="contacts__map-link contacts__map-link_two"
+                                href="https://yandex.ru/maps/35/krasnodar/category/motorcycle_school/132743426043/?utm_medium=mapframe&utm_source=maps">
+                                Мотошкола в Краснодаре
+                            </a>
+                            <a
+                                class="contacts__map-link contacts__map-link_three"
+                                href="https://yandex.ru/maps/35/krasnodar/category/motor_race_track/210249437949/?utm_medium=mapframe&utm_source=maps">
+                                Мотодром в Краснодаре
+                            </a>
+                            <iframe
+                                class="contacts__map"
+                                src="https://yandex.ru/map-widget/v1/?ll=39.066124%2C45.015804&mode=search&oid=1557307986&ol=biz&z=15.66"
+                                allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="content__h3" style="text-align: center;">
+                            Cхема трека
+                        </h3>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__dev-wrap">
+                    <p class="footer__dev-text">Разработано в студии</p>
+                    <a
+                        class="footer__dev-link link-text-inv"
+                        href="#"
+                        target="_blank"
+                        aria-label="Перейти на сайт Офэп"
+                        rel="noopener noreferrer noindex">
+                        <span class="link-text-inv__descr"> Офэп </span>
+                    </a>
+                </div>
+                <p class="footer__copyright">
+                    <span class="footer__copyright-color text-color">
+                        Copyright 2016
+                    </span>
+                    Мотошкола Pozitiv Motors
+                </p>
+                <div class="footer__links">
+                    <a
+                        class="footer__link link-text-inv"
+                        href="tel:88002008348"
+                        aria-label="Позвонить по номеру 8-800-200-83-48">
+                        <span class="link-text-inv__descr">
+                            8-800-200-83-48
+                        </span>
+                    </a>
+                    <ul class="footer__links-list links-list">
+                        <li class="links-list__item">
+                            <a
+                                class="links-list__item-link links-list__item-link_vk link-icon"
+                                href="https://vk.com/pozitivmotors"
+                                target="_blank"
+                                aria-label="Перейти на страницу ВКонтакте"
+                                rel="noopener noreferrer">
+                                <svg class="link-icon__img">
+                                    <use
+                                        href="./app/img/icons/icons.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="links-list__item">
+                            <a
+                                class="links-list__item-link  links-list__item-link_fb link-icon"
+                                href="https://www.facebook.com/PozitivMotors"
+                                target="_blank"
+                                aria-label="Перейти на страницу Facebook"
+                                rel="noopener noreferrer">
+                                <svg class="link-icon__img">
+                                    <use
+                                        href="./app/img/icons/icons.svg#fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- popup-feedback -->
+        <div
+            id="popup-feedback"
+            class="main-section__popup popup popup_feedback">
+            <div class="popup__box js-popup-box">
+                <button
+                    id="popup-feedback-close"
+                    aria-label="Закрыть всплывающие окно"
+                    class="popup__btn-close js-popup-close"></button>
+
+                <div id="popup-feedback-content" class="popup__content">
+                    <p class="popup__title">Оставить заявку</p>
+                    <form class="popup__form form">
+                        <div class="form__field field">
+                            <label for="popup-name" class="field__label lable">
+                                Имя
+                            </label>
+                            <input
+                                id="popup-name"
+                                class="field__input input-inv"
+                                type="text"
+                                name="name" />
+                        </div>
+                        <div class="form__field field">
+                            <label
+                                for="popup-e-mail"
+                                class="field__label lable">
+                                E-mail
+                            </label>
+                            <input
+                                id="popup-e-mail"
+                                class="field__input input-inv"
+                                type="email"
+                                name="e-mail" />
+                        </div>
+                        <div class="form__field field">
+                            <label for="popup-phone" class="field__label lable">
+                                Телефон
+                            </label>
+                            <input
+                                id="popup-phone"
+                                class="field__input input-inv"
+                                type="phone"
+                                name="phone" />
+                        </div>
+
+                        <button class="form__btn btn">Оставить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- scroll-top -->
+        <button
+            id="scroll-top"
+            class="home-page__scroll-top scroll-top"
+            aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="./app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+    </body>
+</html>

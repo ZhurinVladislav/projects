@@ -1,0 +1,63 @@
+.inner
+	.header
+		position: static
+		margin-bottom: 40px
+
+.header
+	position: absolute
+	top: 37px
+	z-index: 100
+
+	&__container
+		max-width: 1569px
+
+	&__content-wrap
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 20px
+		border: 22px solid var(--none-color)
+		background-color: var(--accent-color)
+		overflow: hidden
+		border-radius: 28px
+		border-image-slice: 22
+		border-image-repeat: stretch
+		border-image-source: url(../img/header/bg-img.svg)
+		box-shadow: -8px 8px 0 0 rgba(0, 0, 0, 0.35)
+		+ph
+			border-width: 12px
+			border-image-slice: 13
+
+	&__logo
+		max-width: 246px
+		+ph
+			max-width: 150px
+
+	&__btns-wrap
+		display: flex
+		flex-wrap: wrap
+		gap: 8px
+		max-width: 524px
+		width: 100%
+
+	&__link_reg
+		max-width: 256px
+		width: 100%
+		+sm
+			display: none
+
+	&__link_login
+		max-width: 188px
+		width: 100%
+		+sm
+			display: none
+
+	&__btn_menu
+		max-width: 64px
+		width: 100%
+		+sm
+			margin-left: auto
+		+ph
+			max-width: 60px
+			min-height: 60px

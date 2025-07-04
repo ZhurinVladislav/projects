@@ -1,0 +1,237 @@
+.panel-double
+	display: flex
+	align-items: center
+	padding-right: 10px
+	padding-left: 12px
+
+	.left
+		position: relative
+		min-width: 130px
+		padding: 12px 20px 18px
+		background-color: $color__3
+		border-top: 4px solid $color__8
+		border-bottom: 4px solid $color__8
+
+		.bd-left
+			position: absolute
+			top: 0
+			left: -4px
+			bottom: 0
+			width: 4px
+			background-color: $color__3
+			border-top: 4px solid $color__8
+			border-bottom: 4px solid $color__8
+
+			&::before,
+			&::after
+				position: absolute
+				content: ''
+				width: 4px
+
+			&::before
+				top: 0
+				bottom: 0
+				left: -4px
+				background-color: $color__3
+				border-top: 4px solid $color__8
+				border-bottom: 4px solid $color__8
+
+			&::after
+				top: 4px
+				bottom: 4px
+				left: -8px
+				background-color: $color__8
+
+		.bd-bottom
+			position: absolute
+			right: 0
+			bottom: 0
+			left: 0
+			height: 4px
+			background-color: $color__21
+
+			&::before,
+			&::after
+				position: absolute
+				content: ''
+				height: 4px
+
+			&::before
+				top: -4px
+				right: 4px
+				left: -4px
+				background-color: $color__22
+				border-right: 4px solid $color__21
+				border-left: 4px solid $color__21
+
+			&::after
+				width: 4px
+				top: -8px
+				left: -8px
+				background-color: $color__22
+
+		.caption
+			color: $color__2
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			text-align: center
+			line-height: 18px
+
+	.right
+		position: relative
+		padding-top: 8px
+		padding-bottom: 12px
+		padding-left: 2px
+
+		.bd
+			position: absolute
+			top: 0
+			right: -10px
+			bottom: 0
+			left: -8px
+
+			&::before,
+			&::after
+				position: absolute
+				background-color: $color__3
+				content: ''
+
+			&::before
+				top: 0
+				right: 16px
+				bottom: 0
+				left: 16px
+				border-top: 4px solid $color__8
+				border-bottom: 4px solid $color__8
+
+			&::after
+				top: 16px
+				right: 0
+				bottom: 16px
+				left: 0
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8
+
+		.caption
+			position: relative
+			padding: 8px 12px
+			color: $color__2
+			font-size: 16px
+			font-weight: 700
+			text-align: center
+			line-height: 20px
+			background-color: $color__5
+			border: 4px solid $color__8
+
+		.bd-top-left,
+		.bd-top-right
+			position: absolute
+			top: 12px
+			width: 14px
+			height: 4px
+			background-color: $color__3
+			border-right: 4px solid $color__8
+			border-left: 4px solid $color__8
+
+			&::before,
+			&::after
+				box-sizing: border-box
+				position: absolute
+				height: 4px
+				content: ''
+
+			&::before
+				top: -4px
+				width: 10px
+				background-color: $color__3
+
+			&::after
+				top: -8px
+				width: 4px
+				height: 4px
+				background-color: $color__8
+
+		.bd-top-left
+			left: -4px
+
+			&::before
+				left: 0
+				border-left: 4px solid $color__8
+
+			&::after
+				left: 4px
+
+		.bd-top-right
+			right: -6px
+
+			&::before
+				right: 0
+				border-right: 4px solid $color__8
+
+			&::after
+				right: 4px
+
+		.bd-bottom-left,
+		.bd-bottom-right
+			position: absolute
+			bottom: 12px
+			width: 14px
+			height: 4px
+			background-color: $color__22
+
+			&::before
+				position: absolute
+				top: -4px
+				width: 8px
+				height: 4px
+				background-color: $color__3
+				content: ''
+
+		.bd-bottom-left
+			left: -4px
+			border-right: 6px solid $color__3
+			border-left: 4px solid $color__8
+
+			&::before
+				left: -2px
+				border-right: 4px solid $color__8
+
+		.bd-bottom-right
+			right: -6px
+			border-right: 4px solid $color__8
+			border-left: 6px solid $color__3
+
+			&::before
+				right: -2px
+				border-left: 4px solid $color__8
+
+		.bd-bottom
+			position: absolute
+			right: 2px
+			bottom: 4px
+			left: 4px
+			height: 4px
+			background-color: $color__21
+			border-right: 4px solid $color__8
+			border-left: 4px solid $color__8
+
+			&::before,
+			&::after
+				position: absolute
+				top: -4px
+				height: 4px
+				content: ''
+
+			&::before
+				right: -4px
+				left: -4px
+				background-color: $color__22
+				border-right: 4px solid $color__21
+				border-left: 4px solid $color__21
+
+			&::after
+				right: -8px
+				left: -8px
+				border-right: 4px solid $color__8
+				border-left: 4px solid $color__8

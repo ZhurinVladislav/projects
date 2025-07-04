@@ -1,0 +1,27 @@
+.marquee
+	display: flex
+	margin: 0 auto
+	overflow-x: hidden
+
+	&__track
+		display: inline-block
+		padding: 40px 0
+		font-family: $ff_2
+		font-style: italic
+		line-height: 110%
+		font-size: 44px
+		white-space: nowrap
+		will-change: transform
+		animation: marquee 32s linear infinite
+		+ph
+			font-size: 20px 0
+			font-size: 36px
+		+ph
+			padding: 10px 0
+			font-size: 30px
+
+@keyframes marquee
+	0%
+		transform: translateX(0%)
+	100%
+			transform: translateX(-50%)

@@ -1,0 +1,190 @@
+// общие стили
+*::selection
+  background-color: var(--text-color)
+  color: var(--page-color)
+  
+html
+  &.pre-hidden,
+  &.mod-open
+    padding-right: 4px
+    overflow-y: hidden !important
+
+    +lr
+      padding-right: 0
+
+html.menu-open,
+body.menu-open
+  +sm
+    overflow: hidden
+
+body
+  font-family: var(--font-family)
+  font-weight: 400
+  line-height: 143%
+  font-size: 14px
+  letter-spacing: -0.01em
+  color: var(--text-color)
+  background-color: var(--page-color)
+
+  &::-webkit-scrollbar
+    width: 4px
+    background-color: var(--page-color)
+
+  &::-webkit-scrollbar-thumb
+    background-color: var(--text-color)
+
+// стили для секций
+.section
+  position: relative
+  margin-bottom: 70px
+
+.section-p
+  position: relative
+  padding: 70px 0
+  background-color: var(--bg-second-color)
+
+.section-p-sm
+  position: relative
+  padding: 30px 0
+  background-color: var(--bg-second-color)
+
+// стили для контейнеров
+.container
+  position: relative
+  z-index: 1
+  margin: 0 auto
+  padding-left: var(--container-padding)
+  padding-right: var(--container-padding)
+  max-width: var(--container-width)
+  width: 100%
+  +ph
+    padding-left: var(--container-padding-ph)
+    padding-right: var(--container-padding-ph)
+
+// стили для заголовков
+.title-1
+  font-family: var(--font-family)
+  margin-bottom: 20px
+  font-weight: 500
+  font-size: 36px
+  line-height: 110%
+  color: var(--text-color)
+  +ph
+    font-size: 32px
+
+.title-2
+  margin-bottom: 30px
+  font-family: var(--font-second)
+  font-weight: 500
+  font-size: 36px
+  line-height: 110%
+  color: var(--text-color)
+  +ph
+    margin-bottom: 24px
+    font-size: 24px
+
+.title-3
+  font-family: var(--font-family)
+  font-weight: 400
+  line-height: 143%
+  font-size: 12px
+  text-transform: uppercase
+  color: var(--text-color)
+
+// стили для списка
+.list-line
+  margin: 9px 0
+  height: 1px
+  background-color: var(--bg-second-color)
+  overflow: hidden
+  
+// стили для текста
+.text-color
+  color: var(--accent-text-color)
+
+.text-color-red
+  color: var(--bg-btn-color)
+
+.strong
+  font-weight: 700
+
+// стили для даты
+.date
+  position: relative
+  display: flex
+  gap: 4px
+  padding: 0 25px
+  max-width: max-content
+  width: 100%
+  text-align: center
+  color: var(--white-color)
+
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: -1
+    max-width: 100%
+    width: 100%
+    border: 20px solid transparent
+    border-right: 20px solid transparent
+    border-bottom: 20px solid var(--bg-black-color)
+
+.date-inv
+  display: flex
+  gap: 4px
+  max-width: max-content
+  font-size: 18px
+  font-style: italic
+
+// скрытие текста
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+.text-bg
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 4px
+  background-color: var(--bg-black-color)
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)
+  &__text
+    color: var(--white-color)
+    text-align: center
+
+// общие классы
+.none
+  display: none !important
+
+.border-radius
+  border-radius: 20px
+
+.logo
+  position: relative
+  display: flex
+  font-size: 0
+  flex-shrink: 0
+  transition: opacity .2s linear
+  &_ph
+    display: none
+    +ph
+      display: flex
+
+  +hover
+    opacity: .7
+
+  &__img
+    width: 100%
+    height: 100%
+    font-size: 0
+    transition: opacity .2s linear

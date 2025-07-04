@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /classes/
+Disallow: /controllers/
+Disallow: /cron/
+Disallow: /functions/
+Disallow: /logs/
+Disallow: /pages/
+Disallow: /templates/

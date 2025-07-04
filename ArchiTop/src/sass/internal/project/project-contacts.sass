@@ -1,0 +1,42 @@
+.project-contacts
+	&__list
+		display: flex
+		+ph
+			flex-direction: column
+			max-width: 400px
+
+	&__item-list
+		gap: 15px
+
+	&__list-item
+		&:first-child
+			padding-right: 170px
+			+sm
+				padding-right: 44px
+			+ph
+				padding: 0
+				padding-bottom: 20px
+			.text-info
+				align-items: flex-start
+			.text-info
+				&__more
+					max-width: 320px
+					
+		&:not(:first-child)
+			padding-right: 44px
+			padding-left: 44px
+			+ph
+				padding: 0
+				padding-top: 20px
+				padding-bottom: 20px
+
+		&:not(:last-child)
+			border-right: .50px solid rgba($clr_4, 0.4)
+			+ph
+				border-right: none
+				border-bottom: .50px solid rgba($clr_4, 0.4)
+
+		&:last-child
+			padding-right: 0
+			+ph
+				padding-bottom: 0
