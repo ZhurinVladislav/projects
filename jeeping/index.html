@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO -->
+        <title>Джиппинг туры в&#160;Геленджике</title>
+        <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- styles -->
+        <link rel="stylesheet" href="./app/css/style.min.css" />
+        <!-- scripts -->
+        <script src="./app/js/libs/preloader.min.js"></script>
+        <script src="./app/js/libs/lazy-load.min.js"></script>
+        <script src="./app/js/libs/popup.min.js" defer></script>
+        <script src="./app/js/libs/swiper.min.js" defer></script>
+        <script src="./app/js/index.min.js" defer></script>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header class="header">
+            <div class="header__container container">
+                <a
+                    class="header__logo-link logo"
+                    href="/"
+                    aria-label="Перейти на главную страницу Джиппинг.ру">
+                    <img
+                        class="logo__img"
+                        data-src="./app/img/logo.svg"
+                        alt="Логотип Джиппинг.ру" />
+                </a>
+
+                <div class="header__content-wrap">
+                    <div class="header__content-top header-content-top">
+                        <div
+                            class="header-content-top__dropdown dropdown js-dropdown">
+                            <button
+                                class="dropdown__btn js-dropdown-btn"
+                                aria-label="Открыть список городов">
+                                <svg class="dropdown__btn-icon">
+                                    <use
+                                        href="./app/img/icons/icons.svg#mark-map"></use>
+                                </svg>
+                                Геленджик
+                                <svg
+                                    class="dropdown__btn-icon dropdown__btn-icon_arrow">
+                                    <use
+                                        href="./app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <ul class="dropdown__list js-dropdown-list">
+                                <li class="dropdown__list-item">
+                                    <a
+                                        class="dropdown__list-item-link link-text"
+                                        href="#"
+                                        aria-label="Перейти на сайт по Новороссийску">
+                                        Новороссийск
+                                    </a>
+                                </li>
+                                <li class="dropdown__list-item">
+                                    <a
+                                        class="dropdown__list-item-link link-text"
+                                        href="#"
+                                        aria-label="Перейти на сайт по Новороссийску">
+                                        Новороссийск
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="header-content-top__right">
+                            <a
+                                class="header-content-top__link-icon icon-link"
+                                href="#">
+                                <svg class="icon-link__icon">
+                                    <use
+                                        href="./app/img/icons/icons.svg#heart"></use>
+                                </svg>
+                            </a>
+                            <button
+                                id="menu-toggle"
+                                class="header-content-top__menu-toggle menu-toggle"
+                                aria-label="Открыть мобильное меню">
+                                <span class="menu-toggle__item"></span>
+                                <span class="menu-toggle__item"></span>
+                                <span class="menu-toggle__item"></span>
+                            </button>
+
+                            <ul class="header-content-top__link-list links">
+                                <li class="links__item">
+                                    <a
+                                        class="links__item-link link"
+                                        href="https://t.me/"
+                                        target="_blank"
+                                        aria-label="Написать в Telegram">
+                                        <svg class="link__icon link__icon_lg">
+                                            <use
+                                                href="./app/img/icons/icons.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="links__item">
+                                    <a
+                                        class="links__item-link link"
+                                        href="https://wa.me/"
+                                        target="_blank"
+                                        aria-label="Связаться в WhatsApp">
+                                        <svg class="link__icon link__icon_lg">
+                                            <use
+                                                href="./app/img/icons/icons.svg#wa"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <a
+                                class="header-content-top__link header-content-top__link_last link"
+                                href="tel:+7 999 99 9900 99"
+                                target="_blank"
+                                aria-label="Позвонить по номеру +7 999 99 9900 99">
+                                <svg class="link__icon">
+                                    <use
+                                        href="./app/img/icons/icons.svg#ph"></use>
+                                </svg>
+                                +7 999 99 9900 99
+                            </a>
+
+                            <button
+                                class="header-content-top__btn-feedback btn js-popup-open"
+                                aria-label="Открыть форму для обратной связи"
+                                data-open-popup="popup-feedback">
+                                Забронировать
+                            </button>
+                        </div>
+                    </div>
+
+                    <nav class="header__nav">
+                        <ul class="header__nav nav-list">
+                            <li class="nav-list__item active">
+                                <a
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="nav-list__item parent">
+                                <a
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Джиппинг
+                                    <svg class="link-text__icon">
+                                        <use
+                                            xlink:href="./app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </a>
+
+                                <ul
+                                    class="nav-list__inner dropdown-menu"
+                                    role="menu">
+                                    <li class="dropdown-menu__item">
+                                        <a
+                                            class="dropdown-menu__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Популярные маршруты
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a
+                                            class="dropdown-menu__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Семейные туры
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a
+                                            class="dropdown-menu__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Экстремальные заезды
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a
+                                            class="dropdown-menu__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Индивидуальные джип-туры
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-list__item parent">
+                                <a
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Все активности
+                                    <svg class="link-text__icon">
+                                        <use
+                                            xlink:href="./app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </a>
+
+                                <ul
+                                    class="nav-list__inner dropdown-menu"
+                                    role="menu">
+                                    <li class="dropdown-menu__item active">
+                                        <a
+                                            class="dropdown-menu__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Аренда яхт
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a
+                                            class="dropdown-menu__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Вейксерфинг
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a
+                                            class="dropdown-menu__link"
+                                            href="#"
+                                            tabindex="0">
+                                            Эндуро
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-list__item">
+                                <a
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Интересное
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    О&#160;сервисе
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- menu-mobile -->
+            <div id="menu-mobile" class="header__menu-mobile menu-mobile">
+                <nav class="menu-mobile__menu">
+                    <ul class="menu-mobile__menu-list menu-list">
+                        <li class="menu-list__item active">
+                            <a
+                                class="menu-list__link link-text active"
+                                href="/"
+                                aria-label="Перейти на страницу">
+                                Пункт1
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a
+                                class="menu-list__link link-text"
+                                href="#"
+                                aria-label="Перейти на страницу">
+                                Пункт2
+                            </a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a
+                                class="menu-list__link link-text"
+                                href="#"
+                                aria-label="Перейти на страницу">
+                                Пункт3
+                            </a>
+                        </li>
+                        <li class="menu-list__item parent">
+                            <a
+                                class="menu-list__link link-text"
+                                href="#"
+                                aria-label="Перейти на страницу"
+                                tabindex="0"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                Пункт4
+                            </a>
+                            <button class="menu-list__btn js-mobile-list-btn">
+                                <svg class="menu-list__btn-icon">
+                                    <use
+                                        xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <ul
+                                class="menu-list__dropdown dropdown-mob js-mobile-list"
+                                role="menu">
+                                <li class="dropdown-mob__item active">
+                                    <a
+                                        class="dropdown-mob__link link-text"
+                                        href="#"
+                                        tabindex="0">
+                                        Текст
+                                    </a>
+                                </li>
+                                <li class="dropdown-mob__item active">
+                                    <a
+                                        class="dropdown-mob__link link-text"
+                                        href="#"
+                                        tabindex="0">
+                                        Текст по&#160;больше
+                                    </a>
+                                </li>
+                                <li class="dropdown-mob__item">
+                                    <a
+                                        class="dropdown-mob__link link-text"
+                                        href="#"
+                                        tabindex="0">
+                                        Длинные текст для проверки переноса
+                                        строки
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-list__item">
+                            <a
+                                class="menu-list__link link-text"
+                                href="#"
+                                aria-label="Перейти на страницу">
+                                Пункт5
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button
+                    class="menu-mobile__btn-feedback btn js-popup-open"
+                    aria-label="Открыть форму для обратной связи"
+                    data-open-popup="popup-feedback">
+                    Забронировать
+                </button>
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <!-- hero -->
+            <section class="hero section">
+                <h1 class="hero__title-hidden text-hidden">
+                    Джиппинг туры в&#160;Геленджике
+                </h1>
+                <div
+                    class="hero__container container"
+                    data-image="./app/img/home/hero/bg-img.jpg">
+                    <div class="hero__content">
+                        <h2 class="hero__title title-1">
+                            Джиппинг туры в&#160;Геленджике
+                        </h2>
+                        <p class="hero__subtitle">
+                            Лучшие туры и&#160;активный отдых.
+                        </p>
+                    </div>
+
+                    <div class="hero__info hero-info border-radius">
+                        <div class="hero-info__img-wrap">
+                            <img
+                                class="hero-info__img"
+                                data-src="./app/img/base/lamp.png"
+                                alt="Лампочка" />
+                        </div>
+                        <p class="hero-info__title title-3">162 идеи</p>
+                        <div class="hero-info__text-wrap border-radius">
+                            <p class="hero-info__text">
+                                для активного отдыха в&#160;Геленджике на&#160;одном сайте
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about -->
+            <section class="about section">
+                <div class="about__container container">
+                    <div class="about__content-wrap border-radius">
+                        <div class="about__content">
+                            <h2 class="about__title title-2">
+                                Джиппинг в&#160;Геленджике&#160;&#8212; лучшие туры 2025 года
+                            </h2>
+                            <p class="about__text">
+                                Откройте для себя настоящий джиппинг в
+                                Геленджике&#160;&#8212; захватывающие маршруты по&#160;горам,
+                                каньонам, водопадам и&#160;живописным смотровым. Мы
+                                собрали лучшие туры без переплат и&#160;посредников.
+                                Вас ждут подготовленные внедорожники, опытные
+                                водители и&#160;уникальные локации. Хотите больше
+                                адреналина или спокойную поездку с&#160;детьми? У&#160;нас
+                                есть тур под любой запрос. Забронируйте отдых,
+                                который запомнится.
+                            </p>
+                        </div>
+                        <div
+                            class="about__img"
+                            data-image="./app/img/home/about/bg-img.png"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- catalog -->
+            <section class="catalog section">
+                <div class="catalog__container container">
+                    <h2 class="catalog__title title-2">
+                        Популярные джип-туры (джиппинг) в&#160;Геленджике
+                    </h2>
+                    <p class="catalog__subtitle subtitle">
+                        Выберите свой джип-тур&#160;&#8212; от&#160;семейных маршрутов до
+                        экстремального бездорожья
+                    </p>
+
+                    <ul class="catalog__list-tab list-tab">
+                        <li class="list-tab__item">
+                            <button
+                                class="list-tab__item-btn btn js-tabs-btn"
+                                aria-label="Раскрыть элементы категории 'Популярные маршруты'">
+                                Популярные маршруты
+                            </button>
+                        </li>
+                        <li class="list-tab__item">
+                            <button
+                                class="list-tab__item-btn btn js-tabs-btn"
+                                aria-label="Раскрыть элементы категории 'Семейные туры'">
+                                Семейные туры
+                            </button>
+                        </li>
+                        <li class="list-tab__item">
+                            <button
+                                class="list-tab__item-btn btn js-tabs-btn"
+                                aria-label="Раскрыть элементы категории 'Экстремальные заезды'">
+                                Экстремальные заезды
+                            </button>
+                        </li>
+                        <li class="list-tab__item">
+                            <button
+                                class="list-tab__item-btn btn js-tabs-btn"
+                                aria-label="Раскрыть элементы категории 'Индивидуальные джип-туры'">
+                                Индивидуальные джип-туры
+                            </button>
+                        </li>
+                    </ul>
+
+                    <ul class="catalog__cards-list cards-list">
+                        <li class="cards-list__item">
+                            <a
+                                class="cards-list__item-link card"
+                                href="#"
+                                aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer__top footer-top">
+                <div class="footer-top__container container">
+                    <a
+                        class="footer-top__logo-link logo"
+                        href="/"
+                        aria-label="Перейти на главную страницу туристическое агенство">
+                        <img
+                            class="logo__img"
+                            src="./app/img/logo.png"
+                            alt="Логотип Европа-Тур" />
+                    </a>
+                    <nav class="footer-top__nav footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item active">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="/"
+                                    aria-label="Перейти на главную страницу сайта">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Перейти на страницу горящие туры">
+                                    Горящие туры
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./page.html"
+                                    aria-label="Перейти на страницу минимальные цены">
+                                    Минимальные цены
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./reports.html"
+                                    aria-label="Перейти на страницу групповые туры">
+                                    Групповые туры
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./contacts.html"
+                                    aria-label="Перейти на страницу страны и отели">
+                                    Страны и&#160;отели
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./news.html"
+                                    aria-label="Перейти на страницу с новостями">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./news.html"
+                                    aria-label="Перейти на страницу о нас">
+                                    О&#160;нас
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./reviews.html"
+                                    aria-label="Перейти на страницу с отзывами">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./info.html"
+                                    aria-label="Перейти на страницу с информацией">
+                                    Информация
+                                </a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a
+                                    class="footer-nav__link link-text"
+                                    href="./contacts.html"
+                                    aria-label="Перейти на страницы с контактами">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer-top__feedback">
+                        <ul class="footer-top__feedback-links links">
+                            <li class="links__item">
+                                <a
+                                    class="links__item-link links__item-link_tg link-icon"
+                                    href="https://t.me/"
+                                    target="_blank"
+                                    aria-label="Написать в Telegram">
+                                    <svg class="link-icon__item">
+                                        <use
+                                            href="./app/img/icons/icons.svg#tg"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="links__item">
+                                <a
+                                    class="links__item-link links__item-link_vk link-icon"
+                                    href="https://vk.com/"
+                                    target="_blank"
+                                    aria-label="Перейти на страницу ВКонтакте">
+                                    <svg class="link-icon__item">
+                                        <use
+                                            href="./app/img/icons/icons.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="links__item">
+                                <a
+                                    class="links__item-link links__item-link_ok link-icon"
+                                    href="https://ok.ru/"
+                                    target="_blank"
+                                    aria-label="Написать в Одноклассниках">
+                                    <svg class="link-icon__item">
+                                        <use
+                                            href="./app/img/icons/icons.svg#ok"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="links__item">
+                                <a
+                                    class="links__item-link links__item-link_ph link-icon"
+                                    href="tel:+79189326660"
+                                    target="_blank"
+                                    aria-label="Позвонить по номеру 8-918-932-6660">
+                                    <svg class="link-icon__item">
+                                        <use
+                                            href="./app/img/icons/icons.svg#ph"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <a
+                            class="footer-top__feedback-link-ph link-text"
+                            href="tel:+79189326660"
+                            aria-label="Позвонить по номеру 8-918-932-6660">
+                            8-918-932-6660
+                        </a>
+                        <a
+                            class="footer-top__feedback-link"
+                            href="https://wa.me/+79189326660"
+                            aria-label="Связаться в WhatsApp">
+                            Whatsapp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="footer__copyright copyright">
+                <div class="copyright__container container">
+                    <ul class="copyright__list">
+                        <li class="copyright__list-item">
+                            &#169;&#160;2025 Все права защищены
+                        </li>
+                        <li class="copyright__list-item">
+                            <a
+                                class="copyright__list-link copyright-link"
+                                href="./page.html"
+                                target="_blank"
+                                aria-label="Открыть пользовательское соглашение">
+                                Политика конфиденциальности
+                            </a>
+                        </li>
+                        <li class="copyright__list-item">
+                            <a
+                                class="copyright__list-link copyright-link"
+                                href="https://web2.agency/"
+                                target="_blank"
+                                aria-label="Открыть сайт по разработке WEB2 Новороссийск">
+                                <svg class="copyright-link__icon">
+                                    <use
+                                        href="./app/img/icons/icons.svg#web2"></use>
+                                </svg>
+                                <span class="copyright-link__text">
+                                    создание сайтов
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- popup-feedback -->
+        <div id="popup-feedback" class="popup popup_feedback">
+            <div class="popup__box js-popup-box">
+                <button
+                    id="popup-feedback-close"
+                    aria-label="Закрыть всплывающие окно"
+                    class="popup__btn-close js-popup-close"></button>
+
+                <div id="popup-feedback-content" class="popup__content">
+                    <p class="popup__title">Оставить заявку</p>
+                    <form class="popup__form form">
+                        <div class="form__field field">
+                            <label for="popup-name" class="field__label lable">
+                                Имя
+                            </label>
+                            <input
+                                id="popup-name"
+                                class="field__input input"
+                                type="text"
+                                placeholder="Иван"
+                                name="name" />
+                        </div>
+                        <div class="form__field field">
+                            <label
+                                for="popup-e-mail"
+                                class="field__label lable">
+                                E-mail
+                            </label>
+                            <input
+                                id="popup-e-mail"
+                                class="field__input input"
+                                type="email"
+                                placeholder="mail@gmail.com"
+                                name="e-mail" />
+                        </div>
+                        <div class="form__field field">
+                            <label for="popup-phone" class="field__label lable">
+                                Телефон
+                            </label>
+                            <input
+                                id="popup-phone"
+                                class="field__input input"
+                                type="phone"
+                                placeholder="+7 (999) 999 99-99"
+                                name="phone" />
+                        </div>
+
+                        <button class="form__btn btn">Оставить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- popup-success -->
+        <div id="popup-success" class="popup popup_success">
+            <div class="popup__box js-popup-box">
+                <button
+                    id="popup-success-close"
+                    aria-label="Закрыть всплывающие окно"
+                    class="popup__btn-close js-popup-close"></button>
+
+                <div id="popup-success-content" class="popup__content">
+                    <p class="popup__title">Спасибо!</p>
+                    <p class="popup__text">Ваши данные были отправлены.</p>
+                </div>
+            </div>
+        </div>
+        <!-- scroll-top -->
+        <button id="scroll-top" class="scroll-top" aria-label="Наверх страницы">
+            <svg class="scroll-top__icon">
+                <use xlink:href="./app/img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+        <script src="./app/js/libs/jquery-3.7.1.min.js"></script>
+    </body>
+</html>

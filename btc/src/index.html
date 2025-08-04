@@ -1,438 +1,496 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <base href="/" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO -->
-    <title>BTC</title>
-    <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
-    <!-- styles -->
-    <link rel="stylesheet" href="./app/css/style.min.css" />
-    <!-- <link rel="preconnect" href="/" /> -->
-    <!-- <link rel="dns-prefetch" href="/" /> -->
-    <!-- scripts -->
-    <script src="./app/js/libs/preloader.min.js"></script>
-    <script src="./app/js/libs/lazy-load.min.js"></script>
-    <script src="./app/js/libs/popup.min.js" defer></script>
-    <script src="./app/js/libs/swiper.min.js" defer></script>
-    <script src="./app/js/index.min.js" defer></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO -->
+        <title>BTC</title>
+        <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+        <!-- styles -->
+        <link rel="stylesheet" href="./app/css/style.min.css" />
+        <!-- <link rel="preconnect" href="/" /> -->
+        <!-- <link rel="dns-prefetch" href="/" /> -->
+        <!-- scripts -->
+        <script src="./app/js/libs/preloader.min.js"></script>
+        <script src="./app/js/libs/lazy-load.min.js"></script>
+        <script src="./app/js/libs/popup.min.js" defer></script>
+        <script src="./app/js/libs/swiper.min.js" defer></script>
+        <script src="./app/js/index.min.js" defer></script>
+    </head>
 
-  <body class="overflow" data-image="./app/img/base/pattern.svg">
-    <!-- preloader -->
-    <div id="preloader" class="preloader">
-      <div class="preloader__wrapper">
-        <div class="preloader__pixel"></div>
-        <div class="preloader__pixel"></div>
-        <div class="preloader__pixel"></div>
-        <div class="preloader__pixel"></div>
-        <div class="preloader__pixel"></div>
-        <div class="preloader__pixel"></div>
-        <div class="preloader__pixel"></div>
-        <div class="preloader__pixel"></div>
-        <div class="preloader__pixel"></div>
-      </div>
-    </div>
-    <!-- header -->
-    <div class="header-wrap">
-      <header class="header-wrap__header header header-inner">
-        <div class="container-new">
-          <div class="wrapper">
-            <div class="bg">
-              <div class="bg-color"></div>
-
-              <div class="shadow">
-                <div class="bottom"></div>
-                <div class="left"></div>
-                <div class="corner"></div>
-              </div>
-
-              <div class="border-top"></div>
-              <div class="border-bottom"></div>
-              <div class="border-right"></div>
-              <div class="border-left"></div>
-
-              <div class="side"></div>
-
-              <div class="fissure-big"></div>
-              <div class="fissure-small"></div>
-
-              <div class="corner-top-left"></div>
-              <div class="corner-top-right"></div>
-              <div class="corner-bottom-right"></div>
-              <div class="corner-bottom-left"></div>
-
-              <div class="glow">
-                <div class="top">
-                  <span class="left"></span>
-                  <span class="right"></span>
-                </div>
-                <div class="bottom">
-                  <span class="left"></span>
-                  <span class="right"></span>
-                </div>
-              </div>
+    <body class="overflow" data-image="./app/img/base/pattern.svg">
+        <!-- preloader -->
+        <div id="preloader" class="preloader">
+            <div class="preloader__wrapper">
+                <div class="preloader__pixel"></div>
+                <div class="preloader__pixel"></div>
+                <div class="preloader__pixel"></div>
+                <div class="preloader__pixel"></div>
+                <div class="preloader__pixel"></div>
+                <div class="preloader__pixel"></div>
+                <div class="preloader__pixel"></div>
+                <div class="preloader__pixel"></div>
+                <div class="preloader__pixel"></div>
             </div>
-
-            <div class="content">
-              <a class="logo" href="/">
-                <img src="./app/img/logo-header.svg" />
-              </a>
-
-              <div class="panel">
-                <a class="button-small blue registration" href="registration">
-                  <span class="bg"></span>
-                  <span class="bd-top"></span>
-                  <span class="bd-bottom"></span>
-                  <span class="bd-left"></span>
-                  <span class="bd-right"></span>
-                  <span class="caption">Регистрация</span>
-                </a>
-                <a class="button-small pink login" href="login">
-                  <span class="bg"></span>
-                  <span class="bd-top"></span>
-                  <span class="bd-bottom"></span>
-                  <span class="bd-left"></span>
-                  <span class="bd-right"></span>
-                  <span class="caption">
-                    <img src="./app/img/icons/user.svg" />
-                    <span>Вход</span>
-                  </span>
-                </a>
-                <div class="menu">
-                  <button class="button-small blue">
-                    <span class="bg"></span>
-                    <span class="bd-top"></span>
-                    <span class="bd-bottom"></span>
-                    <span class="bd-left"></span>
-                    <span class="bd-right"></span>
-                    <span class="caption">
-                      <span class="line"></span>
-                      <span class="line"></span>
-                      <span class="line"></span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </header>
+        <!-- header -->
+        <div class="header-wrap">
+            <header class="header-wrap__header header header-inner">
+                <div class="container-new">
+                    <div class="wrapper">
+                        <div class="bg">
+                            <div class="bg-color"></div>
 
-      <div class="top-menu-overlay"></div>
+                            <div class="shadow">
+                                <div class="bottom"></div>
+                                <div class="left"></div>
+                                <div class="corner"></div>
+                            </div>
 
-      <div class="top-menu">
-        <div class="top-menu-wrapper">
-          <button class="button-small blue close">
-            <span class="bg"></span>
-            <span class="bd-top"></span>
-            <span class="bd-bottom"></span>
-            <span class="bd-left"></span>
-            <span class="bd-right"></span>
-            <span class="caption">
-              <span class="line-wrap">
-                <span class="line"></span>
-                <span class="line"></span>
-              </span>
-            </span>
-          </button>
+                            <div class="border-top"></div>
+                            <div class="border-bottom"></div>
+                            <div class="border-right"></div>
+                            <div class="border-left"></div>
 
-          <div class="list">
-            <a href="/" class="link">
-              <span class="caption">Главная</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-            <a href="news" class="link">
-              <span class="caption">Новости</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-            <a href="tutorial" class="link">
-              <span class="caption">Обучение</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-            <a href="statistics" class="link">
-              <span class="caption">Статистика</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-            <a href="partnership" class="link">
-              <span class="caption">Реферальная программа</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-            <a href="crowdfunding" class="link">
-              <span class="caption">Краудфандинг</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-            <a href="faq" class="link">
-              <span class="caption">FAQ</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-            <a href="reviews" class="link">
-              <span class="caption">Отзывы</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-            <a href="guarantees" class="link">
-              <span class="caption">Гарантии</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
+                            <div class="side"></div>
 
-            <div class="separator"></div>
+                            <div class="fissure-big"></div>
+                            <div class="fissure-small"></div>
 
-            <a href="home" class="link">
-              <span class="caption">Жильё</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
+                            <div class="corner-top-left"></div>
+                            <div class="corner-top-right"></div>
+                            <div class="corner-bottom-right"></div>
+                            <div class="corner-bottom-left"></div>
 
-            <div class="dropdown">
-              <span class="bd-black"><span></span><span></span></span>
-              <div class="caption">
-                Магазин
-                <span class="arrow"></span>
-              </div>
+                            <div class="glow">
+                                <div class="top">
+                                    <span class="left"></span>
+                                    <span class="right"></span>
+                                </div>
+                                <div class="bottom">
+                                    <span class="left"></span>
+                                    <span class="right"></span>
+                                </div>
+                            </div>
+                        </div>
 
-              <div class="dropdown-list">
-                <a href="home" class="item">Майнеры</a>
-                <a href="home" class="item">Пункт 2</a>
-                <a href="home" class="item">Пункт 3</a>
-              </div>
+                        <div class="content">
+                            <a class="logo" href="/">
+                                <img src="./app/img/logo-header.svg" />
+                            </a>
 
-              <span class="bd-hover"></span>
-            </div>
-
-            <div class="dropdown">
-              <span class="bd-black"><span></span><span></span></span>
-              <div class="caption">
-                Банк
-                <span class="arrow"></span>
-              </div>
-
-              <div class="dropdown-list">
-                <a href="replenish" class="item">Пополнение</a>
-                <a href="withdrawal" class="item">Вывод</a>
-                <a href="exchange" class="item">Обмен</a>
-              </div>
-
-              <span class="bd-hover"></span>
-            </div>
-
-            <div class="separator"></div>
-
-            <a href="support" class="link">
-              <span class="caption">Тех. поддержка</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-
-            <a href="personal-data" class="link">
-              <span class="caption">Настройки аккаунта</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-
-            <a id="logout" class="link">
-              <span class="caption">Выйти</span>
-              <span class="bd-hover"></span>
-              <span class="bd-black"><span></span><span></span></span>
-            </a>
-          </div>
-        </div>
-
-        <div class="bd-bottom">
-          <div class="left"></div>
-          <div class="right"></div>
-        </div>
-      </div>
-    </div>
-    <!-- main -->
-    <main>
-      <!-- home-hero -->
-      <div id="home-hero-scroll" class="home-hero-wrap">
-        <section
-          id="home-hero"
-          class="home-hero-wrap__hero home-hero section"
-          data-image="./app/img/home/hero/bg-img.png">
-          <div
-            id="home-hero-bg"
-            class="home-hero__bg-img"
-            data-image="./app/img/home/hero/bg-img-scroll.png"></div>
-          <div class="home-hero__container container-new">
-            <div class="home-hero__content-wrap">
-              <h1 class="home-hero__title-hidden visually-hidden">
-                Уникальная онлайн-игра в стиле PixelArt с возможностью
-                заработка!
-              </h1>
-              <h2 class="home-hero__title title-1">
-                Первая онлайн игра которая платит биткоины за лень
-              </h2>
-              <a
-                class="home-hero__link btn-big btn-big_green"
-                href="#"
-                aria-label="Перейти на страницу игры">
-                <span class="btn-big__bg"></span>
-                <span class="btn-big__bd-bot">
-                  <span></span>
-                  <span></span>
-                </span>
-                <span class="btn-big__caption">Играть!</span>
-                <span class="btn-big__bd-hover"></span>
-                <span class="btn-big__bd-black">
-                  <span></span>
-                  <span></span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- home-info -->
-      <section class="home-info section">
-        <h2 class="home-info__title-hidden visually-hidden">
-          Информация о игре
-        </h2>
-        <div class="home-info__container container-new">
-          <div class="home-info__block block block_crack">
-            <div class="block__shadow-left"></div>
-            <div class="block__shadow-bottom"></div>
-            <div class="block__bd-top"></div>
-            <div class="block__bd-bottom">
-              <div class="block__bd-bottom-left"></div>
-              <div class="block__bd-bottom-right"></div>
-            </div>
-            <div class="block__bg-img"></div>
-            <div class="block__content-wrap">
-              <div class="block__img-wrap img-wrap">
-                <div class="img-wrap__bd"></div>
-                <img
-                  class="img-wrap__img"
-                  data-src="./app/img/home/info/img-1.jpg"
-                  alt="Ленивец" />
-                <div class="img-wrap__bd-top-left"></div>
-                <div class="img-wrap__bd-top-right"></div>
-                <div class="img-wrap__bd-bottom"></div>
-                <div class="img-wrap__bd-bottom-add"></div>
-              </div>
-              <div class="block__text-wrap">
-                <h2 class="block__title title-2">Что это за игра?</h2>
-                <div class="block__text content-new">
-                  <p class="content__p">
-                    Уникальная онлайн-игра в стиле PixelArt с возможностью
-                    заработка!
-                  </p>
-                  <p class="content__p">
-                    Ваша задача — заботиться о ленивце, улучшать его комнату и
-                    увеличивать доход. Чем ленивее Ваш ленивец - тем выше
-                    прибыль.
-                  </p>
-                  <p class="content__p">
-                    Без вложений, без сложностей — только увлекательный процесс
-                    и
-                    <a class="content__a" href="#"> реальные возможности. </a>
-                  </p>
+                            <div class="panel">
+                                <a
+                                    class="button-small blue registration"
+                                    href="registration">
+                                    <span class="bg"></span>
+                                    <span class="bd-top"></span>
+                                    <span class="bd-bottom"></span>
+                                    <span class="bd-left"></span>
+                                    <span class="bd-right"></span>
+                                    <span class="caption">Регистрация</span>
+                                </a>
+                                <a class="button-small pink login" href="login">
+                                    <span class="bg"></span>
+                                    <span class="bd-top"></span>
+                                    <span class="bd-bottom"></span>
+                                    <span class="bd-left"></span>
+                                    <span class="bd-right"></span>
+                                    <span class="caption">
+                                        <img src="./app/img/icons/user.svg" />
+                                        <span>Вход</span>
+                                    </span>
+                                </a>
+                                <div class="menu">
+                                    <button class="button-small blue">
+                                        <span class="bg"></span>
+                                        <span class="bd-top"></span>
+                                        <span class="bd-bottom"></span>
+                                        <span class="bd-left"></span>
+                                        <span class="bd-right"></span>
+                                        <span class="caption">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a
-                  class="block__link btn-big btn-big_blue btn-big_dark"
-                  href="#"
-                  aria-label="Перейти к игре">
-                  <span class="btn-big__bg"></span>
-                  <span class="btn-big__bd-bot">
-                    <span></span>
-                    <span></span>
-                  </span>
-                  <span class="btn-big__caption">Начать играть</span>
-                  <span class="btn-big__bd-hover"></span>
-                  <span class="btn-big__bd-black">
-                    <span></span>
-                    <span></span>
-                  </span>
-                </a>
-              </div>
+            </header>
+
+            <div class="top-menu-overlay"></div>
+
+            <div class="top-menu">
+                <div class="top-menu-wrapper">
+                    <button class="button-small blue close">
+                        <span class="bg"></span>
+                        <span class="bd-top"></span>
+                        <span class="bd-bottom"></span>
+                        <span class="bd-left"></span>
+                        <span class="bd-right"></span>
+                        <span class="caption">
+                            <span class="line-wrap">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </span>
+                        </span>
+                    </button>
+
+                    <div class="list">
+                        <a href="/" class="link">
+                            <span class="caption">Главная</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                        <a href="news" class="link">
+                            <span class="caption">Новости</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                        <a href="tutorial" class="link">
+                            <span class="caption">Обучение</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                        <a href="statistics" class="link">
+                            <span class="caption">Статистика</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                        <a href="partnership" class="link">
+                            <span class="caption">Реферальная программа</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                        <a href="crowdfunding" class="link">
+                            <span class="caption">Краудфандинг</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                        <a href="faq" class="link">
+                            <span class="caption">FAQ</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                        <a href="reviews" class="link">
+                            <span class="caption">Отзывы</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                        <a href="guarantees" class="link">
+                            <span class="caption">Гарантии</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+
+                        <div class="separator"></div>
+
+                        <a href="home" class="link">
+                            <span class="caption">Жильё</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+
+                        <div class="dropdown">
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                            <div class="caption">
+                                Магазин
+                                <span class="arrow"></span>
+                            </div>
+
+                            <div class="dropdown-list">
+                                <a href="home" class="item">Майнеры</a>
+                                <a href="home" class="item">Пункт 2</a>
+                                <a href="home" class="item">Пункт 3</a>
+                            </div>
+
+                            <span class="bd-hover"></span>
+                        </div>
+
+                        <div class="dropdown">
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                            <div class="caption">
+                                Банк
+                                <span class="arrow"></span>
+                            </div>
+
+                            <div class="dropdown-list">
+                                <a href="replenish" class="item">Пополнение</a>
+                                <a href="withdrawal" class="item">Вывод</a>
+                                <a href="exchange" class="item">Обмен</a>
+                            </div>
+
+                            <span class="bd-hover"></span>
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <a href="support" class="link">
+                            <span class="caption">Тех. поддержка</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+
+                        <a href="personal-data" class="link">
+                            <span class="caption">Настройки аккаунта</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+
+                        <a id="logout" class="link">
+                            <span class="caption">Выйти</span>
+                            <span class="bd-hover"></span>
+                            <span class="bd-black"
+                                ><span></span><span></span
+                            ></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bd-bottom">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
-      <!-- home-statistics -->
-      <section class="home-statistics section">
-        <h2 class="home-statistics__title-hidden visually-hidden">
-          Статистика сайта
-        </h2>
-        <div class="home-statistics__container container-new">
-          <div class="home-statistics__block block">
-            <div class="block__shadow-left"></div>
-            <div class="block__shadow-bottom"></div>
-            <div class="block__bd-top"></div>
-            <div class="block__bd-bottom">
-              <div class="block__bd-bottom-left"></div>
-              <div class="block__bd-bottom-right"></div>
+        <!-- main -->
+        <main>
+            <!-- home-hero -->
+            <div id="home-hero-scroll" class="home-hero-wrap">
+                <section
+                    id="home-hero"
+                    class="home-hero-wrap__hero home-hero section"
+                    data-image="./app/img/home/hero/bg-img.png">
+                    <div
+                        id="home-hero-bg"
+                        class="home-hero__bg-img"
+                        data-image="./app/img/home/hero/bg-img-scroll.png"></div>
+                    <div class="home-hero__container container-new">
+                        <div class="home-hero__content-wrap">
+                            <h1 class="home-hero__title-hidden visually-hidden">
+                                Уникальная онлайн-игра в стиле PixelArt с
+                                возможностью заработка!
+                            </h1>
+                            <h2 class="home-hero__title title-1">
+                                Первая онлайн игра которая платит биткоины за
+                                лень
+                            </h2>
+                            <a
+                                class="home-hero__link btn-big btn-big_green"
+                                href="#"
+                                aria-label="Перейти на страницу игры">
+                                <span class="btn-big__bg"></span>
+                                <span class="btn-big__bd-bot">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                                <span class="btn-big__caption">Играть!</span>
+                                <span class="btn-big__bd-hover"></span>
+                                <span class="btn-big__bd-black">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div
-              class="block__bg-img"
-              data-image="./app/img/home/statistics/bg-img.png"></div>
-            <div class="block__content-wrap home-statistics-content">
-              <h2 class="home-statistics-content__title title-2">
-                Игровой проект в цифрах
-              </h2>
-              <p class="home-statistics-content__subtitle">
-                Текущие показатели, обновляемые в реальном времени
-              </p>
-              <ul class="home-statistics-content__list">
-                <li
-                  class="home-statistics-content__list-item home-statistics-item">
-                  <div class="home-statistics-item__img-wrap">
-                    <img
-                      class="home-statistics-item__img"
-                      data-src="./app/img/home/statistics/img-1.svg"
-                      alt="Геймпад" />
-                  </div>
-                  <h3 class="home-statistics-item__title">Игроки</h3>
-                  <p class="home-statistics-item__text">120 334</p>
-                </li>
-                <li
-                  class="home-statistics-content__list-item home-statistics-item">
-                  <div class="home-statistics-item__img-wrap">
-                    <img
-                      class="home-statistics-item__img"
-                      data-src="./app/img/home/statistics/img-2.svg"
-                      alt="Ленивец" />
-                  </div>
-                  <h3 class="home-statistics-item__title">Новых за сутки</h3>
-                  <p class="home-statistics-item__text">+1230</p>
-                </li>
-                <li
-                  class="home-statistics-content__list-item home-statistics-item">
-                  <div class="home-statistics-item__img-wrap">
-                    <img
-                      class="home-statistics-item__img"
-                      data-src="./app/img/home/statistics/img-3.svg"
-                      alt="Ленивец за ноутбуком" />
-                  </div>
-                  <h3 class="home-statistics-item__title">Сейчас онлайн</h3>
-                  <p class="home-statistics-item__text">350_</p>
-                </li>
-                <li
-                  class="home-statistics-content__list-item home-statistics-item">
-                  <div class="home-statistics-item__img-wrap">
-                    <img
-                      class="home-statistics-item__img"
-                      data-src="./app/img/home/statistics/img-4.svg"
-                      alt="Валюта" />
-                  </div>
-                  <h3 class="home-statistics-item__title">Всего заработано</h3>
-                  <p class="home-statistics-item__text">876.445 BEDTC</p>
-                </li>
-              </ul>
-            </div>
-            <!-- <div class="content">
+            <!-- home-info -->
+            <section class="home-info section">
+                <h2 class="home-info__title-hidden visually-hidden">
+                    Информация о игре
+                </h2>
+                <div class="home-info__container container-new">
+                    <div class="home-info__block block block_crack">
+                        <div class="block__shadow-left"></div>
+                        <div class="block__shadow-bottom"></div>
+                        <div class="block__bd-top"></div>
+                        <div class="block__bd-bottom">
+                            <div class="block__bd-bottom-left"></div>
+                            <div class="block__bd-bottom-right"></div>
+                        </div>
+                        <div class="block__bg-img"></div>
+                        <div class="block__content-wrap">
+                            <div class="block__img-wrap img-wrap">
+                                <div class="img-wrap__bd"></div>
+                                <img
+                                    class="img-wrap__img"
+                                    data-src="./app/img/home/info/img-1.jpg"
+                                    alt="Ленивец" />
+                                <div class="img-wrap__bd-top-left"></div>
+                                <div class="img-wrap__bd-top-right"></div>
+                                <div class="img-wrap__bd-bottom"></div>
+                                <div class="img-wrap__bd-bottom-add"></div>
+                            </div>
+                            <div class="block__text-wrap">
+                                <h2 class="block__title title-2">
+                                    Что это за игра?
+                                </h2>
+                                <div class="block__text content-new">
+                                    <p class="content__p">
+                                        Уникальная онлайн-игра в стиле PixelArt
+                                        с возможностью заработка!
+                                    </p>
+                                    <p class="content__p">
+                                        Ваша задача — заботиться о ленивце,
+                                        улучшать его комнату и увеличивать
+                                        доход. Чем ленивее Ваш ленивец - тем
+                                        выше прибыль.
+                                    </p>
+                                    <p class="content__p">
+                                        Без вложений, без сложностей — только
+                                        увлекательный процесс и
+                                        <a class="content__a" href="#">
+                                            реальные возможности.
+                                        </a>
+                                    </p>
+                                </div>
+                                <a
+                                    class="block__link btn-big btn-big_blue btn-big_dark"
+                                    href="#"
+                                    aria-label="Перейти к игре">
+                                    <span class="btn-big__bg"></span>
+                                    <span class="btn-big__bd-bot">
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                    <span class="btn-big__caption"
+                                        >Начать играть</span
+                                    >
+                                    <span class="btn-big__bd-hover"></span>
+                                    <span class="btn-big__bd-black">
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- home-statistics -->
+            <section class="home-statistics section">
+                <h2 class="home-statistics__title-hidden visually-hidden">
+                    Статистика сайта
+                </h2>
+                <div class="home-statistics__container container-new">
+                    <div class="home-statistics__block block">
+                        <div class="block__shadow-left"></div>
+                        <div class="block__shadow-bottom"></div>
+                        <div class="block__bd-top"></div>
+                        <div class="block__bd-bottom">
+                            <div class="block__bd-bottom-left"></div>
+                            <div class="block__bd-bottom-right"></div>
+                        </div>
+                        <div
+                            class="block__bg-img"
+                            data-image="./app/img/home/statistics/bg-img.png"></div>
+                        <div
+                            class="block__content-wrap home-statistics-content">
+                            <h2 class="home-statistics-content__title title-2">
+                                Игровой проект в цифрах
+                            </h2>
+                            <p class="home-statistics-content__subtitle">
+                                Текущие показатели, обновляемые в реальном
+                                времени
+                            </p>
+                            <ul class="home-statistics-content__list">
+                                <li
+                                    class="home-statistics-content__list-item home-statistics-item">
+                                    <div class="home-statistics-item__img-wrap">
+                                        <img
+                                            class="home-statistics-item__img"
+                                            data-src="./app/img/home/statistics/img-1.svg"
+                                            alt="Геймпад" />
+                                    </div>
+                                    <h3 class="home-statistics-item__title">
+                                        Игроки
+                                    </h3>
+                                    <p class="home-statistics-item__text">
+                                        120 334
+                                    </p>
+                                </li>
+                                <li
+                                    class="home-statistics-content__list-item home-statistics-item">
+                                    <div class="home-statistics-item__img-wrap">
+                                        <img
+                                            class="home-statistics-item__img"
+                                            data-src="./app/img/home/statistics/img-2.svg"
+                                            alt="Ленивец" />
+                                    </div>
+                                    <h3 class="home-statistics-item__title">
+                                        Новых за сутки
+                                    </h3>
+                                    <p class="home-statistics-item__text">
+                                        +1230
+                                    </p>
+                                </li>
+                                <li
+                                    class="home-statistics-content__list-item home-statistics-item">
+                                    <div class="home-statistics-item__img-wrap">
+                                        <img
+                                            class="home-statistics-item__img"
+                                            data-src="./app/img/home/statistics/img-3.svg"
+                                            alt="Ленивец за ноутбуком" />
+                                    </div>
+                                    <h3 class="home-statistics-item__title">
+                                        Сейчас онлайн
+                                    </h3>
+                                    <p class="home-statistics-item__text">
+                                        350_
+                                    </p>
+                                </li>
+                                <li
+                                    class="home-statistics-content__list-item home-statistics-item">
+                                    <div class="home-statistics-item__img-wrap">
+                                        <img
+                                            class="home-statistics-item__img"
+                                            data-src="./app/img/home/statistics/img-4.svg"
+                                            alt="Валюта" />
+                                    </div>
+                                    <h3 class="home-statistics-item__title">
+                                        Всего заработано
+                                    </h3>
+                                    <p class="home-statistics-item__text">
+                                        876.445 BEDTC
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="content">
               <div class="right">
                 <div class="image">
                   <div class="bd"></div>
@@ -473,425 +531,465 @@
                 </a>
               </div>
             </div> -->
-          </div>
-        </div>
-      </section>
-      <!-- home-interest -->
-      <section class="home-interest section">
-        <div class="home-interest__container container-new">
-          <div class="home-info__block block block_dark">
-            <div class="block__shadow-left"></div>
-            <div class="block__shadow-bottom"></div>
-            <div class="block__bd-top"></div>
-            <div class="block__bd-bottom">
-              <div class="block__bd-bottom-left"></div>
-              <div class="block__bd-bottom-right"></div>
-            </div>
-            <div class="block__content-wrap">
-              <div class="block__text-wrap">
-                <h2 class="block__title title-2">Почему это интересно?</h2>
-                <div class="block__text content-new">
-                  <p class="content__p">
-                    Погрузитесь в ленивый мир pixel-art, вдохновлённый
-                    легендарными ретро-играми!
-                  </p>
-                  <p class="content__p">
-                    Зарабатывайте мемкоины во время игры и выводите их после
-                    листинга.
-                  </p>
-                  <p class="content__p">
-                    Ранние участники получают
-                    <a class="content__a" href="#"> эксклюзивные бонусы</a>, а
-                    начать можно бесплатно —
-                    <a class="content__a" href="#"> регистрация</a>
-                    займёт всего лишь минуту, и никаких вложений!
-                  </p>
+                    </div>
                 </div>
-              </div>
-              <div class="block__img-wrap img-wrap">
-                <div class="img-wrap__bd"></div>
-                <img
-                  class="img-wrap__img"
-                  data-src="./app/img/home/interest/img-1.jpg"
-                  alt="Ленивец" />
-                <div class="img-wrap__bd-top-left"></div>
-                <div class="img-wrap__bd-top-right"></div>
-                <div class="img-wrap__bd-bottom"></div>
-                <div class="img-wrap__bd-bottom-add"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- home-bring-friends -->
-      <section class="home-bring-friends section">
-        <div class="home-bring-friends__container container-new">
-          <div class="home-bring-friends__content-wrap bring-friends-block">
-            <div
-              class="bring-friends-block__icon bring-friends-block__icon_left"
-              data-image="./app/img/base/diamond.png"></div>
-            <div
-              class="bring-friends-block__icon bring-friends-block__icon_right"
-              data-image="./app/img/base/diamond.png"></div>
-            <div
-              class="bring-friends-block__icon bring-friends-block__icon_bottom"
-              data-image="./app/img/base/diamond.png"></div>
-            <div class="bring-friends-block__content-wrap">
-              <h2 class="bring-friends-block__title title-2">
-                Приводи друзей — умножай доход!
-              </h2>
-              <div class="bring-friends-block__content content">
-                <p class="content__p">
-                  Стань лидером реферальной гонки: приглашай друзей, следи за
-                  своим прогрессом в реальном времени и получай
-                  <a class="content__a" href="#"> дополнительные бонусы </a>
-                  — за их активность и свой статус в топе.
-                </p>
-              </div>
-              <a
-                class="bring-friends-block__link btn-big btn-big_blue btn-big_dark"
-                href="#"
-                aria-label="Перейти на подробную информацию">
-                <span class="btn-big__bg"></span>
-                <span class="btn-big__bd-bot">
-                  <span></span>
-                  <span></span>
-                </span>
-                <span class="btn-big__caption">Подробнее</span>
-                <span class="btn-big__bd-hover"></span>
-                <span class="btn-big__bd-black">
-                  <span></span>
-                  <span></span>
-                </span>
-              </a>
-            </div>
-            <div
-              class="bring-friends-block__bg"
-              data-image="./app/img/home/bring-friends/bg-img.png"></div>
-            <div
-              class="bring-friends-block__img"
-              data-image="./app/img/home/bring-friends/img-1.png"></div>
-          </div>
-        </div>
-      </section>
-      <!-- home-development -->
-      <section class="home-development section">
-        <div class="home-development__container container-new">
-          <div class="home-info__block block block_dark-second">
-            <div class="block__shadow-left"></div>
-            <div class="block__shadow-bottom"></div>
-            <div class="block__bd-top"></div>
-            <div class="block__bd-bottom">
-              <div class="block__bd-bottom-left"></div>
-              <div class="block__bd-bottom-right"></div>
-            </div>
-            <div class="block__content-wrap">
-              <div class="block__text-wrap">
-                <h2 class="block__title title-2">
-                  Проект развивается — будь в центре событий!
-                </h2>
-                <div class="block__text content-new">
-                  <p class="content__p">
-                    Мы работаем над созданием мобильного приложения и
-                    интеграцией в Telegram, чтобы ваша игра стала ещё удобнее.
-                    Следите за обновлениями, чтобы узнать обо всех новинках.
-                  </p>
+            </section>
+            <!-- home-interest -->
+            <section class="home-interest section">
+                <div class="home-interest__container container-new">
+                    <div class="home-info__block block block_dark">
+                        <div class="block__shadow-left"></div>
+                        <div class="block__shadow-bottom"></div>
+                        <div class="block__bd-top"></div>
+                        <div class="block__bd-bottom">
+                            <div class="block__bd-bottom-left"></div>
+                            <div class="block__bd-bottom-right"></div>
+                        </div>
+                        <div class="block__content-wrap">
+                            <div class="block__text-wrap">
+                                <h2 class="block__title title-2">
+                                    Почему это интересно?
+                                </h2>
+                                <div class="block__text content-new">
+                                    <p class="content__p">
+                                        Погрузитесь в ленивый мир pixel-art,
+                                        вдохновлённый легендарными ретро-играми!
+                                    </p>
+                                    <p class="content__p">
+                                        Зарабатывайте мемкоины во время игры и
+                                        выводите их после листинга.
+                                    </p>
+                                    <p class="content__p">
+                                        Ранние участники получают
+                                        <a class="content__a" href="#">
+                                            эксклюзивные бонусы</a
+                                        >, а начать можно бесплатно —
+                                        <a class="content__a" href="#">
+                                            регистрация</a
+                                        >
+                                        займёт всего лишь минуту, и никаких
+                                        вложений!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block__img-wrap img-wrap">
+                                <div class="img-wrap__bd"></div>
+                                <img
+                                    class="img-wrap__img"
+                                    data-src="./app/img/home/interest/img-1.jpg"
+                                    alt="Ленивец" />
+                                <div class="img-wrap__bd-top-left"></div>
+                                <div class="img-wrap__bd-top-right"></div>
+                                <div class="img-wrap__bd-bottom"></div>
+                                <div class="img-wrap__bd-bottom-add"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a
-                  class="block__link link-text"
-                  href="#"
-                  aria-label="Переход на новости проекта">
-                  <span class="link-text__decr">
-                    Смотреть новости проекта >
-                  </span>
-                </a>
-              </div>
-              <div class="block__img-wrap">
-                <img
-                  class="block__img"
-                  data-src="./app/img/home/development/img-1.png"
-                  alt="Ленивец на ракете" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- home-support -->
-      <section class="home-support section">
-        <div class="home-support__container container-new">
-          <div class="home-info__block block block_purple">
-            <div class="block__shadow-left"></div>
-            <div class="block__shadow-bottom"></div>
-            <div class="block__bd-top"></div>
-            <div class="block__bd-bottom">
-              <div class="block__bd-bottom-left"></div>
-              <div class="block__bd-bottom-right"></div>
-            </div>
-            <div class="block__content-wrap">
-              <div class="block__img-wrap">
-                <img
-                  class="block__img"
-                  data-src="./app/img/home/support/img-1.png"
-                  alt="Группа ленивцев" />
-              </div>
-              <div class="block__text-wrap">
-                <h2 class="block__title title-2">
-                  Стань частью<br />чего-то большего!
-                </h2>
-                <div class="block__text content-new">
-                  <p class="content__p">
-                    Присоединяйтесь к краудфандингу и получите
-                    <a href="">особые бонусы</a>. Помогите проекту развиваться,
-                    а взамен получите уникальные привилегии и шанс заработать
-                    больше мемкоинов на старте.
-                  </p>
+            </section>
+            <!-- home-bring-friends -->
+            <section class="home-bring-friends section">
+                <div class="home-bring-friends__container container-new">
+                    <div
+                        class="home-bring-friends__content-wrap bring-friends-block">
+                        <div
+                            class="bring-friends-block__icon bring-friends-block__icon_left"
+                            data-image="./app/img/base/diamond.png"></div>
+                        <div
+                            class="bring-friends-block__icon bring-friends-block__icon_right"
+                            data-image="./app/img/base/diamond.png"></div>
+                        <div
+                            class="bring-friends-block__icon bring-friends-block__icon_bottom"
+                            data-image="./app/img/base/diamond.png"></div>
+                        <div class="bring-friends-block__content-wrap">
+                            <h2 class="bring-friends-block__title title-2">
+                                Приводи друзей — умножай доход!
+                            </h2>
+                            <div class="bring-friends-block__content content">
+                                <p class="content__p">
+                                    Стань лидером реферальной гонки: приглашай
+                                    друзей, следи за своим прогрессом в реальном
+                                    времени и получай
+                                    <a class="content__a" href="#">
+                                        дополнительные бонусы
+                                    </a>
+                                    — за их активность и свой статус в топе.
+                                </p>
+                            </div>
+                            <a
+                                class="bring-friends-block__link btn-big btn-big_blue btn-big_dark"
+                                href="#"
+                                aria-label="Перейти на подробную информацию">
+                                <span class="btn-big__bg"></span>
+                                <span class="btn-big__bd-bot">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                                <span class="btn-big__caption">Подробнее</span>
+                                <span class="btn-big__bd-hover"></span>
+                                <span class="btn-big__bd-black">
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div
+                            class="bring-friends-block__bg"
+                            data-image="./app/img/home/bring-friends/bg-img.png"></div>
+                        <div
+                            class="bring-friends-block__img"
+                            data-image="./app/img/home/bring-friends/img-1.png"></div>
+                    </div>
                 </div>
-                <a
-                  class="block__link btn-big btn-big_green btn-big_dark"
-                  href="#"
-                  aria-label="Поддержать проект">
-                  <span class="btn-big__bg"></span>
-                  <span class="btn-big__bd-bot">
-                    <span></span>
-                    <span></span>
-                  </span>
-                  <span class="btn-big__caption">Поддержать</span>
-                  <span class="btn-big__bd-hover"></span>
-                  <span class="btn-big__bd-black">
-                    <span></span>
-                    <span></span>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- home-start-game -->
-      <section class="home-start-game section">
-        <div class="home-start-game__container container-new">
-          <div class="home-start-game__content-wrap">
-            <h2 class="home-start-game__title title-2">Как начать?</h2>
-            <p class="home-start-game__subtitle">
-              Три шага к вашему ленивому миру:
-            </p>
-            <ul class="home-start-game__list">
-              <li class="home-start-game__list-item home-start-game-item">
-                <div class="home-start-game-item__img-wrap">
-                  <img
-                    class="home-start-game-item__img"
-                    src="./app/img/home/start-game/img-1.png"
-                    alt="Ленивец создаёт аккаунт" />
+            </section>
+            <!-- home-development -->
+            <section class="home-development section">
+                <div class="home-development__container container-new">
+                    <div class="home-info__block block block_dark-second">
+                        <div class="block__shadow-left"></div>
+                        <div class="block__shadow-bottom"></div>
+                        <div class="block__bd-top"></div>
+                        <div class="block__bd-bottom">
+                            <div class="block__bd-bottom-left"></div>
+                            <div class="block__bd-bottom-right"></div>
+                        </div>
+                        <div class="block__content-wrap">
+                            <div class="block__text-wrap">
+                                <h2 class="block__title title-2">
+                                    Проект развивается — будь в центре событий!
+                                </h2>
+                                <div class="block__text content-new">
+                                    <p class="content__p">
+                                        Мы работаем над созданием мобильного
+                                        приложения и интеграцией в Telegram,
+                                        чтобы ваша игра стала ещё удобнее.
+                                        Следите за обновлениями, чтобы узнать
+                                        обо всех новинках.
+                                    </p>
+                                </div>
+                                <a
+                                    class="block__link link-text"
+                                    href="#"
+                                    aria-label="Переход на новости проекта">
+                                    <span class="link-text__decr">
+                                        Смотреть новости проекта >
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="block__img-wrap">
+                                <img
+                                    class="block__img"
+                                    data-src="./app/img/home/development/img-1.png"
+                                    alt="Ленивец на ракете" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="home-start-game-item__content">
-                  <p class="home-start-game-item__descr">
-                    Создайте аккаунт — это займёт 30 секунд
-                  </p>
+            </section>
+            <!-- home-support -->
+            <section class="home-support section">
+                <div class="home-support__container container-new">
+                    <div class="home-info__block block block_purple">
+                        <div class="block__shadow-left"></div>
+                        <div class="block__shadow-bottom"></div>
+                        <div class="block__bd-top"></div>
+                        <div class="block__bd-bottom">
+                            <div class="block__bd-bottom-left"></div>
+                            <div class="block__bd-bottom-right"></div>
+                        </div>
+                        <div class="block__content-wrap">
+                            <div class="block__img-wrap">
+                                <img
+                                    class="block__img"
+                                    data-src="./app/img/home/support/img-1.png"
+                                    alt="Группа ленивцев" />
+                            </div>
+                            <div class="block__text-wrap">
+                                <h2 class="block__title title-2">
+                                    Стань частью<br />чего-то большего!
+                                </h2>
+                                <div class="block__text content-new">
+                                    <p class="content__p">
+                                        Присоединяйтесь к краудфандингу и
+                                        получите
+                                        <a href="">особые бонусы</a>. Помогите
+                                        проекту развиваться, а взамен получите
+                                        уникальные привилегии и шанс заработать
+                                        больше мемкоинов на старте.
+                                    </p>
+                                </div>
+                                <a
+                                    class="block__link btn-big btn-big_green btn-big_dark"
+                                    href="#"
+                                    aria-label="Поддержать проект">
+                                    <span class="btn-big__bg"></span>
+                                    <span class="btn-big__bd-bot">
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                    <span class="btn-big__caption"
+                                        >Поддержать</span
+                                    >
+                                    <span class="btn-big__bd-hover"></span>
+                                    <span class="btn-big__bd-black">
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </li>
-              <li class="home-start-game__list-item home-start-game-item">
-                <div class="home-start-game-item__img-wrap">
-                  <img
-                    class="home-start-game-item__img"
-                    src="./app/img/home/start-game/img-2.png"
-                    alt="Ленивец отдыхает" />
+            </section>
+            <!-- home-start-game -->
+            <section class="home-start-game section">
+                <div class="home-start-game__container container-new">
+                    <div class="home-start-game__content-wrap">
+                        <h2 class="home-start-game__title title-2">
+                            Как начать?
+                        </h2>
+                        <p class="home-start-game__subtitle">
+                            Три шага к вашему ленивому миру:
+                        </p>
+                        <ul class="home-start-game__list">
+                            <li
+                                class="home-start-game__list-item home-start-game-item">
+                                <div class="home-start-game-item__img-wrap">
+                                    <img
+                                        class="home-start-game-item__img"
+                                        src="./app/img/home/start-game/img-1.png"
+                                        alt="Ленивец создаёт аккаунт" />
+                                </div>
+                                <div class="home-start-game-item__content">
+                                    <p class="home-start-game-item__descr">
+                                        Создайте аккаунт — это займёт 30 секунд
+                                    </p>
+                                </div>
+                            </li>
+                            <li
+                                class="home-start-game__list-item home-start-game-item">
+                                <div class="home-start-game-item__img-wrap">
+                                    <img
+                                        class="home-start-game-item__img"
+                                        src="./app/img/home/start-game/img-2.png"
+                                        alt="Ленивец отдыхает" />
+                                </div>
+                                <div class="home-start-game-item__content">
+                                    <p class="home-start-game-item__descr">
+                                        Создайте аккаунт — это займёт 30 секунд
+                                    </p>
+                                </div>
+                            </li>
+                            <li
+                                class="home-start-game__list-item home-start-game-item">
+                                <div class="home-start-game-item__img-wrap">
+                                    <img
+                                        class="home-start-game-item__img"
+                                        src="./app/img/home/start-game/img-3.png"
+                                        alt="Level up" />
+                                </div>
+                                <div class="home-start-game-item__content">
+                                    <p class="home-start-game-item__descr">
+                                        Создайте аккаунт — это займёт 30 секунд
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a
+                            class="home-start-game__link btn-big btn-big_green btn-big_dark"
+                            href="#"
+                            aria-label="Начать игру">
+                            <span class="btn-big__bg"></span>
+                            <span class="btn-big__bd-bot">
+                                <span></span>
+                                <span></span>
+                            </span>
+                            <span class="btn-big__caption">Играть</span>
+                            <span class="btn-big__bd-hover"></span>
+                            <span class="btn-big__bd-black">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
-                <div class="home-start-game-item__content">
-                  <p class="home-start-game-item__descr">
-                    Создайте аккаунт — это займёт 30 секунд
-                  </p>
-                </div>
-              </li>
-              <li class="home-start-game__list-item home-start-game-item">
-                <div class="home-start-game-item__img-wrap">
-                  <img
-                    class="home-start-game-item__img"
-                    src="./app/img/home/start-game/img-3.png"
-                    alt="Level up" />
-                </div>
-                <div class="home-start-game-item__content">
-                  <p class="home-start-game-item__descr">
-                    Создайте аккаунт — это займёт 30 секунд
-                  </p>
-                </div>
-              </li>
-            </ul>
-            <a
-              class="home-start-game__link btn-big btn-big_green btn-big_dark"
-              href="#"
-              aria-label="Начать игру">
-              <span class="btn-big__bg"></span>
-              <span class="btn-big__bd-bot">
-                <span></span>
-                <span></span>
-              </span>
-              <span class="btn-big__caption">Играть</span>
-              <span class="btn-big__bd-hover"></span>
-              <span class="btn-big__bd-black">
-                <span></span>
-                <span></span>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div
-          class="home-start-game__bg-img bg-img bg-img_left"
-          data-image="./app/img/home/start-game/bg-img.png"></div>
-        <div
-          class="home-start-game__bg-img bg-img bg-img_right"
-          data-image="./app/img/home/start-game/bg-img.png"></div>
-      </section>
-    </main>
-    <!-- footer -->
-    <footer class="footer">
-      <div class="container-new">
-        <div class="wrapper">
-          <div class="bg">
-            <div class="bg-color"></div>
+                <div
+                    class="home-start-game__bg-img bg-img bg-img_left"
+                    data-image="./app/img/home/start-game/bg-img.png"></div>
+                <div
+                    class="home-start-game__bg-img bg-img bg-img_right"
+                    data-image="./app/img/home/start-game/bg-img.png"></div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container-new">
+                <div class="wrapper">
+                    <div class="bg">
+                        <div class="bg-color"></div>
 
-            <div class="shadow">
-              <div class="bottom"></div>
-              <div class="left"></div>
-              <div class="corner"></div>
+                        <div class="shadow">
+                            <div class="bottom"></div>
+                            <div class="left"></div>
+                            <div class="corner"></div>
+                        </div>
+
+                        <div class="border-top"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-right"></div>
+                        <div class="border-left"></div>
+
+                        <div class="side"></div>
+                        <div class="side-responsive"></div>
+
+                        <div class="fissure-big"></div>
+                        <div class="fissure-small"></div>
+
+                        <div class="corner-top-left"></div>
+                        <div class="corner-top-right"></div>
+                        <div class="corner-bottom-right"></div>
+                        <div class="corner-bottom-left"></div>
+
+                        <div class="glow">
+                            <div class="top">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </div>
+                            <div class="bottom">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="footer-top">
+                            <a class="logo" href="/">
+                                <img src="./app/img/logo-header.svg" />
+                            </a>
+
+                            <div class="menu">
+                                <div class="left">
+                                    <a href="/">Главная</a>
+                                    <a href="news">Новости</a>
+                                    <a href="tutorial">Обучение</a>
+                                    <a href="statistics">Статистика</a>
+                                </div>
+                                <div class="center">
+                                    <a href="partnership"
+                                        >Реферальная программа</a
+                                    >
+                                    <a href="crowdfunding">Краудфандинг</a>
+                                    <a href="faq">FAQ</a>
+                                </div>
+                                <div class="right">
+                                    <a href="reviews">Отзывы</a>
+                                    <a href="guarantees">Гарантии</a>
+                                    <a href="support">Тех. поддержка</a>
+                                </div>
+                            </div>
+
+                            <div class="social">
+                                <div class="caption">Мы в соц. сетях</div>
+                                <div class="list">
+                                    <a
+                                        href="/"
+                                        class="button-small item green bg-blue">
+                                        <span class="bg"></span>
+                                        <span class="bd-top"></span>
+                                        <span class="bd-bottom"></span>
+                                        <span class="bd-left"></span>
+                                        <span class="bd-right"></span>
+                                        <span class="caption">
+                                            <img
+                                                src="./app/img/icons/social-tg.svg" />
+                                        </span>
+                                    </a>
+                                    <a
+                                        href="/"
+                                        class="button-small item green bg-blue">
+                                        <span class="bg"></span>
+                                        <span class="bd-top"></span>
+                                        <span class="bd-bottom"></span>
+                                        <span class="bd-left"></span>
+                                        <span class="bd-right"></span>
+                                        <span class="caption">
+                                            <img
+                                                src="./app/img/icons/social-ig.svg" />
+                                        </span>
+                                    </a>
+                                    <a
+                                        href="/"
+                                        class="button-small item green bg-blue">
+                                        <span class="bg"></span>
+                                        <span class="bd-top"></span>
+                                        <span class="bd-bottom"></span>
+                                        <span class="bd-left"></span>
+                                        <span class="bd-right"></span>
+                                        <span class="caption">
+                                            <img
+                                                src="./app/img/icons/social-yt.svg" />
+                                        </span>
+                                    </a>
+                                    <a
+                                        href="/"
+                                        class="button-small item green bg-blue">
+                                        <span class="bg"></span>
+                                        <span class="bd-top"></span>
+                                        <span class="bd-bottom"></span>
+                                        <span class="bd-left"></span>
+                                        <span class="bd-right"></span>
+                                        <span class="caption">
+                                            <img
+                                                src="./app/img/icons/social-vk.svg" />
+                                        </span>
+                                    </a>
+                                    <a
+                                        href="/"
+                                        class="button-small item green bg-blue">
+                                        <span class="bg"></span>
+                                        <span class="bd-top"></span>
+                                        <span class="bd-bottom"></span>
+                                        <span class="bd-left"></span>
+                                        <span class="bd-right"></span>
+                                        <span class="caption">
+                                            <img
+                                                src="./app/img/icons/social-fb.svg" />
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-bottom">
+                            <div class="copyright">
+                                Copyright © 2024 все права защищены. <br />
+                                Входя на сайт, вы принимаете Пользовательское
+                                соглашение.
+                                <br /><br />
+                                Экономический симулятор -
+                                <a href="/"><?= $site_name; ?></a>
+                            </div>
+
+                            <div class="mirrors">
+                                <div class="caption">Зеркала проекта:</div>
+                                <div class="list">
+                                    <a href="/">sitename.com</a>
+                                    <a href="/">sitename.com</a>
+                                    <a href="/">sitename.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="border-top"></div>
-            <div class="border-bottom"></div>
-            <div class="border-right"></div>
-            <div class="border-left"></div>
-
-            <div class="side"></div>
-            <div class="side-responsive"></div>
-
-            <div class="fissure-big"></div>
-            <div class="fissure-small"></div>
-
-            <div class="corner-top-left"></div>
-            <div class="corner-top-right"></div>
-            <div class="corner-bottom-right"></div>
-            <div class="corner-bottom-left"></div>
-
-            <div class="glow">
-              <div class="top">
-                <span class="left"></span>
-                <span class="right"></span>
-              </div>
-              <div class="bottom">
-                <span class="left"></span>
-                <span class="right"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="content">
-            <div class="footer-top">
-              <a class="logo" href="/">
-                <img src="./app/img/logo-header.svg" />
-              </a>
-
-              <div class="menu">
-                <div class="left">
-                  <a href="/">Главная</a>
-                  <a href="news">Новости</a>
-                  <a href="tutorial">Обучение</a>
-                  <a href="statistics">Статистика</a>
-                </div>
-                <div class="center">
-                  <a href="partnership">Реферальная программа</a>
-                  <a href="crowdfunding">Краудфандинг</a>
-                  <a href="faq">FAQ</a>
-                </div>
-                <div class="right">
-                  <a href="reviews">Отзывы</a>
-                  <a href="guarantees">Гарантии</a>
-                  <a href="support">Тех. поддержка</a>
-                </div>
-              </div>
-
-              <div class="social">
-                <div class="caption">Мы в соц. сетях</div>
-                <div class="list">
-                  <a href="/" class="button-small item green bg-blue">
-                    <span class="bg"></span>
-                    <span class="bd-top"></span>
-                    <span class="bd-bottom"></span>
-                    <span class="bd-left"></span>
-                    <span class="bd-right"></span>
-                    <span class="caption">
-                      <img src="./app/img/icons/social-tg.svg" />
-                    </span>
-                  </a>
-                  <a href="/" class="button-small item green bg-blue">
-                    <span class="bg"></span>
-                    <span class="bd-top"></span>
-                    <span class="bd-bottom"></span>
-                    <span class="bd-left"></span>
-                    <span class="bd-right"></span>
-                    <span class="caption">
-                      <img src="./app/img/icons/social-ig.svg" />
-                    </span>
-                  </a>
-                  <a href="/" class="button-small item green bg-blue">
-                    <span class="bg"></span>
-                    <span class="bd-top"></span>
-                    <span class="bd-bottom"></span>
-                    <span class="bd-left"></span>
-                    <span class="bd-right"></span>
-                    <span class="caption">
-                      <img src="./app/img/icons/social-yt.svg" />
-                    </span>
-                  </a>
-                  <a href="/" class="button-small item green bg-blue">
-                    <span class="bg"></span>
-                    <span class="bd-top"></span>
-                    <span class="bd-bottom"></span>
-                    <span class="bd-left"></span>
-                    <span class="bd-right"></span>
-                    <span class="caption">
-                      <img src="./app/img/icons/social-vk.svg" />
-                    </span>
-                  </a>
-                  <a href="/" class="button-small item green bg-blue">
-                    <span class="bg"></span>
-                    <span class="bd-top"></span>
-                    <span class="bd-bottom"></span>
-                    <span class="bd-left"></span>
-                    <span class="bd-right"></span>
-                    <span class="caption">
-                      <img src="./app/img/icons/social-fb.svg" />
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="footer-bottom">
-              <div class="copyright">
-                Copyright © 2024 все права защищены. <br />
-                Входя на сайт, вы принимаете Пользовательское соглашение.
-                <br /><br />
-                Экономический симулятор - <a href="/"><?= $site_name; ?></a>
-              </div>
-
-              <div class="mirrors">
-                <div class="caption">Зеркала проекта:</div>
-                <div class="list">
-                  <a href="/">sitename.com</a>
-                  <a href="/">sitename.com</a>
-                  <a href="/">sitename.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- scroll-top -->
-    <button
-      id="scroll-top"
-      class="scroll-top"
-      aria-label="Перейти наверх страницы"
-      data-image="./app/img/base/btns/scroll-top.svg"></button>
-    <script src="./app/js/libs/jquery-3.7.1.min.js"></script>
-  </body>
+        </footer>
+        <!-- scroll-top -->
+        <button
+            id="scroll-top"
+            class="scroll-top"
+            aria-label="Перейти наверх страницы"
+            data-image="./app/img/base/btns/scroll-top.svg"></button>
+        <script src="./app/js/libs/jquery-3.7.1.min.js"></script>
+    </body>
 </html>

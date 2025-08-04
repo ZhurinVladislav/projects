@@ -1,0 +1,103 @@
+.header
+	position: relative
+	margin-bottom: 66px
+	padding: 26px 0
+	background-color: var(--white-color)
+	+sm
+		padding: 12px 0
+	+ph
+		margin-bottom: 40px
+	+max(552px)
+		padding: 12px 0 0 0
+
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 20px
+		+sm
+			z-index: inherit
+		+max(552px)
+			flex-direction: column
+			align-items: flex-start
+			gap: 12px
+
+	&__logo-link
+		max-width: 180px
+		+sm
+			max-width: 120px
+			z-index: 2001
+		+ph
+			max-width: 100px
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		gap: 26px
+		max-width: 1102px
+		width: 100%
+	
+	&__nav
+		+sm
+			display: none
+
+.header-content-top
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: 24px
+
+	&__right
+		display: flex
+		align-items: center
+		justify-content: end
+		flex-wrap: wrap
+		gap: 12px 24px
+		max-width: 100%
+		width: 100%
+		+lr
+			gap: 12px
+		+sm
+			padding-right: 54px
+		+ph
+			padding-right: 40px	
+		+max(552px)
+			padding-right: 0
+
+	&__link-icon
+		margin-right: 40px
+		+lr
+			margin-right: 0
+		+sm
+			display: none
+
+	&__link-list
+		margin-right: 24px
+		+lr
+			margin-right: 0
+		+sm
+			display: none
+
+	&__link
+		+sm
+			display: none
+		&_last
+			margin-right: 6px
+
+	&__btn-feedback
+		max-width: 185px
+		width: 100%
+		+sm
+			margin-left: auto
+		+max(552px)
+			font-size: 14px
+
+	&__menu-toggle
+		position: absolute
+		top: 50%
+		right: 12px
+		transform: translateY(-50%)
+		z-index: 2001
+		+max(552px)
+			top: 24px
+			transform: none

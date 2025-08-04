@@ -329,7 +329,7 @@
   "SVG icon sprite": {
     "prefix": "svgIcon",
     "body": [
-      "<svg class=\"icon icon--${1:example}\">",
+      "<svg class=\"icon\">",
       "		<use href=\"./app/img/icons/icons.svg#${1:example}\"></use>",
       "</svg>"
     ],
