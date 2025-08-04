@@ -1,0 +1,97 @@
+.hero
+	&__container
+		overflow: hidden
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		border-radius: 20px
+		min-height: 705px
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		+ph
+			min-height: 400px
+			gap: 20px
+		
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 0
+			width: 100%
+			height: 100%
+			filter: blur(338.5px)
+			background-color: rgba(0, 0, 0, 0.8)
+			+ph
+				filter: none
+				background-color: rgba(0, 0, 0, .4)
+
+	&__content
+		z-index: 1
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		gap: 24px
+		margin-bottom: 72px
+		margin: 0 auto
+		max-width: 723px
+		width: 100%
+		text-align: center
+
+	&__title
+		font-size: 96px
+		color: var(--white-color)
+		+sm
+			font-size: 65px
+		+ph
+			font-size: 45px
+
+	&__subtitle
+		font-size: 24px
+		text-align: center
+		color: var(--white-color)
+
+.hero-info
+	position: absolute
+	right: 27px
+	bottom: 37px
+	z-index: 1
+	display: flex
+	flex-direction: column
+	gap: 10px
+	padding-top: 14px
+	max-width: 265px
+	width: 100%
+	color: var(--text-color)
+	text-align: center
+	background-color: var(--bg-link)
+	+ph
+		position: relative	
+		right: auto
+		bottom: auto
+
+	&__img-wrap
+		position: absolute
+		top: -15px
+		right: -15px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 100%
+		padding: 5px
+		width: 55px
+		height: 55px
+		background-color: var(--white-color)
+
+	&__title
+		margin-bottom: 0
+		font-weight: 600
+		font-size: 24px
+
+	&__text-wrap
+		padding: 14px 10px 23px
+		background-color: var(--white-color)
+		

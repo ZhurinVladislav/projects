@@ -1,0 +1,92 @@
+.links
+	display: flex
+	align-items: center
+	gap: 8px
+	
+.link-text
+	display: flex
+	align-items: center
+	gap: 10px
+	max-width: max-content
+	text-align: center
+	border-bottom: 1px solid var(--none-color)
+	transition: color .2s linear, border-color .2s linear, transform .2s linear
+	+hover
+		color: var(--grey-color)
+	+focus
+		border-color: var(--grey-color)
+	&:active
+		transform: scale(.98)
+	&__icon
+		width: 20px
+		height: 20px
+		transition: transform .2s linear
+
+.icon-link
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 32px
+	height: 32px
+
+.link
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 10px
+	border-radius: 100px
+	padding: 8px 18px
+	max-width: 200px
+	min-width: 64px
+	min-height: 47px
+	text-align: center
+	background-color: var(--bg-link)
+	transition: opacity .2s linear
+	+hover
+		opacity: .6
+	+focus
+		opacity: .6
+	&:active
+		opacity: .7
+
+	&__icon
+		width: 16px
+		height: 16px
+		&_lg
+			width: 24px
+			height: 24px
+	
+// .link-inv
+// 	display: flex
+// 	align-items: center
+// 	justify-content: center
+// 	gap: 10px
+// 	padding: 8px 18px
+// 	max-width: 262px
+// 	min-width: 42px
+// 	min-height: 42px
+// 	font-weight: 500
+// 	line-height: 100%
+// 	font-size: 16px
+// 	text-align: center
+// 	border: 1px solid var(--white-color-op)
+// 	transition: border-color .2s linear
+// 	+hover
+// 		border-color: var(--white-color)
+// 	+focus
+// 		border-color: var(--white-color)
+// 	&:active
+// 		border-color: var(--active-color)
+
+// 	&_br
+// 		border-radius: 22px
+
+// 	&_brc
+// 		border-radius: 100%
+// 		padding: 0
+
+// 	&__icon
+// 		width: 20px
+// 		height: 20px
+// 		fill: var(--text-color)
+	

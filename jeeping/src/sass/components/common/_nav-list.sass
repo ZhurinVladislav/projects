@@ -1,0 +1,28 @@
+.nav-list
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: 12px
+
+	&__item
+		&.parent
+			position: relative
+			+hover
+				.link-text__icon
+					transform: rotateX(-180deg)
+				.dropdown-menu
+					opacity: 1
+					visibility: visible
+
+		&.active
+			.nav-list__item-link
+				color: var(--text-color)
+				
+	&__item-link
+		color: var(--grey-color)
+		+hover
+			color: var(--text-color)
+		+focus
+			color: var(--text-color)
+		&:active
+			color: var(--text-color)

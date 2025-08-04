@@ -1,10 +1,6 @@
 import MobMenu from './libs/mob-menu.min.js';
-import utilts from './libs/utilts.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Инициализация функций из файла utilts
-  utilts();
-
   // Инициализация функций мобильного меню
   const mobMenuWrap = document.getElementById('menu-mobile');
   const mobMenuBtn = document.getElementById('menu-toggle');
@@ -165,9 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     accordionText.forEach(el => el.classList.add('accordion-hidden'));
 
-    accordionBtn[0].classList.add('active');
-    accordionBtn[0].parentNode.classList.add('active');
-    accordionText[0].style.maxHeight = `${accordionText[0].scrollHeight}px`;
+    // accordionBtn[0].classList.add('active');
+    // accordionBtn[0].parentNode.classList.add('active');
+    // accordionText[0].style.maxHeight = `${accordionText[0].scrollHeight}px`;
 
     accordionBtn.forEach(el => {
       el.addEventListener('click', () => {

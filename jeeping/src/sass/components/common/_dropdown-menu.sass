@@ -1,0 +1,29 @@
+.dropdown-menu
+	position: absolute
+	display: flex
+	flex-direction: column
+	gap: 16px
+	border-radius: 12px
+	padding: 16px
+	width: 369px
+	height: max-content
+	box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.12)
+	background-color: var(--white-color)
+	opacity: 0
+	visibility: hidden
+	transition: opacity .2s linear, visibility .2s linear
+
+	&__item
+		&.active
+			.dropdown-menu__link
+				color: var(--text-color)
+
+	&__link
+		color: var(--grey-color)
+		transition: color .2s linear
+		+hover
+			color: var(--text-color)
+		+focus
+			color: var(--text-color)
+		&:active
+			color: var(--text-color)

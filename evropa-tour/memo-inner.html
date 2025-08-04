@@ -22,13 +22,7 @@
 
     <body class="inner">
         <!-- preloader -->
-        <div id="preloader" class="inner__preloader preloader">
-            <div class="preloader__wrapper">
-                <div class="preloader__item-wrapper">
-                    <div class="preloader__item"></div>
-                </div>
-            </div>
-        </div>
+        <div id="preloader" class="inner__preloader preloader"></div>
         <!-- header -->
         <header class="inner__header header">
             <!-- header-top -->
@@ -384,7 +378,39 @@
                         <h2 class="memo-inner__title title-2">
                             Памятка туристу в Абхазию
                         </h2>
-                        <nav class="memo-inner__nav memo-inner-nav">
+
+                        <ul id="tabs" class="memo-inner__tabs-list tabs-list">
+                            <li class="tabs-list__item">
+                                <button
+                                    class="tabs-list__item-btn js-tabs-btn"
+                                    aria-label="Открыть блок с информацией о визе">
+                                    Виза
+                                </button>
+                            </li>
+                            <li class="tabs-list__item">
+                                <button
+                                    class="tabs-list__item-btn js-tabs-btn"
+                                    aria-label="Открыть блок с информацией о доплатах">
+                                    Доплаты
+                                </button>
+                            </li>
+                            <li class="tabs-list__item">
+                                <button
+                                    class="tabs-list__item-btn js-tabs-btn"
+                                    aria-label="Открыть блок с памяткой">
+                                    Памятка
+                                </button>
+                            </li>
+                            <li class="tabs-list__item">
+                                <button
+                                    class="tabs-list__item-btn js-tabs-btn"
+                                    aria-label="Открыть блок с информацией о страховке">
+                                    Страховка
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- <nav class="memo-inner__nav memo-inner-nav">
                             <ul class="memo-inner-nav__list">
                                 <li class="memo-inner-nav__list-item">
                                     <a
@@ -419,40 +445,261 @@
                                     </a>
                                 </li>
                             </ul>
-                        </nav>
-                        <div class="memo-inner__content content">
-                            <p class="content__p">
-                                Чтобы ваша поездка в Абхазию прошла максимально
-                                комфортно и приятно, мы подготовили специально
-                                для вас небольшую памятку туриста. Прочитав ее,
-                                вы узнаете чуть больше о самой стране и о том:
-                            </p>
-                            <ul class="content__ul">
-                                <li class="content__li">
-                                    как подготовиться к путешествию;
-                                </li>
-                                <li class="content__li">
-                                    как пройти таможенный и ветеринарный
-                                    контроль и какие трудности могут возникнуть
-                                    в аэропортах;
-                                </li>
-                                <li class="content__li">
-                                    какие обычаи есть в Абхазии и чем славится
-                                    национальная кухня;
-                                </li>
-                                <li class="content__li">
-                                    какая погода обычно в Абхазии в разное время
-                                    года;
-                                </li>
-                                <li class="content__li">
-                                    куда обращаться в экстренном случае.
-                                </li>
-                            </ul>
-                            <p class="content__p">
-                                Ознакомьтесь с памяткой перед поездкой, и ничто
-                                не сможет испортить ваш отдых!
-                            </p>
-                        </div>
+                        </nav> -->
+                        <ul
+                            id="tabs-content-wrap"
+                            class="memo-inner__list tabs-content-wrap">
+                            <li
+                                class="memo-inner__list-item content tabs-content js-tabs-content">
+                                <p class="content__p">
+                                    Чтобы ваша поездка в Абхазию прошла
+                                    максимально комфортно и приятно, мы
+                                    подготовили специально для вас небольшую
+                                    памятку туриста. Прочитав ее, вы узнаете
+                                    чуть больше о самой стране и о том:
+                                </p>
+                                <ul class="content__ul">
+                                    <li class="content__li">
+                                        как подготовиться к путешествию;
+                                    </li>
+                                    <li class="content__li">
+                                        как пройти таможенный и ветеринарный
+                                        контроль и какие трудности могут
+                                        возникнуть в аэропортах;
+                                    </li>
+                                    <li class="content__li">
+                                        какие обычаи есть в Абхазии и чем
+                                        славится национальная кухня;
+                                    </li>
+                                    <li class="content__li">
+                                        какая погода обычно в Абхазии в разное
+                                        время года;
+                                    </li>
+                                    <li class="content__li">
+                                        куда обращаться в экстренном случае.
+                                    </li>
+                                </ul>
+                                <ul class="faq__list js-accordion">
+                                    <li class="faq__list-item accordion active">
+                                        <button
+                                            class="accordion__btn js-accordion-btn active">
+                                            <span class="accordion__btn-text">
+                                                Медсестра
+                                            </span>
+                                            <div
+                                                class="accordion__btn-wrapper-icon">
+                                                <svg
+                                                    class="accordion__btn-icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#arrow"></use>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <div
+                                            class="accordion__content js-accordion-content accordion-hidden">
+                                            <div class="accordion__text">
+                                                <p>
+                                                    Здесь спрятано описание
+                                                    требований к соискателю
+                                                </p>
+                                                <p>
+                                                    <strong
+                                                        >Приглашаем в нашу
+                                                        команду медсестру
+                                                        процедурного кабинета<br />
+                                                    </strong>
+                                                </p>
+                                                <p>
+                                                    График работы: 0,5 ставки
+                                                    (18 часов в неделю), 1 день
+                                                    в будни + суббота с 09:00 до
+                                                    18:00 (обязательно).
+                                                </p>
+                                                <p>
+                                                    Требования: сертификат по
+                                                    специальности “сестринское
+                                                    дело”, навыки забора крови
+                                                    из вены, мазков из
+                                                    дыхательных путей, владение
+                                                    различными типами инъекций,
+                                                    опытный пользователь ПК.
+                                                </p>
+                                                <p>
+                                                    Эта кнопка ведёт на сайт
+                                                    HadHanter или где у них
+                                                    размещены вакансии, можно
+                                                    конечно и здесь принимать
+                                                    данные, но лучше там.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="faq__list-item accordion active">
+                                        <button
+                                            class="accordion__btn js-accordion-btn active">
+                                            <span class="accordion__btn-text">
+                                                Медсестра
+                                            </span>
+                                            <div
+                                                class="accordion__btn-wrapper-icon">
+                                                <svg
+                                                    class="accordion__btn-icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#arrow"></use>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <div
+                                            class="accordion__content js-accordion-content accordion-hidden">
+                                            <div class="accordion__text">
+                                                <p>
+                                                    Здесь спрятано описание
+                                                    требований к соискателю
+                                                </p>
+                                                <p>
+                                                    <strong
+                                                        >Приглашаем в нашу
+                                                        команду медсестру
+                                                        процедурного кабинета<br />
+                                                    </strong>
+                                                </p>
+                                                <p>
+                                                    График работы: 0,5 ставки
+                                                    (18 часов в неделю), 1 день
+                                                    в будни + суббота с 09:00 до
+                                                    18:00 (обязательно).
+                                                </p>
+                                                <p>
+                                                    Требования: сертификат по
+                                                    специальности “сестринское
+                                                    дело”, навыки забора крови
+                                                    из вены, мазков из
+                                                    дыхательных путей, владение
+                                                    различными типами инъекций,
+                                                    опытный пользователь ПК.
+                                                </p>
+                                                <p>
+                                                    Эта кнопка ведёт на сайт
+                                                    HadHanter или где у них
+                                                    размещены вакансии, можно
+                                                    конечно и здесь принимать
+                                                    данные, но лучше там.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="content__p">
+                                    Ознакомьтесь с памяткой перед поездкой, и
+                                    ничто не сможет испортить ваш отдых!
+                                </p>
+                            </li>
+                            <li
+                                class="memo-inner__list-item content tabs-content js-tabs-content">
+                                <p class="content__p">
+                                    Чтобы ваша поездка в Абхазию прошла
+                                    максимально комфортно и приятно, мы
+                                    подготовили специально для вас небольшую
+                                    памятку туриста. Прочитав ее, вы узнаете
+                                    чуть больше о самой стране и о том:
+                                </p>
+                                <ul class="content__ul">
+                                    <li class="content__li">
+                                        как подготовиться к путешествию;
+                                    </li>
+                                    <li class="content__li">
+                                        как пройти таможенный и ветеринарный
+                                        контроль и какие трудности могут
+                                        возникнуть в аэропортах;
+                                    </li>
+                                    <li class="content__li">
+                                        какие обычаи есть в Абхазии и чем
+                                        славится национальная кухня;
+                                    </li>
+                                    <li class="content__li">
+                                        какая погода обычно в Абхазии в разное
+                                        время года;
+                                    </li>
+                                    <li class="content__li">
+                                        куда обращаться в экстренном случае.
+                                    </li>
+                                </ul>
+                                <p class="content__p">
+                                    Ознакомьтесь с памяткой перед поездкой, и
+                                    ничто не сможет испортить ваш отдых!
+                                </p>
+                            </li>
+                            <li
+                                class="memo-inner__list-item content tabs-content js-tabs-content">
+                                <p class="content__p">
+                                    Чтобы ваша поездка в Абхазию прошла
+                                    максимально комфортно и приятно, мы
+                                    подготовили специально для вас небольшую
+                                    памятку туриста. Прочитав ее, вы узнаете
+                                    чуть больше о самой стране и о том:
+                                </p>
+                                <ul class="content__ul">
+                                    <li class="content__li">
+                                        как подготовиться к путешествию;
+                                    </li>
+                                    <li class="content__li">
+                                        как пройти таможенный и ветеринарный
+                                        контроль и какие трудности могут
+                                        возникнуть в аэропортах;
+                                    </li>
+                                    <li class="content__li">
+                                        какие обычаи есть в Абхазии и чем
+                                        славится национальная кухня;
+                                    </li>
+                                    <li class="content__li">
+                                        какая погода обычно в Абхазии в разное
+                                        время года;
+                                    </li>
+                                    <li class="content__li">
+                                        куда обращаться в экстренном случае.
+                                    </li>
+                                </ul>
+                                <p class="content__p">
+                                    Ознакомьтесь с памяткой перед поездкой, и
+                                    ничто не сможет испортить ваш отдых!
+                                </p>
+                            </li>
+                            <li
+                                class="memo-inner__list-item content tabs-content js-tabs-content">
+                                <p class="content__p">
+                                    Чтобы ваша поездка в Абхазию прошла
+                                    максимально комфортно и приятно, мы
+                                    подготовили специально для вас небольшую
+                                    памятку туриста. Прочитав ее, вы узнаете
+                                    чуть больше о самой стране и о том:
+                                </p>
+                                <ul class="content__ul">
+                                    <li class="content__li">
+                                        как подготовиться к путешествию;
+                                    </li>
+                                    <li class="content__li">
+                                        как пройти таможенный и ветеринарный
+                                        контроль и какие трудности могут
+                                        возникнуть в аэропортах;
+                                    </li>
+                                    <li class="content__li">
+                                        какие обычаи есть в Абхазии и чем
+                                        славится национальная кухня;
+                                    </li>
+                                    <li class="content__li">
+                                        какая погода обычно в Абхазии в разное
+                                        время года;
+                                    </li>
+                                    <li class="content__li">
+                                        куда обращаться в экстренном случае.
+                                    </li>
+                                </ul>
+                                <p class="content__p">
+                                    Ознакомьтесь с памяткой перед поездкой, и
+                                    ничто не сможет испортить ваш отдых!
+                                </p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
