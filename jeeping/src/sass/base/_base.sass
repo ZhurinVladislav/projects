@@ -4,6 +4,12 @@
   color: var(--white-color)
   
 html
+  &.pre-hidden
+    padding-right: 4px
+    overflow-y: hidden !important
+    +lr
+      padding-right: 0
+
   &.mod-open
     padding-right: 4px
     overflow-y: hidden !important
@@ -16,12 +22,15 @@ body.menu-open
     overflow: hidden
 
 body
+  padding-bottom: 71px
   font-family: var(--font-main)
   font-weight: var(--font-weight-base)
   line-height: var(--font-line-height-base)
   font-size: var(--font-size-base)
   color: var(--text-color)
   background-color: var(--page-color)
+  +ph
+    padding-bottom: 48px
 
   &::-webkit-scrollbar
     width: 4px
@@ -29,7 +38,7 @@ body
 
   &::-webkit-scrollbar-thumb
     border-radius: 8px
-    background-color: var(--primary-color)
+    background: linear-gradient(0deg, #12a26f 0%, #00c7f0 100%)
 
 // стили для секций
 .section
@@ -71,12 +80,13 @@ body
     font-size: 24px
 
 .title-3
-  margin-bottom: 12px
-  font-weight: 700
-  font-size: 15px
-  line-height: 113%
-  letter-spacing: -0.02em
-  color: var(--text-color)
+  font-weight: 600
+  font-size: 24px
+
+.subtitle
+  font-size: 20px
+  +ph
+    font-size: 18px
 
 // скрытие текста
 .text-hidden
@@ -104,13 +114,17 @@ body
 .logo
   position: relative
   display: flex
-  font-size: 0
   flex-shrink: 0
+  max-width: 180px
+  max-height: 109px
+  height: 100%
+  font-size: 0
   transition: opacity .2s linear
-  &_ph-hidden
-    display: none
-    +ph
-      display: flex
+  +sm
+    max-width: 120px
+    z-index: 2001
+  +ph
+    max-width: 100px
   +hover
     opacity: .7
   +focus
@@ -119,3 +133,19 @@ body
     width: 100%
     height: 100%
     transition: opacity .2s linear
+
+.title-wrap
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  gap: 16px
+  margin-bottom: 69px
+  +sm
+    margin-bottom: 40px
+  +ph
+    margin-bottom: 32px
+
+  &__title
+    margin-bottom: 0

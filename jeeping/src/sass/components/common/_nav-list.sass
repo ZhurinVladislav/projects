@@ -1,8 +1,29 @@
 .nav-list
 	display: flex
-	align-items: center
 	justify-content: space-between
 	gap: 12px
+
+	&_cl
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+		gap: 20px
+		+ph
+			gap: 14px
+
+		.nav-list__item.active
+			.nav-list__item-link
+				color: var(--grey-color)
+
+		.nav-list__item-link
+			color: var(--text-color)
+			text-align: left
+			+hover
+				color: var(--grey-color)
+			+focus
+				color: var(--grey-color)
+			&:active
+				color: var(--grey-color)
 
 	&__item
 		&.parent
