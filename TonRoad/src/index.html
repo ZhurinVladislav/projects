@@ -4,29 +4,31 @@
         <meta charset="UTF-8" />
         <base href="/" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
         <!-- SEO -->
         <title>TonRoad</title>
         <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
         <!-- styles -->
         <link rel="stylesheet" href="./app/css/style.min.css" />
         <!-- scripts -->
-        <script src="./app/js/libs/utilts.min.js" defer></script>
+        <script src="./app/js/libs/lazy-load.min.js" defer></script>
         <script src="./app/js/index.min.js" defer></script>
     </head>
 
     <body>
-        <div class="app" data-image="./img/home/main/iframe-bg.jpg">
+        <div
+            class="app"
+            style='background-image: url("./app/img/home/main/iframe-bg.jpg");'>
             <!-- header -->
             <header class="app__header header">
                 <div class="header__container container">
                     <a
                         class="header__avatar-card avatar-card"
-                        data-image="./img/base/header/user-card.png"
+                        href="#"
                         aria-label="Перейти на страница профиля пользователя">
                         <img
                             class="avatar-card__img"
-                            data-src="./img/base/header/avatar.png"
+                            src="./app/img/base/header/avatar.png"
                             alt="Аватар пользователя" />
                         <span class="avatar-card__text">Level 10</span>
                     </a>
@@ -38,14 +40,14 @@
                                 aria-label="Пополнить монеты">
                                 <img
                                     class="list-stat-link__img list-stat-link__img_first"
-                                    src="./img/base/header/coin.png"
+                                    src="./app/img/base/header/coin.png"
                                     alt="Монета" />
                                 <span class="list-stat-link__text">
                                     123456
                                 </span>
                                 <img
                                     class="list-stat-link__img"
-                                    src="./img/base/header/plus.png"
+                                    src="./app/img/base/header/plus.png"
                                     alt="Плюс" />
                             </a>
                         </li>
@@ -56,14 +58,14 @@
                                 aria-label="Пополнить энергию">
                                 <img
                                     class="list-stat-link__img list-stat-link__img_first"
-                                    data-src="./img/base/header/energy.png"
+                                    data-src="./app/img/base/header/energy.png"
                                     alt="Энергия" />
                                 <span class="list-stat-link__text">
                                     123456
                                 </span>
                                 <img
                                     class="list-stat-link__img"
-                                    data-src="./img/base/header/plus.png"
+                                    data-src="./app/img/base/header/plus.png"
                                     alt="Плюс" />
                             </a>
                         </li>
@@ -74,14 +76,14 @@
                                 aria-label="Пополнить топливо">
                                 <img
                                     class="list-stat-link__img list-stat-link__img_first"
-                                    data-src="./img/base/header/canister.png"
+                                    data-src="./app/img/base/header/canister.png"
                                     alt="Топливо" />
                                 <span class="list-stat-link__text">
                                     123456
                                 </span>
                                 <img
                                     class="list-stat-link__img"
-                                    data-src="./img/base/header/plus.png"
+                                    data-src="./app/img/base/header/plus.png"
                                     alt="Плюс" />
                             </a>
                         </li>
@@ -92,28 +94,28 @@
                                 aria-label="Пополнить кристаллы">
                                 <img
                                     class="list-stat-link__img list-stat-link__img_first"
-                                    data-src="./img/base/header/crystal.png"
+                                    data-src="./app/img/base/header/crystal.png"
                                     alt="Кристалл" />
                                 <span class="list-stat-link__text">
                                     123456
                                 </span>
                                 <img
                                     class="list-stat-link__img"
-                                    data-src="./img/base/header/plus.png"
+                                    data-src="./app/img/base/header/plus.png"
                                     alt="Плюс" />
                             </a>
                         </li>
                     </ul>
                     <button
                         class="header__btn-menu"
-                        data-image="./img/base/header/menu-btn.png"
+                        data-image="./app/img/base/header/menu-btn.png"
                         aria-label="Открыть мобильное меню"></button>
                 </div>
             </header>
             <!-- main -->
             <main class="app__main"></main>
             <!-- footer -->
-            <footer class="app__footer footer">
+            <!-- <footer class="app__footer footer">
                 <div class="footer__container container">
                     <div class="footer__layer footer__layer_first">
                         <div class="footer__layer-left">
@@ -121,7 +123,7 @@
                                 <li class="items-list__item">
                                     <img
                                         class="items-list__item-img"
-                                        data-src="./img/base/footer/items/cactus.png"
+                                        data-src="./app/img/base/footer/items/cactus.png"
                                         alt="Кактус на приборной панели" />
                                 </li>
                             </ul>
@@ -139,7 +141,7 @@
                                 <li class="items-list__item">
                                     <img
                                         class="items-list__item-img"
-                                        data-src="./img/base/footer/items/car.png"
+                                        data-src="./app/img/base/footer/items/car.png"
                                         alt="Машинка на приборной панели" />
                                 </li>
                             </ul>
@@ -148,19 +150,19 @@
                                 <li class="items-list__item">
                                     <img
                                         class="items-list__item-img"
-                                        data-src="./img/base/footer/stickers/sticker-1.png"
+                                        data-src="./app/img/base/footer/stickers/sticker-1.png"
                                         alt="Стикер котика" />
                                 </li>
                                 <li class="items-list__item">
                                     <img
                                         class="items-list__item-img"
-                                        data-src="./img/base/footer/stickers/sticker-2.png"
+                                        data-src="./app/img/base/footer/stickers/sticker-2.png"
                                         alt="Стикер знака" />
                                 </li>
                                 <li class="items-list__item">
                                     <img
                                         class="items-list__item-img"
-                                        data-src="./img/base/footer/stickers/sticker-3.png"
+                                        data-src="./app/img/base/footer/stickers/sticker-3.png"
                                         alt="Стикер пальмы" />
                                 </li>
                             </ul>
@@ -171,7 +173,7 @@
                         <div class="footer__layer-dashboard">
                             <img
                                 class="footer__layer-dashboard-img"
-                                data-src="./img/base/footer/dashboard.png"
+                                data-src="./app/img/base/footer/dashboard.png"
                                 alt="Приборная панель" />
                         </div>
 
@@ -180,7 +182,7 @@
                             <li class="items-list__item">
                                 <img
                                     class="items-list__item-img"
-                                    data-src="./img/base/footer/stickers/sticker-4.png"
+                                    data-src="./app/img/base/footer/stickers/sticker-4.png"
                                     alt="Стикер машинки" />
                             </li>
                         </ul>
@@ -193,14 +195,14 @@
                                     <a
                                         class="footer__menu-list-item-link footer-menu-link"
                                         href="#"
-                                        data-image="./img/base/footer/menu/home.png"
+                                        data-image="./app/img/base/footer/menu/home.png"
                                         aria-label="Перейти на главный экран"></a>
                                 </li>
                                 <li class="footer__menu-list-item">
                                     <a
                                         class="footer__menu-list-item-link footer-menu-link"
                                         href="#"
-                                        data-image="./img/base/footer/menu/game.png"
+                                        data-image="./app/img/base/footer/menu/game.png"
                                         aria-label="Перейти на экран игры"></a>
                                 </li>
                             </ul>
@@ -211,14 +213,14 @@
                                     <a
                                         class="footer__menu-list-item-link footer-menu-link"
                                         href="#"
-                                        data-image="./img/base/footer/menu/tasks.png"
+                                        data-image="./app/img/base/footer/menu/tasks.png"
                                         aria-label="Перейти на экран с заданиями"></a>
                                 </li>
                                 <li class="footer__menu-list-item">
                                     <a
                                         class="footer__menu-list-item-link footer-menu-link"
                                         href="#"
-                                        data-image="./img/base/footer/menu/shop.png"
+                                        data-image="./app/img/base/footer/menu/shop.png"
                                         aria-label="Перейти на экран магазина"></a>
                                 </li>
                             </ul>
@@ -229,11 +231,11 @@
                         <img
                             class="footer__img-wheel"
                             style="transform: rotate(0deg)"
-                            src="./img/base/footer/wheel.png"
+                            src="./app/img/base/footer/wheel.png"
                             alt="Руль" />
                     </div>
                 </div>
-            </footer>
+            </footer> -->
         </div>
     </body>
 </html>
