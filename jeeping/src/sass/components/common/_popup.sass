@@ -60,7 +60,7 @@
     transition: opacity .2s linear, transform .2s linear
     +hover
       &:before, &:after
-        background-color: var(--accent-color)
+        background-color: var(--primary-color)
     &:active
       transform: scale(.94)
 
@@ -93,12 +93,10 @@
   &__text
     font-size: 20px
 
-  &__form
+  .form
     display: flex
     flex-direction: column
-    gap: 12px
-  
-  .form
+    gap: 24px
     min-width: 400px
     +sm
       min-width: 240px

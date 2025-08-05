@@ -13,14 +13,17 @@
         <!-- styles -->
         <link rel="stylesheet" href="./app/css/style.min.css" />
         <!-- scripts -->
-        <script src="./app/js/libs/preloader.min.js"></script>
         <script src="./app/js/libs/lazy-load.min.js"></script>
+        <script src="./app/js/libs/preloader.min.js"></script>
         <script src="./app/js/libs/popup.min.js" defer></script>
         <script src="./app/js/libs/swiper.min.js" defer></script>
+        <script src="./app/js/libs/utilts.min.js" defer></script>
         <script src="./app/js/index.min.js" defer></script>
     </head>
 
     <body>
+        <!-- preloader -->
+        <div id="preloader" class="preloader"></div>
         <!-- header -->
         <header class="header">
             <div class="header__container container">
@@ -75,7 +78,8 @@
                         <div class="header-content-top__right">
                             <a
                                 class="header-content-top__link-icon icon-link"
-                                href="#">
+                                href="#"
+                                aria-label="Перейти на страницу с избранными услугами">
                                 <svg class="icon-link__icon">
                                     <use
                                         href="./app/img/icons/icons.svg#heart"></use>
@@ -139,7 +143,7 @@
                     </div>
 
                     <nav class="header__nav">
-                        <ul class="header__nav nav-list">
+                        <ul class="header__nav-list nav-list">
                             <li class="nav-list__item active">
                                 <a
                                     class="nav-list__item-link link-text"
@@ -274,7 +278,6 @@
                     </nav>
                 </div>
             </div>
-
             <!-- menu-mobile -->
             <div id="menu-mobile" class="header__menu-mobile menu-mobile">
                 <nav class="menu-mobile__menu">
@@ -374,30 +377,33 @@
                 <h1 class="hero__title-hidden text-hidden">
                     Джиппинг туры в&#160;Геленджике
                 </h1>
-                <div
-                    class="hero__container container"
-                    data-image="./app/img/home/hero/bg-img.jpg">
-                    <div class="hero__content">
-                        <h2 class="hero__title title-1">
-                            Джиппинг туры в&#160;Геленджике
-                        </h2>
-                        <p class="hero__subtitle">
-                            Лучшие туры и&#160;активный отдых.
-                        </p>
-                    </div>
-
-                    <div class="hero__info hero-info border-radius">
-                        <div class="hero-info__img-wrap">
-                            <img
-                                class="hero-info__img"
-                                data-src="./app/img/base/lamp.png"
-                                alt="Лампочка" />
-                        </div>
-                        <p class="hero-info__title title-3">162 идеи</p>
-                        <div class="hero-info__text-wrap border-radius">
-                            <p class="hero-info__text">
-                                для активного отдыха в&#160;Геленджике на&#160;одном сайте
+                <div class="hero__container container">
+                    <div
+                        class="hero__content-wrap"
+                        data-image="./app/img/home/hero/bg-img.jpg">
+                        <div class="hero__content">
+                            <h2 class="hero__title title-1">
+                                Джиппинг туры в&#160;Геленджике
+                            </h2>
+                            <p class="hero__subtitle">
+                                Лучшие туры и&#160;активный отдых.
                             </p>
+                        </div>
+
+                        <div class="hero__info hero-info border-radius">
+                            <div class="hero-info__img-wrap">
+                                <img
+                                    class="hero-info__img"
+                                    data-src="./app/img/base/lamp.png"
+                                    alt="Лампочка" />
+                            </div>
+                            <p class="hero-info__title title-3">162 идеи</p>
+                            <div class="hero-info__text-wrap border-radius">
+                                <p class="hero-info__text">
+                                    для активного отдыха в&#160;Геленджике на&#160;одном
+                                    сайте
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -431,52 +437,496 @@
             <!-- catalog -->
             <section class="catalog section">
                 <div class="catalog__container container">
-                    <h2 class="catalog__title title-2">
-                        Популярные джип-туры (джиппинг) в&#160;Геленджике
-                    </h2>
-                    <p class="catalog__subtitle subtitle">
-                        Выберите свой джип-тур&#160;&#8212; от&#160;семейных маршрутов до
-                        экстремального бездорожья
-                    </p>
+                    <div class="services__title-wrap title-wrap">
+                        <h2 class="title-wrap__title title-2">
+                            Популярные джип-туры (джиппинг) в&#160;Геленджике
+                        </h2>
+                        <p class="title-wrap__subtitle subtitle">
+                            Выберите свой джип-тур&#160;&#8212; от&#160;семейных маршрутов до
+                            экстремального бездорожья
+                        </p>
+                    </div>
 
                     <ul class="catalog__list-tab list-tab">
                         <li class="list-tab__item">
                             <button
-                                class="list-tab__item-btn btn js-tabs-btn"
+                                class="list-tab__item-btn btn btn_inv active js-tabs-btn"
                                 aria-label="Раскрыть элементы категории 'Популярные маршруты'">
                                 Популярные маршруты
                             </button>
                         </li>
                         <li class="list-tab__item">
                             <button
-                                class="list-tab__item-btn btn js-tabs-btn"
+                                class="list-tab__item-btn btn btn_inv js-tabs-btn"
                                 aria-label="Раскрыть элементы категории 'Семейные туры'">
                                 Семейные туры
                             </button>
                         </li>
                         <li class="list-tab__item">
                             <button
-                                class="list-tab__item-btn btn js-tabs-btn"
+                                class="list-tab__item-btn btn btn_inv js-tabs-btn"
                                 aria-label="Раскрыть элементы категории 'Экстремальные заезды'">
                                 Экстремальные заезды
                             </button>
                         </li>
                         <li class="list-tab__item">
                             <button
-                                class="list-tab__item-btn btn js-tabs-btn"
+                                class="list-tab__item-btn btn btn_inv js-tabs-btn"
                                 aria-label="Раскрыть элементы категории 'Индивидуальные джип-туры'">
                                 Индивидуальные джип-туры
                             </button>
                         </li>
                     </ul>
+                    <div
+                        id="tabs-content-wrap"
+                        class="catalog__list-wrap tabs-content-wrap">
+                        <ul class="catalog__cards-list cards-list">
+                            <li class="cards-list__item">
+                                <a
+                                    class="cards-list__item-link card"
+                                    href="#"
+                                    aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    <div class="card__img-wrap">
+                                        <div class="card__tags card__tags_top">
+                                            <span
+                                                class="card-tag__card-tag card-tag card-tag_green">
+                                                Популярные маршруты
+                                            </span>
+                                            <span
+                                                class="card-tag__link-icon icon-link"
+                                                href="#"
+                                                aria-label="Перейти на страницу с избранными услугами">
+                                                <svg class="icon-link__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img
+                                            class="card__img"
+                                            src="./app/img/home/services/img-1.jpg"
+                                            alt="Изображение" />
+                                        <div
+                                            class="card__tags card__tags_bottom">
+                                            <span
+                                                class="card-tag__card-tag card-tag">
+                                                в&#160;любой день
+                                                <svg class="card-tag__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#node"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card__content">
+                                        <h3 class="card__title title-3">
+                                            Озерейка Экстрим
+                                        </h3>
+                                        <p class="card__text">
+                                            Прокатимся по&#160;горным тропам, руслам
+                                            рек и&#160;настоящему бездорожью к&#160;бухте
+                                            Озерейка. Прыжки, наклоны, брызги и
+                                            пыль&#160;&#8212; драйв обеспечен! По&#160;пути&#160;&#8212;
+                                            смотровые, родники и&#160;купание в&#160;море.
+                                        </p>
 
-                    <ul class="catalog__cards-list cards-list">
-                        <li class="cards-list__item">
+                                        <div class="card__info">
+                                            <div class="card__info-text-wrap">
+                                                <p
+                                                    class="card__info-text card__info-text_sm">
+                                                    5 часов / Групповая
+                                                </p>
+                                                <p class="card__info-text">
+                                                    1600 руб / чел
+                                                </p>
+                                            </div>
+
+                                            <span
+                                                class="card__info-link link link_bark">
+                                                Подробнее
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="cards-list__item">
+                                <a
+                                    class="cards-list__item-link card"
+                                    href="#"
+                                    aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    <div class="card__img-wrap">
+                                        <div class="card__tags card__tags_top">
+                                            <span
+                                                class="card-tag__card-tag card-tag"></span>
+                                            <a
+                                                class="card-tag__link-icon icon-link"
+                                                href="#"
+                                                aria-label="Перейти на страницу с избранными услугами">
+                                                <svg class="icon-link__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#heart"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <img
+                                            class="card__img"
+                                            src="./app/img/home/services/img-1.jpg"
+                                            alt="Изображение" />
+                                        <div
+                                            class="card__tags card__tags_bottom">
+                                            <span
+                                                class="card-tag__card-tag card-tag">
+                                                в&#160;любой день
+                                                <svg class="card-tag__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#node"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card__content">
+                                        <h3 class="card__title title-3">
+                                            Озерейка Экстрим
+                                        </h3>
+                                        <p class="card__text">
+                                            Прокатимся по&#160;горным тропам, руслам
+                                            рек и&#160;настоящему бездорожью к&#160;бухте
+                                            Озерейка. Прыжки, наклоны, брызги и
+                                            пыль&#160;&#8212; драйв обеспечен! По&#160;пути&#160;&#8212;
+                                            смотровые, родники и&#160;купание в&#160;море.
+                                        </p>
+
+                                        <div class="card__info">
+                                            <div class="card__info-text-wrap">
+                                                <p
+                                                    class="card__info-text card__info-text_sm">
+                                                    5 часов / Групповая
+                                                </p>
+                                                <p class="card__info-text">
+                                                    1600 руб / чел
+                                                </p>
+                                            </div>
+
+                                            <span
+                                                class="card__info-link link link_bark">
+                                                Подробнее
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <a
+                            class="catalog__link-more link link_inv"
+                            href="#"
+                            aria-label="Перейти на страницу">
+                            Смотреть все
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- services -->
+            <section class="services section">
+                <div class="services__container container">
+                    <div class="services__title-wrap title-wrap">
+                        <h2 class="title-wrap__title title-2">
+                            Другие виды активного отдыха в&#160;Геленджике
+                        </h2>
+                        <p class="title-wrap__subtitle subtitle">
+                            Вейксерфинг, яхты и&#160;морские прогулки
+                        </p>
+                    </div>
+
+                    <ul class="services__list list">
+                        <li class="list__item">
                             <a
-                                class="cards-list__item-link card"
+                                class="list__item-link link-img"
                                 href="#"
-                                aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                aria-label="Перейти на страницу "
+                                data-image="./app/img/home/services/img-1.jpg">
+                                <h3 class="link-img__title title-3">
+                                    Аренда яхты с&#160;капитаном
+                                </h3>
+                                <p class="link-img__text">
+                                    Прогулки, вечеринки, рыбалка
+                                </p>
                             </a>
+                        </li>
+                        <li class="list__item">
+                            <a
+                                class="list__item-link link-img"
+                                href="#"
+                                aria-label="Перейти на страницу "
+                                data-image="./app/img/home/services/img-2.jpg">
+                                <h3 class="link-img__title title-3">
+                                    Вейксерфинг
+                                </h3>
+                                <p class="link-img__text">Поймай волну!</p>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a
+                                class="list__item-link link-img"
+                                href="#"
+                                aria-label="Перейти на страницу "
+                                data-image="./app/img/home/services/img-3.jpg">
+                                <h3 class="link-img__title title-3">Эндуро</h3>
+                                <p class="link-img__text">
+                                    Запрыгивай и&#160;в&#160;горы!
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- advantages -->
+            <section class="advantages section">
+                <div class="advantages__container container">
+                    <div class="advantages__title-wrap title-wrap">
+                        <h2 class="title-wrap__title title-2">
+                            Почему выбирают нас
+                        </h2>
+                        <div class="title-wrap__subtitle subtitle">
+                            Ваш комфорт, безопасность и&#160;эмоции&#160;&#8212; в&#160;приоритете
+                        </div>
+                    </div>
+                    <ul class="advantages__list">
+                        <li class="advantages__list-item">
+                            <div
+                                class="advantages__list-item-img"
+                                data-image="./app/img/home/advantages/img-1.png"></div>
+                            <p class="advantages__list-item-text">
+                                Готовые маршруты + индивидуальные туры
+                            </p>
+                        </li>
+                        <li class="advantages__list-item">
+                            <div
+                                class="advantages__list-item-img"
+                                data-image="./app/img/home/advantages/img-2.png"></div>
+                            <p class="advantages__list-item-text">
+                                Безопасность: опытные водители, проверенные авто
+                            </p>
+                        </li>
+                        <li class="advantages__list-item">
+                            <div
+                                class="advantages__list-item-img"
+                                data-image="./app/img/home/advantages/img-3.png"></div>
+                            <p class="advantages__list-item-text">
+                                Без предоплаты&#160;&#8212; платите на&#160;месте
+                            </p>
+                        </li>
+                        <li class="advantages__list-item">
+                            <div
+                                class="advantages__list-item-img"
+                                data-image="./app/img/home/advantages/img-4.png"></div>
+                            <p class="advantages__list-item-text">
+                                Большой выбор, актуальная база
+                            </p>
+                        </li>
+                        <li class="advantages__list-item">
+                            <div
+                                class="advantages__list-item-img"
+                                data-image="./app/img/home/advantages/img-5.png"></div>
+                            <p class="advantages__list-item-text">
+                                Можно с&#160;детьми
+                            </p>
+                        </li>
+                        <li class="advantages__list-item">
+                            <div
+                                class="advantages__list-item-img"
+                                data-image="./app/img/home/advantages/img-6.png"></div>
+                            <p class="advantages__list-item-text">
+                                Работаем круглый год
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="advantages__img"
+                    data-image="./app/img/home/advantages/bg-img.png"></div>
+            </section>
+            <!-- info -->
+            <section class="info section">
+                <div class="info__container container">
+                    <div class="info__title-wrap title-wrap">
+                        <h2 class="title-wrap__title title-2">
+                            Полезная информация
+                        </h2>
+                        <div class="title-wrap__subtitle subtitle">
+                            Новые маршруты, интересные идеи, полезные советы
+                        </div>
+                    </div>
+
+                    <ul class="info__list list list_lg">
+                        <li class="list__item">
+                            <a
+                                class="list__item-link link-img-info"
+                                href="#"
+                                aria-label="Перейти на старнице ">
+                                <div class="link-img-info__img-wrap">
+                                    <img
+                                        class="link-img-info__img"
+                                        src="./app/img/home/info/img-1.jpg"
+                                        alt="Фотография человека везущего чемодан" />
+                                </div>
+                                <div class="link-img-info__text-wrap">
+                                    <p class="link-img-info__text">
+                                        Что взять с&#160;собой в&#160;джип-тур
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a
+                                class="list__item-link link-img-info"
+                                href="#"
+                                aria-label="Перейти на старнице ">
+                                <div class="link-img-info__img-wrap">
+                                    <img
+                                        class="link-img-info__img"
+                                        src="./app/img/home/info/img-2.jpg"
+                                        alt="Маленькая девочка в машине" />
+                                </div>
+                                <div class="link-img-info__text-wrap">
+                                    <p class="link-img-info__text">
+                                        Джиппинг с&#160;детьми: как подготовиться
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a
+                                class="list__item-link link-img-info"
+                                href="#"
+                                aria-label="Перейти на старнице ">
+                                <div class="link-img-info__img-wrap">
+                                    <img
+                                        class="link-img-info__img"
+                                        src="./app/img/home/info/img-3.jpg"
+                                        alt="Вид на гору в Геленджике" />
+                                </div>
+                                <div class="link-img-info__text-wrap">
+                                    <p class="link-img-info__text">
+                                        5 локаций, которые увидишь только с
+                                        внедорожником
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a
+                        class="info__link link link_inv"
+                        href="#"
+                        aria-label="Перейти на страницу со всей полезной информацией">
+                        Смотреть все
+                    </a>
+                </div>
+            </section>
+            <!-- faq -->
+            <section class="faq section">
+                <div class="faq__container container">
+                    <div class="faq__title-wrap title-wrap">
+                        <h2 class="title-wrap__title title-2">
+                            Вопрос&#160;&#8212; ответ
+                        </h2>
+                        <div class="title-wrap__subtitle subtitle">
+                            Всё, что важно&#160;&#8212; коротко и&#160;ясно
+                        </div>
+                    </div>
+
+                    <ul class="faq__list accordion-list js-accordion">
+                        <li class="accordion-list__item accordion active">
+                            <button class="accordion__btn js-accordion-btn">
+                                <span class="accordion__btn-text">
+                                    Сколько длится джип-тур?
+                                </span>
+                                <div class="accordion__btn-wrapper-icon">
+                                    <svg class="accordion__btn-icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div
+                                class="accordion__content js-accordion-content accordion-hidden">
+                                <div class="accordion__text">
+                                    <p>
+                                        Большинство маршрутов занимают 3&#8211;4 часа,
+                                        но&#160;есть и&#160;более продолжительные&#160;&#8212; до&#160;6
+                                        часов.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-list__item accordion">
+                            <button class="accordion__btn js-accordion-btn">
+                                <span class="accordion__btn-text">
+                                    Будет&#160;ли грязно и&#160;мокро?
+                                </span>
+                                <div class="accordion__btn-wrapper-icon">
+                                    <svg class="accordion__btn-icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div
+                                class="accordion__content js-accordion-content accordion-hidden">
+                                <div class="accordion__text">
+                                    <p>
+                                        Скорее всего&#160;&#8212; да! Мы&#160;ездим по
+                                        настоящему бездорожью, а&#160;не&#160;по
+                                        набережной.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-list__item accordion">
+                            <button class="accordion__btn js-accordion-btn">
+                                <span class="accordion__btn-text">
+                                    Подходит&#160;ли джиппинг детям?
+                                </span>
+                                <div class="accordion__btn-wrapper-icon">
+                                    <svg class="accordion__btn-icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div
+                                class="accordion__content js-accordion-content accordion-hidden">
+                                <div class="accordion__text">
+                                    <p>
+                                        Да, но&#160;только на&#160;определённые маршруты.
+                                        Возраст желательно от&#160;5 лет, с
+                                        сопровождением взрослых.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-list__item accordion">
+                            <button class="accordion__btn js-accordion-btn">
+                                <span class="accordion__btn-text">
+                                    Можно&#160;ли с&#160;собой еду и&#160;напитки?
+                                </span>
+                                <div class="accordion__btn-wrapper-icon">
+                                    <svg class="accordion__btn-icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div
+                                class="accordion__content js-accordion-content accordion-hidden">
+                                <div class="accordion__text">
+                                    <p>
+                                        Конечно. Особенно воду. А&#160;вот алкоголь&#160;&#8212;
+                                        нет, безопасность важнее.
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -484,199 +934,214 @@
         </main>
         <!-- footer -->
         <footer class="footer">
-            <div class="footer__top footer-top">
-                <div class="footer-top__container container">
-                    <a
-                        class="footer-top__logo-link logo"
-                        href="/"
-                        aria-label="Перейти на главную страницу туристическое агенство">
-                        <img
-                            class="logo__img"
-                            src="./app/img/logo.png"
-                            alt="Логотип Европа-Тур" />
-                    </a>
-                    <nav class="footer-top__nav footer-nav">
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item active">
+            <div class="footer__container container">
+                <a
+                    class="footer__logo-link logo"
+                    href="/"
+                    aria-label="Перейти на главную страницу Джиппинг.ру">
+                    <img
+                        class="logo__img"
+                        data-src="./app/img/logo.svg"
+                        alt="Логотип Джиппинг.ру" />
+                </a>
+                <div class="footer__content-wrap">
+                    <nav class="footer__nav">
+                        <ul class="footer__nav-list nav-list nav-list_cl">
+                            <li class="nav-list__item active">
                                 <a
-                                    class="footer-nav__link link-text"
-                                    href="/"
-                                    aria-label="Перейти на главную страницу сайта">
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
                                     Главная
                                 </a>
                             </li>
-                            <li class="footer-nav__item">
+                            <li class="nav-list__item">
                                 <a
-                                    class="footer-nav__link link-text"
-                                    href="./page.html"
-                                    aria-label="Перейти на страницу горящие туры">
-                                    Горящие туры
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Часто задаваемые вопросы
                                 </a>
                             </li>
-                            <li class="footer-nav__item">
+                            <li class="nav-list__item">
                                 <a
-                                    class="footer-nav__link link-text"
-                                    href="./page.html"
-                                    aria-label="Перейти на страницу минимальные цены">
-                                    Минимальные цены
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Подарочные сертификаты
                                 </a>
                             </li>
-                            <li class="footer-nav__item">
+                            <li class="nav-list__item">
                                 <a
-                                    class="footer-nav__link link-text"
-                                    href="./reports.html"
-                                    aria-label="Перейти на страницу групповые туры">
-                                    Групповые туры
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Политика возврата билетов
                                 </a>
                             </li>
-                            <li class="footer-nav__item">
+                            <li class="nav-list__item">
                                 <a
-                                    class="footer-nav__link link-text"
-                                    href="./contacts.html"
-                                    aria-label="Перейти на страницу страны и отели">
-                                    Страны и&#160;отели
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Пользовательское соглашение
                                 </a>
                             </li>
-                            <li class="footer-nav__item">
+                            <li class="nav-list__item">
                                 <a
-                                    class="footer-nav__link link-text"
-                                    href="./news.html"
-                                    aria-label="Перейти на страницу с новостями">
-                                    Новости
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Политика обработки персональных данных
                                 </a>
                             </li>
-                            <li class="footer-nav__item">
+                            <li class="nav-list__item">
                                 <a
-                                    class="footer-nav__link link-text"
-                                    href="./news.html"
-                                    aria-label="Перейти на страницу о нас">
-                                    О&#160;нас
-                                </a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a
-                                    class="footer-nav__link link-text"
-                                    href="./reviews.html"
-                                    aria-label="Перейти на страницу с отзывами">
-                                    Отзывы
-                                </a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a
-                                    class="footer-nav__link link-text"
-                                    href="./info.html"
-                                    aria-label="Перейти на страницу с информацией">
-                                    Информация
-                                </a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a
-                                    class="footer-nav__link link-text"
-                                    href="./contacts.html"
-                                    aria-label="Перейти на страницы с контактами">
-                                    Контакты
+                                    class="nav-list__item-link link-text"
+                                    href="#"
+                                    aria-label="Перейти на страницу">
+                                    Способы оплаты
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                    <div class="footer-top__feedback">
-                        <ul class="footer-top__feedback-links links">
-                            <li class="links__item">
-                                <a
-                                    class="links__item-link links__item-link_tg link-icon"
-                                    href="https://t.me/"
-                                    target="_blank"
-                                    aria-label="Написать в Telegram">
-                                    <svg class="link-icon__item">
-                                        <use
-                                            href="./app/img/icons/icons.svg#tg"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="links__item">
-                                <a
-                                    class="links__item-link links__item-link_vk link-icon"
-                                    href="https://vk.com/"
-                                    target="_blank"
-                                    aria-label="Перейти на страницу ВКонтакте">
-                                    <svg class="link-icon__item">
-                                        <use
-                                            href="./app/img/icons/icons.svg#vk"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="links__item">
-                                <a
-                                    class="links__item-link links__item-link_ok link-icon"
-                                    href="https://ok.ru/"
-                                    target="_blank"
-                                    aria-label="Написать в Одноклассниках">
-                                    <svg class="link-icon__item">
-                                        <use
-                                            href="./app/img/icons/icons.svg#ok"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="links__item">
-                                <a
-                                    class="links__item-link links__item-link_ph link-icon"
-                                    href="tel:+79189326660"
-                                    target="_blank"
-                                    aria-label="Позвонить по номеру 8-918-932-6660">
-                                    <svg class="link-icon__item">
-                                        <use
-                                            href="./app/img/icons/icons.svg#ph"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                        <a
-                            class="footer-top__feedback-link-ph link-text"
-                            href="tel:+79189326660"
-                            aria-label="Позвонить по номеру 8-918-932-6660">
-                            8-918-932-6660
-                        </a>
-                        <a
-                            class="footer-top__feedback-link"
-                            href="https://wa.me/+79189326660"
-                            aria-label="Связаться в WhatsApp">
-                            Whatsapp
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- copyright -->
-            <div class="footer__copyright copyright">
-                <div class="copyright__container container">
-                    <ul class="copyright__list">
-                        <li class="copyright__list-item">
-                            &#169;&#160;2025 Все права защищены
-                        </li>
-                        <li class="copyright__list-item">
+
+                    <div class="footer__content-right footer-right">
+                        <div class="footer-right__nav-wrap">
+                            <nav class="footer-right__nav">
+                                <ul
+                                    class="footer__nav-list nav-list nav-list_cl">
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Джиппинг
+                                        </a>
+                                    </li>
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Семейные джип-туры
+                                        </a>
+                                    </li>
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Популярные джиппинг маршруты
+                                        </a>
+                                    </li>
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Экстремальный джиппинг
+                                        </a>
+                                    </li>
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Индивидуальные джип-тур
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <nav class="footer-right__nav">
+                                <ul
+                                    class="footer-right__nav-list nav-list nav-list_cl">
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Все активности
+                                        </a>
+                                    </li>
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Эндуро в&#160;Геленджике
+                                        </a>
+                                    </li>
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Вейксерфинг в&#160;Геленджике
+                                        </a>
+                                    </li>
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Аренда яхты в&#160;Геленджике
+                                        </a>
+                                    </li>
+                                    <li class="nav-list__item">
+                                        <a
+                                            class="nav-list__item-link link-text"
+                                            href="#"
+                                            aria-label="Перейти на страницу">
+                                            Квадроциклы в&#160;Геленджике
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="footer-right__feedback">
+                            <ul class="footer-right__link-list links">
+                                <li class="links__item">
+                                    <a
+                                        class="links__item-link link"
+                                        href="https://t.me/"
+                                        target="_blank"
+                                        aria-label="Написать в Telegram">
+                                        <svg class="link__icon link__icon_lg">
+                                            <use
+                                                href="./app/img/icons/icons.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="links__item">
+                                    <a
+                                        class="links__item-link link"
+                                        href="https://wa.me/"
+                                        target="_blank"
+                                        aria-label="Связаться в WhatsApp">
+                                        <svg class="link__icon link__icon_lg">
+                                            <use
+                                                href="./app/img/icons/icons.svg#wa"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+
                             <a
-                                class="copyright__list-link copyright-link"
-                                href="./page.html"
+                                class="footer-right__link link"
+                                href="tel:+7 999 99 9900 99"
                                 target="_blank"
-                                aria-label="Открыть пользовательское соглашение">
-                                Политика конфиденциальности
-                            </a>
-                        </li>
-                        <li class="copyright__list-item">
-                            <a
-                                class="copyright__list-link copyright-link"
-                                href="https://web2.agency/"
-                                target="_blank"
-                                aria-label="Открыть сайт по разработке WEB2 Новороссийск">
-                                <svg class="copyright-link__icon">
+                                aria-label="Позвонить по номеру +7 999 99 9900 99">
+                                <svg class="link__icon">
                                     <use
-                                        href="./app/img/icons/icons.svg#web2"></use>
+                                        href="./app/img/icons/icons.svg#ph"></use>
                                 </svg>
-                                <span class="copyright-link__text">
-                                    создание сайтов
-                                </span>
+                                +7 999 99 9900 99
                             </a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -692,7 +1157,7 @@
                     <p class="popup__title">Оставить заявку</p>
                     <form class="popup__form form">
                         <div class="form__field field">
-                            <label for="popup-name" class="field__label lable">
+                            <label for="popup-name" class="field__label label">
                                 Имя
                             </label>
                             <input
@@ -705,7 +1170,7 @@
                         <div class="form__field field">
                             <label
                                 for="popup-e-mail"
-                                class="field__label lable">
+                                class="field__label label">
                                 E-mail
                             </label>
                             <input
@@ -716,7 +1181,7 @@
                                 name="e-mail" />
                         </div>
                         <div class="form__field field">
-                            <label for="popup-phone" class="field__label lable">
+                            <label for="popup-phone" class="field__label label">
                                 Телефон
                             </label>
                             <input
@@ -727,7 +1192,25 @@
                                 name="phone" />
                         </div>
 
-                        <button class="form__btn btn">Оставить отзыв</button>
+                        <label class="form__checkbox custom-checkbox">
+                            <input
+                                class="custom-checkbox__input"
+                                type="checkbox"
+                                name="type"
+                                checked />
+                            <span class="custom-checkbox__text">
+                                Я&#160;даю
+                                <a
+                                    class="custom-checkbox__link link-text"
+                                    href="/"
+                                    target="_blank">
+                                    согласие на&#160;обработку персональных
+                                    данных
+                                </a>
+                            </span>
+                        </label>
+
+                        <button class="form__btn btn">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -752,6 +1235,7 @@
                 <use xlink:href="./app/img/icons/icons.svg#arrow"></use>
             </svg>
         </button>
+        <!-- scripts -->
         <script src="./app/js/libs/jquery-3.7.1.min.js"></script>
     </body>
 </html>

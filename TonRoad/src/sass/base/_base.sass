@@ -1,0 +1,79 @@
+// общие стили
+*::selection
+  background-color: var(--primary-color)
+  color: var(--white-color)
+  
+html
+  &.pre-hidden
+    padding-right: 4px
+    overflow-y: hidden !important
+    +lr
+      padding-right: 0
+
+  &.mod-open
+    padding-right: 4px
+    overflow-y: hidden !important
+    +lr
+      padding-right: 0
+
+html.menu-open,
+body.menu-open
+  +sm
+    overflow: hidden
+
+body
+  font-family: var(--font-main)
+  font-weight: var(--font-weight-base)
+  line-height: var(--font-line-height-base)
+  font-size: var(--font-size-base)
+  color: var(--text-color)
+  background-color: var(--page-color)
+
+  &::-webkit-scrollbar
+    width: 4px
+    background-color: var(--page-color)
+
+  &::-webkit-scrollbar-thumb
+    border-radius: 8px
+    background: linear-gradient(0deg, #12a26f 0%, #00c7f0 100%)
+
+// стили для секций
+.app
+  display: flex
+  flex-direction: column
+  border-radius: 10px
+  margin: 0 auto
+  max-width: 1080px
+  width: 100%
+  min-height: 1920px
+  background-repeat: no-repeat
+
+// стили для контейнеров
+.container
+  position: relative
+  z-index: 1
+  margin: 0 auto
+  padding-left: var(--container-padding)
+  padding-right: var(--container-padding)
+  max-width: calc(var(--container-width) + (var(--container-padding) * 2))
+  width: 100%
+  +ph
+    padding-left: var(--container-padding-ph)
+    padding-right: var(--container-padding-ph)
+
+// скрытие текста
+.text-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+// общие классы
+.none
+  display: none

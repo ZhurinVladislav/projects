@@ -1,28 +1,37 @@
+.accordion-list
+	display: flex
+	flex-direction: column
+	gap: 40px
+	+ph
+		gap: 24px
+
 .accordion
 	position: relative
 	display: flex
 	flex-direction: column
-	border-radius: 20px
-	box-shadow: 0 10px 25px 0 rgba(43, 63, 90, 0.07)
+	margin-bottom: -12px
 
 	&__btn
 		position: relative
 		display: flex
 		align-items: center
-		padding: 12px 14px
-		font-weight: 600
+		border-radius: 20px
+		padding: 12px 40px
+		font-weight: 500
 		font-size: 20px
 		line-height: 100%
-		min-height: 40px
-		transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear
+		min-height: 69px
+		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06)
+		background-color: var(--white-color)
+		transition: box-shadow 0.2s linear, color 0.2s linear, transform 0.2s linear
 		+hover
-			color: var(--accent-color)
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1)
 		+focus
-			color: var(--accent-color)
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1)
 		&:active
-			color: var(--active-color)
-
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2)
 		+ph
+			min-height: 40px
 			font-size: 18px
 
 		&.active
@@ -42,16 +51,19 @@
 		margin-left: auto
 		width: 40px
 		height: 40px
-		transition: background-color 0.2s linear
 
 	&__btn-icon
-		width: 40px
-		height: 20px
+		width: 24px
 		transition: transform 0.2s linear
 
+	&__content
+		background-color: var(--white-color)
+		margin-top: 12px
+		border-radius: 20px
+		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06)
+
 	&__text
-		padding: 12px 14px
-		border-top: 1px solid var(--logo-devider-gray-new)
+		padding: 24px 40px
 		overflow-x: hidden
 
 		p:not(:last-child)

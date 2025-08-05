@@ -1,0 +1,38 @@
+.scroll-top
+  position: fixed
+  z-index: 30
+  right: 30px
+  bottom: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 1px solid var(--white-color)
+  border-radius: 100%
+  width: 45px
+  height: 45px
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06)
+  background-color: var(--white-color)
+  opacity: 0
+  visibility: hidden
+  transition: box-shadow .2s linear, opacity .2s linear, visibility .2s linear, transform .3s linear
+  &.visible
+    opacity: .4
+    visibility: visible
+  +ph
+    right: 10px
+    bottom: 20px
+    width: 40px
+    height: 40px
+  +hover
+    opacity: 1
+  +focus
+    opacity: 1
+  &:active
+    opacity: 1
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3)
+
+  &__icon
+    width: 20px
+    height: 20px
+    fill: var(--white-color)
+    transform: rotateX(180deg)

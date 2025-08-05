@@ -1,19 +1,21 @@
 .hero
-	&__container
-		overflow: hidden
+	&__content-wrap
+		position: relative
 		display: flex
 		flex-direction: column
 		align-items: center
 		justify-content: center
 		border-radius: 20px
+		width: 100%
 		min-height: 705px
 		background-position: center
 		background-size: cover
 		background-repeat: no-repeat
+		overflow: hidden
 		+ph
 			min-height: 400px
 			gap: 20px
-		
+
 		&::after
 			content: ''
 			position: absolute
