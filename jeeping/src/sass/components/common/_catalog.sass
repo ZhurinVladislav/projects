@@ -1,0 +1,52 @@
+.catalog
+	&_inner
+		.catalog__container
+			align-items: flex-start
+
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__left
+		display: flex
+		flex-direction: column
+		max-width: 244px
+		width: 100%
+		height: auto
+
+	&__menu
+		position: sticky
+		top: 150px
+		height: max-content
+	
+	&__right
+		display: flex
+		flex-direction: column
+		gap: 48px
+		max-width: 952px
+		width: 100%
+
+	&__list-tab
+		margin-bottom: 64px
+		max-width: 1148px
+		width: 100%
+		+sm
+			margin-bottom: 40px
+		+ph
+			margin-bottom: 32px
+
+	&__card-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		gap: 64px
+		+sm
+			gap: 48px
+		+ph
+			gap: 32px
+
+	&__link-more
+		max-width: 416px
+		width: 100%

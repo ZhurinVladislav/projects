@@ -1,4 +1,40 @@
 .hero
+	&_inner
+		.hero__content-wrap
+			padding: 40px
+			min-height: 346px
+			align-items: flex-start
+			background-position: 100% 22%
+			+sm
+				padding: 32px
+			+ph
+				padding: 12px
+				background-position: center
+
+		.hero__content
+			margin: 0
+			align-items: flex-start
+			justify-content: flex-start
+			gap: 28px
+			max-width: 886px
+			text-align: start
+			+ph
+				gap: 24px
+
+		.hero__title
+			font-size: 77px
+			+sm
+				font-size: 50px
+			+ph
+				font-size: 44px
+
+		.hero__subtitle
+			font-weight: 400
+			line-height: 100%
+			text-align: start
+			+ph
+				font-size: 20px
+
 	&__content-wrap
 		position: relative
 		display: flex
@@ -15,7 +51,6 @@
 		+ph
 			min-height: 400px
 			gap: 20px
-
 		&::after
 			content: ''
 			position: absolute

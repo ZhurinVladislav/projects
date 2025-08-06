@@ -1,8 +1,17 @@
 .list-tab
 	display: grid
 	grid-template-columns: repeat(4, 1fr)
-	gap: 24px
+	gap: 12px 24px
+	+sm
+		grid-template-columns: repeat(3, 1fr)
+	+ph
+		grid-template-columns: repeat(2, 1fr)
+		gap: 12px
+	+xs
+		grid-template-columns: 1fr
 	&__item-btn
 		max-width: 100%
 		width: 100%
 		min-height: 59px
+		+ph
+			min-height: 48px

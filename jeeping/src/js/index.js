@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const initNewsTabs = () => {
+  const iniCatalogTabs = () => {
     const tabsWrap = document.getElementById('tabs');
     const tabsContentWrap = document.getElementById('tabs-content-wrap');
 
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabs(tabsBtns, tabsContentWraps);
   };
 
-  initNewsTabs();
+  iniCatalogTabs();
 
   /**
    * Аккордеон
@@ -139,6 +139,126 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   accordion();
+
+  /**
+   * Меню на странице каталога
+   * @returns void
+   */
+  class MenuLust {
+    constructor(menuWrap) {
+      if (!menuWrap) {
+        throw new Error('Не передан родитель списка');
+      }
+
+      this.menuWrap = menuWrap;
+    }
+
+    addClassHidden = () => {
+      const parentArr = this.menuWrap.querySelectorAll('.parent');
+
+      if (!parentArr || parentArr.length === 0) return;
+
+      parentArr.forEach(parent => {
+        const list = parent.querySelector('.js-menu-list');
+
+        if (!list) return;
+
+        if (!parent.classList.contains('active')) list.classList.add('none');
+      });
+    };
+
+    /**
+     * Проверка есть ли класс active на кнопке и списке
+     *
+     * @param {HTMLElement} item родитель в котором ищем кнопку и список
+     * @returns bool
+     */
+    isActive = item => {
+      if (!item) {
+        throw new Error('Не передан элемент item метод isActive');
+      }
+
+      const btn = item.querySelector('.js-menu-btn');
+
+      if (!btn) {
+        throw new Error('Не найдена кнопка');
+      }
+
+      const list = item.querySelector('.js-menu-list');
+
+      if (!list) {
+        throw new Error('Не найден список');
+      }
+
+      if (btn.classList.contains('active') && !list.classList.contains('none')) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    handleOpen = (btn, list) => {
+      btn.classList.add('active');
+      list.classList.remove('none');
+    };
+
+    handleClose = (btn, list) => {
+      btn.classList.remove('active');
+      list.classList.add('none');
+    };
+
+    /**
+     * Событие для выпадающего списка
+     */
+    handlerList = () => {
+      const parentsArr = this.menuWrap.querySelectorAll('.parent');
+
+      parentsArr.forEach(parent => {
+        const btn = parent.querySelector('.js-menu-btn');
+
+        if (!btn) return;
+
+        const list = parent.querySelector('.js-menu-list');
+
+        if (!list) return;
+
+        btn.addEventListener('click', () => {
+          const isActive = this.isActive(parent);
+
+          console.log(isActive);
+
+          if (isActive) {
+            this.handleClose(btn, list);
+          } else {
+            this.handleOpen(btn, list);
+          }
+        });
+      });
+    };
+
+    /**
+     * Инициализация обработчиков.
+     */
+    init = () => {
+      if (this.menuWrap) {
+        this.addClassHidden();
+        this.handlerList();
+      } else {
+        console.warn('Не все элементы найдены. MenuLust не инициализирован.');
+      }
+    };
+  }
+
+  const initMenuListCatalog = () => {
+    const wrap = document.getElementById('catalog-menu');
+
+    if (!wrap) return;
+
+    const menuLust = new MenuLust(wrap);
+    menuLust.init();
+  };
+
+  initMenuListCatalog();
 
   /**
    * Функция для управления кнопкой прокрутки вверх.
