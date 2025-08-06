@@ -394,6 +394,8 @@
             <!-- catalog -->
             <section class="catalog catalog_inner section">
                 <div class="catalog__container container">
+                    <h1 class="catalog__title-hidden text-hidden">Каталог</h1>
+                    <h2 class="catalog__title-hidden text-hidden">Каталог</h2>
                     <aside class="catalog__left">
                         <nav class="catalog__menu">
                             <ul
@@ -470,7 +472,7 @@
                                     <ul
                                         class="menu-page__item-list js-menu-list">
                                         <li
-                                            class="menu-page__item-list-item menu-inner-item">
+                                            class="menu-page__item-list-item menu-inner-item active">
                                             <a
                                                 class="menu-inner-item__link"
                                                 href="#">
@@ -516,7 +518,376 @@
                             </ul>
                         </nav>
                     </aside>
-                    <div class="catalog__rignt"></div>
+                    <div class="catalog__right">
+                        <div class="catalog__filter-wrap">
+                            <div class="catalog__filter catalog-filter">
+                                <label
+                                    class="catalog-filter__checkbox custom-checkbox">
+                                    <input
+                                        class="custom-checkbox__input"
+                                        type="checkbox"
+                                        name="type"
+                                        checked />
+                                    <span class="custom-checkbox__text">
+                                        Без предоплаты
+                                    </span>
+                                </label>
+
+                                <div
+                                    class="catalog-filter__dropdown dropdown js-dropdown">
+                                    <button
+                                        class="dropdown__btn js-dropdown-btn"
+                                        aria-label="Открыть список городов">
+                                        Типы групп
+                                        <svg
+                                            class="dropdown__btn-icon dropdown__btn-icon_arrow">
+                                            <use
+                                                href="./app/img/icons/icons.svg#arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown__list js-dropdown-list">
+                                        <li class="dropdown__list-item">
+                                            <label
+                                                class="dropdown__list-item-checkbox custom-checkbox">
+                                                <input
+                                                    class="custom-checkbox__input"
+                                                    type="checkbox"
+                                                    name="type"
+                                                    checked />
+                                                <div
+                                                    class="custom-checkbox__content">
+                                                    <span
+                                                        class="custom-checkbox__text">
+                                                        Групповые
+                                                    </span>
+                                                    <span
+                                                        class="custom-checkbox__text text-gray">
+                                                        Экскурсии в группе от 10
+                                                        человек
+                                                    </span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <label
+                                                class="dropdown__list-item-checkbox custom-checkbox">
+                                                <input
+                                                    class="custom-checkbox__input"
+                                                    type="checkbox"
+                                                    name="type"
+                                                    checked />
+                                                <div
+                                                    class="custom-checkbox__content">
+                                                    <span
+                                                        class="custom-checkbox__text">
+                                                        Мини-группы
+                                                    </span>
+                                                    <span
+                                                        class="custom-checkbox__text text-gray">
+                                                        Экскурсии в небольшой
+                                                        группе до 10 человек
+                                                    </span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="dropdown__list-item">
+                                            <label
+                                                class="dropdown__list-item-checkbox custom-checkbox">
+                                                <input
+                                                    class="custom-checkbox__input"
+                                                    type="checkbox"
+                                                    name="type"
+                                                    checked />
+                                                <div
+                                                    class="custom-checkbox__content">
+                                                    <span
+                                                        class="custom-checkbox__text">
+                                                        Индивидуальные
+                                                    </span>
+                                                    <span
+                                                        class="custom-checkbox__text text-gray">
+                                                        Экскурсии только для вас
+                                                        и вашей компании
+                                                    </span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul
+                            class="catalog__cards-list cards-list cards-list_2col">
+                            <li class="cards-list__item card">
+                                <a
+                                    class="card__link"
+                                    href="#"
+                                    aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                </a>
+                                <a
+                                    class="card__link-icon icon-link"
+                                    href="#asd"
+                                    aria-label="Перейти на страницу с избранными услугами">
+                                    <svg class="icon-link__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#heart"></use>
+                                    </svg>
+                                </a>
+                                <div class="card__img-wrap">
+                                    <div class="card__tags card__tags_top">
+                                        <span
+                                            class="card-tag__card-tag card-tag card-tag_green">
+                                            Популярные маршруты
+                                        </span>
+                                    </div>
+                                    <img
+                                        class="card__img"
+                                        src="./app/img/home/services/img-1.jpg"
+                                        alt="Изображение" />
+                                    <div class="card__tags card__tags_bottom">
+                                        <span
+                                            class="card-tag__card-tag card-tag">
+                                            в любой день
+                                            <svg class="card-tag__icon">
+                                                <use
+                                                    href="./app/img/icons/icons.svg#note"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <h3 class="card__title title-3">
+                                        Озерейка Экстрим
+                                    </h3>
+                                    <p class="card__text">
+                                        Прокатимся по горным тропам, руслам рек
+                                        и настоящему бездорожью к бухте
+                                        Озерейка. Прыжки, наклоны, брызги и пыль
+                                        — драйв обеспечен! По пути — смотровые,
+                                        родники и купание в море.
+                                    </p>
+
+                                    <div class="card__info">
+                                        <div class="card__info-text-wrap">
+                                            <p
+                                                class="card__info-text card__info-text_sm">
+                                                5 часов / Групповая
+                                            </p>
+                                            <p class="card__info-text">
+                                                1600 руб / чел
+                                            </p>
+                                        </div>
+
+                                        <span
+                                            class="card__info-link link link_dark">
+                                            Подробнее
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cards-list__item card">
+                                <a
+                                    class="card__link"
+                                    href="#"
+                                    aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                </a>
+                                <a
+                                    class="card__link-icon icon-link"
+                                    href="#asd"
+                                    aria-label="Перейти на страницу с избранными услугами">
+                                    <svg class="icon-link__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#heart"></use>
+                                    </svg>
+                                </a>
+                                <div class="card__img-wrap">
+                                    <div class="card__tags card__tags_top">
+                                        <span
+                                            class="card-tag__card-tag card-tag card-tag_blue">
+                                            Индивидуальные джип-туры
+                                        </span>
+                                    </div>
+                                    <img
+                                        class="card__img"
+                                        src="./app/img/home/services/img-1.jpg"
+                                        alt="Изображение" />
+                                    <div class="card__tags card__tags_bottom">
+                                        <span
+                                            class="card-tag__card-tag card-tag">
+                                            в любой день
+                                            <svg class="card-tag__icon">
+                                                <use
+                                                    href="./app/img/icons/icons.svg#note"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <h3 class="card__title title-3">
+                                        Озерейка Экстрим
+                                    </h3>
+                                    <p class="card__text">
+                                        Прокатимся по горным тропам, руслам рек
+                                        и настоящему бездорожью к бухте
+                                        Озерейка. Прыжки, наклоны, брызги и пыль
+                                        — драйв обеспечен! По пути — смотровые,
+                                        родники и купание в море.
+                                    </p>
+
+                                    <div class="card__info">
+                                        <div class="card__info-text-wrap">
+                                            <p
+                                                class="card__info-text card__info-text_sm">
+                                                5 часов / Групповая
+                                            </p>
+                                            <p class="card__info-text">
+                                                1600 руб / чел
+                                            </p>
+                                        </div>
+
+                                        <span
+                                            class="card__info-link link link_dark">
+                                            Подробнее
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cards-list__item card">
+                                <a
+                                    class="card__link"
+                                    href="#"
+                                    aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                </a>
+                                <a
+                                    class="card__link-icon icon-link"
+                                    href="#asd"
+                                    aria-label="Перейти на страницу с избранными услугами">
+                                    <svg class="icon-link__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#heart"></use>
+                                    </svg>
+                                </a>
+                                <div class="card__img-wrap">
+                                    <div class="card__tags card__tags_top">
+                                        <span
+                                            class="card-tag__card-tag card-tag card-tag_purple">
+                                            Экстремальные заезды
+                                        </span>
+                                    </div>
+                                    <img
+                                        class="card__img"
+                                        src="./app/img/home/services/img-1.jpg"
+                                        alt="Изображение" />
+                                    <div class="card__tags card__tags_bottom">
+                                        <span
+                                            class="card-tag__card-tag card-tag">
+                                            в любой день
+                                            <svg class="card-tag__icon">
+                                                <use
+                                                    href="./app/img/icons/icons.svg#note"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <h3 class="card__title title-3">
+                                        Озерейка Экстрим
+                                    </h3>
+                                    <p class="card__text">
+                                        Прокатимся по горным тропам, руслам рек
+                                        и настоящему бездорожью к бухте
+                                        Озерейка. Прыжки, наклоны, брызги и пыль
+                                        — драйв обеспечен! По пути — смотровые,
+                                        родники и купание в море.
+                                    </p>
+
+                                    <div class="card__info">
+                                        <div class="card__info-text-wrap">
+                                            <p
+                                                class="card__info-text card__info-text_sm">
+                                                5 часов / Групповая
+                                            </p>
+                                            <p class="card__info-text">
+                                                1600 руб / чел
+                                            </p>
+                                        </div>
+
+                                        <span
+                                            class="card__info-link link link_dark">
+                                            Подробнее
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cards-list__item card">
+                                <a
+                                    class="card__link"
+                                    href="#"
+                                    aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                </a>
+                                <a
+                                    class="card__link-icon icon-link"
+                                    href="#asd"
+                                    aria-label="Перейти на страницу с избранными услугами">
+                                    <svg class="icon-link__icon">
+                                        <use
+                                            href="./app/img/icons/icons.svg#heart"></use>
+                                    </svg>
+                                </a>
+                                <div class="card__img-wrap">
+                                    <div class="card__tags card__tags_top">
+                                        <span
+                                            class="card-tag__card-tag card-tag card-tag_azure">
+                                            Экстремальные заезды
+                                        </span>
+                                    </div>
+                                    <img
+                                        class="card__img"
+                                        src="./app/img/home/services/img-1.jpg"
+                                        alt="Изображение" />
+                                    <div class="card__tags card__tags_bottom">
+                                        <span
+                                            class="card-tag__card-tag card-tag">
+                                            в любой день
+                                            <svg class="card-tag__icon">
+                                                <use
+                                                    href="./app/img/icons/icons.svg#note"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <h3 class="card__title title-3">
+                                        Озерейка Экстрим
+                                    </h3>
+                                    <p class="card__text">
+                                        Прокатимся по горным тропам, руслам рек
+                                        и настоящему бездорожью к бухте
+                                        Озерейка. Прыжки, наклоны, брызги и пыль
+                                        — драйв обеспечен! По пути — смотровые,
+                                        родники и купание в море.
+                                    </p>
+
+                                    <div class="card__info">
+                                        <div class="card__info-text-wrap">
+                                            <p
+                                                class="card__info-text card__info-text_sm">
+                                                5 часов / Групповая
+                                            </p>
+                                            <p class="card__info-text">
+                                                1600 руб / чел
+                                            </p>
+                                        </div>
+
+                                        <span
+                                            class="card__info-link link link_dark">
+                                            Подробнее
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>

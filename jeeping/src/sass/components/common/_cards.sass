@@ -10,6 +10,11 @@
 		grid-template-columns: 1fr
 		gap: 12px
 
+	&_2col
+		grid-template-columns: repeat(2, 1fr)
+		+ph
+			grid-template-columns: 1fr
+
 .card
 	position: relative
 	display: flex
@@ -41,8 +46,6 @@
 		z-index: 2
 		top: 16px
 		right: 16px
-		// +ph
-		// 	top: auto
 
 	&__img-wrap
 		position: relative

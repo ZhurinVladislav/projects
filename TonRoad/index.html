@@ -112,6 +112,17 @@
             </header>
             <!-- main -->
             <main class="app__main main">
+                <!-- coin -->
+                <img
+                    class="main__coin coin"
+                    style="top: 70%; left: 50%"
+                    data-src="./app/img/base/coin.png"
+                    alt="Монета" />
+                <img
+                    class="main__coin coin coin_sm"
+                    style="top: 69%; right: 35%"
+                    data-src="./app/img/base/coin.png"
+                    alt="Монета" />
                 <!-- main-content-top -->
                 <div class="main__content-top main-content-top">
                     <div class="main-content-top__container container">
@@ -128,57 +139,84 @@
                 <div class="main__content-bottom main-content-bottom">
                     <div class="main-content-bottom__container container">
                         <div class="main-content-bottom__content-wrap">
-                            <div class="main-content-bottom__list-wrap">
-                                <p class="main-content-bottom__list-title">
-                                    Votes
-                                </p>
-                                <ul class="main-content-bottom__list">
-                                    <li class="main-content-bottom__list-item">
+                            <div
+                                class="main-content-bottom__list-wrap list-border">
+                                <p class="list-border__title">Votes</p>
+                                <ul class="list-border__list">
+                                    <li class="list-border__list-item">
                                         <div
-                                            class="main-content-bottom__list-item-img main-content-bottom__list-item-img_top"
-                                            data-image="./app/img/home/main/content-bottom/arrow.png"></div>
-                                        <p
-                                            class="main-content-bottom__list-item-text">
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-top"></div>
+                                        <p class="list-border__list-item-text">
                                             Item1
                                         </p>
                                     </li>
-                                    <li class="main-content-bottom__list-item">
+                                    <li class="list-border__list-item">
                                         <div
-                                            class="main-content-bottom__list-item-img main-content-bottom__list-item-img_top-right"
-                                            data-image="./app/img/home/main/content-bottom/arrow.png"></div>
-                                        <p
-                                            class="main-content-bottom__list-item-text">
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-top-right"></div>
+                                        <p class="list-border__list-item-text">
                                             Item2
                                         </p>
                                     </li>
-                                    <li class="main-content-bottom__list-item">
+                                    <li class="list-border__list-item">
                                         <div
-                                            class="main-content-bottom__list-item-img main-content-bottom__list-item-img_right"
-                                            data-image="./app/img/home/main/content-bottom/arrow.png"></div>
-                                        <p
-                                            class="main-content-bottom__list-item-text">
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-right"></div>
+                                        <p class="list-border__list-item-text">
                                             Item3
                                         </p>
                                     </li>
-                                    <li class="main-content-bottom__list-item">
+                                    <li class="list-border__list-item">
                                         <div
-                                            class="main-content-bottom__list-item-img main-content-bottom__list-item-img_top-left"
-                                            data-image="./app/img/home/main/content-bottom/arrow.png"></div>
-                                        <p
-                                            class="main-content-bottom__list-item-text">
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-top-left"></div>
+                                        <p class="list-border__list-item-text">
                                             Item4
                                         </p>
                                     </li>
-                                    <li class="main-content-bottom__list-item">
+                                    <li class="list-border__list-item">
                                         <div
-                                            class="main-content-bottom__list-item-img main-content-bottom__list-item-img_left"
-                                            data-image="./app/img/home/main/content-bottom/arrow.png"></div>
-                                        <p
-                                            class="main-content-bottom__list-item-text">
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-left"></div>
+                                        <p class="list-border__list-item-text">
                                             Item5
                                         </p>
                                     </li>
                                 </ul>
+                            </div>
+
+                            <p class="main-content-bottom__info">
+                                +30 000
+                                <span class="main-content-bottom__info-span">
+                                    per vote
+                                </span>
+                            </p>
+
+                            <a
+                                class="main-content-bottom__link main-content-bottom__link_map"
+                                href="#"
+                                aria-label="Открыть карту"></a>
+
+                            <div class="main-content-bottom__arrow-wrap">
+                                <a
+                                    class="main-content-bottom__arrow trnfs-left"
+                                    href="#"
+                                    aria-label="Выбрать направления"></a>
+                                <a
+                                    class="main-content-bottom__arrow trnfs-top-left"
+                                    href="#"
+                                    aria-label="Выбрать направления"></a>
+                                <a
+                                    class="main-content-bottom__arrow trnfs-top"
+                                    href="#"
+                                    aria-label="Выбрать направления"></a>
+                                <a
+                                    class="main-content-bottom__arrow trnfs-top-right"
+                                    href="#"
+                                    aria-label="Выбрать направления"></a>
+                                <a
+                                    class="main-content-bottom__arrow trnfs-right"
+                                    href="#"
+                                    aria-label="Выбрать направления"></a>
+                                <p class="main-content-bottom__arrow-text">
+                                    Pick a&#160;direction
+                                </p>
                             </div>
                         </div>
                     </div>

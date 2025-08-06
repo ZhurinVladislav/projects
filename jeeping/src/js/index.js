@@ -159,11 +159,17 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!parentArr || parentArr.length === 0) return;
 
       parentArr.forEach(parent => {
+        const btn = parent.querySelector('.js-menu-btn');
         const list = parent.querySelector('.js-menu-list');
 
-        if (!list) return;
+        if (!list || !btn) return;
+        const isActiveItem = list.querySelector('.active');
 
-        if (!parent.classList.contains('active')) list.classList.add('none');
+        if (parent.classList.contains('active') || isActiveItem) {
+          btn.classList.add('active');
+        } else {
+          list.classList.add('none');
+        }
       });
     };
 
@@ -224,8 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         btn.addEventListener('click', () => {
           const isActive = this.isActive(parent);
-
-          console.log(isActive);
 
           if (isActive) {
             this.handleClose(btn, list);

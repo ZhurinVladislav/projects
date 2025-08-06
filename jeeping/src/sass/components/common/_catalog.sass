@@ -1,7 +1,12 @@
 .catalog
 	&_inner
 		.catalog__container
+			flex-direction: row
 			align-items: flex-start
+			justify-content: space-between
+			gap: 40px
+			+sm
+				flex-direction: column
 
 	&__container
 		display: flex

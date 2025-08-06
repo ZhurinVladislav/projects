@@ -58,6 +58,25 @@ body
   max-width: calc(var(--container-width) + (var(--container-padding) * 2))
   width: 100%
 
+.trnfs-top
+  transform: rotate(-90deg)
+.trnfs-top-right
+  transform: rotate(-45deg)
+.trnfs-top-left
+  transform: rotate(-136deg)
+.trnfs-left
+  transform: rotate(-180deg)
+
+// Стили для монеты
+.coin
+  position: absolute
+  z-index: 1
+  width: 50px
+  height: 50px
+  &_sm
+    width: 15px
+    height: 15px
+
 // скрытие текста
 .text-hidden
   position: absolute
