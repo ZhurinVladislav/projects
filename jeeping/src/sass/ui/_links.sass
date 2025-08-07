@@ -75,6 +75,11 @@
 		color: var(--btn-color)
 		background-color: var(--dark-color)
 
+	&_primary
+		font-weight: 400
+		color: var(--white-color)
+		background-color: var(--primary-color)
+
 	&__icon
 		width: 16px
 		height: 16px
@@ -99,6 +104,21 @@
 	background-size: cover
 	overflow: hidden
 
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, .4)
+		transition: background-color .2s linear
+
+	&_no-text
+		padding: 0
+		&::after
+			background-color: rgba(0, 0, 0, .0)
+
 	+hover
 		&::after
 			background-color: rgba(0, 0, 0, .2)
@@ -110,21 +130,16 @@
 	&:active
 		&::after
 			background-color: rgba(0, 0, 0, .6)
-	
-	&::after
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background-color: rgba(0, 0, 0, .4)
-		transition: background-color .2s linear
 
 	&__title,
 	&__text
 		z-index: 1
 		color: var(--white-color)
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
 
 .link-img-info
 	display: flex

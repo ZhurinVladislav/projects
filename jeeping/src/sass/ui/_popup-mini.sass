@@ -1,0 +1,62 @@
+.popup-mini
+	position: absolute
+	z-index: 100
+	top: calc(100% + 10px)
+	left: 50%
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	border-radius: 20px
+	padding: 26px 40px
+	width: 432px
+	min-height: 60px
+	visibility: hidden
+	opacity: 0
+	box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06)
+	background-color: var(--white-color)
+	transform: translateX(-50%)
+	transition: visibility .2s linear, opacity .2s linear
+	+ph
+		width: 300px
+	&.active
+		visibility: visible
+		opacity: 1
+
+	&__btn-close-icon
+		position: absolute
+		top: 18px
+		right: 18px
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 12px
+		height: 12px
+
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 10px
+
+	&__list-item
+		display: flex
+		align-items: center
+		gap: 14px
+
+	&__list-img-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		padding: 6px
+		width: 32px
+		height: 32px
+		border-radius: 8px
+		background-color: var(--bg-link)
+
+	&__list-img
+		width: 100%
+		height: 100%
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain

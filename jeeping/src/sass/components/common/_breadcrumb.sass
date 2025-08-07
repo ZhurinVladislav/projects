@@ -1,0 +1,47 @@
+.breadcrumb
+	margin-bottom: 30px
+	+ph
+		margin-bottom: 24px
+
+	&__list
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		gap: 10px 20px
+		max-width: max-content
+		overflow: hidden
+		+ph
+			font-size: 14px
+
+	&__list-item
+		position: relative
+		// padding: 0 10px
+		color: var(--text-color)
+		transition: color .2s linear
+
+		// &:first-child
+		// 	padding-left: 0
+
+		&:not(:last-child)
+			&::after
+				content: "/"
+				position: absolute
+				z-index: 2
+				top: 50%
+				right: -15px
+				color: var(--grey-color)
+				transform: translateY(-50%)
+
+		// &:last-child
+		// 	padding-right: 0
+
+	&__list-link
+		color: var(--grey-color)
+		transition: color .2s linear
+		+hover
+			color: var(--text-color)
+		+focus
+			color: var(--text-color)
+		&:active
+			color: var(--dark-color)
+		

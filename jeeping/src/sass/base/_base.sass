@@ -29,6 +29,9 @@ body
   color: var(--text-color)
   background-color: var(--page-color)
 
+  &.overflow
+    overflow-x: visible
+
   &::-webkit-scrollbar
     width: 4px
     background-color: var(--page-color)
@@ -79,6 +82,8 @@ body
 .title-3
   font-weight: 600
   font-size: 24px
+  +ph
+    font-size: 20px
 
 .subtitle
   font-size: 20px
@@ -101,6 +106,9 @@ body
 .rounded-full
   border-radius: 100%
 
+.text-gray
+  color: var(--grey-color)
+
 // общие классы
 .none
   display: none !important
@@ -119,7 +127,7 @@ body
   transition: opacity .2s linear
   +sm
     max-width: 120px
-    z-index: 2001
+    z-index: 1000
   +ph
     max-width: 100px
   +hover

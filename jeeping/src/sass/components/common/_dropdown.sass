@@ -21,6 +21,26 @@
 		height: 20px
 		transition: transform .2s linear
 
+	&__list-wrap
+		position: absolute
+		top: calc(100% + 10px)
+		left: 50%
+		z-index: 10
+		width: 342px
+		opacity: 0
+		visibility: hidden
+		transition: visibility .2s linear, opacity .2s linear
+		transform: translateX(-50%)
+		&.active
+			opacity: 1
+			visibility: visible
+
+		.dropdown__list
+			position: static
+			opacity: 1
+			width: 100%
+			visibility: visible
+
 	&__list
 		position: absolute
 		bottom: -90px
@@ -38,6 +58,10 @@
 		opacity: 0
 		visibility: hidden
 		transition: visibility .2s linear, opacity .2s linear
+		&_row
+			flex-direction: row
+			flex-wrap: wrap
+			gap: 24px 16px
 		+ph
 			width: 300px
 		&.active

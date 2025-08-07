@@ -4,6 +4,8 @@
 	gap: 12px
 
 .custom-checkbox
+	display: flex
+	flex-direction: column
 	user-select: none
 	cursor: pointer
 	&__input
@@ -17,14 +19,63 @@
 		&:focus + .custom-checkbox__text
 			color: var(--primary-color)
 
-		&:checked + .custom-checkbox__list
+	&__text
+		position: relative
+		padding-left: 35px
+		transition: color .2s linear
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			border: 1px solid var(--text-color)
+			border-radius: 4px
+			width: 24px
+			height: 24px
+
+		&::after
+			content: ''
+			position: absolute
+			top: 4px
+			left: 5px
+			border-radius: 100%
+			width: 14px
+			height: 16px
+			opacity: 0
+			background-image: url('../img/base/checked.svg')
+			transition: opacity .2s linear
+
+	&__text-bottom
+		padding-left: 35px
+		font-weight: 400
+
+	&__link
+		display: inline
+		border-color: var(--text-color)
+		+hover
+			border-color: var(--none-color)
+			color: var(--text-color)
+
+.custom-radio
+	display: flex
+	flex-direction: column
+	user-select: none
+	cursor: pointer
+	&__input
+		position: absolute
+		appearance: none
+
+		&:checked + .custom-radio__text
 			&::after
 				opacity: 1
 
-	&__text, &__list
+		&:focus + .custom-radio__text
+			color: var(--primary-color)
+
+	&__text
 		position: relative
-		padding-left: 28px
-		font-size: 16px
+		padding-left: 35px
 		transition: color .2s linear
 
 		&::before
@@ -34,20 +85,24 @@
 			left: 0
 			border: 1px solid var(--text-color)
 			border-radius: 100%
-			width: 20px
-			height: 20px
+			width: 24px
+			height: 24px
 
 		&::after
 			content: ''
 			position: absolute
-			top: 3px
-			left: 3px
+			top: 4px
+			left: 4px
 			border-radius: 100%
-			width: 14px
-			height: 14px
-			background: linear-gradient(90deg, #12a26f 0%, #00c7f0 100%)
+			width: 16px
+			height: 16px
 			opacity: 0
+			background-color: var(--text-color)
 			transition: opacity .2s linear
+
+	&__text-bottom
+		padding-left: 35px
+		font-weight: 400
 
 	&__link
 		display: inline
@@ -55,6 +110,35 @@
 		+hover
 			border-color: var(--none-color)
 			color: var(--text-color)
+
+.custom-checkbox-tab
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 20px
+	padding: 6px 24px
+	max-width: max-content
+	min-width: 116px
+	font-weight: 400
+	background-color: var(--bg-link)
+	cursor: pointer
+	transition: color .2s linear, background-color .2s linear
+
+	&:has(.custom-checkbox-tab__input:checked)
+		color: var(--white-color)
+		background-color: var(--dark-color)
+
+	&__input
+		position: absolute
+		left: 0
+		top: 0
+		display: block
+		width: 100%
+		height: 100%
+		appearance: unset
+		cursor: pointer
+
 
 .label
 	max-width: max-content
