@@ -31,9 +31,18 @@
 		visibility: hidden
 		transition: visibility .2s linear, opacity .2s linear
 		transform: translateX(-50%)
+		+ph
+			display: none
+			left: -20px
+			width: 300px
+			opacity: 1
+			visibility: visible
+			transform: none
 		&.active
 			opacity: 1
 			visibility: visible
+			+ph
+				display: flex
 
 		.dropdown__list
 			position: static

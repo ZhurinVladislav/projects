@@ -4,6 +4,8 @@
 	gap: 64px
 	max-width: 100%
 	width: 100%
+	+sm
+		gap: 24px
 	
 	&__item-wrap
 		display: flex
@@ -13,6 +15,8 @@
 	&__item-link
 		font-weight: 600
 		font-size: 20px
+		+ph
+			font-size: 18px
 
 	&__item-btn
 		width: 24px
@@ -30,11 +34,9 @@
 		flex-direction: column
 		gap: 24px
 		padding-top: 32px
+		+ph
+			padding-top: 12px
 
 	&__item-list-item
 		&.active
 			font-weight: 600
-
-
-// .menu-inner-item
-// 	&__link

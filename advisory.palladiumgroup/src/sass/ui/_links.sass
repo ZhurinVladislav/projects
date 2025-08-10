@@ -20,12 +20,10 @@
 		transform: scale(.98)
 
 	&__icon
-		width: 20px
-		height: 20px
+		width: 18px
+		height: 18px
 		fill: var(--text-color)
 		transition: fill .2s linear, transform .2s linear
-
-
 
 .link
 	display: flex
@@ -52,6 +50,23 @@
 	&:active
 		border-color: var(--btn-active-color)
 
+	&_inv
+		border: 1px solid var(--white-color-op)
+		color: var(--text-color)
+		background-color: var(--none-color)
+		+hover
+			border-color: var(--white-color)
+			background-color: var(--none-color)
+		+focus
+			border-color: var(--white-color)
+			background-color: var(--none-color)
+		&:active
+			border-color: var(--active-color)
+			background-color: var(--none-color)
+
+		.link__icon
+			fill: var(--text-color)
+
 	&_br
 		border-radius: 22px
 
@@ -63,41 +78,46 @@
 		padding-right: 4px
 
 	&__icon
-		width: 20px
-		height: 20px
+		width: 18px
+		height: 18px
 		fill: var(--primary-color)
+
+	&__text
+		&_ph
+			+ph
+				display: none
 	
-.link-inv
-	display: flex
-	align-items: center
-	justify-content: center
-	gap: 10px
-	padding: 8px 18px
-	max-width: 262px
-	min-width: 42px
-	min-height: 42px
-	font-weight: 500
-	line-height: 100%
-	font-size: 16px
-	text-align: center
-	border: 1px solid var(--white-color-op)
-	transition: border-color .2s linear
-	+hover
-		border-color: var(--white-color)
-	+focus
-		border-color: var(--white-color)
-	&:active
-		border-color: var(--active-color)
+// .link-inv
+// 	display: flex
+// 	align-items: center
+// 	justify-content: center
+// 	gap: 10px
+// 	padding: 8px 18px
+// 	max-width: 262px
+// 	min-width: 42px
+// 	min-height: 42px
+// 	font-weight: 500
+// 	line-height: 100%
+// 	font-size: 16px
+// 	text-align: center
+// 	border: 1px solid var(--white-color-op)
+// 	transition: border-color .2s linear
+// 	+hover
+// 		border-color: var(--white-color)
+// 	+focus
+// 		border-color: var(--white-color)
+// 	&:active
+// 		border-color: var(--active-color)
 
-	&_br
-		border-radius: 22px
+// 	&_br
+// 		border-radius: 22px
 
-	&_brc
-		border-radius: 100%
-		padding: 0
+// 	&_brc
+// 		border-radius: 100%
+// 		padding: 0
 
-	&__icon
-		width: 20px
-		height: 20px
-		fill: var(--text-color)
+// 	&__icon
+// 		width: 20px
+// 		height: 20px
+// 		fill: var(--text-color)
 	
