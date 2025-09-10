@@ -5,6 +5,7 @@
 		align-items: center
 		justify-content: center
 		gap: 12px
+		color: var(--text-color)
 		text-align: center
 		transition: color .2s linear
 		+hover
@@ -15,6 +16,12 @@
 		&.active
 			.dropdown__btn-icon_arrow
 				transform: rotateX(180deg)
+		
+		&_no-anim
+			+hover
+				color: var(--text-color)
+			+focus
+				color: var(--text-color)
 
 	&__btn-icon
 		width: 20px
@@ -26,10 +33,8 @@
 		top: calc(100% + 10px)
 		left: 50%
 		z-index: 10
+		display: none
 		width: 342px
-		opacity: 0
-		visibility: hidden
-		transition: visibility .2s linear, opacity .2s linear
 		transform: translateX(-50%)
 		+ph
 			display: none
@@ -39,23 +44,21 @@
 			visibility: visible
 			transform: none
 		&.active
-			opacity: 1
-			visibility: visible
+			display: flex
 			+ph
 				display: flex
 
 		.dropdown__list
 			position: static
-			opacity: 1
+			display: flex
 			width: 100%
-			visibility: visible
 
 	&__list
 		position: absolute
-		bottom: -90px
+		top: calc(100% + 10px)
 		left: 0
 		z-index: 10
-		display: flex
+		display: none
 		flex-direction: column
 		gap: 16px
 		border-radius: 12px
@@ -64,9 +67,6 @@
 		height: max-content
 		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.12)
 		background-color: var(--white-color)
-		opacity: 0
-		visibility: hidden
-		transition: visibility .2s linear, opacity .2s linear
 		&_row
 			flex-direction: row
 			flex-wrap: wrap
@@ -74,5 +74,4 @@
 		+ph
 			width: 300px
 		&.active
-			opacity: 1
-			visibility: visible
+			display: flex

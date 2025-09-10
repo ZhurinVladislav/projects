@@ -2,22 +2,23 @@
 	display: flex
 	align-items: center
 	justify-content: center
-	padding: 12px
-	border: 1px solid var(--accent-color)
-	border-radius: 7px
-	max-width: 262px
-	min-height: 52px
+	padding: 12px 40px
+	border: 1px solid var(--text-color)
+	border-radius: 4px
+	max-width: 288px
+	min-height: 72px
 	font-weight: 700
-	font-size: 15px
-	color: var(--white-color)
+	font-size: 20px
+	color: var(--primary-color)
 	text-align: center
-	background-color: var(--accent-color)
+	background-color: var(--text-color)
 	transition: border-color .2s linear, background-color .2s linear
 	+hover
 		border-color: var(--hover-color)
 		background-color: var(--hover-color)
 	+focus
-		border-color: var(--text-color)
+		border-color: var(--hover-color)
+		background-color: var(--hover-color)
 	&:active
 		border-color: var(--active-color)
 		background-color: var(--active-color)

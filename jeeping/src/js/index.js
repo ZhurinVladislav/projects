@@ -320,10 +320,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const itemArr = gallery.querySelectorAll(`.${classItem}`);
 
-    if ((!itemArr || itemArr.length === 0) && itemArr.length >= count++) return;
+    if (!itemArr || itemArr.length === 0 || itemArr.length === count) return;
 
     itemArr.forEach((item, index) => {
       if (index === count - 1) {
+        item.classList.add('card-gallery__list-item_last');
         const link = item.querySelector(`.${classLink}`);
         const countNumber = itemArr.length - (index + 1);
         const text = document.createElement('span');

@@ -106,6 +106,9 @@ body
 .rounded-full
   border-radius: 100%
 
+.color
+  color: var(--primary-color)
+
 .text-gray
   color: var(--grey-color)
 
@@ -154,3 +157,28 @@ body
 
   &__title
     margin-bottom: 0
+
+// miniShop2 ModX
+#mse2_sort
+  a
+    cursor: pointer !important
+    &.active
+      color: var(--grey-color) !important
+  
+  .sort
+    span
+      color: var(--primary-color) !important
+
+    &[data-dir="desc"]
+      span
+        &::after
+          content: "⌃" !important
+          position: relative !important
+          top: 3px !important
+
+    &[data-dir="asc"]
+      span
+        &::after
+          content: "⌄" !important
+          position: relative !important
+          top: -6px !important

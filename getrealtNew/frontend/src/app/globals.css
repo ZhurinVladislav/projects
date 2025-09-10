@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* containers */
+  --container-width: 1490px;
+  --container-padding: 25px;
+  --container-padding-ph: 10px;
+  /* colors */
+  --background-color: #fff;
+  --gray-color: #f6f6f6;
+  --text-color: #020204;
+  --text-color-second: #a2a2a2;
+  --primary-color: #2acbb3;
+  --link-color: #9b9b9b;
+  --link-second-color: #5652e8;
+  /* --link-second-color: #505050; */
+  --bg-color-gray-op: rgba(80, 80, 80, 0.2);
+  /* fonts */
+  --font-montserrat: var(--font-montserrat);
+  --font-tenor-sans: var(--font-tenor-sans);
+}
+
+*::selection {
+  @apply bg-(--primary-color) text-(--text-color);
+}
+
+body {
+  @apply font-montserrat m-0 flex min-h-dvh w-full max-w-full min-w-80 flex-col bg-(--background-color) text-base font-medium text-(--text-color);
+}
+
+header,
+section,
+main,
+footer {
+  @apply w-full;
+}
+
+body::-webkit-scrollbar {
+  @apply w-1 bg-(--background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-(--primary-color);
+}
+
+button,
+a {
+  @apply cursor-pointer;
+}
+
+/* start base */
+.visually-hidden {
+  @apply absolute -m-px h-px w-px border-0 p-0 whitespace-nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  @apply relative z-1 mx-auto w-full max-w-(--container-width) pr-(--container-padding) pl-(--container-padding) max-sm:pr-(--container-padding-ph) max-sm:pl-(--container-padding-ph);
+}
+
+.container-second {
+  @apply relative z-1 mx-auto w-full max-w-7xl pr-(--container-padding) pl-(--container-padding) max-sm:pr-(--container-padding-ph) max-sm:pl-(--container-padding-ph);
+}
+
+.section {
+  @apply mb-25 max-sm:mb-20;
+}
+
+.page-transition {
+  @apply transition-opacity duration-300 ease-in-out;
+}
+
+.title-2 {
+  @apply font-montserrat mb-5 text-5xl uppercase max-md:text-4xl max-sm:text-3xl;
+}
+
+.content {
+  @apply font-montserrat flex flex-col gap-4 text-lg text-(--text-color-second);
+}
+
+.content h3 {
+  @apply text-3xl text-white;
+}
+
+.logo {
+  @apply flex items-center transition-opacity duration-300 ease-linear hover:opacity-50;
+}
+/* end base */
+
+/* start input */
+.input {
+  @apply h-11 w-full rounded-2xl bg-[var(--gray-color)] py-3.5 pr-7 pl-15 focus:ring-2 focus:outline-none;
+}
+
+.input.error {
+  @apply border-red-700;
+}
+/* end input */
+
+/* start buttons */
+.btn-primary {
+  @apply font-montserrat flex max-h-max min-h-11 min-w-11 items-center justify-center rounded-2xl bg-(--primary-color) px-3.5 text-center text-white transition-colors duration-300 ease-linear hover:text-(--text-color);
+}
+/* end buttons */
+
+/* start links */
+.link-primary {
+  @apply font-montserrat flex min-h-11 min-w-11 items-center justify-center rounded-xs bg-(--bg-color-gray-op) px-3.5 text-center text-lg font-semibold text-(--link-color) backdrop-filter-[10px] transition-colors duration-300 ease-linear hover:text-(--text-color);
+}
+
+.link-primary__icon {
+  @apply w-5 fill-(--link-second-color) transition-colors duration-300 ease-linear;
+}
+
+.link-primary:hover .link-primary__icon {
+  @apply fill-(--text-color);
+}
+
+.link-text {
+  @apply font-montserrat text-center text-(--text-color-second) transition-colors duration-300 ease-linear hover:text-(--link-second-color);
+}
+
+.link-text.active {
+  @apply text-(--link-second-color);
+}
+/* end links */
+
+/* Анимация для появления страницы */
+.page-transition > * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

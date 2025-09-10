@@ -105,10 +105,15 @@
 	color: var(--text-color)
 	text-align: center
 	background-color: var(--bg-link)
+	transition: transform .2s linear
 	+ph
 		position: relative	
 		right: auto
 		bottom: auto
+	+hover
+		transform: scale(1.04)
+	+focus
+		transform: scale(1.04)
 
 	&__img-wrap
 		position: absolute
