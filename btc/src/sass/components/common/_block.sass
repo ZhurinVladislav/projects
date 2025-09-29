@@ -59,6 +59,25 @@
 			background-color: var(--bg-fifth-color)
 			border-top-color: var(--bg-fourth-color)
 
+	&_item
+		.block
+			&__content-wrap
+				height: 100%
+
+			&__img-wrap:not(.img-wrap)
+				position: absolute
+				top: -76px
+				left: 0
+				min-height: 189px
+
+			&__text-wrap
+				margin-top: auto
+				min-height: max-content
+			&__text
+				margin: 0
+				p
+					font-size: 20px
+
 	&__shadow-left
 		position: absolute
 		top: 16px
@@ -217,3 +236,63 @@
 		right: -4px
 		&::before
 			right: -4px
+
+	&_small
+		&.block
+			max-width: 100%
+			width: 100%
+			padding: 20px
+
+		.block
+			&__text
+				margin-bottom: 0
+
+			&__title
+				margin-bottom: 10px
+				font-size: 48px
+
+.block-border
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-shrink: 0
+	border: 8px solid var(--none-color)
+	border-image-slice: 8
+	border-image-repeat: stretch
+	border-image-source: url(../img/home/statistics/border.svg)
+	width: 169px
+	height: 155px
+	overflow: hidden
+	+ph
+		padding: 10px
+		width: 120px
+		height: 110px
+	&::after
+		content: ''
+		position: absolute
+		z-index: 0
+		top: 50%
+		left: 50%
+		width: calc(100% + 33px)
+		height: calc(100% + 33px)
+		background-color: #2D233B
+		transform: translate(-50%, -50%)
+		transition: background-color .2s linear
+
+	&__text
+		z-index: 1
+		font-size: 96px
+		letter-spacing: -0.15em
+		text-align: center
+		color: #9aabff
+		+sm
+			font-size: 48px
+
+	&__img
+		z-index: 1
+		width: 105px
+		height: 105px
+		+sm
+			width: 80px
+			height: 80px

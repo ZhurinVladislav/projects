@@ -1,9 +1,9 @@
 'use client';
 
+import { MENU } from '@/shared/data/menu.data';
 import { usePathname } from 'next/navigation';
 import { match } from 'path-to-regexp';
 import CustomLink from '../ui/CustomLink';
-import { MENU } from './menu.data';
 
 const Menu = () => {
   const pathname = usePathname();

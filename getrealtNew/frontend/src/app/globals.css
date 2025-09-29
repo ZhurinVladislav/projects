@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 @theme inline {
   /* containers */
@@ -25,7 +28,7 @@
 }
 
 body {
-  @apply font-montserrat m-0 flex min-h-dvh w-full max-w-full min-w-80 flex-col bg-(--background-color) text-base font-medium text-(--text-color);
+  @apply font-montserrat m-0 flex min-h-dvh w-full max-w-full min-w-80 flex-col bg-(--background-color) text-lg font-medium text-(--text-color);
 }
 
 header,
@@ -65,23 +68,35 @@ a {
 }
 
 .section {
-  @apply mb-25 max-sm:mb-20;
+  @apply relative mb-35 max-sm:mb-20;
 }
 
 .page-transition {
   @apply transition-opacity duration-300 ease-in-out;
 }
 
+.title-1 {
+  @apply font-tenor-sans mb-5 text-5xl max-md:text-4xl max-sm:text-3xl;
+}
+
 .title-2 {
-  @apply font-montserrat mb-5 text-5xl uppercase max-md:text-4xl max-sm:text-3xl;
+  @apply font-tenor-sans mb-5 text-[40px] max-md:text-4xl max-sm:text-3xl;
 }
 
 .content {
-  @apply font-montserrat flex flex-col gap-4 text-lg text-(--text-color-second);
+  @apply font-montserrat flex flex-col gap-5 text-base;
+}
+
+.content h2 {
+  @apply font-tenor-sans text-[40px] max-md:text-4xl max-sm:text-3xl;
 }
 
 .content h3 {
-  @apply text-3xl text-white;
+  @apply font-tenor-sans text-2xl;
+}
+
+.content ul {
+  @apply flex list-disc flex-col gap-3 pl-9 marker:text-4xl marker:leading-none marker:text-(--primary-color);
 }
 
 .logo {
@@ -124,6 +139,30 @@ a {
 
 .link-text.active {
   @apply text-(--link-second-color);
+}
+
+.btn.btn_blue {
+  @apply font-montserrat flex max-h-max min-h-11 min-w-11 items-center justify-center rounded-2xl bg-(--link-second-color) px-3.5 text-center text-white transition-colors duration-300 ease-linear hover:text-(--text-color);
+}
+
+.btn.btn_blue.btn_no-hover {
+  @apply hover:text-white;
+}
+
+.card {
+  @apply flex flex-col gap-3 rounded-3xl bg-white p-[22px_28px] shadow-[0_4px_20px_0_rgba(0,0,0,0.1)];
+}
+
+.card.card_link {
+  @apply transition-colors duration-300 ease-linear hover:bg-(--link-second-color) hover:text-white;
+}
+
+.card__btn {
+  @apply max-w-36 transition-colors duration-300 ease-linear;
+}
+
+.card.card_link:hover .card__btn {
+  @apply bg-white text-(--link-second-color);
 }
 /* end links */
 

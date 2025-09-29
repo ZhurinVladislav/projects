@@ -1,0 +1,63 @@
+.section-number-list
+	&__img
+		position: absolute
+		top: 12px
+		left: -112px
+		z-index: 0
+		width: 286px
+		height: 223px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		+ph
+			width: 220px
+			height: 180px
+			left: -80px
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin: 0 auto
+		max-width: 1222px
+		width: 100%
+
+	&__title
+		z-index: 1
+		text-align: center
+
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 156px
+		+sm
+			gap: 80px
+		+ph
+			gap: 40px
+	
+	&__item
+		display: flex
+		+ph
+			flex-direction: column
+
+		.block
+			padding-left: 70px
+			+ph
+				padding-top: 50px
+				padding-left: 20px
+
+			&__title
+				font-size: 38px
+				+sm
+					font-size: 32px
+				+ph
+					font-size: 28px
+
+	&__item-block
+		margin-right: -50px
+		z-index: 1000
+		+ph
+			margin-right: 0
+			margin-bottom: -40px
+
+		

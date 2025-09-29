@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { SITE } from '@/config/site.config';
 import type { Metadata } from 'next';
@@ -36,7 +37,10 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${montserrat.variable} ${tenorSans.variable} antialiased`}>
         <Header />
+
         <main className="page-transition">{children}</main>
+
+        <Footer />
       </body>
     </html>
   );

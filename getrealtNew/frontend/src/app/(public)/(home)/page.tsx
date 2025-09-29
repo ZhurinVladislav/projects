@@ -1,4 +1,7 @@
+import HomeContent from '@/components/Home/HomeContent';
 import HomeHero from '@/components/Home/HomeHero';
+import Services from '@/components/Services';
+import SliderNews from '@/components/Sliders/SliderNews';
 import { SITE } from '@/config/site.config';
 import { Metadata } from 'next';
 
@@ -11,6 +14,9 @@ export default function Home() {
   return (
     <>
       <HomeHero />
+      <Services />
+      <SliderNews />
+      <HomeContent />
     </>
   );
 }

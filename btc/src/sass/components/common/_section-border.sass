@@ -1,0 +1,65 @@
+.section-border
+	&__content-wrap
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		padding: 106px 36px
+		border: 22px solid var(--none-color)
+		border-image-slice: 22
+		border-image-repeat: stretch
+		border-image-source: url(../img/crowd/steps/border.png)
+		+sm
+			padding: 80px 24px
+		+ph
+			padding: 60px 14px
+
+	&__title-wrap
+		position: absolute
+		top: -7%
+		left: 50%
+		transform: translateX(-50%)
+		+ph
+			top: -4%
+
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 24px
+
+	&__list-item
+		&.block
+			padding: 32px 64px
+		.block
+			&__content-wrap
+				align-items: center
+				justify-content: flex-start
+				gap: 62px
+				
+			&__content-num
+				font-size: 64px
+				letter-spacing: 0.05em
+				text-align: center
+				line-height: 89%
+				+sm
+					font-size: 54px
+				+ph
+					font-size: 48px
+			
+			&__content-text
+				font-weight: 700
+				font-size: 24px
+				letter-spacing: 0.05em
+				+sm
+					font-size: 22px
+				+ph
+					font-size: 20px
+
+	&__link-wrap
+		position: absolute
+		bottom: -7%
+		left: 50%
+		transform: translateX(-50%)
+		+ph
+			bottom: -4%

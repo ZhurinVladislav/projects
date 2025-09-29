@@ -1,0 +1,75 @@
+.section-clmn
+	padding-top: 78px
+	padding-bottom: 152px
+	background-color: #1d1230
+
+	&__title
+		margin: 0 auto
+		margin-bottom: 96px
+		text-align: center
+		+sm
+			margin-bottom: 80px
+		+ph
+			margin-bottom: 40px
+
+	&__content-wrap
+		display: flex
+		justify-content: space-between
+		gap: 40px
+		+ph
+			flex-direction: column
+
+	&__img-wrap
+		max-width: 584px
+		width: 100%
+		min-height: 591px
+		+ph
+			min-height: 200px
+
+	&__img
+		width: 100%
+
+	&__content
+		display: flex
+		flex-direction: column
+		max-width: 695px
+		width: 100%
+		font-weight: 700
+		line-height: 120%
+		text-transform: uppercase
+		+ph
+			line-height: 180%
+
+	&__content-title
+		margin-bottom: 10px
+		font-size: 32px
+		+sm
+			font-size: 28px
+		+ph
+			font-size: 22px
+
+	&__content-info
+		display: flex
+		flex-direction: column
+		margin-bottom: 48px
+
+	&__content-info-title
+		font-size: 64px
+		line-height: 88%
+		color: var(--blue-color)
+		+sm
+			font-size: 48px
+		+ph
+			font-size: 32px
+
+	&__content-info-text
+		font-size: 24px
+		+ph
+			font-size: 18px
+
+	&__content-text
+		font-weight: 400
+		font-size: 24px
+		text-transform: capitalize
+		+ph
+			font-size: 18px

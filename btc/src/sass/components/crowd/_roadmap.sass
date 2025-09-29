@@ -1,0 +1,74 @@
+.roadmap
+	padding-top: 126px
+	padding-bottom: 144px
+	background-color: $color__29
+	overflow: hidden
+	&__head
+		display: flex
+		align-items: center
+		gap: 24px
+		margin-bottom: 124px
+		+lr
+			flex-direction: column
+			align-items: flex-start
+	&__title
+		margin: 0
+		text-transform: uppercase
+	&__head-content-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 20px
+		+lr
+			width: 100%
+	&__nav
+		display: none
+		align-items: center
+		gap: 24px
+		margin-left: auto
+		&.active
+			display: flex
+	&__nav-btn
+		width: 44px
+		height: 48px
+		background-position: center
+		background-size: contain
+		background-repeat: no-repeat
+		+sm
+			width: 30px
+			height: 32px
+		&_prev
+			transform: rotate(180deg)
+
+	&__results
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 33px
+			right: -20vh
+			z-index: -1
+			width: 1578px
+			height: 6px
+			background-color: var(--bg-color)
+
+.result-item
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	text-align: center
+	&__img
+		margin-bottom: 22px
+		width: 40px
+		height: 40px
+		background-position: center
+		background-size: contain
+		background-repeat: no-repeat
+	&__title
+		margin-bottom: 16px
+		font-weight: 700
+		font-size: 36px
+	&__descr
+		font-size: 20px
+		letter-spacing: 0.05em
