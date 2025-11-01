@@ -35,18 +35,18 @@ body
 
   &::-webkit-scrollbar-thumb
     border-radius: 8px
-    background: linear-gradient(0deg, #12a26f 0%, #00c7f0 100%)
+    background: var(--primary-color)
 
 // стили для секций
 .app
   display: flex
   flex-direction: column
   border-radius: 10px
-  margin: 0 auto
-  max-width: 1080px
+  margin: auto
+  max-width: 422px
   width: 100%
-  min-height: 1920px
-  background-repeat: no-repeat
+  min-height: 625px
+  overflow: hidden
 
 // стили для контейнеров
 .container
@@ -57,9 +57,25 @@ body
   padding-right: var(--container-padding)
   max-width: calc(var(--container-width) + (var(--container-padding) * 2))
   width: 100%
-  +ph
-    padding-left: var(--container-padding-ph)
-    padding-right: var(--container-padding-ph)
+
+.trnfs-top
+  transform: rotate(-90deg)
+.trnfs-top-right
+  transform: rotate(-45deg)
+.trnfs-top-left
+  transform: rotate(-136deg)
+.trnfs-left
+  transform: rotate(-180deg)
+
+// Стили для монеты
+.coin
+  position: absolute
+  z-index: 1
+  width: 50px
+  height: 50px
+  &_sm
+    width: 15px
+    height: 15px
 
 // скрытие текста
 .text-hidden

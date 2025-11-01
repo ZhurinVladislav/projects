@@ -1,1 +1,120 @@
-// .footer
+.footer
+  position: relative
+  margin-top: auto
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 0
+    max-width: 100%
+    width: 100%
+    min-height: 202px
+    background-image: url(../img/base/footer/bg-img.png)
+    background-repeat: no-repeat
+    background-position: center
+
+  &__container
+    display: flex
+    flex-direction: column
+    padding-bottom: 10px
+    min-height: 197px
+    overflow: hidden
+
+  &__layer
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &_first
+      height: 82px
+
+      .footer__layer-left
+        display: flex
+        justify-content: flex-end
+        max-width: 95px
+        width: 100%
+      
+      .footer-btn-radio
+        position: absolute
+        top: 48px
+        left: 50%
+        z-index: 100
+        transform: translateX(-50%)
+
+    &_third
+      margin: 0 auto
+      max-width: 310px
+      width: 100%
+
+      .footer__layer-dashboard
+        padding-top: 8px
+        padding-left: 10px
+
+      .items-list
+        &_stickers
+          flex-direction: row-reverse
+          .items-list__item
+            &:nth-child(1)
+              padding-top: 4px
+            &:nth-child(2)
+              padding-top: 10px
+            &:nth-child(3)
+              padding-top: 20px
+          
+  &__layer-right
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-right: 20px
+
+    .items-list
+      &_first
+        padding-right: 20px
+
+  &__menu-wrap
+    display: flex
+    justify-content: space-between
+    padding-top: 14px
+
+  &__menu-list
+    display: flex
+    gap: 28px
+    
+  &__img-wheel-wrap
+    position: absolute
+    bottom: -29%
+    left: 50%
+    width: 151px
+    height: 151px
+    transform: translateX(-50%)
+  
+.items-list
+  display: flex
+  gap: 4px
+
+.footer-btn-radio
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  border-radius: 100px
+  padding: 4px
+  font-weight: 700
+  font-size: 14px
+  color: var(--white-color)
+  max-width: 95px
+  width: 100%
+  background-color: var(--blue-color)
+
+  &__title
+    text-transform: uppercase
+
+.footer-menu-link
+  display: flex
+  width: 42px
+  height: 42px
+  background-position: center
+  background-size: contain
+  background-repeat: no-repeat

@@ -1,0 +1,52 @@
+.list-clmn
+	display: flex
+	flex-direction: column
+	gap: 130px
+	+sm
+		gap: 80px
+	+ph
+		gap: 48px
+
+.list-clmn-item
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: 50px
+	+ph
+		flex-direction: column
+		align-items: flex-start
+	
+	&__img-wrap
+		flex-shrink: 0
+		width: 164px
+		height: 164px
+		+ph
+			width: 120px
+			height: 120px
+
+	&__img
+		width: 100%
+		height: 100%
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		gap: 30px
+		width: 100%
+
+	&__content-title
+		font-weight: 700
+		line-height: 100%
+		font-size: 48px
+		color: var(--white-color)
+		text-shadow: 7px 7px var(--bg-color)
+		+sm
+			font-size: 34px
+		+ph
+			font-size: 24px
+
+	&__content-descr
+		font-size: 20px
+		letter-spacing: 0.05em
+		+ph
+			font-size: 18px

@@ -9,6 +9,8 @@
 	outline: none
 	cursor: pointer
 	transition: all .15s
+	&_no
+		cursor: auto
 
 	.bg
 		position: absolute
@@ -208,6 +210,37 @@
 				border-bottom-color: $color__19
 				border-left-color: $color__19
 
+	&.purple
+		.caption
+			background-color: $color__29
+			border-top-color: $color__52
+			border-right-color: $color__52
+			border-bottom-color: $color__53
+			border-left-color: $color__53
+			text-shadow: -2px 2px $color__53
+
+			&:hover,
+			&:focus,
+			&.active
+				.caption
+					background-color: $color__29
+					border-top-color: $color__52
+					border-right-color: $color__52
+					border-bottom-color: $color__53
+					border-left-color: $color__53
+					text-shadow: -2px 2px $color__53
+
+		&:hover,
+		&:focus,
+		&.active
+			.caption
+				background-color: $color__29
+				border-top-color: $color__52
+				border-right-color: $color__52
+				border-bottom-color: $color__53
+				border-left-color: $color__53
+				text-shadow: -2px 2px $color__53
+
 	&.pink
 		.caption
 			background-color: $color__4
@@ -240,9 +273,9 @@
 			+sm
 				text-shadow: -1px 1px $color__24
 
-		&:hover,
-		&:focus,
-		&.active
+		&:hover:not(.progressbar),
+		&:focus:not(.progressbar),
+		&.active:not(.progressbar)
 			.caption
 				background-color: $color__51
 				border-bottom-color: $color__23

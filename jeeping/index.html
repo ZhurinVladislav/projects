@@ -8,7 +8,6 @@
         <!-- SEO -->
         <title>Джиппинг туры в&#160;Геленджике</title>
         <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
-        <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- styles -->
         <link rel="stylesheet" href="./app/css/style.min.css" />
@@ -16,7 +15,6 @@
         <script src="./app/js/libs/lazy-load.min.js"></script>
         <script src="./app/js/libs/preloader.min.js"></script>
         <script src="./app/js/libs/popup.min.js" defer></script>
-        <script src="./app/js/libs/swiper.min.js" defer></script>
         <script src="./app/js/libs/utilts.min.js" defer></script>
         <script src="./app/js/index.min.js" defer></script>
     </head>
@@ -447,10 +445,10 @@
                         </p>
                     </div>
 
-                    <ul class="catalog__list-tab list-tab">
+                    <ul id="tabs" class="catalog__list-tab list-tab">
                         <li class="list-tab__item">
                             <button
-                                class="list-tab__item-btn btn btn_inv active js-tabs-btn"
+                                class="list-tab__item-btn btn btn_inv js-tabs-btn"
                                 aria-label="Раскрыть элементы категории 'Популярные маршруты'">
                                 Популярные маршруты
                             </button>
@@ -479,28 +477,31 @@
                     </ul>
                     <div
                         id="tabs-content-wrap"
-                        class="catalog__list-wrap tabs-content-wrap">
-                        <ul class="catalog__cards-list cards-list">
-                            <li class="cards-list__item">
-                                <a
-                                    class="cards-list__item-link card"
-                                    href="#"
-                                    aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                        class="catalog__content-wrap tabs-content-wrap">
+                        <div
+                            class="catalog__card-wrap tabs-content js-tabs-content">
+                            <ul class="catalog__cards-list cards-list">
+                                <li class="cards-list__item card">
+                                    <a
+                                        class="card__link"
+                                        href="#"
+                                        aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    </a>
+                                    <a
+                                        class="card__link-icon icon-link"
+                                        href="#asd"
+                                        aria-label="Перейти на страницу с избранными услугами">
+                                        <svg class="icon-link__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#heart"></use>
+                                        </svg>
+                                    </a>
                                     <div class="card__img-wrap">
                                         <div class="card__tags card__tags_top">
                                             <span
                                                 class="card-tag__card-tag card-tag card-tag_green">
                                                 Популярные маршруты
                                             </span>
-                                            <span
-                                                class="card-tag__link-icon icon-link"
-                                                href="#"
-                                                aria-label="Перейти на страницу с избранными услугами">
-                                                <svg class="icon-link__icon">
-                                                    <use
-                                                        href="./app/img/icons/icons.svg#heart"></use>
-                                                </svg>
-                                            </span>
                                         </div>
                                         <img
                                             class="card__img"
@@ -513,7 +514,7 @@
                                                 в&#160;любой день
                                                 <svg class="card-tag__icon">
                                                     <use
-                                                        href="./app/img/icons/icons.svg#node"></use>
+                                                        href="./app/img/icons/icons.svg#note"></use>
                                                 </svg>
                                             </span>
                                         </div>
@@ -542,31 +543,33 @@
                                             </div>
 
                                             <span
-                                                class="card__info-link link link_bark">
+                                                class="card__info-link link link_dark">
                                                 Подробнее
                                             </span>
                                         </div>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="cards-list__item">
-                                <a
-                                    class="cards-list__item-link card"
-                                    href="#"
-                                    aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                </li>
+                                <li class="cards-list__item card">
+                                    <a
+                                        class="card__link"
+                                        href="#"
+                                        aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    </a>
+                                    <a
+                                        class="card__link-icon icon-link"
+                                        href="#asd"
+                                        aria-label="Перейти на страницу с избранными услугами">
+                                        <svg class="icon-link__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#heart"></use>
+                                        </svg>
+                                    </a>
                                     <div class="card__img-wrap">
                                         <div class="card__tags card__tags_top">
                                             <span
-                                                class="card-tag__card-tag card-tag"></span>
-                                            <a
-                                                class="card-tag__link-icon icon-link"
-                                                href="#"
-                                                aria-label="Перейти на страницу с избранными услугами">
-                                                <svg class="icon-link__icon">
-                                                    <use
-                                                        href="./app/img/icons/icons.svg#heart"></use>
-                                                </svg>
-                                            </a>
+                                                class="card-tag__card-tag card-tag card-tag_blue">
+                                                Индивидуальные джип-туры
+                                            </span>
                                         </div>
                                         <img
                                             class="card__img"
@@ -579,7 +582,7 @@
                                                 в&#160;любой день
                                                 <svg class="card-tag__icon">
                                                     <use
-                                                        href="./app/img/icons/icons.svg#node"></use>
+                                                        href="./app/img/icons/icons.svg#note"></use>
                                                 </svg>
                                             </span>
                                         </div>
@@ -608,21 +611,397 @@
                                             </div>
 
                                             <span
-                                                class="card__info-link link link_bark">
+                                                class="card__info-link link link_dark">
                                                 Подробнее
                                             </span>
                                         </div>
                                     </div>
-                                </a>
-                            </li>
-                        </ul>
+                                </li>
+                                <li class="cards-list__item card">
+                                    <a
+                                        class="card__link"
+                                        href="#"
+                                        aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    </a>
+                                    <a
+                                        class="card__link-icon icon-link"
+                                        href="#asd"
+                                        aria-label="Перейти на страницу с избранными услугами">
+                                        <svg class="icon-link__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="card__img-wrap">
+                                        <div class="card__tags card__tags_top">
+                                            <span
+                                                class="card-tag__card-tag card-tag card-tag_purple">
+                                                Экстремальные заезды
+                                            </span>
+                                        </div>
+                                        <img
+                                            class="card__img"
+                                            src="./app/img/home/services/img-1.jpg"
+                                            alt="Изображение" />
+                                        <div
+                                            class="card__tags card__tags_bottom">
+                                            <span
+                                                class="card-tag__card-tag card-tag">
+                                                в&#160;любой день
+                                                <svg class="card-tag__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#note"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card__content">
+                                        <h3 class="card__title title-3">
+                                            Озерейка Экстрим
+                                        </h3>
+                                        <p class="card__text">
+                                            Прокатимся по&#160;горным тропам, руслам
+                                            рек и&#160;настоящему бездорожью к&#160;бухте
+                                            Озерейка. Прыжки, наклоны, брызги и
+                                            пыль&#160;&#8212; драйв обеспечен! По&#160;пути&#160;&#8212;
+                                            смотровые, родники и&#160;купание в&#160;море.
+                                        </p>
 
-                        <a
-                            class="catalog__link-more link link_inv"
-                            href="#"
-                            aria-label="Перейти на страницу">
-                            Смотреть все
-                        </a>
+                                        <div class="card__info">
+                                            <div class="card__info-text-wrap">
+                                                <p
+                                                    class="card__info-text card__info-text_sm">
+                                                    5 часов / Групповая
+                                                </p>
+                                                <p class="card__info-text">
+                                                    1600 руб / чел
+                                                </p>
+                                            </div>
+
+                                            <span
+                                                class="card__info-link link link_dark">
+                                                Подробнее
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cards-list__item card">
+                                    <a
+                                        class="card__link"
+                                        href="#"
+                                        aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    </a>
+                                    <a
+                                        class="card__link-icon icon-link"
+                                        href="#asd"
+                                        aria-label="Перейти на страницу с избранными услугами">
+                                        <svg class="icon-link__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="card__img-wrap">
+                                        <div class="card__tags card__tags_top">
+                                            <span
+                                                class="card-tag__card-tag card-tag card-tag_azure">
+                                                Экстремальные заезды
+                                            </span>
+                                        </div>
+                                        <img
+                                            class="card__img"
+                                            src="./app/img/home/services/img-1.jpg"
+                                            alt="Изображение" />
+                                        <div
+                                            class="card__tags card__tags_bottom">
+                                            <span
+                                                class="card-tag__card-tag card-tag">
+                                                в&#160;любой день
+                                                <svg class="card-tag__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#note"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card__content">
+                                        <h3 class="card__title title-3">
+                                            Озерейка Экстрим
+                                        </h3>
+                                        <p class="card__text">
+                                            Прокатимся по&#160;горным тропам, руслам
+                                            рек и&#160;настоящему бездорожью к&#160;бухте
+                                            Озерейка. Прыжки, наклоны, брызги и
+                                            пыль&#160;&#8212; драйв обеспечен! По&#160;пути&#160;&#8212;
+                                            смотровые, родники и&#160;купание в&#160;море.
+                                        </p>
+
+                                        <div class="card__info">
+                                            <div class="card__info-text-wrap">
+                                                <p
+                                                    class="card__info-text card__info-text_sm">
+                                                    5 часов / Групповая
+                                                </p>
+                                                <p class="card__info-text">
+                                                    1600 руб / чел
+                                                </p>
+                                            </div>
+
+                                            <span
+                                                class="card__info-link link link_dark">
+                                                Подробнее
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a
+                                class="catalog__link-more link link_inv"
+                                href="#"
+                                aria-label="Перейти на страницу">
+                                Смотреть все
+                            </a>
+                        </div>
+                        <div
+                            class="catalog__card-wrap tabs-content js-tabs-content">
+                            <ul class="catalog__cards-list cards-list">
+                                <li class="cards-list__item card">
+                                    <a
+                                        class="card__link"
+                                        href="#"
+                                        aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    </a>
+                                    <a
+                                        class="card__link-icon icon-link"
+                                        href="#asd"
+                                        aria-label="Перейти на страницу с избранными услугами">
+                                        <svg class="icon-link__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="card__img-wrap">
+                                        <div class="card__tags card__tags_top">
+                                            <span
+                                                class="card-tag__card-tag card-tag card-tag_green">
+                                                Популярные маршруты
+                                            </span>
+                                        </div>
+                                        <img
+                                            class="card__img"
+                                            src="./app/img/home/services/img-1.jpg"
+                                            alt="Изображение" />
+                                        <div
+                                            class="card__tags card__tags_bottom">
+                                            <span
+                                                class="card-tag__card-tag card-tag">
+                                                в&#160;любой день
+                                                <svg class="card-tag__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#note"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card__content">
+                                        <h3 class="card__title title-3">
+                                            Озерейка Экстрим
+                                        </h3>
+                                        <p class="card__text">
+                                            Прокатимся по&#160;горным тропам, руслам
+                                            рек и&#160;настоящему бездорожью к&#160;бухте
+                                            Озерейка. Прыжки, наклоны, брызги и
+                                            пыль&#160;&#8212; драйв обеспечен! По&#160;пути&#160;&#8212;
+                                            смотровые, родники и&#160;купание в&#160;море.
+                                        </p>
+
+                                        <div class="card__info">
+                                            <div class="card__info-text-wrap">
+                                                <p
+                                                    class="card__info-text card__info-text_sm">
+                                                    5 часов / Групповая
+                                                </p>
+                                                <p class="card__info-text">
+                                                    1600 руб / чел
+                                                </p>
+                                            </div>
+
+                                            <span
+                                                class="card__info-link link link_dark">
+                                                Подробнее
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a
+                                class="catalog__link-more link link_inv"
+                                href="#"
+                                aria-label="Перейти на страницу">
+                                Смотреть все
+                            </a>
+                        </div>
+                        <div
+                            class="catalog__card-wrap tabs-content js-tabs-content">
+                            <ul class="catalog__cards-list cards-list">
+                                <li class="cards-list__item card">
+                                    <a
+                                        class="card__link"
+                                        href="#"
+                                        aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    </a>
+                                    <a
+                                        class="card__link-icon icon-link"
+                                        href="#asd"
+                                        aria-label="Перейти на страницу с избранными услугами">
+                                        <svg class="icon-link__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="card__img-wrap">
+                                        <div class="card__tags card__tags_top">
+                                            <span
+                                                class="card-tag__card-tag card-tag card-tag_green">
+                                                Популярные маршруты
+                                            </span>
+                                        </div>
+                                        <img
+                                            class="card__img"
+                                            src="./app/img/home/services/img-1.jpg"
+                                            alt="Изображение" />
+                                        <div
+                                            class="card__tags card__tags_bottom">
+                                            <span
+                                                class="card-tag__card-tag card-tag">
+                                                в&#160;любой день
+                                                <svg class="card-tag__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#note"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card__content">
+                                        <h3 class="card__title title-3">
+                                            Озерейка Экстрим
+                                        </h3>
+                                        <p class="card__text">
+                                            Прокатимся по&#160;горным тропам, руслам
+                                            рек и&#160;настоящему бездорожью к&#160;бухте
+                                            Озерейка. Прыжки, наклоны, брызги и
+                                            пыль&#160;&#8212; драйв обеспечен! По&#160;пути&#160;&#8212;
+                                            смотровые, родники и&#160;купание в&#160;море.
+                                        </p>
+
+                                        <div class="card__info">
+                                            <div class="card__info-text-wrap">
+                                                <p
+                                                    class="card__info-text card__info-text_sm">
+                                                    5 часов / Групповая
+                                                </p>
+                                                <p class="card__info-text">
+                                                    1600 руб / чел
+                                                </p>
+                                            </div>
+
+                                            <span
+                                                class="card__info-link link link_dark">
+                                                Подробнее
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a
+                                class="catalog__link-more link link_inv"
+                                href="#"
+                                aria-label="Перейти на страницу">
+                                Смотреть все
+                            </a>
+                        </div>
+                        <div
+                            class="catalog__card-wrap tabs-content js-tabs-content">
+                            <ul class="catalog__cards-list cards-list">
+                                <li class="cards-list__item card">
+                                    <a
+                                        class="card__link"
+                                        href="#"
+                                        aria-label="Перейти на страницу 'Озерейка Экстрим'">
+                                    </a>
+                                    <a
+                                        class="card__link-icon icon-link"
+                                        href="#asd"
+                                        aria-label="Перейти на страницу с избранными услугами">
+                                        <svg class="icon-link__icon">
+                                            <use
+                                                href="./app/img/icons/icons.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="card__img-wrap">
+                                        <div class="card__tags card__tags_top">
+                                            <span
+                                                class="card-tag__card-tag card-tag card-tag_green">
+                                                Популярные маршруты
+                                            </span>
+                                        </div>
+                                        <img
+                                            class="card__img"
+                                            src="./app/img/home/services/img-1.jpg"
+                                            alt="Изображение" />
+                                        <div
+                                            class="card__tags card__tags_bottom">
+                                            <span
+                                                class="card-tag__card-tag card-tag">
+                                                в&#160;любой день
+                                                <svg class="card-tag__icon">
+                                                    <use
+                                                        href="./app/img/icons/icons.svg#note"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card__content">
+                                        <h3 class="card__title title-3">
+                                            Озерейка Экстрим
+                                        </h3>
+                                        <p class="card__text">
+                                            Прокатимся по&#160;горным тропам, руслам
+                                            рек и&#160;настоящему бездорожью к&#160;бухте
+                                            Озерейка. Прыжки, наклоны, брызги и
+                                            пыль&#160;&#8212; драйв обеспечен! По&#160;пути&#160;&#8212;
+                                            смотровые, родники и&#160;купание в&#160;море.
+                                        </p>
+
+                                        <div class="card__info">
+                                            <div class="card__info-text-wrap">
+                                                <p
+                                                    class="card__info-text card__info-text_sm">
+                                                    5 часов / Групповая
+                                                </p>
+                                                <p class="card__info-text">
+                                                    1600 руб / чел
+                                                </p>
+                                            </div>
+
+                                            <span
+                                                class="card__info-link link link_dark">
+                                                Подробнее
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a
+                                class="catalog__link-more link link_inv"
+                                href="#"
+                                aria-label="Перейти на страницу">
+                                Смотреть все
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

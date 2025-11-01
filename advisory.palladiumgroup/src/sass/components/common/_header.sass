@@ -1,18 +1,58 @@
 .header
-	&__container
-		display: flex
+	&__content-wrap
+		display: grid
+		grid-template-columns: calc(50% - 82px) 164px 1fr auto
 		align-items: center
-		padding-top: 24px
-		padding-bottom: 24px
+		justify-content: space-between
+		padding: 24px 0
+		+md
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			margin: 0 auto
+		+ph
+			padding: 20px 0
+			max-width: 464px
+			width: 100%
 
-	&__logo-link
-		margin-left: auto
-		padding-right: 116px
+	&__link-phone
+		max-width: 214px
+		+md
+			margin-right: 20px
+		+ph
+			display: none
+
+	&__logo-wrap
+		display: flex
+		justify-content: center
+		width: 100%
+		+md
+			order: -1
+			margin-bottom: 24px
+		+ph
+			display: block
+			margin-right: 20px
+			margin-bottom: 20px
+			max-width: 126px
 
 	&__feedback
 		display: flex
+		align-items: center
+		justify-content: flex-end
+		margin-right: 16px
 		gap: 12px
+		white-space: nowrap
+		+ph
+			justify-content: center
 
-	&__feedback-link
-		&_lang
-			padding: 8px 14px
+	&__feedback-item
+		&_ph
+			display: none
+			+ph
+				display: flex
+
+	&__link-lang-wrap
+		+ph
+			order: -1
+			border-left: 1px solid var(--line-color)
+			padding-left: 20px

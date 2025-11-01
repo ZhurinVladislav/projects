@@ -1,0 +1,57 @@
+.section-progress
+	&__container
+		display: flex
+		flex-direction: column
+		justify-content: center
+	&__title
+		margin: 0 auto
+		margin-bottom: 76px
+		+ph
+			margin-bottom: 40px
+	&__link
+		margin: 0 auto
+	
+.progress-wrap
+	display: flex
+	flex-direction: column
+	gap: 26px
+	+ph
+		gap: 14px
+	&__content
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+		font-weight: 700
+		&_top
+			font-size: 36px
+			+sm
+				font-size: 28px
+			+ph
+				font-size: 22px
+	&__content-text
+		&:last-child
+			text-align: end
+
+.progressbar
+	cursor: auto
+	&__wrap
+		position: relative
+	&__bg
+		height: 44px
+		+ph
+			height: 32px
+	&__img
+		position: absolute
+		top: 28%
+		right: -95px
+		width: 260px
+		transform: translateY(-50%)
+		+ph
+			right: -40px
+			width: 120px
+
+	.bg::before,
+	.bg::after
+		background-color: $color__21
+

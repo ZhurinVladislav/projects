@@ -1,0 +1,88 @@
+.accordion-list
+	display: flex
+	flex-direction: column
+	gap: 52px
+
+.accordion
+	position: relative
+	display: flex
+	flex-direction: column
+	margin-bottom: -12px
+
+	.block
+		&__content-wrap
+			+ph
+				flex-direction: row
+				gap: 24px
+
+	&__btn
+		position: relative
+		z-index: 1
+		padding: 12px 40px
+		min-height: 69px
+		+ph
+			min-height: 40px
+			font-size: 18px
+
+		&.active
+			.accordion__btn-icon
+				transform: rotateX(180deg)
+
+	&__btn-content-wrap
+		display: flex
+		width: 100%
+		justify-content: space-between
+
+	&__btn-text
+		font-weight: 700
+		font-size: 32px
+		color: var(--white-color)
+		text-align: start
+		+sm
+			font-size: 28px
+		+ph
+			font-size: 24px
+
+	&__btn-wrapper-icon
+		z-index: 1
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		width: 40px
+		height: 40px
+
+	&__btn-icon
+		width: 30px
+		transition: transform 0.2s linear
+
+	&__content
+		z-index: 0
+		margin-top: -20px
+
+	&__text
+		padding-top: 24px
+		padding-bottom: 30px
+		overflow-x: hidden
+
+		p:not(:last-child)
+			margin-bottom: 20px
+
+		ul
+			list-style-type: disc
+			
+		ul,
+		ol
+			display: flex
+			flex-direction: column
+			padding-left: 1.1rem
+
+	&__btn-content
+		margin-top: 24px
+		max-width: 247px
+		font-size: 24px
+
+.accordion-hidden
+	max-height: 0
+	overflow: hidden
+	transition: max-height 0.3s linear

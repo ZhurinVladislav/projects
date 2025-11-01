@@ -1,0 +1,54 @@
+.tops-users
+	padding-top: 70px
+	padding-bottom: 40px
+	background-color: var(--bg-third-color)
+	+ph
+		padding-top: 40px
+
+	&__content-wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+
+	&__title
+		text-transform: uppercase
+
+	&__text
+		margin-bottom: 68px
+		font-size: 24px
+		+sm
+			font-size: 22px
+		+ph
+			margin-bottom: 40px
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		gap: 76px
+		margin-bottom: 52px
+		+lr
+			grid-template-columns: repeat(4, 1fr)
+		+md
+			grid-template-columns: repeat(2, 1fr)
+			gap: 40px
+		+sm
+			grid-template-columns: 1fr
+			gap: 20px
+		+ph
+			margin-bottom: 32px
+
+.tops-users-item
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	font-size: 24px
+	letter-spacing: 0.05em
+	+ph
+		font-size: 20px
+	&__avatar
+		margin-bottom: 22px
+	&__name
+		font-weight: 700

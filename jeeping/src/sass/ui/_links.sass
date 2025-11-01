@@ -28,6 +28,13 @@
 	justify-content: center
 	width: 32px
 	height: 32px
+	transition: opacity .2s linear
+	+hover
+		opacity: .7
+	+focus
+		opacity: .7
+	&:active
+		opacity: .8
 
 .link
 	display: flex
@@ -38,7 +45,7 @@
 	padding: 8px 18px
 	max-width: 200px
 	min-width: 64px
-	min-height: 47px
+	min-height: 48px
 	text-align: center
 	background-color: var(--bg-link)
 	transition: opacity .2s linear
@@ -55,13 +62,23 @@
 		transition: box-shadow .2s linear
 		+hover
 			opacity: 1
-			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1)
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2)
 		+focus
 			opacity: 1
-			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1)
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2)
 		&:active
 			opacity: 1
-			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2)
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3)
+	
+	&_dark
+		font-weight: 400
+		color: var(--btn-color)
+		background-color: var(--dark-color)
+
+	&_primary
+		font-weight: 400
+		color: var(--white-color)
+		background-color: var(--primary-color)
 
 	&__icon
 		width: 16px
@@ -87,6 +104,21 @@
 	background-size: cover
 	overflow: hidden
 
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, .4)
+		transition: background-color .2s linear
+
+	&_no-text
+		padding: 0
+		&::after
+			background-color: rgba(0, 0, 0, .0)
+
 	+hover
 		&::after
 			background-color: rgba(0, 0, 0, .2)
@@ -98,21 +130,16 @@
 	&:active
 		&::after
 			background-color: rgba(0, 0, 0, .6)
-	
-	&::after
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background-color: rgba(0, 0, 0, .4)
-		transition: background-color .2s linear
 
 	&__title,
 	&__text
 		z-index: 1
 		color: var(--white-color)
+
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
 
 .link-img-info
 	display: flex
@@ -122,11 +149,11 @@
 	background-color: var(--white-color)
 	transition: box-shadow .2s linear
 	+hover
-		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1)
-	+focus
-		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1)
-	&:active
 		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2)
+	+focus
+		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2)
+	&:active
+		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3)
 
 	&__img-wrap
 		border-radius: 20px

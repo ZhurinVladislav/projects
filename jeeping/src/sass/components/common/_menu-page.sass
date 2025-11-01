@@ -1,0 +1,42 @@
+.menu-page
+	display: flex
+	flex-direction: column
+	gap: 64px
+	max-width: 100%
+	width: 100%
+	+sm
+		gap: 24px
+	
+	&__item-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__item-link
+		font-weight: 600
+		font-size: 20px
+		+ph
+			font-size: 18px
+
+	&__item-btn
+		width: 24px
+		height: 24px
+
+		&.active
+			.menu-page__item-btn-icon
+				transform: rotateX(-180deg)
+
+	&__item-btn-icon
+		transition: transform .2s linear
+
+	&__item-list
+		display: flex
+		flex-direction: column
+		gap: 24px
+		padding-top: 32px
+		+ph
+			padding-top: 12px
+
+	&__item-list-item
+		&.active
+			font-weight: 600

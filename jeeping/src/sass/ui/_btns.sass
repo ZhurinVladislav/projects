@@ -23,6 +23,7 @@
 		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06)
 		background: none
 		background-color: var(--white-color)
+		transition: color .2s linear, background-color .2s linear, opacity .2s linear
 	
 		&.active
 			color: var(--white-color)
@@ -33,75 +34,26 @@
 				opacity: 1
 			&:active
 				opacity: 1
-// .btn-inv
-// 	display: flex
-// 	align-items: center
-// 	justify-content: center
-// 	padding: 12px
-// 	border: 1px solid var(--white-color)
-// 	border-radius: 7px
-// 	max-width: 262px
-// 	min-height: 52px
-// 	font-weight: 700
-// 	font-size: 15px
-// 	text-align: center
-// 	background-color: var(--white-color)
-// 	transition: border-color .2s linear, background-color .2s linear
-// 	+hover
-// 		border-color: var(--btn-hover-color)
-// 		background-color: var(--btn-hover-color)
-// 	+focus
-// 		border-color: var(--accent-color)
-// 	&:active
-// 		border-color: var(--btn-active-color)
-// 		background-color: var(--btn-active-color)
 
-// .btn-icon
-// 	display: flex
-// 	align-items: center
-// 	justify-content: center
-// 	border: 1px solid var(--bg-color)
-// 	border-radius: 7px
-// 	width: 52px
-// 	min-height: 52px
-// 	background-color: var(--bg-color)
-// 	transition: border-color .2s linear, background-color .2s linear
-// 	+hover
-// 		border-color: var(--btn-hover-color)
-// 		background-color: var(--btn-hover-color)
-// 	+focus
-// 		border-color: var(--accent-color)
-// 	&:active
-// 		border-color: var(--btn-active-color)
-// 		background-color: var(--btn-active-color)
+	&_dark
+		font-weight: 400
+		color: var(--btn-color)
+		background: none
+		background-color: var(--dark-color)
 
-// 	&__icon
-// 		flex-shrink: 0
-// 		width: 20px
-// 		height: 20px
-// 		fill: var(--text-color)
+	&_primary
+		background: none
+		color: var(--white-color)
+		background-color: var(--primary-color)
 
-// .btn-icon-inv
-// 	display: flex
-// 	align-items: center
-// 	justify-content: center
-// 	border: 1px solid var(--accent-color)
-// 	border-radius: 7px
-// 	width: 52px
-// 	min-height: 52px
-// 	background-color: var(--accent-color)
-// 	transition: border-color .2s linear, background-color .2s linear
-// 	+hover
-// 		border-color: var(--hover-color)
-// 		background-color: var(--hover-color)
-// 	+focus
-// 		border-color: var(--text-color)
-// 	&:active
-// 		border-color: var(--active-color)
-// 		background-color: var(--active-color)
-
-// 	&__icon
-// 		flex-shrink: 0
-// 		width: 20px
-// 		height: 20px
-// 		fill: var(--white-color)
+		&.active
+			color: var(--primary-color)
+			background-color: var(--purple-light-color)
+			cursor: auto
+			transition: color .2s linear, background-color .2s linear, opacity .2s linear
+			+hover
+				opacity: 1
+			+focus
+				opacity: 1
+			&:active
+				opacity: 1

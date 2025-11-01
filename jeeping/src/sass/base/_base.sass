@@ -22,15 +22,15 @@ body.menu-open
     overflow: hidden
 
 body
-  padding-bottom: 71px
   font-family: var(--font-main)
   font-weight: var(--font-weight-base)
   line-height: var(--font-line-height-base)
   font-size: var(--font-size-base)
   color: var(--text-color)
   background-color: var(--page-color)
-  +ph
-    padding-bottom: 48px
+
+  &.overflow
+    overflow-x: visible
 
   &::-webkit-scrollbar
     width: 4px
@@ -82,6 +82,8 @@ body
 .title-3
   font-weight: 600
   font-size: 24px
+  +ph
+    font-size: 20px
 
 .subtitle
   font-size: 20px
@@ -104,9 +106,15 @@ body
 .rounded-full
   border-radius: 100%
 
+.color
+  color: var(--primary-color)
+
+.text-gray
+  color: var(--grey-color)
+
 // общие классы
 .none
-  display: none
+  display: none !important
 
 .border-radius
   border-radius: var(--border-radius)
@@ -122,7 +130,7 @@ body
   transition: opacity .2s linear
   +sm
     max-width: 120px
-    z-index: 2001
+    z-index: 1000
   +ph
     max-width: 100px
   +hover
@@ -149,3 +157,28 @@ body
 
   &__title
     margin-bottom: 0
+
+// miniShop2 ModX
+#mse2_sort
+  a
+    cursor: pointer !important
+    &.active
+      color: var(--grey-color) !important
+  
+  .sort
+    span
+      color: var(--primary-color) !important
+
+    &[data-dir="desc"]
+      span
+        &::after
+          content: "⌃" !important
+          position: relative !important
+          top: 3px !important
+
+    &[data-dir="asc"]
+      span
+        &::after
+          content: "⌄" !important
+          position: relative !important
+          top: -6px !important
