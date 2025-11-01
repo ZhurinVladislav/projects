@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* fonts */
+  --font-open-sans: var(--font-open-sans);
+  /* containers */
+  --container-width: 1490px;
+  --container-padding: 25px;
+  --container-padding-ph: 10px;
+  --border-radius: 20px;
+  /* colors */
+  --primary-color: #11071f;
+  --secondary-color: #6385e3;
+  --page-color: var(--primary-color);
+  --white-color: #fff;
+  --text-color: var(--white-color);
+  --bg-op-1-color: rgba(99, 133, 227, 0.2);
+  --bg-op-2-color: rgba(99, 133, 227, 0.5);
+  --success-color: #00c950;
+  --info-color: #ffdf20;
+  --info-op-color: rgba(255, 223, 32, 0.5);
+  --error-color: #e7000b;
+}
+
+*::selection {
+  @apply bg-(--secondary-color) text-(--text-color);
+}
+
+body {
+  @apply font-open-sans m-0 flex min-h-dvh w-full max-w-full min-w-80 flex-col bg-(--page-color) text-lg font-normal text-(--text-color);
+}
+
+header,
+section,
+main,
+footer {
+  @apply w-full;
+}
+
+body::-webkit-scrollbar {
+  @apply w-1 bg-(--primary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-(--secondary-color);
+}
+
+button,
+a {
+  @apply cursor-pointer;
+}
+
+/* start base */
+.visually-hidden {
+  @apply absolute -m-px h-px w-px border-0 p-0 whitespace-nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  @apply relative z-1 mx-auto w-full max-w-(--container-width) pr-(--container-padding) pl-(--container-padding) max-sm:pr-(--container-padding-ph) max-sm:pl-(--container-padding-ph);
+}
+
+.section {
+  @apply relative mb-35 max-sm:mb-20;
+}
+
+.page-transition {
+  @apply transition-opacity duration-300 ease-linear;
+}
+
+.block-height {
+  min-height: calc(100vh - 48px);
+}
+
+.title-1 {
+  @apply mb-6 text-[40px] font-bold;
+}
+
+.title-2 {
+}
+
+.title-3 {
+}
+
+.logo {
+  @apply flex items-center transition-opacity duration-300 ease-linear hover:opacity-50;
+}
+/* end base */
+
+/* === Тёмная тема для ReactQuill — исправленная версия === */
+
+/* убираем рамку */
+.ql-container {
+  border: 1px solid var(--secondary-color) !important;
+  width: 100% !important;
+  color: var(--white-color) !important;
+  background-color: transparent !important;
+  overflow: hidden !important;
+}
+
+/* тулбар */
+.ql-toolbar {
+  border: none !important;
+  background-color: var(--secondary-color) !important; /* bg-gray-800 */
+  border-radius: 4px 4px 0 0 !important;
+}
+
+/* убираем белый бордер и фон */
+.ql-editor {
+  background-color: var(--bg-op-1-color) !important; /* bg-gray-900 */
+  color: var(--white-color) !important;
+  min-height: 300px;
+  font-size: 18px !important;
+  border: none !important;
+  border-radius: 0 0 4px 4px !important;
+}
+
+/* цвет плейсхолдера */
+.ql-editor.ql-blank::before {
+  color: var(--white-color) !important;
+  opacity: 0.7 !important;
+}
+
+/* перекрашиваем иконки через фильтр — работает 100% */
+.ql-toolbar button svg,
+.ql-toolbar .ql-picker svg {
+  filter: invert(90%) brightness(150%) !important;
+}
+
+/* при наведении */
+.ql-toolbar button:hover svg,
+.ql-toolbar .ql-picker-label:hover svg {
+  filter: invert(67%) sepia(80%) saturate(400%) hue-rotate(190deg)
+    brightness(110%) !important;
+}
+
+/* активная кнопка */
+.ql-toolbar button.ql-active svg,
+.ql-toolbar .ql-picker-label.ql-active svg {
+  filter: invert(67%) sepia(95%) saturate(500%) hue-rotate(190deg)
+    brightness(120%) !important;
+}
+
+/* выпадающий список (заголовки, шрифты) */
+.ql-picker-options {
+  border: 1px solid var(--secondary-color) !important;
+  border-radius: 4px !important;
+  color: var(--white-color) !important;
+  background-color: var(--primary-color) !important;
+}
+
+/* текст внутри тулбара */
+.ql-toolbar .ql-picker-label,
+.ql-toolbar .ql-picker-item {
+  color: var(--white-color) !important;
+}
+
+/* подсветка при выборе */
+.ql-toolbar .ql-picker-label:hover {
+  color: var(--primary-color) !important;
+}
+
+.ql-toolbar .ql-picker-item:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Анимация для появления страницы */
+.page-transition > * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

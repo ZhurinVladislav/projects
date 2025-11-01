@@ -1,0 +1,81 @@
+<?php
+
+use App\Http\Controllers\Api\v1\AuthController;
+use App\Http\Controllers\Api\v1\CompanyController;
+use App\Http\Controllers\Api\v1\PageController;
+use App\Http\Controllers\Api\v1\PostController;
+use App\Http\Controllers\Api\v1\PropertyTypeController;
+use App\Http\Controllers\Api\v1\ServiceCategoryController;
+use App\Http\Controllers\Api\v1\ServiceController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+// Страницы
+// Route::apiResource('/pages', PageController::class)->only(['index', 'show']);
+// Категории услуг
+// Route::apiResource('/service-categories', ServiceCategoryController::class)->only(['index', 'show', 'store']);
+// Route::apiResource('/service-categories', ServiceCategoryController::class);
+// Существующие категории (отдельная таблица, возможно для блога или другого раздела)
+// Route::apiResource('/categories', CategoryController::class)->only(['index', 'show', 'store']);
+
+// Посты (например для блога)
+// Route::apiResource('/posts', PostController::class)->only(['index', 'show']);
+
+// Публичные маршруты (frontend токен)
+Route::prefix('v1')->middleware(['throttle:api', 'frontend'])->group(function () {
+    // user
+    Route::post('/register', [AuthController::class, 'register']);
+    Route::post('/login', [AuthController::class, 'login']);
+
+    // pages
+    Route::apiResource('/pages', PageController::class)->only(['index', 'show']);
+    Route::get('/pages-simple', [PageController::class, 'listSimple']);
+    Route::get('/pages/alias/{alias}', [PageController::class, 'showByAlias'])
+        ->where('alias', '.*') // ← важно! чтобы принимать слэши в пути
+        ->name('pages.showByAlias');
+    Route::get('/pages-menu', [PageController::class, 'menu']);
+
+    // services
+    Route::apiResource('/service-categories', ServiceCategoryController::class)->only(['index', 'show']);
+    Route::get('service-categories/page/{id}/', [ServiceCategoryController::class, 'servicesByPage'])
+        ->name('service-categories.services-by-page');
+    Route::apiResource('/services', ServiceController::class)->only(['index', 'show']);
+
+    // companies
+    Route::apiResource('/companies', CompanyController::class)->only(['index', 'show']);
+    Route::get('/companies/by-category/{serviceCategoryId}', [CompanyController::class, 'getByServiceCategory'])
+        ->name('companies.by-category');
+    Route::get('/companies/by-page/{pageId}', [CompanyController::class, 'companiesByPage'])
+        ->name('companies.by-page');
+    Route::get('/companies/page/{pageId}', [CompanyController::class, 'companyByPage'])->name('companies.page');
+
+    // posts
+    Route::apiResource('/posts', PostController::class)->only(['store', 'update', 'destroy']);
+});
+
+// Авторизованные пользователи (Sanctum)
+Route::prefix('v1')->middleware(['throttle:api', 'frontend', 'auth:sanctum'])->group(function () {
+    // user
+    Route::get('/user', fn(Request $request) => $request->user());
+    Route::get('/user/profile', [AuthController::class, 'profile']);
+    Route::put('/user/update', [AuthController::class, 'update']);
+    Route::get('/logout', [AuthController::class, 'logout']);
+
+    // pages
+    Route::apiResource('/pages', PageController::class);
+    Route::get('/pages-simple', [PageController::class, 'listSimple']);
+
+    // companies
+    Route::apiResource('property-types', PropertyTypeController::class);
+    // Route::apiResource('companies', CompanyController::class);
+    Route::apiResource('/companies', CompanyController::class)->only(['store', 'destroy']);
+    Route::post('/companies/{company}', [CompanyController::class, 'update']);
+    Route::post('companies/{company}/attach-property-types', [CompanyController::class, 'attachPropertyTypes']);
+
+    // services
+    Route::apiResource('/service-categories', ServiceCategoryController::class)->only(['store', 'destroy']);;
+    Route::apiResource('/services', ServiceController::class);
+
+    // posts
+    Route::apiResource('/posts', PostController::class);
+});
