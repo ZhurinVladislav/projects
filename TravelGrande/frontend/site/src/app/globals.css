@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  /* sizes */
+  --container-width: 1920px;
+  --container-padding: 280px;
+  --container-padding-ph: 20px;
+  /* colors */
+  --background: #FFFFFF;
+  --text: #2B2A29;
+  --primary: #C8AC71;
+  --secondary: #BE8817;
+  --gray: #ACACAC;
+  --light-bg: #FBF7F0;
+  --border: #E5E5E5;
+  --error: #ff4040;
+}
+
+@theme inline {
+  /* sizes */
+  --container-width: var(--container-width);
+  --container-padding: var(--container-padding);
+  --container-padding-ph: var(--container-padding-ph);
+  /* fonts */
+  --font-primary: var(--font-radiotechnika400);
+  --font-base: var(--font-open-sans);
+  --font-serif: 'Times New Roman', serif;
+  /* colors */
+  --background-color: var(--background);
+  --text-color: var(--text);
+  --primary-color: var(--primary);
+  --secondary-color: var(--secondary);
+  --gray-color: var(--gray);
+  --light-bg-color: var(--light-bg);
+  --border-color: var(--border);
+  --error-color: var(--error);
+}
+
+*::selection {
+  @apply bg-(--primary) text-(--text-color);
+}
+
+body {
+  @apply m-0 flex min-h-dvh w-full max-w-full min-w-80 flex-col bg-(--background-color) text-lg font-normal text-(--text-color) font-(--font-base);
+  overflow-x: hidden;
+}
+
+/* Font utilities */
+.font-serif {
+  font-family: 'Times New Roman', serif;
+}
+
+/* Swiper overrides */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--primary-color);
+}
+
+.swiper-pagination-bullet {
+  background: var(--primary-color);
+}
+
+/* Destinations Swiper */
+.destinations-swiper {
+  padding: 0 !important;
+}
+
+.destinations-swiper .swiper-slide {
+  height: auto;
+}
+
+header,
+section,
+main,
+footer {
+  @apply w-full;
+}
+
+body::-webkit-scrollbar {
+  @apply w-1 bg-(--background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-(--primary-color);
+}
+
+button,
+a {
+  @apply cursor-pointer;
+}
+
+/* start base */
+.visually-hidden {
+  @apply absolute -m-px h-px w-px border-0 p-0 whitespace-nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  @apply relative z-1 mx-auto w-full max-w-[--container-width] pr-[--container-padding] pl-(--container-padding) max-sm:pr-[--container-padding-ph] max-sm:pl-[--container-padding-ph];
+  overflow-x: clip;
+}
+
+.section {
+  @apply relative mb-35 max-sm:mb-20;
+}
+
+.title-1 {
+  @apply mb-5 text-5xl max-md:text-4xl max-sm:text-3xl;
+}
+
+.title-2 {
+  @apply mb-5 text-[40px] max-md:text-4xl max-sm:text-3xl;
+}
+
+.title-3 {
+  @apply mb-6 text-2xl;
+}
+
+address {
+  @apply not-italic;
+}
