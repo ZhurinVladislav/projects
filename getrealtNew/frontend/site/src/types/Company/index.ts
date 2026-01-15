@@ -209,6 +209,8 @@ export type TCompaniesInfo = TCompanyInfo[];
 export type TResponseCompany = z.infer<typeof ResponseCompanySchema>;
 export type TResponseCompanies = z.infer<typeof ResponseCompaniesSchema>;
 
+export type TCompanyCategoryServices = z.infer<typeof CompanyCategoryServicesSchema>;
+
 export type TCompanyWorkday = z.infer<typeof CompanyWorkdaySchema>;
 
 export type TCompanySocial = z.infer<typeof CompanySocialSchema>;

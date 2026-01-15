@@ -583,34 +583,129 @@ class CompanyController extends Controller
      * Получить компании по странице (через связанную категорию услуги).
      * GET /api/v1/companies/by-page/{pageId}?sort=rating|reviews|title&order=desc&per_page=20&page=1
      */
+    // public function companiesByPage(int $pageId, Request $request): JsonResponse
+    // {
+    //     try {
+    //         // 🔹 Находим категорию услуги по page_id
+    //         $category = ServiceCategory::with(['page.parent'])->where('page_id', $pageId)->first();
+
+    //         if (!$category) {
+    //             return response()->json([
+    //                 'status' => false,
+    //                 'message' => 'Service category not found for this page.',
+    //                 'data' => null,
+    //             ], 404);
+    //         }
+
+    //         // 🔹 Формируем запрос компаний
+    //         $query = Company::with([
+    //             'page.parent', // <-- добавляем для построения URL
+    //             'ratings',
+    //             'serviceCategories.page.parent',
+    //             'services',
+    //             'propertyTypes',
+    //         ])->whereHas('serviceCategories', fn($q) => $q->where('service_categories.id', $category->id));
+
+    //         // 🔹 Фильтры
+    //         if ($request->filled('service_id')) {
+    //             $serviceIds = $this->parseIds($request->input('service_id'));
+    //             $query->whereHas('services', fn($q) => $q->whereIn('services.id', $serviceIds));
+    //         }
+
+    //         if ($request->filled('property_type_id')) {
+    //             $propertyTypeIds = $this->parseIds($request->input('property_type_id'));
+    //             $query->whereHas('propertyTypes', fn($q) => $q->whereIn('property_types.id', $propertyTypeIds));
+    //         }
+
+    //         if ($request->has('promo')) {
+    //             $query->where('promo', $request->boolean('promo'));
+    //         }
+
+    //         // 🔹 Сортировка
+    //         $sort = $request->input('sort', 'title');
+    //         $order = $request->input('order', 'asc');
+
+    //         switch ($sort) {
+    //             case 'ratings':
+    //                 $query->with('ratings')
+    //                     ->orderByRaw('(SELECT rating FROM company_ratings WHERE company_ratings.company_id = companies.id) ' . $order);
+    //                 break;
+
+    //             case 'reviews':
+    //                 $query->withCount('reviews')->orderBy('reviews_count', $order);
+    //                 break;
+
+    //             default:
+    //                 $query->orderBy('title', $order);
+    //                 break;
+    //         }
+
+    //         // 🔹 Пагинация
+    //         $perPage = (int) $request->input('per_page', 20);
+    //         $companies = $query->paginate($perPage);
+
+    //         return response()->json([
+    //             'status' => true,
+    //             'message' => 'Companies retrieved successfully for this page.',
+    //             'data' => CompanyResource::collection($companies),
+    //             'meta' => [
+    //                 'current_page' => $companies->currentPage(),
+    //                 'last_page' => $companies->lastPage(),
+    //                 'per_page' => $companies->perPage(),
+    //                 'total' => $companies->total(),
+    //             ],
+    //         ]);
+    //     } catch (\Throwable $e) {
+    //         return response()->json([
+    //             'status' => false,
+    //             'message' => 'Failed to retrieve companies: ' . $e->getMessage(),
+    //             'data' => null,
+    //         ], 500);
+    //     }
+    // }
     /**
-     * Получить компании по странице (через связанную категорию услуги).
-     * GET /api/v1/companies/by-page/{pageId}?sort=rating|reviews|title&order=desc&per_page=20&page=1
+     * Получить компании по странице (если pageId отсутствует — вывести все компании).
+     * GET /api/v1/companies/by-page/{pageId?}?sort=rating|reviews|title&order=desc&per_page=20&page=1
      */
-    public function companiesByPage(int $pageId, Request $request): JsonResponse
+    public function companiesByPage(Request $request, ?int $pageId = null): JsonResponse
     {
         try {
-            // 🔹 Находим категорию услуги по page_id
-            $category = ServiceCategory::with(['page.parent'])->where('page_id', $pageId)->first();
-
-            if (!$category) {
-                return response()->json([
-                    'status' => false,
-                    'message' => 'Service category not found for this page.',
-                    'data' => null,
-                ], 404);
-            }
-
-            // 🔹 Формируем запрос компаний
+            // -----------------------------------------------------
+            // 🔹 1. Базовый запрос компаний (для случая без pageId)
+            // -----------------------------------------------------
             $query = Company::with([
-                'page.parent', // <-- добавляем для построения URL
+                'page.parent',
                 'ratings',
                 'serviceCategories.page.parent',
                 'services',
                 'propertyTypes',
-            ])->whereHas('serviceCategories', fn($q) => $q->where('service_categories.id', $category->id));
+            ]);
 
-            // 🔹 Фильтры
+            // -----------------------------------------------------
+            // 🔹 2. Если передан pageId — фильтруем через категорию услуги
+            // -----------------------------------------------------
+            if ($pageId !== null) {
+                $category = ServiceCategory::with(['page.parent'])
+                    ->where('page_id', $pageId)
+                    ->first();
+
+                if (!$category) {
+                    return response()->json([
+                        'status'   => false,
+                        'message'  => 'Service category not found for this page.',
+                        'data'     => null,
+                    ], 404);
+                }
+
+                // Фильтруем только по этой категории
+                $query->whereHas('serviceCategories', function ($q) use ($category) {
+                    $q->where('service_categories.id', $category->id);
+                });
+            }
+
+            // -----------------------------------------------------
+            // 🔹 3. Применяем GET-фильтры (работают в обоих режимах)
+            // -----------------------------------------------------
             if ($request->filled('service_id')) {
                 $serviceIds = $this->parseIds($request->input('service_id'));
                 $query->whereHas('services', fn($q) => $q->whereIn('services.id', $serviceIds));
@@ -625,7 +720,9 @@ class CompanyController extends Controller
                 $query->where('promo', $request->boolean('promo'));
             }
 
-            // 🔹 Сортировка
+            // -----------------------------------------------------
+            // 🔹 4. Сортировка
+            // -----------------------------------------------------
             $sort = $request->input('sort', 'title');
             $order = $request->input('order', 'asc');
 
@@ -644,26 +741,30 @@ class CompanyController extends Controller
                     break;
             }
 
-            // 🔹 Пагинация
-            $perPage = (int) $request->input('per_page', 20);
+            // -----------------------------------------------------
+            // 🔹 5. Пагинация и вывод
+            // -----------------------------------------------------
+            $perPage = (int)$request->input('per_page', 20);
             $companies = $query->paginate($perPage);
 
             return response()->json([
-                'status' => true,
-                'message' => 'Companies retrieved successfully for this page.',
-                'data' => CompanyResource::collection($companies),
-                'meta' => [
+                'status'  => true,
+                'message' => $pageId
+                    ? 'Companies retrieved successfully for this page.'
+                    : 'All companies retrieved successfully.',
+                'data'    => CompanyResource::collection($companies),
+                'meta'    => [
                     'current_page' => $companies->currentPage(),
-                    'last_page' => $companies->lastPage(),
-                    'per_page' => $companies->perPage(),
-                    'total' => $companies->total(),
+                    'last_page'    => $companies->lastPage(),
+                    'per_page'     => $companies->perPage(),
+                    'total'        => $companies->total(),
                 ],
             ]);
         } catch (\Throwable $e) {
             return response()->json([
-                'status' => false,
-                'message' => 'Failed to retrieve companies: ' . $e->getMessage(),
-                'data' => null,
+                'status'   => false,
+                'message'  => 'Failed to retrieve companies: ' . $e->getMessage(),
+                'data'     => null,
             ], 500);
         }
     }

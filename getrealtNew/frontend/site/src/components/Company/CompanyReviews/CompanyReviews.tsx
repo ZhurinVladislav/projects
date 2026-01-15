@@ -4,7 +4,8 @@ import Button from '@/components/ui/Button';
 import Dropdown from '@/components/ui/Dropdown/Dropdown';
 import Input from '@/components/ui/Input';
 import Modal from '@/components/ui/Modal';
-import { Search, Star } from 'lucide-react';
+import { TCompanyInfo } from '@/types';
+import { Search } from 'lucide-react';
 import { useState } from 'react';
 import ReviewForm from './ReviewForm';
 
@@ -40,10 +41,22 @@ const reviewsData: Review[] = [
   },
 ];
 
-const CompanyReviews = () => {
+interface IProps {
+  company: TCompanyInfo | null;
+}
+
+const CompanyReviews: React.FC<IProps> = props => {
   const [reviews, setReviews] = useState(reviewsData);
   const [value, setValue] = useState('');
   const [open, setOpen] = useState(false);
+
+  const { company } = props;
+
+  if (!company) {
+    return <></>;
+  }
+
+  const { title } = company;
 
   const handleSubmit = (data: { name: string; message: string; rating: number }) => {
     setOpen(false);
@@ -56,7 +69,7 @@ const CompanyReviews = () => {
   return (
     <section data-testid="company-reviews" className="section">
       <div className="container">
-        <h2 className="title-2 text-center">Отзывы о: Апекс-Недвижимость</h2>
+        <h2 className="title-2 text-center">Отзывы о: {title}</h2>
         <div className="flex justify-between gap-6 max-lg:flex-col-reverse">
           <div className="flex w-full max-w-5xl flex-col gap-16">
             <div className="flex items-center gap-x-13 gap-y-3 max-lg:gap-x-3 max-md:flex-col max-md:items-start">
@@ -73,7 +86,7 @@ const CompanyReviews = () => {
               <Dropdown label="В начале самые новые" items={[{ label: 'В начале старые' }, { label: 'В начале самые новые' }]} onSelect={handleSelect} variant="filled" className="w-75" />
             </div>
 
-            <ul className="flex flex-col gap-10">
+            {/* <ul className="flex flex-col gap-10">
               {reviews.map(review => (
                 <li key={review.id} className="flex flex-col gap-2 not-last:border-b not-last:border-[rgba(162,162,162,0.4)] not-last:pb-10">
                   <div className="flex items-center gap-4">
@@ -93,7 +106,8 @@ const CompanyReviews = () => {
                   <time className="text-normal font-base text-(--text-color-second)">{review.date}</time>
                 </li>
               ))}
-            </ul>
+            </ul> */}
+            <p>У данной компании пока нет отзыв</p>
           </div>
 
           <div>
@@ -106,9 +120,9 @@ const CompanyReviews = () => {
           </div>
         </div>
 
-        <div className="mt-16 flex justify-center">
+        {/* <div className="mt-16 flex justify-center">
           <Button variant={'primary'}>Загрузить все отзывы (16)</Button>
-        </div>
+        </div> */}
 
         {/* <div className="mt-10 flex flex-col items-center gap-6">
           <Dropdown

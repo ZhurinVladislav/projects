@@ -8,12 +8,13 @@ interface IProps {
   ariaLabel?: string;
   svgIcon?: ReactNode;
   customClasses?: string;
+  isPhone?: boolean;
 }
 
 const CustomBtn: React.FC<IProps> = props => {
-  const { type = 'primary', customClasses, svgIcon, isActive, text, ariaLabel } = props;
+  const { type = 'primary', customClasses, svgIcon, isActive, text, ariaLabel, isPhone } = props;
 
-  const linkClass = clsx(type === 'primary' && 'btn-primary', type === 'text' && 'btn-text', isActive && 'active', customClasses && customClasses);
+  let linkClass = clsx(type === 'primary' && 'btn-primary', type === 'text' && 'btn-text', isActive && 'active', customClasses && customClasses);
 
   return (
     <button className={linkClass} {...(ariaLabel ? { 'aria-label': ariaLabel } : {})}>

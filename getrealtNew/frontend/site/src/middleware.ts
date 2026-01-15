@@ -1,5 +1,6 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
+import { v4 as uuidv4 } from 'uuid';
 
 const CITIES = ['moscow'];
 
@@ -9,7 +10,6 @@ async function isCity(segment: string): Promise<boolean> {
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
   // ✅ Пропускаем системные и статические пути
   if (
     pathname.startsWith('/_next') ||
@@ -27,6 +27,37 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // -----------------------------
+  // ✅ Собираем уникальные данные
+  // -----------------------------
+
+  // IP пользователя (из заголовков)
+  const ip = request.headers.get('cf-connecting-ip') || request.headers.get('x-real-ip') || request.headers.get('x-forwarded-for')?.split(',')[0].trim() || '0.0.0.0';
+
+  // User-Agent
+  const userAgent = request.headers.get('user-agent') || 'Unknown';
+
+  // Куки для уникального visitor ID
+  const cookies = request.cookies;
+  let visitId = cookies.get('_visit_id')?.value;
+  const response = NextResponse.next();
+
+  if (!visitId) {
+    visitId = uuidv4();
+    response.cookies.set('_visit_id', visitId, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 365, // 1 год
+    });
+  }
+
+  // ✅ Доступные данные, которые можно использовать в Route Handlers или API
+  response.headers.set('x-visitor-ip', ip);
+  response.headers.set('x-visitor-ua', userAgent);
+  response.headers.set('x-visitor-id', visitId);
+
+  // -----------------------------
+  // ✅ Обработка маршрутов
+  // -----------------------------
   const segments = pathname.split('/').filter(Boolean);
   if (segments.length === 0) return NextResponse.next();
 

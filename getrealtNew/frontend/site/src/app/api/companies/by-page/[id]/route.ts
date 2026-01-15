@@ -2,9 +2,10 @@ import { API_URL, FRONTEND_TOKEN } from '@/app/api/config';
 import { ResponseCompaniesNotAliasSchema } from '@/types';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(req: NextRequest, { params }: { params: Promise<{ id: number }> }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = await params;
+    const { id: idString } = await params;
+    const id = Number(idString);
     const url = new URL(req.url);
     const queryString = url.searchParams.toString();
 
@@ -24,14 +25,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
 
     const data = await res.json();
 
-    // console.log(data);
-
-    // console.log(data[1].serviceCategories);
-    // console.log(data.data[0].serviceCategories);
-
     const parsed = ResponseCompaniesNotAliasSchema.parse(data);
-
-    // console.log(parsed);
 
     return NextResponse.json(parsed);
   } catch (error) {

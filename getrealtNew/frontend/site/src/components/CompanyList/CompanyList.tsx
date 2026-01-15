@@ -1,123 +1,3 @@
-// 'use client';
-
-// import Api from '@/app/api';
-// import { ChevronLeft, ChevronRight } from 'lucide-react';
-// import { useEffect, useState } from 'react';
-// import CompanyCard from '../Company/CompanyCard';
-// import CompanyListSkeleton from './CompanyListSkeleton';
-
-// interface IProps {
-//   pageId: number;
-//   filters: { service_ids: string[]; property_type_id?: string; rating?: number };
-//   sort: string;
-//   order: string;
-//   page: number;
-//   onPageChange: (p: number) => void;
-// }
-
-// const CompanyList: React.FC<IProps> = props => {
-//   const { pageId, filters, sort, order, page, onPageChange } = props;
-
-//   const [companies, setCompanies] = useState<any[]>([]);
-//   const [meta, setMeta] = useState({ current_page: 1, last_page: 1, total: 0 });
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState<string | null>(null);
-
-//   useEffect(() => {
-//     const fetchCompanies = async () => {
-//       try {
-//         setLoading(true);
-//         const params: any = { sort, order, per_page: 10, page };
-
-//         if (filters.service_ids?.length) params.service_id = filters.service_ids.join(',');
-//         if (filters.property_type_id) params.property_type_id = filters.property_type_id;
-//         if (filters.rating && filters.rating > 0) params.rating = filters.rating;
-
-//         const response = await Api.fetchCompaniesByPage(pageId, params);
-
-//         if (!response || !response.data) {
-//           setCompanies([]);
-//           setError('Компании не найдены');
-//           return;
-//         }
-
-//         setCompanies(response.data);
-//         setMeta(response.meta || { current_page: 1, last_page: 1, total: 0 });
-//       } catch (err) {
-//         setError('Ошибка при загрузке компаний');
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchCompanies();
-//   }, [pageId, JSON.stringify(filters), sort, order, page]);
-
-//   if (loading) {
-//     return (
-//       <div className="flex flex-col gap-6">
-//         {Array.from({ length: 5 }).map((_, i) => (
-//           <CompanyListSkeleton key={i} />
-//         ))}
-//       </div>
-//     );
-//   }
-
-//   // if (loading) {
-//   //   return (
-//   //     <div className="flex flex-col gap-6">
-//   //       {Array.from({ length: 5 }).map((_, i) => (
-//   //         <Loader key={i} type="skeleton" />
-//   //       ))}
-//   //     </div>
-//   //   );
-//   // }
-
-//   if (error) return <p className="text-center text-red-500">{error}</p>;
-
-//   return (
-//     <div className="flex flex-col gap-6">
-//       {companies.length > 0 ? (
-//         <ul className="flex flex-col gap-6">
-//           {companies.map((company, i) => (
-//             <CompanyCard key={company.id} idx={i + 1} company={company} />
-//           ))}
-//         </ul>
-//       ) : (
-//         <p className="text-center text-gray-500">Компаний не найдено</p>
-//       )}
-
-//       {meta.last_page > 1 && (
-//         <div className="mt-10 flex justify-center gap-5">
-//           <button onClick={() => onPageChange(page - 1)} disabled={page === 1} className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-500 text-white disabled:opacity-50">
-//             <ChevronLeft size={20} />
-//           </button>
-
-//           <ul className="flex items-center gap-2 rounded-xl bg-gray-100 px-4">
-//             {Array.from({ length: meta.last_page }, (_, i) => (
-//               <li key={i}>
-//                 <button onClick={() => onPageChange(i + 1)} className={`rounded px-3 py-1 ${page === i + 1 ? 'bg-indigo-500 text-white' : 'text-gray-700 hover:bg-gray-200'}`}>
-//                   {i + 1}
-//                 </button>
-//               </li>
-//             ))}
-//           </ul>
-
-//           <button
-//             onClick={() => onPageChange(page + 1)}
-//             disabled={page === meta.last_page}
-//             className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-500 text-white disabled:opacity-50"
-//           >
-//             <ChevronRight size={20} />
-//           </button>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default CompanyList;
-
 'use client';
 
 import Api from '@/app/api';
@@ -127,7 +7,7 @@ import CompanyCard from '../Company/CompanyCard';
 import CompanyListSkeleton from './CompanyListSkeleton';
 
 interface IProps {
-  pageId: number;
+  pageId: number | null;
   filters: {
     service_ids: string[];
     property_type_id?: string;
@@ -186,7 +66,7 @@ const CompanyList: React.FC<IProps> = props => {
           params.rating = filters.rating;
         }
 
-        console.log('[CompanyList] Fetching:', { pageId, params, filtersKey });
+        // console.log('[CompanyList] Fetching:', { pageId, params, filtersKey });
 
         const response = await Api.fetchCompaniesByPage(pageId, params);
 
