@@ -51,10 +51,11 @@ export async function generateMetadata({ params }: TProps): Promise<Metadata> {
   }
 
   return {
-    title: `${data.pageTitle || data.longTitle || 'Страница'}`,
+    title: `${data.longTitle || data.pageTitle || 'Страница'}`,
     description: data.description || '',
+    keywords: data.keywords || '',
     openGraph: {
-      title: data.pageTitle || data.longTitle || SITE.APP_NAME,
+      title: data.longTitle || data.pageTitle || SITE.APP_NAME,
       description: data.description || '',
       url: `${SITE.APP_URL}/${city}/${(slug || []).join('/')}`,
       siteName: SITE.APP_NAME,

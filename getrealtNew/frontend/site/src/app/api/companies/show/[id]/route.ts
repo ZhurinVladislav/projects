@@ -2,9 +2,10 @@ import { API_URL, FRONTEND_TOKEN } from '@/app/api/config';
 import { ResponseCompanyInfoSchema } from '@/types';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: number }> }) {
+export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = await params;
+    const { id: idString } = await params;
+    const id = Number(idString);
 
     const res = await fetch(`${API_URL}/companies/page/${id}`, {
       headers: {

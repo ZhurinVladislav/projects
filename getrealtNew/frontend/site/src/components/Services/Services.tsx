@@ -20,7 +20,7 @@ const Services: React.FC<IProps> = async props => {
             {inner && <h1 className="visually-hidden">{dataPage?.pageTitle}</h1>}
             {inner && <h2 className="title-2">{dataPage?.longTitle}</h2>}
             {!inner && <h2 className="title-2">Услуги агентств недвижимости в Москве</h2>}
-            <p>Более 258 услуг с недвижимостью в Москве</p>
+            <p>Более 54 услуг с недвижимостью в Москве</p>
           </div>
 
           <ul className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1">

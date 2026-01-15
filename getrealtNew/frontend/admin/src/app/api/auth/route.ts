@@ -130,7 +130,7 @@ export async function POST(req: Request) {
     });
 
     const data = await res.json();
-    // console.log('📡 Ответ Laravel:', data);
+    console.log('📡 Ответ Laravel:', data);
 
     if (!res.ok) {
       return NextResponse.json({ error: data.message || 'Ошибка авторизации на сервере' }, { status: res.status });

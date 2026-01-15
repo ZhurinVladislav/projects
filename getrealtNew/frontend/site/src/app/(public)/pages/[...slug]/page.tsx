@@ -16,19 +16,12 @@ async function getPageData(slug?: string[]) {
     const alias = [...(slug || [])].join('/');
 
     if (!alias || /\.(png|jpe?g|svg|webp|gif|ico|json|xml|txt|map)$/i.test(alias)) {
-      // можно вернуть null, чтобы страница 404 не ломалась
       return null;
     }
 
     const response = await Api.fetchGetPageByAlias(alias);
 
-    if (
-      !response ||
-      response.status === false ||
-      !response.data ||
-      !response.data.id || // например, у реальных страниц всегда есть ID
-      Object.keys(response.data).length === 0
-    ) {
+    if (!response || response.status === false || !response.data || !response.data.id || Object.keys(response.data).length === 0) {
       return null;
     }
 
@@ -50,10 +43,11 @@ export async function generateMetadata({ params }: TProps): Promise<Metadata> {
   }
 
   return {
-    title: `${data.pageTitle || data.longTitle || 'Страница'} | ${SITE.APP_NAME}`,
+    title: `${data.longTitle || data.pageTitle || 'Страница'} | ${SITE.APP_NAME}`,
     description: data.description || '',
+    keywords: data.keywords || '',
     openGraph: {
-      title: data.pageTitle || data.longTitle || SITE.APP_NAME,
+      title: data.longTitle || data.pageTitle || SITE.APP_NAME,
       description: data.description || '',
       url: `${SITE.APP_URL}/${(slug || []).join('/')}`,
       siteName: SITE.APP_NAME,

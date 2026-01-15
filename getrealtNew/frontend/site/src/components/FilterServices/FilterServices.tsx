@@ -1,20 +1,22 @@
 'use client';
 
+import Api from '@/app/api';
 import { TPage, TServices } from '@/types';
 import { ListFilter, X } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CompanyList from '../CompanyList';
 import Checkbox from '../ui/Checkbox';
 import Radio from '../ui/Radio';
 
 interface IProps {
   dataPage: TPage;
-  dataServices: TServices;
+  dataServices: TServices | null;
+  isMain?: boolean;
 }
 
 const FilterServices: React.FC<IProps> = props => {
-  const { dataPage, dataServices } = props;
+  const { dataPage, dataServices, isMain } = props;
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -30,14 +32,47 @@ const FilterServices: React.FC<IProps> = props => {
   const [page, setPage] = useState(Number(searchParams.get('page')) || 1);
   const [isSortOpen, setIsSortOpen] = useState(false);
 
+  const [error, setError] = useState<string | null>(null);
+  const [services, setServices] = useState<TServices | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const serviceList = dataServices ?? services;
+
+  useEffect(() => {
+    if (dataServices === null) {
+      const fetchGetServices = async () => {
+        try {
+          setLoading(true);
+          setError(null);
+          const res = await Api.fetchGetServices();
+
+          if (res?.data) {
+            setServices(res.data);
+          } else {
+            throw new Error('Не удалось получить услуги');
+          }
+        } catch (err: any) {
+          const message = err.message || 'Неизвестная ошибка';
+          setError(message);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      fetchGetServices();
+    }
+  }, []);
+
   // --- Активные фильтры ---
   const activeFilters = [];
 
-  if (filters.service_ids.length > 0 && dataServices.length > 0) {
-    const activeServices = dataServices.filter(s => filters.service_ids.includes(String(s.id)));
-    activeServices.forEach(s => {
-      activeFilters.push({ type: 'service_id', label: s.title, value: String(s.id) });
-    });
+  if (dataServices) {
+    if (filters.service_ids.length > 0 && dataServices.length > 0) {
+      const activeServices = dataServices.filter(s => filters.service_ids.includes(String(s.id)));
+      activeServices.forEach(s => {
+        activeFilters.push({ type: 'service_id', label: s.title, value: String(s.id) });
+      });
+    }
   }
 
   if (filters.rating > 0) {
@@ -102,14 +137,18 @@ const FilterServices: React.FC<IProps> = props => {
       <div className="container">
         <div className="flex flex-col gap-17">
           <div className="card">
-            <h1 className="title-2 text-center">{dataPage.longTitle || dataPage.pageTitle}</h1>
+            {!isMain && <h1 className="title-2 text-center">{dataPage.longTitle || dataPage.pageTitle}</h1>}
 
-            {dataServices.length > 0 && (
+            {loading && 'Загрузка'}
+
+            {error && <p className="text-red-500">{error}</p>}
+
+            {Array.isArray(serviceList) && serviceList.length > 0 && (
               <ul
                 data-testid="filter-services-list"
                 className="grid list-disc grid-cols-3 gap-4 pl-9 marker:text-2xl marker:leading-none marker:text-(--link-second-color) max-lg:grid-cols-2 max-md:grid-cols-1"
               >
-                {dataServices.map(service => {
+                {serviceList.map(service => {
                   const isActive = filters.service_ids.includes(String(service.id));
                   return (
                     <li key={service.id}>
@@ -128,13 +167,18 @@ const FilterServices: React.FC<IProps> = props => {
             <aside className="flex w-full max-w-[314px] flex-col gap-10 rounded-4xl bg-white p-8 shadow-md max-lg:max-w-full">
               <div className="flex flex-col gap-4">
                 <h3 className="text-base font-semibold">Услуги</h3>
-                <ul className="flex flex-col gap-3">
-                  {dataServices.map(service => (
-                    <li key={service.id}>
-                      <Checkbox checked={filters.service_ids.includes(String(service.id))} label={service.title} onChange={() => handleServiceChange(String(service.id))} />
-                    </li>
-                  ))}
-                </ul>
+                {loading && 'Загрузка'}
+
+                {error && <p className="text-red-500">{error}</p>}
+                {Array.isArray(serviceList) && serviceList.length > 0 && (
+                  <ul className="flex flex-col gap-3">
+                    {serviceList.map(service => (
+                      <li key={service.id}>
+                        <Checkbox checked={filters.service_ids.includes(String(service.id))} label={service.title} onChange={() => handleServiceChange(String(service.id))} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
 
               <div className="flex flex-col gap-4">
@@ -190,7 +234,11 @@ const FilterServices: React.FC<IProps> = props => {
               </div>
 
               {/* 👇 отдельный компонент с загрузкой и пагинацией */}
-              <CompanyList pageId={dataPage.id} filters={filters} sort={sort} order={order} page={page} onPageChange={handlePageChange} />
+              {isMain ? (
+                <CompanyList pageId={null} filters={filters} sort={sort} order={order} page={page} onPageChange={handlePageChange} />
+              ) : (
+                <CompanyList pageId={dataPage.id} filters={filters} sort={sort} order={order} page={page} onPageChange={handlePageChange} />
+              )}
             </div>
           </div>
         </div>

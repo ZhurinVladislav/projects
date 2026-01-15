@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import { SITE } from '@/config/site.config';
 import type { Metadata } from 'next';
+import { YandexMetricaProvider } from 'next-yandex-metrica';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
 import './globals.css';
 
@@ -27,6 +28,10 @@ export const metadata: Metadata = {
   icons: {
     icon: './favicon.svg',
   },
+  verification: {
+    google: 'FME3Br3e-rGE4yiv9DSdJpLWiEO2wsjWPH1oWE8AGVg',
+    yandex: '2a37eec3c38b818e',
+  },
 };
 
 export default function RootLayout({
@@ -37,13 +42,21 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${montserrat.variable} ${tenorSans.variable} antialiased`}>
-        <Header />
-
-        <main className="page-transition">{children}</main>
-
-        <Footer />
-
-        <ScrollToTop variant="filled" />
+        <YandexMetricaProvider
+          tagID={106075015}
+          initParameters={{
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+          }}
+          router="app"
+        >
+          <Header />
+          <main className="page-transition">{children}</main>
+          <Footer />
+          <ScrollToTop variant="filled" />
+        </YandexMetricaProvider>
       </body>
     </html>
   );

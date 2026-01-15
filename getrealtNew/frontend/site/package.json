@@ -1,6 +1,6 @@
 {
-  "name": "devwizards",
-  "version": "0.1.0",
+  "name": "GetRealtSite",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 3000",
@@ -15,15 +15,17 @@
     "framer-motion": "^12.23.22",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.545.0",
-    "next": "15.3.4",
+    "next": "^15.3.6",
+    "next-yandex-metrica": "^1.2.3",
     "path-to-regexp": "^8.2.0",
     "postcss": "^8.5.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
     "react-hot-toast": "^2.6.0",
     "sweetalert2": "^11.23.0",
     "swiper": "^12.0.2",
     "tailwind-merge": "^3.3.1",
+    "uuid": "^13.0.0",
     "zod": "^4.1.11"
   },
   "devDependencies": {

@@ -42,45 +42,22 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return {
-    title: `${data.pageTitle || data.longTitle || 'Страница'}`,
+    title: `${data.longTitle || data.pageTitle || 'Страница'}`,
     description: data.description || '',
+    keywords: data.keywords || '',
     openGraph: {
-      title: data.pageTitle || data.longTitle || SITE.APP_NAME,
+      title: data.longTitle || data.pageTitle || SITE.APP_NAME,
       description: data.description || '',
       url: SITE.APP_URL,
       siteName: SITE.APP_NAME,
       type: 'website',
     },
   };
-  // try {
-  //   const response = await Api.fetchGetPageByAlias('index');
-  //   const data = response.data;
-
-  //   return {
-  //     title: data?.pageTitle || `Недвижимость в Москве | ${SITE.APP_NAME}`,
-  //     description: data?.description || SITE.APP_DESCRIPTION,
-  //     openGraph: {
-  //       title: data?.pageTitle || SITE.APP_NAME,
-  //       description: data?.description || SITE.APP_DESCRIPTION,
-  //       url: SITE.APP_URL,
-  //       siteName: SITE.APP_NAME,
-  //       type: 'website',
-  //     },
-  //   };
-  // } catch (error) {
-  //   const message = error instanceof Error ? error.message : 'Неизвестная ошибка';
-  //   return {
-  //     title: `Ошибка получения страницы!`,
-  //     description: message,
-  //   };
-  // }
 }
 
 // Основной компонент страницы
 export default async function HomePage() {
   const data = await getPageData();
-
-  // if (!data) notFound();
 
   return (
     <>
@@ -90,21 +67,4 @@ export default async function HomePage() {
       {data && <HomeContent content={data?.content} />}
     </>
   );
-
-  // try {
-  //   const response = await Api.fetchGetPageByAlias('index');
-  //   const data = response.data;
-
-  //   return (
-  //     <>
-  //       <HomeHero />
-  //       <Services />
-  //       <SliderNews />
-  //       {data && <HomeContent content={data.content} />}
-  //     </>
-  //   );
-  // } catch (error) {
-  //   console.error('Ошибка загрузки главной страницы:', error);
-  //   return <p>Не удалось загрузить главную страницу.</p>;
-  // }
 }
