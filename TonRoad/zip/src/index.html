@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO -->
+        <title>TonRoad</title>
+        <link href="./app/img/favicon.svg" rel="icon" type="image/svg+xml" />
+        <!-- styles -->
+        <link rel="stylesheet" href="./app/css/style.min.css" />
+        <!-- scripts -->
+        <script src="./app/js/libs/utilts.min.js" defer></script>
+        <script src="./app/js/libs/lazy-load.min.js" defer></script>
+        <script src="./app/js/index.min.js" defer></script>
+    </head>
+
+    <body>
+        <div class="app" data-image="./app/img/home/main/iframe-bg.jpg">
+            <!-- header -->
+            <header class="app__header header">
+                <div class="header__container container">
+                    <a
+                        class="header__avatar-card avatar-card"
+                        href="#"
+                        aria-label="Go to the user's profile page">
+                        <img
+                            class="avatar-card__img"
+                            data-src="./app/img/base/header/avatar.png"
+                            alt="User's avatar" />
+                        <span class="avatar-card__text">Level 10</span>
+                    </a>
+                    <ul class="header__list-stat list-stat">
+                        <li class="list-stat__item">
+                            <a
+                                class="list-stat__item-link list-stat-link"
+                                href="#"
+                                aria-label="Top up your coins">
+                                <img
+                                    class="list-stat-link__img list-stat-link__img_first"
+                                    data-src="./app/img/base/header/coin.png"
+                                    alt="Coin" />
+                                <span class="list-stat-link__text">
+                                    123456
+                                </span>
+                                <img
+                                    class="list-stat-link__img"
+                                    data-src="./app/img/base/header/plus.png"
+                                    alt="Plus" />
+                            </a>
+                        </li>
+                        <li class="list-stat__item">
+                            <a
+                                class="list-stat__item-link list-stat-link"
+                                href="#"
+                                aria-label="Replenish energy">
+                                <img
+                                    class="list-stat-link__img list-stat-link__img_first"
+                                    data-src="./app/img/base/header/energy.png"
+                                    alt="Energy" />
+                                <span class="list-stat-link__text">
+                                    123456
+                                </span>
+                                <img
+                                    class="list-stat-link__img"
+                                    data-src="./app/img/base/header/plus.png"
+                                    alt="Plus" />
+                            </a>
+                        </li>
+                        <li class="list-stat__item">
+                            <a
+                                class="list-stat__item-link list-stat-link"
+                                href="#"
+                                aria-label="Replenish fuel">
+                                <img
+                                    class="list-stat-link__img list-stat-link__img_first"
+                                    data-src="./app/img/base/header/canister.png"
+                                    alt="Fuel" />
+                                <span class="list-stat-link__text">
+                                    123456
+                                </span>
+                                <img
+                                    class="list-stat-link__img"
+                                    data-src="./app/img/base/header/plus.png"
+                                    alt="Plus" />
+                            </a>
+                        </li>
+                        <li class="list-stat__item">
+                            <a
+                                class="list-stat__item-link list-stat-link"
+                                href="#"
+                                aria-label="Replenish crystals">
+                                <img
+                                    class="list-stat-link__img list-stat-link__img_first"
+                                    data-src="./app/img/base/header/crystal.png"
+                                    alt="Crystal" />
+                                <span class="list-stat-link__text">
+                                    123456
+                                </span>
+                                <img
+                                    class="list-stat-link__img"
+                                    data-src="./app/img/base/header/plus.png"
+                                    alt="Plus" />
+                            </a>
+                        </li>
+                    </ul>
+                    <button
+                        class="header__btn-menu"
+                        data-image="./app/img/base/header/menu-btn.png"
+                        aria-label="Open the mobile menu"></button>
+                </div>
+            </header>
+            <!-- main -->
+            <main class="app__main main">
+                <!-- coin -->
+                <img
+                    class="main__coin coin"
+                    style="top: 70%; left: 50%"
+                    data-src="./app/img/base/coin.png"
+                    alt="Coin" />
+                <img
+                    class="main__coin coin coin_sm"
+                    style="top: 69%; right: 35%"
+                    data-src="./app/img/base/coin.png"
+                    alt="Coin" />
+                <!-- main-content-top -->
+                <div class="main__content-top main-content-top">
+                    <div class="main-content-top__container container">
+                        <address class="main-content-top__address">
+                            Quebe, Canada 122121212221
+                        </address>
+                        <a
+                            class="main-content-top__link"
+                            href="#"
+                            aria-label="Go to the page"></a>
+                    </div>
+                </div>
+                <!-- main-content-bottom -->
+                <div class="main__content-bottom main-content-bottom">
+                    <div class="main-content-bottom__container container">
+                        <div class="main-content-bottom__content-wrap">
+                            <div
+                                class="main-content-bottom__list-wrap list-border">
+                                <p class="list-border__title">Votes</p>
+                                <ul class="list-border__list">
+                                    <li class="list-border__list-item">
+                                        <div
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-top"></div>
+                                        <p class="list-border__list-item-text">
+                                            Item1
+                                        </p>
+                                    </li>
+                                    <li class="list-border__list-item">
+                                        <div
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-top-right"></div>
+                                        <p class="list-border__list-item-text">
+                                            Item2
+                                        </p>
+                                    </li>
+                                    <li class="list-border__list-item">
+                                        <div
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-right"></div>
+                                        <p class="list-border__list-item-text">
+                                            Item3
+                                        </p>
+                                    </li>
+                                    <li class="list-border__list-item">
+                                        <div
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-top-left"></div>
+                                        <p class="list-border__list-item-text">
+                                            Item4
+                                        </p>
+                                    </li>
+                                    <li class="list-border__list-item">
+                                        <div
+                                            class="list-border__list-item-img list-border__list-item-img_arrow trnfs-left"></div>
+                                        <p class="list-border__list-item-text">
+                                            Item5
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <p class="main-content-bottom__info">
+                                +30 000
+                                <span class="main-content-bottom__info-span">
+                                    per vote
+                                </span>
+                            </p>
+
+                            <a
+                                class="main-content-bottom__link main-content-bottom__link_map"
+                                href="#"
+                                aria-label="Open a card"></a>
+
+                            <div class="main-content-bottom__arrow-wrap">
+                                <a
+                                    class="main-content-bottom__arrow trnfs-left"
+                                    href="#"
+                                    aria-label="Choose directions"></a>
+                                <a
+                                    class="main-content-bottom__arrow trnfs-top-left"
+                                    href="#"
+                                    aria-label="Choose directions"></a>
+                                <a
+                                    class="main-content-bottom__arrow trnfs-top"
+                                    href="#"
+                                    aria-label="Choose directions"></a>
+                                <a
+                                    class="main-content-bottom__arrow trnfs-top-right"
+                                    href="#"
+                                    aria-label="Choose directions"></a>
+                                <a
+                                    class="main-content-bottom__arrow trnfs-right"
+                                    href="#"
+                                    aria-label="Choose directions"></a>
+                                <p class="main-content-bottom__arrow-text">
+                                    Pick a direction
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- footer -->
+            <footer class="app__footer footer">
+                <div class="footer__container container">
+                    <div class="footer__layer footer__layer_first">
+                        <div class="footer__layer-left">
+                            <ul class="footer__layer-list items-list">
+                                <li class="items-list__item">
+                                    <img
+                                        class="items-list__item-img"
+                                        data-src="./app/img/base/footer/items/cactus.png"
+                                        alt="Cactus on the dashboard" />
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button
+                            class="footer__layer-btn footer-btn-radio"
+                            aria-label="Switch the radio">
+                            <span class="footer-btn-radio__title">Radio</span>
+                            <span class="footer-btn-radio__text">104.5 FM</span>
+                        </button>
+
+                        <div class="footer__layer-right">
+                            <ul
+                                class="footer__layer-list items-list items-list_first">
+                                <li class="items-list__item">
+                                    <img
+                                        class="items-list__item-img"
+                                        data-src="./app/img/base/footer/items/car.png"
+                                        alt="A typewriter on the dashboard" />
+                                </li>
+                            </ul>
+
+                            <ul class="footer__layer-list items-list">
+                                <li class="items-list__item">
+                                    <img
+                                        class="items-list__item-img"
+                                        data-src="./app/img/base/footer/stickers/sticker-2.png"
+                                        alt="Sign Sticker" />
+                                </li>
+                                <li class="items-list__item">
+                                    <img
+                                        class="items-list__item-img"
+                                        data-src="./app/img/base/footer/stickers/sticker-3.png"
+                                        alt="Palm Tree Sticker" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__layer footer__layer_third">
+                        <div class="footer__layer-dashboard">
+                            <img
+                                class="footer__layer-dashboard-img"
+                                data-src="./app/img/base/footer/dashboard.png"
+                                alt="The dashboard" />
+                        </div>
+
+                        <ul
+                            class="footer__layer-list items-list items-list_stickers">
+                            <li class="items-list__item">
+                                <img
+                                    class="items-list__item-img"
+                                    data-src="./app/img/base/footer/stickers/sticker-4.png"
+                                    alt="Car Sticker" />
+                            </li>
+                            <li class="items-list__item">
+                                <img
+                                    class="items-list__item-img"
+                                    data-src="./app/img/base/footer/stickers/sticker-1.png"
+                                    alt="Cat Sticker" />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__menu-wrap">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-list-item">
+                                    <a
+                                        class="footer__menu-list-item-link footer-menu-link"
+                                        href="#"
+                                        data-image="./app/img/base/footer/menu/home.png"
+                                        aria-label="Go to the main screen"></a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a
+                                        class="footer__menu-list-item-link footer-menu-link"
+                                        href="#"
+                                        data-image="./app/img/base/footer/menu/game.png"
+                                        aria-label="Go to the game screen"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-list-item">
+                                    <a
+                                        class="footer__menu-list-item-link footer-menu-link"
+                                        href="#"
+                                        data-image="./app/img/base/footer/menu/tasks.png"
+                                        aria-label="Go to the task screen"></a>
+                                </li>
+                                <li class="footer__menu-list-item">
+                                    <a
+                                        class="footer__menu-list-item-link footer-menu-link"
+                                        href="#"
+                                        data-image="./app/img/base/footer/menu/shop.png"
+                                        aria-label="Go to the store screen"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="footer__img-wheel-wrap">
+                        <img
+                            class="footer__img-wheel"
+                            style="transform: rotate(0deg)"
+                            src="./app/img/base/footer/rudder.png"
+                            alt="Rudder" />
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

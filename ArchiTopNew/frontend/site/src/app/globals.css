@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  /* sizes */
+  --container-width: 1490px;
+  --container-padding: 25px;
+  --container-padding-ph: 10px;
+   /* colors */
+  --background: #fff;
+  --text: #303235;
+  --primary: #1F58E0;
+  --error: #ff4040;
+}
+
+@theme inline {
+   /* sizes */
+  --container-width: var(--container-width);
+  --container-padding: var(--container-padding);
+  --container-padding-ph: var(--container-padding-ph);
+  /* colors */
+  --background-color: var(--background);
+  --text-color: var(--text);
+  --primary-color: var(--primary);
+  --error-color: var(--error);
+}
+
+*::selection {
+  @apply bg-(--primary) text-(--text-color);
+}
+
+body {
+  @apply m-0 flex min-h-dvh w-full max-w-full min-w-80 flex-col bg-(--background-color) text-lg font-normal text-(--text-color);
+}
+
+header,
+section,
+main,
+footer {
+  @apply w-full;
+}
+
+body::-webkit-scrollbar {
+  @apply w-1 bg-(--background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-(--primary-color);
+}
+
+button,
+a {
+  @apply cursor-pointer;
+}
+
+/* start base */
+.visually-hidden {
+  @apply absolute -m-px h-px w-px border-0 p-0 whitespace-nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  @apply relative z-1 mx-auto w-full max-w-[--container-width] pr-[--container-padding] pl-(--container-padding) max-sm:pr-[--container-padding-ph] max-sm:pl-[--container-padding-ph];
+}
+
+.section {
+  @apply relative mb-35 max-sm:mb-20;
+}
+
+.title-1 {
+  @apply mb-5 text-5xl max-md:text-4xl max-sm:text-3xl;
+}
+
+.title-2 {
+  @apply mb-5 text-[40px] max-md:text-4xl max-sm:text-3xl;
+}
+
+.title-3 {
+  @apply mb-6 text-2xl;
+}
+
+address {
+  @apply not-italic;
+}

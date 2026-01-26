@@ -1,0 +1,1409 @@
+[
+    {
+        "mask": "+\\93 99 999 9999",
+        "code_str": "af",
+        "code_num": "+93",
+        "name": "Afghanistan (افغانستان)",
+        "flag": "https://palladiumgroup.ae/img/flags/af.svg"
+    },
+    {
+        "mask": "+355 999 999 999",
+        "code_str": "al",
+        "code_num": "+355",
+        "name": "Albania (Shqipëri)",
+        "flag": "https://palladiumgroup.ae/img/flags/al.svg"
+    },
+    {
+        "mask": "+213 99 999 9999",
+        "code_str": "dz",
+        "code_num": "+213",
+        "name": "Algeria (الجزائر)",
+        "flag": "https://palladiumgroup.ae/img/flags/dz.svg"
+    },
+    {
+        "mask": "+376 999 999",
+        "code_str": "ad",
+        "code_num": "+376",
+        "name": "Andorra",
+        "flag": "https://palladiumgroup.ae/img/flags/ad.svg"
+    },
+    {
+        "mask": "+244 999 999 999",
+        "code_str": "ao",
+        "code_num": "+244",
+        "name": "Angola",
+        "flag": "https://palladiumgroup.ae/img/flags/ao.svg"
+    },
+    {
+        "mask": "+374 99 999 999",
+        "code_str": "am",
+        "code_num": "+374",
+        "name": "Armenia (Հայաստան)",
+        "flag": "https://palladiumgroup.ae/img/flags/am.svg"
+    },
+    {
+        "mask": "+1 (268)999 9999",
+        "code_str": "ag",
+        "code_num": "+1 (268)",
+        "name": "Antigua and Barbuda",
+        "flag": "https://palladiumgroup.ae/img/flags/ag.svg"
+    },
+    {
+        "mask": "+54 999 9999 9999",
+        "code_str": "ar",
+        "code_num": "+54",
+        "name": "Argentina",
+        "flag": "https://palladiumgroup.ae/img/flags/ar.svg"
+    },
+    {
+        "mask": "+61 99 9999 9999",
+        "code_str": "au",
+        "code_num": "+61",
+        "name": "Australia",
+        "flag": "https://palladiumgroup.ae/img/flags/au.svg"
+    },
+    {
+        "mask": "+43 999 999 99999",
+        "code_str": "at",
+        "code_num": "+43",
+        "name": "Austria (Österreich)",
+        "flag": "https://palladiumgroup.ae/img/flags/at.svg"
+    },
+    {
+        "mask": "+\\9\\94 99 999 99 99",
+        "code_str": "az",
+        "code_num": "+994",
+        "name": "Azerbaijan (Azərbaycan)",
+        "flag": "https://palladiumgroup.ae/img/flags/az.svg"
+    },
+    {
+        "mask": "+1 (242)999 9999",
+        "code_str": "bs",
+        "code_num": "+1 (242)",
+        "name": "Bahamas",
+        "flag": "https://palladiumgroup.ae/img/flags/bs.svg"
+    },
+    {
+        "mask": "+\\973 9999 9999",
+        "code_str": "bh",
+        "code_num": "+973",
+        "name": "Bahrain (البحرين)",
+        "flag": "https://palladiumgroup.ae/img/flags/bh.svg"
+    },
+    {
+        "mask": "+880 9999 999999",
+        "code_str": "bd",
+        "code_num": "+880",
+        "name": "Bangladesh (বাংলাদেশ)",
+        "flag": "https://palladiumgroup.ae/img/flags/bd.svg"
+    },
+    {
+        "mask": "+1 (246)999 9999",
+        "code_str": "bb",
+        "code_num": "+1 (246)",
+        "name": "Barbados",
+        "flag": "https://palladiumgroup.ae/img/flags/bb.svg"
+    },
+    {
+        "mask": "+375 99 999 99 99",
+        "code_str": "by",
+        "code_num": "+375",
+        "name": "Belarus (Беларусь)",
+        "flag": "https://palladiumgroup.ae/img/flags/by.svg"
+    },
+    {
+        "mask": "+32 999 999 999",
+        "code_str": "be",
+        "code_num": "+32",
+        "name": "Belgium (België)",
+        "flag": "https://palladiumgroup.ae/img/flags/be.svg"
+    },
+    {
+        "mask": "+501 999 9999",
+        "code_str": "bz",
+        "code_num": "+501",
+        "name": "Belize",
+        "flag": "https://palladiumgroup.ae/img/flags/bz.svg"
+    },
+    {
+        "mask": "+22\\9 99 99 9999",
+        "code_str": "bj",
+        "code_num": "+229",
+        "name": "Benin (Bénin)",
+        "flag": "https://palladiumgroup.ae/img/flags/bj.svg"
+    },
+    {
+        "mask": "+\\975 9 999 9999",
+        "code_str": "bt",
+        "code_num": "+975",
+        "name": "Bhutan (འབྲུག)",
+        "flag": "https://palladiumgroup.ae/img/flags/bt.svg"
+    },
+    {
+        "mask": "+5\\91 9 999 9999",
+        "code_str": "bo",
+        "code_num": "+591",
+        "name": "Bolivia",
+        "flag": "https://palladiumgroup.ae/img/flags/bo.svg"
+    },
+    {
+        "mask": "+387 99 999 999",
+        "code_str": "ba",
+        "code_num": "+387",
+        "name": "Bosnia and Herzegovina",
+        "flag": "https://palladiumgroup.ae/img/flags/ba.svg"
+    },
+    {
+        "mask": "+267 99 999 999",
+        "code_str": "bw",
+        "code_num": "+267",
+        "name": "Botswana",
+        "flag": "https://palladiumgroup.ae/img/flags/bw.svg"
+    },
+    {
+        "mask": "+55 99 99999 9999",
+        "code_str": "br",
+        "code_num": "+55",
+        "name": "Brazil (Brasil)",
+        "flag": "https://palladiumgroup.ae/img/flags/br.svg"
+    },
+    {
+        "mask": "+673 999 9999",
+        "code_str": "bn",
+        "code_num": "+673",
+        "name": "Brunei",
+        "flag": "https://palladiumgroup.ae/img/flags/bn.svg"
+    },
+    {
+        "mask": "+35\\9 999 999 999",
+        "code_str": "bg",
+        "code_num": "+359",
+        "name": "Bulgaria (България)",
+        "flag": "https://palladiumgroup.ae/img/flags/bg.svg"
+    },
+    {
+        "mask": "+226 99 99 9999",
+        "code_str": "bf",
+        "code_num": "+226",
+        "name": "Burkina Faso",
+        "flag": "https://palladiumgroup.ae/img/flags/bf.svg"
+    },
+    {
+        "mask": "+257 99 99 9999",
+        "code_str": "bi",
+        "code_num": "+257",
+        "name": "Burundi (Uburundi)",
+        "flag": "https://palladiumgroup.ae/img/flags/bi.svg"
+    },
+    {
+        "mask": "+855 99 999 999",
+        "code_str": "kh",
+        "code_num": "+855",
+        "name": "Cambodia (កម្ពុជា)",
+        "flag": "https://palladiumgroup.ae/img/flags/kh.svg"
+    },
+    {
+        "mask": "+237 9 99 99 99 99",
+        "code_str": "cm",
+        "code_num": "+237",
+        "name": "Cameroon (Cameroun)",
+        "flag": "https://palladiumgroup.ae/img/flags/cm.svg"
+    },
+    {
+        "mask": "+1 999 999 9999",
+        "code_str": "ca",
+        "code_num": "+1",
+        "name": "Canada",
+        "flag": "https://palladiumgroup.ae/img/flags/ca.svg"
+    },
+    {
+        "mask": "+238 999 99 99",
+        "code_str": "cv",
+        "code_num": "+238",
+        "name": "Cape Verde (Kabu Verdi)",
+        "flag": "https://palladiumgroup.ae/img/flags/cv.svg"
+    },
+    {
+        "mask": "+236 99 99 9999",
+        "code_str": "cf",
+        "code_num": "+236",
+        "name": "Central African Republic (République centrafricaine)",
+        "flag": "https://palladiumgroup.ae/img/flags/cf.svg"
+    },
+    {
+        "mask": "+235 99 99 99 99",
+        "code_str": "td",
+        "code_num": "+235",
+        "name": "Chad (Tchad)",
+        "flag": "https://palladiumgroup.ae/img/flags/td.svg"
+    },
+    {
+        "mask": "+56 9 9999 9999",
+        "code_str": "cl",
+        "code_num": "+56",
+        "name": "Chile",
+        "flag": "https://palladiumgroup.ae/img/flags/cl.svg"
+    },
+    {
+        "mask": "+86 999 9999 9999",
+        "code_str": "cn",
+        "code_num": "+86",
+        "name": "China (中国)",
+        "flag": "https://palladiumgroup.ae/img/flags/cn.svg"
+    },
+    {
+        "mask": "+57 999 999 9999",
+        "code_str": "co",
+        "code_num": "+57",
+        "name": "Colombia",
+        "flag": "https://palladiumgroup.ae/img/flags/co.svg"
+    },
+    {
+        "mask": "+26\\9 99 99999",
+        "code_str": "km",
+        "code_num": "+269",
+        "name": "Comoros (جزر القمر)",
+        "flag": "https://palladiumgroup.ae/img/flags/km.svg"
+    },
+    {
+        "mask": "+243 999 999 999",
+        "code_str": "cd",
+        "code_num": "+243",
+        "name": "Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo)",
+        "flag": "https://palladiumgroup.ae/img/flags/cd.svg"
+    },
+    {
+        "mask": "+242 99 999 9999",
+        "code_str": "cg",
+        "code_num": "+242",
+        "name": "Congo (Republic) (Congo-Brazzaville)",
+        "flag": "https://palladiumgroup.ae/img/flags/cg.svg"
+    },
+    {
+        "mask": "+682 99 999",
+        "code_str": "ck",
+        "code_num": "+682",
+        "name": "Cook Islands",
+        "flag": "https://palladiumgroup.ae/img/flags/ck.svg"
+    },
+    {
+        "mask": "+506 9999 9999",
+        "code_str": "cr",
+        "code_num": "+506",
+        "name": "Costa Rica",
+        "flag": "https://palladiumgroup.ae/img/flags/cr.svg"
+    },
+    {
+        "mask": "+225 99 999 999",
+        "code_str": "ci",
+        "code_num": "+225",
+        "name": "Cote d’Ivoire",
+        "flag": "https://palladiumgroup.ae/img/flags/ci.svg"
+    },
+    {
+        "mask": "+385 99 999 9999",
+        "code_str": "hr",
+        "code_num": "+385",
+        "name": "Croatia (Hrvatska)",
+        "flag": "https://palladiumgroup.ae/img/flags/hr.svg"
+    },
+    {
+        "mask": "+53 9 999 9999",
+        "code_str": "cu",
+        "code_num": "+53",
+        "name": "Cuba",
+        "flag": "https://palladiumgroup.ae/img/flags/cu.svg"
+    },
+    {
+        "mask": "+357 99 999 999",
+        "code_str": "cy",
+        "code_num": "+357",
+        "name": "Cyprus (Κύπρος)",
+        "flag": "https://palladiumgroup.ae/img/flags/cy.svg"
+    },
+    {
+        "mask": "+420 999 999 999",
+        "code_str": "cz",
+        "code_num": "+420",
+        "name": "Czech Republic (Česká republika)",
+        "flag": "https://palladiumgroup.ae/img/flags/cz.svg"
+    },
+    {
+        "mask": "+45 99 99 99 99",
+        "code_str": "dk",
+        "code_num": "+45",
+        "name": "Denmark (Danmark)",
+        "flag": "https://palladiumgroup.ae/img/flags/dk.svg"
+    },
+    {
+        "mask": "+253 99 99 99 99",
+        "code_str": "dj",
+        "code_num": "+253",
+        "name": "Djibouti",
+        "flag": "https://palladiumgroup.ae/img/flags/dj.svg"
+    },
+    {
+        "mask": "+1 (767)999 9999",
+        "code_str": "dm",
+        "code_num": "+1 (767)",
+        "name": "Dominica",
+        "flag": "https://palladiumgroup.ae/img/flags/dm.svg"
+    },
+    {
+        "mask": "+1 999 999 9999",
+        "code_str": "do",
+        "code_num": "+1",
+        "name": "Dominican Republic (República Dominicana)",
+        "flag": "https://palladiumgroup.ae/img/flags/do.svg"
+    },
+    {
+        "mask": "+5\\93 99 999 9999",
+        "code_str": "ec",
+        "code_num": "+593",
+        "name": "Ecuador",
+        "flag": "https://palladiumgroup.ae/img/flags/ec.svg"
+    },
+    {
+        "mask": "+20 999 999 9999",
+        "code_str": "eg",
+        "code_num": "+20",
+        "name": "Egypt (مصر)",
+        "flag": "https://palladiumgroup.ae/img/flags/eg.svg"
+    },
+    {
+        "mask": "+503 99 99 9999",
+        "code_str": "sv",
+        "code_num": "+503",
+        "name": "El Salvador",
+        "flag": "https://palladiumgroup.ae/img/flags/sv.svg"
+    },
+    {
+        "mask": "+240 99 999 9999",
+        "code_str": "gq",
+        "code_num": "+240",
+        "name": "Equatorial Guinea (Guinea Ecuatorial)",
+        "flag": "https://palladiumgroup.ae/img/flags/gq.svg"
+    },
+    {
+        "mask": "+2\\91 9 999 999",
+        "code_str": "er",
+        "code_num": "+291",
+        "name": "Eritrea",
+        "flag": "https://palladiumgroup.ae/img/flags/er.svg"
+    },
+    {
+        "mask": "+372 9999 9999",
+        "code_str": "ee",
+        "code_num": "+372",
+        "name": "Estonia (Eesti)",
+        "flag": "https://palladiumgroup.ae/img/flags/ee.svg"
+    },
+    {
+        "mask": "+251 99 999 9999",
+        "code_str": "et",
+        "code_num": "+251",
+        "name": "Ethiopia",
+        "flag": "https://palladiumgroup.ae/img/flags/et.svg"
+    },
+    {
+        "mask": "+67\\9 999 9999",
+        "code_str": "fj",
+        "code_num": "+679",
+        "name": "Fiji",
+        "flag": "https://palladiumgroup.ae/img/flags/fj.svg"
+    },
+    {
+        "mask": "+358 999 9999999",
+        "code_str": "fi",
+        "code_num": "+358",
+        "name": "Finland (Suomi)",
+        "flag": "https://palladiumgroup.ae/img/flags/fi.svg"
+    },
+    {
+        "mask": "+33 999 999 9999",
+        "code_str": "fr",
+        "code_num": "+33",
+        "name": "France",
+        "flag": "https://palladiumgroup.ae/img/flags/fr.svg"
+    },
+    {
+        "mask": "+241 9 99 99 99",
+        "code_str": "ga",
+        "code_num": "+241",
+        "name": "Gabon",
+        "flag": "https://palladiumgroup.ae/img/flags/ga.svg"
+    },
+    {
+        "mask": "+220 999 99 99",
+        "code_str": "gm",
+        "code_num": "+220",
+        "name": "Gambia",
+        "flag": "https://palladiumgroup.ae/img/flags/gm.svg"
+    },
+    {
+        "mask": "+\\9\\95 999 999 999",
+        "code_str": "ge",
+        "code_num": "+995",
+        "name": "Georgia (საქართველო)",
+        "flag": "https://palladiumgroup.ae/img/flags/ge.svg"
+    },
+    {
+        "mask": "+4\\9 999 999 99999",
+        "code_str": "de",
+        "code_num": "+49",
+        "name": "Germany (Deutschland)",
+        "flag": "https://palladiumgroup.ae/img/flags/de.svg"
+    },
+    {
+        "mask": "+233 999 999 999",
+        "code_str": "gh",
+        "code_num": "+233",
+        "name": "Ghana (Gaana)",
+        "flag": "https://palladiumgroup.ae/img/flags/gh.svg"
+    },
+    {
+        "mask": "+30 999 999 9999",
+        "code_str": "gr",
+        "code_num": "+30",
+        "name": "Greece (Ελλάδα)",
+        "flag": "https://palladiumgroup.ae/img/flags/gr.svg"
+    },
+    {
+        "mask": "+1 (473)999 9999",
+        "code_str": "gd",
+        "code_num": "+1 (473)",
+        "name": "Grenada",
+        "flag": "https://palladiumgroup.ae/img/flags/gd.svg"
+    },
+    {
+        "mask": "+502 9 999 9999",
+        "code_str": "gt",
+        "code_num": "+502",
+        "name": "Guatemala",
+        "flag": "https://palladiumgroup.ae/img/flags/gt.svg"
+    },
+    {
+        "mask": "+224 999 99 99 99",
+        "code_str": "gn",
+        "code_num": "+224",
+        "name": "Guinea (Guinée)",
+        "flag": "https://palladiumgroup.ae/img/flags/gn.svg"
+    },
+    {
+        "mask": "+245 9 999999",
+        "code_str": "gw",
+        "code_num": "+245",
+        "name": "Guinea Bissau (Guiné Bissau)",
+        "flag": "https://palladiumgroup.ae/img/flags/gw.svg"
+    },
+    {
+        "mask": "+5\\92 999 9999",
+        "code_str": "gy",
+        "code_num": "+592",
+        "name": "Guyana",
+        "flag": "https://palladiumgroup.ae/img/flags/gy.svg"
+    },
+    {
+        "mask": "+50\\9 99 99 9999",
+        "code_str": "ht",
+        "code_num": "+509",
+        "name": "Haiti",
+        "flag": "https://palladiumgroup.ae/img/flags/ht.svg"
+    },
+    {
+        "mask": "+504 9999 9999",
+        "code_str": "hn",
+        "code_num": "+504",
+        "name": "Honduras",
+        "flag": "https://palladiumgroup.ae/img/flags/hn.svg"
+    },
+    {
+        "mask": "+852 9999 9999",
+        "code_str": "hk",
+        "code_num": "+852",
+        "name": "Hong Kong (香港)",
+        "flag": "https://palladiumgroup.ae/img/flags/hk.svg"
+    },
+    {
+        "mask": "+36 999 999 999",
+        "code_str": "hu",
+        "code_num": "+36",
+        "name": "Hungary (Magyarország)",
+        "flag": "https://palladiumgroup.ae/img/flags/hu.svg"
+    },
+    {
+        "mask": "+354 999 9999",
+        "code_str": "is",
+        "code_num": "+354",
+        "name": "Iceland (Ísland)",
+        "flag": "https://palladiumgroup.ae/img/flags/is.svg"
+    },
+    {
+        "mask": "+\\91 9999 999 999",
+        "code_str": "in",
+        "code_num": "+91",
+        "name": "India (भारत)",
+        "flag": "https://palladiumgroup.ae/img/flags/in.svg"
+    },
+    {
+        "mask": "+62 999 999 99 999",
+        "code_str": "id",
+        "code_num": "+62",
+        "name": "Indonesia",
+        "flag": "https://palladiumgroup.ae/img/flags/id.svg"
+    },
+    {
+        "mask": "+\\98 999 999 9999",
+        "code_str": "ir",
+        "code_num": "+98",
+        "name": "Iran (ایران)",
+        "flag": "https://palladiumgroup.ae/img/flags/ir.svg"
+    },
+    {
+        "mask": "+\\964 999 999 9999",
+        "code_str": "iq",
+        "code_num": "+964",
+        "name": "Iraq (العراق)",
+        "flag": "https://palladiumgroup.ae/img/flags/iq.svg"
+    },
+    {
+        "mask": "+353 999 999 999",
+        "code_str": "ie",
+        "code_num": "+353",
+        "name": "Ireland",
+        "flag": "https://palladiumgroup.ae/img/flags/ie.svg"
+    },
+    {
+        "mask": "+\\972 999 999 9999",
+        "code_str": "il",
+        "code_num": "+972",
+        "name": "Israel (ישראל)",
+        "flag": "https://palladiumgroup.ae/img/flags/il.svg"
+    },
+    {
+        "mask": "+3\\9 999 9999 999",
+        "code_str": "it",
+        "code_num": "+39",
+        "name": "Italy (Italia)",
+        "flag": "https://palladiumgroup.ae/img/flags/it.svg"
+    },
+    {
+        "mask": "+1 999 999 9999",
+        "code_str": "jm",
+        "code_num": "+1",
+        "name": "Jamaica",
+        "flag": "https://palladiumgroup.ae/img/flags/jm.svg"
+    },
+    {
+        "mask": "+81 99 9999 9999",
+        "code_str": "jp",
+        "code_num": "+81",
+        "name": "Japan (日本)",
+        "flag": "https://palladiumgroup.ae/img/flags/jp.svg"
+    },
+    {
+        "mask": "+\\962 9 9999 9999",
+        "code_str": "jo",
+        "code_num": "+962",
+        "name": "Jordan (الأردن)",
+        "flag": "https://palladiumgroup.ae/img/flags/jo.svg"
+    },
+    {
+        "mask": "+7 999 999 99 99",
+        "code_str": "kz",
+        "code_num": "+7",
+        "name": "Kazakhstan (Казахстан)",
+        "flag": "https://palladiumgroup.ae/img/flags/kz.svg"
+    },
+    {
+        "mask": "+254 999 999999",
+        "code_str": "ke",
+        "code_num": "+254",
+        "name": "Kenya",
+        "flag": "https://palladiumgroup.ae/img/flags/ke.svg"
+    },
+    {
+        "mask": "+686 99 999",
+        "code_str": "ki",
+        "code_num": "+686",
+        "name": "Kiribati",
+        "flag": "https://palladiumgroup.ae/img/flags/ki.svg"
+    },
+    {
+        "mask": "+383 99 999 999",
+        "code_str": "xk",
+        "code_num": "+383",
+        "name": "Kosovo (Republic)",
+        "flag": "https://palladiumgroup.ae/img/flags/xk.svg"
+    },
+    {
+        "mask": "+\\965 9999 9999",
+        "code_str": "kw",
+        "code_num": "+965",
+        "name": "Kuwait (الكويت)",
+        "flag": "https://palladiumgroup.ae/img/flags/kw.svg"
+    },
+    {
+        "mask": "+\\9\\96 999 999 999",
+        "code_str": "kg",
+        "code_num": "+996",
+        "name": "Kyrgyzstan (Кыргызстан)",
+        "flag": "https://palladiumgroup.ae/img/flags/kg.svg"
+    },
+    {
+        "mask": "+856 99 999 999",
+        "code_str": "la",
+        "code_num": "+856",
+        "name": "Laos (ລາວ)",
+        "flag": "https://palladiumgroup.ae/img/flags/la.svg"
+    },
+    {
+        "mask": "+371 99 999 999",
+        "code_str": "lv",
+        "code_num": "+371",
+        "name": "Latvia (Latvija)",
+        "flag": "https://palladiumgroup.ae/img/flags/lv.svg"
+    },
+    {
+        "mask": "+\\961 99 999 999",
+        "code_str": "lb",
+        "code_num": "+961",
+        "name": "Lebanon (لبنان)",
+        "flag": "https://palladiumgroup.ae/img/flags/lb.svg"
+    },
+    {
+        "mask": "+266 9 999 9999",
+        "code_str": "ls",
+        "code_num": "+266",
+        "name": "Lesotho",
+        "flag": "https://palladiumgroup.ae/img/flags/ls.svg"
+    },
+    {
+        "mask": "+231 99 999 9999",
+        "code_str": "lr",
+        "code_num": "+231",
+        "name": "Liberia",
+        "flag": "https://palladiumgroup.ae/img/flags/lr.svg"
+    },
+    {
+        "mask": "+218 99 999 999",
+        "code_str": "ly",
+        "code_num": "+218",
+        "name": "Libya (ليبيا)",
+        "flag": "https://palladiumgroup.ae/img/flags/ly.svg"
+    },
+    {
+        "mask": "+423 999 99 99",
+        "code_str": "li",
+        "code_num": "+423",
+        "name": "Liechtenstein",
+        "flag": "https://palladiumgroup.ae/img/flags/li.svg"
+    },
+    {
+        "mask": "+370 999 99 999",
+        "code_str": "lt",
+        "code_num": "+370",
+        "name": "Lithuania (Lietuva)",
+        "flag": "https://palladiumgroup.ae/img/flags/lt.svg"
+    },
+    {
+        "mask": "+352 999 999 999",
+        "code_str": "lu",
+        "code_num": "+352",
+        "name": "Luxembourg",
+        "flag": "https://palladiumgroup.ae/img/flags/lu.svg"
+    },
+    {
+        "mask": "+853 9999 9999",
+        "code_str": "mo",
+        "code_num": "+853",
+        "name": "Macao",
+        "flag": "https://palladiumgroup.ae/img/flags/mo.svg"
+    },
+    {
+        "mask": "+38\\9 99 999 999",
+        "code_str": "mk",
+        "code_num": "+389",
+        "name": "Macedonia (FYROM) (Македонија)",
+        "flag": "https://palladiumgroup.ae/img/flags/mk.svg"
+    },
+    {
+        "mask": "+261 99 99 99999",
+        "code_str": "mg",
+        "code_num": "+261",
+        "name": "Madagascar (Madagasikara)",
+        "flag": "https://palladiumgroup.ae/img/flags/mg.svg"
+    },
+    {
+        "mask": "+265 9 9999 9999",
+        "code_str": "mw",
+        "code_num": "+265",
+        "name": "Malawi",
+        "flag": "https://palladiumgroup.ae/img/flags/mw.svg"
+    },
+    {
+        "mask": "+60 99 999 9999",
+        "code_str": "my",
+        "code_num": "+60",
+        "name": "Malaysia",
+        "flag": "https://palladiumgroup.ae/img/flags/my.svg"
+    },
+    {
+        "mask": "+\\960 999 9999",
+        "code_str": "mv",
+        "code_num": "+960",
+        "name": "Maldives",
+        "flag": "https://palladiumgroup.ae/img/flags/mv.svg"
+    },
+    {
+        "mask": "+223 99 99 9999",
+        "code_str": "ml",
+        "code_num": "+223",
+        "name": "Mali",
+        "flag": "https://palladiumgroup.ae/img/flags/ml.svg"
+    },
+    {
+        "mask": "+356 9999 9999",
+        "code_str": "mt",
+        "code_num": "+356",
+        "name": "Malta",
+        "flag": "https://palladiumgroup.ae/img/flags/mt.svg"
+    },
+    {
+        "mask": "+6\\92 999 9999",
+        "code_str": "mh",
+        "code_num": "+692",
+        "name": "Marshall Islands",
+        "flag": "https://palladiumgroup.ae/img/flags/mh.svg"
+    },
+    {
+        "mask": "+222 99 99 9999",
+        "code_str": "mr",
+        "code_num": "+222",
+        "name": "Mauritania (موريتانيا)",
+        "flag": "https://palladiumgroup.ae/img/flags/mr.svg"
+    },
+    {
+        "mask": "+230 999 99999",
+        "code_str": "mu",
+        "code_num": "+230",
+        "name": "Mauritius (Moris)",
+        "flag": "https://palladiumgroup.ae/img/flags/mu.svg"
+    },
+    {
+        "mask": "+52 999 999 9999",
+        "code_str": "mx",
+        "code_num": "+52",
+        "name": "Mexico (México)",
+        "flag": "https://palladiumgroup.ae/img/flags/mx.svg"
+    },
+    {
+        "mask": "+521 999 999 9999",
+        "code_str": "mb",
+        "code_num": "+521",
+        "name": "Mexico (México)",
+        "flag": "https://palladiumgroup.ae/img/flags/mb.svg"
+    },
+    {
+        "mask": "+6\\91 999 9999",
+        "code_str": "fm",
+        "code_num": "+691",
+        "name": "Micronesia",
+        "flag": "https://palladiumgroup.ae/img/flags/fm.svg"
+    },
+    {
+        "mask": "+373 9999 9999",
+        "code_str": "md",
+        "code_num": "+373",
+        "name": "Moldova (Republica Moldova)",
+        "flag": "https://palladiumgroup.ae/img/flags/md.svg"
+    },
+    {
+        "mask": "+377 99 999 999",
+        "code_str": "mc",
+        "code_num": "+377",
+        "name": "Monaco",
+        "flag": "https://palladiumgroup.ae/img/flags/mc.svg"
+    },
+    {
+        "mask": "+\\976 99 99 9999",
+        "code_str": "mn",
+        "code_num": "+976",
+        "name": "Mongolia (Монгол)",
+        "flag": "https://palladiumgroup.ae/img/flags/mn.svg"
+    },
+    {
+        "mask": "+382 99 999 999",
+        "code_str": "me",
+        "code_num": "+382",
+        "name": "Montenegro (Crna Gora)",
+        "flag": "https://palladiumgroup.ae/img/flags/me.svg"
+    },
+    {
+        "mask": "+212 99 9999 999",
+        "code_str": "ma",
+        "code_num": "+212",
+        "name": "Morocco (المغرب)",
+        "flag": "https://palladiumgroup.ae/img/flags/ma.svg"
+    },
+    {
+        "mask": "+258 99 999 999",
+        "code_str": "mz",
+        "code_num": "+258",
+        "name": "Mozambique (Moçambique)",
+        "flag": "https://palladiumgroup.ae/img/flags/mz.svg"
+    },
+    {
+        "mask": "+\\95 99 999 999",
+        "code_str": "mm",
+        "code_num": "+95",
+        "name": "Myanmar (Burma) (မြန်မာ)",
+        "flag": "https://palladiumgroup.ae/img/flags/mm.svg"
+    },
+    {
+        "mask": "+264 99 999 9999",
+        "code_str": "na",
+        "code_num": "+264",
+        "name": "Namibia (Namibië)",
+        "flag": "https://palladiumgroup.ae/img/flags/na.svg"
+    },
+    {
+        "mask": "+674 999 9999",
+        "code_str": "nr",
+        "code_num": "+674",
+        "name": "Nauru",
+        "flag": "https://palladiumgroup.ae/img/flags/nr.svg"
+    },
+    {
+        "mask": "+\\977 999 999 9999",
+        "code_str": "np",
+        "code_num": "+977",
+        "name": "Nepal (नेपाल)",
+        "flag": "https://palladiumgroup.ae/img/flags/np.svg"
+    },
+    {
+        "mask": "+31 99 999 9999",
+        "code_str": "nl",
+        "code_num": "+31",
+        "name": "Netherlands (Nederland)",
+        "flag": "https://palladiumgroup.ae/img/flags/nl.svg"
+    },
+    {
+        "mask": "+64 999 999 999",
+        "code_str": "nz",
+        "code_num": "+64",
+        "name": "New Zealand",
+        "flag": "https://palladiumgroup.ae/img/flags/nz.svg"
+    },
+    {
+        "mask": "+505 9999 9999",
+        "code_str": "ni",
+        "code_num": "+505",
+        "name": "Nicaragua",
+        "flag": "https://palladiumgroup.ae/img/flags/ni.svg"
+    },
+    {
+        "mask": "+227 99 99 9999",
+        "code_str": "ne",
+        "code_num": "+227",
+        "name": "Niger (Nijar)",
+        "flag": "https://palladiumgroup.ae/img/flags/ne.svg"
+    },
+    {
+        "mask": "+234 999 999 9999",
+        "code_str": "ng",
+        "code_num": "+234",
+        "name": "Nigeria",
+        "flag": "https://palladiumgroup.ae/img/flags/ng.svg"
+    },
+    {
+        "mask": "+683 9999",
+        "code_str": "nu",
+        "code_num": "+683",
+        "name": "Niue",
+        "flag": "https://palladiumgroup.ae/img/flags/nu.svg"
+    },
+    {
+        "mask": "+850 99 999 999",
+        "code_str": "kp",
+        "code_num": "+850",
+        "name": "North Korea (조선 민주주의 인민 공화국)",
+        "flag": "https://palladiumgroup.ae/img/flags/kp.svg"
+    },
+    {
+        "mask": "+47 999 99 999",
+        "code_str": "no",
+        "code_num": "+47",
+        "name": "Norway (Norge)",
+        "flag": "https://palladiumgroup.ae/img/flags/no.svg"
+    },
+    {
+        "mask": "+\\968 99 999 999",
+        "code_str": "om",
+        "code_num": "+968",
+        "name": "Oman (عُمان)",
+        "flag": "https://palladiumgroup.ae/img/flags/om.svg"
+    },
+    {
+        "mask": "+507 9999 9999",
+        "code_str": "pa",
+        "code_num": "+507",
+        "name": "Panama",
+        "flag": "https://palladiumgroup.ae/img/flags/pa.svg"
+    },
+    {
+        "mask": "+\\92 999 999 9999",
+        "code_str": "pk",
+        "code_num": "+92",
+        "name": "Pakistan (پاکستان)",
+        "flag": "https://palladiumgroup.ae/img/flags/pk.svg"
+    },
+    {
+        "mask": "+680 999 9999",
+        "code_str": "pw",
+        "code_num": "+680",
+        "name": "Palau",
+        "flag": "https://palladiumgroup.ae/img/flags/pw.svg"
+    },
+    {
+        "mask": "+\\970 99 999 9999",
+        "code_str": "ps",
+        "code_num": "+970",
+        "name": "Palestinian Territory",
+        "flag": "https://palladiumgroup.ae/img/flags/ps.svg"
+    },
+    {
+        "mask": "+675 999 99 999",
+        "code_str": "pg",
+        "code_num": "+675",
+        "name": "Papua New Guinea",
+        "flag": "https://palladiumgroup.ae/img/flags/pg.svg"
+    },
+    {
+        "mask": "+5\\95 999 999 999",
+        "code_str": "py",
+        "code_num": "+595",
+        "name": "Paraguay",
+        "flag": "https://palladiumgroup.ae/img/flags/py.svg"
+    },
+    {
+        "mask": "+51 999 999 999",
+        "code_str": "pe",
+        "code_num": "+51",
+        "name": "Peru (Perú)",
+        "flag": "https://palladiumgroup.ae/img/flags/pe.svg"
+    },
+    {
+        "mask": "+63 999 999 9999",
+        "code_str": "ph",
+        "code_num": "+63",
+        "name": "Philippines",
+        "flag": "https://palladiumgroup.ae/img/flags/ph.svg"
+    },
+    {
+        "mask": "+48 999 999 999",
+        "code_str": "pl",
+        "code_num": "+48",
+        "name": "Poland (Polska)",
+        "flag": "https://palladiumgroup.ae/img/flags/pl.svg"
+    },
+    {
+        "mask": "+351 99 999 9999",
+        "code_str": "pt",
+        "code_num": "+351",
+        "name": "Portugal",
+        "flag": "https://palladiumgroup.ae/img/flags/pt.svg"
+    },
+    {
+        "mask": "+\\974 9999 9999",
+        "code_str": "qa",
+        "code_num": "+974",
+        "name": "Qatar (قطر)",
+        "flag": "https://palladiumgroup.ae/img/flags/qa.svg"
+    },
+    {
+        "mask": "+40 99 999 9999",
+        "code_str": "ro",
+        "code_num": "+40",
+        "name": "Romania (România)",
+        "flag": "https://palladiumgroup.ae/img/flags/ro.svg"
+    },
+    {
+        "mask": "+7 999 999 99 99",
+        "code_str": "ru",
+        "code_num": "+7",
+        "name": "Russian Federation (Российская Федерация)",
+        "flag": "https://palladiumgroup.ae/img/flags/ru.svg"
+    },
+    {
+        "mask": "+250 999 999 999",
+        "code_str": "rw",
+        "code_num": "+250",
+        "name": "Rwanda",
+        "flag": "https://palladiumgroup.ae/img/flags/rw.svg"
+    },
+    {
+        "mask": "+1 (869999 9999",
+        "code_str": "kn",
+        "code_num": "+1 (869",
+        "name": "Saint Kitts and Nevis",
+        "flag": "https://palladiumgroup.ae/img/flags/kn.svg"
+    },
+    {
+        "mask": "+1 (758)999 9999",
+        "code_str": "lc",
+        "code_num": "+1 (758)",
+        "name": "Saint Lucia",
+        "flag": "https://palladiumgroup.ae/img/flags/lc.svg"
+    },
+    {
+        "mask": "+1 (784)999 9999",
+        "code_str": "vc",
+        "code_num": "+1 (784)",
+        "name": "Saint Vincent and the Grenadines",
+        "flag": "https://palladiumgroup.ae/img/flags/vc.svg"
+    },
+    {
+        "mask": "+685 99 9999",
+        "code_str": "ws",
+        "code_num": "+685",
+        "name": "Samoa",
+        "flag": "https://palladiumgroup.ae/img/flags/ws.svg"
+    },
+    {
+        "mask": "+378 9999 999999",
+        "code_str": "sm",
+        "code_num": "+378",
+        "name": "San Marino",
+        "flag": "https://palladiumgroup.ae/img/flags/sm.svg"
+    },
+    {
+        "mask": "+23\\9 99 99999",
+        "code_str": "st",
+        "code_num": "+239",
+        "name": "Sao Tome and Principe (São Tomé e Príncipe)",
+        "flag": "https://palladiumgroup.ae/img/flags/st.svg"
+    },
+    {
+        "mask": "+\\966 9 9999 9999",
+        "code_str": "sa",
+        "code_num": "+966",
+        "name": "Saudi Arabia (المملكة العربية السعودية)",
+        "flag": "https://palladiumgroup.ae/img/flags/sa.svg"
+    },
+    {
+        "mask": "+221 99 999 9999",
+        "code_str": "sn",
+        "code_num": "+221",
+        "name": "Senegal (Sénégal)",
+        "flag": "https://palladiumgroup.ae/img/flags/sn.svg"
+    },
+    {
+        "mask": "+381 99 999 9999",
+        "code_str": "rs",
+        "code_num": "+381",
+        "name": "Serbia (Србија)",
+        "flag": "https://palladiumgroup.ae/img/flags/rs.svg"
+    },
+    {
+        "mask": "+248 9 999 999",
+        "code_str": "sc",
+        "code_num": "+248",
+        "name": "Seychelles",
+        "flag": "https://palladiumgroup.ae/img/flags/sc.svg"
+    },
+    {
+        "mask": "+232 99 999999",
+        "code_str": "sl",
+        "code_num": "+232",
+        "name": "Sierra Leone",
+        "flag": "https://palladiumgroup.ae/img/flags/sl.svg"
+    },
+    {
+        "mask": "+65 9999 9999",
+        "code_str": "sg",
+        "code_num": "+65",
+        "name": "Singapore",
+        "flag": "https://palladiumgroup.ae/img/flags/sg.svg"
+    },
+    {
+        "mask": "+421 999 999 999",
+        "code_str": "sk",
+        "code_num": "+421",
+        "name": "Slovakia (Slovensko)",
+        "flag": "https://palladiumgroup.ae/img/flags/sk.svg"
+    },
+    {
+        "mask": "+386 99 999 999",
+        "code_str": "si",
+        "code_num": "+386",
+        "name": "Slovenia (Slovenija)",
+        "flag": "https://palladiumgroup.ae/img/flags/si.svg"
+    },
+    {
+        "mask": "+677 999 9999",
+        "code_str": "sb",
+        "code_num": "+677",
+        "name": "Solomon Islands",
+        "flag": "https://palladiumgroup.ae/img/flags/sb.svg"
+    },
+    {
+        "mask": "+252 99 999 999",
+        "code_str": "so",
+        "code_num": "+252",
+        "name": "Somalia (Soomaaliya)",
+        "flag": "https://palladiumgroup.ae/img/flags/so.svg"
+    },
+    {
+        "mask": "+27 99 999 9999",
+        "code_str": "za",
+        "code_num": "+27",
+        "name": "South Africa",
+        "flag": "https://palladiumgroup.ae/img/flags/za.svg"
+    },
+    {
+        "mask": "+82 99 9999 9999",
+        "code_str": "kr",
+        "code_num": "+82",
+        "name": "South Korea (대한민국)",
+        "flag": "https://palladiumgroup.ae/img/flags/kr.svg"
+    },
+    {
+        "mask": "+211 99 999 9999",
+        "code_str": "ss",
+        "code_num": "+211",
+        "name": "South Sudan (جنوب السودان)",
+        "flag": "https://palladiumgroup.ae/img/flags/ss.svg"
+    },
+    {
+        "mask": "+34 999 999 999",
+        "code_str": "es",
+        "code_num": "+34",
+        "name": "Spain (España)",
+        "flag": "https://palladiumgroup.ae/img/flags/es.svg"
+    },
+    {
+        "mask": "+\\94 99 999 9999",
+        "code_str": "lk",
+        "code_num": "+94",
+        "name": "Sri Lanka (ශ්‍රී ලංකාව)",
+        "flag": "https://palladiumgroup.ae/img/flags/lk.svg"
+    },
+    {
+        "mask": "+24\\9 99 999 9999",
+        "code_str": "sd",
+        "code_num": "+249",
+        "name": "Sudan (السودان)",
+        "flag": "https://palladiumgroup.ae/img/flags/sd.svg"
+    },
+    {
+        "mask": "+5\\97 999 9999",
+        "code_str": "sr",
+        "code_num": "+597",
+        "name": "Suriname",
+        "flag": "https://palladiumgroup.ae/img/flags/sr.svg"
+    },
+    {
+        "mask": "+268 99 99 9999",
+        "code_str": "sz",
+        "code_num": "+268",
+        "name": "Swaziland",
+        "flag": "https://palladiumgroup.ae/img/flags/sz.svg"
+    },
+    {
+        "mask": "+46 99 999 9999",
+        "code_str": "se",
+        "code_num": "+46",
+        "name": "Sweden (Sverige)",
+        "flag": "https://palladiumgroup.ae/img/flags/se.svg"
+    },
+    {
+        "mask": "+41 99 999 9999",
+        "code_str": "ch",
+        "code_num": "+41",
+        "name": "Switzerland (Schweiz)",
+        "flag": "https://palladiumgroup.ae/img/flags/ch.svg"
+    },
+    {
+        "mask": "+\\963 99 9999 999",
+        "code_str": "sy",
+        "code_num": "+963",
+        "name": "Syria (سوريا)",
+        "flag": "https://palladiumgroup.ae/img/flags/sy.svg"
+    },
+    {
+        "mask": "+886 9999 9999",
+        "code_str": "tw",
+        "code_num": "+886",
+        "name": "Taiwan (台灣)",
+        "flag": "https://palladiumgroup.ae/img/flags/tw.svg"
+    },
+    {
+        "mask": "+\\9\\92 99 999 9999",
+        "code_str": "tj",
+        "code_num": "+992",
+        "name": "Tajikistan",
+        "flag": "https://palladiumgroup.ae/img/flags/tj.svg"
+    },
+    {
+        "mask": "+255 99 999 9999",
+        "code_str": "tz",
+        "code_num": "+255",
+        "name": "Tanzania",
+        "flag": "https://palladiumgroup.ae/img/flags/tz.svg"
+    },
+    {
+        "mask": "+66 99 999 9999",
+        "code_str": "th",
+        "code_num": "+66",
+        "name": "Thailand (ไทย)",
+        "flag": "https://palladiumgroup.ae/img/flags/th.svg"
+    },
+    {
+        "mask": "+228 99 999 999",
+        "code_str": "tg",
+        "code_num": "+228",
+        "name": "Togo",
+        "flag": "https://palladiumgroup.ae/img/flags/tg.svg"
+    },
+    {
+        "mask": "+676 99999",
+        "code_str": "to",
+        "code_num": "+676",
+        "name": "Tonga",
+        "flag": "https://palladiumgroup.ae/img/flags/to.svg"
+    },
+    {
+        "mask": "+1 (868)999 9999",
+        "code_str": "tt",
+        "code_num": "+1 (868)",
+        "name": "Trinidad and Tobago",
+        "flag": "https://palladiumgroup.ae/img/flags/tt.svg"
+    },
+    {
+        "mask": "+216 99 999 999",
+        "code_str": "tn",
+        "code_num": "+216",
+        "name": "Tunisia (تونس)",
+        "flag": "https://palladiumgroup.ae/img/flags/tn.svg"
+    },
+    {
+        "mask": "+\\90 999 999 99999",
+        "code_str": "tr",
+        "code_num": "+90",
+        "name": "Turkey (Türkiye)",
+        "flag": "https://palladiumgroup.ae/img/flags/tr.svg"
+    },
+    {
+        "mask": "+\\9\\93 9 999 9999",
+        "code_str": "tm",
+        "code_num": "+993",
+        "name": "Turkmenistan",
+        "flag": "https://palladiumgroup.ae/img/flags/tm.svg"
+    },
+    {
+        "mask": "+688 999999",
+        "code_str": "tv",
+        "code_num": "+688",
+        "name": "Tuvalu",
+        "flag": "https://palladiumgroup.ae/img/flags/tv.svg"
+    },
+    {
+        "mask": "+256 999 999 999",
+        "code_str": "ug",
+        "code_num": "+256",
+        "name": "Uganda",
+        "flag": "https://palladiumgroup.ae/img/flags/ug.svg"
+    },
+    {
+        "mask": "+380 99 999 99 99",
+        "code_str": "ua",
+        "code_num": "+380",
+        "name": "Ukraine (Україна)",
+        "flag": "https://palladiumgroup.ae/img/flags/ua.svg"
+    },
+    {
+        "mask": "+\\971 99 999 9999",
+        "code_str": "ae",
+        "code_num": "+971",
+        "name": "United Arab Emirates (الإمارات العربية المتحدة)",
+        "flag": "https://palladiumgroup.ae/img/flags/ae.svg"
+    },
+    {
+        "mask": "+44 99 9999 99999",
+        "code_str": "gb",
+        "code_num": "+44",
+        "name": "United Kingdom",
+        "flag": "https://palladiumgroup.ae/img/flags/gb.svg"
+    },
+    {
+        "mask": "+1 999 999 9999",
+        "code_str": "us",
+        "code_num": "+1",
+        "name": "USA",
+        "flag": "https://palladiumgroup.ae/img/flags/us.svg"
+    },
+    {
+        "mask": "+5\\98 9 999 99 99",
+        "code_str": "uy",
+        "code_num": "+598",
+        "name": "Uruguay",
+        "flag": "https://palladiumgroup.ae/img/flags/uy.svg"
+    },
+    {
+        "mask": "+\\9\\98 99 999 9999",
+        "code_str": "uz",
+        "code_num": "+998",
+        "name": "Uzbekistan (Oʻzbekiston)",
+        "flag": "https://palladiumgroup.ae/img/flags/uz.svg"
+    },
+    {
+        "mask": "+678 99 99999",
+        "code_str": "vu",
+        "code_num": "+678",
+        "name": "Vanuatu",
+        "flag": "https://palladiumgroup.ae/img/flags/vu.svg"
+    },
+    {
+        "mask": "+3\\9 9 999 99999",
+        "code_str": "va",
+        "code_num": "+39",
+        "name": "Vatican City (Città del Vaticano)",
+        "flag": "https://palladiumgroup.ae/img/flags/va.svg"
+    },
+    {
+        "mask": "+58 999 999 9999",
+        "code_str": "ve",
+        "code_num": "+58",
+        "name": "Venezuela",
+        "flag": "https://palladiumgroup.ae/img/flags/ve.svg"
+    },
+    {
+        "mask": "+84 99 9999 999",
+        "code_str": "vn",
+        "code_num": "+84",
+        "name": "Vietnam (Việt Nam)",
+        "flag": "https://palladiumgroup.ae/img/flags/vn.svg"
+    },
+    {
+        "mask": "+\\967 9 999 999",
+        "code_str": "ye",
+        "code_num": "+967",
+        "name": "Yemen (اليمن)",
+        "flag": "https://palladiumgroup.ae/img/flags/ye.svg"
+    },
+    {
+        "mask": "+260 99 999 9999",
+        "code_str": "zm",
+        "code_num": "+260",
+        "name": "Zambia",
+        "flag": "https://palladiumgroup.ae/img/flags/zm.svg"
+    },
+    {
+        "mask": "+263 9 999999",
+        "code_str": "zw",
+        "code_num": "+263",
+        "name": "Zimbabwe",
+        "flag": "https://palladiumgroup.ae/img/flags/zw.svg"
+    }
+]
