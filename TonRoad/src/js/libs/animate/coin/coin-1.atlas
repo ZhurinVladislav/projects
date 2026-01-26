@@ -1,0 +1,14 @@
+coin-1.png
+size:294,133
+filter:Linear,Linear
+pma:true
+scale:0.3333
+Edge
+bounds:263,4,29,127
+offsets:26,2,60,129
+Logo
+bounds:133,3,128,128
+offsets:0,50,129,229
+Text
+bounds:2,2,129,129
+offsets:0,49,130,229

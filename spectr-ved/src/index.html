@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="mod-open">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <base href="/" />
@@ -14,8 +14,9 @@
         <link rel="stylesheet" href="./app/css/main.min.css" />
         <!-- SCRIPTS -->
         <script src="./app/js/libs/preloader.js"></script>
-        <script src="./app/js/libs/lazyLoadImg.js"></script>
+        <script src="./app/js/libs/lazyLoad.js"></script>
         <script src="./app/js/libs/min/swiper-bundle.min.js" defer></script>
+        <script src="./app/js/libs/min/fancybox.min.js" defer></script>
         <script src="./app/js/libs/webp.js" defer></script>
         <script src="./app/js/libs/modal-window.js" defer></script>
         <script src="./app/js/libs/iframeLazyLoad.js" defer></script>
@@ -36,7 +37,11 @@
             <div class="header__content-top header-top">
                 <div class="header-top__container container">
                     <a class="header-top__logo logo" href="/">
-                        <img class="logo__img" src="./app/img/logo.svg" alt="Логотип Спектр вэд" title="Спектр вэд" />
+                        <img
+                            class="logo__img"
+                            src="./app/img/logo.svg"
+                            alt="Логотип Спектр вэд"
+                            title="Спектр вэд" />
                     </a>
                     <ul class="header-top__links header-links">
                         <li class="header-links__item">
@@ -45,9 +50,12 @@
                                 href="tel:+79615866187"
                                 aria-label="Позвонить по номеру +7 961 586-61-87">
                                 <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                    <use
+                                        xlink:href="/app/img/icons/icons.svg#ph"></use>
                                 </svg>
-                                <span class="link__text link__text_sm">+7 961 586-61-87</span>
+                                <span class="link__text link__text_sm"
+                                    >+7 961 586-61-87</span
+                                >
                             </a>
                         </li>
                         <li class="header-links__item">
@@ -56,9 +64,12 @@
                                 href="mailto:director@spectrved.ru"
                                 aria-label="Написать на почту director@spectrved.ru">
                                 <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                    <use
+                                        xlink:href="/app/img/icons/icons.svg#mail"></use>
                                 </svg>
-                                <span class="link__text link__text_sm">director@spectrved.ru</span>
+                                <span class="link__text link__text_sm"
+                                    >director@spectrved.ru</span
+                                >
                             </a>
                         </li>
                         <li class="header-links__item header-links__item_ph">
@@ -68,7 +79,8 @@
                                 target="_blank"
                                 aria-label="Написать в чат в Telegram">
                                 <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                    <use
+                                        xlink:href="/app/img/icons/icons.svg#tg"></use>
                                 </svg>
                             </a>
                         </li>
@@ -79,7 +91,8 @@
                                 target="_blank"
                                 aria-label="Написать в чат в whatsapp">
                                 <svg class="link__icon">
-                                    <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                    <use
+                                        xlink:href="/app/img/icons/icons.svg#wa"></use>
                                 </svg>
                             </a>
                         </li>
@@ -98,19 +111,35 @@
                     <nav class="header__menu header-menu">
                         <ul class="header-menu__list">
                             <li class="header-menu__list-item">
-                                <a class="header-menu__list-link" href="#about"> О нас </a>
+                                <a class="header-menu__list-link" href="#about">
+                                    О нас
+                                </a>
                             </li>
                             <li class="header-menu__list-item">
-                                <a class="header-menu__list-link" href="#tariffs"> Тарифы </a>
+                                <a
+                                    class="header-menu__list-link"
+                                    href="#tariffs">
+                                    Тарифы
+                                </a>
                             </li>
                             <li class="header-menu__list-item">
-                                <a class="header-menu__list-link" href="#faq"> Вопрос-ответ </a>
+                                <a class="header-menu__list-link" href="#faq">
+                                    Вопрос-ответ
+                                </a>
                             </li>
                             <li class="header-menu__list-item">
-                                <a class="header-menu__list-link" href="#reviews"> Отзывы </a>
+                                <a
+                                    class="header-menu__list-link"
+                                    href="#reviews">
+                                    Отзывы
+                                </a>
                             </li>
                             <li class="header-menu__list-item">
-                                <a class="header-menu__list-link" href="#contacts"> Контакты </a>
+                                <a
+                                    class="header-menu__list-link"
+                                    href="#contacts">
+                                    Контакты
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -182,44 +211,82 @@
         <main id="main" class="home-page__main main-section">
             <!-- HERO -->
             <section id="hero" class="main-section__hero hero section-reset">
-                <img class="hero__img-bg" data-src="./app/img/hero/bg-img.jpg" alt="Корабль" />
+                <img
+                    class="hero__img-bg"
+                    data-src="./app/img/hero/bg-img.jpg"
+                    alt="Корабль" />
                 <div class="hero__container container">
                     <div class="hero__content-wrapper">
-                        <div class="hero__content delay-200 animation-left" data-animations="5000">
+                        <div
+                            class="hero__content delay-200 animation-left"
+                            data-animations="5000">
                             <img
                                 class="hero__img-bg hero__img-bg_sm"
                                 data-src="./app/img/hero/bg-img.jpg"
                                 alt="Корабль" />
                             <h1 class="hero__title-hidden text-hidden">
-                                Логистическая компания Спектр вэд в Новороссийске
+                                Логистическая компания Спектр вэд в
+                                Новороссийске
                             </h1>
-                            <h2 class="hero__title h-1">Таможенное оформление грузов</h2>
+                            <h2 class="hero__title h-1">
+                                Таможенное оформление грузов
+                            </h2>
                             <ul class="hero__list">
                                 <li class="hero__list-item">
-                                    <img class="hero__list-img" src="./app/img/hero/icon.svg" alt="Галочка в списке" />
+                                    <img
+                                        class="hero__list-img"
+                                        src="./app/img/hero/icon.svg"
+                                        alt="Галочка в списке" />
                                     <p class="hero__list-text">
-                                        Экономия <strong class="hero__list-text-bold">времени</strong> и
-                                        <strong class="hero__list-text-bold">ресурсов</strong>
+                                        Экономия
+                                        <strong class="hero__list-text-bold"
+                                            >времени</strong
+                                        >
+                                        и
+                                        <strong class="hero__list-text-bold"
+                                            >ресурсов</strong
+                                        >
                                     </p>
                                 </li>
                                 <li class="hero__list-item">
-                                    <img class="hero__list-img" src="./app/img/hero/icon.svg" alt="Галочка в списке" />
+                                    <img
+                                        class="hero__list-img"
+                                        src="./app/img/hero/icon.svg"
+                                        alt="Галочка в списке" />
                                     <p class="hero__list-text">
-                                        Снижение <strong class="hero__list-text-bold">рисков</strong> и соблюдение
-                                        <strong class="hero__list-text-bold">сроков</strong>
+                                        Снижение
+                                        <strong class="hero__list-text-bold"
+                                            >рисков</strong
+                                        >
+                                        и соблюдение
+                                        <strong class="hero__list-text-bold"
+                                            >сроков</strong
+                                        >
                                     </p>
                                 </li>
                                 <li class="hero__list-item">
-                                    <img class="hero__list-img" src="./app/img/hero/icon.svg" alt="Галочка в списке" />
+                                    <img
+                                        class="hero__list-img"
+                                        src="./app/img/hero/icon.svg"
+                                        alt="Галочка в списке" />
                                     <p class="hero__list-text">
-                                        Налаженные <strong class="hero__list-text-bold">связи</strong> с
-                                        государственными органами
+                                        Налаженные
+                                        <strong class="hero__list-text-bold"
+                                            >связи</strong
+                                        >
+                                        с государственными органами
                                     </p>
                                 </li>
                                 <li class="hero__list-item">
-                                    <img class="hero__list-img" src="./app/img/hero/icon.svg" alt="Галочка в списке" />
+                                    <img
+                                        class="hero__list-img"
+                                        src="./app/img/hero/icon.svg"
+                                        alt="Галочка в списке" />
                                     <p class="hero__list-text">
-                                        Работаем <strong class="hero__list-text-bold">24/7</strong>
+                                        Работаем
+                                        <strong class="hero__list-text-bold"
+                                            >24/7</strong
+                                        >
                                     </p>
                                 </li>
                             </ul>
@@ -233,7 +300,9 @@
                                         type="text"
                                         name="name"
                                         placeholder=" " />
-                                    <label class="form-list__item-label label">Имя</label>
+                                    <label class="form-list__item-label label"
+                                        >Имя</label
+                                    >
                                 </li>
                                 <li class="form-list__item">
                                     <input
@@ -241,7 +310,9 @@
                                         type="number"
                                         name="phone"
                                         placeholder=" " />
-                                    <label class="form-list__item-label label">Телефон</label>
+                                    <label class="form-list__item-label label"
+                                        >Телефон</label
+                                    >
                                 </li>
                                 <li class="form-list__item">
                                     <textarea
@@ -250,16 +321,27 @@
                                         cols="30"
                                         rows="10"
                                         placeholder=" "></textarea>
-                                    <label class="form-list__item-label label">Комментарий</label>
+                                    <label class="form-list__item-label label"
+                                        >Комментарий</label
+                                    >
                                 </li>
                             </ul>
-                            <button class="hero-form__btn btn">Отправить</button>
+                            <button class="hero-form__btn btn">
+                                Отправить
+                            </button>
                             <label class="hero-form__agreement form-note">
-                                <input class="form-note__input" type="checkbox" checked />
+                                <input
+                                    class="form-note__input"
+                                    type="checkbox"
+                                    checked />
                                 <span class="form-note__checkbox"></span>
                                 <span class="form-note__text">
-                                    Нажимая кнопку &laquo;отправить&raquo; вы&nbsp;соглашаетесь&nbsp;с
-                                    <a class="form-note__text-link link-text" href="/" target="_blank">
+                                    Нажимая кнопку &laquo;отправить&raquo;
+                                    вы&nbsp;соглашаетесь&nbsp;с
+                                    <a
+                                        class="form-note__text-link link-text"
+                                        href="/"
+                                        target="_blank">
                                         политикой конфиденциальности
                                     </a>
                                 </span>
@@ -273,30 +355,44 @@
                 <div class="about__container container">
                     <div class="about__content-wrapper">
                         <div class="about__content">
-                            <div class="about__content-top animation-left delay-100" data-scroll="800">
+                            <div
+                                class="about__content-top animation-left delay-100"
+                                data-scroll="800">
                                 <h2 class="about__title h-2">О нас</h2>
                                 <div class="about__text text-default">
                                     <p>
-                                        Мы&nbsp;&mdash; команда ответственных специалистов с&nbsp;опытом работы
-                                        в&nbsp;таможенных органах. Наша цель&nbsp;&mdash; сделать таможенное оформление
-                                        максимально простым, быстрым и&nbsp;эффективным для наших клиентов.
+                                        Мы&nbsp;&mdash; команда ответственных
+                                        специалистов с&nbsp;опытом работы
+                                        в&nbsp;таможенных органах. Наша
+                                        цель&nbsp;&mdash; сделать таможенное
+                                        оформление максимально простым, быстрым
+                                        и&nbsp;эффективным для наших клиентов.
                                     </p>
                                     <p>
-                                        Наша компания стремиться к&nbsp;тому, чтобы каждый клиент чувствовал себя
-                                        уверенно и&nbsp;спокойно при прохождении таможенного контроля.
+                                        Наша компания стремиться к&nbsp;тому,
+                                        чтобы каждый клиент чувствовал себя
+                                        уверенно и&nbsp;спокойно при прохождении
+                                        таможенного контроля.
                                     </p>
                                     <p>
-                                        Мы&nbsp;гарантируем индивидуальный подход к&nbsp;каждому клиенту,
-                                        конфиденциальность информации и&nbsp;соблюдение всех необходимых требований
-                                        законодательства
+                                        Мы&nbsp;гарантируем индивидуальный
+                                        подход к&nbsp;каждому клиенту,
+                                        конфиденциальность информации
+                                        и&nbsp;соблюдение всех необходимых
+                                        требований законодательства
                                     </p>
                                 </div>
                             </div>
-                            <div class="about__content-bottom animation-left delay-200" data-scroll="800">
-                                <div class="about__text about__text_wh text-default">
+                            <div
+                                class="about__content-bottom animation-left delay-200"
+                                data-scroll="800">
+                                <div
+                                    class="about__text about__text_wh text-default">
                                     <p>
-                                        Если вы&nbsp;ищете надёжного партнёра в&nbsp;сфере таможенного оформления,
-                                        обращайтесь к&nbsp;нам! Мы&nbsp;поможем вам избежать проблем и&nbsp;сэкономить
+                                        Если вы&nbsp;ищете надёжного партнёра
+                                        в&nbsp;сфере таможенного оформления,
+                                        обращайтесь к&nbsp;нам! Мы&nbsp;поможем
+                                        вам избежать проблем и&nbsp;сэкономить
                                         время и&nbsp;деньги
                                     </p>
                                 </div>
@@ -310,43 +406,65 @@
                 </div>
             </section>
             <!-- CUSTOMERS -->
-            <section id="customers" class="main-section__customers customers section-reset">
+            <section
+                id="customers"
+                class="main-section__customers customers section-reset">
                 <div class="customers__container container">
-                    <h2 class="customers__title h-2 animation-left delay-200" data-scroll="800">Наши клиенты</h2>
-                    <div class="customers__swiper-main-wrapper animation-left delay-300" data-scroll="800">
-                        <button id="customers-btn-prev" class="customers-swiper__btn customers-swiper__btn_prev">
+                    <h2
+                        class="customers__title h-2 animation-left delay-200"
+                        data-scroll="800">
+                        Наши клиенты
+                    </h2>
+                    <div
+                        class="customers__swiper-main-wrapper animation-left delay-300"
+                        data-scroll="800">
+                        <button
+                            id="customers-btn-prev"
+                            class="customers-swiper__btn customers-swiper__btn_prev">
                             <svg class="customers-swiper__btn-icon">
-                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
                             </svg>
                         </button>
-                        <div id="customers-swiper" class="customers__swiper swiper customers-swiper">
-                            <div class="swiper-wrapper customers-swiper__wrapper">
-                                <div class="customers-swiper__slide swiper-slide">
-                                    <div class="customers-swiper__slide-img-wrapper">
+                        <div
+                            id="customers-swiper"
+                            class="customers__swiper swiper customers-swiper">
+                            <div
+                                class="swiper-wrapper customers-swiper__wrapper">
+                                <div
+                                    class="customers-swiper__slide swiper-slide">
+                                    <div
+                                        class="customers-swiper__slide-img-wrapper">
                                         <img
                                             class="customers-swiper__slide-img"
                                             src="./app/img/customers/img-1.png"
                                             alt="Тестовое изображение" />
                                     </div>
                                 </div>
-                                <div class="customers-swiper__slide swiper-slide">
-                                    <div class="customers-swiper__slide-img-wrapper">
+                                <div
+                                    class="customers-swiper__slide swiper-slide">
+                                    <div
+                                        class="customers-swiper__slide-img-wrapper">
                                         <img
                                             class="customers-swiper__slide-img"
                                             src="./app/img/customers/img-2.png"
                                             alt="Тестовое изображение" />
                                     </div>
                                 </div>
-                                <div class="customers-swiper__slide swiper-slide">
-                                    <div class="customers-swiper__slide-img-wrapper">
+                                <div
+                                    class="customers-swiper__slide swiper-slide">
+                                    <div
+                                        class="customers-swiper__slide-img-wrapper">
                                         <img
                                             class="customers-swiper__slide-img"
                                             src="./app/img/customers/img-3.png"
                                             alt="Тестовое изображение" />
                                     </div>
                                 </div>
-                                <div class="customers-swiper__slide swiper-slide">
-                                    <div class="customers-swiper__slide-img-wrapper">
+                                <div
+                                    class="customers-swiper__slide swiper-slide">
+                                    <div
+                                        class="customers-swiper__slide-img-wrapper">
                                         <img
                                             class="customers-swiper__slide-img"
                                             src="./app/img/customers/img-4.png"
@@ -355,52 +473,91 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="customers-btn-next" class="customers-swiper__btn customers-swiper__btn_next">
+                        <button
+                            id="customers-btn-next"
+                            class="customers-swiper__btn customers-swiper__btn_next">
                             <svg class="customers-swiper__btn-icon">
-                                <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
                             </svg>
                         </button>
                     </div>
                 </div>
             </section>
             <!-- SERVICES -->
-            <section id="services" class="main-section__services services section-reset">
+            <section
+                id="services"
+                class="main-section__services services section-reset">
                 <div class="services__container container">
-                    <h2 class="services__title h-2 animation-left delay-300" data-scroll="800">Основные услуги</h2>
+                    <h2
+                        class="services__title h-2 animation-left delay-300"
+                        data-scroll="800">
+                        Основные услуги
+                    </h2>
                     <ul class="services__list services-list">
-                        <li class="services-list__item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="services-list__item animation-bottom delay-300"
+                            data-scroll="800">
                             <span class="services-list__item-number">01</span>
-                            <p class="services-list__item-text">Классификация и присвоение кодов продукции</p>
+                            <p class="services-list__item-text">
+                                Классификация и присвоение кодов продукции
+                            </p>
                         </li>
-                        <li class="services-list__item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="services-list__item animation-bottom delay-300"
+                            data-scroll="800">
                             <span class="services-list__item-number">02</span>
-                            <p class="services-list__item-text">Представление интересов клиента в таможенных органах</p>
+                            <p class="services-list__item-text">
+                                Представление интересов клиента в таможенных
+                                органах
+                            </p>
                         </li>
-                        <li class="services-list__item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="services-list__item animation-bottom delay-300"
+                            data-scroll="800">
                             <span class="services-list__item-number">03</span>
-                            <p class="services-list__item-text">Сопровождение заказчика при досмотре груза</p>
+                            <p class="services-list__item-text">
+                                Сопровождение заказчика при досмотре груза
+                            </p>
                         </li>
-                        <li class="services-list__item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="services-list__item animation-bottom delay-300"
+                            data-scroll="800">
                             <span class="services-list__item-number">04</span>
-                            <p class="services-list__item-text">Декларирование товаров</p>
+                            <p class="services-list__item-text">
+                                Декларирование товаров
+                            </p>
                         </li>
-                        <li class="services-list__item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="services-list__item animation-bottom delay-300"
+                            data-scroll="800">
                             <span class="services-list__item-number">05</span>
-                            <p class="services-list__item-text">Расчет таможенных платежей</p>
+                            <p class="services-list__item-text">
+                                Расчет таможенных платежей
+                            </p>
                         </li>
-                        <li class="services-list__item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="services-list__item animation-bottom delay-300"
+                            data-scroll="800">
                             <span class="services-list__item-number">06</span>
-                            <p class="services-list__item-text">Предоставление консультаций</p>
+                            <p class="services-list__item-text">
+                                Предоставление консультаций
+                            </p>
                         </li>
                         <li
                             class="services-list__item services-list__item_last animation-bottom delay-300"
                             data-scroll="800">
-                            <p class="services-list__item-text-main">Обратившись к нам, вы не будете переплачивать</p>
+                            <p class="services-list__item-text-main">
+                                Обратившись к нам, вы не будете переплачивать
+                            </p>
                             <p class="services-list__item-text">
-                                Расчет стоимости услуг всегда осуществляется индивидуально. Вы&nbsp;можете заказать его
+                                Расчет стоимости услуг всегда осуществляется
+                                индивидуально. Вы&nbsp;можете заказать его
                                 заранее, чтобы спланировать расходы.
                             </p>
-                            <button class="services-list__item-btn btn-invert js-open-modal" data-open="form-callback">
+                            <button
+                                class="services-list__item-btn btn-invert js-open-modal"
+                                data-open="form-callback">
                                 Заказать расчет
                             </button>
                         </li>
@@ -408,70 +565,196 @@
                 </div>
             </section>
             <!-- ADVANTAGES -->
-            <section id="advantages" class="main-section__advantages advantages section-reset">
+            <section
+                id="advantages"
+                class="main-section__advantages advantages section-reset">
                 <div class="advantages__container container">
-                    <h2 class="advantages__title h-2 animation-left delay-300" data-scroll="800">
+                    <h2
+                        class="advantages__title h-2 animation-left delay-300"
+                        data-scroll="800">
                         Ценности нашей работы
                     </h2>
                     <ul class="advantages__list">
-                        <li class="advantages__list-item animation-bottom delay-300" data-scroll="800">
-                            <h3 class="advantages__list-title">Стабильность и&nbsp;уверенность в&nbsp;результате</h3>
+                        <li
+                            class="advantages__list-item animation-bottom delay-300"
+                            data-scroll="800">
+                            <h3 class="advantages__list-title">
+                                Стабильность и&nbsp;уверенность
+                                в&nbsp;результате
+                            </h3>
                             <div class="advantages__list-text text-default">
                                 <p>
-                                    Мы&nbsp;понимаем вашу задачу и&nbsp;выполняем её&nbsp;максимально эффективно.
-                                    Мы&nbsp;заранее просчитываем все возможные расходы и&nbsp;информируем о&nbsp;них.
-                                    Вы&nbsp;заплатите ту&nbsp;сумму, о&nbsp;которой мы&nbsp;договорились в&nbsp;начале
+                                    Мы&nbsp;понимаем вашу задачу
+                                    и&nbsp;выполняем её&nbsp;максимально
+                                    эффективно. Мы&nbsp;заранее просчитываем все
+                                    возможные расходы и&nbsp;информируем
+                                    о&nbsp;них. Вы&nbsp;заплатите ту&nbsp;сумму,
+                                    о&nbsp;которой мы&nbsp;договорились
+                                    в&nbsp;начале
                                 </p>
                                 <p>
-                                    У наших сотрудников большой опыт работы в сфере таможенного оформления и доставки
+                                    У наших сотрудников большой опыт работы в
+                                    сфере таможенного оформления и доставки
                                     товаров.
                                 </p>
                             </div>
                         </li>
-                        <li class="advantages__list-item animation-bottom delay-400" data-scroll="800">
-                            <h3 class="advantages__list-title">Заинтересованность специалистов</h3>
+                        <li
+                            class="advantages__list-item animation-bottom delay-400"
+                            data-scroll="800">
+                            <h3 class="advantages__list-title">
+                                Заинтересованность специалистов
+                            </h3>
                             <div class="advantages__list-text text-default">
                                 <p>
-                                    Мы&nbsp;понимаем вашу задачу и&nbsp;выполняем её&nbsp;максимально эффективно.
-                                    Мы&nbsp;заранее просчитываем все возможные расходы и&nbsp;информируем о&nbsp;них.
-                                    Вы&nbsp;заплатите ту&nbsp;сумму, о&nbsp;которой мы&nbsp;договорились в&nbsp;начале.
+                                    Мы&nbsp;понимаем вашу задачу
+                                    и&nbsp;выполняем её&nbsp;максимально
+                                    эффективно. Мы&nbsp;заранее просчитываем все
+                                    возможные расходы и&nbsp;информируем
+                                    о&nbsp;них. Вы&nbsp;заплатите ту&nbsp;сумму,
+                                    о&nbsp;которой мы&nbsp;договорились
+                                    в&nbsp;начале.
                                 </p>
                                 <p>
-                                    Наша цель&nbsp;&mdash; сделать процесс прохождения таможни максимально простым,
-                                    быстрым и&nbsp;эффективным для наших клиентов.
+                                    Наша цель&nbsp;&mdash; сделать процесс
+                                    прохождения таможни максимально простым,
+                                    быстрым и&nbsp;эффективным для наших
+                                    клиентов.
                                 </p>
                             </div>
                         </li>
-                        <li class="advantages__list-item animation-bottom delay-500" data-scroll="800">
+                        <li
+                            class="advantages__list-item animation-bottom delay-500"
+                            data-scroll="800">
                             <h3 class="advantages__list-title">Спокойствие</h3>
                             <div class="advantages__list-text text-default">
                                 <p>
-                                    Вы&nbsp;можете быть уверены в&nbsp;нашей ответственности за&nbsp;свои действия. Если
-                                    что-то пойдёт не&nbsp;так, мы&nbsp;не&nbsp;оставим вас один на&nbsp;один
-                                    с&nbsp;проблемой. Мы&nbsp;идём до&nbsp;победного конца.
+                                    Вы&nbsp;можете быть уверены в&nbsp;нашей
+                                    ответственности за&nbsp;свои действия. Если
+                                    что-то пойдёт не&nbsp;так,
+                                    мы&nbsp;не&nbsp;оставим вас один
+                                    на&nbsp;один с&nbsp;проблемой. Мы&nbsp;идём
+                                    до&nbsp;победного конца.
                                 </p>
                                 <p>
-                                    В&nbsp;нашей компании работают только опытные и&nbsp;квалифицированные специалисты.
-                                    Они знают, как решить любую проблему.
+                                    В&nbsp;нашей компании работают только
+                                    опытные и&nbsp;квалифицированные
+                                    специалисты. Они знают, как решить любую
+                                    проблему.
                                 </p>
                             </div>
                         </li>
-                        <li class="advantages__list-item animation-bottom delay-600" data-scroll="800">
-                            <h3 class="advantages__list-title">Ответы и&nbsp;решения на&nbsp;все вопросы</h3>
+                        <li
+                            class="advantages__list-item animation-bottom delay-600"
+                            data-scroll="800">
+                            <h3 class="advantages__list-title">
+                                Ответы и&nbsp;решения на&nbsp;все вопросы
+                            </h3>
                             <div class="advantages__list-text text-default">
                                 <p>
-                                    В&nbsp;процессе подготовки и&nbsp;оформления поставки вы&nbsp;получите чёткие
-                                    инструкции и&nbsp;подсказки на&nbsp;каждом этапе этого процесса. Вам
-                                    не&nbsp;придётся самостоятельно разбираться в&nbsp;законодательстве, требованиях
+                                    В&nbsp;процессе подготовки и&nbsp;оформления
+                                    поставки вы&nbsp;получите чёткие инструкции
+                                    и&nbsp;подсказки на&nbsp;каждом этапе этого
+                                    процесса. Вам не&nbsp;придётся
+                                    самостоятельно разбираться
+                                    в&nbsp;законодательстве, требованиях
                                     и&nbsp;работе контролирующих органов.
                                 </p>
                                 <p>
-                                    Если у&nbsp;вас возникнут какие-либо вопросы или проблемы, наши специалисты всегда
-                                    готовы помочь вам.
+                                    Если у&nbsp;вас возникнут какие-либо вопросы
+                                    или проблемы, наши специалисты всегда готовы
+                                    помочь вам.
                                 </p>
                             </div>
                         </li>
                     </ul>
+                </div>
+            </section>
+            <!-- REVIEWS-SLIDER -->
+            <section
+                id="reviews-slider"
+                class="main-section__reviews-slider reviews-slider section-reset">
+                <div class="reviews-slider__container container">
+                    <h2
+                        class="reviews-slider__title h-2 animation-left delay-200"
+                        data-scroll="800">
+                        Отзывы наших клиентов
+                    </h2>
+                    <div
+                        class="reviews-slider__swiper-main-wrapper animation-left delay-300"
+                        data-scroll="800">
+                        <button
+                            id="reviews-slider-btn-prev"
+                            class="reviews-slider-swiper__btn reviews-slider-swiper__btn_prev">
+                            <svg class="reviews-slider-swiper__btn-icon">
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+                        <div
+                            id="reviews-slider-swiper"
+                            class="reviews-slider__swiper swiper reviews-slider-swiper">
+                            <div
+                                class="swiper-wrapper reviews-slider-swiper__wrapper">
+                                <a
+                                    class="reviews-slider-swiper__slide swiper-slide"
+                                    href="./app/img/reviews-slider/img-1.jpg"
+                                    data-fancybox="gallery-1">
+                                    <div
+                                        class="reviews-slider-swiper__slide-img-wrapper">
+                                        <img
+                                            class="reviews-slider-swiper__slide-img"
+                                            src="./app/img/reviews-slider/img-1.jpg"
+                                            alt="Тестовое изображение" />
+                                    </div>
+                                </a>
+                                <a
+                                    class="reviews-slider-swiper__slide swiper-slide"
+                                    href="./app/img/reviews-slider/img-2.jpg"
+                                    data-fancybox="gallery-1">
+                                    <div
+                                        class="reviews-slider-swiper__slide-img-wrapper">
+                                        <img
+                                            class="reviews-slider-swiper__slide-img"
+                                            src="./app/img/reviews-slider/img-2.jpg"
+                                            alt="Тестовое изображение" />
+                                    </div>
+                                </a>
+                                <a
+                                    class="reviews-slider-swiper__slide swiper-slide"
+                                    href="./app/img/reviews-slider/img-3.jpg"
+                                    data-fancybox="gallery-1">
+                                    <div
+                                        class="reviews-slider-swiper__slide-img-wrapper">
+                                        <img
+                                            class="reviews-slider-swiper__slide-img"
+                                            src="./app/img/reviews-slider/img-3.jpg"
+                                            alt="Тестовое изображение" />
+                                    </div>
+                                </a>
+                                <a
+                                    class="reviews-slider-swiper__slide swiper-slide"
+                                    href="./app/img/reviews-slider/img-4.jpg"
+                                    data-fancybox="gallery-1">
+                                    <div
+                                        class="reviews-slider-swiper__slide-img-wrapper">
+                                        <img
+                                            class="reviews-slider-swiper__slide-img"
+                                            src="./app/img/reviews-slider/img-4.jpg"
+                                            alt="Тестовое изображение" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button
+                            id="reviews-slider-btn-next"
+                            class="reviews-slider-swiper__btn customers-swiper__btn_next">
+                            <svg class="customers-swiper__btn-icon">
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </section>
             <!-- TARIFFS -->
@@ -481,16 +764,28 @@
                 data-scroll="800">
                 <div class="tariffs__container container">
                     <div class="tariffs__content-wrapper">
-                        <div class="tariffs__content animation-left delay-300" data-scroll="800">
-                            <h2 class="tariffs__title-hidden text-hidden">Узнать тарифы</h2>
-                            <h3 class="tariffs__title h-2">Решим все вопросы оформления груза за&nbsp;24&nbsp;часа</h3>
+                        <div
+                            class="tariffs__content animation-left delay-300"
+                            data-scroll="800">
+                            <h2 class="tariffs__title-hidden text-hidden">
+                                Узнать тарифы
+                            </h2>
+                            <h3 class="tariffs__title h-2">
+                                Решим все вопросы оформления груза
+                                за&nbsp;24&nbsp;часа
+                            </h3>
                             <p class="tariffs__text">
-                                Благодаря тщательному анализу документов и&nbsp;проработке возможных дополнительных
-                                запросов со&nbsp;стороны таможни, предварительному таможенному декларированию
-                                и&nbsp;другим факторам, мы&nbsp;можем оформить ваши грузы в&nbsp;течение суток после
+                                Благодаря тщательному анализу документов
+                                и&nbsp;проработке возможных дополнительных
+                                запросов со&nbsp;стороны таможни,
+                                предварительному таможенному декларированию
+                                и&nbsp;другим факторам, мы&nbsp;можем оформить
+                                ваши грузы в&nbsp;течение суток после
                                 их&nbsp;прибытия в&nbsp;порт.
                             </p>
-                            <div class="tariffs__btn-wrapper animation-left delay-400" data-scroll="800">
+                            <div
+                                class="tariffs__btn-wrapper animation-left delay-400"
+                                data-scroll="800">
                                 <button
                                     class="tariffs__link link-invert js-open-modal"
                                     data-open="tariffs-mod"
@@ -505,18 +800,25 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="tariffs__info animation-right delay-400" data-scroll="800">
+                        <div
+                            class="tariffs__info animation-right delay-400"
+                            data-scroll="800">
                             <div class="tariffs__info-title">
                                 <img
                                     class="tariffs__info-icon"
                                     src="./app/img/tariffs/info.svg"
                                     alt="иконка информации" />
-                                <span class="tariffs__info-title-text"> Обратите внимание </span>
+                                <span class="tariffs__info-title-text">
+                                    Обратите внимание
+                                </span>
                             </div>
                             <p class="tariffs__info-text">
-                                Мы&nbsp;дорожим своей репутацией и&nbsp;поэтому работаем только при условии подписания
-                                брокерского контракта. В&nbsp;нем вы&nbsp;обязательно найдете ответственность
-                                специалистов, которую они несут в&nbsp;ходе своей деятельности.
+                                Мы&nbsp;дорожим своей репутацией и&nbsp;поэтому
+                                работаем только при условии подписания
+                                брокерского контракта. В&nbsp;нем
+                                вы&nbsp;обязательно найдете ответственность
+                                специалистов, которую они несут в&nbsp;ходе
+                                своей деятельности.
                             </p>
                         </div>
                     </div>
@@ -525,221 +827,347 @@
             <!-- FAQ -->
             <section id="faq" class="main-section__faq faq section-reset">
                 <div class="faq__container container">
-                    <h2 class="faq__title h-2 animation-left delay-300" data-scroll="800">Частые вопросы</h2>
+                    <h2
+                        class="faq__title h-2 animation-left delay-300"
+                        data-scroll="800">
+                        Частые вопросы
+                    </h2>
                     <ul class="faq__list js-ac">
-                        <li class="faq__list-item animation-bottom delay-300" data-scroll="800">
-                            <button class="faq__btn b-r js-ac-btn">
-                                <span class="faq__btn-text"> С какими таможенными процедурами вы работаете? </span>
-                                <div class="faq__btn-wrapper-icon">
-                                    <svg class="faq__btn-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                    </svg>
-                                </div>
-                            </button>
-                            <div class="faq__content js-ac-content">
-                                <div class="faq__text text-default">
-                                    <p>
-                                        Наша компания готова взять на себя любые задачи по сопровождению
-                                        внешнеэкономической деятельности (ВЭД). Мы занимаемся оформлением при любой
-                                        таможенной процедуре.
-                                    </p>
-                                    <p>У нашей компании есть опыт сопровождения:</p>
-                                    <ul>
-                                        <li>У нашей компании есть опыт сопровождения:</li>
-                                        <li>реимпорта и реэкспорта;</li>
-                                        <li>транзита и доставки до склада;</li>
-                                        <li>
-                                            переработки на территории или за её пределами, в том числе и для внутреннего
-                                            потребления;
-                                        </li>
-                                        <li>временного ввоза или вывоза с любыми целями.</li>
-                                    </ul>
-                                    <p>
-                                        Как опытный международный экспедитор и официальный таможенный представитель с
-                                        лицензией, наша компания может предложить клиентам транспортные услуги,
-                                        растаможку, финансовые операции от их имени, а также другие услуги в формате
-                                        аутсорсинга ВЭД.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="faq__list-item animation-bottom delay-300" data-scroll="800">
-                            <button class="faq__btn b-r js-ac-btn">
-                                <span class="faq__btn-text"> За что несет ответственность таможенный брокер? </span>
-                                <div class="faq__btn-wrapper-icon">
-                                    <svg class="faq__btn-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                    </svg>
-                                </div>
-                            </button>
-                            <div class="faq__content js-ac-content">
-                                <div class="faq__text text-default">
-                                    <p>
-                                        Наша компания готова взять на себя любые задачи по сопровождению
-                                        внешнеэкономической деятельности (ВЭД). Мы занимаемся оформлением при любой
-                                        таможенной процедуре.
-                                    </p>
-                                    <p>У нашей компании есть опыт сопровождения:</p>
-                                    <ul>
-                                        <li>У нашей компании есть опыт сопровождения:</li>
-                                        <li>реимпорта и реэкспорта;</li>
-                                        <li>транзита и доставки до склада;</li>
-                                        <li>
-                                            переработки на территории или за её пределами, в том числе и для внутреннего
-                                            потребления;
-                                        </li>
-                                        <li>временного ввоза или вывоза с любыми целями.</li>
-                                    </ul>
-                                    <p>
-                                        Как опытный международный экспедитор и официальный таможенный представитель с
-                                        лицензией, наша компания может предложить клиентам транспортные услуги,
-                                        растаможку, финансовые операции от их имени, а также другие услуги в формате
-                                        аутсорсинга ВЭД.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="faq__list-item animation-bottom delay-300" data-scroll="800">
-                            <button class="faq__btn b-r js-ac-btn">
-                                <span class="faq__btn-text"> Какие услуги оказывает ваш таможенный брокер? </span>
-                                <div class="faq__btn-wrapper-icon">
-                                    <svg class="faq__btn-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
-                                    </svg>
-                                </div>
-                            </button>
-                            <div class="faq__content js-ac-content">
-                                <div class="faq__text text-default">
-                                    <p>
-                                        Наша компания готова взять на себя любые задачи по сопровождению
-                                        внешнеэкономической деятельности (ВЭД). Мы занимаемся оформлением при любой
-                                        таможенной процедуре.
-                                    </p>
-                                    <p>У нашей компании есть опыт сопровождения:</p>
-                                    <ul>
-                                        <li>У нашей компании есть опыт сопровождения:</li>
-                                        <li>реимпорта и реэкспорта;</li>
-                                        <li>транзита и доставки до склада;</li>
-                                        <li>
-                                            переработки на территории или за её пределами, в том числе и для внутреннего
-                                            потребления;
-                                        </li>
-                                        <li>временного ввоза или вывоза с любыми целями.</li>
-                                    </ul>
-                                    <p>
-                                        Как опытный международный экспедитор и официальный таможенный представитель с
-                                        лицензией, наша компания может предложить клиентам транспортные услуги,
-                                        растаможку, финансовые операции от их имени, а также другие услуги в формате
-                                        аутсорсинга ВЭД.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="faq__list-item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="faq__list-item animation-bottom delay-300"
+                            data-scroll="800">
                             <button class="faq__btn b-r js-ac-btn">
                                 <span class="faq__btn-text">
-                                    Как мне убедится в легальности процедуры таможенного оформления моего груза?
+                                    С какими таможенными процедурами вы
+                                    работаете?
                                 </span>
                                 <div class="faq__btn-wrapper-icon">
                                     <svg class="faq__btn-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                     </svg>
                                 </div>
                             </button>
                             <div class="faq__content js-ac-content">
                                 <div class="faq__text text-default">
                                     <p>
-                                        Наша компания готова взять на себя любые задачи по сопровождению
-                                        внешнеэкономической деятельности (ВЭД). Мы занимаемся оформлением при любой
+                                        Наша компания готова взять на себя любые
+                                        задачи по сопровождению
+                                        внешнеэкономической деятельности (ВЭД).
+                                        Мы занимаемся оформлением при любой
                                         таможенной процедуре.
                                     </p>
-                                    <p>У нашей компании есть опыт сопровождения:</p>
+                                    <p>
+                                        У нашей компании есть опыт
+                                        сопровождения:
+                                    </p>
                                     <ul>
-                                        <li>У нашей компании есть опыт сопровождения:</li>
+                                        <li>
+                                            У нашей компании есть опыт
+                                            сопровождения:
+                                        </li>
                                         <li>реимпорта и реэкспорта;</li>
                                         <li>транзита и доставки до склада;</li>
                                         <li>
-                                            переработки на территории или за её пределами, в том числе и для внутреннего
-                                            потребления;
+                                            переработки на территории или за её
+                                            пределами, в том числе и для
+                                            внутреннего потребления;
                                         </li>
-                                        <li>временного ввоза или вывоза с любыми целями.</li>
+                                        <li>
+                                            временного ввоза или вывоза с любыми
+                                            целями.
+                                        </li>
                                     </ul>
                                     <p>
-                                        Как опытный международный экспедитор и официальный таможенный представитель с
-                                        лицензией, наша компания может предложить клиентам транспортные услуги,
-                                        растаможку, финансовые операции от их имени, а также другие услуги в формате
+                                        Как опытный международный экспедитор и
+                                        официальный таможенный представитель с
+                                        лицензией, наша компания может
+                                        предложить клиентам транспортные услуги,
+                                        растаможку, финансовые операции от их
+                                        имени, а также другие услуги в формате
                                         аутсорсинга ВЭД.
                                     </p>
                                 </div>
                             </div>
                         </li>
-                        <li class="faq__list-item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="faq__list-item animation-bottom delay-300"
+                            data-scroll="800">
                             <button class="faq__btn b-r js-ac-btn">
-                                <span class="faq__btn-text"> Чем брокер отличается от декларанта? </span>
+                                <span class="faq__btn-text">
+                                    За что несет ответственность таможенный
+                                    брокер?
+                                </span>
                                 <div class="faq__btn-wrapper-icon">
                                     <svg class="faq__btn-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                     </svg>
                                 </div>
                             </button>
                             <div class="faq__content js-ac-content">
                                 <div class="faq__text text-default">
                                     <p>
-                                        Наша компания готова взять на себя любые задачи по сопровождению
-                                        внешнеэкономической деятельности (ВЭД). Мы занимаемся оформлением при любой
+                                        Наша компания готова взять на себя любые
+                                        задачи по сопровождению
+                                        внешнеэкономической деятельности (ВЭД).
+                                        Мы занимаемся оформлением при любой
                                         таможенной процедуре.
                                     </p>
-                                    <p>У нашей компании есть опыт сопровождения:</p>
+                                    <p>
+                                        У нашей компании есть опыт
+                                        сопровождения:
+                                    </p>
                                     <ul>
-                                        <li>У нашей компании есть опыт сопровождения:</li>
+                                        <li>
+                                            У нашей компании есть опыт
+                                            сопровождения:
+                                        </li>
                                         <li>реимпорта и реэкспорта;</li>
                                         <li>транзита и доставки до склада;</li>
                                         <li>
-                                            переработки на территории или за её пределами, в том числе и для внутреннего
-                                            потребления;
+                                            переработки на территории или за её
+                                            пределами, в том числе и для
+                                            внутреннего потребления;
                                         </li>
-                                        <li>временного ввоза или вывоза с любыми целями.</li>
+                                        <li>
+                                            временного ввоза или вывоза с любыми
+                                            целями.
+                                        </li>
                                     </ul>
                                     <p>
-                                        Как опытный международный экспедитор и официальный таможенный представитель с
-                                        лицензией, наша компания может предложить клиентам транспортные услуги,
-                                        растаможку, финансовые операции от их имени, а также другие услуги в формате
+                                        Как опытный международный экспедитор и
+                                        официальный таможенный представитель с
+                                        лицензией, наша компания может
+                                        предложить клиентам транспортные услуги,
+                                        растаможку, финансовые операции от их
+                                        имени, а также другие услуги в формате
                                         аутсорсинга ВЭД.
                                     </p>
                                 </div>
                             </div>
                         </li>
-                        <li class="faq__list-item animation-bottom delay-300" data-scroll="800">
+                        <li
+                            class="faq__list-item animation-bottom delay-300"
+                            data-scroll="800">
                             <button class="faq__btn b-r js-ac-btn">
-                                <span class="faq__btn-text"> Сколько стоят услуги вашего брокера? </span>
+                                <span class="faq__btn-text">
+                                    Какие услуги оказывает ваш таможенный
+                                    брокер?
+                                </span>
                                 <div class="faq__btn-wrapper-icon">
                                     <svg class="faq__btn-icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#arrow"></use>
                                     </svg>
                                 </div>
                             </button>
                             <div class="faq__content js-ac-content">
                                 <div class="faq__text text-default">
                                     <p>
-                                        Наша компания готова взять на себя любые задачи по сопровождению
-                                        внешнеэкономической деятельности (ВЭД). Мы занимаемся оформлением при любой
+                                        Наша компания готова взять на себя любые
+                                        задачи по сопровождению
+                                        внешнеэкономической деятельности (ВЭД).
+                                        Мы занимаемся оформлением при любой
                                         таможенной процедуре.
                                     </p>
-                                    <p>У нашей компании есть опыт сопровождения:</p>
+                                    <p>
+                                        У нашей компании есть опыт
+                                        сопровождения:
+                                    </p>
                                     <ul>
-                                        <li>У нашей компании есть опыт сопровождения:</li>
+                                        <li>
+                                            У нашей компании есть опыт
+                                            сопровождения:
+                                        </li>
                                         <li>реимпорта и реэкспорта;</li>
                                         <li>транзита и доставки до склада;</li>
                                         <li>
-                                            переработки на территории или за её пределами, в том числе и для внутреннего
-                                            потребления;
+                                            переработки на территории или за её
+                                            пределами, в том числе и для
+                                            внутреннего потребления;
                                         </li>
-                                        <li>временного ввоза или вывоза с любыми целями.</li>
+                                        <li>
+                                            временного ввоза или вывоза с любыми
+                                            целями.
+                                        </li>
                                     </ul>
                                     <p>
-                                        Как опытный международный экспедитор и официальный таможенный представитель с
-                                        лицензией, наша компания может предложить клиентам транспортные услуги,
-                                        растаможку, финансовые операции от их имени, а также другие услуги в формате
+                                        Как опытный международный экспедитор и
+                                        официальный таможенный представитель с
+                                        лицензией, наша компания может
+                                        предложить клиентам транспортные услуги,
+                                        растаможку, финансовые операции от их
+                                        имени, а также другие услуги в формате
+                                        аутсорсинга ВЭД.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li
+                            class="faq__list-item animation-bottom delay-300"
+                            data-scroll="800">
+                            <button class="faq__btn b-r js-ac-btn">
+                                <span class="faq__btn-text">
+                                    Как мне убедится в легальности процедуры
+                                    таможенного оформления моего груза?
+                                </span>
+                                <div class="faq__btn-wrapper-icon">
+                                    <svg class="faq__btn-icon">
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq__content js-ac-content">
+                                <div class="faq__text text-default">
+                                    <p>
+                                        Наша компания готова взять на себя любые
+                                        задачи по сопровождению
+                                        внешнеэкономической деятельности (ВЭД).
+                                        Мы занимаемся оформлением при любой
+                                        таможенной процедуре.
+                                    </p>
+                                    <p>
+                                        У нашей компании есть опыт
+                                        сопровождения:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            У нашей компании есть опыт
+                                            сопровождения:
+                                        </li>
+                                        <li>реимпорта и реэкспорта;</li>
+                                        <li>транзита и доставки до склада;</li>
+                                        <li>
+                                            переработки на территории или за её
+                                            пределами, в том числе и для
+                                            внутреннего потребления;
+                                        </li>
+                                        <li>
+                                            временного ввоза или вывоза с любыми
+                                            целями.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Как опытный международный экспедитор и
+                                        официальный таможенный представитель с
+                                        лицензией, наша компания может
+                                        предложить клиентам транспортные услуги,
+                                        растаможку, финансовые операции от их
+                                        имени, а также другие услуги в формате
+                                        аутсорсинга ВЭД.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li
+                            class="faq__list-item animation-bottom delay-300"
+                            data-scroll="800">
+                            <button class="faq__btn b-r js-ac-btn">
+                                <span class="faq__btn-text">
+                                    Чем брокер отличается от декларанта?
+                                </span>
+                                <div class="faq__btn-wrapper-icon">
+                                    <svg class="faq__btn-icon">
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq__content js-ac-content">
+                                <div class="faq__text text-default">
+                                    <p>
+                                        Наша компания готова взять на себя любые
+                                        задачи по сопровождению
+                                        внешнеэкономической деятельности (ВЭД).
+                                        Мы занимаемся оформлением при любой
+                                        таможенной процедуре.
+                                    </p>
+                                    <p>
+                                        У нашей компании есть опыт
+                                        сопровождения:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            У нашей компании есть опыт
+                                            сопровождения:
+                                        </li>
+                                        <li>реимпорта и реэкспорта;</li>
+                                        <li>транзита и доставки до склада;</li>
+                                        <li>
+                                            переработки на территории или за её
+                                            пределами, в том числе и для
+                                            внутреннего потребления;
+                                        </li>
+                                        <li>
+                                            временного ввоза или вывоза с любыми
+                                            целями.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Как опытный международный экспедитор и
+                                        официальный таможенный представитель с
+                                        лицензией, наша компания может
+                                        предложить клиентам транспортные услуги,
+                                        растаможку, финансовые операции от их
+                                        имени, а также другие услуги в формате
+                                        аутсорсинга ВЭД.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li
+                            class="faq__list-item animation-bottom delay-300"
+                            data-scroll="800">
+                            <button class="faq__btn b-r js-ac-btn">
+                                <span class="faq__btn-text">
+                                    Сколько стоят услуги вашего брокера?
+                                </span>
+                                <div class="faq__btn-wrapper-icon">
+                                    <svg class="faq__btn-icon">
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq__content js-ac-content">
+                                <div class="faq__text text-default">
+                                    <p>
+                                        Наша компания готова взять на себя любые
+                                        задачи по сопровождению
+                                        внешнеэкономической деятельности (ВЭД).
+                                        Мы занимаемся оформлением при любой
+                                        таможенной процедуре.
+                                    </p>
+                                    <p>
+                                        У нашей компании есть опыт
+                                        сопровождения:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            У нашей компании есть опыт
+                                            сопровождения:
+                                        </li>
+                                        <li>реимпорта и реэкспорта;</li>
+                                        <li>транзита и доставки до склада;</li>
+                                        <li>
+                                            переработки на территории или за её
+                                            пределами, в том числе и для
+                                            внутреннего потребления;
+                                        </li>
+                                        <li>
+                                            временного ввоза или вывоза с любыми
+                                            целями.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Как опытный международный экспедитор и
+                                        официальный таможенный представитель с
+                                        лицензией, наша компания может
+                                        предложить клиентам транспортные услуги,
+                                        растаможку, финансовые операции от их
+                                        имени, а также другие услуги в формате
                                         аутсорсинга ВЭД.
                                     </p>
                                 </div>
@@ -755,13 +1183,20 @@
                 <div class="feedback__container container">
                     <div class="feedback__content-wrapper">
                         <form class="feedback__form feedback-form">
-                            <h2 class="feedback-form__title h-2 animation-left delay-300" data-scroll="800">
+                            <h2
+                                class="feedback-form__title h-2 animation-left delay-300"
+                                data-scroll="800">
                                 Таможенное оформление грузов
                             </h2>
-                            <p class="feedback-form__text animation-left delay-400" data-scroll="800">
-                                Рассчитаем ставки, расскажем о&nbsp;рисках и&nbsp;объясним, как заплатить меньше
+                            <p
+                                class="feedback-form__text animation-left delay-400"
+                                data-scroll="800">
+                                Рассчитаем ставки, расскажем о&nbsp;рисках
+                                и&nbsp;объясним, как заплатить меньше
                             </p>
-                            <div class="feedback-form__list-wrapper animation-left delay-500" data-scroll="800">
+                            <div
+                                class="feedback-form__list-wrapper animation-left delay-500"
+                                data-scroll="800">
                                 <ul class="feedback-form__list form-list">
                                     <li class="form-list__item">
                                         <input
@@ -769,7 +1204,10 @@
                                             type="text"
                                             name="name"
                                             placeholder=" " />
-                                        <label class="form-list__item-label label">Имя</label>
+                                        <label
+                                            class="form-list__item-label label"
+                                            >Имя</label
+                                        >
                                     </li>
                                     <li class="form-list__item">
                                         <input
@@ -777,7 +1215,10 @@
                                             type="number"
                                             name="phone"
                                             placeholder=" " />
-                                        <label class="form-list__item-label label">Телефон</label>
+                                        <label
+                                            class="form-list__item-label label"
+                                            >Телефон</label
+                                        >
                                     </li>
                                     <li class="form-list__item">
                                         <input
@@ -785,31 +1226,51 @@
                                             type="text"
                                             name="mail"
                                             placeholder=" " />
-                                        <label class="form-list__item-label label">E-mail</label>
+                                        <label
+                                            class="form-list__item-label label"
+                                            >E-mail</label
+                                        >
                                     </li>
                                 </ul>
-                                <button class="feedback-form__btn btn-invert">Отправить</button>
-                                <label class="feedback-form__agreement form-note-invert">
-                                    <input class="form-note-invert__input" type="checkbox" checked />
-                                    <span class="form-note-invert__checkbox"></span>
+                                <button class="feedback-form__btn btn-invert">
+                                    Отправить
+                                </button>
+                                <label
+                                    class="feedback-form__agreement form-note-invert">
+                                    <input
+                                        class="form-note-invert__input"
+                                        type="checkbox"
+                                        checked />
+                                    <span
+                                        class="form-note-invert__checkbox"></span>
                                     <span class="form-note-invert__text">
-                                        Нажимая кнопку &laquo;отправить&raquo; вы&nbsp;соглашаетесь&nbsp;с
-                                        <a class="form-note-invert__text-link link-text" href="/" target="_blank">
+                                        Нажимая кнопку &laquo;отправить&raquo;
+                                        вы&nbsp;соглашаетесь&nbsp;с
+                                        <a
+                                            class="form-note-invert__text-link link-text"
+                                            href="/"
+                                            target="_blank">
                                             политикой конфиденциальности
                                         </a>
                                     </span>
                                 </label>
                             </div>
                         </form>
-                        <div class="feedback__img animation-opacity delay-400" data-scroll="800"></div>
+                        <div
+                            class="feedback__img animation-opacity delay-400"
+                            data-scroll="800"></div>
                     </div>
                 </div>
             </section>
             <!-- REVIEWS -->
-            <section id="reviews" class="main-section__reviews reviews section-reset">
+            <section
+                id="reviews"
+                class="main-section__reviews reviews section-reset">
                 <div class="reviews__container container">
                     <div class="reviews__content-wrapper">
-                        <div class="reviews__iframe-wrapper animation-left delay-300" data-scroll="800">
+                        <div
+                            class="reviews__iframe-wrapper animation-left delay-300"
+                            data-scroll="800">
                             <iframe
                                 class="reviews__iframe"
                                 src="https://yandex.ru/maps-reviews-widget/237081955408?comments">
@@ -818,28 +1279,46 @@
                                 class="reviews__iframe-link"
                                 href="https://yandex.ru/maps/org/vernyye_resheniya/237081955408/"
                                 target="_blank">
-                                Верные решения на карте Новороссийска — Яндекс Карты
+                                Верные решения на карте Новороссийска — Яндекс
+                                Карты
                             </a>
                         </div>
-                        <div class="reviews__content animation-right delay-300" data-scroll="800">
-                            <h2 class="reviews__title-hidden text-hidden">Отзывы Спектр вэд</h2>
-                            <h3 class="reviews__title h-3 animation-right delay-400" data-scroll="800">
+                        <div
+                            class="reviews__content animation-right delay-300"
+                            data-scroll="800">
+                            <h2 class="reviews__title-hidden text-hidden">
+                                Отзывы Спектр вэд
+                            </h2>
+                            <h3
+                                class="reviews__title h-3 animation-right delay-400"
+                                data-scroll="800">
                                 Отзывы о&nbsp;нашей компании
                             </h3>
-                            <div class="reviews__text text-default animation-right delay-500" data-scroll="800">
+                            <div
+                                class="reviews__text text-default animation-right delay-500"
+                                data-scroll="800">
                                 <p>
-                                    Наша компания предлагает широкий спектр брокерских услуг, и мы гордимся тем, что
-                                    обеспечиваем высокое качество обслуживания. Наши клиенты ценят нас за
-                                    профессионализм, надёжность и индивидуальный подход.
+                                    Наша компания предлагает широкий спектр
+                                    брокерских услуг, и мы гордимся тем, что
+                                    обеспечиваем высокое качество обслуживания.
+                                    Наши клиенты ценят нас за профессионализм,
+                                    надёжность и индивидуальный подход.
                                 </p>
                                 <p>
-                                    В нашей команде работают опытные специалисты, которые всегда готовы помочь вам в
-                                    решении любых вопросов. Мы стремимся к тому, чтобы каждый клиент был доволен
+                                    В нашей команде работают опытные
+                                    специалисты, которые всегда готовы помочь
+                                    вам в решении любых вопросов. Мы стремимся к
+                                    тому, чтобы каждый клиент был доволен
                                     сотрудничеством с нами.
                                 </p>
-                                <p>Мы будем рады, если вы поделитесь своими впечатлениями о сотрудничестве с нами.</p>
+                                <p>
+                                    Мы будем рады, если вы поделитесь своими
+                                    впечатлениями о сотрудничестве с нами.
+                                </p>
                             </div>
-                            <ul class="reviews__link-wrapper reviews-links animation-right delay-600" data-scroll="800">
+                            <ul
+                                class="reviews__link-wrapper reviews-links animation-right delay-600"
+                                data-scroll="800">
                                 <li class="reviews-links__item">
                                     <a
                                         class="reviews-links__link link-invert"
@@ -875,8 +1354,13 @@
             <!-- CONTACTS -->
             <section id="contacts" class="main-section__contacts contacts">
                 <div class="contacts__container container">
-                    <div class="contacts__content-wrapper animation-left delay-400" data-scroll="800">
-                        <a class="contacts__logo logo animation-left delay-500" data-scroll="800" href="/">
+                    <div
+                        class="contacts__content-wrapper animation-left delay-400"
+                        data-scroll="800">
+                        <a
+                            class="contacts__logo logo animation-left delay-500"
+                            data-scroll="800"
+                            href="/">
                             <img
                                 class="logo__img"
                                 src="./app/img/logo.svg"
@@ -889,9 +1373,12 @@
                             href="tel:+79615866187"
                             aria-label="Позвонить по номеру +7 961 586-61-87">
                             <svg class="link-text__icon">
-                                <use xlink:href="/app/img/icons/icons.svg#ph"></use>
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#ph"></use>
                             </svg>
-                            <span class="link-text__descr">+7 961 586-61-87</span>
+                            <span class="link-text__descr"
+                                >+7 961 586-61-87</span
+                            >
                         </a>
                         <a
                             class="contacts__link link-text animation-left delay-600"
@@ -899,11 +1386,16 @@
                             href="mailto:director@spectrved.ru"
                             aria-label="Написать на почту director@spectrved.ru">
                             <svg class="link-text__icon">
-                                <use xlink:href="/app/img/icons/icons.svg#mail"></use>
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#mail"></use>
                             </svg>
-                            <span class="link-text__descr">director@spectrved.ru</span>
+                            <span class="link-text__descr"
+                                >director@spectrved.ru</span
+                            >
                         </a>
-                        <ul class="contacts__link-list animation-left delay-600" data-scroll="800">
+                        <ul
+                            class="contacts__link-list animation-left delay-600"
+                            data-scroll="800">
                             <li class="contacts__link-list-item">
                                 <a
                                     class="contacts__link-icon link"
@@ -911,7 +1403,8 @@
                                     target="_blank"
                                     aria-label="Написать в чат в Telegram">
                                     <svg class="link__icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#tg"></use>
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#tg"></use>
                                     </svg>
                                 </a>
                             </li>
@@ -922,7 +1415,8 @@
                                     target="_blank"
                                     aria-label="Написать в чат в whatsapp">
                                     <svg class="link__icon">
-                                        <use xlink:href="/app/img/icons/icons.svg#wa"></use>
+                                        <use
+                                            xlink:href="/app/img/icons/icons.svg#wa"></use>
                                     </svg>
                                 </a>
                             </li>
@@ -933,10 +1427,12 @@
                             href="#"
                             aria-label="Перейти на страницу контактов">
                             <svg class="contacts__text-icon">
-                                <use xlink:href="/app/img/icons/icons.svg#mark"></use>
+                                <use
+                                    xlink:href="/app/img/icons/icons.svg#mark"></use>
                             </svg>
                             <span class="contacts__text-item">
-                                353900 Краснодарский край&nbsp;г. Новороссийск Ул. Рубина, д.&nbsp;1, помещ.&nbsp;4
+                                353900 Краснодарский край&nbsp;г. Новороссийск
+                                Ул. Рубина, д.&nbsp;1, помещ.&nbsp;4
                             </span>
                         </div>
                     </div>
@@ -964,17 +1460,31 @@
                     <button
                         aria-label="Закрыть окно обратной связи"
                         class="form-callback__close-btn modal-close js-close-modal"></button>
-                    <p class="form-callback__title modal-title">Оставить заявку</p>
+                    <p class="form-callback__title modal-title">
+                        Оставить заявку
+                    </p>
 
                     <form class="form form-mod">
                         <ul class="form-mod__list form-list">
                             <li class="form-list__item">
-                                <input class="form-list__item-input input" type="text" name="name" placeholder=" " />
-                                <label class="form-list__item-label label">Имя</label>
+                                <input
+                                    class="form-list__item-input input"
+                                    type="text"
+                                    name="name"
+                                    placeholder=" " />
+                                <label class="form-list__item-label label"
+                                    >Имя</label
+                                >
                             </li>
                             <li class="form-list__item">
-                                <input class="form-list__item-input input" type="number" name="phone" placeholder=" " />
-                                <label class="form-list__item-label label">Телефон</label>
+                                <input
+                                    class="form-list__item-input input"
+                                    type="number"
+                                    name="phone"
+                                    placeholder=" " />
+                                <label class="form-list__item-label label"
+                                    >Телефон</label
+                                >
                             </li>
                             <li class="form-list__item">
                                 <textarea
@@ -983,15 +1493,24 @@
                                     cols="30"
                                     rows="10"
                                     placeholder=" "></textarea>
-                                <label class="form-list__item-label label">Комментарий</label>
+                                <label class="form-list__item-label label"
+                                    >Комментарий</label
+                                >
                             </li>
                         </ul>
                         <label class="form-mod__agreement form-note">
-                            <input class="form-note__input" type="checkbox" checked />
+                            <input
+                                class="form-note__input"
+                                type="checkbox"
+                                checked />
                             <span class="form-note__checkbox"></span>
                             <span class="form-note__text">
-                                Нажимая кнопку &laquo;отправить&raquo; вы&nbsp;соглашаетесь&nbsp;с
-                                <a class="form-note__text-link link-text" href="/" target="_blank">
+                                Нажимая кнопку &laquo;отправить&raquo;
+                                вы&nbsp;соглашаетесь&nbsp;с
+                                <a
+                                    class="form-note__text-link link-text"
+                                    href="/"
+                                    target="_blank">
                                     политикой конфиденциальности
                                 </a>
                             </span>
@@ -1001,28 +1520,46 @@
                 </div>
             </div>
             <!-- TARIFFS-MOD -->
-            <article id="tariffs-mod" class="modal tariffs-mod open">
+            <article id="tariffs-mod" class="modal tariffs-mod">
                 <div class="tariffs-mod__box modal-box">
                     <button
                         class="tariffs-mod__close-btn modal-close js-close-modal"
                         aria-label="Закрыть окно с тарифами"></button>
 
                     <div class="tariffs-mod__content">
-                        <h2 class="tariffs-mod__title modal-title">Наши тарифы</h2>
+                        <h2 class="tariffs-mod__title modal-title">
+                            Наши тарифы
+                        </h2>
                         <table class="tariffs-mod__table tariffs-table">
                             <tbody class="tariffs-table__body">
-                                <tr id="hover-wrapper" class="tariffs-table__tr tariffs-table__tr_hover">
-                                    <td id="first-hover" class="tariffs-table__hover first"></td>
-                                    <td id="second-hover" class="tariffs-table__hover second"></td>
-                                    <td id="third-hover" class="tariffs-table__hover third"></td>
+                                <tr
+                                    id="hover-wrapper"
+                                    class="tariffs-table__tr tariffs-table__tr_hover">
+                                    <td
+                                        id="first-hover"
+                                        class="tariffs-table__hover first"></td>
+                                    <td
+                                        id="second-hover"
+                                        class="tariffs-table__hover second"></td>
+                                    <td
+                                        id="third-hover"
+                                        class="tariffs-table__hover third"></td>
                                 </tr>
                                 <tr class="tariffs-table__tr">
                                     <td class="tariffs-table__td"></td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
-                                        <p class="tariffs-table__text">Стандарт</p>
-                                        <p class="tariffs-table__text">8 000 ₽</p>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
+                                        <p class="tariffs-table__text">
+                                            Стандарт
+                                        </p>
+                                        <p class="tariffs-table__text">
+                                            8 000 ₽
+                                        </p>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
                                         <p class="tariffs-table__text">
                                             <strong>Стандарт плюс</strong>
                                         </p>
@@ -1030,138 +1567,233 @@
                                             <strong>14 000 ₽</strong>
                                         </p>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <p class="tariffs-table__text">Премиум</p>
-                                        <p class="tariffs-table__text">19 000 ₽</p>
-                                    </td>
-                                </tr>
-                                <tr class="tariffs-table__tr">
-                                    <td class="tariffs-table__td">Подача Декларации в таможенный орган</td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
-                                    </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
-                                    </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <p class="tariffs-table__text">
+                                            Премиум
+                                        </p>
+                                        <p class="tariffs-table__text">
+                                            19 000 ₽
+                                        </p>
                                     </td>
                                 </tr>
                                 <tr class="tariffs-table__tr">
                                     <td class="tariffs-table__td">
-                                        Клиент самостоятельно заполняет, сводную таблицу (Проформу декларации) из
-                                        которой таможенный представитель копирует необходимые сведения
+                                        Подача Декларации в таможенный орган
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    </td>
+                                </tr>
+                                <tr class="tariffs-table__tr">
+                                    <td class="tariffs-table__td">
+                                        Клиент самостоятельно заполняет, сводную
+                                        таблицу (Проформу декларации) из которой
+                                        таможенный представитель копирует
+                                        необходимые сведения
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
                                         <div class="tariffs-table__icon"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
                                         <div class="tariffs-table__icon"></div>
                                     </td>
                                 </tr>
                                 <tr class="tariffs-table__tr">
                                     <td class="tariffs-table__td">
-                                        Таможенный представитель самостоятельно, берет все необходимые сведения для
-                                        заполнения ДТ из товаросопроводительных и коммерческих документов
+                                        Таможенный представитель самостоятельно,
+                                        берет все необходимые сведения для
+                                        заполнения ДТ из товаросопроводительных
+                                        и коммерческих документов
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
                                         <div class="tariffs-table__icon"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
                                 </tr>
                                 <tr class="tariffs-table__tr">
                                     <td class="tariffs-table__td">
-                                        Проверка документов на предмет достаточности указанных в них сведений и проверка
-                                        на ошибки
+                                        Проверка документов на предмет
+                                        достаточности указанных в них сведений и
+                                        проверка на ошибки
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
-                                    </td>
-                                </tr>
-                                <tr class="tariffs-table__tr">
-                                    <td class="tariffs-table__td">Расчет подлежащих к уплате таможенных платежей</td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
-                                        <div class="tariffs-table__icon"></div>
-                                    </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
-                                    </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
-                                    </td>
-                                </tr>
-                                <tr class="tariffs-table__tr">
-                                    <td class="tariffs-table__td">Персональный менеджер</td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
-                                        <div class="tariffs-table__icon"></div>
-                                    </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
-                                        <div class="tariffs-table__icon"></div>
-                                    </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
                                 </tr>
                                 <tr class="tariffs-table__tr">
                                     <td class="tariffs-table__td">
-                                        Анализ стоимости товара и вероятности дополнительной проверки таможенным органом
+                                        Расчет подлежащих к уплате таможенных
+                                        платежей
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
                                         <div class="tariffs-table__icon"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
-                                        <div class="tariffs-table__icon"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
                                 </tr>
                                 <tr class="tariffs-table__tr">
                                     <td class="tariffs-table__td">
-                                        Подготовка макетов всех необходимых ответов на дополнительные запросы таможни в
-                                        том числе по дополнительной проверке таможенной стоимости товаров
+                                        Персональный менеджер
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
                                         <div class="tariffs-table__icon"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
                                         <div class="tariffs-table__icon"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
                                 </tr>
                                 <tr class="tariffs-table__tr">
                                     <td class="tariffs-table__td">
-                                        Консультации клиента по вопросам таможенного законодательства
+                                        Анализ стоимости товара и вероятности
+                                        дополнительной проверки таможенным
+                                        органом
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
                                         <div class="tariffs-table__icon"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
+                                        <div class="tariffs-table__icon"></div>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
-                                        <div class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    </td>
+                                </tr>
+                                <tr class="tariffs-table__tr">
+                                    <td class="tariffs-table__td">
+                                        Подготовка макетов всех необходимых
+                                        ответов на дополнительные запросы
+                                        таможни в том числе по дополнительной
+                                        проверке таможенной стоимости товаров
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
+                                        <div class="tariffs-table__icon"></div>
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
+                                        <div class="tariffs-table__icon"></div>
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    </td>
+                                </tr>
+                                <tr class="tariffs-table__tr">
+                                    <td class="tariffs-table__td">
+                                        Консультации клиента по вопросам
+                                        таможенного законодательства
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
+                                        <div class="tariffs-table__icon"></div>
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
+                                    </td>
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
+                                        <div
+                                            class="tariffs-table__icon tariffs-table__icon_active"></div>
                                     </td>
                                 </tr>
                                 <tr class="tariffs-table__tr">
                                     <td class="tariffs-table__td"></td>
-                                    <td class="tariffs-table__td" data-hover="first-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="first-hover">
                                         <button
                                             class="tariffs-table__btn-border btn-border js-open-modal"
                                             data-open="form-callback"
@@ -1169,7 +1801,9 @@
                                             Отправить заявку
                                         </button>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="second-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="second-hover">
                                         <button
                                             class="tariffs-table__btn btn js-open-modal"
                                             data-open="form-callback"
@@ -1177,7 +1811,9 @@
                                             Отправить заявку
                                         </button>
                                     </td>
-                                    <td class="tariffs-table__td" data-hover="third-hover">
+                                    <td
+                                        class="tariffs-table__td"
+                                        data-hover="third-hover">
                                         <button
                                             class="tariffs-table__btn-border btn-border js-open-modal"
                                             data-open="form-callback"
@@ -1199,7 +1835,9 @@
                         class="form-success__close-btn modal-close js-close-modal"></button>
                     <div class="form-success">
                         <p class="form-success__descr">Спасибо!</p>
-                        <p class="form-success__descr form-success__descr_last">Ваши данные были отправлены.</p>
+                        <p class="form-success__descr form-success__descr_last">
+                            Ваши данные были отправлены.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1207,14 +1845,21 @@
         <!-- FOOTER -->
         <footer class="home-page__footer footer">
             <div class="footer__container container">
-                <div class="footer__content-wrapper animation-top delay-300" data-scroll="800">
-                    <p class="footer__text">Все права защищены &copy;&nbsp;2024</p>
+                <div
+                    class="footer__content-wrapper animation-top delay-300"
+                    data-scroll="800">
+                    <p class="footer__text">
+                        Все права защищены &copy;&nbsp;2024
+                    </p>
                     <a class="footer__link link-text" href="/" target="_blank">
-                        <span class="link-text__descr">Пользовательское соглашение</span>
+                        <span class="link-text__descr"
+                            >Пользовательское соглашение</span
+                        >
                     </a>
                     <a class="footer__link link-text" href="/" target="_blank">
                         <svg class="link-text__icon">
-                            <use xlink:href="/app/img/icons/icons.svg#logo-dev"></use>
+                            <use
+                                xlink:href="/app/img/icons/icons.svg#logo-dev"></use>
                         </svg>
                         <span class="link-text__descr">Создание сайтов</span>
                     </a>
@@ -1247,7 +1892,10 @@
             </li>
         </ul>
         <!-- SCROLL-TOP -->
-        <button id="scroll-top" class="home-page__scroll-top scroll-top" aria-label="Наверх страницы">
+        <button
+            id="scroll-top"
+            class="home-page__scroll-top scroll-top"
+            aria-label="Наверх страницы">
             <svg class="scroll-top__icon">
                 <use xlink:href="/app/img/icons/icons.svg#arrow"></use>
             </svg>

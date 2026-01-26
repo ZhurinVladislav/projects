@@ -1,0 +1,268 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+@theme inline {
+  /* containers */
+  --container-width: 1490px;
+  --container-padding: 25px;
+  --container-padding-ph: 10px;
+  --border-radius: 20px;
+  /* colors */
+  --background-color: #fff;
+  --gray-color: #f6f6f6;
+  --text-color: #020204;
+  --text-color-second: #a2a2a2;
+  --primary-color: #2acbb3;
+  --link-color: #9b9b9b;
+  --link-second-color: #5652e8;
+  --bg-item-color: #eff9ff;
+  --gold: #ffdd53;
+  --gray: #b9b9b9;
+  --orange: #ff7e47;
+  /* --link-second-color: #505050; */
+  --bg-color-gray-op: rgba(80, 80, 80, 0.2);
+  /* fonts */
+  --font-montserrat: var(--font-montserrat);
+  --font-tenor-sans: var(--font-tenor-sans);
+}
+
+*::selection {
+  @apply bg-(--primary-color) text-(--text-color);
+}
+
+body {
+  @apply font-montserrat m-0 flex min-h-dvh w-full max-w-full min-w-80 flex-col bg-(--background-color) text-lg font-medium text-(--text-color);
+}
+
+header,
+section,
+main,
+footer {
+  @apply w-full;
+}
+
+body::-webkit-scrollbar {
+  @apply w-1 bg-(--background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-(--primary-color);
+}
+
+button,
+a {
+  @apply cursor-pointer;
+}
+
+/* start base */
+.visually-hidden {
+  @apply absolute -m-px h-px w-px border-0 p-0 whitespace-nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  @apply relative z-1 mx-auto w-full max-w-(--container-width) pr-(--container-padding) pl-(--container-padding) max-sm:pr-(--container-padding-ph) max-sm:pl-(--container-padding-ph);
+}
+
+.container-second {
+  @apply relative z-1 mx-auto w-full max-w-7xl pr-(--container-padding) pl-(--container-padding) max-sm:pr-(--container-padding-ph) max-sm:pl-(--container-padding-ph);
+}
+
+.section {
+  @apply relative mb-35 max-sm:mb-20;
+}
+
+.page-transition {
+  @apply transition-opacity duration-300 ease-in-out;
+}
+
+.title-1 {
+  @apply font-tenor-sans mb-5 text-5xl max-md:text-4xl max-sm:text-3xl;
+}
+
+.title-2 {
+  @apply font-tenor-sans mb-5 text-[40px] max-md:text-4xl max-sm:text-3xl;
+}
+
+.title-3 {
+  @apply font-tenor-sans mb-6 text-2xl;
+}
+
+.num {
+  @apply flex h-13 w-13 shrink-0 items-center justify-center rounded-full text-center text-2xl font-bold text-white;
+}
+
+.num.num_first {
+  @apply bg-(--gold);
+}
+
+.num.num_second {
+  @apply bg-(--gray);
+}
+
+.num.num_third {
+  @apply bg-(--orange);
+}
+
+.content {
+  @apply font-montserrat flex flex-col gap-5 text-base;
+}
+
+.content h2 {
+  @apply font-tenor-sans text-[40px] max-md:text-4xl max-sm:text-3xl;
+}
+
+.content h3 {
+  @apply font-tenor-sans text-2xl;
+}
+
+.content ul {
+  @apply flex list-disc flex-col gap-3 pl-9 marker:text-4xl marker:leading-none marker:text-(--primary-color);
+}
+
+.logo {
+  @apply flex items-center transition-opacity duration-300 ease-linear hover:opacity-50;
+}
+
+address {
+  @apply not-italic;
+}
+/* end base */
+
+/* start input */
+.input {
+  @apply h-11 w-full rounded-2xl bg-[var(--gray-color)] py-3.5 pr-7 pl-15 focus:ring-2 focus:outline-none;
+}
+
+.input.error {
+  @apply border-red-700;
+}
+/* end input */
+
+/* start buttons */
+.btn-primary {
+  @apply font-montserrat flex max-h-max min-h-11 min-w-11 items-center justify-center rounded-2xl bg-(--primary-color) px-3.5 text-center text-white transition-colors duration-300 ease-linear hover:text-(--text-color);
+}
+
+.btn-primary.hidden-ph {
+  @apply max-md:hidden;
+}
+/* end buttons */
+
+/* start links */
+.link-primary {
+  @apply font-montserrat flex min-h-11 min-w-11 items-center justify-center rounded-xs bg-(--bg-color-gray-op) px-3.5 text-center text-lg font-semibold text-(--link-color) backdrop-filter-[10px] transition-colors duration-300 ease-linear hover:text-(--text-color);
+}
+
+.link-primary__icon {
+  @apply w-5 fill-(--link-second-color) transition-colors duration-300 ease-linear;
+}
+
+.link-primary:hover .link-primary__icon {
+  @apply fill-(--text-color);
+}
+
+.link-border {
+  @apply border-b border-(--link-second-color) transition-colors duration-300 ease-linear hover:border-transparent;
+}
+
+.link-text {
+  @apply font-montserrat text-center text-(--text-color-second) transition-colors duration-300 ease-linear hover:text-(--link-second-color);
+}
+
+.link-text_base {
+  @apply text-(--text-color);
+}
+
+.link-text.active {
+  @apply text-(--link-second-color);
+}
+
+.btn.btn_blue {
+  @apply font-montserrat flex max-h-max min-h-11 min-w-11 items-center justify-center rounded-2xl bg-(--link-second-color) px-3.5 text-center text-white transition-colors duration-300 ease-linear hover:text-(--text-color);
+}
+
+.btn.btn_blue.btn_no-hover {
+  @apply hover:text-white;
+}
+
+.card {
+  @apply flex flex-col gap-3 rounded-3xl bg-white p-[22px_28px] shadow-[0_4px_20px_0_rgba(0,0,0,0.1)];
+}
+
+.card.card_link {
+  @apply transition-colors duration-300 ease-linear hover:bg-(--link-second-color) hover:text-white;
+}
+
+.card__btn {
+  @apply max-w-36 transition-colors duration-300 ease-linear;
+}
+
+.card.card_link:hover .card__btn {
+  @apply bg-white text-(--link-second-color);
+}
+/* end links */
+
+.list-info {
+  @apply mb-8 flex flex-col gap-3;
+}
+
+.list-info.list-info_last {
+  @apply mb-0;
+}
+
+.list-info__item {
+  @apply flex gap-2;
+}
+
+.list-info__item-icon {
+  @apply h-6.5 w-7.5 shrink-0;
+}
+
+.list-info__item-title {
+  @apply font-bold;
+}
+
+.list-info__item-text {
+  @apply font-normal;
+}
+
+.list-info__item-link {
+  @apply font-normal transition-colors duration-300 ease-linear hover:text-(--link-second-color);
+}
+
+.list-info__item-link.list-info__item-link_bold {
+  @apply font-bold;
+}
+
+.list-info__links {
+  @apply flex flex-wrap gap-x-8 gap-y-2.5;
+}
+
+.list-info__links-item-link {
+  @apply font-normal;
+}
+
+.list-info__list {
+  @apply flex flex-col gap-3 font-normal;
+}
+
+/* Анимация для появления страницы */
+.page-transition > * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

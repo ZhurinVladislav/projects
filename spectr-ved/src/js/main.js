@@ -155,6 +155,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   customersSwiper();
 
+  // СЛАЙДЕР В БЛОКЕ "Отзывы клиентов"
+  const reviewsSwiper = () => {
+    if (!document.getElementById('reviews-slider-swiper')) return;
+
+    const swiper = new Swiper('#reviews-slider-swiper', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      // grabCursor: true,
+      loop: true,
+      speed: 400,
+      slideActiveClass: 'reviews-slider-swiper__slide_active',
+      navigation: {
+        lockClass: 'swiper-navigation__btn_lock',
+        disabledClass: 'swiper-navigation__btn_disable',
+        nextEl: '#reviews-slider-btn-next',
+        prevEl: '#reviews-slider-btn-prev',
+      },
+      autoplay: {
+        delay: 3000,
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        60: {
+          slidesPerView: 1,
+        },
+        // when window width is >= 480px
+        768: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 640px
+        1360: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  };
+
+  reviewsSwiper();
+
   // АККОРДЕОН
   const accordion = () => {
     const ac = document.querySelectorAll('.js-ac');
@@ -216,4 +259,24 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth >= 991) {
     hoverTableTariffs();
   }
+
+  /**
+   * Инициализация галереи.
+   */
+  const initGallery = () => {
+    Fancybox.bind('[data-fancybox]', {
+      infinite: false,
+      keyboard: {
+        Escape: 'close',
+      },
+      iframe: {
+        preload: false,
+        width: 800,
+        height: 450,
+        autoplay: true,
+      },
+    });
+  };
+
+  initGallery();
 });
